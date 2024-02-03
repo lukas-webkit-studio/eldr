@@ -5,7 +5,7 @@
 
 /* Section Hero */
 	/* Desktop */
-  @media screen and (min-width: 992px)  {
+  	@media screen and (min-width: 992px)  {
     .sectionhero__graphic.vyrobky {
       clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%);
     }
@@ -20,5 +20,69 @@
     }
     .sectionhero__graphic__bottombar {
     	clip-path: polygon(2px 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+
+/* Section Hero */
+	/* Desktop */
+	@media screen and (min-width: 992px)  {
+	.sectionhero__graphic.kontakty{
+		clip-path: polygon(110px 0, 100% 0, 100% 100%, 0 100%);
+	}
+	}
+	/* Tablet + Mobile */
+	@media screen and (max-width: 991px)  {
+		.sectionhero__graphic.kontakty {
+		clip-path: polygon(2px 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+	
+/* Map */
+	/* Desktop */
+	@media screen and (min-width: 992px)  {
+	.sectionmap__mapwrapper {
+		clip-path: polygon(150px 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+	/* Tablet + Mobile */
+	@media screen and (max-width: 991px)  {
+		.sectionmap__mapwrapper {
+		clip-path: none;
+		}
+	}
+
+/* Section Hero */
+	/* Desktop */
+	@media screen and (min-width: 992px)  {
+	.sectionhero__graphic.reference{
+		clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%);
+	}
+	}
+	/* Tablet + Mobile */
+	@media screen and (max-width: 991px)  {
+		.sectionhero__graphic.reference {
+		clip-path: polygon(2px 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+
+/* Reference – Přeloženo z */
+html:lang(en-US) .language-en,
+html:lang(fr) .language-fr,
+html:lang(de) .language-de,
+html:lang(cs) .language-cs {
+  display: none !important;
+}
+
+/* Pylony Totemy – Site images */
+	/* Desktop */
+	@media screen and (min-width: 992px)  {
+	.image--clipped.right {
+		clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%);
+	}
+	}
+	/* Tablet + Mobile */
+	@media screen and (max-width: 991px)  {
+		.image--clipped.right {
+		clip-path: none;
 		}
 	}
