@@ -30,7 +30,7 @@ btn.forEach( ( button, index ) =>
 });
 
 
-
+// Swiper code
 $(document).ready(function () {
 
 const toggleScrollLock = function(displayValue) {
@@ -41,6 +41,7 @@ const toggleScrollLock = function(displayValue) {
     }
 };
 
+// Swiper Product
 $(".slider-main_component").each(function (index) {
     let sliderDuration = 300;
     if ($(this).attr("slider-duration") !== undefined) {
@@ -105,26 +106,26 @@ $(".slider-main_component").each(function (index) {
     }
     });
     
-    // Inicializace 'swiper-small'
+    // Swiper Small
     const swiperSmall = new Swiper($(this).find(".swiper-small")[0], {
-    speed: sliderDuration,
-    loop: false,
-    autoHeight: false,
-    centeredSlides: true,
-    followFinger: true,
-    freeMode: false,
-    slideToClickedSlide: false,
-    slidesPerView: 'auto',
-    spaceBetween: "0%",
-    rewind: false,
-    mousewheel: {
+      speed: sliderDuration,
+      loop: false,
+      autoHeight: false,
+      centeredSlides: true,
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: false,
+      slidesPerView: 'auto',
+      spaceBetween: "0%",
+      rewind: false,
+      mousewheel: {
         forceToAxis: true
-    },
-    keyboard: {
+      },
+      keyboard: {
         enabled: true,
         onlyInViewport: true
-    },
-    breakpoints: {
+      },
+      breakpoints: {
         480: {
         slidesPerView: 'auto',
         spaceBetween: "0%",
@@ -145,15 +146,51 @@ $(".slider-main_component").each(function (index) {
         spaceBetween: "0%",
         centeredSlides: false
         },
-    },
-    slideActiveClass: "is-active",
-    slideDuplicateActiveClass: "is-active",
-    preloadImages: true,
-    lazy: {
+      },
+      slideActiveClass: "is-active",
+      slideDuplicateActiveClass: "is-active",
+      preloadImages: true,
+      lazy: {
         loadPrevNext: true,
         loadPrevNextAmount: 3, // Load the previous and next 3 slides
         loadOnTransitionStart: true
-    }
+      }
+    });
+
+    // Swiper Homepage
+    const swiperHomepage = new Swiper($(this).find(".swiper-homepage")[0], {
+      speed: sliderDuration,
+      loop: loopMode,
+      autoHeight: false,
+      centeredSlides: false,
+      followFinger: true,
+      freeMode: false,
+      slidesPerView: 'auto',
+      spaceBetween: 64,
+      slideToClickedSlide: false,
+      rewind: false,
+      mousewheel: {
+        forceToAxis: true
+      },
+      breakpoints: {
+            992: {
+              slidesPerView: 2,
+            },
+            1440: {
+              slidesPerView: 3,
+            },
+          },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      navigation: {
+        nextEl: $(this).find(".swiper-next")[0],
+        prevEl: $(this).find(".swiper-prev")[0],
+        disabledClass: "is-disabled"
+      },
+      slideActiveClass: "is-active",
+      slideDuplicateActiveClass: "is-active"
     });
 
     let mainSwiper = swiper;
@@ -216,8 +253,6 @@ $(".slider-main_component").each(function (index) {
     });
 });
 });
-      
-
     
 $(document).ready(function() {
 // Funkce pro aktualizaci stavu skrolování
