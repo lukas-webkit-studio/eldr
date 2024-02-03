@@ -86,3 +86,37 @@ html:lang(cs) .language-cs {
 		clip-path: none;
 		}
 	}
+
+body {
+	overflow-x: hidden;
+	max-width: 2560px;
+	margin: 0 auto;
+}
+
+.arrow__icon, .imageslider__item, .disable-text-selection, .arrow__circle {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Scrollbar */
+	/* width */
+	::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+		z-index: 9999;
+	}
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1; 
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 5px;
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555; 
+	}
