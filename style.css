@@ -1,0 +1,24 @@
+/* Slider */
+.imageslider__item {
+    clip-path: polygon(20px 0, 100% 0, 220px 100%, 0 100%);
+}
+
+/* Section Hero */
+	/* Desktop */
+  @media screen and (min-width: 992px)  {
+    .sectionhero__graphic.vyrobky {
+      clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .sectionhero__graphic__bottombar {
+    	clip-path: none;
+		}
+	}
+	/* Tablet + Mobile */
+	@media screen and (max-width: 991px)  {
+		.sectionhero__graphic.vyrobky {
+      clip-path: none;
+    }
+    .sectionhero__graphic__bottombar {
+    	clip-path: polygon(2px 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
