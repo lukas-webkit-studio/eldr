@@ -79,7 +79,7 @@ $(document).ready(function () {
 
             // Adjusting for cross-icon click using event delegation to prevent multiple bindings
             $this.on('click', '.cross-icon', function () {
-                const $popUp = $(this).closest('.popup');
+                var $popUp = $(this).closest('.popup');
                 closePopup($popUp);
             });
         });
@@ -109,7 +109,7 @@ $(document).ready(function () {
 
     function closePopup($popUp) {
         $popUp.css('display', 'none');
-        $('body').css('overflow', 'auto');
+        $('body').css('overflow', '');
         // Defer the swiper index sync to ensure the popup is fully closed
         setTimeout(() => {
             syncSwiperIndex($popUp);
