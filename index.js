@@ -29,291 +29,214 @@ btn.forEach( ( button, index ) =>
     });
 });
 
-
-// Swiper code
 $(document).ready(function () {
-
-const toggleScrollLock = function(displayValue) {
-    if (displayValue === 'flex') {
-    $('body').addClass('no-scroll');
-    } else {
-    $('body').removeClass('no-scroll');
-    }
-};
-
-// Swiper Product
-$(".slider-main_component").each(function (index) {
-    let sliderDuration = 300;
-    if ($(this).attr("slider-duration") !== undefined) {
-    sliderDuration = +$(this).attr("slider-duration");
-    }
-    const swiper = new Swiper($(this).find(".swiper")[0], {
-    speed: sliderDuration,
-    loop: false,
-    autoHeight: false,
-    centeredSlides: true,
-    followFinger: true,
-    freeMode: false,
-    slideToClickedSlide: false,
-    slidesPerView: 'auto',
-    spaceBetween: "0%",
-    rewind: false,
-    mousewheel: {
-        forceToAxis: true
-    },
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true
-    },
-    breakpoints: {
-        // mobile landscape
-        480: {
-        slidesPerView: 'auto',
-        spaceBetween: "0%",
-        centeredSlides: true
-        },
-        // tablet
-        768: {
-        slidesPerView: 'auto',
-        spaceBetween: "0%",
-        centeredSlides: true
-        },
-        // desktop
-        992: {
-        slidesPerView: 3,
-        spaceBetween: "0%",
-        centeredSlides: false
-        },
-        // tablet
-        1280: {
-        slidesPerView: 4,
-        spaceBetween: "0%",
-        centeredSlides: false
-        },
-    },
-    navigation: {
-        nextEl: $(this).find(".swiper-next")[0],
-        prevEl: $(this).find(".swiper-prev")[0],
-        disabledClass: "is-disabled"
-    },
-    slideActiveClass: "is-active",
-    slideDuplicateActiveClass: "is-active",
-    preloadImages: true,
-    lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 3, // Load the previous and next 3 slides
-        loadOnTransitionStart: true
-    }
-    });
-    
-    // Swiper Small
-    const swiperSmall = new Swiper($(this).find(".swiper-small")[0], {
-      speed: sliderDuration,
-      loop: false,
-      autoHeight: false,
-      centeredSlides: true,
-      followFinger: true,
-      freeMode: false,
-      slideToClickedSlide: false,
-      slidesPerView: 'auto',
-      spaceBetween: "0%",
-      rewind: false,
-      mousewheel: {
-        forceToAxis: true
-      },
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true
-      },
-      breakpoints: {
-        480: {
-        slidesPerView: 'auto',
-        spaceBetween: "0%",
-        centeredSlides: true
-        },
-        768: {
-        slidesPerView: 'auto',
-        spaceBetween: "0%",
-        centeredSlides: true
-        },
-        992: {
-        slidesPerView: 3,
-        spaceBetween: "0%",
-        centeredSlides: false
-        },
-        1280: {
-        slidesPerView: 4,
-        spaceBetween: "0%",
-        centeredSlides: false
-        },
-      },
-      slideActiveClass: "is-active",
-      slideDuplicateActiveClass: "is-active",
-      preloadImages: true,
-      lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 3, // Load the previous and next 3 slides
-        loadOnTransitionStart: true
-      }
-    });
-
-    // Swiper Homepage
-    const swiperHomepage = new Swiper($(this).find(".swiper-homepage")[0], {
-      speed: sliderDuration,
-      loop: loopMode,
-      autoHeight: false,
-      centeredSlides: false,
-      followFinger: true,
-      freeMode: false,
-      slidesPerView: 'auto',
-      spaceBetween: 64,
-      slideToClickedSlide: false,
-      rewind: false,
-      mousewheel: {
-        forceToAxis: true
-      },
-      breakpoints: {
-            992: {
-              slidesPerView: 2,
-            },
-            1440: {
-              slidesPerView: 3,
-            },
-          },
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true
-      },
-      navigation: {
-        nextEl: $(this).find(".swiper-next")[0],
-        prevEl: $(this).find(".swiper-prev")[0],
-        disabledClass: "is-disabled"
-      },
-      slideActiveClass: "is-active",
-      slideDuplicateActiveClass: "is-active"
-    });
-
-    let mainSwiper = swiper;
-
-    $(this).find('.imageslider__slide').on('click', function() {
-    const popUp = $(this).closest('.slider').find('.popup');
-    popUp.css('display', 'flex');
-    const popupSwiper = new Swiper(popUp.find(".swiper-popup")[0], {
-        speed: 300,
-        loop: false,
-        autoHeight: false,
-        centeredSlides: false,
-        followFinger: true,
-        freeMode: false,
-        slideToClickedSlide: false,
-        slidesPerView: 1,
-        spaceBetween: "1%",
-        rewind: false,
-        mousewheel: {
-        forceToAxis: true
-        },
-        keyboard: {
-        enabled: true,
-        onlyInViewport: true
-        },
-        navigation: {
-        nextEl: popUp.find(".swiper-next-popup")[0],
-        prevEl: popUp.find(".swiper-prev-popup")[0],
-        disabledClass: "is-disabled"
-        },
-        slideActiveClass: "is-active",
-        slideDuplicateActiveClass: "is-active",
-        initialSlide: $(this).index(),
-        preloadImages: true,
-        lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 3, // Load the previous and next 3 slides
-        loadOnTransitionStart: true
-        }
-    });
-
-    // Observe changes to the popup's style
-    const popupObserver = new MutationObserver(function (mutations) {
-            mutations.forEach(function (mutation) {
-            if (mutation.attributeName === "style") {
-                const displayValue = $(mutation.target).css("display");
-                if (displayValue === "none") {
-                mainSwiper.slideTo(popupSwiper.activeIndex);
-                }
-                toggleScrollLock(displayValue);
-            }
-            });
-        });
-    
-    $(".popup").each(function () {
-            popupObserver.observe(this, {
-            attributes: true,
-        });
-    });
-    });
-});
-});
-    
-$(document).ready(function() {
-// Funkce pro aktualizaci stavu skrolování
-function updateScrollState() {
-  let shouldDisableScroll = false;
-
-  $('.popup, .overlap__menu__wrapper, .w-nav-overlay').each(function() {
-    const displayValue = $(this).css('display');
-    if (displayValue === 'flex' || displayValue === 'block') {
-      shouldDisableScroll = true;
-    }
-  });
-
-  if (shouldDisableScroll) {
-    $('body').addClass('no-scroll').css('overflow', 'hidden');
-  } else {
-    $('body').removeClass('no-scroll').css('overflow', 'auto');
-  }
-}
-
-// Inicializace MutationObserver
-const observer = new MutationObserver(updateScrollState);
-
-// Sledování změn v elementech
-$('.popup, .overlap__menu__wrapper, .w-nav-overlay').each(function() {
-  observer.observe(this, { attributes: true });
-});
-
-// Počáteční kontrola stavu
-updateScrollState();
-});
-
-
-
-// Close pop-up when Esc pressed
-$(document).ready(function() {
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if (mutation.attributeName === 'style') {
-        const displayValue = $(mutation.target).css('display');
-        if (displayValue === 'flex') {
+  // Function to toggle scroll lock
+  const toggleScrollLock = function (displayValue) {
+      if (displayValue === 'flex') {
           $('body').addClass('no-scroll');
-          $(document).on('keydown', function(event) {
-            if (event.key === 'Escape') {
-              $(mutation.target).css('display', 'none');
-            }
-          });
-        } else {
+      } else {
           $('body').removeClass('no-scroll');
-          $(document).off('keydown');
-        }
       }
-    });
+  };
+
+  // Initialize main and small sliders within .slider-main_component
+  $(".slider-main_component").each(function () {
+      let sliderDuration = $(this).attr("slider-duration") ? +$(this).attr("slider-duration") : 300;
+
+      // Initialize main swiper
+      const mainSwiper = new Swiper($(this).find(".swiper")[0], {
+          speed: sliderDuration,
+          loop: false,
+          autoHeight: false,
+          centeredSlides: true,
+          followFinger: true,
+          freeMode: false,
+          slidesPerView: 'auto',
+          spaceBetween: "0%",
+          mousewheel: {
+              forceToAxis: true
+          },
+          keyboard: {
+              enabled: true,
+              onlyInViewport: true
+          },
+          navigation: {
+              nextEl: $(this).find(".swiper-next")[0],
+              prevEl: $(this).find(".swiper-prev")[0],
+              disabledClass: "is-disabled"
+          },
+          breakpoints: {
+              480: {
+                  slidesPerView: 'auto',
+                  centeredSlides: true
+              },
+              768: {
+                  slidesPerView: 'auto',
+                  centeredSlides: true
+              },
+              992: {
+                  slidesPerView: 3,
+                  centeredSlides: false
+              },
+              1280: {
+                  slidesPerView: 4,
+                  centeredSlides: false
+              }
+          },
+          preloadImages: true,
+          lazy: {
+              loadPrevNext: true,
+              loadPrevNextAmount: 3
+          }
+      });
+
+      // Initialize swiper-small
+      const swiperSmall = new Swiper($(this).find(".swiper-small")[0], {
+          speed: sliderDuration,
+          loop: false,
+          autoHeight: false,
+          centeredSlides: true,
+          followFinger: true,
+          freeMode: false,
+          slidesPerView: 'auto',
+          spaceBetween: "0%",
+          mousewheel: {
+              forceToAxis: true
+          },
+          keyboard: {
+              enabled: true,
+              onlyInViewport: true
+          },
+          breakpoints: {
+              480: {
+                  slidesPerView: 'auto',
+                  centeredSlides: true
+              },
+              768: {
+                  slidesPerView: 'auto',
+                  centeredSlides: true
+              },
+              992: {
+                  slidesPerView: 3,
+                  centeredSlides: false
+              },
+              1280: {
+                  slidesPerView: 4,
+                  centeredSlides: false
+              }
+          },
+          preloadImages: true,
+          lazy: {
+              loadPrevNext: true,
+              loadPrevNextAmount: 3
+          }
+      });
+
+      // Popup functionality
+      $(this).find('.imageslider__slide').on('click', function () {
+          const popUp = $(this).closest('.slider').find('.popup');
+          popUp.css('display', 'flex');
+          const popupSwiper = new Swiper(popUp.find(".swiper-popup")[0], {
+              speed: 300,
+              loop: false,
+              autoHeight: false,
+              centeredSlides: false,
+              followFinger: true,
+              freeMode: false,
+              slidesPerView: 1,
+              spaceBetween: "1%",
+              mousewheel: {
+                  forceToAxis: true
+              },
+              keyboard: {
+                  enabled: true,
+                  onlyInViewport: true
+              },
+              navigation: {
+                  nextEl: popUp.find(".swiper-next-popup")[0],
+                  prevEl: popUp.find(".swiper-prev-popup")[0],
+                  disabledClass: "is-disabled"
+              },
+              slideActiveClass: "is-active",
+              slideDuplicateActiveClass: "is-active",
+              initialSlide: $(this).index(),
+              preloadImages: true,
+              lazy: {
+                  loadPrevNext: true,
+                  loadPrevNextAmount: 3
+              }
+          });
+      });
   });
-  
-  $('.popup').each(function() {
-    observer.observe(this, {
-      attributes: true
-    });
+
+  // Initialize swiper-homepage sliders separately
+  $(".swiper-homepage").each(function () {
+      new Swiper(this, {
+          speed: 300,
+          loop: false,
+          autoHeight: false,
+          centeredSlides: false,
+          followFinger: true,
+          freeMode: false,
+          slidesPerView: 'auto',
+          spaceBetween: 64,
+          mousewheel: {
+              forceToAxis: true
+          },
+          keyboard: {
+              enabled: true,
+              onlyInViewport: true
+          },
+          navigation: {
+              nextEl: $(this).find(".swiper-next")[0],
+              prevEl: $(this).find(".swiper-prev")[0],
+              disabledClass: "is-disabled"
+          },
+          breakpoints: {
+              992: {
+                  slidesPerView: 2
+              },
+              1440: {
+                  slidesPerView: 3
+              }
+          }
+      });
+  });
+
+  // Function to update scroll state based on popups and overlays
+  function updateScrollState() {
+      let shouldDisableScroll = false;
+      $('.popup, .overlap__menu__wrapper, .w-nav-overlay').each(function () {
+          const displayValue = $(this).css('display');
+          if (displayValue === 'flex' || displayValue === 'block') {
+              shouldDisableScroll = true;
+          }
+      });
+
+      if (shouldDisableScroll) {
+          $('body').addClass('no-scroll').css('overflow', 'hidden');
+      } else {
+          $('body').removeClass('no-scroll').css('overflow', 'auto');
+      }
+  }
+
+  // Initialize MutationObserver to monitor display changes for scroll update
+  const observer = new MutationObserver(updateScrollState);
+  $('.popup, .overlap__menu__wrapper, .w-nav-overlay').each(function () {
+      observer.observe(this, { attributes: true });
+  });
+  updateScrollState(); // Initial check
+
+  // Close popup when Esc is pressed
+  $('.popup').each(function () {
+      $(document).on('keydown', function (event) {
+          if (event.key === 'Escape') {
+              $('.popup').css('display', 'none');
+          }
+      });
   });
 });
+
 
 // Zobrazení názvu obrázku při Pop-up slideru "f"
 document.addEventListener('DOMContentLoaded', function() {
