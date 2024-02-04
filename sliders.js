@@ -109,7 +109,7 @@ $(document).ready(function () {
 
     function closePopup($popUp) {
         $popUp.css('display', 'none');
-        $('body').css('overflow', '');
+        $('body').css('overflow', 'auto');
         // Defer the swiper index sync to ensure the popup is fully closed
         setTimeout(() => {
             syncSwiperIndex($popUp);
