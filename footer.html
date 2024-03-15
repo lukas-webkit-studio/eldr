@@ -1,0 +1,69 @@
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    // Form
+    const contactForms = document.querySelectorAll(".Form__Type1");
+    contactForms.forEach(form => {
+        form.addEventListener("submit", function() {
+            dataLayer.push({
+                'event' : 'contact_form_submit'
+            });
+        });
+    });
+  
+  	// Navbar
+  	const navButtons = document.querySelectorAll(".navbar__link");
+  	navButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const buttonText = this.innerText
+            dataLayer.push({
+                "event" : "menu_click",
+                "button_text" : buttonText
+            });
+        });
+    });
+  	
+	// Buttons
+  	const redButtons = document.querySelectorAll(".button--primary");
+  	redButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const buttonText = this.innerText;
+          	const closestSection = this.closest('section');
+        	const sectionName = closestSection && closestSection.id ? closestSection.id : 'Sekce bez názvu';
+            dataLayer.push({
+            	"event" : "button_click",
+            	"button_text" : buttonText,
+            	"section" : sectionName
+            });
+        });
+    }); 
+  	
+  	// Produkty na domovské stránce
+  	const TopProducts = document.querySelectorAll(".sectiontopproducts__item");
+  	TopProducts.forEach(button => {
+        button.addEventListener("click", function() {
+            const buttonText = this.querySelector('h2');
+            dataLayer.push({
+            'event' : 'button_click',
+            'button_text' : buttonText,
+            'section' : 'Home page'
+            });
+        });
+    }); 
+  	
+  	// Menu na stránce Naše výrobky
+  	const MenuProducts = document.querySelectorAll(".sectionproducts__item");
+  	MenuProducts.forEach(button => {
+        button.addEventListener("click", function() {
+            const buttonText = this.querySelector('h5');
+            dataLayer.push({
+            'event' : 'button_click',
+            'button_text' : buttonText,
+            'section' : 'Naše výrobky'
+            });
+        });
+    }); 
+});
+</script>
