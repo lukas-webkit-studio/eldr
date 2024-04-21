@@ -93,12 +93,14 @@ body {
 	margin: 0 auto;
 }
 
+/*
 .arrow__icon, .imageslider__item, .disable-text-selection, .arrow__circle {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
+*/
 
 /* Scrollbar */
 	/* width */
