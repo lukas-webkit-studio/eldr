@@ -1,0 +1,12 @@
+{
+     "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+     "rules": {
+          "no-undef":"warn"
+     },
+     "parserOptions": {
+          "ecmaVersion": "latest"
+     },
+     "env": {
+          "es6": true
+     }
+}
