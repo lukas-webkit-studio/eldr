@@ -210,7 +210,7 @@ $(document).ready(function () {
 // UPDATE SCROLL STATE & CLOSE POPUP ON ESC KEY
 // – – – – –
 
-/*
+
 $(document).ready(function () {
     // Function to update the scroll state based on the visibility of elements
     function updateScrollState() {
@@ -233,7 +233,7 @@ $(document).ready(function () {
     });
 });
 
-*/
+
 //endregion
 
 //region [rgba(255, 255, 255, 0.08)]
