@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to update the language text based on the body class
   function updateLanguageText() {
-    const languageElements = document.querySelectorAll('.SectionReference__Collection__Item__Language');
+    const languageElements = document.querySelectorAll('.sectionreference__collection__item__language');
     languageElements.forEach(function(element) {
       const languageText = element.textContent.trim().toLowerCase();
       const bodyClass = document.body.classList;
