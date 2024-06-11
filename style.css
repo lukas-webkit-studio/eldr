@@ -104,16 +104,16 @@ body {
   display: none;
 }
 
-/* Show content based on the language */
-html:lang(cs) .show--cs {
+/* Show content based on the body class */
+body.lang-cs .show--cs {
   display: block;
 }
 
-html:lang(en) .show--en {
+body.lang-en .show--en {
   display: block;
 }
 
-html:lang(de) .show--de {
+body.lang-de .show--de {
   display: block;
 }
 
