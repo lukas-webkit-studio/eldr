@@ -97,12 +97,24 @@ body {
   }
 }
 
-/* Reference – Přeloženo z */
-html:lang(en-US) .language-en,
-html:lang(fr) .language-fr,
-html:lang(de) .language-de,
-html:lang(cs) .language-cs {
-  display: none !important;
+/* Default to hide all language-specific content */
+.show--cs,
+.show--en,
+.show--de {
+  display: none;
+}
+
+/* Show content based on the language */
+html:lang(cs) .show--cs {
+  display: block;
+}
+
+html:lang(en) .show--en {
+  display: block;
+}
+
+html:lang(de) .show--de {
+  display: block;
 }
 
 /* Pylony Totemy – Site images */
