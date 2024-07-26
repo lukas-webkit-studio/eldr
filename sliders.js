@@ -271,6 +271,40 @@ document.addEventListener("DOMContentLoaded", function () {
 //endregion
 
 //region [rgba(255, 255, 255, 0.08)]
+
+function updateSwiperOnPopupClose() {
+  const popupObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.attributeName === "style") {
+        const target = $(mutation.target); // The popup that triggered the mutation
+        const displayValue = target.css("display");
+        if (displayValue === "none") {
+          // Popup was closed
+          const popupSwiper = target.find('.swiper-popup')[0].swiper;
+          const lastSlideIndex = popupSwiper.activeIndex; // Get the last active index in the popup swiper
+
+          // Update the main swiper's current slide to the last active index in the popup
+          const mainSwiper = target.closest(".slider-main_component").data("mainSwiper");
+          if (mainSwiper) {
+            mainSwiper.slideTo(lastSlideIndex, 0); // Slide to the last viewed slide without animation
+          }
+        }
+      }
+    });
+  });
+
+  // Attach the observer to each popup element
+  $(".popup").each(function () {
+    popupObserver.observe(this, { attributes: true });
+  });
+}
+
+// Initialize the function to set up the observers
+updateSwiperOnPopupClose();
+
+
+/* Old version
+
 // POP-UP TO SWIPER INDEX SYNC
 // – – – – –
 
