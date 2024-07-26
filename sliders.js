@@ -349,3 +349,4 @@ function updateSwiperOnPopupClose() {
 updateSwiperOnPopupClose();
 
 //endregion
+*/
