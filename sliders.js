@@ -1,24 +1,19 @@
-/*region [rgba(0, 255, 255, 0.08)]
-
-SLIDERS FUNCTIONALITY
-Slider on ELDR website are run by Swiper.js library.
-
-endregion*/
-
-// region [rgba(255, 255, 255, 0.08)]
-// MAIN SWIPER & SWIPER-SMALL INITIALIZATION
-// eslint-disable-next-line no-irregular-whitespace
-// – – – – –
-
 $(document).ready(function () {
-  $(".slider-main_component").each(function () {
-    let sliderDuration = $(this).attr("slider-duration")
-      ? +$(this).attr("slider-duration")
-      : 300;
-    let $thisComponent = $(this); // Store reference to current component
 
-    // Main swiper
-    const swiper = new Swiper($thisComponent.find(".swiper")[0], {
+  /**
+   * Toggles the scroll lock on the body element based on the display value of the popup.
+   * @param {string} displayValue - The display value of the popup.
+   */
+  const toggleScrollLock = function(displayValue) {
+    $('body').toggleClass('no-scroll', displayValue === 'flex');
+  };
+
+  // Main Swiper & Swiper-Small Initialization
+  $(".slider-main_component").each(function () {
+    let sliderDuration = $(this).attr("slider-duration") ? +$(this).attr("slider-duration") : 300;
+
+    // Main Swiper initialization
+    const swiper = new Swiper($(this).find(".swiper")[0], {
       speed: sliderDuration,
       loop: false,
       autoHeight: false,
@@ -26,107 +21,70 @@ $(document).ready(function () {
       followFinger: true,
       freeMode: false,
       slideToClickedSlide: false,
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       spaceBetween: "0%",
       rewind: false,
-      mousewheel: {
-        forceToAxis: true,
-      },
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-      },
+      mousewheel: { forceToAxis: true },
+      keyboard: { enabled: true, onlyInViewport: true },
       breakpoints: {
-        // mobile landscape
-        480: {
-          slidesPerView: "auto",
-          spaceBetween: "0%",
-          centeredSlides: true,
-        },
-        // tablet
-        768: {
-          slidesPerView: "auto",
-          spaceBetween: "0%",
-          centeredSlides: true,
-        },
-        // desktop
-        992: {
-          slidesPerView: 3,
-          spaceBetween: "0%",
-          centeredSlides: false,
-        },
-        // desktop-large
-        1280: {
-          slidesPerView: 4,
-          spaceBetween: "0%",
-          centeredSlides: false,
-        },
+        480: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
+        768: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
+        992: { slidesPerView: 3, spaceBetween: "0%", centeredSlides: false },
+        1280: { slidesPerView: 4, spaceBetween: "0%", centeredSlides: false },
       },
       navigation: {
         nextEl: $(this).find(".swiper-next")[0],
         prevEl: $(this).find(".swiper-prev")[0],
-        disabledClass: "is-disabled",
+        disabledClass: "is-disabled"
       },
       slideActiveClass: "is-active",
       slideDuplicateActiveClass: "is-active",
       preloadImages: true,
       lazy: {
         loadPrevNext: true,
-        loadPrevNextAmount: 2, // Load the previous and next 3 slides
-        loadOnTransitionStart: true,
-      },
+        loadPrevNextAmount: 3,
+        loadOnTransitionStart: true
+      }
     });
 
-    // Swiper-small
+    // Swiper-small initialization
     const swiperSmall = new Swiper($(this).find(".swiper-small")[0], {
       speed: sliderDuration,
       loop: false,
       autoHeight: false,
+      centeredSlides: true,
       followFinger: true,
       freeMode: false,
       slideToClickedSlide: false,
+      slidesPerView: 'auto',
+      spaceBetween: "0%",
       rewind: false,
-      mousewheel: {
-        forceToAxis: true,
-      },
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-      },
+      mousewheel: { forceToAxis: true },
+      keyboard: { enabled: true, onlyInViewport: true },
       breakpoints: {
-        // mobile landscape
-        480: {
-          slidesPerView: "auto",
-          spaceBetween: "0%",
-          centeredSlides: true,
-        },
-        // tablet
-        768: {
-          slidesPerView: "auto",
-          spaceBetween: "0%",
-          centeredSlides: true,
-        },
-        // desktop
-        992: {
-          slidesPerView: 3,
-          spaceBetween: "0%",
-          centeredSlides: false,
-        },
+        480: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
+        768: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
+        992: { slidesPerView: 3, spaceBetween: "0%", centeredSlides: false },
+        1280: { slidesPerView: 4, spaceBetween: "0%", centeredSlides: false },
       },
       slideActiveClass: "is-active",
       slideDuplicateActiveClass: "is-active",
       preloadImages: true,
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 3,
+        loadOnTransitionStart: true
+      }
     });
 
-    // Store a reference to this swiper instance for later use
-    $thisComponent.data("mainSwiper", swiper);
+    let mainSwiper = swiper;
 
     // Popup functionality
-    $thisComponent.find(".imageslider__slide").on("click", function () {
-      var popUp = $(this).closest(".slider").find(".popup");
-      popUp.css("display", "flex");
-      var popupSwiper = new Swiper(popUp.find(".swiper-popup")[0], {
-        speed: sliderDuration,
+    $(this).find('.imageslider__slide').on('click', function() {
+      const popUp = $(this).closest('.slider').find('.popup');
+      popUp.css('display', 'flex');
+      const popupSwiper = new Swiper(popUp.find(".swiper-popup")[0], {
+        speed: 300,
         loop: false,
         autoHeight: false,
         centeredSlides: false,
@@ -136,17 +94,12 @@ $(document).ready(function () {
         slidesPerView: 1,
         spaceBetween: "1%",
         rewind: false,
-        mousewheel: {
-          forceToAxis: true,
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: true,
-        },
+        mousewheel: { forceToAxis: true },
+        keyboard: { enabled: true, onlyInViewport: true },
         navigation: {
           nextEl: popUp.find(".swiper-next-popup")[0],
           prevEl: popUp.find(".swiper-prev-popup")[0],
-          disabledClass: "is-disabled",
+          disabledClass: "is-disabled"
         },
         slideActiveClass: "is-active",
         slideDuplicateActiveClass: "is-active",
@@ -154,199 +107,104 @@ $(document).ready(function () {
         preloadImages: true,
         lazy: {
           loadPrevNext: true,
-          loadPrevNextAmount: 2,
-          loadOnTransitionStart: true,
-        },
+          loadPrevNextAmount: 3,
+          loadOnTransitionStart: true
+        }
       });
+
+      // Observe changes to the popup's style
+      const popupObserver = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          if (mutation.attributeName === "style") {
+            const displayValue = $(mutation.target).css("display");
+            if (displayValue === "none") {
+              mainSwiper.slideTo(popupSwiper.activeIndex);
+            }
+            toggleScrollLock(displayValue);
+          }
+        });
+      });
+
+      // Attach observer to the popup
+      popupObserver.observe(popUp[0], { attributes: true });
     });
   });
-});
-//endregion
 
-//region [rgba(255, 255, 255, 0.08)]
-// SWIPER-HOMEPAGE INITIALIZATION
-// – – – – –
-
-$(document).ready(function () {
-  $(".swiper-homepage").each(function () {
-    new Swiper(this, {
-      speed: 300,
-      loop: true,
-      autoHeight: false,
-      centeredSlides: false,
-      followFinger: true,
-      freeMode: false,
-      slidesPerView: "auto",
-      spaceBetween: 64,
-      slideToClickedSlide: false,
-      rewind: false,
-      mousewheel: {
-        forceToAxis: true,
-      },
-      breakpoints: {
-        992: {
-          slidesPerView: 2,
-        },
-        1440: {
-          slidesPerView: 3,
-        },
-      },
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-      },
-      navigation: {
-        nextEl: ".swiper-next", // Direct class reference
-        prevEl: ".swiper-prev", // Direct class reference
-      },
-      slideActiveClass: "is-active",
-      slideDuplicateActiveClass: "is-active",
-    });
-  });
-});
-//endregion
-
-//region [rgba(255, 255, 255, 0.08)]
-// UPDATE SCROLL STATE & CLOSE POPUP ON ESC KEY
-// – – – – –
-
-
-$(document).ready(function () {
-    // Function to update the scroll state based on the visibility of elements
-    function updateScrollState() {
-        let shouldDisableScroll = $('.popup:visible, .overlap__menu__wrapper:visible, .w-nav-overlay:visible').length > 0;
-        $('body').toggleClass('no-scroll', shouldDisableScroll).css('overflow', shouldDisableScroll ? 'hidden' : 'auto');
-    }
-
-    // Initialize the mutation observer to observe changes in the display property of popups and overlays
-    var observer = new MutationObserver(updateScrollState);
+  /**
+   * Function to update the scroll state based on the visibility of certain elements.
+   */
+  function updateScrollState() {
+    let shouldDisableScroll = false;
     $('.popup, .overlap__menu__wrapper, .w-nav-overlay').each(function() {
-        observer.observe(this, { attributes: true });
-    });
-    updateScrollState();
-
-    // Close popup when the Escape key is pressed and update the scroll state
-    $(document).on('keydown', function (event) {
-        if (event.key === 'Escape') {
-            $('.popup').css('display', 'none');
-        }
-    });
-});
-
-
-//endregion
-
-//region [rgba(255, 255, 255, 0.08)]
-// WHEN POP-UP OPEN & "F" KEY PRESSED SHOW IMAGE NAME
-// – – – – –
-document.addEventListener("DOMContentLoaded", function () {
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "f") {
-      let elements = document.querySelectorAll(".swiper-popup--label");
-      if (elements.length > 0) {
-        elements.forEach(function (element) {
-          element.style.display = "block";
-        });
-        console.log("Showing elements");
-      } else {
-        console.log("No elements with .swiper-popup--label found on keydown.");
+      const displayValue = $(this).css('display');
+      if (displayValue === 'flex' || displayValue === 'block') {
+        shouldDisableScroll = true;
       }
+    });
+
+    $('body').toggleClass('no-scroll', shouldDisableScroll).css('overflow', shouldDisableScroll ? 'hidden' : 'auto');
+  }
+
+  // Initialize MutationObserver for scroll state updates
+  const observer = new MutationObserver(updateScrollState);
+
+  // Observe changes in elements affecting scroll state
+  $('.popup, .overlap__menu__wrapper, .w-nav-overlay').each(function() {
+    observer.observe(this, { attributes: true });
+  });
+
+  // Initial check of state
+  updateScrollState();
+
+  // Close popup when ESC is pressed
+  $(document).on('keydown', function(event) {
+    if (event.key === 'Escape') {
+      $('.popup:visible').each(function() {
+        const popup = $(this);
+        updateSwiperOnPopupClose(popup);
+        popup.css('display', 'none');
+      });
     }
   });
 
-  document.addEventListener("keyup", function (event) {
-    if (event.key === "f") {
+  // Close popup on clicking cross-icon or popup background
+  $(document).on('click', '.cross-icon, .popup__background', function () {
+    const popup = $(this).closest('.popup');
+    updateSwiperOnPopupClose(popup);
+    popup.css('display', 'none');
+  });
+
+  // Show image name when 'f' key is pressed
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'f') {
       let elements = document.querySelectorAll(".swiper-popup--label");
-      if (elements.length > 0) {
-        elements.forEach(function (element) {
-          element.style.display = "none";
-        });
-        console.log("Hiding elements");
-      } else {
-        console.log("No elements with .swiper-popup--label found on keyup.");
-      }
+      elements.forEach(function(element) {
+        element.style.display = 'block';
+      });
     }
   });
+
+  // Hide image name when 'f' key is released
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'f') {
+      let elements = document.querySelectorAll(".swiper-popup--label");
+      elements.forEach(function(element) {
+        element.style.display = 'none';
+      });
+    }
+  });
+
+  /**
+   * Function to update the main swiper's slide based on the popup's active slide index when the popup is closed.
+   * @param {Object} popup - The jQuery object representing the popup.
+   */
+  function updateSwiperOnPopupClose(popup) {
+    const mainSwiper = popup.closest(".slider-main_component").data("mainSwiper");
+    if (mainSwiper) {
+      const activeSlideIndex = popup.find(".swiper-slide-active").index();
+      if (activeSlideIndex !== -1) {
+        mainSwiper.slideTo(activeSlideIndex);
+      }
+    }
+  }
 });
-//endregion
-
-//region [rgba(255, 255, 255, 0.08)]
-
-function updateSwiperOnPopupClose() {
-  const popupObserver = new MutationObserver(function (mutations) {
-    mutations.forEach(function (mutation) {
-      if (mutation.attributeName === "style") {
-        const target = $(mutation.target); // The popup that triggered the mutation
-        const displayValue = target.css("display");
-        if (displayValue === "none") {
-          // Popup was closed
-          const popupSwiper = target.find('.swiper-popup')[0].swiper;
-          const lastSlideIndex = popupSwiper.activeIndex; // Get the last active index in the popup swiper
-
-          // Update the main swiper's current slide to the last active index in the popup
-          const mainSwiper = target.closest(".slider-main_component").data("mainSwiper");
-          if (mainSwiper) {
-            mainSwiper.slideTo(lastSlideIndex, 0); // Slide to the last viewed slide without animation
-          }
-        }
-      }
-    });
-  });
-
-  // Attach the observer to each popup element
-  $(".popup").each(function () {
-    popupObserver.observe(this, { attributes: true });
-  });
-}
-
-// Initialize the function to set up the observers
-updateSwiperOnPopupClose();
-
-
-/* Old version
-
-// POP-UP TO SWIPER INDEX SYNC
-// – – – – –
-
-// Function to update the main swiper's slide based on the popup's index when the popup is closed
-function updateSwiperOnPopupClose() {
-  const popupObserver = new MutationObserver(function (mutations) {
-    mutations.forEach(function (mutation) {
-      if (mutation.attributeName === "style") {
-        const target = $(mutation.target); // The popup that triggered the mutation
-        const displayValue = target.css("display");
-        if (displayValue === "none") {
-          // Popup was closed
-          // Find the index of the slide associated with the closed popup
-          let slideIndex = target.data("swiper-slide-index");
-          if (slideIndex === undefined) {
-            // If the data attribute is not set, fallback to using index within its parent
-            slideIndex = target
-              .closest(".slider-main_component")
-              .find(".imageslider__slide")
-              .index(target);
-          }
-          // Update the main swiper's current slide to the index associated with the closed popup
-          const mainSwiper = target
-            .closest(".slider-main_component")
-            .data("mainSwiper");
-          if (mainSwiper) {
-            mainSwiper.slideTo(slideIndex);
-          }
-        }
-        // Optionally, re-apply the scroll lock logic here if needed
-      }
-    });
-  });
-
-  // Attach the observer to each popup element
-  $(".popup").each(function () {
-    popupObserver.observe(this, { attributes: true });
-  });
-}
-
-// Initialize the function to set up the observers
-updateSwiperOnPopupClose();
-
-//endregion
-*/
