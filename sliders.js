@@ -1,11 +1,13 @@
 $(document).ready(function () {
 
-  /**
-   * Toggles the scroll lock on the body element based on the display value of the popup.
-   * @param {string} displayValue - The display value of the popup.
-   */
+  // Function to toggle scroll lock and body background color based on the display value of the popup.
   const toggleScrollLock = function(displayValue) {
     $('body').toggleClass('no-scroll', displayValue === 'flex');
+    if (displayValue === 'flex') {
+      $('meta[name="theme-color"]').attr('content', '#272727'); // Change theme color to dark
+    } else {
+      $('meta[name="theme-color"]').attr('content', '#fcfcfc'); // Change theme color to light
+    }
   };
 
   // Main Swiper & Swiper-Small Initialization
@@ -112,6 +114,9 @@ $(document).ready(function () {
         }
       });
 
+      // Apply the background color and theme color immediately on popup open
+      toggleScrollLock('flex');
+
       // Observe changes to the popup's style
       const popupObserver = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
@@ -130,9 +135,7 @@ $(document).ready(function () {
     });
   });
 
-  /**
-   * Function to update the scroll state based on the visibility of certain elements.
-   */
+  // Function to update the scroll state based on the visibility of certain elements
   function updateScrollState() {
     let shouldDisableScroll = false;
     $('.popup, .overlap__menu__wrapper, .w-nav-overlay').each(function() {
@@ -194,10 +197,7 @@ $(document).ready(function () {
     }
   });
 
-  /**
-   * Function to update the main swiper's slide based on the popup's active slide index when the popup is closed.
-   * @param {Object} popup - The jQuery object representing the popup.
-   */
+  // Function to update the main swiper's slide based on the popup's active slide index when the popup is closed
   function updateSwiperOnPopupClose(popup) {
     const mainSwiper = popup.closest(".slider-main_component").data("mainSwiper");
     if (mainSwiper) {
