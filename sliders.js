@@ -207,4 +207,32 @@ $(document).ready(function () {
       }
     }
   }
+
+  // Homepage Swiper Initialization
+  $(".swiper-homepage").each(function () {
+    new Swiper(this, {
+      speed: 300,
+      loop: true,
+      autoHeight: false,
+      centeredSlides: false,
+      followFinger: true,
+      freeMode: false,
+      slidesPerView: 'auto',
+      spaceBetween: 64,
+      slideToClickedSlide: false,
+      rewind: false,
+      mousewheel: { forceToAxis: true },
+      breakpoints: {
+        992: { slidesPerView: 2 },
+        1440: { slidesPerView: 3 }
+      },
+      keyboard: { enabled: true, onlyInViewport: true },
+      navigation: {
+        nextEl: ".swiper-next", // Direct class reference
+        prevEl: ".swiper-prev", // Direct class reference
+      },
+      slideActiveClass: "is-active",
+      slideDuplicateActiveClass: "is-active",
+    });
+  });
 });
