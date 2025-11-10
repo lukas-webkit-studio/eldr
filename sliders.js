@@ -67,7 +67,7 @@ $(document).ready(function () {
         480: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
         768: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
         992: { slidesPerView: 3, spaceBetween: "0%", centeredSlides: false },
-        1280: { slidesPerView: 4, spaceBetween: "0%", centeredSlides: false },
+        1280: { slidesPerView: 3, spaceBetween: "0%", centeredSlides: false },
       },
       slideActiveClass: "is-active",
       slideDuplicateActiveClass: "is-active",
