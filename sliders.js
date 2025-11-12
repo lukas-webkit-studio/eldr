@@ -83,36 +83,46 @@ $(document).ready(function () {
 
     // Popup functionality
     $(this).find('.imageslider__slide').on('click', function() {
-      const popUp = $(this).closest('.slider').find('.popup');
-      popUp.css('display', 'flex');
-      const popupSwiper = new Swiper(popUp.find(".swiper-popup")[0], {
-        speed: 300,
-        loop: false,
-        autoHeight: false,
-        centeredSlides: false,
-        followFinger: true,
-        freeMode: false,
-        slideToClickedSlide: false,
-        slidesPerView: 1,
-        spaceBetween: "1%",
-        rewind: false,
-        mousewheel: { forceToAxis: true },
-        keyboard: { enabled: true, onlyInViewport: true },
-        navigation: {
-          nextEl: popUp.find(".swiper-next-popup")[0],
-          prevEl: popUp.find(".swiper-prev-popup")[0],
-          disabledClass: "is-disabled"
-        },
-        slideActiveClass: "is-active",
-        slideDuplicateActiveClass: "is-active",
-        initialSlide: $(this).index(),
-        preloadImages: true,
-        lazy: {
-          loadPrevNext: true,
-          loadPrevNextAmount: 3,
-          loadOnTransitionStart: true
-        }
-      });
+  const popUp = $(this).closest('.slider').find('.popup');
+  popUp.css('display', 'flex');
+
+  // OPRAVA: Znič starý swiper, pokud existuje
+  const prevPopupSwiper = popUp.data('popupSwiper');
+  if (prevPopupSwiper) {
+    prevPopupSwiper.destroy(true, true);
+    popUp.removeData('popupSwiper'); // pročistíme referenci
+  }
+
+  // Inicializuj nový popupSwiper a ulož si ho na popup
+  const popupSwiper = new Swiper(popUp.find(".swiper-popup")[0], {
+    speed: 300,
+    loop: false,
+    autoHeight: false,
+    centeredSlides: false,
+    followFinger: true,
+    freeMode: false,
+    slideToClickedSlide: false,
+    slidesPerView: 1,
+    spaceBetween: "1%",
+    rewind: false,
+    mousewheel: { forceToAxis: true },
+    keyboard: { enabled: true, onlyInViewport: true },
+    navigation: {
+      nextEl: popUp.find(".swiper-next-popup")[0],
+      prevEl: popUp.find(".swiper-prev-popup")[0],
+      disabledClass: "is-disabled"
+    },
+    slideActiveClass: "is-active",
+    slideDuplicateActiveClass: "is-active",
+    initialSlide: $(this).index(),
+    preloadImages: true,
+    lazy: {
+      loadPrevNext: true,
+      loadPrevNextAmount: 3,
+      loadOnTransitionStart: true
+    }
+  });
+  popUp.data('popupSwiper', popupSwiper);
 
       // Apply the background color and theme color immediately on popup open
       toggleScrollLock('flex');
