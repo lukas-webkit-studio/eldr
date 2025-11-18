@@ -93,22 +93,22 @@ body {
 }
 
 /* Default to hide all language-specific content */
-.show--cs,
-.show--en,
-.show--de {
+.localization-show-only_cs,
+.localization-show-only_en,
+.localization-show-only_de {
   display: none;
 }
 
 /* Show content based on the body class */
-body.lang-cs .show--cs {
+body.lang-cs .localization-show-only_cs {
   display: block;
 }
 
-body.lang-en .show--en {
+body.lang-en .localization-show-only_en {
   display: block;
 }
 
-body.lang-de .show--de {
+body.lang-de .localization-show-only_de {
   display: block;
 }
 
