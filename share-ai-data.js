@@ -1,4 +1,3 @@
-<script>
 (function(){
   'use strict';
 
@@ -38,7 +37,7 @@
     if (d) return d === 'gemini' ? 'googleai' : d; // kompatibilita s "gemini"
     const t=(a.textContent||'').toLowerCase();
     if (t.includes('chatgpt')) return 'chatgpt';
-    if (t.includes('google ai')) return 'googleai';
+    if (t.includes('google-ai')) return 'googleai';
     if (t.includes('gemini')) return 'googleai';
     if (t.includes('perplexity')) return 'perplexity';
     if (t.includes('claude')) return 'claude';
@@ -58,4 +57,3 @@
     a.addEventListener('click', ()=> { copyPrompt().catch(()=>{}); });
   });
 })();
-</script>
