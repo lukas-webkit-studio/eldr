@@ -125,13 +125,3 @@ body.lang-de .localization-show-only_de {
     clip-path: none;
   }
 }
-
-.arrow__icon,
-.imageslider__item,
-.disable-text-selection,
-.arrow__circle {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
