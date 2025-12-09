@@ -15,45 +15,47 @@ $(document).ready(function () {
     const $component = $(this);
     let sliderDuration = $component.attr("slider-duration") ? +$component.attr("slider-duration") : 300;
 
-    // Main Swiper initialization
+    // Main Swiper initialization (pokud existuje)
     const mainSwiperEl = $component.find(".swiper")[0];
-    if (!mainSwiperEl) {
-      return; // no main swiper found, nothing to init for this component
-    }
+    let mainSwiper = null;
+    if (mainSwiperEl) {
+      mainSwiper = new Swiper(mainSwiperEl, {
+        speed: sliderDuration,
+        loop: false,
+        autoHeight: false,
+        centeredSlides: true,
+        followFinger: true,
+        freeMode: false,
+        slideToClickedSlide: false,
+        slidesPerView: 'auto',
+        spaceBetween: "0%",
+        rewind: false,
+        mousewheel: { forceToAxis: true },
+        keyboard: { enabled: true, onlyInViewport: true },
+        breakpoints: {
+          480: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
+          768: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
+          992: { slidesPerView: 3, spaceBetween: "0%", centeredSlides: false },
+          1280: { slidesPerView: 4, spaceBetween: "0%", centeredSlides: false }
+        },
+        navigation: {
+          nextEl: $component.find(".swiper-next")[0],
+          prevEl: $component.find(".swiper-prev")[0],
+          disabledClass: "is-disabled"
+        },
+        slideActiveClass: "is-active",
+        slideDuplicateActiveClass: "is-active",
+        preloadImages: true,
+        lazy: {
+          loadPrevNext: true,
+          loadPrevNextAmount: 3,
+          loadOnTransitionStart: true
+        }
+      });
 
-    const swiper = new Swiper(mainSwiperEl, {
-      speed: sliderDuration,
-      loop: false,
-      autoHeight: false,
-      centeredSlides: true,
-      followFinger: true,
-      freeMode: false,
-      slideToClickedSlide: false,
-      slidesPerView: 'auto',
-      spaceBetween: "0%",
-      rewind: false,
-      mousewheel: { forceToAxis: true },
-      keyboard: { enabled: true, onlyInViewport: true },
-      breakpoints: {
-        480: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
-        768: { slidesPerView: 'auto', spaceBetween: "0%", centeredSlides: true },
-        992: { slidesPerView: 3, spaceBetween: "0%", centeredSlides: false },
-        1280: { slidesPerView: 4, spaceBetween: "0%", centeredSlides: false }
-      },
-      navigation: {
-        nextEl: $component.find(".swiper-next")[0],
-        prevEl: $component.find(".swiper-prev")[0],
-        disabledClass: "is-disabled"
-      },
-      slideActiveClass: "is-active",
-      slideDuplicateActiveClass: "is-active",
-      preloadImages: true,
-      lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 3,
-        loadOnTransitionStart: true
-      }
-    });
+      // uložíme instanci hlavního swiperu na DOM element pro pozdější použití
+      $component.data("mainSwiper", mainSwiper);
+    }
 
     // Swiper-small initialization (only if exists)
     const swiperSmallEl = $component.find(".swiper-small")[0];
@@ -88,10 +90,6 @@ $(document).ready(function () {
       });
     }
 
-    let mainSwiper = swiper;
-    // uložíme instanci hlavního swiperu na DOM element pro pozdější použití
-    $component.data("mainSwiper", mainSwiper);
-
     // Popup a jeho Swiper – navázané na konkrétní slider
     const sliderRoot = $component.closest(".slider");
     const popUp = sliderRoot.find(".popup");
@@ -106,8 +104,8 @@ $(document).ready(function () {
           if (mutation.attributeName === "style") {
             const displayValue = $(mutation.target).css("display");
 
-            // při zavření popupu sesynchronizujeme hlavní slider
-            if (displayValue === "none" && popupSwiper) {
+            // při zavření popupu sesynchronizujeme hlavní slider (pokud existuje)
+            if (displayValue === "none" && popupSwiper && mainSwiper) {
               mainSwiper.slideTo(popupSwiper.activeIndex);
             }
 
@@ -120,7 +118,7 @@ $(document).ready(function () {
       popupObserver.observe(popUp[0], { attributes: true });
     }
 
-    // Otevření popupu po kliku na obrázek v hlavním slideru
+    // Otevření popupu po kliku na obrázek v hlavním nebo small slideru
     $component.find(".imageslider__slide").on("click", function () {
       if (!popUp.length || !popupSwiperEl) {
         return;
@@ -282,4 +280,17 @@ $(document).ready(function () {
       slideDuplicateActiveClass: "is-active"
     });
   });
+});
+
+// Zobrazení / skrytí popisku ve viditelném popupu při držení klávesy "F"
+$(document).on('keydown.showPopupLabel', function (event) {
+  if (event.key && event.key.toLowerCase() === 'f') {
+    $('.popup:visible .swiper-popup--label').css('display', 'block');
+  }
+});
+
+$(document).on('keyup.hidePopupLabel', function (event) {
+  if (event.key && event.key.toLowerCase() === 'f') {
+    $('.popup:visible .swiper-popup--label').css('display', 'none');
+  }
 });
