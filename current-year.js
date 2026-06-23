@@ -3,7 +3,7 @@
 
   // === 0) Dynamický výpočet proměnných ===
   const currentYear = new Date().getFullYear();
-  const baseYear = 1989;
+  const baseYear = 1990;
   const yearsOfExperience = currentYear - baseYear;
 
   // Globální proměnné — lze je používat v HTML
