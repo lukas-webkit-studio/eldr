@@ -58,3 +58,35 @@ vepsaná přímo v page-level custom code (Domovská stránka / Reference).
 | `imageslider__*`, `popup*`, `slider`, `slider-main_component`, `swiper-*`, `cross-icon`, `overlap__menu__wrapper`, `arrow*` | sliders.js | galerie a popup |
 | `sectionhero__graphic*`, `sectionmap__mapwrapper`, `image--clipped` | style.css | clip-path |
 | `sectionreference__collection__item__language`, `localization-show-only_*` | index.js | jazykové varianty |
+
+---
+
+## Incident 2026-08-15: přepsaný site head
+
+Při nasazení bundlu byl obsah Site settings → Custom code → **Head** nahrazen
+celý, místo aby se vyměnil jen poslední blok. Z živého webu tím zmizely:
+
+- **GTM loader** → veškeré měření mimo provoz (v HTML zbyl jen `<noscript>`)
+- `attributes-richtext@1` → HTML vložené do CMS rich textu se přestalo
+  renderovat a zobrazovalo se jako holý kód (rozbité bannery v blogu)
+- `attributes-cmsfilter@1` → filtrování CMS seznamů
+- `attributes-scrolldisable@1`, `attributes@2`
+- `<meta name="theme-color">`
+
+Obnoveno ze zálohy a publikováno. Poučení: **vždy předávat celý obsah pole,
+nikdy instrukci „nahraď jen tuhle část"**.
+
+## KRITICKÉ: audit sirotků neplatí
+
+Bannery v článcích jsou vložené jako escapovaný HTML v CMS poli rich textu
+(`&lt;div class=&quot;banner-cta-big&quot;&gt;`). Audit četl atributy
+`class="…"` v renderovaném HTML, takže tyhle třídy nikdy neuviděl a označil
+je za nepoužívané:
+
+`banner-cta-big`, `banner-cta-big-columns`, `banner-cta-big_content`,
+`banner-cta-big_image-wrapper`, `banner-cta-big-image`, `banner-cta-small`,
+`banner-cta-small_content`, `cta-section`, `heading-style-h4`
+
+Seznam 539 sirotků se proto NESMÍ použít k mazání. Před dalším postupem je
+nutné audit zopakovat a započítat i escapovaný HTML ve všech CMS polích
+typu Rich Text napříč všemi kolekcemi.
