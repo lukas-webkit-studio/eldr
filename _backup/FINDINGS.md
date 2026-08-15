@@ -90,3 +90,35 @@ je za nepoužívané:
 Seznam 539 sirotků se proto NESMÍ použít k mazání. Před dalším postupem je
 nutné audit zopakovat a započítat i escapovaný HTML ve všech CMS polích
 typu Rich Text napříč všemi kolekcemi.
+
+## Audit v2 — opravený (audit-v2.json)
+
+Původní audit četl jen atributy `class="…"` v renderovaném HTML. Nová verze
+čte navíc:
+
+- `class=&quot;…&quot;` — escapovaný HTML v CMS rich textu (bannery v článcích)
+- inline `<style>` na stránkách i v komponentě Global Styles
+- selektory uvnitř inline `<script>`
+- náš vlastní kód v `src/`
+
+Výsledek: **516 sirotků** místo původních 539. Revizí zachráněno 23 tříd:
+
+| Skupina | Třídy | Odkud |
+|---|---|---|
+| Bannery v článcích | `banner-cta-big`, `-columns`, `-image`, `_content`, `_image-wrapper`, `banner-cta-small`, `_content` | CMS embed |
+| Typografie bannerů | `cta-section`, `heading-style-h4` | CMS embed |
+| client-first utility | `container-medium`, `container-small`, `hide-tablet`, `margin-horizontal`, `margin-left`, `margin-vertical`, `padding-bottom`, `padding-horizontal`, `padding-left`, `padding-right`, `spacing-clean` | Global Styles |
+| Vlastní kód | `overlap__menu__wrapper`, `is-right` | src/ |
+| Mrtvý odkaz | `tab-image--mobile` | inline JS (na webu neexistuje) |
+
+Utility třídy z Global Styles nejsou dnes na žádném prvku, ale jsou to
+záměrně dostupné nástroje client-first — mazat se nesmí.
+
+### Zbývající mezera
+Audit v2 staví na 87 publikovaných URL. Rozpracované `/dev/` stránky
+publikované nejsou, takže třídy použité výhradně na nich se pořád jeví jako
+sirotci. Před mazáním je nutné projet i drafty přes Designer API.
+
+### K prověření
+`overlap__menu__wrapper` se vyskytuje jen v našem kódu, na žádné publikované
+stránce. Buď je na draftu, nebo je ten selektor mrtvý.
