@@ -1,0 +1,112 @@
+/* ==========================================================================
+   ELDR — vlastní styly webu eldr.cz
+   --------------------------------------------------------------------------
+   MIGRAČNÍ REŽIM (expand): každé pravidlo cílí na STARÝ i NOVÝ název třídy,
+   aby web fungoval během celého přejmenovávání ve Webflow. Po dokončení
+   migrace se staré selektory odstraní (fáze contract).
+
+   Breakpoint 991/992 px odpovídá zlomu tablet/desktop ve Webflow.
+   ========================================================================== */
+
+/* --- Základ stránky ------------------------------------------------------ */
+
+body {
+  overflow-x: hidden;
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+/* --- Posuvník ------------------------------------------------------------ */
+
+::-webkit-scrollbar { width: 6px; height: 6px; z-index: 9999; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* --- Zkosené hrany (clip-path) -------------------------------------------
+   Zkosení se na tabletu a mobilu vypíná, aby nekrájelo obsah. */
+
+.imageslider__item,
+.gallery_item {
+  clip-path: polygon(20px 0, 100% 0, 220px 100%, 0 100%);
+}
+
+@media screen and (min-width: 992px) {
+  .sectionhero__graphic.vyrobky,
+  .hero_graphic.is-vyrobky {
+    clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .sectionhero__graphic.kontakty,
+  .hero_graphic.is-kontakty {
+    clip-path: polygon(110px 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .sectionhero__graphic.reference,
+  .hero_graphic.is-reference {
+    clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .sectionhero__graphic__bottombar,
+  .hero_graphic-bottombar {
+    clip-path: none;
+  }
+  .sectionmap__mapwrapper,
+  .map_wrapper {
+    clip-path: polygon(150px 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .image--clipped.right,
+  .image-clipped.is-right {
+    clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sectionhero__graphic.vyrobky,
+  .hero_graphic.is-vyrobky,
+  .sectionmap__mapwrapper,
+  .map_wrapper,
+  .image--clipped.right,
+  .image-clipped.is-right {
+    clip-path: none;
+  }
+  .sectionhero__graphic__bottombar,
+  .hero_graphic-bottombar,
+  .sectionhero__graphic.kontakty,
+  .hero_graphic.is-kontakty,
+  .sectionhero__graphic.reference,
+  .hero_graphic.is-reference {
+    clip-path: polygon(2px 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* --- Šipky slideru -------------------------------------------------------
+   Zabrání označení textu při rychlém proklikávání. */
+
+.arrow, .arrow__icon, .arrow *,
+.arrow_circle, .arrow_icon {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- Ikony záložek na Domovské stránce -----------------------------------
+   Přesunuto z page-level custom code Domovské stránky. */
+
+.tabs_icon svg path { fill: #292929; }
+.active svg path { fill: url(#grad1); }
+
+/* --- Jazykové varianty obsahu --------------------------------------------
+   Prvek se zobrazí jen v odpovídající jazykové verzi. Třídu lang-* přidává
+   na <body> modul 20-locale.js. */
+
+.localization-show-only_cs,
+.localization-show-only_en,
+.localization-show-only_de {
+  display: none;
+}
+
+body.lang-cs .localization-show-only_cs,
+body.lang-en .localization-show-only_en,
+body.lang-de .localization-show-only_de {
+  display: block;
+}
