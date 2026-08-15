@@ -24,8 +24,16 @@
       keyboard: { enabled: true, onlyInViewport: true },
       slideActiveClass: 'is-active',
       slideDuplicateActiveClass: 'is-active',
-      preloadImages: true,
-      lazy: { loadPrevNext: true, loadPrevNextAmount: 3, loadOnTransitionStart: true }
+
+      /* preloadImages: false — původně tu bylo true spolu s `lazy` blokem,
+         což je protimluv: `preloadImages: true` si vynutí načtení všech
+         obrázků slideru dopředu, čímž lazy loading úplně vypne. Navíc
+         `lazy` vyžaduje markup s třídou swiper-lazy, který není ani na
+         jedné z 87 stránek — celý blok byl mrtvá konfigurace, která
+         vypadala jako optimalizace. Odstraněn; false navíc ušetří to
+         vynucené stahování. Skutečné lazy loading řeší Webflow atributem
+         loading="lazy" na obrázcích v Designeru. */
+      preloadImages: false
     };
   }
 
@@ -95,7 +103,11 @@
         }).observe(popUp[0], { attributes: true });
       }
 
-      $component.find(SEL.gallerySlide).on('click', function () {
+      /* Delegovaně přes $component, ne napevno na slidy. Přímá vazba by
+         přestala fungovat, jakmile by se seznam překreslil (CMS filtr,
+         Finsweet list). Dnes se filtr a galerie na jedné stránce nepotkají,
+         takže je to pojistka do budoucna — stojí jeden argument navíc. */
+      $component.on('click', SEL.gallerySlide, function () {
         if (!popUp.length || !popupSwiperEl) return;
         var index = $(this).index();
 
@@ -122,13 +134,29 @@
 
     // homepage slider
     $(SEL.swiperHomepage).each(function () {
+      var $slider = $(this);
+
+      /* Navigace se hledá uvnitř komponenty slideru, ne globálně přes
+         document. Původní `nextEl: '.swiper-next'` fungovalo jen díky tomu,
+         že na Domovské stránce je přesně jedna taková šipka — druhý slider
+         se šipkami na téže stránce by je oběma sebral.
+
+         Pozor na pořadí: .slider / .slider_component na Domovské stránce
+         vůbec nejsou, obal je tam .slider-main_component. Proto se zkouší
+         obojí a teprve pak se padá na přímého rodiče. */
+      var $scope = $slider.closest(SEL.sliderRoot + ', ' + SEL.sliderMain);
+      if (!$scope.length) $scope = $slider.parent();
+
       new Swiper(this, $.extend(baseConfig(300), {
         loop: true,
         centeredSlides: false,
         slidesPerView: 'auto',
         spaceBetween: 64,
         breakpoints: { 992: { slidesPerView: 2 }, 1440: { slidesPerView: 3 } },
-        navigation: { nextEl: '.swiper-next', prevEl: '.swiper-prev' }
+        navigation: {
+          nextEl: $scope.find('.swiper-next')[0],
+          prevEl: $scope.find('.swiper-prev')[0]
+        }
       }));
     });
 
