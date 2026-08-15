@@ -10,6 +10,8 @@ module.exports = [
         location: 'readonly', console: 'readonly', setTimeout: 'readonly',
         clearTimeout: 'readonly', MutationObserver: 'readonly',
         NodeFilter: 'readonly', getComputedStyle: 'readonly',
+        requestAnimationFrame: 'readonly', IntersectionObserver: 'readonly',
+        Promise: 'readonly', Event: 'readonly',
         Swiper: 'readonly', PureCounter: 'readonly',
         module: 'writable', require: 'readonly', __dirname: 'readonly',
         // sdílené napříč moduly (build.js je slučuje do jednoho IIFE)

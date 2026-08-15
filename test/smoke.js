@@ -68,12 +68,18 @@ run('STARÉ třídy (dnešní stav webu)',
 run('NOVÉ client-first třídy (po migraci)',
   `<span data-var="YOE"></span>
    <div class="reference_item-language">de</div>
-   <div class="longtext_component">text</div><div class="longtext_button">Více</div>`,
+   <div class="longtext_component">text</div><div class="longtext_button">Více</div>
+   <span class="counter_years">36</span>`,
   'https://www.eldr.cz/en/reference',
   (win, doc) => {
     ok('body má lang-en', doc.body.classList.contains('lang-en'));
     ok('německá reference přeložena anglicky', doc.querySelector('.reference_item-language').textContent === 'Translated from German');
     ok('tlačítko dlouhého textu obslouženo', doc.querySelector('.longtext_button').style.display !== '');
+
+    const c = doc.querySelector('.counter_years');
+    ok('počítadlo NEukazuje finální číslo před animací', c.textContent !== '36');
+    ok('počítadlo ukazuje startovní hodnotu', c.textContent === '20');
+    ok('počítadlo je odkryté (má is-counter-ready)', c.classList.contains('is-counter-ready'));
   });
 
 // --- 3. prázdná stránka ---------------------------------------------------

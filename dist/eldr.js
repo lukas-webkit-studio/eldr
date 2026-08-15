@@ -409,73 +409,110 @@ function hasJQ() {
 
 /* ==========================================================================
    Počítadlo let praxe
-   Původně: inline v patičce Domovské stránky
-   Knihovnu PureCounter si modul donese sám a jen tehdy, když je na stránce
-   prvek s odpovídající třídou — na ostatních stránkách se nic nestahuje.
-   Spustí se až po zavření cookie lišty, aby animace neproběhla mimo obraz.
+   --------------------------------------------------------------------------
+   Proč vlastní implementace místo PureCounteru:
+   V HTML je natvrdo zapsané finální číslo, takže se vykreslí hned. Knihovna
+   ho pak přepsala zpět na startovní hodnotu a teprve začala animovat —
+   návštěvník tedy viděl výsledek dřív než animaci, a přes cookie lištu ještě
+   jednou. Tenhle modul místo toho:
+
+   1. Finální číslo se nikdy nezobrazí předčasně. CSS ho schová (viditelnost,
+      ne display — layout se nehne), modul hned dosadí startovní hodnotu.
+   2. Animace se spustí, až je prvek opravdu vidět A cookie lišta je pryč.
+   3. Hodnota se dopočítá z GLOBAL_VARS, takže v HTML může být klidně starý rok.
+   4. Bez JS nebo při chybě CSS číslo po 3 s samo odkryje (failsafe v eldr.css).
+   5. Respektuje prefers-reduced-motion — tam se číslo jen dosadí.
+
+   Volitelné atributy na prvku: data-counter-start, data-counter-end.
    ========================================================================== */
 
 (function () {
   if (!has(SEL.counter)) return;
 
-  var LIB = 'https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js';
-  var started = false;
-  var loading = null;
+  var DURATION = 1200;
+  var DEFAULT_START = 20;
+  var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function loadLib() {
-    if (typeof window.PureCounter === 'function') return Promise.resolve();
-    if (loading) return loading;
-    loading = new Promise(function (resolve, reject) {
-      var s = document.createElement('script');
-      s.src = LIB;
-      s.async = true;
-      s.onload = resolve;
-      s.onerror = reject;
-      document.head.appendChild(s);
-    });
-    return loading;
+  function targetValue(el) {
+    var attr = parseInt(el.getAttribute('data-counter-end'), 10);
+    if (!isNaN(attr)) return attr;
+    if (window.GLOBAL_VARS && window.GLOBAL_VARS.YOE) return window.GLOBAL_VARS.YOE;
+    var fromHtml = parseInt((el.textContent || '').replace(/\D/g, ''), 10);
+    return isNaN(fromHtml) ? 0 : fromHtml;
   }
 
-  function start() {
-    if (started) return;
-    started = true;
-    loadLib().then(function () {
-      new PureCounter({
-        selector: SEL.counter,
-        start: 20,
-        end: (window.GLOBAL_VARS && window.GLOBAL_VARS.YOE) || 35,
-        duration: 0.8,
-        delay: 10,
-        once: true,
-        repeat: false,
-        decimals: 0,
-        legacy: true,
-        filesizing: false,
-        currency: false,
-        separator: false
-      });
-    }).catch(function () {
-      // Knihovna se nenačetla — číslo zůstane staticky vypsané, nic se nerozbije.
-      started = false;
+  function startValue(el, end) {
+    var attr = parseInt(el.getAttribute('data-counter-start'), 10);
+    if (!isNaN(attr)) return attr;
+    return Math.min(DEFAULT_START, end);
+  }
+
+  /* Cubic ease-out — rychlý rozjezd, měkké dojetí. */
+  function ease(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function animate(el, from, to) {
+    if (REDUCED || from === to) { el.textContent = String(to); return; }
+
+    var t0 = null;
+    function frame(now) {
+      if (t0 === null) t0 = now;
+      var p = Math.min((now - t0) / DURATION, 1);
+      el.textContent = String(Math.round(from + (to - from) * ease(p)));
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /** Je cookie lišta pryč? Bez lišty na stránce vracíme rovnou true. */
+  function bannerGone() {
+    return $$('[fs-cc="banner"]').every(function (b) {
+      return getComputedStyle(b).display === 'none';
     });
   }
 
-  window.addEventListener('load', function () {
+  /** Zavolá fn, jakmile cookie lišta zmizí. */
+  function whenBannerGone(fn) {
+    if (bannerGone()) { fn(); return; }
     var banners = $$('[fs-cc="banner"]');
+    var observer = new MutationObserver(function () {
+      if (!bannerGone()) return;
+      observer.disconnect();
+      fn();
+    });
+    banners.forEach(function (b) { observer.observe(b, { attributes: true, attributeFilter: ['style', 'class'] }); });
+  }
 
-    // Bez cookie lišty spustíme rovnou.
-    if (!banners.length) { start(); return; }
+  /** Zavolá fn, jakmile je prvek v zorném poli. */
+  function whenVisible(el, fn) {
+    if (typeof IntersectionObserver !== 'function') { fn(); return; }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        observer.disconnect();
+        fn();
+      });
+    }, { threshold: 0.4 });
+    observer.observe(el);
+  }
 
-    banners.forEach(function (banner) {
-      if (getComputedStyle(banner).display === 'none') {
-        start();
-      } else {
-        new MutationObserver(function (mutations) {
-          mutations.forEach(function (m) {
-            if (m.attributeName === 'style' && getComputedStyle(m.target).display === 'none') start();
-          });
-        }).observe(banner, { attributes: true });
-      }
+  onReady(function () {
+    $$(SEL.counter).forEach(function (el) {
+      var end = targetValue(el);
+      var from = startValue(el, end);
+
+      // Startovní hodnota se dosadí okamžitě a prvek se odkryje.
+      // Finální číslo se tím pádem nikdy neukáže před animací.
+      el.textContent = String(from);
+      el.classList.add('is-counter-ready');
+
+      var done = false;
+      whenBannerGone(function () {
+        whenVisible(el, function () {
+          if (done) return;
+          done = true;
+          animate(el, from, end);
+        });
+      });
     });
   });
 })();

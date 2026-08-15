@@ -110,3 +110,27 @@ body.lang-en .localization-show-only_en,
 body.lang-de .localization-show-only_de {
   display: block;
 }
+
+/* --- Počítadlo let -------------------------------------------------------
+   Číslo je do doby, než ho převezme JS, skryté přes visibility (layout se
+   nehne, takže nevzniká posun obsahu). Modul 40-counter.js dosadí startovní
+   hodnotu a přidá .is-counter-ready.
+
+   Failsafe: kdyby se JS nenačetl nebo spadl, CSS animace číslo po 3 sekundách
+   odkryje sama, takže návštěvník uvidí správnou hodnotu z HTML. */
+
+.w-mod-js .countupyears,
+.w-mod-js .counter_years {
+  visibility: hidden;
+  animation: eldr-counter-failsafe 0s linear 3s forwards;
+}
+
+.w-mod-js .countupyears.is-counter-ready,
+.w-mod-js .counter_years.is-counter-ready {
+  visibility: visible;
+  animation: none;
+}
+
+@keyframes eldr-counter-failsafe {
+  to { visibility: visible; }
+}
