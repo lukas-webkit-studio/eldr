@@ -52,7 +52,12 @@ var SEL = {
      containeru GTM-W6PR2VX. */
   gtmForm:          '.form__type1',   // hook: NEPOUŽÍVÁ se v bundlu, měření běží přes #form-kontakt
   gtmNavLink:       '.navbar__link',
-  gtmButton:        '.button--primary',
+
+  /* Client-first `.button` přibyla k původní `.button--primary`. Bez ní se
+     neměřila nová tlačítka — na Domovské stránce čtyři, včetně hlavního CTA
+     v hero. Ověřeno na všech 87 stránkách: žádný prvek nemá obě třídy
+     zároveň ani se nekříží s .navbar__link, takže nehrozí dvojí počítání. */
+  gtmButton:        '.button--primary, .button',
   gtmTopProduct:    '.sectiontopproducts__item',
   gtmMenuProduct:   '.sectionproducts__item'
 };
@@ -84,4 +89,25 @@ function has(sel) {
 /** Je k dispozici jQuery? Webflow načítá vlastní 3.5.1. */
 function hasJQ() {
   return typeof window.jQuery === 'function';
+}
+
+/* --- Jazyk stránky --------------------------------------------------------
+   JEDINÝ zdroj pravdy pro celý bundle. Dřív si jazyk určoval každý modul sám
+   a dvěma různými způsoby: podle podřetězce v URL (locale, video) nebo podle
+   atributu lang (formulář). Ta první varianta je rozbitá — `url.indexOf('/de')`
+   chytne i cestu /produkty/designova-…, takže česká stránka dostala němčinu
+   a její anglická mutace taky. Ze 87 publikovaných URL na to dojely dvě.
+
+   Webflow plní <html lang> správně na všech jazykových mutacích, takže čteme
+   odtud. URL se používá jen jako záchrana, kdyby atribut chyběl — a to už
+   striktně na segment cesty, ne na podřetězec. */
+
+var LOCALES = ['cs', 'en', 'de'];
+
+function locale() {
+  var attr = (document.documentElement.getAttribute('lang') || '').trim().toLowerCase().slice(0, 2);
+  if (LOCALES.indexOf(attr) !== -1) return attr;
+
+  var seg = window.location.pathname.split('/')[1];
+  return LOCALES.indexOf(seg) !== -1 ? seg : 'cs';
 }

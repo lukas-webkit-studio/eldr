@@ -14,9 +14,11 @@ module.exports = [
         Promise: 'readonly', Event: 'readonly',
         Swiper: 'readonly', PureCounter: 'readonly',
         module: 'writable', require: 'readonly', __dirname: 'readonly',
+        process: 'readonly', URL: 'readonly',
         // sdílené napříč moduly (build.js je slučuje do jednoho IIFE)
         SEL: 'readonly', $$: 'readonly', $1: 'readonly',
-        onReady: 'readonly', has: 'readonly', hasJQ: 'readonly'
+        onReady: 'readonly', has: 'readonly', hasJQ: 'readonly',
+        locale: 'readonly', LOCALES: 'readonly'
       }
     },
     rules: {

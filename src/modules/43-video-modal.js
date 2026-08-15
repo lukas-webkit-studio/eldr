@@ -11,13 +11,6 @@
     de: 'https://player.vimeo.com/video/950909097'
   };
 
-  function detectLocale() {
-    var path = window.location.pathname.toLowerCase();
-    if (path.indexOf('/en') !== -1) return 'en';
-    if (path.indexOf('/de') !== -1) return 'de';
-    return 'cs';
-  }
-
   onReady(function () {
     var wrapper = $1(SEL.videoWrapper);
     var backdrop = $1(SEL.videoBackdrop);
@@ -28,22 +21,30 @@
 
     if (!wrapper && !inlineFrame) return;
 
-    var locale = detectLocale();
-    if (inlineFrame) inlineFrame.src = VIDEOS[locale] + '?autoplay=0';
+    var lang = locale();
+    if (inlineFrame) inlineFrame.src = VIDEOS[lang] + '?autoplay=0';
+
+    function isOpen() {
+      return !!wrapper && getComputedStyle(wrapper).display !== 'none';
+    }
 
     function open() {
-      if (modalFrame) modalFrame.src = VIDEOS[locale] + '?autoplay=1';
+      if (modalFrame) modalFrame.src = VIDEOS[lang] + '?autoplay=1';
       if (wrapper) wrapper.style.display = 'flex';
     }
 
     function close() {
       if (wrapper) wrapper.style.display = 'none';
-      if (modalFrame) modalFrame.src = '';
+      if (modalFrame) modalFrame.src = '';   // zastaví přehrávání
     }
 
     if (trigger && wrapper && modalFrame) trigger.addEventListener('click', open);
     if (closeBtn) closeBtn.addEventListener('click', close);
     if (backdrop) backdrop.addEventListener('click', close);
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+    // Escape zavírá jen otevřený modal — dřív mazal src i zavřenému.
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isOpen()) close();
+    });
   });
 })();

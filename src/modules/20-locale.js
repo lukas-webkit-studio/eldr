@@ -10,21 +10,14 @@
     'lang-en': { cs: 'Translated from Czech',           de: 'Translated from German' }
   };
 
-  function detectLangClass() {
-    var url = window.location.href;
-    if (url.indexOf('/de') !== -1) return 'lang-de';
-    if (url.indexOf('/en') !== -1) return 'lang-en';
-    return 'lang-cs';
-  }
-
   onReady(function () {
-    var langClass = detectLangClass();
+    var own = locale();               // sdílená detekce z jádra
+    var langClass = 'lang-' + own;
     document.body.classList.add(langClass);
 
     if (!has(SEL.refLanguage)) return;
 
     var map = LABELS[langClass];
-    var own = langClass.slice(5); // "lang-cs" -> "cs"
 
     $$(SEL.refLanguage).forEach(function (el) {
       var lang = el.textContent.trim().toLowerCase();

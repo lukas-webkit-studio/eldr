@@ -7,10 +7,18 @@ const bundle = fs.readFileSync(require('path').join(__dirname, '..', 'dist', 'el
 let pass = 0, fail = 0;
 const ok = (n, c) => { c ? (pass++, console.log('  ✅ ' + n)) : (fail++, console.log('  ❌ ' + n)); };
 
+/* Webflow plní <html lang> podle jazykové mutace, ne podle celé cesty.
+   Harness to musí dělat stejně, jinak by testoval stav, který na webu
+   nenastane — a maskoval by chyby v detekci jazyka. */
+function langFor(url) {
+  const seg = new URL(url).pathname.split('/')[1];
+  return ['en', 'de'].includes(seg) ? seg : 'cs';
+}
+
 function run(name, html, url, check) {
   console.log('\n' + name);
   const dom = new JSDOM(
-    `<!DOCTYPE html><html lang="cs"><head><meta name="theme-color" content="#fcfcfc"></head><body>${html}</body></html>`,
+    `<!DOCTYPE html><html lang="${langFor(url)}"><head><meta name="theme-color" content="#fcfcfc"></head><body>${html}</body></html>`,
     { url, runScripts: 'outside-only', pretendToBeVisual: true }
   );
   const errors = [];
@@ -69,10 +77,19 @@ run('NOVÉ client-first třídy (po migraci)',
   `<span data-var="YOE"></span>
    <div class="reference_item-language">de</div>
    <div class="longtext_component">text</div><div class="longtext_button">Více</div>
+   <section id="hero"><a class="button">Poptat</a></section>
    <span class="counter_years">36</span>`,
   'https://www.eldr.cz/en/reference',
   (win, doc) => {
     ok('body má lang-en', doc.body.classList.contains('lang-en'));
+
+    // Client-first tlačítka musí měřit stejně jako stará .button--primary,
+    // jinak by se s postupem migrace měření tiše vytrácelo.
+    win.dataLayer = [];
+    doc.querySelector('.button').click();
+    const cf = win.dataLayer.filter(e => e.event === 'button_click');
+    ok('GTM měří i client-first .button', cf.length === 1 && cf[0].button_text === 'Poptat');
+    ok('client-first tlačítko zná svou sekci', cf.length === 1 && cf[0].section === 'hero');
     ok('německá reference přeložena anglicky', doc.querySelector('.reference_item-language').textContent === 'Translated from German');
     ok('tlačítko dlouhého textu obslouženo', doc.querySelector('.longtext_button').style.display !== '');
 
@@ -82,7 +99,28 @@ run('NOVÉ client-first třídy (po migraci)',
     ok('počítadlo je odkryté (má is-counter-ready)', c.classList.contains('is-counter-ready'));
   });
 
-// --- 3. prázdná stránka ---------------------------------------------------
+// --- 3. regrese: cesta obsahující "/de" nesmí přepnout jazyk -------------
+// Dřív se jazyk hádal přes url.indexOf('/de'), takže tahle česká stránka
+// dostala němčinu — a její anglická mutace taky. Ze 87 URL na to dojely dvě.
+run('Česká stránka s "/de" v cestě (regrese detekce jazyka)',
+  '<div class="reference_item-language">de</div>',
+  'https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty',
+  (win, doc) => {
+    ok('body má lang-cs, ne lang-de', doc.body.classList.contains('lang-cs'));
+    ok('německá reference přeložena česky',
+      doc.querySelector('.reference_item-language').textContent === 'Přeloženo z němčiny');
+  });
+
+run('Anglická mutace téže stránky (regrese detekce jazyka)',
+  '<div class="reference_item-language">de</div>',
+  'https://www.eldr.cz/en/produkty/designova-a-interierova-svitidla-specialni-projekty',
+  (win, doc) => {
+    ok('body má lang-en, ne lang-de', doc.body.classList.contains('lang-en'));
+    ok('německá reference přeložena anglicky',
+      doc.querySelector('.reference_item-language').textContent === 'Translated from German');
+  });
+
+// --- 4. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
 console.log(`\n${pass} prošlo, ${fail} selhalo`);
