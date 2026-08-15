@@ -53,7 +53,9 @@ run('STARÉ třídy (dnešní stav webu)',
     const ev = win.dataLayer.map(e => e.event);
     ok('GTM menu_click', ev.includes('menu_click'));
     ok('GTM button_click', ev.filter(e => e === 'button_click').length === 3);
-    ok('GTM contact_form_submit (dřív nefungoval)', ev.includes('contact_form_submit'));
+    // Konverzi měří samostatný skript na #form-kontakt (Kontakty, Produkty).
+    // Bundle ji odpalovat NESMÍ, jinak by se počítala dvakrát.
+    ok('bundle NEodpaluje contact_form_submit (ochrana proti dvojímu měření)', !ev.includes('contact_form_submit'));
 
     const top = win.dataLayer.find(e => e.section === 'Home page');
     ok('produktová dlaždice posílá TEXT, ne DOM prvek', top && top.button_text === 'Pylony');

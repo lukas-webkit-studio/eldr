@@ -50,7 +50,7 @@ var SEL = {
      na prvcích jako prázdné třídy (nula CSS vlastností); vzhled řídí
      client-first třídy vedle nich. Odstranit je lze až po auditu GTM
      containeru GTM-W6PR2VX. */
-  gtmForm:          '.form__type1',
+  gtmForm:          '.form__type1',   // hook: NEPOUŽÍVÁ se v bundlu, měření běží přes #form-kontakt
   gtmNavLink:       '.navbar__link',
   gtmButton:        '.button--primary',
   gtmTopProduct:    '.sectiontopproducts__item',

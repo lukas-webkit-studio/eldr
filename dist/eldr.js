@@ -58,7 +58,7 @@ var SEL = {
      na prvcích jako prázdné třídy (nula CSS vlastností); vzhled řídí
      client-first třídy vedle nich. Odstranit je lze až po auditu GTM
      containeru GTM-W6PR2VX. */
-  gtmForm:          '.form__type1',
+  gtmForm:          '.form__type1',   // hook: NEPOUŽÍVÁ se v bundlu, měření běží přes #form-kontakt
   gtmNavLink:       '.navbar__link',
   gtmButton:        '.button--primary',
   gtmTopProduct:    '.sectiontopproducts__item',
@@ -777,12 +777,16 @@ function hasJQ() {
    prázdné třídy bez jediné CSS vlastnosti — vzhled řídí client-first třídy
    vedle nich. Neodstraňovat, dokud neproběhne audit containeru GTM-W6PR2VX.
 
-   Dvě opravy proti původní verzi:
-   1. Selektor formuláře byl `.Form__Type1`, ale Webflow ukládá názvy tříd
-      malými písmeny, takže na stránce je `.form__type1`. querySelectorAll je
-      case-sensitive → event contact_form_submit se nikdy neodpaloval.
-   2. U produktových dlaždic se do dataLayer posílal DOM element
-      (querySelector('h2')) místo textu. Nyní se posílá text.
+   POZOR — formulář zde ZÁMĚRNĚ NENÍ.
+   Původní blok cílil na `.Form__Type1`; Webflow ale ukládá názvy tříd malými
+   písmeny, takže na stránce je `.form__type1` a selektor nikdy nic nenašel.
+   Konverzi contact_form_submit ve skutečnosti odpaluje jiný, funkční skript
+   navázaný na #form-kontakt (stránky Kontakty a Produkty). Kdyby se selektor
+   zde "opravil", event by se počítal dvakrát. Necháváme měření na #form-kontakt.
+
+   Oprava proti původní verzi:
+   U produktových dlaždic se do dataLayer posílal DOM element
+   (querySelector('h2')) místo textu. Nyní se posílá text.
    ========================================================================== */
 
 (function () {
@@ -800,11 +804,6 @@ function hasJQ() {
   }
 
   onReady(function () {
-    // odeslání kontaktního formuláře
-    on(SEL.gtmForm, 'submit', function () {
-      push({ event: 'contact_form_submit' });
-    });
-
     // klik v navigaci
     on(SEL.gtmNavLink, 'click', function () {
       push({ event: 'menu_click', button_text: text(this) });
