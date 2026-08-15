@@ -15,8 +15,12 @@
   function links() { return $$(SEL.tabLink); }
   function images() { return $$(SEL.tabImage); }
 
+  /* Třídu bereme jen záložkám a jejich obrázkům. Původní `$$('.active')`
+     ji strhávalo z CELÉ stránky — dnes .active nikde jinde není, takže se nic
+     nedělo, ale je to plošný zásah na hodně obecné jméno třídy. Stačilo, aby
+     ji použila jakákoliv další komponenta, a záložky by ji rozbily. */
   function activate(index) {
-    $$('.active').forEach(function (el) { el.classList.remove('active'); });
+    links().concat(images()).forEach(function (el) { el.classList.remove('active'); });
     var l = links()[index];
     var i = images()[index];
     if (l) l.classList.add('active');
@@ -34,7 +38,7 @@
 
   function stop() {
     clearTimeout(timer);
-    links().forEach(function (el) { el.classList.remove('active'); });
+    links().concat(images()).forEach(function (el) { el.classList.remove('active'); });
   }
 
   onReady(function () {

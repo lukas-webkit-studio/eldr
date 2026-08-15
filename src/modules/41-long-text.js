@@ -6,10 +6,31 @@
 (function () {
   if (!has(SEL.longTextButton)) return;
 
+  /* ==== FUNKCE JE DOČASNĚ VYPNUTÁ =========================================
+     Kód zůstává, jen se nespouští. Zapne se přepnutím ENABLED na true.
+
+     Než se zapne, je potřeba srovnat prahy na mobilu: tlačítko se ukazovalo
+     už při výšce >= MAX_MOBILE (180 px), ale text se sbalil na
+     COLLAPSED_MOBILE (220 px). Text vysoký třeba 190 px tedy dostal
+     tlačítko, které nic neskrývalo — klik neudělal nic viditelného.
+     Na desktopu jsou prahy shodné (160/160) a chová se to správně.
+
+     Při vypnuté funkci se tlačítka schovají, aby na stránce nezůstal
+     ovládací prvek bez funkce, a text se nechá v přirozené výšce. */
+  var ENABLED = false;
+
   var MAX_MOBILE = 180;
   var COLLAPSED_MOBILE = '220px';
   var MAX_DESKTOP = 160;
   var COLLAPSED_DESKTOP = '160px';
+
+  if (!ENABLED) {
+    onReady(function () {
+      $$(SEL.longTextButton).forEach(function (b) { b.style.display = 'none'; });
+      $$(SEL.longText).forEach(function (t) { t.style.height = 'auto'; });
+    });
+    return;
+  }
 
   window.addEventListener('load', function () {
     var buttons = $$(SEL.longTextButton);
