@@ -166,8 +166,7 @@ body.lang-de .localization-show-only_de {
 .button--primary:not(.card--front),
 .button--primary-alt:not(.card--back),
 .button--primary--c,
-.button--primary--cf,
-.button--download {
+.button--primary--cf {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -184,8 +183,7 @@ body.lang-de .localization-show-only_de {
 .button--primary:not(.card--front)::after,
 .button--primary-alt:not(.card--back)::after,
 .button--primary--c::after,
-.button--primary--cf::after,
-.button--download::after {
+.button--primary--cf::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -203,8 +201,7 @@ body.lang-de .localization-show-only_de {
 .button--primary:not(.card--front):hover::after,
 .button--primary-alt:not(.card--back):hover::after,
 .button--primary--c:hover::after,
-.button--primary--cf:hover::after,
-.button--download:hover::after {
+.button--primary--cf:hover::after {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -215,8 +212,7 @@ body.lang-de .localization-show-only_de {
 .button--primary:not(.card--front):hover,
 .button--primary-alt:not(.card--back):hover,
 .button--primary--c:hover,
-.button--primary--cf:hover,
-.button--download:hover {
+.button--primary--cf:hover {
   background-image: none;
   transform: translateY(-2px);
   box-shadow: 0 30px 40px #00000029;
@@ -226,8 +222,7 @@ body.lang-de .localization-show-only_de {
 .button--primary:not(.card--front):active,
 .button--primary-alt:not(.card--back):active,
 .button--primary--c:active,
-.button--primary--cf:active,
-.button--download:active {
+.button--primary--cf:active {
   transform: translateY(0);
   box-shadow: 0 10px 16px #00000024;
   transition-duration: .09s;
@@ -273,8 +268,11 @@ input.form__button:hover {
   filter: brightness(.86);
 }
 
-/* Textové odkazy: jen sjednocení tempa s ostatními tlačítky. */
-.button.is-link {
+/* Textové odkazy: jen sjednocení tempa s ostatními tlačítky. Přejezd ani
+   zdvih sem nepatří — .button--download je navzdory názvu červený odkaz
+   s ikonou, ne plné tlačítko (nemá pozadí ani stín). */
+.button.is-link,
+.button--download {
   transition:
     grid-column-gap var(--eldr-hover-time) var(--eldr-hover-ease),
     color var(--eldr-hover-time) var(--eldr-hover-ease);
@@ -310,17 +308,13 @@ input.form__button:hover {
   .button,
   .button::after,
   [class*="button--primary"],
-  [class*="button--primary"]::after,
-  .button--download,
-  .button--download::after {
+  [class*="button--primary"]::after {
     transition-duration: 1ms !important;
   }
   .button:hover,
   .button:active,
   [class*="button--primary"]:hover,
-  [class*="button--primary"]:active,
-  .button--download:hover,
-  .button--download:active {
+  [class*="button--primary"]:active {
     transform: none;
   }
 }
