@@ -134,3 +134,193 @@ body.lang-de .localization-show-only_de {
 @keyframes eldr-counter-failsafe {
   to { visibility: visible; }
 }
+
+/* --- Tlačítka: hover ------------------------------------------------------
+   Styl efektu zůstává stejný: tmavý přejezd k pravé hraně. Mění se provedení.
+
+   PROČ TO DŘÍV NEŠLO: Webflow má přejezd zapsaný jako
+   `background-image: linear-gradient(...)` na :hover. Gradient ale není
+   animovatelná vlastnost — prohlížeč mezi „žádný obrázek" a „gradient"
+   neumí interpolovat, takže efekt tvrdě cvakne bez ohledu na to, co je
+   v transition. Žádné ladění časů s tím nehne; problém je ve volbě
+   vlastnosti, ne v jejím načasování.
+
+   ŘEŠENÍ: gradient leží na ::after, který je na místě pořád, a animuje se
+   jen opacity + transform. Obojí umí prohlížeč skládat na GPU, takže
+   přejezd běží plynule i na slabším mobilu. K tomu zdvih, hlubší stín
+   a stisk — tlačítko tak reaguje na celý cyklus, ne jen na najetí.
+
+   Časování: náběh 420 ms s dojezdem (cubic-bezier), stisk 90 ms. Stisk je
+   schválně skoro okamžitý — to je to, po čem kliknutí působí „hmatatelně".
+
+   Vyřazeno: .is-link (textový odkaz, má vlastní hover), .card--front
+   a .card--back (otočné karty, ty mají transition-property: none) a
+   .is-custom (drobné odznaky s vlastním jemným hoverem). */
+
+:root {
+  --eldr-hover-ease: cubic-bezier(.22, .61, .24, 1);
+  --eldr-hover-time: .42s;
+}
+
+.button:not(.is-link):not(.is-custom),
+.button--primary:not(.card--front),
+.button--primary-alt:not(.card--back),
+.button--primary--c,
+.button--primary--cf,
+.button--download {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    transform var(--eldr-hover-time) var(--eldr-hover-ease),
+    box-shadow var(--eldr-hover-time) var(--eldr-hover-ease),
+    background-color var(--eldr-hover-time) var(--eldr-hover-ease),
+    color var(--eldr-hover-time) var(--eldr-hover-ease);
+}
+
+/* Přejezd. Startuje odsazený doprava a nasouvá se — proto ten směr.
+   pointer-events: none, ať vrstva nepolyká kliknutí. */
+.button:not(.is-link):not(.is-custom)::after,
+.button--primary:not(.card--front)::after,
+.button--primary-alt:not(.card--back)::after,
+.button--primary--c::after,
+.button--primary--cf::after,
+.button--download::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(90deg, #0000 15%, #00000059);
+  opacity: 0;
+  transform: translate3d(18%, 0, 0);
+  transition:
+    opacity var(--eldr-hover-time) var(--eldr-hover-ease),
+    transform .52s var(--eldr-hover-ease);
+}
+
+.button:not(.is-link):not(.is-custom):hover::after,
+.button--primary:not(.card--front):hover::after,
+.button--primary-alt:not(.card--back):hover::after,
+.button--primary--c:hover::after,
+.button--primary--cf:hover::after,
+.button--download:hover::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* background-image: none vypíná původní cvakací gradient z Webflow.
+   Náš eldr.css se načítá až za webflow.shared.css, takže tohle vyhraje. */
+.button:not(.is-link):not(.is-custom):hover,
+.button--primary:not(.card--front):hover,
+.button--primary-alt:not(.card--back):hover,
+.button--primary--c:hover,
+.button--primary--cf:hover,
+.button--download:hover {
+  background-image: none;
+  transform: translateY(-2px);
+  box-shadow: 0 30px 40px #00000029;
+}
+
+.button:not(.is-link):not(.is-custom):active,
+.button--primary:not(.card--front):active,
+.button--primary-alt:not(.card--back):active,
+.button--primary--c:active,
+.button--primary--cf:active,
+.button--download:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 16px #00000024;
+  transition-duration: .09s;
+}
+
+/* Světlá tlačítka snesou jen slabší závoj, jinak zšednou. */
+.button.is-secondary::after,
+.button.is-alternate::after,
+.button--primary.secondary::after {
+  background-image: linear-gradient(90deg, #0000 40%, #00000038);
+}
+
+/* Obrysová varianta v cookie liště má přejezd v červené — zachováno. */
+.button--primary--c.cookies.more::after {
+  background-image: linear-gradient(90deg, #0000 15%, #cc17193d);
+}
+
+/* Tercierní tlačítko je obrysové a stín nemá, tak mu ho nepřidáváme. */
+.button.is-tertiary:hover,
+.button.is-tertiary:active {
+  box-shadow: none;
+}
+
+/* Odesílací tlačítko formuláře je <input>, a ten nemá ::after — přejezd
+   se na něm nedá vykreslit. Ztmavení proto řeší filter, který se animovat
+   dá, takže výsledek působí stejně plynule. */
+input.button,
+input.button--primary,
+input.button--primary--c,
+input.button--primary--cf,
+input.form__button {
+  transition:
+    filter var(--eldr-hover-time) var(--eldr-hover-ease),
+    transform var(--eldr-hover-time) var(--eldr-hover-ease),
+    box-shadow var(--eldr-hover-time) var(--eldr-hover-ease);
+}
+
+input.button:hover,
+input.button--primary:hover,
+input.button--primary--c:hover,
+input.button--primary--cf:hover,
+input.form__button:hover {
+  filter: brightness(.86);
+}
+
+/* Textové odkazy: jen sjednocení tempa s ostatními tlačítky. */
+.button.is-link {
+  transition:
+    grid-column-gap var(--eldr-hover-time) var(--eldr-hover-ease),
+    color var(--eldr-hover-time) var(--eldr-hover-ease);
+}
+
+/* --- Hodnocení Google v hero ---------------------------------------------
+   Je to drobný signál důvěry, ne výzva k prokliku. Ve Webflow měl prvek
+   bílou kartu se stínem, zaoblením a zdvihem na hover — vypadal jako další
+   tlačítko a přetahoval pozornost hlavnímu CTA vedle sebe. Rámeček tedy
+   pryč; odkaz zůstává funkční, jen se drží zpátky.
+
+   Poznámka: ve Webflow má prvek rozbitý zápis
+   `transition: box-shadow .2s ease, transform undefined undefined`.
+   Ta druhá položka je neplatná a shodí celou deklaraci, takže zdvih stejně
+   cvakal bez přechodu. Tímhle blokem se to přepisuje načisto. */
+
+.hero-rating_card {
+  background-color: #0000;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  transition: opacity var(--eldr-hover-time) var(--eldr-hover-ease);
+}
+
+.hero-rating_card:hover {
+  transform: none;
+  box-shadow: none;
+  opacity: .72;
+}
+
+/* Kdo si vypnul animace, dostane hover bez pohybu — ale pořád viditelný. */
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button::after,
+  [class*="button--primary"],
+  [class*="button--primary"]::after,
+  .button--download,
+  .button--download::after {
+    transition-duration: 1ms !important;
+  }
+  .button:hover,
+  .button:active,
+  [class*="button--primary"]:hover,
+  [class*="button--primary"]:active,
+  .button--download:hover,
+  .button--download:active {
+    transform: none;
+  }
+}
