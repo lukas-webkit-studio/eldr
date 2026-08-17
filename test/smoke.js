@@ -120,7 +120,84 @@ run('Anglická mutace téže stránky (regrese detekce jazyka)',
       doc.querySelector('.reference_item-language').textContent === 'Translated from German');
   });
 
-// --- 4. prázdná stránka ---------------------------------------------------
+// --- 4. bannery z CMS -----------------------------------------------------
+// Šablona článku vykreslí bannery do skrytého zdroje, v textu zůstane jen
+// zástupný odstavec. Fixture kopíruje skutečný výstup Webflow Collection
+// Listu včetně `w-dyn-bind-empty` na nevyplněném druhém obrázku.
+const BANNER_SOURCE = `
+  <div data-banner-source style="display:none"><div class="w-dyn-list"><div role="list" class="w-dyn-items">
+    <div role="listitem" class="w-dyn-item" data-banner="pylony-velky">
+      <section class="banner-cta-big"><div class="banner-cta-big_content">
+        <h2 class="heading-style-h4">Pylony, které upoutají</h2>
+        <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
+      </div><div class="banner-cta-big_image-wrapper">
+        <img class="banner-cta-big-image left" src="a.webp" alt="Pylon">
+        <img class="banner-cta-big-image right w-dyn-bind-empty">
+      </div></section>
+    </div>
+    <div role="listitem" class="w-dyn-item" data-banner="pylony-maly">
+      <section class="banner-cta-small"><h2 class="heading-style-h4 cta-section">Malý banner</h2></section>
+    </div>
+    <div role="listitem" class="w-dyn-item" data-banner="zapomenuty">
+      <section class="banner-cta-small"><h2 class="heading-style-h4 cta-section">Zapomenutý</h2></section>
+    </div>
+  </div></div></div>`;
+
+run('Bannery z CMS (zástupný text v rich textu)',
+  `${BANNER_SOURCE}
+   <div class="w-richtext"><p>Úvodní odstavec.</p><p>[banner:Pylony-Velky]</p></div>
+   <div class="w-richtext"><p>[banner]</p><p>[banner:neexistuje]</p><p>Závěr.</p></div>
+   <div data-banner-fallback></div>`,
+  'https://www.eldr.cz/inspirace/jak-vybrat-reklamni-pylon',
+  (win, doc) => {
+    const rich = doc.querySelectorAll('.w-richtext');
+    ok('pojmenovaný banner sedí v prvním rich textu', rich[0].querySelectorAll('.banner-cta-big').length === 1);
+    ok('název banneru je case-insensitive', !!rich[0].querySelector('.banner-cta-big'));
+    ok('holé [banner] vzalo další nepoužitý v pořadí', rich[1].querySelectorAll('.banner-cta-small').length === 1);
+    ok('banner je vložen PŘED zástupný odstavec, ne na konec',
+      rich[0].firstElementChild.tagName === 'P' && rich[0].children[1].classList.contains('banner-cta-big'));
+
+    ok('žádný [banner…] nezůstal na stránce viditelný', !/\[banner/i.test(doc.body.textContent));
+    ok('nenalezený banner odstavec smazal, ne vypsal', rich[1].querySelectorAll('p').length === 1);
+
+    // Nevyplněný druhý obrázek nesmí skončit v článku jako <img> bez src.
+    const big = rich[0].querySelector('.banner-cta-big');
+    ok('prázdné CMS pole (druhý obrázek) se nevykreslí', big.querySelectorAll('img').length === 1);
+    ok('vyplněný obrázek zůstal i s alt textem', big.querySelector('img').getAttribute('alt') === 'Pylon');
+
+    // Klon nesmí táhnout do článku obal Webflow seznamu.
+    ok('klon nenese w-dyn-item ani role="listitem"',
+      !big.closest('.w-dyn-item') && !rich[0].querySelector('[role="listitem"]'));
+
+    const fallback = doc.querySelector('[data-banner-fallback]');
+    ok('banner bez [banner:…] v textu spadl na náhradní místo',
+      fallback.querySelectorAll('.banner-cta-small').length === 1);
+    ok('náhradní místo dostalo právě ten zapomenutý',
+      /Zapomenutý/.test(fallback.textContent));
+
+    // Zdroj zůstává skrytý a nedotčený — vykresluje se z klonů.
+    const src = doc.querySelector('[data-banner-source]');
+    ok('zdroj zůstal skrytý', src.style.display === 'none');
+    ok('zdroj si nechal všechny tři položky', src.querySelectorAll('[data-banner]').length === 3);
+
+    // Bannery se vkládají v modulu 05, měření sedá v modulu 90 — tlačítko
+    // banneru se tím poprvé vůbec dostane do GTM.
+    win.dataLayer = [];
+    big.querySelector('.button').click();
+    const ev = win.dataLayer.filter(e => e.event === 'button_click');
+    ok('GTM měří tlačítko vloženého banneru', ev.length === 1 && ev[0].button_text === 'Cenová nabídka');
+  });
+
+run('Článek bez zdroje bannerů (modul se musí vypnout)',
+  '<div class="w-richtext"><p>[banner:pylony-velky]</p></div>',
+  'https://www.eldr.cz/inspirace/rezana-grafika-zaujmete-zakaznika-na-prvni-pohled',
+  (win, doc) => {
+    // Bez `[data-banner-source]` modul nesmí sáhnout na text. Chybějící
+    // zdroj je chyba šablony, ne důvod mazat obsah článku.
+    ok('text článku zůstal nedotčený', doc.querySelector('.w-richtext p').textContent === '[banner:pylony-velky]');
+  });
+
+// --- 5. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
 console.log(`\n${pass} prošlo, ${fail} selhalo`);
