@@ -135,180 +135,42 @@ body.lang-de .localization-show-only_de {
   to { visibility: visible; }
 }
 
-/* --- Tlačítka: hover ------------------------------------------------------
-   Styl efektu zůstává stejný: tmavý přejezd k pravé hraně. Mění se provedení.
+/* --- Tlačítka a badge: co tu ZÁMĚRNĚ NENÍ -------------------------------
+   Hover tlačítek i vzhled badge hodnocení jsou nastavené ve Webflow na
+   třídách, ne tady. Dřív to tu bylo jako override a bylo to špatně:
+   přebíjení Designeru z custom kódu znamená, že kdo pak na tu třídu sáhne
+   ve Webflow, nevidí důvod, proč se prvek chová jinak, než jak ho nastavil.
 
-   PROČ TO DŘÍV NEŠLO: Webflow má přejezd zapsaný jako
-   `background-image: linear-gradient(...)` na :hover. Gradient ale není
-   animovatelná vlastnost — prohlížeč mezi „žádný obrázek" a „gradient"
-   neumí interpolovat, takže efekt tvrdě cvakne bez ohledu na to, co je
-   v transition. Žádné ladění časů s tím nehne; problém je ve volbě
-   vlastnosti, ne v jejím načasování.
+   Ve Webflow je nově:
+   - .button a .button--primary* — hover mění background-color na token
+     --red-hover (#ad1415), zvedá prvek o 2 px a prohlubuje stín;
+     :active ho zase posadí zpět s 90ms odezvou. Přechod je vypsaný
+     na konkrétní vlastnosti (background-color, box-shadow, transform),
+     ne na `all`.
+   - Bílé sekundární varianty, textové odkazy .is-link a obrysové tlačítko
+     v cookie liště mají vlastní hover, aby je ten červený nepřebarvil.
+   - .hero-rating_card — bez pozadí, stínu, zaoblení a paddingu.
+   - .hero-rating_logo — přechod na transform, 250 ms.
 
-   ŘEŠENÍ: gradient leží na ::after, který je na místě pořád, a animuje se
-   jen opacity + transform. Obojí umí prohlížeč skládat na GPU, takže
-   přejezd běží plynule i na slabším mobilu. K tomu zdvih, hlubší stín
-   a stisk — tlačítko tak reaguje na celý cyklus, ne jen na najetí.
+   Pravidlo: co jde nastavit na třídě v Designeru, patří do Designeru.
+   Sem jen to, co Webflow neumí — viz jediné pravidlo níž. */
 
-   Časování: náběh 420 ms s dojezdem (cubic-bezier), stisk 90 ms. Stisk je
-   schválně skoro okamžitý — to je to, po čem kliknutí působí „hmatatelně".
+/* --- Hodnocení Google: zvětšení ikony při hoveru na celou kartu ----------
+   Tohle je vztah rodič→potomek („najeď na kartu, zvětši ikonu uvnitř").
+   Webflow ho ve style panelu zapsat neumí — jde jen přes Interakci (IX2),
+   a tu API neumí číst ani zapisovat. Proto zůstává tady, jako jediné
+   pravidlo k tomuhle prvku.
 
-   Vyřazeno: .is-link (textový odkaz, má vlastní hover), .card--front
-   a .card--back (otočné karty, ty mají transition-property: none) a
-   .is-custom (drobné odznaky s vlastním jemným hoverem). */
+   Kdybyste to chtěl mít celé ve Webflow, nahraďte to interakcí:
+   trigger Hover na .hero-rating_card → affect .hero-rating_logo →
+   scale 1.12, 250 ms. Pak tenhle blok smažte. */
 
-:root {
-  --eldr-hover-ease: cubic-bezier(.22, .61, .24, 1);
-  --eldr-hover-time: .42s;
+.hero-rating_card:hover .hero-rating_logo {
+  transform: scale(1.12);
 }
 
-.button:not(.is-link):not(.is-custom),
-.button--primary:not(.card--front),
-.button--primary-alt:not(.card--back),
-.button--primary--c,
-.button--primary--cf {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  transition:
-    transform var(--eldr-hover-time) var(--eldr-hover-ease),
-    box-shadow var(--eldr-hover-time) var(--eldr-hover-ease),
-    background-color var(--eldr-hover-time) var(--eldr-hover-ease),
-    color var(--eldr-hover-time) var(--eldr-hover-ease);
-}
-
-/* Přejezd. Startuje odsazený doprava a nasouvá se — proto ten směr.
-   pointer-events: none, ať vrstva nepolyká kliknutí. */
-.button:not(.is-link):not(.is-custom)::after,
-.button--primary:not(.card--front)::after,
-.button--primary-alt:not(.card--back)::after,
-.button--primary--c::after,
-.button--primary--cf::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: linear-gradient(90deg, #0000 15%, #00000059);
-  opacity: 0;
-  transform: translate3d(18%, 0, 0);
-  transition:
-    opacity var(--eldr-hover-time) var(--eldr-hover-ease),
-    transform .52s var(--eldr-hover-ease);
-}
-
-.button:not(.is-link):not(.is-custom):hover::after,
-.button--primary:not(.card--front):hover::after,
-.button--primary-alt:not(.card--back):hover::after,
-.button--primary--c:hover::after,
-.button--primary--cf:hover::after {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-/* background-image: none vypíná původní cvakací gradient z Webflow.
-   Náš eldr.css se načítá až za webflow.shared.css, takže tohle vyhraje. */
-.button:not(.is-link):not(.is-custom):hover,
-.button--primary:not(.card--front):hover,
-.button--primary-alt:not(.card--back):hover,
-.button--primary--c:hover,
-.button--primary--cf:hover {
-  background-image: none;
-  transform: translateY(-2px);
-  box-shadow: 0 30px 40px #00000029;
-}
-
-.button:not(.is-link):not(.is-custom):active,
-.button--primary:not(.card--front):active,
-.button--primary-alt:not(.card--back):active,
-.button--primary--c:active,
-.button--primary--cf:active {
-  transform: translateY(0);
-  box-shadow: 0 10px 16px #00000024;
-  transition-duration: .09s;
-}
-
-/* Světlá tlačítka snesou jen slabší závoj, jinak zšednou. */
-.button.is-secondary::after,
-.button.is-alternate::after,
-.button--primary.secondary::after {
-  background-image: linear-gradient(90deg, #0000 40%, #00000038);
-}
-
-/* Obrysová varianta v cookie liště má přejezd v červené — zachováno. */
-.button--primary--c.cookies.more::after {
-  background-image: linear-gradient(90deg, #0000 15%, #cc17193d);
-}
-
-/* Tercierní tlačítko je obrysové a stín nemá, tak mu ho nepřidáváme. */
-.button.is-tertiary:hover,
-.button.is-tertiary:active {
-  box-shadow: none;
-}
-
-/* Odesílací tlačítko formuláře je <input>, a ten nemá ::after — přejezd
-   se na něm nedá vykreslit. Ztmavení proto řeší filter, který se animovat
-   dá, takže výsledek působí stejně plynule. */
-input.button,
-input.button--primary,
-input.button--primary--c,
-input.button--primary--cf,
-input.form__button {
-  transition:
-    filter var(--eldr-hover-time) var(--eldr-hover-ease),
-    transform var(--eldr-hover-time) var(--eldr-hover-ease),
-    box-shadow var(--eldr-hover-time) var(--eldr-hover-ease);
-}
-
-input.button:hover,
-input.button--primary:hover,
-input.button--primary--c:hover,
-input.button--primary--cf:hover,
-input.form__button:hover {
-  filter: brightness(.86);
-}
-
-/* Textové odkazy: jen sjednocení tempa s ostatními tlačítky. Přejezd ani
-   zdvih sem nepatří — .button--download je navzdory názvu červený odkaz
-   s ikonou, ne plné tlačítko (nemá pozadí ani stín). */
-.button.is-link,
-.button--download {
-  transition:
-    grid-column-gap var(--eldr-hover-time) var(--eldr-hover-ease),
-    color var(--eldr-hover-time) var(--eldr-hover-ease);
-}
-
-/* --- Hodnocení Google v hero ---------------------------------------------
-   ZÁMĚRNĚ TU NIC NENÍ. Odstranění rámečku badge je čistá změna stylu na
-   Webflow třídě .hero-rating_card, takže patří do Designeru, ne sem.
-   Dřív to tady bylo jako override a bylo to špatně: přebíjet Designer
-   z custom kódu znamená, že kdokoli pak sáhne na tu třídu ve Webflow,
-   nevidí důvod, proč se prvek chová jinak, než jak ho nastavil.
-
-   Provedeno ve Webflow na .hero-rating_card: odebráno pozadí, stín,
-   zaoblení a padding; hover je ztlumení na opacity 0.72.
-
-   Při té příležitosti se opravil i rozbitý zápis přechodu, který tam byl
-   (`transition-property: box-shadow, transform` jen s jednou dvojicí
-   duration/timing, což se do CSS vypsalo jako `transform undefined
-   undefined` a shodilo celou deklaraci). Nově jen `opacity 300ms ease`.
-
-   Pravidlo pro příště: co jde nastavit na třídě v Designeru, patří do
-   Designeru. Sem jen to, co Webflow neumí — pseudo-elementy bez vlastní
-   podpory, failsafe, chování závislé na JS. */
-
-/* Kdo si vypnul animace, dostane hover bez pohybu — ale pořád viditelný. */
 @media (prefers-reduced-motion: reduce) {
-  .button,
-  .button::after,
-  [class*="button--primary"],
-  [class*="button--primary"]::after {
-    transition-duration: 1ms !important;
-  }
-  .button:hover,
-  .button:active,
-  [class*="button--primary"]:hover,
-  [class*="button--primary"]:active {
+  .hero-rating_card:hover .hero-rating_logo {
     transform: none;
   }
 }
