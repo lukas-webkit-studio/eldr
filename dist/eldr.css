@@ -279,29 +279,23 @@ input.form__button:hover {
 }
 
 /* --- Hodnocení Google v hero ---------------------------------------------
-   Je to drobný signál důvěry, ne výzva k prokliku. Ve Webflow měl prvek
-   bílou kartu se stínem, zaoblením a zdvihem na hover — vypadal jako další
-   tlačítko a přetahoval pozornost hlavnímu CTA vedle sebe. Rámeček tedy
-   pryč; odkaz zůstává funkční, jen se drží zpátky.
+   ZÁMĚRNĚ TU NIC NENÍ. Odstranění rámečku badge je čistá změna stylu na
+   Webflow třídě .hero-rating_card, takže patří do Designeru, ne sem.
+   Dřív to tady bylo jako override a bylo to špatně: přebíjet Designer
+   z custom kódu znamená, že kdokoli pak sáhne na tu třídu ve Webflow,
+   nevidí důvod, proč se prvek chová jinak, než jak ho nastavil.
 
-   Poznámka: ve Webflow má prvek rozbitý zápis
-   `transition: box-shadow .2s ease, transform undefined undefined`.
-   Ta druhá položka je neplatná a shodí celou deklaraci, takže zdvih stejně
-   cvakal bez přechodu. Tímhle blokem se to přepisuje načisto. */
+   Provedeno ve Webflow na .hero-rating_card: odebráno pozadí, stín,
+   zaoblení a padding; hover je ztlumení na opacity 0.72.
 
-.hero-rating_card {
-  background-color: #0000;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-  transition: opacity var(--eldr-hover-time) var(--eldr-hover-ease);
-}
+   Při té příležitosti se opravil i rozbitý zápis přechodu, který tam byl
+   (`transition-property: box-shadow, transform` jen s jednou dvojicí
+   duration/timing, což se do CSS vypsalo jako `transform undefined
+   undefined` a shodilo celou deklaraci). Nově jen `opacity 300ms ease`.
 
-.hero-rating_card:hover {
-  transform: none;
-  box-shadow: none;
-  opacity: .72;
-}
+   Pravidlo pro příště: co jde nastavit na třídě v Designeru, patří do
+   Designeru. Sem jen to, co Webflow neumí — pseudo-elementy bez vlastní
+   podpory, failsafe, chování závislé na JS. */
 
 /* Kdo si vypnul animace, dostane hover bez pohybu — ale pořád viditelný. */
 @media (prefers-reduced-motion: reduce) {
