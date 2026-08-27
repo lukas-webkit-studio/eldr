@@ -126,19 +126,35 @@ run('Anglická mutace téže stránky (regrese detekce jazyka)',
 // Collection Listu včetně `w-dyn-bind-empty` na nevyplněném druhém obrázku
 // a `w-condition-invisible` na struktuře, kterou vypnula podmíněná viditelnost.
 const BANNER_SOURCE = `
-  <div data-banner-source style="display:none"><div class="w-dyn-list"><div role="list" class="w-dyn-items">
-    <div role="listitem" class="w-dyn-item" data-banner="pylony-velky" data-banner-name="Pylony – velký">
-      <section class="banner-cta-big"><div class="banner-cta-big_content">
-        <h2 class="heading-style-h4">Pylony, které upoutají</h2>
-        <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
-      </div><div class="banner-cta-big_image-wrapper">
-        <img class="banner-cta-big-image left" src="a.webp" srcset="a.webp 500w" alt="Pylon">
-        <img class="banner-cta-big-image right w-dyn-bind-empty">
-      </div></section>
-      <section class="banner-cta-small w-condition-invisible"><h2>Nepoužitá varianta</h2></section>
+  <div data-banner-source class="banner-source" style="display:none"><div class="w-dyn-list"><div role="list" class="w-dyn-items">
+    <div role="listitem" class="w-dyn-item">
+      <div id="pylony-velky" class="banner-item">
+        <div class="banner-name">Pylony – velký</div>
+        <section data-banner-variant="velky" class="banner-cta-big"><div class="contain"><div class="banner-cta-big-columns">
+          <div class="banner-cta-big_content">
+            <h2 class="heading-style-h4">Pylony, které upoutají</h2>
+            <p>Přizpůsobíme pylon vašim potřebám.</p>
+            <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
+          </div><div class="banner-cta-big_image-wrapper">
+            <img class="banner-cta-big-image left" src="a.webp" srcset="a.webp 500w" alt="Pylon">
+            <img class="banner-cta-big-image right w-dyn-bind-empty">
+          </div>
+        </div></div></section>
+        <section data-banner-variant="maly" class="banner-cta-small"><div class="contain"><div class="banner-cta-small_content">
+          <h2 class="heading-style-h4 cta-section">Pylony, které upoutají</h2>
+          <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
+        </div></div></section>
+      </div>
     </div>
-    <div role="listitem" class="w-dyn-item" data-banner="rezana-grafika-maly" data-banner-name="Řezaná grafika – malý">
-      <section class="banner-cta-small"><h2 class="heading-style-h4 cta-section">Malý banner</h2></section>
+    <div role="listitem" class="w-dyn-item">
+      <div id="rezana-grafika-maly" class="banner-item">
+        <div class="banner-name">Řezaná grafika – malý</div>
+        <section data-banner-variant="velky" class="banner-cta-big w-condition-invisible"><h2>Vypnutá varianta</h2></section>
+        <section data-banner-variant="maly" class="banner-cta-small"><div class="contain"><div class="banner-cta-small_content">
+          <h2 class="heading-style-h4 cta-section">Malý banner</h2>
+          <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
+        </div></div></section>
+      </div>
     </div>
   </div></div></div>`;
 
@@ -157,9 +173,14 @@ run('Bannery z CMS (zástupný text v rich textu)',
       rich[0].firstElementChild.tagName === 'P' && rich[0].children[1].classList.contains('banner-cta-big'));
     ok('prázdný odstavec po tokenu zmizel', rich[0].children.length === 2);
 
+    // Přepínač Velký banner je vypnutý → Webflow označí velkou variantu
+    // w-condition-invisible a do článku musí jít malá.
+    ok('vypnutá varianta se nevykreslí', !rich[1].querySelector('.banner-cta-big'));
+    ok('vybrala se malá varianta', rich[1].querySelectorAll('.banner-cta-small').length === 1);
+
     // Klient nemusí opisovat slug znak po znaku — název s diakritikou,
     // mezerami i pomlčkou musí vést na stejný záznam.
-    ok('název s diakritikou najde banner', rich[1].querySelectorAll('.banner-cta-small').length === 1);
+    ok('název s diakritikou najde banner', /Malý banner/.test(rich[1].textContent));
 
     // Token uprostřed věty: banner se vloží ZA odstavec, text zůstane.
     const veta = rich[1].querySelector('p');
@@ -171,22 +192,21 @@ run('Bannery z CMS (zástupný text v rich textu)',
     ok('žádný [banner…] nezůstal na stránce viditelný', !/\[banner/i.test(doc.body.textContent));
     ok('nenalezený banner i holé [banner] odstavec smazaly', rich[1].querySelectorAll('p').length === 2);
 
-    // Prázdné pole a vypnutá varianta nesmí skončit v článku.
+    // Do článku nesmí prosáknout pomocné prvky knihovny.
+    ok('skrytý nosič názvu se do článku nedostal', !doc.querySelector('.w-richtext .banner-name'));
+    ok('klon nenese data-banner-variant', !doc.querySelector('.w-richtext [data-banner-variant]'));
+    ok('klon nenese w-dyn-item ani role="listitem"', !doc.querySelector('.w-richtext [role="listitem"]'));
+
+    // Prázdné pole nesmí skončit v článku jako <img> bez src.
     const big = rich[0].querySelector('.banner-cta-big');
     ok('prázdné CMS pole (druhý obrázek) se nevykreslí', big.querySelectorAll('img').length === 1);
     ok('obrázek si nese srcset i alt', big.querySelector('img').getAttribute('srcset') === 'a.webp 500w' &&
       big.querySelector('img').getAttribute('alt') === 'Pylon');
-    ok('varianta vypnutá podmíněnou viditelností se nevykreslí',
-      !rich[0].querySelector('.banner-cta-small'));
-
-    // Klon nesmí táhnout do článku obal Webflow seznamu.
-    ok('klon nenese w-dyn-item ani role="listitem"',
-      !big.closest('.w-dyn-item') && !rich[0].querySelector('[role="listitem"]'));
 
     // Zdroj zůstává skrytý a nedotčený — vykresluje se z klonů.
     const src = doc.querySelector('[data-banner-source]');
     ok('zdroj zůstal skrytý', src.style.display === 'none');
-    ok('zdroj si nechal obě položky', src.querySelectorAll('[data-banner]').length === 2);
+    ok('zdroj si nechal obě položky', src.querySelectorAll('.banner-item').length === 2);
 
     // Bannery se vkládají v modulu 05, měření sedá v modulu 90 — tlačítko
     // banneru se tím poprvé vůbec dostane do GTM.

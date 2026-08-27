@@ -136,10 +136,18 @@ function locale() {
    `[banner:nazev]` a modul to vymění za hotový banner.
 
    Kontrakt se šablonou (podrobně v docs/bannery-cms.md):
-     [data-banner-source]   skrytý wrapper s Collection Listem kolekce Bannery
-     [data-banner="slug"]   položka seznamu, uvnitř hotová struktura banneru
-     [data-banner-name]     Název banneru — druhý klíč, aby klient nemusel
-                            hlídat slug a mohl napsat i „Pylony – velký"
+     [data-banner-source]     skrytý wrapper s Collection Listem kolekce Bannery
+     .banner-item             položka knihovny; její id = slug banneru
+     .banner-name             skrytý text s Názvem — druhý klíč, aby klient
+                              nemusel hlídat slug a mohl napsat „Pylony – velký"
+     [data-banner-variant]    velký / malý provedení uvnitř položky
+
+   Proč id a skrytý text místo data atributů: Webflow Data API neumí na
+   položce Collection Listu navázat custom atribut na CMS pole. Navázat jde
+   DOM id a text, takže klíče jedou přes ně. Stejný důvod má i výběr varianty
+   — podmíněná viditelnost přes API nejde nastavit na Option pole, takže
+   šablona vykreslí obě provedení, Webflow to nepoužité označí
+   `w-condition-invisible` (podle přepínače Velký banner) a vybere se tady.
 
    POŘADÍ V BUNDLU — proto 05, hned za jádrem:
    - před 10-vars → tokeny {#YOE#} se doplní i do vloženého banneru
@@ -149,7 +157,9 @@ function locale() {
 
 (function () {
   var SOURCE = '[data-banner-source]';
-  var ITEM = '[data-banner]';
+  var ITEM = '.banner-item';
+  var NAME = '.banner-name';
+  var VARIANT = '[data-banner-variant]';
   var RICH = '.w-richtext';
   var BLOCKS = 'p, li, blockquote, h1, h2, h3, h4, h5, h6';
 
@@ -186,28 +196,30 @@ function locale() {
       el.classList.contains('w-dyn-bind-empty');
   }
 
-  /* Klonuje se OBSAH položky, ne položka samotná — ta nese `w-dyn-item`
-     a `role="listitem"`, co v článku nemá co dělat. */
+  /* Klonuje se jen vybrané provedení, ne celá položka — ta nese obal
+     Collection Listu a skrytý nosič názvu, co v článku nemá co dělat.
+     V DOM je velký první, takže když ho přepínač nechá projít, vyhraje. */
   function build(item) {
-    var frag = document.createDocumentFragment();
+    var chosen = $$(VARIANT, item).filter(function (el) { return !isDropped(el); })[0];
+    if (!chosen) return null;
 
-    Array.prototype.slice.call(item.children).forEach(function (child) {
-      if (isDropped(child)) return;
-      var clone = child.cloneNode(true);
-      $$('.w-condition-invisible, .w-dyn-bind-empty', clone).forEach(function (el) {
-        if (el.parentNode) el.parentNode.removeChild(el);
-      });
-      frag.appendChild(clone);
+    var clone = chosen.cloneNode(true);
+    clone.removeAttribute('data-banner-variant');
+    $$('.w-condition-invisible, .w-dyn-bind-empty', clone).forEach(function (el) {
+      if (el.parentNode) el.parentNode.removeChild(el);
     });
 
-    return frag.childNodes.length ? frag : null;
+    var frag = document.createDocumentFragment();
+    frag.appendChild(clone);
+    return frag;
   }
 
   var library = {};
 
   $$(ITEM, source).forEach(function (item) {
     if (isDropped(item)) return;
-    [item.getAttribute('data-banner'), item.getAttribute('data-banner-name')].forEach(function (name) {
+    var named = $1(NAME, item);
+    [item.id, named && named.textContent].forEach(function (name) {
       var k = key(name);
       if (k && !library[k]) library[k] = item;
     });
