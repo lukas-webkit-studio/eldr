@@ -232,7 +232,9 @@ const AI_LINKS = `
   <a data-ai="chatgpt" href="#" class="button is-small is-custom">ChatGPT</a>
   <a data-ai="googleai" href="#" class="button is-small is-custom">Google AI</a>
   <a data-ai="perplexity" href="#" class="button is-small is-custom">Perplexity</a>
-  <a data-ai="claude" href="#" class="button is-small is-custom">Claude</a>`;
+  <a data-ai="claude" href="#" class="button is-small is-custom">Claude</a>
+  <a data-ai="copilot" href="#" class="button is-small is-custom">Microsoft Copilot</a>
+  <a data-ai="copy" href="#" class="button is-small is-custom">Zkopírovat prompt</a>`;
 
 const aiCheck = (win, doc) => {
   const href = t => doc.querySelector(`[data-ai="${t}"]`).getAttribute('href');
@@ -240,7 +242,15 @@ const aiCheck = (win, doc) => {
   ok('Google AI odkaz vyplněn', href('googleai').includes('google.com/search'));
   ok('Perplexity odkaz vyplněn', href('perplexity').startsWith('https://www.perplexity.ai/?q='));
   ok('Claude odkaz vyplněn', href('claude').startsWith('https://claude.ai/new?q='));
-  ok('žádný odkaz nezůstal na #', !doc.querySelector('[data-ai][href="#"]'));
+  ok('Copilot odkaz vyplněn', href('copilot').startsWith('https://copilot.microsoft.com/?q='));
+  // „Zkopírovat prompt" nikam nevede — musí zůstat na # a klik nesmí skočit
+  // na začátek stránky, jinak čtenář přijde o pozici v článku.
+  ok('kopírovací tlačítko zůstalo na #', href('copy') === '#');
+  const ev = new win.Event('click', { bubbles: true, cancelable: true });
+  doc.querySelector('[data-ai="copy"]').dispatchEvent(ev);
+  ok('klik na kopírování nenaviguje (preventDefault)', ev.defaultPrevented);
+  ok('žádný odkaz na službu nezůstal na #',
+    !doc.querySelector('[data-ai][href="#"]:not([data-ai="copy"])'));
   ok('odkazy se otevírají do nového okna', doc.querySelector('[data-ai]').getAttribute('target') === '_blank');
 };
 
