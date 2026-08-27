@@ -225,7 +225,42 @@ run('Článek bez zdroje bannerů (modul se musí vypnout)',
     ok('text článku zůstal nedotčený', doc.querySelector('.w-richtext p').textContent === '[banner:pylony-velky]');
   });
 
-// --- 5. prázdná stránka ---------------------------------------------------
+// --- 5. sdílení do AI ------------------------------------------------------
+// Hák je ve Webflow zapsaný jako DOM id, ne jako custom atribut. Modul se
+// na tom tiše vypínal a tlačítka zůstávala na href="#" — klik nedělal nic.
+const AI_LINKS = `
+  <a data-ai="chatgpt" href="#" class="button is-small is-custom">ChatGPT</a>
+  <a data-ai="googleai" href="#" class="button is-small is-custom">Google AI</a>
+  <a data-ai="perplexity" href="#" class="button is-small is-custom">Perplexity</a>
+  <a data-ai="claude" href="#" class="button is-small is-custom">Claude</a>`;
+
+const aiCheck = (win, doc) => {
+  const href = t => doc.querySelector(`[data-ai="${t}"]`).getAttribute('href');
+  ok('ChatGPT odkaz vyplněn', href('chatgpt').startsWith('https://chatgpt.com/?q='));
+  ok('Google AI odkaz vyplněn', href('googleai').includes('google.com/search'));
+  ok('Perplexity odkaz vyplněn', href('perplexity').startsWith('https://www.perplexity.ai/?q='));
+  ok('Claude odkaz vyplněn', href('claude').startsWith('https://claude.ai/new?q='));
+  ok('žádný odkaz nezůstal na #', !doc.querySelector('[data-ai][href="#"]'));
+  ok('odkazy se otevírají do nového okna', doc.querySelector('[data-ai]').getAttribute('target') === '_blank');
+};
+
+run('Sdílení do AI — hák jako DOM id (skutečný stav Webflow)',
+  `<div id="data-ai-share">${AI_LINKS}</div>`,
+  'https://www.eldr.cz/inspirace/jak-vybrat-reklamni-pylon', aiCheck);
+
+run('Sdílení do AI — hák jako custom atribut',
+  `<div data-ai-share>${AI_LINKS}</div>`,
+  'https://www.eldr.cz/inspirace/jak-vybrat-reklamni-pylon', aiCheck);
+
+run('Sdílení do AI — prompt v jazyce stránky',
+  `<div id="data-ai-share">${AI_LINKS}</div>`,
+  'https://www.eldr.cz/en/inspirace/jak-vybrat-reklamni-pylon',
+  (win, doc) => {
+    const q = decodeURIComponent(doc.querySelector('[data-ai="claude"]').getAttribute('href'));
+    ok('anglická mutace dostane anglický prompt', q.includes('Visit this URL'));
+  });
+
+// --- 6. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
 console.log(`\n${pass} prošlo, ${fail} selhalo`);

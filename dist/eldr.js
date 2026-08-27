@@ -1123,7 +1123,11 @@ function locale() {
    ========================================================================== */
 
 (function () {
-  var scope = $1('[data-ai-share]');
+  /* Hák je ve Webflow zapsaný jako DOM id, ne jako custom atribut
+     (`<div id="data-ai-share">`). Selektor `[data-ai-share]` na id nesedí,
+     takže se modul tiše vypnul a tlačítka zůstala na href="#" — klik pak
+     nedělal nic. Bereme obojí, ať na tom volba pole ve Webflow nestojí. */
+  var scope = $1('[data-ai-share], #data-ai-share');
   if (!scope) return;
 
   var pageUrl = location.href.split('#')[0];
