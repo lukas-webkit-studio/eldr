@@ -59,14 +59,68 @@ CSS je v **Site settings → Custom Code → Head**, JS ve **Footer**.
 `.min.` soubory v repu nejsou — jsDelivr minifikuje sám.
 
 Změna v repu se na web nedostane, dokud se v Custom Code nepřepne připnutý
-commit. Panel Custom Code má **vlastní tlačítko Save Changes**; bez něj se
-publikuje pořád stará verze. Po publikaci vždy ověř, co se doopravdy
-načítá — stáhni si živou stránku a najdi v ní ten commit.
+commit. Po publikaci vždy ověř, co se doopravdy načítá — stáhni si živou
+stránku a najdi v ní ten commit.
+
+**Uživatel na custom code sahat nemusí.** Přepnutí i publikace jdou přes
+API (`data_scripts_tool > set_site_freeform_code`,
+`data_sites_tool > publish_site`) a patří k dokončení práce, ne do seznamu
+úkolů pro něj. Ruční cesta přes Designer existuje jen jako záloha — panel
+Custom Code má vlastní tlačítko Save Changes, bez něj se publikuje stará
+verze.
+
+**Proč se pinuje commit a ne větev.** jsDelivr posílá na `@main` i na
+`@<commit>` stejné hlavičky: `s-maxage=43200` (12 h na CDN) a
+`max-age=604800` (**7 dní v prohlížeči návštěvníka**). U větve se URL
+nemění, takže by vracející se návštěvník měl týden starý bundle a nešlo by
+s tím nic dělat. U commitu se URL změní a stáhne se hned. Nenavrhuj přechod
+na `@main` ani na plovoucí tag.
 
 Při nasazení už jednou došlo k přepsání celého site head a z produkce
 zmizel GTM loader i Finsweet skripty. Vkládej vždy celý blok najednou a po
 publikaci zkontroluj, že v head je `GTM-W6PR2VX` a všechny čtyři Finsweet
 skripty.
+
+## Když na webu dělá víc chatů najednou
+
+Git si poradí — větve, PR, merge. **Webflow ne.** Nemá zámky, nemá větve
+a nemá historii po jednotlivých změnách; kdo zapíše přes API jako druhý,
+přepíše prvního bez varování. Odtud tahle čtyři pravidla.
+
+### Pinovat jen merge commity z mainu
+
+Do custom code patří **merge commit z `main`**, nikdy commit z větve. Commit
+z větve neobsahuje to, co mezitím mergnuli ostatní. Takhle se už jednou
+vrátil na produkci override tlačítek, který PR #3 záměrně přesunul do
+Webflow — větev stavěla na commitu, o který `origin/main` mezitím povyrostl.
+
+Postup: `git fetch origin main`, `git merge origin/main` do své větve,
+`npm run check`, merge PR, a **teprve merge commit** dej do Webflow.
+
+### Head a footer číst, ne psát z hlavy
+
+Vždycky nejdřív `data_scripts_tool > get_site_freeform_code`, v načteném
+textu vyměň **jen hash** a pošli zpátky **celý obsah pole**. Nikdy neskládej
+obsah z paměti ani ze zálohy v repu — přesně takhle 15. 8. zmizel
+z produkce GTM loader a Finsweet skripty (viz `_backup/FINDINGS.md`).
+Po zápisu zálohu v `_backup/webflow/custom-code/` srovnej s realitou.
+
+### Publikace pouští ven i cizí rozdělanou práci
+
+Webflow publikuje **celý web**, ne jen tvoje změny. Když má jiný chat nebo
+člověk v Designeru něco rozdělaného, tvůj publish to pošle ven s sebou.
+
+Před publikací si vytáhni `data_sites_tool > get_site`: když je
+`lastUpdated` výrazně novější než `lastPublished`, někdo něco rozdělaného
+má. Pak se zeptej, nepublikuj naslepo. **„Kdy publikovat" je rozhodnutí
+uživatele**, ne tvoje — je to jediný krok nasazení, který za něj nejde
+udělat bezpečně.
+
+### dist/ se sráží
+
+`dist/` se commituje, takže **každá větev, co sáhne na `src/`, vyrobí
+konflikt v `dist/`**. Neřeš ho ručně: po mergi `main` do větve spusť
+`npm run build` a commitni přegenerovaný výstup.
 
 ## Práce s repozitářem
 
