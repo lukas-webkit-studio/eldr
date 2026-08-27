@@ -43,7 +43,8 @@
     chatgpt:    function (q) { return 'https://chatgpt.com/?q=' + q; },
     googleai:   function (q) { return 'https://www.google.com/search?udm=50&aep=11&q=' + q; },
     perplexity: function (q) { return 'https://www.perplexity.ai/?q=' + q; },
-    claude:     function (q) { return 'https://claude.ai/new?q=' + q; }
+    claude:     function (q) { return 'https://claude.ai/new?q=' + q; },
+    copilot:    function (q) { return 'https://copilot.microsoft.com/?q=' + q; }
   };
 
   function copyPrompt() {
@@ -73,12 +74,22 @@
     if (text.indexOf('googleai') !== -1 || text.indexOf('gemini') !== -1) return 'googleai';
     if (text.indexOf('perplexity') !== -1) return 'perplexity';
     if (text.indexOf('claude') !== -1) return 'claude';
+    if (text.indexOf('copilot') !== -1) return 'copilot';
     return '';
   }
 
+  /* Tlačítko „Zkopírovat prompt" nevede nikam — jen strčí prompt do schránky.
+     Bez preventDefault by ho href="#" vyhodilo na začátek stránky. */
+  $$('a[data-ai="copy"]', scope).forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      copyPrompt();
+    });
+  });
+
   $$('a[href="#"], a[data-ai]', scope).forEach(function (a) {
     var key = serviceKey(a);
-    if (!key || !BUILD[key]) return;
+    if (key === 'copy' || !key || !BUILD[key]) return;
 
     a.href = BUILD[key](Q);
     a.target = '_blank';
