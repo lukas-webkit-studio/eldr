@@ -123,8 +123,9 @@ dokud nejsou přepsané. Až budou, jdou pryč (jsou i v `_backup/FINDINGS.md`).
 
 Site má Webflow Localization: primární `cs`, sekundární `en` a `de`.
 
-**Dnes je to rozbité.** Banner je zapečený v rich textu a nikdo ho nepřeložil,
-takže anglický i německý čtenář vidí český banner. Ověřeno na všech 24 URL.
+**Dnes není přeložený vůbec nic.** Ověřeno na všech 24 URL: `/en` i `/de`
+články jsou celé česky včetně bannerů. Rich text se nikdy nelokalizoval,
+mutace jen padají na primární češtinu.
 
 **Nově to funguje samo.** Kolekce Bannery je lokalizovaná jako každá jiná:
 přepneš locale, přepíšeš nadpis, text a tlačítko, publikuješ. Anglický
@@ -166,6 +167,9 @@ Zobrazí se až v náhledu publikovaného webu.
 
 Bannery jsou už v CMS, takže na článek zbývá jen: smazat odstavec
 s escapovaným HTML a napsat na jeho místo token. Pozice odpovídají živému webu.
+
+**Stačí přepsat 8 článků v české (primární) mutaci.** `/en` a `/de` dnes
+nemají vlastní text a padají na češtinu, takže token zdědí samy.
 
 | Článek (`/inspirace/…`) | Blok | Napsat do textu |
 |---|---|---|
