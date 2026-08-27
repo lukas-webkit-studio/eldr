@@ -37,6 +37,12 @@ Co to obnáší:
 stávajících článků. Klient nikdy nevidí kód a struktura banneru žije
 v Designeru, takže se dá kdykoli přestylovat na jednom místě.
 
+## Stav
+
+**Kolekce Bannery je založená a naplněná** (`6a90303011d6493faa8a946a`) — 15 záznamů
+vytažených ze živého webu, obrázky napojené na stávající assety. Zbývá postavit
+strukturu v Designeru a přepsat články.
+
 ## Datový model — kolekce Bannery
 
 | Pole | Typ | Povinné | Platí pro |
@@ -53,9 +59,9 @@ v Designeru, takže se dá kdykoli přestylovat na jednom místě.
 | Obrázek 2 | Image | ne | jen velký |
 | Popis obrázku 2 | Plain text | ne | jen velký |
 
-Pole rozdělit do **field groups** „Společné" a „Jen velký banner". Webflow
-neumí pole podle `Typ` schovávat, ale skupina s jasným názvem a help textem
-stačí — klient u malého banneru vyplní jen první skupinu.
+Pole jsou rozdělená do **field groups** „Společné" a „Jen velký banner"
+a každé má help text. Webflow neumí pole podle `Typ` schovávat, ale skupina
+s jasným názvem stačí — klient u malého banneru vyplní jen první skupinu.
 
 **Typ jde přepnout kdykoli zpětně.** Změna Option pole + publish a všechny
 články, které banner používají, se překreslí. Texty ani obrázky se nemažou,
@@ -78,17 +84,60 @@ jen se nepoužité pole přestane vykreslovat.
 5. Obrázkům nech **Loading: lazy**. Ve skrytém zdroji se pak nestahují;
    stáhnou se až po vložení do článku.
 
+### Pojmenování tříd (client-first)
+
+Dnešní třídy jsou ad hoc. Nová struktura se staví client-first:
+
+| dnes | client-first |
+|---|---|
+| `banner-cta-big` | `banner_component` |
+| `banner-cta-big-columns` | `banner_layout` |
+| `banner-cta-big_content` | `banner_content` |
+| `banner-cta-big_image-wrapper` | `banner_image-wrapper` |
+| `banner-cta-big-image` + `.left` / `.right` | `banner_image` + `is-left` / `is-right` |
+| `banner-cta-small` | `banner_component` + `is-small` |
+| `banner-cta-small_content` | `banner_content` + `is-small` |
+
+`contain`, `heading-style-h4`, `cta-section` a `button is-alternate` zůstávají —
+to už client-first je.
+
+**Aby vzhled zůstal identický:** ve Style panelu vyber prvek se starou třídou,
+v menu u názvu třídy dej **Duplicate class** (vznikne kopie se všemi
+vlastnostmi), přejmenuj ji na client-first název a starou třídu z prvku
+odeber. Nepřepisuj styly ručně, rozjede se to.
+
+**Staré třídy zatím nemazat** — drží vzhled bannerů ve starých článcích,
+dokud nejsou přepsané. Až budou, jdou pryč (jsou i v `_backup/FINDINGS.md`).
+
 ### Na co si dát pozor
 
 - **Nepoužívej u obrázků grid child positioning.** Webflow z něj generuje
   `id="w-node-…"` a to by se v článku duplikovalo. Obrázky umísti přes třídu
-  `banner-cta-big_image-wrapper` (flex), ne přes mřížku.
+  `banner_image-wrapper` (flex), ne přes mřížku.
 - **Nechej `attributes-richtext@1` v site head**, dokud nejsou přepsané
   všechny staré články. Nový systém ho nepotřebuje, ten starý na něm stojí.
-- Kolekce Bannery se lokalizuje jako každá jiná — texty pro `/en` a `/de`
-  se vyplňují v příslušné locale.
 - Držet kolekci v rozumné velikosti (do ~30 záznamů). HTML všech bannerů je
   na každé stránce článku, i když se použije jeden.
+
+## Jazykové mutace
+
+Site má Webflow Localization: primární `cs`, sekundární `en` a `de`.
+
+**Dnes je to rozbité.** Banner je zapečený v rich textu a nikdo ho nepřeložil,
+takže anglický i německý čtenář vidí český banner. Ověřeno na všech 24 URL.
+
+**Nově to funguje samo.** Kolekce Bannery je lokalizovaná jako každá jiná:
+přepneš locale, přepíšeš nadpis, text a tlačítko, publikuješ. Anglický
+čtenář dostane anglický banner v anglickém článku. Nevyplněné pole padá
+zpátky na češtinu, takže se nikdy nezobrazí prázdno.
+
+**Dvě pravidla, aby to drželo:**
+
+1. **Nelokalizuj pole Name a Slug.** Nech je ve všech mutacích česky —
+   jsou to klíče, na které míří `[banner:…]` v textu.
+2. **Nepřekládej token.** `[banner:pylony-velky]` zůstává v anglickém
+   i německém článku doslova stejný. Tohle je potřeba říct i překladateli
+   (a napsat do promptu, až bude blog překládat Claude).
 
 ## Návod pro klienta
 
@@ -115,11 +164,33 @@ Zobrazí se až v náhledu publikovaného webu.
 
 ## Migrace stávajících článků
 
-24 URL v `/inspirace/` (8 článků × 3 jazyky). Postup na článek:
+Bannery jsou už v CMS, takže na článek zbývá jen: smazat odstavec
+s escapovaným HTML a napsat na jeho místo token. Pozice odpovídají živému webu.
 
-1. Z embedu opiš nadpis, text, tlačítko a obrázky do nového záznamu Bannery.
-   Bannery se v článcích opakují — vznikne jich řádově pět, ne dvacet.
-2. Smaž odstavec s escapovaným HTML, napiš `[banner:…]`.
+| Článek (`/inspirace/…`) | Blok | Napsat do textu |
+|---|---|---|
+| `3d-napis-jak-ziskat-pozornost-zakazniku` | Obsah č. 2 | `[banner:3d-napisy-velky]` |
+| `3d-napis-jak-ziskat-pozornost-zakazniku` | Obsah č. 2 | `[banner:3d-napisy-maly]` |
+| `7-duvodu-proc-si-poridit-reklamni-totem-2` | Obsah č. 2 | `[banner:totemy-velky]` |
+| `7-duvodu-proc-si-poridit-reklamni-totem-2` | Obsah č. 2 | `[banner:totemy-maly]` |
+| `jak-vybrat-reklamni-pylon` | Obsah č. 2 | `[banner:pylony-maly]` |
+| `jak-vybrat-reklamni-pylon` | Obsah č. 2 | `[banner:pylony-velky]` |
+| `pozdvihnete-svuj-byznys-…-s-3d-reklamou-2` | Obsah č. 1 | `[banner:3d-reklama-velky]` |
+| `pozdvihnete-svuj-byznys-…-s-3d-reklamou-2` | Obsah č. 2 | `[banner:3d-reklama-maly]` |
+| `rezana-grafika-zaujmete-zakaznika-na-prvni-pohled` | Obsah č. 2 | `[banner:rezana-grafika-velky]` |
+| `rezana-grafika-zaujmete-zakaznika-na-prvni-pohled` | Obsah č. 2 | `[banner:rezana-grafika-maly]` |
+| `rozsvitte-svuj-brand-…-led-logo-dobrou-volbou` | Obsah č. 1 | `[banner:led-loga-maly]` |
+| `rozsvitte-svuj-brand-…-led-logo-dobrou-volbou` | Obsah č. 2 | `[banner:led-loga-velky]` |
+| `svetelna-reklama-propagujte-sve-podnikani-moderne` | Obsah č. 2 | `[banner:svetelna-reklama-maly]` |
+| `svetelne-napisy-nejlepsi-zpusob-…-podnikani` | Obsah č. 2 | `[banner:svetelne-napisy-velky]` |
+| `svetelne-napisy-nejlepsi-zpusob-…-podnikani` | Obsah č. 2 | `[banner:svetelne-napisy-maly]` |
+
+Kde jsou u jednoho článku dva bannery ve stejném bloku, jdou v uvedeném
+pořadí za sebou. Token se v EN a DE mutaci píše **stejně** (viz Jazykové mutace).
+
+`3D nápisy – velký` a `3D reklama – velký` mají shodný text a liší se jen
+fotkami — je to pozůstatek kopírování. Až budou články přepsané, dají se
+sloučit do jednoho záznamu.
 
 Po dokončení jde z site head pryč `attributes-richtext@1` a **audit sirotků
 se dá zopakovat bez výjimky pro escapovaný HTML** — třídy bannerů budou
