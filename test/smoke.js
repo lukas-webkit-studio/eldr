@@ -120,7 +120,147 @@ run('Anglická mutace téže stránky (regrese detekce jazyka)',
       doc.querySelector('.reference_item-language').textContent === 'Translated from German');
   });
 
-// --- 4. prázdná stránka ---------------------------------------------------
+// --- 4. bannery z CMS -----------------------------------------------------
+// Šablona vykreslí CELOU kolekci Bannery do skrytého zdroje (knihovna),
+// v kolekci Inspirace se nemění nic. Fixture kopíruje skutečný výstup Webflow
+// Collection Listu včetně `w-dyn-bind-empty` na nevyplněném druhém obrázku
+// a `w-condition-invisible` na struktuře, kterou vypnula podmíněná viditelnost.
+const BANNER_SOURCE = `
+  <div data-banner-source class="banner-source" style="display:none"><div class="w-dyn-list"><div role="list" class="w-dyn-items">
+    <div role="listitem" class="w-dyn-item">
+      <div id="pylony-velky" class="banner-item">
+        <div class="banner-name">Pylony – velký</div>
+        <section data-banner-variant="velky" class="banner-cta-big"><div class="contain"><div class="banner-cta-big-columns">
+          <div class="banner-cta-big_content">
+            <h2 class="heading-style-h4">Pylony, které upoutají</h2>
+            <p>Přizpůsobíme pylon vašim potřebám.</p>
+            <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
+          </div><div class="banner-cta-big_image-wrapper">
+            <img class="banner-cta-big-image left" src="a.webp" srcset="a.webp 500w" alt="Pylon">
+            <img class="banner-cta-big-image right w-dyn-bind-empty">
+          </div>
+        </div></div></section>
+        <section data-banner-variant="maly" class="banner-cta-small"><div class="contain"><div class="banner-cta-small_content">
+          <h2 class="heading-style-h4 cta-section">Pylony, které upoutají</h2>
+          <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
+        </div></div></section>
+      </div>
+    </div>
+    <div role="listitem" class="w-dyn-item">
+      <div id="rezana-grafika-maly" class="banner-item">
+        <div class="banner-name">Řezaná grafika – malý</div>
+        <section data-banner-variant="velky" class="banner-cta-big w-condition-invisible"><h2>Vypnutá varianta</h2></section>
+        <section data-banner-variant="maly" class="banner-cta-small"><div class="contain"><div class="banner-cta-small_content">
+          <h2 class="heading-style-h4 cta-section">Malý banner</h2>
+          <a href="/kontakty" class="button is-alternate cta-section w-button">Cenová nabídka</a>
+        </div></div></section>
+      </div>
+    </div>
+  </div></div></div>`;
+
+run('Bannery z CMS (zástupný text v rich textu)',
+  `${BANNER_SOURCE}
+   <div class="w-richtext"><p>Úvodní odstavec.</p><p>[banner:Pylony-Velky]</p></div>
+   <div class="w-richtext">
+     <p>Věta s <strong>tučným</strong> a <a href="/x">odkazem</a>. [banner: Řezaná grafika – malý ]</p>
+     <p>[banner:neexistuje]</p><p>[banner]</p><p>Závěr.</p>
+   </div>`,
+  'https://www.eldr.cz/inspirace/jak-vybrat-reklamni-pylon',
+  (win, doc) => {
+    const rich = doc.querySelectorAll('.w-richtext');
+    ok('pojmenovaný banner sedí v prvním rich textu', rich[0].querySelectorAll('.banner-cta-big').length === 1);
+    ok('banner je vložen na místo tokenu, ne na konec',
+      rich[0].firstElementChild.tagName === 'P' && rich[0].children[1].classList.contains('banner-cta-big'));
+    ok('prázdný odstavec po tokenu zmizel', rich[0].children.length === 2);
+
+    // Přepínač Velký banner je vypnutý → Webflow označí velkou variantu
+    // w-condition-invisible a do článku musí jít malá.
+    ok('vypnutá varianta se nevykreslí', !rich[1].querySelector('.banner-cta-big'));
+    ok('vybrala se malá varianta', rich[1].querySelectorAll('.banner-cta-small').length === 1);
+
+    // Klient nemusí opisovat slug znak po znaku — název s diakritikou,
+    // mezerami i pomlčkou musí vést na stejný záznam.
+    ok('název s diakritikou najde banner', /Malý banner/.test(rich[1].textContent));
+
+    // Token uprostřed věty: banner se vloží ZA odstavec, text zůstane.
+    const veta = rich[1].querySelector('p');
+    ok('token uprostřed věty nechal text i formátování', /Věta s tučným a odkazem\./.test(veta.textContent.trim()));
+    ok('odkaz uvnitř odstavce přežil úklid tokenu', !!veta.querySelector('a[href="/x"]'));
+    ok('banner z tokenu uprostřed věty stojí za odstavcem',
+      veta.nextElementSibling.classList.contains('banner-cta-small'));
+
+    ok('žádný [banner…] nezůstal na stránce viditelný', !/\[banner/i.test(doc.body.textContent));
+    ok('nenalezený banner i holé [banner] odstavec smazaly', rich[1].querySelectorAll('p').length === 2);
+
+    // Do článku nesmí prosáknout pomocné prvky knihovny.
+    ok('skrytý nosič názvu se do článku nedostal', !doc.querySelector('.w-richtext .banner-name'));
+    ok('klon nenese data-banner-variant', !doc.querySelector('.w-richtext [data-banner-variant]'));
+    ok('klon nenese w-dyn-item ani role="listitem"', !doc.querySelector('.w-richtext [role="listitem"]'));
+
+    // Prázdné pole nesmí skončit v článku jako <img> bez src.
+    const big = rich[0].querySelector('.banner-cta-big');
+    ok('prázdné CMS pole (druhý obrázek) se nevykreslí', big.querySelectorAll('img').length === 1);
+    ok('obrázek si nese srcset i alt', big.querySelector('img').getAttribute('srcset') === 'a.webp 500w' &&
+      big.querySelector('img').getAttribute('alt') === 'Pylon');
+
+    // Zdroj zůstává skrytý a nedotčený — vykresluje se z klonů.
+    const src = doc.querySelector('[data-banner-source]');
+    ok('zdroj zůstal skrytý', src.style.display === 'none');
+    ok('zdroj si nechal obě položky', src.querySelectorAll('.banner-item').length === 2);
+
+    // Bannery se vkládají v modulu 05, měření sedá v modulu 90 — tlačítko
+    // banneru se tím poprvé vůbec dostane do GTM.
+    win.dataLayer = [];
+    big.querySelector('.button').click();
+    const ev = win.dataLayer.filter(e => e.event === 'button_click');
+    ok('GTM měří tlačítko vloženého banneru', ev.length === 1 && ev[0].button_text === 'Cenová nabídka');
+  });
+
+run('Článek bez zdroje bannerů (modul se musí vypnout)',
+  '<div class="w-richtext"><p>[banner:pylony-velky]</p></div>',
+  'https://www.eldr.cz/inspirace/rezana-grafika-zaujmete-zakaznika-na-prvni-pohled',
+  (win, doc) => {
+    // Bez `[data-banner-source]` modul nesmí sáhnout na text. Chybějící
+    // zdroj je chyba šablony, ne důvod mazat obsah článku.
+    ok('text článku zůstal nedotčený', doc.querySelector('.w-richtext p').textContent === '[banner:pylony-velky]');
+  });
+
+// --- 5. sdílení do AI ------------------------------------------------------
+// Hák je ve Webflow zapsaný jako DOM id, ne jako custom atribut. Modul se
+// na tom tiše vypínal a tlačítka zůstávala na href="#" — klik nedělal nic.
+const AI_LINKS = `
+  <a data-ai="chatgpt" href="#" class="button is-small is-custom">ChatGPT</a>
+  <a data-ai="googleai" href="#" class="button is-small is-custom">Google AI</a>
+  <a data-ai="perplexity" href="#" class="button is-small is-custom">Perplexity</a>
+  <a data-ai="claude" href="#" class="button is-small is-custom">Claude</a>`;
+
+const aiCheck = (win, doc) => {
+  const href = t => doc.querySelector(`[data-ai="${t}"]`).getAttribute('href');
+  ok('ChatGPT odkaz vyplněn', href('chatgpt').startsWith('https://chatgpt.com/?q='));
+  ok('Google AI odkaz vyplněn', href('googleai').includes('google.com/search'));
+  ok('Perplexity odkaz vyplněn', href('perplexity').startsWith('https://www.perplexity.ai/?q='));
+  ok('Claude odkaz vyplněn', href('claude').startsWith('https://claude.ai/new?q='));
+  ok('žádný odkaz nezůstal na #', !doc.querySelector('[data-ai][href="#"]'));
+  ok('odkazy se otevírají do nového okna', doc.querySelector('[data-ai]').getAttribute('target') === '_blank');
+};
+
+run('Sdílení do AI — hák jako DOM id (skutečný stav Webflow)',
+  `<div id="data-ai-share">${AI_LINKS}</div>`,
+  'https://www.eldr.cz/inspirace/jak-vybrat-reklamni-pylon', aiCheck);
+
+run('Sdílení do AI — hák jako custom atribut',
+  `<div data-ai-share>${AI_LINKS}</div>`,
+  'https://www.eldr.cz/inspirace/jak-vybrat-reklamni-pylon', aiCheck);
+
+run('Sdílení do AI — prompt v jazyce stránky',
+  `<div id="data-ai-share">${AI_LINKS}</div>`,
+  'https://www.eldr.cz/en/inspirace/jak-vybrat-reklamni-pylon',
+  (win, doc) => {
+    const q = decodeURIComponent(doc.querySelector('[data-ai="claude"]').getAttribute('href'));
+    ok('anglická mutace dostane anglický prompt', q.includes('Visit this URL'));
+  });
+
+// --- 6. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
 console.log(`\n${pass} prošlo, ${fail} selhalo`);
