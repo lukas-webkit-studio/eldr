@@ -142,6 +142,10 @@ function locale() {
                               nemusel hlídat slug a mohl napsat „Pylony – velký"
      [data-banner-variant]    velký / malý provedení uvnitř položky
 
+   Vložený banner dostane hookovou třídu `eldr-banner` a jeho předchůdce
+   v článku `eldr-banner-before`. Na ně visí jediné dvě pravidla v
+   src/eldr.css, která srovnávají mezeru kolem banneru — viz komentář tam.
+
    Proč id a skrytý text místo data atributů: Webflow Data API neumí na
    položce Collection Listu navázat custom atribut na CMS pole. Navázat jde
    DOM id a text, takže klíče jedou přes ně. Stejný důvod má i výběr varianty
@@ -161,6 +165,8 @@ function locale() {
   var NAME = '.banner-name';
   var VARIANT = '[data-banner-variant]';
   var RICH = '.w-richtext';
+  var BANNER = 'eldr-banner';
+  var BEFORE = 'eldr-banner-before';
   var BLOCKS = 'p, li, blockquote, h1, h2, h3, h4, h5, h6';
 
   /* `[banner:nazev]`. Mezery kolem dvojtečky se odpouštějí, diakritika
@@ -205,6 +211,7 @@ function locale() {
 
     var clone = chosen.cloneNode(true);
     clone.removeAttribute('data-banner-variant');
+    clone.classList.add(BANNER);
     $$('.w-condition-invisible, .w-dyn-bind-empty', clone).forEach(function (el) {
       if (el.parentNode) el.parentNode.removeChild(el);
     });
@@ -212,6 +219,23 @@ function locale() {
     var frag = document.createDocumentFragment();
     frag.appendChild(clone);
     return frag;
+  }
+
+  /* Prázdný odstavec — klient odentroval navíc, nebo mu po smazání tokenu
+     zbyl `<p><br></p>`. Vedle banneru by dělal mezeru navíc, tak jde pryč.
+     Obrázek ani vložené video se za prázdné nepovažují. */
+  function isBlank(el) {
+    if (/\S/.test((el.textContent || '').replace(/\u00a0/g, ' '))) return false;
+    return !el.querySelector('img, figure, iframe, video, svg, hr');
+  }
+
+  function dropBlanks(el, next) {
+    while (el && el.nodeType === 1 && isBlank(el)) {
+      var sibling = next ? el.nextElementSibling : el.previousElementSibling;
+      el.parentNode.removeChild(el);
+      el = sibling;
+    }
+    return el;
   }
 
   var library = {};
@@ -239,7 +263,7 @@ function locale() {
     });
   }
 
-  function process(block) {
+  function process(block, rich) {
     var text = block.textContent || '';
     if (text.indexOf('[') === -1) return;
 
@@ -270,24 +294,52 @@ function locale() {
     stripTokens(block);
 
     /* Banner smí být sourozenec odstavce, ne jeho obsah — <section> uvnitř
-       <p> je neplatný HTML a prohlížeč by ho z odstavce stejně vystrčil. */
+       <p> je neplatný HTML a prohlížeč by ho z odstavce stejně vystrčil.
+
+       Vkládá se až za prvek, který je přímým potomkem rich textu. Když token
+       stojí v odrážce, banner tím pádem vyjde za celý seznam, ne doprostřed
+       něj — a hlavně je vždycky na stejné úrovni, takže na něj sedí pravidla
+       pro mezeru z src/eldr.css. */
     var anchor = block;
+    while (anchor.parentNode && anchor.parentNode !== rich) anchor = anchor.parentNode;
+    if (!anchor.parentNode) return;
+
+    var firstBanner = null;
+    var lastBanner = null;
+
     frags.forEach(function (frag) {
       var last = frag.lastChild;
       anchor.parentNode.insertBefore(frag, anchor.nextSibling);
       anchor = last;
+      lastBanner = last;
+      if (!firstBanner) firstBanner = last;
     });
 
     /* Odstavec, ve kterém byl jen token, po úklidu zůstal prázdný. */
     if (!block.textContent.trim() && !block.children.length && block.parentNode) {
-      block.parentNode.removeChild(block);
+      var wrapper = block.parentNode;
+      wrapper.removeChild(block);
+      /* Odrážka s tokenem byla v seznamu sama — prázdný <ul> by v článku
+         zůstal jako neviditelná mezera. */
+      if (wrapper !== rich && !wrapper.children.length && wrapper.parentNode) {
+        wrapper.parentNode.removeChild(wrapper);
+      }
     }
+
+    if (!firstBanner) return;
+
+    /* Prázdné odstavce těsně kolem banneru pryč, ať klient nemusí hlídat,
+       kolikrát odentroval. Označit souseda jde až potom — musí to být ten,
+       co u banneru doopravdy zůstal. */
+    dropBlanks(lastBanner.nextElementSibling, true);
+    var before = dropBlanks(firstBanner.previousElementSibling, false);
+    if (before && !before.classList.contains(BANNER)) before.classList.add(BEFORE);
   }
 
   onReady(function () {
     $$(RICH).forEach(function (rich) {
       if (source.contains(rich)) return;
-      $$(BLOCKS, rich).forEach(process);
+      $$(BLOCKS, rich).forEach(function (block) { process(block, rich); });
     });
   });
 })();

@@ -130,6 +130,33 @@ odeber. Nepřepisuj styly ručně, rozjede se to.
 třídách, aby vzhled seděl 1:1. Přejmenovat je jde teprve až bude nový systém
 odpublikovaný a ověřený — do té doby drží vzhled i staré publikované články.
 
+### Mezera nad a pod bannerem
+
+Odsazení banneru je **ve Webflow na třídách** `banner-cta-big`
+a `banner-cta-small`: `margin-top` i `margin-bottom` 64 px. Chceš-li ho
+změnit, měň ho tam, ne v kódu.
+
+V kódu je jen to, co style panel zapsat neumí — vynulování odsazení
+u sousedů. V rich textu totiž mezery nedrží margin, ale padding odstavců
+a nadpisů (`p { padding-bottom: 19px }`, `h2 { padding-top: 1.5em }`),
+a padding se do margin collapsingu nepočítá. Mezera kolem banneru proto
+vycházela pokaždé jinak podle toho, co kolem něj náhodou stálo:
+
+| sousedi | před opravou | po opravě |
+|---|---|---|
+| odstavec → banner | 83 px | 64 px |
+| banner → nadpis | 136 px | 64 px |
+| banner → odstavec | 0 px (text se lepil na pruh) | 64 px |
+
+Modul `05-banners.js` proto při vkládání označí banner třídou `eldr-banner`
+a jeho předchůdce třídou `eldr-banner-before`; na ty visí dvě pravidla
+v `src/eldr.css`. Zároveň zahodí prázdné odstavce těsně kolem banneru,
+takže klient nemusí hlídat, kolikrát odentroval. Dva bannery za sebou se
+nevynulují — mezi nimi zůstane 64 px.
+
+Token v odrážce vloží banner **až za celý seznam**, ne doprostřed něj —
+banner musí být přímý potomek rich textu, jinak na něj pravidla nesednou.
+
 ### Na co si dát pozor
 
 - **Nepoužívej u obrázků grid child positioning.** Webflow z něj generuje
@@ -183,6 +210,11 @@ prohlížeče.
 
 **Ve Webflow Editoru banner neuvidíš** — tam zůstane jen `[banner:…]`.
 Zobrazí se až v náhledu publikovaného webu.
+
+**Odentrovávat nemusíš.** Dopiš odstavec, enter, napiš token, enter, piš dál.
+Kolem banneru vyjde 64 px nad i pod, ať za ním stojí nadpis, odstavec nebo
+odrážky. Prázdné řádky kolem tokenu se zahodí, takže když jich tam pár
+zůstane, na vzhledu se to neprojeví.
 
 ## Migrace stávajících článků
 
