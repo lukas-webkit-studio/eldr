@@ -27,22 +27,22 @@ Co to obnáší:
 
 ## Jak to funguje nově
 
-1. Banner je záznam v CMS kolekci **Bannery**.
-2. V článku se banner **vybere** v multi-reference poli.
-3. Na místo, kde má stát, klient napíše do textu odstavec `[banner:nazev]`.
-4. Šablona článku vykreslí vybrané bannery do skrytého zdroje ve správné
-   Webflow struktuře. Modul `src/modules/05-banners.js` je odtud vezme
-   a vymění za zástupný odstavec.
+1. Banner je záznam v CMS kolekci **Bannery** — klient má knihovnu.
+2. Šablona článku vykreslí **celou kolekci** do skrytého zdroje ve správné
+   Webflow struktuře.
+3. Klient napíše do textu článku `[banner:nazev-banneru]`.
+4. Modul `src/modules/05-banners.js` vymění token za hotový banner.
 
-Klient nikdy nevidí kód. Struktura banneru žije v Designeru, takže se dá
-kdykoli přestylovat na jednom místě a promítne se do všech článků.
+**V kolekci Inspirace se nemění vůbec nic.** Žádné nové pole, žádná změna
+stávajících článků. Klient nikdy nevidí kód a struktura banneru žije
+v Designeru, takže se dá kdykoli přestylovat na jednom místě.
 
 ## Datový model — kolekce Bannery
 
 | Pole | Typ | Povinné | Platí pro |
 |---|---|---|---|
-| Name | Plain text | ano | interní název, klient ho vidí při výběru |
-| Slug | Slug | ano | klíč do `[banner:…]` |
+| Name | Plain text | ano | název banneru, píše se do `[banner:…]` |
+| Slug | Slug | ano | druhý funkční klíč do `[banner:…]` |
 | Typ | Option: `Velký` / `Malý` | ano | řídí, která struktura se vykreslí |
 | Nadpis | Plain text | ano | oba |
 | Text | Plain text (víceřádkový) | ne | jen velký |
@@ -51,37 +51,32 @@ kdykoli přestylovat na jednom místě a promítne se do všech článků.
 | Obrázek 1 | Image | ne | jen velký |
 | Popis obrázku 1 | Plain text | ne | jen velký (`alt`) |
 | Obrázek 2 | Image | ne | jen velký |
-| Popis obrázku 2 | Plain text | ne | jen velký (`alt`) |
+| Popis obrázku 2 | Plain text | ne | jen velký |
 
 Pole rozdělit do **field groups** „Společné" a „Jen velký banner". Webflow
 neumí pole podle `Typ` schovávat, ale skupina s jasným názvem a help textem
 stačí — klient u malého banneru vyplní jen první skupinu.
 
-V kolekci **Inspirace** přibude jedno pole:
-
-| Pole | Typ | Cíl |
-|---|---|---|
-| Bannery v článku | Multi-reference | Bannery |
+**Typ jde přepnout kdykoli zpětně.** Změna Option pole + publish a všechny
+články, které banner používají, se překreslí. Texty ani obrázky se nemažou,
+jen se nepoužité pole přestane vykreslovat.
 
 ## Nastavení v Designeru — šablona `/inspirace/`
 
 1. **Skrytý zdroj.** Na konec šablony vlož Div, custom atribut
    `data-banner-source`, Display `none`. Skrytí musí být v Designeru —
-   kdyby skript nedojel, zdroj se nesmí ukázat. (Modul si `display: none`
+   kdyby skript nedojel, knihovna se nesmí ukázat. (Modul si `display: none`
    pro jistotu nastaví i sám.)
-2. **Collection List** uvnitř, zdroj **Bannery v článku** (multi-reference
-   aktuální položky, ne celá kolekce — do HTML se tak dostanou jen bannery,
-   které článek opravdu používá).
+2. **Collection List** uvnitř, zdroj **Bannery** (celá kolekce, bez filtru).
+   Limit nech na 100.
 3. Na **Collection Item** dej custom atributy:
    - `data-banner` → vazba na pole *Slug*
-   - `data-banner-typ` → vazba na pole *Typ* (jen pro čitelnost v DOM)
+   - `data-banner-name` → vazba na pole *Name*
 4. Dovnitř položky vlož **dvě sekce** — `banner-cta-big` a `banner-cta-small`
    ve stejné struktuře, jakou má dnešní embed, s poli navázanými na CMS.
    Každé nastav **Conditional visibility**: `Typ = Velký`, resp. `Typ = Malý`.
-5. **Náhradní místo** (volitelné, ale doporučené): Div s atributem
-   `data-banner-fallback` pod poslední blok obsahu. Sem spadne banner, který
-   je vybraný v CMS, ale klient na něj v textu zapomněl napsat `[banner]`.
-   Bez něj takový banner tiše zmizí.
+5. Obrázkům nech **Loading: lazy**. Ve skrytém zdroji se pak nestahují;
+   stáhnou se až po vložení do článku.
 
 ### Na co si dát pozor
 
@@ -90,34 +85,33 @@ V kolekci **Inspirace** přibude jedno pole:
   `banner-cta-big_image-wrapper` (flex), ne přes mřížku.
 - **Nechej `attributes-richtext@1` v site head**, dokud nejsou přepsané
   všechny staré články. Nový systém ho nepotřebuje, ten starý na něm stojí.
-- Vnořený Collection List (multi-reference) zobrazí **max 5 položek**.
-  Na dva bannery v článku to bohatě stačí.
 - Kolekce Bannery se lokalizuje jako každá jiná — texty pro `/en` a `/de`
   se vyplňují v příslušné locale.
+- Držet kolekci v rozumné velikosti (do ~30 záznamů). HTML všech bannerů je
+  na každé stránce článku, i když se použije jeden.
 
 ## Návod pro klienta
 
-**Nový banner:** CMS → Bannery → nový záznam. Vyplň název (podle něj banner
-poznáš), vyber typ, doplň nadpis, text tlačítka a odkaz. U velkého banneru
-navíc text a jednu nebo dvě fotky. Publikuj.
+**Nový banner:** CMS → Bannery → nový záznam. Vyplň název, vyber typ, doplň
+nadpis, text tlačítka a odkaz. U velkého banneru navíc text a jednu nebo dvě
+fotky. Publikuj.
 
-**Banner do článku:**
+**Banner do článku:** do textu na místo, kde má banner stát, napiš:
 
-1. V článku dole v poli **Bannery v článku** zaškrtni ten, který tam chceš.
-2. V textu na místo, kde má banner stát, napiš **na samostatný řádek**:
+```
+[banner:Pylony – velký]
+```
 
-   ```
-   [banner:pylony-velky]
-   ```
+Píše se název banneru z CMS. Na diakritice, velikosti písmen ani mezerách
+nezáleží — `[banner:pylony-velky]` i `[banner: Pylony – velký ]` najdou totéž.
 
-   `pylony-velky` je slug banneru (je vidět v CMS pod názvem).
+Token může být na samostatném řádku i uprostřed věty; banner se vždycky
+vloží až za daný odstavec, aby nerozbil text. Když se banner nenajde, token
+se z textu smaže (čtenář nikdy neuvidí hranaté závorky) a důvod je v konzoli
+prohlížeče.
 
-Zkrácený zápis: když napíšeš jen `[banner]`, vezme se další banner v pořadí,
-jak jsou zaškrtnuté. Dva bannery v článku = dvakrát `[banner]`, žádné slugy.
-
-Řádek `[banner:…]` musí být samostatný odstavec, ne uprostřed věty.
-Když se banner nenajde, odstavec se smaže — čtenář nikdy neuvidí hranaté
-závorky. Důvod je v konzoli prohlížeče.
+**Ve Webflow Editoru banner neuvidíš** — tam zůstane jen `[banner:…]`.
+Zobrazí se až v náhledu publikovaného webu.
 
 ## Migrace stávajících článků
 
@@ -126,7 +120,6 @@ závorky. Důvod je v konzoli prohlížeče.
 1. Z embedu opiš nadpis, text, tlačítko a obrázky do nového záznamu Bannery.
    Bannery se v článcích opakují — vznikne jich řádově pět, ne dvacet.
 2. Smaž odstavec s escapovaným HTML, napiš `[banner:…]`.
-3. Zaškrtni banner v poli Bannery v článku.
 
 Po dokončení jde z site head pryč `attributes-richtext@1` a **audit sirotků
 se dá zopakovat bez výjimky pro escapovaný HTML** — třídy bannerů budou

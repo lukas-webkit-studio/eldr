@@ -129,16 +129,17 @@ function locale() {
    — přepisuje třídy, ručně lepí URL obrázků a kopíruje `w-node-…` id. Každý
    překlep je rozbitý banner a obrázky jdou bez srcset v plné velikosti.
 
-   Nově je banner záznam v CMS kolekci Bannery. Šablona článku ho vykreslí do
-   skrytého zdroje `[data-banner-source]` ve správné Webflow struktuře (živé
-   třídy, responzivní srcset, alt texty). V textu článku zůstane jen zástupný
-   odstavec `[banner:nazev]`, který tenhle modul vymění za hotový banner.
+   Nově je banner záznam v CMS kolekci Bannery. Šablona článku vykreslí CELOU
+   kolekci do skrytého zdroje `[data-banner-source]` ve správné Webflow
+   struktuře (živé třídy, responzivní srcset, alt texty) — funguje tedy jako
+   knihovna. V kolekci Inspirace se nemění nic; klient jen napíše do textu
+   `[banner:nazev]` a modul to vymění za hotový banner.
 
    Kontrakt se šablonou (podrobně v docs/bannery-cms.md):
-     [data-banner-source]    skrytý wrapper s Collection Listem kolekce Bannery
-     [data-banner="slug"]    položka seznamu, uvnitř hotová struktura banneru
-     [data-banner-fallback]  volitelné místo pro banner, na který se v textu
-                             zapomnělo (bez něj se takový banner nevykreslí)
+     [data-banner-source]   skrytý wrapper s Collection Listem kolekce Bannery
+     [data-banner="slug"]   položka seznamu, uvnitř hotová struktura banneru
+     [data-banner-name]     Název banneru — druhý klíč, aby klient nemusel
+                            hlídat slug a mohl napsat i „Pylony – velký"
 
    POŘADÍ V BUNDLU — proto 05, hned za jádrem:
    - před 10-vars → tokeny {#YOE#} se doplní i do vloženého banneru
@@ -148,24 +149,33 @@ function locale() {
 
 (function () {
   var SOURCE = '[data-banner-source]';
-  var FALLBACK = '[data-banner-fallback]';
   var ITEM = '[data-banner]';
   var RICH = '.w-richtext';
+  var BLOCKS = 'p, li, blockquote, h1, h2, h3, h4, h5, h6';
 
-  /* `[banner:nazev-banneru]`, nebo holé `[banner]` = vezmi další v pořadí,
-     jak jsou vybrané v CMS. Mezery kolem dvojtečky se odpouštějí, velikost
-     písmen taky — klient píše do textového pole, ne do kódu. */
-  var TOKEN = /^\[banner(?:\s*:\s*([^\]]+))?\]$/i;
+  /* `[banner:nazev]`. Mezery kolem dvojtečky se odpouštějí, diakritika
+     a velikost písmen taky — klient píše do textového pole, ne do kódu.
+     Název je nepovinný jen proto, aby se holé `[banner]` dalo z textu uklidit
+     a nezůstalo na očích čtenáři. */
+  var TOKEN = /\[banner\s*(?::\s*([^\]\r\n]+))?\]/gi;
 
   var source = $1(SOURCE);
   if (!source) return;
 
-  /* Skrytí patří do Designeru (kdyby skript nedojel, nesmí se zdroj ukázat).
-     Tady je jen pojistka proti tomu, aby ho někdo ve Webflow omylem odkryl. */
+  /* Skrytí patří do Designeru (kdyby skript nedojel, nesmí se knihovna
+     ukázat). Tady je jen pojistka, aby ji někdo ve Webflow omylem neodkryl. */
   source.style.display = 'none';
 
   function warn(message) {
     if (window.console && console.warn) console.warn('[ELDR bannery] ' + message);
+  }
+
+  /* „Pylony – velký", „pylony-velky" i „Pylony velky" musí vést na stejný
+     banner. Bez toho by klient musel opisovat slug znak po znaku. */
+  function key(value) {
+    var text = (value || '').trim().toLowerCase();
+    if (text.normalize) text = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return text.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   }
 
   /* Webflow nechává v HTML i prvky schované podmíněnou viditelností
@@ -193,71 +203,79 @@ function locale() {
     return frag.childNodes.length ? frag : null;
   }
 
-  var items = $$(ITEM, source).filter(function (item) { return !isDropped(item); });
-  var used = [];
+  var library = {};
 
-  function slugOf(item) {
-    return (item.getAttribute('data-banner') || '').trim().toLowerCase();
-  }
-
-  function take(name) {
-    var i;
-    if (name) {
-      for (i = 0; i < items.length; i++) {
-        if (slugOf(items[i]) === name) return items[i];
-      }
-      return null;
-    }
-    for (i = 0; i < items.length; i++) {
-      if (used.indexOf(items[i]) === -1) return items[i];
-    }
-    return null;
-  }
-
-  /* Zástupný odstavec musí být v odstavci sám. Banner je <section>, uvnitř
-     <p> by byl neplatný HTML a prohlížeč by ho z odstavce stejně vystrčil. */
-  function placeholders() {
-    var found = [];
-    $$(RICH).forEach(function (rich) {
-      if (source.contains(rich)) return;
-      $$('p', rich).forEach(function (p) {
-        var match = TOKEN.exec((p.textContent || '').trim());
-        if (match) found.push({ el: p, name: (match[1] || '').trim().toLowerCase() });
-      });
+  $$(ITEM, source).forEach(function (item) {
+    if (isDropped(item)) return;
+    [item.getAttribute('data-banner'), item.getAttribute('data-banner-name')].forEach(function (name) {
+      var k = key(name);
+      if (k && !library[k]) library[k] = item;
     });
-    return found;
+  });
+
+  /* Token se z textu odstraňuje po textových uzlech, ne přes innerHTML —
+     odkazy a tučný text uvnitř odstavce musí zůstat nedotčené. */
+  function stripTokens(block) {
+    var walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT, null);
+    var nodes = [];
+    var node;
+    while ((node = walker.nextNode())) nodes.push(node);
+    nodes.forEach(function (text) {
+      if (text.nodeValue.indexOf('[') === -1) return;
+      TOKEN.lastIndex = 0;
+      text.nodeValue = text.nodeValue.replace(TOKEN, '');
+    });
+  }
+
+  function process(block) {
+    var text = block.textContent || '';
+    if (text.indexOf('[') === -1) return;
+
+    var frags = [];
+    var match;
+
+    TOKEN.lastIndex = 0;
+    while ((match = TOKEN.exec(text))) {
+      var name = key(match[1]);
+
+      if (!name) {
+        warn('v textu je [banner] bez názvu — nevím, který vložit');
+        continue;
+      }
+
+      var item = library[name];
+      if (!item) {
+        warn('banner „' + name + '" v kolekci Bannery neexistuje nebo není publikovaný');
+        continue;
+      }
+
+      var banner = build(item);
+      if (banner) frags.push(banner);
+    }
+
+    /* Token mizí z textu vždycky. I když se banner nenajde, čtenář nesmí
+       v článku vidět holé `[banner:…]`. */
+    stripTokens(block);
+
+    /* Banner smí být sourozenec odstavce, ne jeho obsah — <section> uvnitř
+       <p> je neplatný HTML a prohlížeč by ho z odstavce stejně vystrčil. */
+    var anchor = block;
+    frags.forEach(function (frag) {
+      var last = frag.lastChild;
+      anchor.parentNode.insertBefore(frag, anchor.nextSibling);
+      anchor = last;
+    });
+
+    /* Odstavec, ve kterém byl jen token, po úklidu zůstal prázdný. */
+    if (!block.textContent.trim() && !block.children.length && block.parentNode) {
+      block.parentNode.removeChild(block);
+    }
   }
 
   onReady(function () {
-    placeholders().forEach(function (slot) {
-      var item = take(slot.name);
-      var banner = item && build(item);
-
-      if (banner) {
-        slot.el.parentNode.insertBefore(banner, slot.el);
-        if (used.indexOf(item) === -1) used.push(item);
-      } else if (slot.name) {
-        warn('banner „' + slot.name + '" v článku není vybraný nebo v CMS neexistuje');
-      } else {
-        warn('v textu je [banner] navíc — v CMS už žádný další nezbyl');
-      }
-
-      /* Zástupný odstavec mizí vždycky. I když se banner nenajde, čtenář
-         nesmí v textu vidět holé `[banner:…]`. */
-      slot.el.parentNode.removeChild(slot.el);
-    });
-
-    /* Banner vybraný v CMS, na který se v textu zapomnělo. Bez záchytného
-       místa by tiše zmizel a nikdo by si toho nevšiml. */
-    var fallback = $1(FALLBACK);
-    if (!fallback) return;
-
-    items.forEach(function (item) {
-      if (used.indexOf(item) !== -1) return;
-      var banner = build(item);
-      if (!banner) return;
-      warn('banner „' + slugOf(item) + '" nemá v textu [banner:…], vykreslil se na náhradní místo');
-      fallback.appendChild(banner);
+    $$(RICH).forEach(function (rich) {
+      if (source.contains(rich)) return;
+      $$(BLOCKS, rich).forEach(process);
     });
   });
 })();
