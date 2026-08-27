@@ -1,11 +1,13 @@
 # Záloha custom kódu — Webflow ELDR
 Site ID: 635940ec249b210e8902edd4 · Workspace: 63593aa9923e4a3417813ca5
-Pořízeno: 2026-08-27 · Stav webu: publikováno 2026-08-17
+Pořízeno: 2026-08-27 · Stav webu: publikováno 2026-08-27, bundle připnutý
+na commit `0b12f9b` (head i footer).
 
-⚠️ Tahle záloha se ROZEŠLA s realitou (byla z 15. 8., live mezitím přešel
-na sloučený bundle). Kdo se na ni spolehne, udělá špatné rozhodnutí —
-před prací se site head/footer si vždycky vytáhni aktuální stav přes
-`data_scripts_tool > get_site_freeform_code` a tenhle soubor přepiš.
+⚠️ Záloha stárne rychle. Než sáhneš na site head/footer, **vždycky si
+vytáhni aktuální stav** přes `data_scripts_tool > get_site_freeform_code`
+a tenhle soubor přepiš — 27. 8. tvrdila, že live jede na `v1.2.27`,
+zatímco už dávno běžel sloučený bundle. A při zápisu posílej **celý obsah
+pole**, nikdy „jen tenhle blok" (incident 2026-08-15, viz FINDINGS.md).
 
 | Soubor | Umístění ve Webflow |
 |---|---|
