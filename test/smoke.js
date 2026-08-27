@@ -173,6 +173,13 @@ run('Bannery z CMS (zástupný text v rich textu)',
       rich[0].firstElementChild.tagName === 'P' && rich[0].children[1].classList.contains('banner-cta-big'));
     ok('prázdný odstavec po tokenu zmizel', rich[0].children.length === 2);
 
+    // Hooky pro mezeru kolem banneru: odsazení sousedů se vypíná v CSS,
+    // protože v rich textu ho drží padding odstavců a nadpisů.
+    ok('vložený banner nese hook eldr-banner',
+      rich[0].children[1].classList.contains('eldr-banner'));
+    ok('předchůdce banneru nese hook eldr-banner-before',
+      rich[0].firstElementChild.classList.contains('eldr-banner-before'));
+
     // Přepínač Velký banner je vypnutý → Webflow označí velkou variantu
     // w-condition-invisible a do článku musí jít malá.
     ok('vypnutá varianta se nevykreslí', !rich[1].querySelector('.banner-cta-big'));
@@ -214,6 +221,53 @@ run('Bannery z CMS (zástupný text v rich textu)',
     big.querySelector('.button').click();
     const ev = win.dataLayer.filter(e => e.event === 'button_click');
     ok('GTM měří tlačítko vloženého banneru', ev.length === 1 && ev[0].button_text === 'Cenová nabídka');
+  });
+
+// Mezera kolem banneru musí vyjít stejně, ať klient odentruje jakkoliv:
+// prázdné odstavce kolem banneru jdou pryč a soused se označí hookem.
+// Token v odrážce nesmí banner vrazit doprostřed seznamu — musel by pak
+// sedět o úroveň níž a pravidlo pro mezeru by na něj nesedlo.
+run('Bannery: mezera drží bez ohledu na odentrování',
+  `${BANNER_SOURCE}
+   <div class="w-richtext">
+     <p>Odstavec.</p><p>&nbsp;</p><p><br></p><p>[banner:pylony-velky]</p><p><br></p><p>&nbsp;</p><p>Pokračování.</p>
+   </div>
+   <div class="w-richtext">
+     <ul><li>[banner:rezana-grafika-maly]</li></ul><p>Za seznamem.</p>
+   </div>
+   <div class="w-richtext">
+     <p>Před.</p><p>[banner:pylony-velky] [banner:rezana-grafika-maly]</p><p>Po.</p>
+   </div>`,
+  'https://www.eldr.cz/inspirace/jak-vybrat-reklamni-pylon',
+  (win, doc) => {
+    const rich = doc.querySelectorAll('.w-richtext');
+
+    const kids = rich[0].children;
+    ok('prázdné odstavce kolem banneru zmizely', kids.length === 3);
+    ok('pořadí zůstalo odstavec → banner → odstavec',
+      kids[0].textContent.trim() === 'Odstavec.' &&
+      kids[1].classList.contains('banner-cta-big') &&
+      kids[2].textContent.trim() === 'Pokračování.');
+    ok('hook sedí na odstavci, který u banneru doopravdy zůstal',
+      kids[0].classList.contains('eldr-banner-before') &&
+      kids[1].classList.contains('eldr-banner'));
+
+    // Token v odrážce: banner patří za celý seznam, ne mezi <li>.
+    ok('banner z odrážky je přímý potomek rich textu',
+      rich[1].firstElementChild.classList.contains('banner-cta-small'));
+    ok('prázdný seznam po vyjmutí odrážky zmizel', !rich[1].querySelector('ul'));
+    ok('text za seznamem zůstal', rich[1].children.length === 2 &&
+      rich[1].children[1].textContent.trim() === 'Za seznamem.');
+
+    // Dva bannery za sebou se nesmí navzájem přilepit — hook `before`
+    // dostane jen odstavec před prvním z nich.
+    const dva = rich[2].children;
+    ok('dva tokeny v odstavci daly dva bannery za sebou', dva.length === 4 &&
+      dva[1].classList.contains('eldr-banner') && dva[2].classList.contains('eldr-banner'));
+    ok('banner před bannerem se nevynuluje', !dva[1].classList.contains('eldr-banner-before'));
+    ok('hook dostal jen odstavec před prvním bannerem',
+      dva[0].classList.contains('eldr-banner-before') &&
+      !dva[3].classList.contains('eldr-banner-before'));
   });
 
 run('Článek bez zdroje bannerů (modul se musí vypnout)',

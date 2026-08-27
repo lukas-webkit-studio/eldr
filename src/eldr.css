@@ -174,3 +174,37 @@ body.lang-de .localization-show-only_de {
     transform: none;
   }
 }
+
+/* --- Bannery v článku: mezera nad a pod ----------------------------------
+   Odsazení samotného banneru je ve Webflow na třídě `.banner-cta-big`
+   i `.banner-cta-small` (margin 64 px nahoře i dole). Sem patří jen to,
+   co style panel zapsat neumí — vztah mezi sourozenci v rich textu.
+
+   Proč to je potřeba: odsazení v článku nedrží margin, ale padding
+   odstavců a nadpisů (`p { padding-bottom: 19px }`, `h2 { padding-top:
+   1.5em }`). Padding se nesčítá do collapsingu, takže mezera kolem banneru
+   vycházela pokaždé jinak podle toho, co kolem něj náhodou stálo:
+
+     odstavec → banner    19 + 64 = 83 px
+     banner → nadpis      64 + 72 = 136 px
+     banner → odstavec    64 + 0  = 64 px
+
+   Klient by to musel dorovnávat prázdnými řádky, a i to by se rozjelo,
+   jakmile někdo výš v článku něco přepíše. Sousedům se proto odsazení
+   směrem k banneru vynuluje a platí jen margin banneru: 64 px nad i pod,
+   ať je kolem cokoliv.
+
+   Hookové třídy `eldr-banner` a `eldr-banner-before` přidává při vkládání
+   modul 05-banners.js — banner v článku vzniká až v prohlížeči, takže
+   ve Webflow na tenhle prvek nejde ve style panelu sáhnout. Dvě sousední
+   sekce banneru se navzájem nevynulují, mezi nimi zůstane 64 px. */
+
+.w-richtext > .eldr-banner-before {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.w-richtext > .eldr-banner + *:not(.eldr-banner) {
+  margin-top: 0;
+  padding-top: 0;
+}
