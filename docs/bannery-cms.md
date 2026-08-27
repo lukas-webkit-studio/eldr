@@ -37,11 +37,19 @@ Co to obnáší:
 stávajících článků. Klient nikdy nevidí kód a struktura banneru žije
 v Designeru, takže se dá kdykoli přestylovat na jednom místě.
 
-## Stav
+## Stav — hotovo, čeká na publish
 
-**Kolekce Bannery je založená a naplněná** (`6a90303011d6493faa8a946a`) — 15 záznamů
-vytažených ze živého webu, obrázky napojené na stávající assety. Zbývá postavit
-strukturu v Designeru a přepsat články.
+Ve Webflow je všechno postavené. **Zbývá jediné: publikovat web.**
+
+- kolekce **Bannery** (`6a90303011d6493faa8a946a`) — 15 záznamů vytažených
+  ze živého webu, obrázky napojené na stávající assety
+- skrytý zdroj na šabloně `/inspirace/` (`66b0d0179491e21cce3f8302`) —
+  Collection List nad celou kolekcí, obě provedení banneru navázaná na CMS
+- všech **8 článků přepsáno** na tokeny, ověřeno bajt po bajtu proti
+  původnímu textu; žádný starý embed nezůstal
+- site head i footer bumpnuté na commit `f0200cd`
+- šablona `Bannery Template` přepnutá na draft, ať nevznikne veřejná
+  stránka `/bannery/…` s tenkým obsahem
 
 ## Datový model — kolekce Bannery
 
@@ -75,14 +83,26 @@ jen se nepoužité pole přestane vykreslovat.
    pro jistotu nastaví i sám.)
 2. **Collection List** uvnitř, zdroj **Bannery** (celá kolekce, bez filtru).
    Limit nech na 100.
-3. Na **Collection Item** dej custom atributy:
-   - `data-banner` → vazba na pole *Slug*
-   - `data-banner-name` → vazba na pole *Name*
-4. Dovnitř položky vlož **dvě sekce** — `banner-cta-big` a `banner-cta-small`
-   ve stejné struktuře, jakou má dnešní embed, s poli navázanými na CMS.
-   Každé nastav **Conditional visibility**: `Typ = Velký`, resp. `Typ = Malý`.
-5. Obrázkům nech **Loading: lazy**. Ve skrytém zdroji se pak nestahují;
+3. Uvnitř položky **Div `.banner-item`**, jeho **DOM id navázané na Slug**.
+   Tohle je klíč, na který míří `[banner:…]`.
+4. V něm **Div `.banner-name`** (display none) s **textem navázaným na Name** —
+   druhý klíč, aby klient mohl psát i „Pylony – velký".
+5. Vedle něj **dvě sekce** — `banner-cta-big` a `banner-cta-small` ve stejné
+   struktuře, jakou má dnešní embed, s poli navázanými na CMS. Každá má
+   statický atribut `data-banner-variant` (`velky` / `maly`).
+6. Velké sekci nastav **viditelnost navázanou na přepínač Velký banner**.
+   Malá zůstává vždy viditelná — modul si vybere tu, která projde.
+7. Obrázkům nech **Loading: lazy**. Ve skrytém zdroji se pak nestahují;
    stáhnou se až po vložení do článku.
+
+### Proč zrovna takhle
+
+Webflow Data API **neumí** dvě věci, které by se v Designeru naklikaly:
+navázat custom atribut na položce Collection Listu a nastavit podmíněnou
+viditelnost podle Option pole. Odtud DOM id místo `data-banner`, skrytý text
+místo `data-banner-name` a Switch místo Option. Kdo to bude překopávat ručně
+v Designeru, může použít i původní varianty — modul je na klíče nenáročný,
+jen musí sedět `.banner-item`, `.banner-name` a `data-banner-variant`.
 
 ### Pojmenování tříd (client-first)
 
@@ -106,8 +126,9 @@ v menu u názvu třídy dej **Duplicate class** (vznikne kopie se všemi
 vlastnostmi), přejmenuj ji na client-first název a starou třídu z prvku
 odeber. Nepřepisuj styly ručně, rozjede se to.
 
-**Staré třídy zatím nemazat** — drží vzhled bannerů ve starých článcích,
-dokud nejsou přepsané. Až budou, jdou pryč (jsou i v `_backup/FINDINGS.md`).
+**Přejmenování až po publikaci.** Struktura je zatím postavená na starých
+třídách, aby vzhled seděl 1:1. Přejmenovat je jde teprve až bude nový systém
+odpublikovaný a ověřený — do té doby drží vzhled i staré publikované články.
 
 ### Na co si dát pozor
 
@@ -202,9 +223,18 @@ konečně na reálných prvcích v Designeru.
 
 ## Nasazení
 
-Modul je součástí bundlu `dist/eldr.js`. Ten se ale v patičce webu zatím
-nenačítá — live jsou pořád samostatné skripty `index.min.js` a `sliders.min.js`
-na tagu `v1.2.27`. Než bannery pojedou, musí se patička přepnout na bundle.
+Site head i footer už ukazují na commit `f0200cd`, kde je modul součástí
+bundlu. Zbývá **publikovat web** — do té doby na živém webu běží pořád
+starý stav.
 
 Při editaci site head/footer **vždy nahrazuj celý obsah pole**, nikdy
-„jen tenhle blok" — viz incident 2026-08-15 v `_backup/FINDINGS.md`.
+„jen tenhle blok" — viz incident 2026-08-15 v `_backup/FINDINGS.md`. A vždy
+si aktuální stav vytáhni z API, ne ze zálohy v repu; ta byla 27. 8. o dva
+kroky pozadu a tvrdila, že patička jede na `v1.2.27`.
+
+### Po publikaci zkontrolovat
+
+1. `/inspirace/jak-vybrat-reklamni-pylon` — malý i velký banner sedí na
+   stejném místě jako dřív
+2. konzole prohlížeče je bez `[ELDR bannery]` hlášek
+3. klik na tlačítko banneru pošle do dataLayer `button_click`

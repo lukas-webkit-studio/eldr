@@ -1,6 +1,11 @@
 # Záloha custom kódu — Webflow ELDR
 Site ID: 635940ec249b210e8902edd4 · Workspace: 63593aa9923e4a3417813ca5
-Pořízeno: 2026-08-15 · Stav webu: publikováno 2026-06-29
+Pořízeno: 2026-08-27 · Stav webu: publikováno 2026-08-17
+
+⚠️ Tahle záloha se ROZEŠLA s realitou (byla z 15. 8., live mezitím přešel
+na sloučený bundle). Kdo se na ni spolehne, udělá špatné rozhodnutí —
+před prací se site head/footer si vždycky vytáhni aktuální stav přes
+`data_scripts_tool > get_site_freeform_code` a tenhle soubor přepiš.
 
 | Soubor | Umístění ve Webflow |
 |---|---|

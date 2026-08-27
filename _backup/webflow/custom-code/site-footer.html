@@ -2,102 +2,22 @@
 <script defer src="https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js" fs-cc-mode="opt-in"></script>
 <!-- End Finsweet Cookie Consent -->
 
-<!-- jQuery -->
-<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- End jQuery -->
-
-<!-- Swiper.js Stylesheets
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-End Swiper -->
-
 <!-- Swiper.js Library -->
 <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <!-- End Swiper JS Library -->
 
 <!-- Webkit Studio Code -->
-<script defer src="https://cdn.jsdelivr.net/gh/lukas-webkit-studio/eldr@v1.2.27/index.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/lukas-webkit-studio/eldr@v1.2.27/sliders.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/lukas-webkit-studio/eldr@v1.2.28/current-year.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/lukas-webkit-studio/eldr@f0200cd/dist/eldr.min.js"></script>
 <!-- End Webkit Studio Code -->
 
 <!-- Lead Script -->
 <script>
-!(function (l, s) {
-l.type = "text/javascript";
-l.async = true;
-l.src = "https://" + "ct.l" + "eady.com/R6vz1S8NAqk4NrQ8/L" + ".js";
-s = s[0];
-s.parentNode.insertBefore(l, s);
-})(document.createElement("script"), document.getElementsByTagName("script"));
+  !(function (l, s) {
+    l.type = 'text/javascript';
+    l.async = true;
+    l.src = 'https://' + 'ct.l' + 'eady.com/R6vz1S8NAqk4NrQ8/L' + '.js';
+    s = s[0];
+    s.parentNode.insertBefore(l, s);
+  })(document.createElement('script'), document.getElementsByTagName('script'));
 </script>
 <!-- End Lead Script -->
-
-<!-- Google Tag Manager Scripts -->
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-    // Form
-    const contactForms = document.querySelectorAll(".Form__Type1");
-    contactForms.forEach(form => {
-        form.addEventListener("submit", function() {
-            dataLayer.push({
-                'event' : 'contact_form_submit'
-            });
-        });
-    });
-  
-  	// Navbar
-  	const navButtons = document.querySelectorAll(".navbar__link");
-  	navButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const buttonText = this.innerText
-            dataLayer.push({
-                "event" : "menu_click",
-                "button_text" : buttonText
-            });
-        });
-    });
-  	
-	// Buttons
-  	const redButtons = document.querySelectorAll(".button--primary");
-  	redButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const buttonText = this.innerText;
-          	const closestSection = this.closest('section');
-        	const sectionName = closestSection && closestSection.id ? closestSection.id : 'Sekce bez názvu';
-            dataLayer.push({
-            	"event" : "button_click",
-            	"button_text" : buttonText,
-            	"section" : sectionName
-            });
-        });
-    }); 
-  	
-  	// Produkty na domovské stránce
-  	const TopProducts = document.querySelectorAll(".sectiontopproducts__item");
-  	TopProducts.forEach(button => {
-        button.addEventListener("click", function() {
-            const buttonText = this.querySelector('h2');
-            dataLayer.push({
-            'event' : 'button_click',
-            'button_text' : buttonText,
-            'section' : 'Home page'
-            });
-        });
-    }); 
-  	
-  	// Menu na stránce Naše výrobky
-  	const MenuProducts = document.querySelectorAll(".sectionproducts__item");
-  	MenuProducts.forEach(button => {
-        button.addEventListener("click", function() {
-            const buttonText = this.querySelector('h5');
-            dataLayer.push({
-            'event' : 'button_click',
-            'button_text' : buttonText,
-            'section' : 'Naše výrobky'
-            });
-        });
-    }); 
-});
-</script>
-<!-- End Google Tag Manager Scripts -->
