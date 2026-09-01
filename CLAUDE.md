@@ -46,6 +46,33 @@ animace na jiný prvek, scroll efekty — to se musí naklikat v Designeru.
 Nesnaž se to obejít custom kódem bez domluvy: kdyby to uživatel později
 přidal i ve Webflow, obojí by se pralo.
 
+Tohle je třetí kategorie vedle „Webflow" a „repozitář": **je to nativní
+funkce Webflow, ale API na ni nedosáhne.** Patří pořád do Designeru, ne do
+custom kódu. Ověřeno na tomhle webu:
+
+| Co | Kde to jde |
+|---|---|
+| Interakce (IX2) | jen Designer |
+| Styly a třídy v sekundárním locale | jen Designer — `data_style_tool` píše globálně, ne per locale |
+| Obrázky v sekundárním locale | jen Designer, API je vrací, ale nezapíše |
+| Text a SEO v **primárním** locale | jen Designer — API píše výhradně do `/en` a `/de` |
+| Atributy (`aria-label`, `title`, `data-*`) per locale | **nejde nikde** — hodnota je společná všem jazykům |
+| Lokalizované varianty u existující CMS položky | jen znovuzaložení položky s `cmsLocaleIds` (viz `docs/bannery-cms.md`) |
+
+Ten předposlední řádek stojí za zapamatování: `aria-label="Zkopírovat
+prompt"` na tlačítku u AI souhrnu zůstává česky i na `/en` a `/de`, protože
+Webflow lokalizaci atributů neumí. Viditelný text tlačítka přeložený je.
+Custom kódem by to „šlo", ale bylo by to přesně to přepisování, kterému se
+tenhle soubor snaží zabránit.
+
+### Překlady jsou celé nativní
+
+Kompletní překlad webu do DE a EN — statické stránky, blog, štítky,
+bannery, komponenty i SEO — proběhl **bez jediného řádku v `src/`**.
+Všechno se zapsalo do Webflow přes API. Když ti u překladu přijde, že něco
+„by chtělo CSS nebo JS", skoro jistě to jen hledáš špatným nástrojem;
+který nástroj píše kam, je v `.claude/skills/preklad/SKILL.md`.
+
 ## Nasazení
 
 Bundle se servíruje z jsDelivr, připnutý na konkrétní commit:

@@ -262,6 +262,7 @@ ne závorka.
 | Překlep v české šabloně článku | „Jejda, **fotografie nepodařilo se zobrazit**." — správně *fotografii se nepodařilo zobrazit*. V EN i DE přeloženo správně, česky opravit nejde (statický text v primárním locale je přes API read-only). |
 | Stránka 404 nemá EN ani DE | Na `/en/…` i `/de/…` se u neexistující adresy zobrazí český „Tudy cesta nevede…". Je to statická stránka, přeložit ji jde — jen na ni zatím nedošlo. |
 | `/inspirace` česky nemá meta description | EN a DE ji už mají. Doplnit se musí v Designeru, do primárního locale API nepíše. |
+| `aria-label="Zkopírovat prompt"` u tlačítka AI souhrnu | Zůstává česky i na `/en` a `/de`. Webflow lokalizaci atributů neumí ani v Designeru, ani přes API (ověřeno u Webflow AI proti jejich dokumentaci). Viditelný text tlačítka přeložený je, týká se to jen čteček obrazovky. Custom kódem neobcházet. |
 | Domovská stránka v EN je celá v Title Case | „Make Your Business Stand Out", „All References" — jinde na webu je v EN větné psaní. Sjednotit chce celou stránku najednou, ne po jednom nadpisu. |
 | DE meta title domovské stránky | „**Lichtwerbung** \| Elektro Drapač" — glosář má Leuchtreklame. Text stránky už opravený je, title zatím ne. |
 | Anglicismus „Business" v DE | „Machen Sie Ihr Business sichtbar", „macht Ihr Business unübersehbar" — spíš *Unternehmen* nebo *Geschäft*. Nechávám na rozhodnutí, je to otázka tónu. |
