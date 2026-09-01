@@ -233,7 +233,7 @@ ne závorka.
 
 | Co | Detail |
 |---|---|
-| **Kolekce Bannery není lokalizovaná** | `list_collection_items` s EN i DE `cmsLocaleId` vrací 0 položek, zápis končí 404. Bannery v článcích proto na `/en/` i `/de/` renderují český text („Cenová nabídka zdarma") a jejich CTA míří na `/kontakty#formular` bez prefixu locale. **Přes API se to nezapne — je to nastavení v Designeru** (CMS → Bannery → lokalizace polí). Až bude zapnuté, texty bannerů doplnit a `odkaz-tlacitka` přepsat na `/en/kontakty#formular`, resp. `/de/…`. |
+| **Kolekce Bannery nemá lokalizované varianty** | Není to vypnutý přepínač. Všech 15 položek má `createdOn` shodné na milisekundu — vznikly dávkovým zápisem přes API bez `cmsLocaleIds`, takže Webflow varianty nezaložil. Dodatečně to u existující položky nejde ani přes API (404), ani v Designeru (seznam je v EN prázdný, není co otevřít). Řešení: smazat a založit znovu přes `create_collection_items` s `cmsLocaleIds` — modul hledá banner podle slugu a názvu, ne podle ID, takže se nic nerozbije. Detail v `docs/bannery-cms.md`. |
 | Zastaralý český meta title `/produkty/tabule-a-svetelne-panely` | Zní „Tabule, světelné panely a **výstrče**", ale výstrče má dnes vlastní stránku. EN i DE jsou věrné překlady té češtiny, takže je nechávám sedět s ní. Opravit se to musí nejdřív v češtině. |
 | Překlepy v českém originále | Banner „Pylony – velký“: „s odolnými **material**“ místo *materiály*, „vydrží **I** v náročných podmínkách“ místo *i*. V překladech opraveno, v češtině ne — do primárního locale se přes API zapsat nedá. |
 | `/en/produkty/pylony-a-totemy` | Proti CZ i DE chybí dva koncové nadpisy (sekce se v EN nerenderuje) — ověřit proč, může jít o nepřeloženou komponentu. |

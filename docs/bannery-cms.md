@@ -175,18 +175,38 @@ Site má Webflow Localization: primární `cs`, sekundární `en` a `de`.
 články jsou celé česky včetně bannerů. Rich text se nikdy nelokalizoval,
 mutace jen padají na primární češtinu.
 
-**Nově to funguje samo.** Kolekce Bannery je lokalizovaná jako každá jiná:
-přepneš locale, přepíšeš nadpis, text a tlačítko, publikuješ. Anglický
-čtenář dostane anglický banner v anglickém článku. Nevyplněné pole padá
-zpátky na češtinu, takže se nikdy nezobrazí prázdno.
+**Zatím to nefunguje.** Kolekce Bannery **nemá lokalizované varianty** —
+`list_collection_items` se sekundárním `cmsLocaleId` vrací nula položek,
+zápis do nich končí 404 a v Designeru je kolekce po přepnutí na EN prázdná.
+Anglický i německý článek proto vykreslí český banner a jeho tlačítko míří
+na `/kontakty#formular` bez prefixu locale.
+
+**Proč.** Všech 15 bannerů má `createdOn` shodné na milisekundu
+(`2026-08-27T12:42:01.523Z`) — vznikly jedním dávkovým zápisem přes API,
+kterému se nepředal `cmsLocaleIds`. Webflow proto sekundární varianty vůbec
+nezaložil. Dokumentace Webflow to potvrzuje: *„For any Collection items that
+already exist, you must add the desired secondary locales in the CMS panel
+within the Designer. You can't add a new locale to an existing item via the
+API."* Přes API se to u existující položky dodatečně zapnout nedá a v CMS
+panelu není co otevřít, protože seznam je v EN prázdný.
+
+**Jak z toho ven.** `create_collection_items` `cmsLocaleIds` přijímá a
+varianty založí rovnou. Cesta je tedy položky smazat a založit znovu se
+stejným Názvem a Slugem a s oběma sekundárními locale. **Je to bezpečné:**
+modul hledá banner podle DOM `id` (slug) a textu `.banner-name` (Název),
+nikde nepracuje s ID položky — viz kontrakt výše. Změní se jen ID položek
+a obrázky se přeuloží pod novými `fileId`.
+
+**Pravidlo do budoucna:** každý nový banner zakládej s `cmsLocaleIds`, jinak
+se stejná past sklapne znovu. V Designeru zakládaná položka varianty dostane
+sama; problém dělá jen zakládání přes API bez toho pole.
 
 **Dvě pravidla, aby to drželo:**
 
 1. **Nelokalizuj pole Name a Slug.** Nech je ve všech mutacích česky —
    jsou to klíče, na které míří `[banner:…]` v textu.
 2. **Nepřekládej token.** `[banner:pylony-velky]` zůstává v anglickém
-   i německém článku doslova stejný. Tohle je potřeba říct i překladateli
-   (a napsat do promptu, až bude blog překládat Claude).
+   i německém článku doslova stejný.
 
 ## Návod pro klienta
 
