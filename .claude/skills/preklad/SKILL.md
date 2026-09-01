@@ -74,6 +74,42 @@ přes API, ani v Designeru. A do seznamu patří **i primární locale**; jinak
 položka v češtině vůbec nevznikne. Podrobně i s dalšími pastmi (mazání
 neuvolní slug, slug je pole per locale) v `docs/bannery-cms.md`.
 
+### Štítky blogu — kolekce Štítky
+
+`collection_id` = `6752dfb620f8115ea35c9431`
+
+Na rozdíl od Bannerů **lokalizované varianty má** — stačí `update_collection_items`
+s `cmsLocaleId`. Překládá se jen `name`; `slug` a `barva` zůstávají.
+
+| CZ | EN | DE |
+|---|---|---|
+| Novinky | News | Neuigkeiten |
+| Inspirace | Inspiration | Inspiration |
+| Ze života ELDR | Life at ELDR | Aus dem Leben von ELDR |
+| Ze světa reklamy | From the world of advertising | Aus der Welt der Werbung |
+
+**Názvy štítků jsou na `/inspirace` podruhé jako statické popisky filtru**
+(Finsweet, `fs-cmsfilter-field="category"`). Finsweet páruje popisek filtru
+s textem štítku u článku **na přesnou shodu**, takže obojí musí znít úplně
+stejně. Přeložíš-li jen jednu stranu, filtrování v tom locale přestane
+fungovat — bez chyby v konzoli, prostě nic nevyfiltruje.
+
+### Hodnoty, které jsou ve skutečnosti klíče
+
+Tyhle texty vypadají jako obsah, ale bundle je porovnává **na přesnou shodu
+s českým řetězcem**. Přeložit je znamená tiše vypnout funkci — nic se
+nerozbije viditelně, jen to přestane dělat, co má.
+
+| Kde | Hodnota | Kdo ji čte |
+|---|---|---|
+| Bannery — `name` a `slug` | `3D nápisy – velký`, `pylony-maly`, … | `src/modules/05-banners.js` (`key()` na id i `.banner-name`) |
+| Inspirace — `typ-fotogalerii-2` | `Vysoká fotogalerie` | `src/modules/32-gallery-height.js` (`textContent.trim() !== 'Vysoká fotogalerie'`) |
+
+Obojí sedí ve skrytých prvcích (`[data-banner-source]`, `#gallery-option`),
+takže návštěvník je nikdy neuvidí — čeština tam **patří** i v EN a DE.
+Než začneš překládat nové pole, projdi `src/modules/` na doslovné porovnání
+s českým textem; přibývají.
+
 ## Jak překládat
 
 - **Nadpisy prodávají.** Doslovný převod českého nadpisu bývá v EN/DE mdlý.

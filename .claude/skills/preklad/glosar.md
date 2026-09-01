@@ -242,6 +242,10 @@ ne závorka.
 | kolekce **Bannery** | neměla lokalizované varianty, bannery v EN i DE článcích běžely česky a CTA mířilo na český kontakt | 15 bannerů přeloženo do EN i DE, CTA s prefixem locale; ověřeno 15/15 položek ve všech třech locale, 0 cizojazyčných průsaků |
 | bannery, česky | 6× „s odolnými **material**" a „vydrží **I** v", 1× „**rezanou** grafikou" a „**rohlédněte** si" | opraveno v češtině (CMS položky přes API zapsat jdou) |
 | **blog (kolekce Inspirace)** | všech 8 článků se na `/en/` i `/de/` zobrazovalo česky | všech 8 přeloženo do EN i DE včetně SEO; ověřeno 16/16 stránek živě, nula českých zbytků, čeština bez regrese |
+| kolekce **Štítky** | názvy štítků česky ve všech locale — u článků i v chipech na výpisu | 4 štítky přeloženy do EN i DE; popisky Finsweet filtru na `/inspirace` přeloženy shodně, takže filtrování dál sedí (ověřeno: popisky i chipy se v každém locale kryjí) |
+| stránka **`/inspirace`** | EN i DE neměly ani jeden lokalizovaný uzel — H1, podtitul i popisky filtru česky, bez meta description | H1, podtitul, 4 popisky filtru, DE hlášky formuláře; SEO title i description pro EN i DE |
+| **šablona článku** (`detail_inspirace`) | „Přečtěte si také:", „Souhrn článku přes AI:", „Zkopírovat prompt" a chybová hláška u fotek běžely česky na **všech** EN i DE článcích | přeloženo do EN i DE; v DE navíc „No items found." → „Keine Einträge gefunden." |
+| **navigace** — otevírací doba u telefonu | uzel `text-block-13` neměl v EN ani DE override, svítilo „Po-Pá 8:00 – 16:00" na každé stránce | „Mon-Fri 8:00 – 16:00" / „Mo-Fr 8:00 – 16:00" |
 
 ### Otevřené
 
@@ -250,6 +254,10 @@ ne závorka.
 | Zastaralý český meta title `/produkty/tabule-a-svetelne-panely` | Zní „Tabule, světelné panely a **výstrče**", ale výstrče má dnes vlastní stránku. EN i DE jsou věrné překlady té češtiny, takže je nechávám sedět s ní. Opravit se to musí nejdřív v češtině. |
 | Překlepy v českém originále | Banner „Pylony – velký“: „s odolnými **material**“ místo *materiály*, „vydrží **I** v náročných podmínkách“ místo *i*. V překladech opraveno, v češtině ne — do primárního locale se přes API zapsat nedá. |
 | `/en/produkty/pylony-a-totemy` | Proti CZ i DE chybí dva koncové nadpisy (sekce se v EN nerenderuje) — ověřit proč, může jít o nepřeloženou komponentu. |
+| Rozporná otevírací doba | Navigace u telefonního čísla říká **8:00 – 16:00**, ale CTA blok ve stejné navigaci i patička říkají **6:00 – 15:00**. Rozpor je už v češtině; překlady jsou věrné tomu, co tam stojí. Která doba platí, ať rozhodne uživatel. |
+| Překlep v české šabloně článku | „Jejda, **fotografie nepodařilo se zobrazit**." — správně *fotografii se nepodařilo zobrazit*. V EN i DE přeloženo správně, česky opravit nejde (statický text v primárním locale je přes API read-only). |
+| Stránka 404 nemá EN ani DE | Na `/en/…` i `/de/…` se u neexistující adresy zobrazí český „Tudy cesta nevede…". Je to statická stránka, přeložit ji jde — jen na ni zatím nedošlo. |
+| `/inspirace` česky nemá meta description | EN a DE ji už mají. Doplnit se musí v Designeru, do primárního locale API nepíše. |
 
 ### Chyby v referenčních dokumentech (`docs/translation/`)
 
@@ -273,7 +281,6 @@ Nepřebírat je:
 Pro tyhle nemám v podkladech doložený překlad. Než je použiješ poprvé,
 navrhni variantu uživateli a doplň ji sem.
 
-- názvy štítků blogu (kolekce Štítky)
 - názvy pracovních pozic (kolekce Kariéra):
   elektromechanik/elektrikář-montér, montážní dělník, zámečník
 - názvy referenčních projektů (kolekce Reference)
