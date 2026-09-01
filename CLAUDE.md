@@ -57,7 +57,7 @@ custom kódu. Ověřeno na tomhle webu:
 | Obrázky v sekundárním locale | jen Designer, API je vrací, ale nezapíše |
 | Text a SEO v **primárním** locale | jen Designer — API píše výhradně do `/en` a `/de` |
 | Atributy (`aria-label`, `title`, `data-*`) per locale | **nejde nikde** — hodnota je společná všem jazykům |
-| Lokalizované varianty u existující CMS položky | jen znovuzaložení položky s `cmsLocaleIds` (viz `docs/bannery-cms.md`) |
+| Chybějící locale u existující CMS položky | jen Designer (CMS panel u položky) — přes API to nejde, `cmsLocaleIds` platí jen pro nově zakládané položky |
 
 Ten předposlední řádek stojí za zapamatování: `aria-label="Zkopírovat
 prompt"` na tlačítku u AI souhrnu zůstává česky i na `/en` a `/de`, protože

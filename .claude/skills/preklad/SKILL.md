@@ -68,11 +68,18 @@ locale (`/produkty/…` → `/en/produkty/…`), pokud cíl v daném locale exis
 
 ### Zakládáš CMS položku přes API?
 
-`create_collection_items` s `cmsLocaleIds` je **jediný** způsob, jak dát
-položce sekundární varianty — dodatečně u existující položky to nejde ani
-přes API, ani v Designeru. A do seznamu patří **i primární locale**; jinak
-položka v češtině vůbec nevznikne. Podrobně i s dalšími pastmi (mazání
-neuvolní slug, slug je pole per locale) v `docs/bannery-cms.md`.
+`create_collection_items` s `cmsLocaleIds` je jediný způsob, jak dát
+sekundární varianty položce **přímo při zakládání**. Do seznamu patří
+**i primární locale**; jinak položka v češtině vůbec nevznikne.
+
+**U už existující položky se locale přes API dodatečně přidat nedá** —
+`cmsLocaleIds` platí jen pro nově zakládané. Zato **v Designeru to jde**:
+otevřít položku v CMS panelu a chybějící jazyk tam přidat. Mazat a zakládat
+znovu kvůli tomu není potřeba (u bannerů se to muselo udělat jen proto, že
+seznam byl v sekundárních locale úplně prázdný, takže nebylo co otevřít).
+
+Podrobně i s dalšími pastmi (mazání neuvolní slug, slug je pole per locale)
+v `docs/bannery-cms.md`.
 
 ### Štítky blogu — kolekce Štítky
 
