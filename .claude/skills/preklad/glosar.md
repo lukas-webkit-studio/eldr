@@ -250,6 +250,10 @@ ne závorka.
 | **domovská stránka, EN** | popisek hodnocení zůstal česky („Hodnocení Google") | „Google rating" |
 | **domovská stránka, EN i DE** | nadpis sekce s taby zněl „How to Choose the Right Lighted Advertising for Your Needs" / „Wie wählt man eine Lichtreklame für seine Bedürfnisse aus?" — pozůstatek staršího českého nadpisu; česky tam dnes stojí „Světelná reklama na míru" | „Custom Illuminated Advertising" / „Maßgeschneiderte Leuchtreklame" |
 | **domovská stránka, DE** | claim v hero: „Höchste Qualität in der **Lichtwerbung**" | Leuchtreklame (podle glosáře) |
+| **stránka 404** | na `/en/…` i `/de/…` svítil u neexistující adresy český „Tudy cesta nevede…" | přeložena celá včetně SEO: „Looks like a wrong turn…" / „Hier geht es leider nicht weiter…" |
+| **domovská stránka, EN** | celá v Title Case („Make Your Business Stand Out", „All References"), jinde na webu je větné psaní | 18 uzlů převedeno na větné psaní |
+| **domovská stránka, EN** | čtyři varianty téhož termínu: „Light advertising" (title), „Lighting advertising" (description), „Lighted advertising" (text), „Illuminated advertising" (produktové stránky) | sjednoceno na **illuminated advertising** podle glosáře, včetně SEO |
+| **domovská stránka, EN** | hodnocení „4,4" s desetinnou čárkou | „4.4" — angličtina má tečku |
 
 ### Otevřené
 
@@ -261,11 +265,9 @@ ne závorka.
 | Rozporná otevírací doba | Navigace u telefonního čísla říká **8:00 – 16:00**, ale CTA blok ve stejné navigaci i patička říkají **6:00 – 15:00**. Rozpor je už v češtině; překlady jsou věrné tomu, co tam stojí. Která doba platí, ať rozhodne uživatel. |
 | Překlep v české šabloně článku | „Jejda, **fotografie nepodařilo se zobrazit**." — správně *fotografii se nepodařilo zobrazit*. V EN i DE přeloženo správně, česky opravit nejde (statický text v primárním locale je přes API read-only). |
 | Stránka 404 nemá EN ani DE | Na `/en/…` i `/de/…` se u neexistující adresy zobrazí český „Tudy cesta nevede…". Je to statická stránka, přeložit ji jde — jen na ni zatím nedošlo. |
-| `/inspirace` česky nemá meta description | EN a DE ji už mají. Doplnit se musí v Designeru, do primárního locale API nepíše. |
+| `/inspirace` česky nemá meta description a title je jen „Inspirace" | Do primárního locale API nepíše, patří to do Designeru. Navržený text: description „Kompletní průvodce světelnou reklamou. 💡 Prozkoumejte možnosti světelné reklamy a udělejte na své zákazníky nezapomenutelný dojem.", title „Inspirace \| Elektro Drapač" (jinde na webu je vždy `Něco \| Elektro Drapač`). |
 | `aria-label="Zkopírovat prompt"` u tlačítka AI souhrnu | Zůstává česky i na `/en` a `/de`. Webflow lokalizaci atributů neumí ani v Designeru, ani přes API (ověřeno u Webflow AI proti jejich dokumentaci). Viditelný text tlačítka přeložený je, týká se to jen čteček obrazovky. Custom kódem neobcházet. |
 | Banner „Světelné nápisy – velký TEST" nemá německou variantu | Položka `svetelne-napisy-velky-test` vznikla 1. 9. ve 12:58 mimo tuhle práci. Má češtinu a angličtinu, němčinu ne — na `/de` se proto do skryté knihovny vůbec nenačte. Zatím neškodí, žádný článek ji tokenem `[banner:…]` neodkazuje. Přidat jazyk jde jen v Designeru (CMS panel u položky), přes API ne. |
-| Domovská stránka v EN je celá v Title Case | „Make Your Business Stand Out", „All References" — jinde na webu je v EN větné psaní. Sjednotit chce celou stránku najednou, ne po jednom nadpisu. |
-| DE meta title domovské stránky | „**Lichtwerbung** \| Elektro Drapač" — glosář má Leuchtreklame. Text stránky už opravený je, title zatím ne. |
 | Anglicismus „Business" v DE | „Machen Sie Ihr Business sichtbar", „macht Ihr Business unübersehbar" — spíš *Unternehmen* nebo *Geschäft*. Nechávám na rozhodnutí, je to otázka tónu. |
 
 ### Chyby v referenčních dokumentech (`docs/translation/`)
