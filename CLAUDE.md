@@ -122,6 +122,18 @@ udělat bezpečně.
 konflikt v `dist/`**. Neřeš ho ručně: po mergi `main` do větve spusť
 `npm run build` a commitni přegenerovaný výstup.
 
+## Překlady do DE a EN
+
+Web běží na nativní Webflow lokalizaci: čeština je primární locale,
+`/en` a `/de` sekundární. Do primárního locale se přes API zapsat nedá
+a ani se nemá.
+
+Terminologie i postup jsou ve skillu `.claude/skills/preklad/` — glosář
+CZ→EN→DE, které API píše kam (CMS položky, statické stránky, komponenty
+a SEO metadata mají každé jiný nástroj) a jak se výsledek ověřuje.
+Zdrojové dokumenty původních překladů jsou v `docs/translation/`; jsou
+zastaralé, ground truth je živý web.
+
 ## Práce s repozitářem
 
 ```
