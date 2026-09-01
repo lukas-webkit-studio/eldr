@@ -209,20 +209,34 @@ ne závorka.
 
 ---
 
-## 7. Známé chyby na produkci
+## 7. Závady na produkci
 
-Ověřeno na živém webu. Až se bude sahat na dotčené stránky, opravit.
+### Opraveno 1. 9. 2026 (živě ověřeno)
 
-| Kde | Co je špatně | Má být |
+| Kde | Bylo | Je |
 |---|---|---|
-| `/en/produkty/vystrce-lekarenske-znaky` | „Variants of **plugs**", „Light **Plugs**" — *výstrč* přeložená jako elektrická zástrčka | „Variants of projecting signs", „Illuminated projecting signs" |
-| `/de/produkty/vystrce-lekarenske-znaky` | „Varianten von **Steckern**", „**Lichtstecker**" — totéž, *Stecker* = zástrčka | „Varianten von Auslegern", „Leuchtausleger" |
-| `/de/produkty/tabule-a-svetelne-panely` | na jedné stránce „**Lichtpaneele**" 7× vedle správného „Leuchtpaneele" 5× | jednotně **Leuchtpaneel** |
-| `/de/produkty/tabule-a-svetelne-panely` | „**Menütafeln**" 3× vedle „Menüboards" 1×; navigace webu používá *Menüboards* | jednotně **Menüboard** |
-| `/en/produkty/tabule-a-svetelne-panely` | „**Plexiglass**" 4× vedle „acrylic glass" 2× | jednotně **acrylic glass** |
-| `/en/produkty/tabule-a-svetelne-panely` | kolísá velikost písmen v nadpisech: „Illuminated **P**anel" 3× vs. „Illuminated **p**anel" 2× | větné psaní |
-| `/en/produkty/orientacni-systemy` | meta title „**Wayfinding** systems", H1 „**Orientation** systems" | jednotně **orientation system**, i v meta title |
-| `/en/produkty/pylony-a-totemy` | proti CZ i DE chybí přeložené dva koncové nadpisy (sekce se v EN nerenderuje) | ověřit, proč sekce v EN chybí — může jít o nepřeloženou komponentu |
+| `/en/produkty/vystrce-lekarenske-znaky` | „Variants of **plugs**", „Light **Plugs**" — *výstrč* jako elektrická zástrčka | projecting sign (na stránce 17×, „plug" 0×) |
+| `/de/produkty/vystrce-lekarenske-znaky` | „Varianten von **Steckern**", „**Lichtstecker**" | Ausleger (17×, „Stecker" 0×) |
+| `/de/…/vystrce…` | věta bez přísudku: „Stecker sind Leuchtkästen, die an den … Stützkonsolen." | doplněno „…die auf Halterungen senkrecht zur Gebäudefassade montiert werden." |
+| EN i DE `/…/vystrce…` | „Ing. arch. **Flashar**" a věta bez podmětu | Flašar; doplněno „we have had" / „hatten wir" |
+| `/de/produkty/tabule-a-svetelne-panely` | „Lichtpaneele" 7× vedle „Leuchtpaneele" 5× | Leuchtpaneel (12×, „Lichtpaneel" 0×) |
+| `/de/…/tabule…` | „Menütafeln" 3× vedle „Menüboards" 1× | Menüboard (4×, „Menütafel" 0×) |
+| `/en/produkty/tabule-a-svetelne-panely` | „Plexiglass" 4× vedle „acrylic glass" 2× | acrylic glass |
+| `/en/…/tabule…` | Title Case v nadpisech, jinde v EN není | větné psaní |
+| `/en/…/tabule…` | v odrážce *Placement* dvakrát týž výčet forem | ponechán účel + výčet, jako v DE a v podkladech |
+| meta title `/en/produkty/orientacni-systemy` | „**Wayfinding** systems" proti H1 „Orientation systems" | Orientation systems |
+| meta title `/en/…/vystrce…` | „Pharmacy sign and marking of pharmacies" — výstrče nezmíněny | Projecting signs and pharmacy signs |
+| meta title `/de/…/vystrce…` | „Apotheken-Emblem und Apotheken-Beschilderung" — totéž | Ausleger und Apothekenschilder |
+| meta description `/de/…/tabule…` | „Lichtreklame" | Leuchtreklame |
+
+### Otevřené
+
+| Co | Detail |
+|---|---|
+| **Kolekce Bannery není lokalizovaná** | `list_collection_items` s EN i DE `cmsLocaleId` vrací 0 položek, zápis končí 404. Bannery v článcích proto na `/en/` i `/de/` renderují český text („Cenová nabídka zdarma") a jejich CTA míří na `/kontakty#formular` bez prefixu locale. **Přes API se to nezapne — je to nastavení v Designeru** (CMS → Bannery → lokalizace polí). Až bude zapnuté, texty bannerů doplnit a `odkaz-tlacitka` přepsat na `/en/kontakty#formular`, resp. `/de/…`. |
+| Zastaralý český meta title `/produkty/tabule-a-svetelne-panely` | Zní „Tabule, světelné panely a **výstrče**", ale výstrče má dnes vlastní stránku. EN i DE jsou věrné překlady té češtiny, takže je nechávám sedět s ní. Opravit se to musí nejdřív v češtině. |
+| Překlepy v českém originále | Banner „Pylony – velký“: „s odolnými **material**“ místo *materiály*, „vydrží **I** v náročných podmínkách“ místo *i*. V překladech opraveno, v češtině ne — do primárního locale se přes API zapsat nedá. |
+| `/en/produkty/pylony-a-totemy` | Proti CZ i DE chybí dva koncové nadpisy (sekce se v EN nerenderuje) — ověřit proč, může jít o nepřeloženou komponentu. |
 
 ### Chyby v referenčních dokumentech (`docs/translation/`)
 

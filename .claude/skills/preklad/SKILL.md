@@ -99,13 +99,30 @@ Netvrď nic, cos neověřil. Po zápisu:
 **„Kdy publikovat" rozhoduje uživatel, ne ty.** Zápis přes API mění obsah
 v Designeru; na web se dostane až publikací.
 
-U CMS položek publikuj cíleně: `data_cms_tool > publish_collection_items`
-s konkrétními `itemIds`. Nepouští ven cizí rozdělanou práci v Designeru,
-na rozdíl od `publish_site`.
+**Lokalizovaný CMS obsah jde na web jen přes publikaci celého webu.**
+`publish_collection_items` publikuje pouze primární locale — ověřeno
+1. 9. 2026 na článku `jak-vybrat-reklamni-pylon`: volání vrátilo úspěch
+a prázdné `errors`, ale u obou sekundárních variant zůstal `lastPublished`
+beze změny a na `/en/` i `/de/` se dál načítala čeština. Živě to bylo až po
+`data_sites_tool > publish_site`. Necíluj tedy CMS publikaci a nehlas hotovo,
+dokud jsi živou stránku neviděl přeloženou.
 
-Než navrhneš `data_sites_tool > publish_site` (celý web), načti
-`get_site`: je-li `lastUpdated` výrazně novější než `lastPublished`, má
-někdo něco rozdělaného a publikace by to poslala ven s sebou. Pak se zeptej.
+**Po `update_collection_items` se sekundární varianta vrátí jako
+`isDraft: true`,** i když primární položka draft není. Než publikuješ, sraz
+to zpátky: `update_collection_items` s `isDraft: false` na každé variantě.
+
+Statický obsah stránek a komponent se publikuje taky jen celým webem.
+
+Před `publish_site` si vytáhni `get_site` a porovnej `lastUpdated`
+s `lastPublished`:
+
+- **jsou blízko sebe** → v Designeru nikdo nic rozdělaného nemá, publikace
+  pustí ven jen tvoje změny. (Editace CMS položek `lastUpdated` webu
+  nezvedají, takže rozestup ukazuje opravdu jen práci v Designeru.)
+- **`lastUpdated` je výrazně novější** → někdo něco rozdělaného má
+  a publikace by to poslala ven s sebou. Zeptej se, nepublikuj naslepo.
+
+Po publikaci vždycky stáhni živou stránku a ověř výsledek.
 
 ## Když narazíš na chybu v češtině
 
