@@ -246,6 +246,10 @@ ne závorka.
 | stránka **`/inspirace`** | EN i DE neměly ani jeden lokalizovaný uzel — H1, podtitul i popisky filtru česky, bez meta description | H1, podtitul, 4 popisky filtru, DE hlášky formuláře; SEO title i description pro EN i DE |
 | **šablona článku** (`detail_inspirace`) | „Přečtěte si také:", „Souhrn článku přes AI:", „Zkopírovat prompt" a chybová hláška u fotek běžely česky na **všech** EN i DE článcích | přeloženo do EN i DE; v DE navíc „No items found." → „Keine Einträge gefunden." |
 | **navigace** — otevírací doba u telefonu | uzel `text-block-13` neměl v EN ani DE override, svítilo „Po-Pá 8:00 – 16:00" na každé stránce | „Mon-Fri 8:00 – 16:00" / „Mo-Fr 8:00 – 16:00" |
+| **domovská stránka, DE** | u hodnocení stálo „Bewertet mit **4,9/5** Sternen von über **2.500** Bewertungen" — vedle čísla **4,4** na téže řádce. Česky je tam jen „Hodnocení Google". Vymyšlené hodnocení i počet recenzí, navíc si to na stránce odporovalo | „Google-Bewertung" |
+| **domovská stránka, EN** | popisek hodnocení zůstal česky („Hodnocení Google") | „Google rating" |
+| **domovská stránka, EN i DE** | nadpis sekce s taby zněl „How to Choose the Right Lighted Advertising for Your Needs" / „Wie wählt man eine Lichtreklame für seine Bedürfnisse aus?" — pozůstatek staršího českého nadpisu; česky tam dnes stojí „Světelná reklama na míru" | „Custom Illuminated Advertising" / „Maßgeschneiderte Leuchtreklame" |
+| **domovská stránka, DE** | claim v hero: „Höchste Qualität in der **Lichtwerbung**" | Leuchtreklame (podle glosáře) |
 
 ### Otevřené
 
@@ -258,6 +262,9 @@ ne závorka.
 | Překlep v české šabloně článku | „Jejda, **fotografie nepodařilo se zobrazit**." — správně *fotografii se nepodařilo zobrazit*. V EN i DE přeloženo správně, česky opravit nejde (statický text v primárním locale je přes API read-only). |
 | Stránka 404 nemá EN ani DE | Na `/en/…` i `/de/…` se u neexistující adresy zobrazí český „Tudy cesta nevede…". Je to statická stránka, přeložit ji jde — jen na ni zatím nedošlo. |
 | `/inspirace` česky nemá meta description | EN a DE ji už mají. Doplnit se musí v Designeru, do primárního locale API nepíše. |
+| Domovská stránka v EN je celá v Title Case | „Make Your Business Stand Out", „All References" — jinde na webu je v EN větné psaní. Sjednotit chce celou stránku najednou, ne po jednom nadpisu. |
+| DE meta title domovské stránky | „**Lichtwerbung** \| Elektro Drapač" — glosář má Leuchtreklame. Text stránky už opravený je, title zatím ne. |
+| Anglicismus „Business" v DE | „Machen Sie Ihr Business sichtbar", „macht Ihr Business unübersehbar" — spíš *Unternehmen* nebo *Geschäft*. Nechávám na rozhodnutí, je to otázka tónu. |
 
 ### Chyby v referenčních dokumentech (`docs/translation/`)
 
