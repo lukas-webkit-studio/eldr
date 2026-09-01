@@ -83,6 +83,17 @@ Kde se dokument a produkce rozcházejí, rozhoduje varianta uvedená zde.
 | sloupová plošina | column platform | Säulenbühne |
 | muzeum světelných reklam | museum of illuminated advertisements | Museum für Leuchtreklamen |
 | signmaking | signmaking | Signmaking |
+| světelný nápis | illuminated sign | Leuchtschrift |
+| světelné / LED logo | illuminated / LED logo | Leucht- / LED-Logo |
+| 3D reklama | 3D advertising | 3D-Werbung |
+| prostorová reklama | three-dimensional advertising | räumliche Werbung |
+| venkovní reklama | outdoor advertising | Außenwerbung |
+| fasádní nápis | façade sign | Fassadenschriftzug |
+| výstavní stánek | exhibition stand | Messestand |
+| ocelová konstrukce | steel structure | Stahlkonstruktion |
+| kotevní koš | anchor cage | Ankerkorb |
+| projektová dokumentace | project documentation | Projektdokumentation |
+| návratnost investice | return on investment | Amortisation |
 
 ---
 
@@ -230,6 +241,7 @@ ne závorka.
 | meta description `/de/…/tabule…` | „Lichtreklame" | Leuchtreklame |
 | kolekce **Bannery** | neměla lokalizované varianty, bannery v EN i DE článcích běžely česky a CTA mířilo na český kontakt | 15 bannerů přeloženo do EN i DE, CTA s prefixem locale; ověřeno 15/15 položek ve všech třech locale, 0 cizojazyčných průsaků |
 | bannery, česky | 6× „s odolnými **material**" a „vydrží **I** v", 1× „**rezanou** grafikou" a „**rohlédněte** si" | opraveno v češtině (CMS položky přes API zapsat jdou) |
+| **blog (kolekce Inspirace)** | všech 8 článků se na `/en/` i `/de/` zobrazovalo česky | všech 8 přeloženo do EN i DE včetně SEO; ověřeno 16/16 stránek živě, nula českých zbytků, čeština bez regrese |
 
 ### Otevřené
 

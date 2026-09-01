@@ -83,6 +83,11 @@ neuvolní slug, slug je pole per locale) v `docs/bannery-cms.md`.
   sedí v layoutu, drž délku blízko češtině — jinak se rozbije design.
 - **Nepřidávej a neubírej tvrzení.** Záruka 5 let, 40 metrů, 1 000 projektů
   ročně — čísla a sliby jsou stejná ve všech jazycích.
+- **Tokeny nech doslova.** V textech článků jsou dva druhy zástupných
+  značek, které dopisuje až JS v prohlížeči: `[banner:nazev-banneru]`
+  (modul `05-banners.js`) a `{#YOE#}` pro počet let na trhu (`10-vars.js`).
+  Nepřekládej je, nepřepisuj a needituj mezery — musí zůstat znak po znaku
+  stejné i v anglické a německé mutaci.
 - **Redakční značky nepřekládej ani nekopíruj.** V podkladech se vyskytují
   `(proklik)`, `(odkaz)`, `(ukázky)`, `(click-through)`, `(link)`,
   `Button:`, `Metatitle:` a čáry z podtržítek. Jsou to poznámky pro
