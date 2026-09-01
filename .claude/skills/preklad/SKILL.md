@@ -66,6 +66,14 @@ i třídy zůstávají přesně jak jsou; mění se jen text mezi tagy a přípa
 `title`/`alt` atributy. Odkazy uvnitř textu přesměruj na odpovídající
 locale (`/produkty/…` → `/en/produkty/…`), pokud cíl v daném locale existuje.
 
+### Zakládáš CMS položku přes API?
+
+`create_collection_items` s `cmsLocaleIds` je **jediný** způsob, jak dát
+položce sekundární varianty — dodatečně u existující položky to nejde ani
+přes API, ani v Designeru. A do seznamu patří **i primární locale**; jinak
+položka v češtině vůbec nevznikne. Podrobně i s dalšími pastmi (mazání
+neuvolní slug, slug je pole per locale) v `docs/bannery-cms.md`.
+
 ## Jak překládat
 
 - **Nadpisy prodávají.** Doslovný převod českého nadpisu bývá v EN/DE mdlý.

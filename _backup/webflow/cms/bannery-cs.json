@@ -1,5 +1,5 @@
 {
-  "_comment": "Záloha kolekce Bannery (primární locale cs) pořízená 2026-09-01 před migrací na lokalizované varianty. Pořízeno z data_cms_tool > list_collection_items, collection_id 6a90303011d6493faa8a946a, cmsLocaleId 653ad95be882f528b35cb5ef. Obsahuje už opravené překlepy. Stará ID položek migrace zahodí — slouží k obnově obsahu, ne ID.",
+  "_comment": "Záloha kolekce Bannery (primární locale cs) pořízená 2026-09-01 před migrací na lokalizované varianty. Pořízeno z data_cms_tool > list_collection_items, collection_id 6a90303011d6493faa8a946a, cmsLocaleId 653ad95be882f528b35cb5ef. Obsahuje už opravené překlepy. Migrace 1. 9. 2026 proběhla: položky byly smazány a založeny znovu s cmsLocaleIds, takže oldId už neplatí. Soubor slouží k obnově OBSAHU, ne ID.",
   "collectionId": "6a90303011d6493faa8a946a",
   "cmsLocaleId": "653ad95be882f528b35cb5ef",
   "total": 15,
