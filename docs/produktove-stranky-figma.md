@@ -24,19 +24,31 @@ page-wrapper
 ├─ Cookies Consent, GTM, Global Styles, Navbar_2024-12   (komponenty)
 ├─ main-wrapper
 │  ├─ header.section_header_product.text-color-white      hero
-│  ├─ section.section_layout400                           úvodní blok
-│  ├─ section.section_cards                               karty = kotvy sekcí
+│  ├─ section.section_layout400                           karty = rozcestník na sekce
+│  ├─ (section.section_cards.hide)                        MRTVÁ, nekopírovat
+│  ├─ (section.section_layout253)                         nadpis + dva textové sloupce
 │  ├─ N× section.section_product  #<id z menu>            produkt + galerie
-│  ├─ (volitelně section_showreel / section_layout253)
-│  ├─ Jak probíhá výroba světelné reklamy?                (komponenta)
-│  ├─ Důvěřují nám přední české i zahraniční firmy        (komponenta)
-│  └─ Záruka prvotřídní kvality  (prop Viditelnost CTA = false)
+│  ├─ (section.section_showreel)
+│  ├─ section.section_layout121-2 #jak-probiha-vyroba     Jak probíhá výroba
+│  ├─ 3× section.section_process-link                     kroky procesu
+│  ├─ section.section_layout188 #duvera                   Důvěřují nám
+│  └─ layout298_component                                 Záruka prvotřídní kvality
 └─ Footer_2024-12
 ```
 
-`section_cards` je na 3D nápisech skrytá třídou `hide`, ale v návrhu je
-živá na všech stránkách — je to blok „Podívejte se blíže na to, co vás
-zajímá" a jeho karty odpovídají 1:1 kotvám v menu.
+Ověřeno na živém HTML obou hotových stránek, ne odhadem z Designeru.
+
+**`section_layout400` je ten rozcestník** — blok „Podívejte se blíže na to,
+co vás zajímá / Prozkoumejte pestrou škálu profilů" a jeho karty odpovídají
+1:1 kotvám v menu. Nezaměňovat se `section_cards`, což je starší skrytý
+duplikát téhož obsahu; ten na nové stránky nepatří.
+
+Stránka s jedinou produktovou sekcí `section_layout400` nemá — rozcestník
+na jednu položku nedává smysl (viz Orientační systémy).
+
+Komponenta „Záruka prvotřídní kvality" má prop **Viditelnost CTA**. Na 3D
+nápisech i pylonech je `false`, v návrhu Orientačních systémů je CTA pruh
+vidět — tam patří `true`.
 
 ## Párování framů
 
@@ -85,9 +97,11 @@ Pořadí je pořadí v menu, ne abecední.
    `section_showreel#totemy` mají stejné id. Nevalidní HTML, kotva
    `#totemy` skočí jen na první. Nekopírovat dál.
 
-3. **`section_layout121 2` na pylonech** je Webflow duplikát třídy
-   (mezera a číslo v názvu) místo komponenty „Jak probíhá výroba světelné
-   reklamy?". Na nových stránkách použít komponentu.
+3. **`section_layout121 2` je duplikát třídy** (mezera a číslo v názvu,
+   v CSS `section_layout121-2`). Renderují ji obě hotové stránky stejně,
+   ale na 3D nápisech je zabalená v komponentě „Jak probíhá výroba
+   světelné reklamy?", kdežto na pylonech je to lokální kopie. Pro údržbu
+   je lepší komponenta — na nových stránkách použít ji.
 
 ## Postup přestavby jedné stránky
 
