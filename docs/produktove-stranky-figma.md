@@ -103,6 +103,19 @@ Pořadí je pořadí v menu, ne abecední.
    světelné reklamy?", kdežto na pylonech je to lokální kopie. Pro údržbu
    je lepší komponenta — na nových stránkách použít ji.
 
+4. **Web běží ve třech jazycích a překlady jsou vyplněné.** Locales:
+   `cs` primární (`66052b1245cd8094542338a7`), `en`
+   (`66052b1245cd8094542338a5`), `de` (`66052b1245cd8094542338a6`).
+   Ověřeno na živém webu — `/en/produkty/orientacni-systemy` má vlastní
+   title i H1 („Orientation systems"), není to fallback na češtinu.
+
+   Nová stránka vzniklá duplikací má **prázdné EN a DE**. Překlady jdou
+   dopsat přes `data_localization_tool > update_static_content` (píše jen
+   do sekundárních locale, primární je read-only), ale texty se musí
+   nejdřív vytáhnout ze staré stránky přes `get_page_content` s
+   `localeId`. U textů, které návrh mění, překlad neexistuje a musí
+   vzniknout nový — to platí bez ohledu na zvolený postup.
+
 ## Postup přestavby jedné stránky
 
 1. `create_page` s `duplicateOf` vzorové stránky → dostane se client-first
