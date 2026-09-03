@@ -56,7 +56,7 @@ vidět — tam patří `true`.
 |---|---|---|---|---|---|
 | `1676:3577` | 3D nápisy, loga a jednotlivá písmena | `67cd93a208e0807c31816af3` | — | 6 | hotovo (vzor) |
 | `1676:2328` | Reklamní pylony a totemy | `64022ba739ac3bd5ed6820d4` | 2 | 2 | hotovo (vzor) |
-| `1921:2203` | Orientační systémy | `6401fcf4e07002bda0fea1d5` | 0 | 0 | **postaveno** (draft `orientacni-systemy-new`) |
+| `1921:2203` | Orientační systémy | `6401fcf4e07002bda0fea1d5` | 0 | 0 | **hotovo**, publikováno na `/dev/orientacni-systemy` |
 | `1886:2143` | Výstrče, lékárenské znaky | `64634aa422af13a00b2303c6` | 3 | 2 | neshoda |
 | `1926:2736` | Zámečnické konstrukce, plexisklo | `640e42ac69533920507f0278` | 2 | 2 | |
 | `1929:3364` | Velkoformátový tisk | `640e43b5aa58d3423e64cb87` | 4 | 3 | neshoda |
