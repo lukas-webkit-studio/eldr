@@ -231,13 +231,40 @@ nápověda pro prohlížeč.
 Postiženy jsou přesně ty obrázky, kterých se API dotklo; ostatní na téže
 stránce mají `sizes` v pořádku.
 
-**Jediná oprava je v Designeru:** otevřít stránku, vybrat obrázek a znovu
-mu přiřadit asset (stačí ho vybrat v panelu). Webflow `sizes` přepočítá
-podle skutečné šířky prvku. Pak publikovat.
+**Jediná oprava je v Designeru:** vybrat obrázek a znovu mu přiřadit
+asset. Webflow `sizes` přepočítá podle skutečné šířky prvku.
 
-Praktický důsledek pro zbylé stránky: buď se počítá s ručním průchodem
-obrázků v Designeru po každé stránce, nebo se obrázky přes API vůbec
-nevyměňují a nechají se na Designer.
+### Dělba práce, která z toho plyne
+
+Protože klikání v Designeru je jediná cesta, rozdělí se práce takhle:
+
+| Kdo | Co |
+|---|---|
+| tenhle repozitář / agent | stáhne obrázky z návrhu, ověří rozlišení (pozor na náhledy), nahraje je do assetů, zatřídí do složek, pojmenuje a doplní alt text |
+| člověk v Designeru | u každého obrázku na stránce vybere ten správný z asset panelu — tím se `sizes` opraví — a publikuje |
+
+Agent obrázek do stránky **může** vložit rovnou; slouží pak jako
+zástupný, aby bylo vidět, co kam patří, a člověk ho jen překlikne.
+
+### Konvence složek v assetech
+
+```
+Produkty/                        6a99a9b55edcfaff2b6b0d82
+  Orientační systémy/            6a99a9ba4dfafeff4a964328
+    hero.webp
+    orientacni-systemy-budov-a-arealu.png
+  <další produkt>/
+    hero.webp
+    <název sekce>.png
+```
+
+Jedna podsložka na produktovou stránku, uvnitř `hero` a pak soubory
+pojmenované podle sekce, do které patří. Alt text se plní rovnou při
+nahrání — je to jediné místo, kde ho lze zapsat přes API bez zásahu do
+stránky.
+
+Pozor: **asset folder nejde přes API smazat.** Zakládat jen složky, které
+opravdu budou potřeba.
 
 ## Obrázky z Figmy: pozor na náhledy
 
