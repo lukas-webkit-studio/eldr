@@ -123,16 +123,30 @@ Pořadí je pořadí v menu, ne abecední.
 2. Naplnit obsahem podle Figma framu, sekcí po sekci.
 3. Galerie se nepředělávají — jen se zařadí pod správnou `section_product`.
 4. Ověřit na preview.
-5. Prohodit slugy: stará stránka `…-old` + draft, nová na ostrý slug. URL
-   i SEO zůstanou, stará verze slouží jako záloha. Stejně jako
+5. Rozpracovaná stránka žije v **`/dev/`** — složka `672a93ee45bdc8fc69626c95`,
+   výsledná adresa `eldr.cz/dev/<slug>`. **Není to draft.** Draft je jen pro
+   to, co nikdo nechce; rozdělaná práce se naopak publikuje, aby šla
+   prohlédnout, ale **bez indexování**.
+6. Prohodit slugy až nakonec: stará stránka `…-old`, nová na ostrý slug.
+   URL i SEO zůstanou, stará verze slouží jako záloha. Stejně jako
    `(old) 3D nápisy, loga a jednotlivá písmena`.
-6. Publikace až po odsouhlasení — publish pouští ven i cizí rozdělanou
+7. Publikace až po odsouhlasení — publish pouští ven i cizí rozdělanou
    práci, viz CLAUDE.md.
 
-**Do doplnění překladů se nepublikuje.** Rozhodnutím z 3. 9. se překlady
-řeší až po dokončení všech českých verzí. Do té doby by prohození slugů
-poslalo na `/en/` a `/de/` prázdné stránky, takže publish musí počkat na
-obojí — hotové české verze i doplněné EN a DE.
+### Bez indexování
+
+`data_sitemap_tool > update_page_sitemap_status` s `includeInSitemap:
+false` vyřadí stránku ze sitemap.xml. To je vše, co API umí.
+
+**Samotné `/dev/` chráněné není.** robots.txt zakazuje jen `/admin/`
+a dev stránky nemají `noindex` — dosud je chránilo jen to, že byly draft.
+Jakmile se publikují, jsou indexovatelné. Systémové řešení je přidat
+`Disallow: /dev/` do robots.txt (Site settings → SEO); API na robots.txt
+nesahá, musí se to naklikat.
+
+**Do doplnění překladů se neprohazují slugy.** Rozhodnutím z 3. 9. se
+překlady řeší až po dokončení všech českých verzí; do té doby by ostrá
+adresa poslala na `/en/` a `/de/` prázdné stránky. V `/dev/` to nevadí.
 
 ## Galerie: filtr jde přepnout přes API
 
@@ -163,6 +177,34 @@ Kolekce je Fotografie `646d5c52aab44e9fcf5974b8`, pole `produkt-2`
 Takže „galerie nechat jak jsou" znamená jen přepnout tenhle jeden filtr —
 nic se nepředělává.
 
+## Galerie: designér fotky neořezával
+
+Ověřeno porovnáním otisků obrázků z návrhu proti všem fotkám galerie.
+Čtyři fotky, které návrh staví dopředu, jsou **bajt po bajtu tytéž
+soubory**, co už v kolekci jsou — stejné rozměry, vzdálenost otisku 0.
+Designér je jen dal na jiné pozice.
+
+Co vypadá jako jiný ořez, dělá slider sám: náhledy mají pevný poměr
+a `object-fit` ořízne každou fotku podle jejího tvaru. V návrhu má
+designér rámečky jednoho poměru, takže výsledek vypadá jinak.
+
+**Přeuspořádání je proto jedno volání** `update_collection_items` s novými
+hodnotami `poradi` — žádné stahování, ořezávání ani nahrávání. Stačí dát
+vybraným fotkám hodnotu nad dosavadní maximum (u Orientačních systémů
+2100/2080/2060/2040 nad původní 2000).
+
+Jak najít, které fotky designér vybral, bez ručního porovnávání:
+
+1. `download_assets` na produktovou sekci vrátí zdrojové bitmapy z návrhu.
+2. URL všech fotek galerie se vytáhnou z živé stránky (`src` v HTML),
+   ne přes API — je to levnější a pořadí odpovídá řazení podle `poradi`.
+3. Spárovat perceptuálním otiskem (16×16 průměrový hash, vzdálenost ≤ 8).
+   Pozice v seznamu → `poradi` → ID položky.
+
+Jediný obrázek, který designér **opravdu** ořízl, byla produktová fotka
+v pravém sloupci (1440×2560 → 1406×1406) — ta se bere z návrhu, ne z
+galerie.
+
 ## Obrázky z Figmy: pozor na náhledy
 
 `download_assets` vrací zdrojové bitmapy, ale v návrhu jsou **od každého
@@ -180,6 +222,19 @@ Produktový obrázek má **tři jazykové sloty** — combo třídy
 U grafiky s textem tam patří tři různé soubory. U reálné fotky bez textu
 se do všech tří dá tentýž asset — jinak by EN a DE verze zůstaly
 u obrázku předchozího produktu.
+
+## Vzhled: co se dědí špatně
+
+Chyby, které vznikly duplikací vzoru a našly se až vizuálním porovnáním
+s návrhem. U dalších stránek zkontrolovat rovnou:
+
+| Co | Projev | Oprava |
+|---|---|---|
+| výřez hero fotky | ukazuje jinou část snímku než návrh | combo třída `image-focus-*` na `header_product_background-image`; existují `-top` (50% 3%), `-pylon` (100% 0%), `-ppp` (50% 20%), `-vystrce` (50% 50%) |
+| produktová fotka bez šikmé hrany | obdélník místo zkoseného rámečku | combo `clipped` na `product_image-wrapper` — nese `clip-path` |
+| zděděná combo třída podle jiné stránky | `product_image._3d-napisy` — prázdná, jen mate | odstranit ze `style_names` |
+| první štítek bez ikony | ve vzoru ji nemá, návrh ano | doplnit `DivBlock.header_product_metatag-icon` > `HtmlEmbed.icon-embed-xsmall` před textový blok |
+| ikony v `section_layout253` | zděděné z 3D nápisů (štětec, štít) | přepsat `code` v `HtmlEmbed`; ikony jsou inline SVG s `currentColor` |
 
 ## Co API u textů umí
 
