@@ -205,6 +205,40 @@ Jediný obrázek, který designér **opravdu** ořízl, byla produktová fotka
 v pravém sloupci (1440×2560 → 1406×1406) — ta se bere z návrhu, ne z
 galerie.
 
+## Známý limit: výměna obrázku přes API rozbije `sizes`
+
+**Toto je nejzávažnější omezení celého postupu.** Když se obrázku změní
+asset nebo třídy přes API, Webflow nepřepočítá atribut `sizes` a zapíše
+mobilní default. Prohlížeč pak ze `srcset` vybere 500px variantu
+a roztáhne ji přes celou šířku — výsledek je viditelně rozmazaný.
+
+| | `sizes` |
+|---|---|
+| stránka upravená v Designeru | `(max-width: 2288px) 100vw, 2288px` |
+| tentýž obrázek po výměně přes API | `(max-width: 479px) 100vw, 343px` |
+
+Zdrojový soubor i `srcset` jsou přitom totožné — liší se jen tahle
+nápověda pro prohlížeč.
+
+**Opravit se to přes API nedá.** Ověřeno třemi cestami:
+
+- `data_element_tool > set_attributes` → interní chyba
+- `data_element_settings_tool > set_settings` s klíčem `attributes` →
+  `"sizes" is a reserved attribute name`
+- nastavení assetu přes `set_settings` místo `set_image_asset` → `sizes`
+  zůstává rozbité
+
+Postiženy jsou přesně ty obrázky, kterých se API dotklo; ostatní na téže
+stránce mají `sizes` v pořádku.
+
+**Jediná oprava je v Designeru:** otevřít stránku, vybrat obrázek a znovu
+mu přiřadit asset (stačí ho vybrat v panelu). Webflow `sizes` přepočítá
+podle skutečné šířky prvku. Pak publikovat.
+
+Praktický důsledek pro zbylé stránky: buď se počítá s ručním průchodem
+obrázků v Designeru po každé stránce, nebo se obrázky přes API vůbec
+nevyměňují a nechají se na Designer.
+
 ## Obrázky z Figmy: pozor na náhledy
 
 `download_assets` vrací zdrojové bitmapy, ale v návrhu jsou **od každého
