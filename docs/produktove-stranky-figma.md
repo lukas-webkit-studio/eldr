@@ -56,7 +56,7 @@ vidět — tam patří `true`.
 |---|---|---|---|---|---|
 | `1676:3577` | 3D nápisy, loga a jednotlivá písmena | `67cd93a208e0807c31816af3` | — | 6 | hotovo (vzor) |
 | `1676:2328` | Reklamní pylony a totemy | `64022ba739ac3bd5ed6820d4` | 2 | 2 | hotovo (vzor) |
-| `1921:2203` | Orientační systémy | `6401fcf4e07002bda0fea1d5` | 0 | 0 | |
+| `1921:2203` | Orientační systémy | `6401fcf4e07002bda0fea1d5` | 0 | 0 | **postaveno** (draft `orientacni-systemy-new`) |
 | `1886:2143` | Výstrče, lékárenské znaky | `64634aa422af13a00b2303c6` | 3 | 2 | neshoda |
 | `1926:2736` | Zámečnické konstrukce, plexisklo | `640e42ac69533920507f0278` | 2 | 2 | |
 | `1929:3364` | Velkoformátový tisk | `640e43b5aa58d3423e64cb87` | 4 | 3 | neshoda |
@@ -128,6 +128,68 @@ Pořadí je pořadí v menu, ne abecední.
    `(old) 3D nápisy, loga a jednotlivá písmena`.
 6. Publikace až po odsouhlasení — publish pouští ven i cizí rozdělanou
    práci, viz CLAUDE.md.
+
+**Do doplnění překladů se nepublikuje.** Rozhodnutím z 3. 9. se překlady
+řeší až po dokončení všech českých verzí. Do té doby by prohození slugů
+poslalo na `/en/` a `/de/` prázdné stránky, takže publish musí počkat na
+obojí — hotové české verze i doplněné EN a DE.
+
+## Galerie: filtr jde přepnout přes API
+
+Galerie **není** collection list typu `CMSCollection` — hledat ho tak nic
+nenajde. Jsou to dva elementy typu `DynamoWrapper`:
+
+| Styl | Co to je |
+|---|---|
+| `swiper ImageSlider__Collection` | hlavní pás náhledů |
+| `swiper-popup PopUpSlider__Collection` | galerie po rozkliknutí |
+
+Oba mají vlastní filtr a **oba se musí přepnout**, jinak náhledy ukazují
+jeden produkt a popup jiný.
+
+Filtr se čte `data_element_settings_tool > get_settings` s
+`type: "query_settings"` a prázdným dotazem — pod `value_type: "filter"` ho
+nenajdeš, vrací se jako `collectionListSetting` pod klíčem `filters`.
+Zapisuje se `set_settings` s klíčem `filters` a `static_json`:
+
+```json
+[{"fieldSlug":"produkt-2","operator":"equals","value":"<id možnosti>"}]
+```
+
+Kolekce je Fotografie `646d5c52aab44e9fcf5974b8`, pole `produkt-2`
+(Fotogalerie). ID možností vrátí `data_cms_tool > get_collection_details`.
+Řazení (`poradi` sestupně) a limit 30 se nechávají být.
+
+Takže „galerie nechat jak jsou" znamená jen přepnout tenhle jeden filtr —
+nic se nepředělává.
+
+## Obrázky z Figmy: pozor na náhledy
+
+`download_assets` vrací zdrojové bitmapy, ale v návrhu jsou **od každého
+motivu dvě verze — originál a zmenšený náhled**. U Orientačních systémů to
+bylo 2288×1712 vedle 286×214 téhož obrázku. Brát je podle pořadí znamená
+poslat na web náhled. Vždy změřit rozměry a vzít větší z dvojice.
+
+Než se něco nahrává, stojí za to zkontrolovat, jestli fotka na webu už
+není: hero obrázek Orientačních systémů byl v assetech
+(`68b4a6efa70ab6fafae027c7`) v produkční kvalitě a stačilo ho přiřadit.
+
+Produktový obrázek má **tři jazykové sloty** — combo třídy
+`localization-show-only_cs` / `_en` / `_de`, přepínané naším CSS v
+`src/eldr.css` podle třídy `lang-*` na `<body>` (modul `20-locale.js`).
+U grafiky s textem tam patří tři různé soubory. U reálné fotky bez textu
+se do všech tří dá tentýž asset — jinak by EN a DE verze zůstaly
+u obrázku předchozího produktu.
+
+## Co API u textů umí
+
+`set_text` funguje i na `String` uzly uvnitř `Strong`, ne jen na
+Heading/Paragraph — takže tučné úseky se dají přepsat bez rozbití
+formátování. Když je tučný úsek na jiném místě než v předloze, přesune se
+`move_element`; přebytečné fragmenty se mažou `remove_element`.
+
+DOM id sekce se **nenastavuje** přes `set_attributes` (skončí interní
+chybou) — patří na to `data_element_settings_tool > set_dom_id`.
 
 ## Čtení velkého Figma souboru
 
