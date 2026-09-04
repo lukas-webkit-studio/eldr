@@ -175,18 +175,52 @@ Site má Webflow Localization: primární `cs`, sekundární `en` a `de`.
 články jsou celé česky včetně bannerů. Rich text se nikdy nelokalizoval,
 mutace jen padají na primární češtinu.
 
-**Nově to funguje samo.** Kolekce Bannery je lokalizovaná jako každá jiná:
-přepneš locale, přepíšeš nadpis, text a tlačítko, publikuješ. Anglický
-čtenář dostane anglický banner v anglickém článku. Nevyplněné pole padá
-zpátky na češtinu, takže se nikdy nezobrazí prázdno.
+**Hotovo od 1. 9. 2026.** Kolekce Bannery má lokalizované varianty ve všech
+třech locale a texty jsou přeložené. Anglický čtenář dostane anglický banner
+v anglickém článku, německý německý.
+
+**Proč to dřív nefungovalo.** Všech 15 bannerů mělo `createdOn` shodné na
+milisekundu — vznikly jedním dávkovým zápisem přes API, kterému se nepředal
+`cmsLocaleIds`. Webflow proto sekundární varianty vůbec nezaložil.
+Dokumentace Webflow to potvrzuje: *„For any Collection items that already
+exist, you must add the desired secondary locales in the CMS panel within
+the Designer. You can't add a new locale to an existing item via the API."*
+Přes API to u existující položky dodatečně nešlo a v CMS panelu nebylo co
+otevřít, protože seznam byl v EN prázdný. Řešilo se to smazáním a založením
+znovu s `cmsLocaleIds`.
+
+### Pasti, na které se přišlo při migraci
+
+**`cmsLocaleIds` musí obsahovat i primární locale.** Když se pošlou jen
+sekundární, položka vznikne **jen** v nich a česká varianta neexistuje.
+Pro tenhle web je správně:
+`["653ad95be882f528b35cb5ef", "66052b1345cd8094542338ad", "66052b1345cd8094542338ae"]`.
+
+**Smazání slug neuvolní.** `delete_collection_items` mazání jen naskladní;
+slug drží publikovaná verze a uvolní se až publikací celého webu. Nejde
+tedy smazat položku a hned ji ve stejném volání založit se stejným slugem —
+skončí to `Unique value is already in database`. Buď zakládej s dočasným
+slugem a přejmenuj po publikaci, nebo počítej se dvěma publikacemi.
+
+**Slug a Name jsou pole per locale.** Přejmenování v primárním locale se do
+sekundárních nepropíše — musí se zapsat zvlášť s `cmsLocaleId`. Drž je ve
+všech mutacích česky, jsou to klíče pro `[banner:…]`.
+
+**Obrázkové pole chce `url`, `fileId` samo nebere.** Při zakládání položky
+z URL existujícího assetu Webflow obvykle vyrobí nový asset a název souboru
+znovu procentuálně zakóduje (`%25` → `%2525`). Funguje to (ověřeno HTTP 200),
+ale v assetech zůstanou duplikáty.
+
+**Pravidlo do budoucna:** každý nový banner zakládaný přes API musí mít
+`cmsLocaleIds` se všemi třemi locale. Položka založená ručně v Designeru
+varianty dostane sama.
 
 **Dvě pravidla, aby to drželo:**
 
-1. **Nelokalizuj pole Name a Slug.** Nech je ve všech mutacích česky —
+1. **Nelokalizuj obsah polí Name a Slug.** Nech je ve všech mutacích česky —
    jsou to klíče, na které míří `[banner:…]` v textu.
 2. **Nepřekládej token.** `[banner:pylony-velky]` zůstává v anglickém
-   i německém článku doslova stejný. Tohle je potřeba říct i překladateli
-   (a napsat do promptu, až bude blog překládat Claude).
+   i německém článku doslova stejný.
 
 ## Návod pro klienta
 

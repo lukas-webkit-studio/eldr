@@ -46,6 +46,33 @@ animace na jiný prvek, scroll efekty — to se musí naklikat v Designeru.
 Nesnaž se to obejít custom kódem bez domluvy: kdyby to uživatel později
 přidal i ve Webflow, obojí by se pralo.
 
+Tohle je třetí kategorie vedle „Webflow" a „repozitář": **je to nativní
+funkce Webflow, ale API na ni nedosáhne.** Patří pořád do Designeru, ne do
+custom kódu. Ověřeno na tomhle webu:
+
+| Co | Kde to jde |
+|---|---|
+| Interakce (IX2) | jen Designer |
+| Styly a třídy v sekundárním locale | jen Designer — `data_style_tool` píše globálně, ne per locale |
+| Obrázky v sekundárním locale | jen Designer, API je vrací, ale nezapíše |
+| Text a SEO v **primárním** locale | jen Designer — API píše výhradně do `/en` a `/de` |
+| Atributy (`aria-label`, `title`, `data-*`) per locale | **nejde nikde** — hodnota je společná všem jazykům |
+| Chybějící locale u existující CMS položky | jen Designer (CMS panel u položky) — přes API to nejde, `cmsLocaleIds` platí jen pro nově zakládané položky |
+
+Ten předposlední řádek stojí za zapamatování: `aria-label="Zkopírovat
+prompt"` na tlačítku u AI souhrnu zůstává česky i na `/en` a `/de`, protože
+Webflow lokalizaci atributů neumí. Viditelný text tlačítka přeložený je.
+Custom kódem by to „šlo", ale bylo by to přesně to přepisování, kterému se
+tenhle soubor snaží zabránit.
+
+### Překlady jsou celé nativní
+
+Kompletní překlad webu do DE a EN — statické stránky, blog, štítky,
+bannery, komponenty i SEO — proběhl **bez jediného řádku v `src/`**.
+Všechno se zapsalo do Webflow přes API. Když ti u překladu přijde, že něco
+„by chtělo CSS nebo JS", skoro jistě to jen hledáš špatným nástrojem;
+který nástroj píše kam, je v `.claude/skills/preklad/SKILL.md`.
+
 ## Nasazení
 
 Bundle se servíruje z jsDelivr, připnutý na konkrétní commit:
@@ -121,6 +148,18 @@ udělat bezpečně.
 `dist/` se commituje, takže **každá větev, co sáhne na `src/`, vyrobí
 konflikt v `dist/`**. Neřeš ho ručně: po mergi `main` do větve spusť
 `npm run build` a commitni přegenerovaný výstup.
+
+## Překlady do DE a EN
+
+Web běží na nativní Webflow lokalizaci: čeština je primární locale,
+`/en` a `/de` sekundární. Do primárního locale se přes API zapsat nedá
+a ani se nemá.
+
+Terminologie i postup jsou ve skillu `.claude/skills/preklad/` — glosář
+CZ→EN→DE, které API píše kam (CMS položky, statické stránky, komponenty
+a SEO metadata mají každé jiný nástroj) a jak se výsledek ověřuje.
+Zdrojové dokumenty původních překladů jsou v `docs/translation/`; jsou
+zastaralé, ground truth je živý web.
 
 ## Práce s repozitářem
 
