@@ -280,6 +280,10 @@ ne závorka.
 | **termín orientační systém, EN** | živá stránka měla „orientation system" 16× a „wayfinding" 2× — doslovný převod z češtiny vedle oborového standardu | sjednoceno na **wayfinding system** (rozhodnuto s uživatelem 4. 9.); změněn glosář, SEO živé stránky i nová `/dev/` stránka. Němčina byla správně (*Wegeleitsystem*) a zůstává. |
 | **sdílené komponenty, EN** | „Why You Should Choose Our **Lighted** Advertising", „Get a Free Quote", „All References" — Title Case a starý termín, bily se s novým textem přímo na stránce | větné psaní a *illuminated advertising*; opraveny komponenty Záruka prvotřídní kvality, Důvěřují nám, Jak probíhá výroba a výchozí text CTA tlačítka |
 | glosář: `anodised` | v pravidlech stálo britské „anodised", ale produkce má **anodized** a je to v souladu s vlastním pravidlem o koncovkách -ize | opraveno na `anodized` |
+| **živá `/en/produkty/orientacni-systemy`** | „Lucid signage", „Workmanship communication", „Trendy creativity", „Professional Installation" — nesmyslné nebo Title Case štítky; k tomu americký pravopis (`aluminum`, `shopping centers`, `plexiglass`), „wayfinders" a „stand-offs" | celá stránka srovnána podle glosáře a podkladů; termín wayfinding, britský pravopis, `acrylic glass` |
+| navigace, EN | položka menu „Orientation systems" | Wayfinding systems |
+| patička, EN | „**Lighted** advertising solutions from concept to completion." | illuminated advertising |
+| komponenta Jak probíhá výroba | odrážka „Nabídku vytvoříme zcela zdarma." neměla EN ani DE override, svítila česky na každé produktové stránce | „We prepare the quote completely free of charge." / „Das Angebot erstellen wir völlig kostenlos." |
 
 ### Otevřené
 
