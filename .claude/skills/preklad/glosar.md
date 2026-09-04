@@ -44,7 +44,7 @@ Kde se dokument a produkce rozcházejí, rozhoduje varianta uvedená zde.
 | koruna pylonu | pylon crown | Krone des Pylons |
 | noha pylonu | pylon leg | Pylonfuß |
 | **orientační systém** | **wayfinding system** | Wegeleitsystem (kratší *Leitsystem*) |
-| rozcestník | directional sign | Wegweiser |
+| rozcestník | signpost | Wegweiser |
 | informační tabule | information board | Informationstafel |
 | lékárenský znak | pharmacy sign | Apothekenschild |
 | lékárenský kříž | pharmacy cross | Apothekenkreuz |
@@ -123,7 +123,7 @@ Kde se dokument a produkce rozcházejí, rozhoduje varianta uvedená zde.
 | samolepicí fólie | self-adhesive film | selbstklebende Folie |
 | průsvitná fólie | translucent foil | transluzente Folie |
 | plachtovina | vinyl canvas | Vinylplane |
-| distanční sloupky, distanční trny | standoffs | Abstandshalter |
+| distanční sloupky, distanční trny | spacers | Abstandshalter |
 | žárově zinkovaný | hot-dip galvanized | feuerverzinkt |
 | pískování | sandblasting | Sandstrahlen |
 | gravírování | engraving | Gravieren |
@@ -148,6 +148,23 @@ Kde se dokument a produkce rozcházejí, rozhoduje varianta uvedená zde.
 | svítící čelo i boky | illuminated front and sides | Front und Seiten beleuchtet |
 | zadní podsvícení | backlit | hinterleuchtet |
 | aura efekt | aura effect | Aura-Effekt |
+
+---
+
+### Štítky u produktů (hero)
+
+Zavedené znění z `Textace webu – nadpisy a doprovodné texty.docx`.
+Neformuluj je znovu, přebírej:
+
+| Česky | English | Deutsch |
+|---|---|---|
+| přehledné značení | clear signage | übersichtliche Beschilderung |
+| zpracování sdělení | clear communication | verständliche Botschaft |
+| moderní design | modern design | moderne Ausführung |
+| neomezená kreativita | unlimited creativity | unbegrenzte Kreativität |
+| na míru | custom-made | maßgeschneidert |
+| odborná montáž | expert installation | fachgerechte Montage |
+| interiér i exteriér | indoors and outdoors | innen und außen |
 
 ---
 
