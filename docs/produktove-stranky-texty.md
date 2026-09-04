@@ -310,5 +310,70 @@ Hledáte pro svůj prostor něco unikátního? Netradiční designové osvětlen
 - **Výroba na míru:** ať už jde o moderní minimalistické prvky, nebo o luxusní, kreativní řešení, jsme schopni přizpůsobit každý detail tak, aby odpovídal vašim představám a potřebám.
 - **Umístění:** designová svítidla mohou mít různé tvary a velikosti, a to jak pro komerční prostory, tak i pro rezidenční interiéry, ať už jde o restaurace, kanceláře anebo hotely.
 
-*(sekce 2–7 se doplňují při stavbě stránky — návrh je u nich ve
-screenshotu v nízkém rozlišení a přepisuje se po částech)*
+### 2. Žárovkové světelné nápisy — `#zarovkove-svetelne-napisy`
+
+Štítky: Interiér a exteriér · Na míru
+
+Hledáte pro svůj prostor něco unikátního? Netradiční designové osvětlení může zcela změnit atmosféru prostoru, dodat mu charakter a zároveň splnit funkční požadavky.
+
+- **Zpracování:** žárovkový světelný nápis tvoří plechový korpus, v němž jsou umístěny žárovičky. Dbáme na kvalitu i ekologičnost a používáme vysoce úsporné LED žárovky s možností volby odstínu světla.
+- **Umístění:** vhodné jsou zejména pro komerční prostory, restaurace, obchody, kina nebo klubové prostory, kde přitahují pozornost zákazníků a dodávají místu jedinečný charakter. Můžete je umístit nad vchod, na fasádu budovy, nebo použít jako interiérovou dekoraci.
+
+### 3. Neonové nápisy & imitace — `#neonove-napisy`
+
+Štítky: Interiér a exteriér · Na míru
+
+Klasické skleněné neonové trubice dodávají reklamě nezaměnitelný charakter, jedinečnou kresbu světla a autentický vizuální efekt.
+
+- **Neonové trubice** umožňují vytvořit originální nápisy, loga i designové prvky s atmosférou, kterou jiné technologie jen těžko napodobí.
+- **Imitace neonového nápisu z plexiskla:** plexisklo ohýbáme do zvoleného tvaru a prosvítíme pomocí kvalitních LED modulů. Výsledkem je luxusní efekt s vysokou úsporou oproti klasickým neonům – a díky absenci skla i bezpečnější volba do interiéru.
+- **Umístění:** jsou ideální tam, kde je cílem originalita, styl a skutečný neonový dojem. Výsledkem je světelný prvek, který zaujme svou estetikou i řemeslným zpracováním.
+
+**Blok `section_layout253`** (patří za sekci Neonové nápisy)
+
+> **Neonové nápisy: Klasika s moderním twistem**
+>
+> Neonové nápisy se řadí mezi nesmrtelnou klasiku, která se nesmazatelně zapsala do historie světelné reklamy.
+>
+> **Jak fungují tradiční neonové nápisy?** — Klasické neonové nápisy se skládají ze žárem tvarovaných skleněných trubic, které po naplnění plynem září červeně. Různé barevnosti světla lze docílit naplněním trubice luminoforovým práškem a argonem. Na každé trubici je navařena elektroda propojená s vysokonapěťovým transformátorem, která je izolována silikonovým návlekem.
+>
+> **Proč raději doporučujeme imitaci neonových nápisů?** — Kvůli luxusnímu vzhledu za dostupnou cenu. Tradiční neonové nápisy jsou sice krásné, ale mají své nevýhody, jako je vyšší pořizovací cena, náročnost na údržbu a vysoká spotřeba energie. Moderní imitace neonových nápisů však nabízejí stejný vizuální efekt, ale za podstatně nižší cenu.
+
+### 4. Mechové stěny — `#mechove-steny`
+
+Štítky: Interiér · Na míru
+
+Ve spolupráci s našimi dodavateli jsme schopni pro vás zhotovit nejen mechové stěny, ale také mechové obrazy s reklamním nápisem.
+
+- **Proč mechové stěny:** vypadají skvěle a mají praktické výhody. Jsou ekologické, snadno se udržují a nevyžadují žádnou údržbu jako živé rostliny. Navíc pomáhají zlepšit akustiku místnosti a čistit vzduch.
+- **Umístění:** jsou ideální pro kancelářské prostory, firemní lobby a recepce, restaurace a hotely, obchodní prostory nebo showroomy, kde se dají skvěle kombinovat s reklamními nápisy a logy.
+
+### 5. Reklama z cortenového plechu — `#reklama-z-cortenoveho-plechu`
+
+Štítky: Exteriér a interiér · Na míru
+
+Materiál s přirozenou rezavou patinou, která časem získává jedinečný vzhled a je ideální pro fasády nebo do venkovních prostor.
+
+- **Materiál:** patinující ocel (známá jako rezavá ocel) je velmi odolná a ideální pro umístění především do exteriéru. Vyznačuje se charakteristickým vzhledem díky své přirozeně rezavé patině, která se časem vyvíjí, což přidává jedinečný estetický efekt.
+- **Umístění:** cortenová ocel se používá nejen pro reklamní nápisy, ale i pro různé designové prvky, jako jsou loga, grafické vzory a dekorativní panely, které lze umístit na fasády budov nebo do venkovních prostor.
+
+### 6. Světelná čísla domů — `#svetelna-cisla-domu`
+
+Štítky: Exteriér · Na míru
+
+Přidejte svému obydlí výjimečnosti a zkrášlete jeho exteriér pomocí světelného či nesvětelného čísla. Světelná čísla jsou nejen praktickým řešením, ale i designovým prvkem.
+
+- **Provedení:** můžete si vybrat z různých typů podsvícení, které zajistí viditelnost i v noci, či varianty bez podsvícení, které mohou být elegantním a moderním doplňkem. Zda zvolíte teple bílé světlo, nebo studeně modré podsvícení, vše přizpůsobíme vašim přáním.
+- **Instalace:** zajistíme vám kompletní výrobu a instalaci čísel, která se hodí k jakémukoliv stylu a typu budovy.
+
+### 7. Designové stojací lampy na zakázku — `#stojaci-lampy`
+
+Štítky: Interiér · Na míru
+
+Nechte si lampu vyrobit na zakázku, nebo si vyberte z připravených návrhů či z nabídky hotových svítidel. Náš tým techniků se nezalekne žádné výzvy a zhmotní vaši vizi.
+
+- **Využití:** stojací lampy nemusejí sloužit pouze jako interiérový doplněk. Lze je využít i v komerčních prostorách například jako stojan na produkty či upozornění a směrovky.
+- **Svícení:** v celém barevném spektru, bezdrátové svícení a další inovativní prvky jsou u našich projektů samozřejmostí. Možnost ovládání dálkovým ovladačem, prostřednictvím aplikace Hue, Apple Home, DALI a dalších systémů.
+
+**Karty rozcestníku** — text karet je ve screenshotu nečitelný, proto se
+odvozuje z úvodní věty každé sekce (zapsáno jako rozhodnutí za pochodu).
