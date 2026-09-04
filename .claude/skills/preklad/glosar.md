@@ -43,7 +43,9 @@ Kde se dokument a produkce rozcházejí, rozhoduje varianta uvedená zde.
 | reklamní věž | advertising tower | Werbeturm |
 | koruna pylonu | pylon crown | Krone des Pylons |
 | noha pylonu | pylon leg | Pylonfuß |
-| orientační systém | orientation system | Wegeleitsystem (kratší *Leitsystem*) |
+| **orientační systém** | **wayfinding system** | Wegeleitsystem (kratší *Leitsystem*) |
+| rozcestník | directional sign | Wegweiser |
+| informační tabule | information board | Informationstafel |
 | lékárenský znak | pharmacy sign | Apothekenschild |
 | lékárenský kříž | pharmacy cross | Apothekenkreuz |
 | lékárenský emblém | pharmacy emblem | Apotheken-Emblem |
@@ -106,7 +108,10 @@ Kde se dokument a produkce rozcházejí, rozhoduje varianta uvedená zde.
 | plnoplexisklový | full-acrylic glass | Vollplexiglas- |
 | hliník | aluminium | Aluminium |
 | hliníkový plech | aluminium sheet | Aluminiumblech |
-| eloxovaný hliník | anodised aluminium | eloxiertes Aluminium |
+| eloxovaný hliník | anodized aluminium | eloxiertes Aluminium |
+| dibond | Dibond | Dibond |
+| deskový materiál | sheet material | Plattenmaterial |
+| závěsná lanka | suspension cables | Abhängeseile |
 | nerez | stainless steel | Edelstahl |
 | mosaz | brass | Messing |
 | sendvičový materiál | sandwich material | Sandwichmaterial |
@@ -118,7 +123,7 @@ Kde se dokument a produkce rozcházejí, rozhoduje varianta uvedená zde.
 | samolepicí fólie | self-adhesive film | selbstklebende Folie |
 | průsvitná fólie | translucent foil | transluzente Folie |
 | plachtovina | vinyl canvas | Vinylplane |
-| distanční sloupky | spacers | Abstandshalter |
+| distanční sloupky, distanční trny | standoffs | Abstandshalter |
 | žárově zinkovaný | hot-dip galvanized | feuerverzinkt |
 | pískování | sandblasting | Sandstrahlen |
 | gravírování | engraving | Gravieren |
@@ -181,8 +186,9 @@ ne pokaždé jinak.
 
 ### Angličtina
 - **Britský pravopis:** colour, metres, aluminium, centre, moulding,
-  anodised, favourite. Ale koncovky **-ize**: specialize, realize,
-  organize (oxfordský úzus, tak je to v celém webu).
+  favourite. Ale koncovky **-ize**: specialize, realize, organize,
+  **anodized** (oxfordský úzus, tak je to v celém webu — na produkci je
+  `anodized`, ne `anodised`).
 - Nadpisy **větným psaním** („Advertising pylons and totems"), ne Title
   Case. Na produkci se místy Title Case objevuje — nepřebírej ho.
 - Čísla: `3,200 m²`, `9.6 metres`, `250,000 kilometres`.
@@ -235,7 +241,7 @@ ne závorka.
 | `/en/produkty/tabule-a-svetelne-panely` | „Plexiglass" 4× vedle „acrylic glass" 2× | acrylic glass |
 | `/en/…/tabule…` | Title Case v nadpisech, jinde v EN není | větné psaní |
 | `/en/…/tabule…` | v odrážce *Placement* dvakrát týž výčet forem | ponechán účel + výčet, jako v DE a v podkladech |
-| meta title `/en/produkty/orientacni-systemy` | „**Wayfinding** systems" proti H1 „Orientation systems" | Orientation systems |
+| meta title `/en/produkty/orientacni-systemy` | „**Wayfinding** systems" proti H1 „Orientation systems" | 4. 9. rozhodnuto opačně — v celém webu **wayfinding**, viz níž |
 | meta title `/en/…/vystrce…` | „Pharmacy sign and marking of pharmacies" — výstrče nezmíněny | Projecting signs and pharmacy signs |
 | meta title `/de/…/vystrce…` | „Apotheken-Emblem und Apotheken-Beschilderung" — totéž | Ausleger und Apothekenschilder |
 | meta description `/de/…/tabule…` | „Lichtreklame" | Leuchtreklame |
@@ -254,6 +260,9 @@ ne závorka.
 | **domovská stránka, EN** | celá v Title Case („Make Your Business Stand Out", „All References"), jinde na webu je větné psaní | 18 uzlů převedeno na větné psaní |
 | **domovská stránka, EN** | čtyři varianty téhož termínu: „Light advertising" (title), „Lighting advertising" (description), „Lighted advertising" (text), „Illuminated advertising" (produktové stránky) | sjednoceno na **illuminated advertising** podle glosáře, včetně SEO |
 | **domovská stránka, EN** | hodnocení „4,4" s desetinnou čárkou | „4.4" — angličtina má tečku |
+| **termín orientační systém, EN** | živá stránka měla „orientation system" 16× a „wayfinding" 2× — doslovný převod z češtiny vedle oborového standardu | sjednoceno na **wayfinding system** (rozhodnuto s uživatelem 4. 9.); změněn glosář, SEO živé stránky i nová `/dev/` stránka. Němčina byla správně (*Wegeleitsystem*) a zůstává. |
+| **sdílené komponenty, EN** | „Why You Should Choose Our **Lighted** Advertising", „Get a Free Quote", „All References" — Title Case a starý termín, bily se s novým textem přímo na stránce | větné psaní a *illuminated advertising*; opraveny komponenty Záruka prvotřídní kvality, Důvěřují nám, Jak probíhá výroba a výchozí text CTA tlačítka |
+| glosář: `anodised` | v pravidlech stálo britské „anodised", ale produkce má **anodized** a je to v souladu s vlastním pravidlem o koncovkách -ize | opraveno na `anodized` |
 
 ### Otevřené
 
@@ -271,6 +280,8 @@ ne závorka.
 | **Útržky na produktových stránkách** | ~18 řetězců: „Výrobky", „Ekonomické", „Nenáročné", „Zobrazit více", „Nenašli jste, co potřebujete?", „Nabídku vytvoříme zcela zdarma.", „Od první skici po finální instalaci.", blok o 3D vizualizaci a záruce (`/en/produkty/3d-napisy…`), „Výroba světelných reklam se špičkovým zpracováním a designem" + „na míru vašim potřebám", „Už z dálky zajišťují skvělou viditelnost reklamy…" (`/de/…/vystrce…`), „Společník, jednatel". |
 | **Termín a Title Case i mimo homepage** | Komponenty „Záruka prvotřídní kvality" a další mají v EN „lighted advertising" a Title Case („Why You Should Choose Our Lighted Advertising", „Get a Free Quote"). Glosář má **illuminated advertising** a větné psaní. Na homepage srovnáno, jinde ne. |
 | `aria-label="Zkopírovat prompt"` u tlačítka AI souhrnu | Zůstává česky i na `/en` a `/de`. Webflow lokalizaci atributů neumí ani v Designeru, ani přes API (ověřeno u Webflow AI proti jejich dokumentaci). Viditelný text tlačítka přeložený je, týká se to jen čteček obrazovky. Custom kódem neobcházet. |
+| CTA tlačítko říká v každém jazyce něco jiného | Výchozí text komponenty `CTA-Button-Primary`: česky **„Nezávazně poptat"**, anglicky **„Get a free quote"**, německy **„Leuchtreklame anfragen"**. Tři různé sliby — nezávaznost, cena zdarma, poptávka po světelné reklamě. Sjednotit chce rozhodnutí, co má tlačítko slibovat; věcně nejblíž češtině je EN *Enquire, no obligation* a DE *Unverbindlich anfragen* (to už se na webu u bannerů používá). |
+| Obrázky na `/dev/orientacni-systemy` se v EN a DE liší od češtiny | API vrací pro každý locale jiné `assetId`. Lokalizace obrázků jde jen v Designeru, takže to nemám jak srovnat — a je možné, že jde o starší nebo zástupné fotky. Před spuštěním stránky projít vizuálně. |
 | Banner „Světelné nápisy – velký TEST" nemá německou variantu | Položka `svetelne-napisy-velky-test` vznikla 1. 9. ve 12:58 mimo tuhle práci. Má češtinu a angličtinu, němčinu ne — na `/de` se proto do skryté knihovny vůbec nenačte. Zatím neškodí, žádný článek ji tokenem `[banner:…]` neodkazuje. Přidat jazyk jde jen v Designeru (CMS panel u položky), přes API ne. |
 | Anglicismus „Business" v DE | „Machen Sie Ihr Business sichtbar", „macht Ihr Business unübersehbar" — spíš *Unternehmen* nebo *Geschäft*. Nechávám na rozhodnutí, je to otázka tónu. |
 
