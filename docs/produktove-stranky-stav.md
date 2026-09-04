@@ -162,6 +162,22 @@ a zásah do něj se projeví všude.
 a ze sitemapy je vyřazuje jen nastavení u stránky. API na robots.txt
 nesahá.
 
+### I. Slugy — pozor při prohazování
+
+Dev stránky mají kratší slugy než ostré verze. Až se budou prohazovat
+(stará stránka `…-old`, nová na ostrý slug), musí nová stránka převzít
+**slug staré**, jinak se rozbijí URL i odkazy v menu.
+
+| Dev slug | Ostrý slug, který má převzít |
+|---|---|
+| `vystrce-lekarenske-znaky` | `vystrce-lekarenske-znaky` |
+| `velkoformatovy-tisk` | `velkoformatovy-tisk` |
+| `vstupni-portaly` | `architektonicke-prvky-vstupni-portaly-vlajky` |
+| `prvky-podpory-prodeje` | `prvky-podpory-prodeje-led-technologie` |
+| `svetelne-panely-a-tabule` | `tabule-a-svetelne-panely` |
+| `designova-svitidla` | `designova-a-interierova-svitidla-specialni-projekty` |
+| `zamecnicke-konstrukce` | `zamecnicke-konstrukce-na-miru-opracovani-plexiskla` |
+
 ## Co je jinak, než by mělo být
 
 - **Sedmá sekce Designových svítidel** („Reklama z cortenového plechu")
@@ -218,6 +234,10 @@ nesahá.
   struktura, kotvy i galerie hotové jsou. Až limit povolí (nebo po
   upgradu), stačí u každé sekce zavolat `download_assets` a fotky
   nahrát; postup je popsaný v `produktove-stranky-figma.md`.
+- **Kotvy ověřené proti menu.** Všech 23 id sekcí na nových stránkách
+  sedí znak po znaku s odkazy, které navbar na živém webu používá.
+  Ověřeno vytažením `href="/produkty/…#…"` z živého HTML a porovnáním
+  s `attributes.id` každé sekce přes API.
 - **Vizuální kontrola v prohlížeči.** Playwright se v tomhle prostředí
   přes proxy nedostane ven, takže stránky nejsou prohlédnuté očima —
   jen ověřené přes API. Než se bude publikovat, projdi je v Designeru.
