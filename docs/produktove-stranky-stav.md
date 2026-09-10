@@ -30,6 +30,49 @@ Hotovo na: Zámečnické, Výstrče, Velkoformátový tisk, Vstupní portály,
 Prvky podpory prodeje, Designová svítidla. Nesaháno na: Světelné panely
 a tabule, 3D nápisy, Pylony a totemy (ty jsou podle zadavatele 1:1).
 
+## Obrázky z Figmy v assetech (10. 9. 2026)
+
+Všechno leží pod `Produkty / <Produkt> / {Hero, Produkt, Karty}`.
+Názvy souborů odpovídají kotvě sekce, takže se v Designeru vybírají podle
+jména, ne podle náhledu.
+
+| Produkt | složka | Hero | Produkt | Karty |
+|---|---|---|---|---|
+| Výstrče | `6aa30fa01ac8ca35690d3775` | `6aa30faec395276afa5065fd` | `6aa30faf9ddbae94d8d1fb5d` | `6aa30faf1ac8ca35690d3aa3` |
+| Velkoformátový tisk | `6aa30fa042f3452230753c03` | `6aa30faf719b2d58cd0d3e10` | `6aa30faf8ca79fa57be1bdf4` | `6aa30fafad0e44f64602831d` |
+| Vstupní portály | `6aa30fa142f3452230753c23` | `6aa30faf466f13cadb572f6a` | `6aa30faf877a467eaa43803b` | `6aa30fb0976f8d96e6d6186e` |
+| Prvky podpory prodeje | `6aa30fa1bda15d8c3504bf75` | `6aa30fb0976f8d96e6d61895` | `6aa30fb04f2a2d65e79b9b8e` | `6aa30fb07928fa48c011c0c6` |
+| Designová svítidla | `6aa30fa17749407044bad08e` | `6aa30fb0d5fd851fcb6f9a3b` | `6aa30fb182720f7758da50b6` | `6aa30fb182720f7758da50cb` |
+
+Orientační systémy (`6a99a9ba4dfafeff4a964328`) a Zámečnické konstrukce
+(`6a9aa4837d59ae6369c9862a`) podsložky nemají — jejich obrázky vznikly dřív.
+
+### Co se s obrázky dělalo
+
+- **Produkt** — ořezáno na 1:1, předmět doprostřed, JPEG q92, max 2200 px.
+  Ořez hledá těžiště hran a jasu; u šesti fotek byl posunutý ručně.
+  Šikmý ořez se **nedělá** — dělá ho `clipped` v CSS.
+- **Hero** — beze změny. Export je 5760 × 1408 px (4:1). Přidat 15 % nahoře
+  a dole nejde, ty pixely v exportu nejsou; šlo by to jen dogenerovat.
+- **Karty** — beze změny. Export je 1792 × 549 nebo 1346 × 558 px, což
+  odpovídá pásu `layout400_card-image-wrapper` (výška 9 rem).
+
+### Rozlišení produktových fotek
+
+Sedm zdrojů (corten, mechové stěny, LED displeje, čísla domů, řezaná
+grafika, výstrče, úvod tisku) přišlo z Figmy jen v 1254 × 1102 px. Jejich
+čtvercový ořez má 1102 px — na půlku šířky ve 2× retině to stačí přesně,
+rezerva žádná. Ostatní jsou 2000–2200 px.
+
+### Návrh nemá fotku pro
+
+`#led-obrazovky` (Prvky podpory prodeje) — v návrhu je na místě fotky jen
+barevná plocha. Slot zůstal prázdný.
+
+SAGASSER se v návrhu používá dvakrát: jako karta „Architektonické prvky"
+(Vstupní portály) a jako karta „LED displaye" (Prvky podpory prodeje).
+Není to omyl v přiřazení, tak to má návrh.
+
 ## Stav stránek
 
 Všech sedm stránek stojí v `/dev/`, je vyřazených ze sitemapy
@@ -84,21 +127,18 @@ na grafice český text.
 
 ### B. Hero fotky — konkrétní soubory
 
-Návrh používá tytéž hero fotky, jaké má dnes živý web. Stačí je
-v Designeru vybrat z assetů:
+Pět stránek má hero přímo z návrhu, nahraný a pojmenovaný. Zbytek bere
+tutéž fotku, jakou má dnes živý web.
 
 | Stránka | Asset |
 |---|---|
-| Výstrče | `Sětelné znaky - Profil 8 (0001) 1.png` (T-Mobile, `6a3a24133f8238fbc7825404`) |
-| Velkoformátový tisk | `velkoformat-hero.webp` (`68b4b2d487e457b5e3ffbe1e`) |
-| Vstupní portály | `vstupni-portaly-hero.webp` (`68b4a90842e2b142ba3d89b1`) |
-| Prvky podpory prodeje | `Upscale Media Transformed.webp` (`6910d644c29abfe842ab67ab`) |
+| Výstrče | `Produkty / Výstrče / Hero / hero.png` (T-Mobile výstrč) |
+| Velkoformátový tisk | `Produkty / Velkoformátový tisk / Hero / hero.png` (plachta ČSOB) |
+| Vstupní portály | `Produkty / Vstupní portály / Hero / hero.png` (zelený portál) |
+| Prvky podpory prodeje | `Produkty / Prvky podpory prodeje / Hero / hero.png` (růžové T) |
+| Designová svítidla | `Produkty / Designová svítidla / Hero / hero.png` (neony na stropě) |
 | Světelné panely a tabule | `Sětelné znaky - Profil 8 (0001) 2.avif` (`68c02a773967296e4cfa1995`) |
-| Designová svítidla | `Upscale Media Transformed (1).webp` (`6910d9666c5dbe31a0507e27`) |
-| Zámečnické konstrukce | `…_IMG_3839.webp` (`688755592e0a6fffa66ae8c6`) — ověřit proti návrhu, hero se z Figmy nepodařilo stáhnout |
-
-Ověřeno porovnáním hero fotky z návrhu proti živé stránce (Výstrče:
-shoda). U ostatních stránek je to tentýž vzorec.
+| Zámečnické konstrukce | `…_IMG_3839.webp` (`688755592e0a6fffa66ae8c6`) — hero se z Figmy nepodařilo stáhnout |
 
 ### C. Produktové fotky, které už na webu jsou
 
@@ -119,31 +159,42 @@ Tyhle stačí vybrat z assetů, jsou to přesně ty ze staré verze stránky:
 
 Zámečnické fotky jsou ve složce **Produkty / Zámečnické konstrukce/**.
 
-### D. Produktové fotky, které v assetech nejsou
+### D. Produktové fotky z návrhu
 
-U zbylých sekcí návrh ukazuje fotku, která na starém webu není a **z
-Figmy se ji nepodařilo stáhnout** (viz „Co zůstalo nedodělané"). Ve
-stránce je zatím zděděná fotka z 3D nápisů. Vyber prosím vlastní fotku
-z galerie daného produktu — je to:
+Devatenáct fotek z návrhu je ořezaných na 1:1 a nahraných. Leží ve
+složce **Produkty / <Produkt> / Produkt/**, soubor se jmenuje podle
+kotvy sekce — `#vystrce` → `vystrce.jpg`.
 
-- **Velkoformátový tisk** — `#uvod` (bankomat era), `#rezana-grafika`
-  (interiér KFC), `#dalsi-druhy-polepu` (pobočka ČSOB),
-  `#designove-obrazy` (obrazy v kavárně)
-- **Vstupní portály** — `#vstupni-portaly` (zelený prosvětlený portál),
-  `#architektonicke-prvky` (hvězda Mercedes na střeše), `#vlajky`
-  (vlajka ČSOB na fasádě)
-- **Prvky podpory prodeje** — `#prvky-podpory-prodeje` (černé stojany
-  MG), `#led-displaye` (žlutý totem OLVAN); `#led-obrazovky` fotku
-  v návrhu vůbec nemá
-- **Designová svítidla** — všech sedm sekcí
-- **Výstrče** — `#atypicke-vystrce` (výstrč Petřín Park),
-  `#lekarenske-znaky` (zelený lékárenský kříž)
-- **Zámečnické** — hero
+| Stránka | Sekce → soubor |
+|---|---|
+| Výstrče | `vystrce.jpg`, `atypicke-vystrce.jpg`, `lekarenske-znaky.jpg` |
+| Velkoformátový tisk | `uvod.jpg`, `rezana-grafika.jpg`, `dalsi-druhy-polepu.jpg`, `designove-obrazy.jpg` |
+| Vstupní portály | `vstupni-portaly.jpg`, `architektonicke-prvky.jpg`, `vlajky.jpg` |
+| Prvky podpory prodeje | `prvky-podpory-prodeje.jpg`, `led-displaye.jpg` |
+| Designová svítidla | `designova-svitidla.jpg`, `zarovkove-svetelne-napisy.jpg`, `neonove-napisy.jpg`, `mechove-steny.jpg`, `reklama-z-cortenoveho-plechu.jpg`, `svetelna-cisla-domu.jpg`, `stojaci-lampy.jpg` |
+
+Zbývá jen `#led-obrazovky` (Prvky podpory prodeje) — návrh tam fotku
+nemá, je tam barevná plocha. Vyber prosím vlastní z galerie produktu.
+
+Sekce Zámečnických a Světelných panelů mají fotky ze staré verze
+stránky, viz tabulka v části C.
 
 ### E. Obrázky na kartách rozcestníku
 
-Karty na všech nových stránkách mají zděděné fotky z 3D nápisů. V návrhu
-mají fotku odpovídající své sekci — vyber ji stejným způsobem.
+Dvacet karet z návrhu je nahraných beze změny ve složce
+**Produkty / <Produkt> / Karty/**. Soubor se jmenuje podle kotvy sekce,
+na kterou karta odkazuje, s příponou `-karta`.
+
+| Stránka | Karty |
+|---|---|
+| Výstrče | `vystrce-karta.png`, `atypicke-vystrce-karta.png`, `lekarenske-znaky-karta.png` |
+| Velkoformátový tisk | `uvod-karta.png`, `rezana-grafika-karta.png`, `dalsi-druhy-polepu-karta.png`, `designove-obrazy-karta.png` |
+| Vstupní portály | `vstupni-portaly-karta.png`, `architektonicke-prvky-karta.png`, `vlajky-karta.png` |
+| Prvky podpory prodeje | `prvky-podpory-prodeje-karta.png`, `led-displaye-karta.png`, `led-obrazovky-karta.png` |
+| Designová svítidla | `designova-svitidla-karta.png`, `zarovkove-svetelne-napisy-karta.png`, `neonove-napisy-karta.png`, `mechove-steny-karta.png`, `reklama-z-cortenoveho-plechu-karta.png`, `svetelna-cisla-domu-karta.png`, `stojaci-lampy-karta.png` |
+
+Zámečnické a Světelné panely karty z návrhu nemají — zůstávají zděděné
+z 3D nápisů.
 
 ### F. Sekce bez galerie v CMS
 
@@ -256,11 +307,14 @@ nová stránka převzít **slug staré**, jinak se rozbijí URL i odkazy v menu.
 
 - **Figma MCP došly volání** („You've reached the Figma MCP tool call
   limit on the Starter plan"). Návrh se proto četl ze screenshotů framů
-  pořízených dřív a **obrázky z návrhu se nedaly stáhnout ani nahrát do
-  assetů**. To je jediná část zadání, která se nesplnila — texty,
-  struktura, kotvy i galerie hotové jsou. Až limit povolí (nebo po
-  upgradu), stačí u každé sekce zavolat `download_assets` a fotky
-  nahrát; postup je popsaný v `produktove-stranky-figma.md`.
+  pořízených dřív a obrázky se přes MCP stáhnout nedaly. **Vyřešeno
+  ručně:** zadavatel exportoval frame z Figmy sám a nahrál ho do assetů
+  do `figma_zdroje/{Hero, Produkty, Karty}`. Odtud se soubory ořezaly,
+  pojmenovaly a zařadily — viz „Obrázky z Figmy v assetech".
+- **Sedmá karta a sedmá sekce Designových svítidel** mají teď správnou
+  fotku v assetech (`stojaci-lampy.jpg`, `stojaci-lampy-karta.png`),
+  ale sekce samotná je pořád ta ručně postavená textová — viz „Co je
+  jinak, než by mělo být".
 - **Kotvy ověřené proti menu.** Všech 23 id sekcí na nových stránkách
   sedí znak po znaku s odkazy, které navbar na živém webu používá.
   Ověřeno vytažením `href="/produkty/…#…"` z živého HTML a porovnáním
