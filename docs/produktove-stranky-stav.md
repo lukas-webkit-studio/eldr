@@ -115,7 +115,7 @@ Tyhle stačí vybrat z assetů, jsou to přesně ty ze staré verze stránky:
 | Zámečnické / `#atypicke-zamecnicke-konstrukce` | `atypicke-zamecnicke-konstrukce.jpg` (`6a9aa48badd0e01507de20f2`) | — | — |
 | Zámečnické / `#opracovani-a-prodej-plexiskla` | `opracovani-a-prodej-plexiskla.jpg` (`6a9aa48cadd0e01507de2121`) | — | — |
 | Orientační systémy / hero | `Produkty / Orientační systémy / hero.webp` | — | — |
-| Orientační systémy / sekce | `Produkty / Orientační systémy / orientacni-systemy-budov-a-arealu.png` (do všech tří slotů) | | |
+| Orientační systémy / sekce | `Produkty / Orientační systémy / orientacni-systemy-budov-a-arealu.png` | — | — |
 
 Zámečnické fotky jsou ve složce **Produkty / Zámečnické konstrukce/**.
 
