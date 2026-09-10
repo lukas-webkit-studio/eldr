@@ -44,8 +44,10 @@ jména, ne podle náhledu.
 | Prvky podpory prodeje | `6aa30fa1bda15d8c3504bf75` | `6aa30fb0976f8d96e6d61895` | `6aa30fb04f2a2d65e79b9b8e` | `6aa30fb07928fa48c011c0c6` |
 | Designová svítidla | `6aa30fa17749407044bad08e` | `6aa30fb0d5fd851fcb6f9a3b` | `6aa30fb182720f7758da50b6` | `6aa30fb182720f7758da50cb` |
 
-Orientační systémy (`6a99a9ba4dfafeff4a964328`) a Zámečnické konstrukce
-(`6a9aa4837d59ae6369c9862a`) podsložky nemají — jejich obrázky vznikly dřív.
+| Zámečnické konstrukce | `6a9aa4837d59ae6369c9862a` | `6aa31be7bb2d9af4cd375e38` | `6aa31be8bf1153ab0cebf93a` | `6aa31be8bb2d9af4cd375f25` |
+
+Orientační systémy (`6a99a9ba4dfafeff4a964328`) podsložky nemají —
+jejich obrázky vznikly dřív.
 
 ### Co se s obrázky dělalo
 
@@ -56,6 +58,32 @@ Orientační systémy (`6a99a9ba4dfafeff4a964328`) a Zámečnické konstrukce
   a dole nejde, ty pixely v exportu nejsou; šlo by to jen dogenerovat.
 - **Karty** — beze změny. Export je 1792 × 549 nebo 1346 × 558 px, což
   odpovídá pásu `layout400_card-image-wrapper` (výška 9 rem).
+
+### Zámečnické konstrukce — přeříznuto 10. 9. 2026
+
+Tři produktové fotky byly nahrané v původním poměru z Figmy, ne 1:1.
+`zamecnicke-konstrukce.jpg` měl 1280 × 2560 px (na výšku), takže
+`object-fit: cover` z něj v sekci ukazoval prostřední pás — trávu a patu
+konstrukce. Návrh přitom ukazuje horní část: billboard, jeřáb, věž.
+
+Původní tři assety jsou **smazané** a nahrazené čtvercovými ořezy ve
+složce `Produkty / Zámečnické konstrukce / Produkt/`:
+
+| Soubor | Rozměr | Nové ID |
+|---|---|---|
+| `zamecnicke-konstrukce.jpg` | 1280 × 1280 | `6aa31bf38b809890ddb04924` |
+| `atypicke-zamecnicke-konstrukce.jpg` | 1920 × 1920 | `6aa31bf4b3b526cb1fb2c4f0` |
+| `opracovani-a-prodej-plexiskla.jpg` | 972 × 972 | `6aa31bf4b3b526cb1fb2c55c` |
+
+Dogenerovávat se nic nemuselo — všechny tři zdroje měly dost místa na
+čtverec kolem předmětu. `opracovani-a-prodej-plexiskla.jpg` má jen 972 px
+(zdroj z Figmy i z CMS galerie má stejných 1296 × 972, větší verze
+neexistuje). Na retině to bude o kousek měkčí; spravila by to jen jiná
+fotka.
+
+**Na `/dev/zamecnicke-konstrukce` jsou teď tři rozbité obrázky** — staré
+assety zmizely. Vyřeší se tím, že se v Designeru vyberou nové, což se
+u téhle stránky muselo udělat tak jako tak kvůli `sizes`.
 
 ### Rozlišení produktových fotek
 
@@ -151,13 +179,10 @@ Tyhle stačí vybrat z assetů, jsou to přesně ty ze staré verze stránky:
 | Světelné panely / `#intarzie` | `Plexiintarzie podlozena.png` | `Plexiintarzie podlozena_EN.png` | `Plexiintarzie podlozena_DE.png` |
 | Světelné panely / `#reklamni-tabule` | `Reklamni tabule.png` | `Reklamni tabule_EN.png` | `Reklamni tabule_DE.png` |
 | Světelné panely / `#menuboardy` | `UHK 1.avif` | — | — |
-| Zámečnické / `#zamecnicke-konstrukce` | `zamecnicke-konstrukce.jpg` (`6a9aa48beb68c246d9a5deef`) | — | — |
-| Zámečnické / `#atypicke-zamecnicke-konstrukce` | `atypicke-zamecnicke-konstrukce.jpg` (`6a9aa48badd0e01507de20f2`) | — | — |
-| Zámečnické / `#opracovani-a-prodej-plexiskla` | `opracovani-a-prodej-plexiskla.jpg` (`6a9aa48cadd0e01507de2121`) | — | — |
 | Orientační systémy / hero | `Produkty / Orientační systémy / hero.webp` | — | — |
 | Orientační systémy / sekce | `Produkty / Orientační systémy / orientacni-systemy-budov-a-arealu.png` | — | — |
 
-Zámečnické fotky jsou ve složce **Produkty / Zámečnické konstrukce/**.
+Zámečnické produktové fotky jsou v části D — byly znovu ořezané.
 
 ### D. Produktové fotky z návrhu
 
@@ -171,13 +196,13 @@ kotvy sekce — `#vystrce` → `vystrce.jpg`.
 | Velkoformátový tisk | `uvod.jpg`, `rezana-grafika.jpg`, `dalsi-druhy-polepu.jpg`, `designove-obrazy.jpg` |
 | Vstupní portály | `vstupni-portaly.jpg`, `architektonicke-prvky.jpg`, `vlajky.jpg` |
 | Prvky podpory prodeje | `prvky-podpory-prodeje.jpg`, `led-displaye.jpg` |
+| Zámečnické konstrukce | `zamecnicke-konstrukce.jpg`, `atypicke-zamecnicke-konstrukce.jpg`, `opracovani-a-prodej-plexiskla.jpg` |
 | Designová svítidla | `designova-svitidla.jpg`, `zarovkove-svetelne-napisy.jpg`, `neonove-napisy.jpg`, `mechove-steny.jpg`, `reklama-z-cortenoveho-plechu.jpg`, `svetelna-cisla-domu.jpg`, `stojaci-lampy.jpg` |
 
 Zbývá jen `#led-obrazovky` (Prvky podpory prodeje) — návrh tam fotku
 nemá, je tam barevná plocha. Vyber prosím vlastní z galerie produktu.
 
-Sekce Zámečnických a Světelných panelů mají fotky ze staré verze
-stránky, viz tabulka v části C.
+Světelné panely mají fotky ze staré verze stránky, viz tabulka v části C.
 
 ### E. Obrázky na kartách rozcestníku
 
