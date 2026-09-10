@@ -17,6 +17,19 @@ v nové session. Postup, mapa framů a technické limity jsou v
 4. **Nejednoznačnosti se neobcházejí** — zvolí se nejbližší rozumná
    varianta a zapíše se do „Rozhodnutí učiněná za pochodu".
 
+## Konvence produktového obrázku (10. 9. 2026)
+
+`product_image-wrapper` má **vždycky** combo třídu `clipped` a uvnitř
+**jediný** obrázek `product_image` — bez `localization-show-only_*`.
+
+Tři jazykové sloty zůstávají jen tam, kde je na obrázku **český text**,
+který se musí přeložit: **Světelné panely a tabule** a **3D nápisy**.
+Nikde jinde ne — fotka bez textu je pro všechny jazyky stejná.
+
+Hotovo na: Zámečnické, Výstrče, Velkoformátový tisk, Vstupní portály,
+Prvky podpory prodeje, Designová svítidla. Nesaháno na: Světelné panely
+a tabule, 3D nápisy, Pylony a totemy (ty jsou podle zadavatele 1:1).
+
 ## Stav stránek
 
 Všech sedm stránek stojí v `/dev/`, je vyřazených ze sitemapy
@@ -65,9 +78,9 @@ proto musí **v Designeru vybrat znovu ručně** — tím se `sizes`
 přepočítá. Týká se to hero fotky, obrázků na kartách rozcestníku
 a produktových fotek v sekcích.
 
-**Produktová fotka má tři jazykové sloty** (`localization-show-only_cs`
-/ `_en` / `_de`). Dokud nejsou překlady, stačí vyplnit **cs**; ostatní
-dva se doplní s překlady.
+**Produktová fotka je jen jedna** pro všechny jazyky (viz konvence výš).
+Tři jazykové sloty zůstaly jen u Světelných panelů a 3D nápisů, kde je
+na grafice český text.
 
 ### B. Hero fotky — konkrétní soubory
 
@@ -93,7 +106,7 @@ Tyhle stačí vybrat z assetů, jsou to přesně ty ze staré verze stránky:
 
 | Stránka / sekce | cs | en | de |
 |---|---|---|---|
-| Výstrče / `#vystrce` | `Vystrc se zasunutym plexi 1.png` | `Vystrc se zasunutym plexi 6_EN.png` | `Vystrc se zasunutym plexi 4_DE.png` |
+| Výstrče / `#vystrce` | `Vystrc se zasunutym plexi 1.png` | jen jeden obrázek | — |
 | Světelné panely / `#svetelne-panely` | `Svetelny panel.png` | `Svetelny panel_EN.png` | `Svetelny panel_DE.png` |
 | Světelné panely / `#intarzie` | `Plexiintarzie podlozena.png` | `Plexiintarzie podlozena_EN.png` | `Plexiintarzie podlozena_DE.png` |
 | Světelné panely / `#reklamni-tabule` | `Reklamni tabule.png` | `Reklamni tabule_EN.png` | `Reklamni tabule_DE.png` |
@@ -162,11 +175,25 @@ a zásah do něj se projeví všude.
 a ze sitemapy je vyřazuje jen nastavení u stránky. API na robots.txt
 nesahá.
 
-### I. Slugy — pozor při prohazování
+### I. Nasazení a překlady — dohodnuté pořadí
 
-Dev stránky mají kratší slugy než ostré verze. Až se budou prohazovat
-(stará stránka `…-old`, nová na ostrý slug), musí nová stránka převzít
-**slug staré**, jinak se rozbijí URL i odkazy v menu.
+Reklamy míří na dnešní adresy, takže **URL se měnit nesmí**. Prohození
+slugu novou URL nevyrábí: nová stránka převezme slug té staré, stará
+dostane `…-old`, adresa zůstane doslova stejná.
+
+Překlady se ale ztratí tak jako tak — texty jsou nové, starý překlad by
+neseděl. Proto pořadí:
+
+1. prohodit slugy (nová stránka na ostrý slug, stará na `…-old`)
+2. publikovat **jen na doménu webflow.io**, ne na produkci
+3. nechat přeložit do EN a DE
+4. publikovat na produkci
+
+Mezi krokem 1 a 4 **nesmí nikdo publikovat na produkci** — Webflow pouští
+ven celý web, takže by rozdělané stránky vystrčil s sebou.
+
+Dev stránky mají kratší slugy než ostré verze, takže při kroku 1 musí
+nová stránka převzít **slug staré**, jinak se rozbijí URL i odkazy v menu.
 
 | Dev slug | Ostrý slug, který má převzít |
 |---|---|
