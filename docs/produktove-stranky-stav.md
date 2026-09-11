@@ -72,11 +72,31 @@ složce `Produkty / Zámečnické konstrukce / Produkt/`:
 | Soubor | Rozměr | Nové ID |
 |---|---|---|
 | `zamecnicke-konstrukce.jpg` | 1280 × 1280 | `6aa31bf38b809890ddb04924` |
-| `atypicke-zamecnicke-konstrukce.jpg` | 1920 × 1920 | `6aa31bf4b3b526cb1fb2c4f0` |
+| `atypicke-zamecnicke-konstrukce.jpg` | 2088 × 2088 | `6aa37f0584ee19b4f9bd605a` |
 | `opracovani-a-prodej-plexiskla.jpg` | 972 × 972 | `6aa31bf4b3b526cb1fb2c55c` |
 
-Dogenerovávat se nic nemuselo — všechny tři zdroje měly dost místa na
-čtverec kolem předmětu. `opracovani-a-prodej-plexiskla.jpg` má jen 972 px
+**U zastávky se dogenerovávat muselo.** Zastávka i s betonovou deskou
+měří 1560 × 1672 px a její těžiště leží 90 px pod středem zdroje. Ve
+zdroji 2560 × 1920 proto žádný čtverec kolem ní nejde vycentrovat —
+dole není dost místa. První pokus (prostý ořez 1920 × 1920 od kraje)
+ji odsunul doprava dolů: nahoře pás stromů, dole nic.
+
+Postup, který to spravil:
+
+1. Outpaint 4:3 → 1:1 (Higgsfield), který přidal pás nad a pod originál.
+2. Model ale **přerenderoval celý obrázek** a zkomolil cedulku Elektro
+   Drapače na „Elektro Drapoč / GTENAMA Y.BELRVA". Použil se z něj proto
+   jen dogenerovaný pás.
+3. Originální pixely se vrátily zpátky přes celou svou plochu, se
+   změkčeným spodním okrajem (48 px) a barevně srovnaným pásem pod ním.
+4. Z výsledné plochy se vyřízl čtverec 2088 × 2088 vycentrovaný na
+   zastávku — okraj 264 px vlevo i vpravo, 208 px nahoře i dole.
+
+Vygenerovaných je jen **spodních 168 px** (tráva a hlína), zbytek je
+originál. Šev není vidět.
+
+Zbylé dvě fotky dogenerování nepotřebovaly, kolem předmětu bylo dost
+místa. `opracovani-a-prodej-plexiskla.jpg` má jen 972 px
 (zdroj z Figmy i z CMS galerie má stejných 1296 × 972, větší verze
 neexistuje). Na retině to bude o kousek měkčí; spravila by to jen jiná
 fotka.
