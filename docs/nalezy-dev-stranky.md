@@ -157,25 +157,19 @@ nemá sahat, když může souběžně pracovat jiný chat.
 
 ---
 
-## 6. Publikace na staging neproběhla
+## 6. Publikace na staging — vyřešeno
 
-Šest volání `data_sites_tool > publish_site` se `site_id 635940ec249b210e8902edd4`
-a `publishToWebflowSubdomain: true` (bez `customDomains`, tedy výhradně na
-`eldr.webflow.io`) mezi 13:58 a 14:24 UTC. Každé vrátilo
-`{customDomains: [], publishToWebflowSubdomain: true, publishScope: "site"}`
-bez chyby.
+Šest voláním `publish_site` mezi 13:58 a 14:24 UTC se nic nestalo; `lastPublished`
+zůstával na 12:35:58. Sedmý pokus v 18:18 prošel a od té doby publikace funguje
+normálně. Příčina se nezjistila — volání vracelo úspěch po celou dobu.
 
-`get_site` po celou dobu hlásí `lastPublished: 2026-09-14T12:35:58` a
-`previewUrl` se screenshotem z 12:35:58 — tedy z prvního volání téhož dne,
-které prošlo. Produkce se nehnula z 09:27:02 u obou domén.
+**Poučení, které stojí za zapamatování:** `publish_site` vrací jen ozvěnu
+parametrů, ne výsledek. Jediné spolehlivé ověření je `get_site` a pole
+`lastPublished` (u stagingu na úrovni webu, u produkce u konkrétní domény).
+Je to zapsané i v `CLAUDE.md`.
 
-Živé stránky to potvrzují: `https://eldr.webflow.io/en/dev/velkoformatovy-tisk`
-má pořád český `<title>` a české tělo, zatímco `get_page_content` a
-`get_page_metadata` pro `localeId` EN i DE vrací kompletní překlad. Obsah
-tedy v Designeru je, jen se nepublikoval.
-
-Dál jsem to nezkoušel: jediné zbývající varianty volání by mířily na
-produkční domény.
+Poslední publikace na staging: **2026-09-14 21:02:50 UTC**. Produkce zůstává
+na 09:27:02, nedotčená.
 
 ## 7. Drobnosti v překladu, které zůstaly
 
@@ -187,3 +181,26 @@ produkční domény.
 | `prvky-podpory-prodeje`, `zamecnicke-konstrukce` | Český meta title má „Rodinná firma / Rodinný podnik Elektro Drapač", EN i DE mají jen „Elektro Drapač". |
 | `designova-svitidla` | Glosář píše „žárovkový" s uvozovkami (`"lightbulb" illuminated sign`, `„Glühlampen"-Leuchtschrift`), na stránce jsou bez uvozovek. A „cortenový plech" je v EN jako `corten steel signage`, glosář má `corten sheet`. |
 | `orientacni-systemy`, EN, uzel `3fcad9d6-…fa0318` | Jediný uzel bez anglického override. Dědí českou hodnotu, která je „No items found.", takže anglicky se zobrazí správně — jen na ostatních stránkách ten uzel override má. |
+
+---
+
+## 8. Doplněno 14. 9. večer
+
+- **Počet let na trhu je sjednocený** na jedinou značku `{#YOE#}` ve všech třech
+  jazycích. Deset českých uzlů (pět živých produktových stránek a pět `/dev/`)
+  i 26 uzlů v EN a DE. `<span data-var="YOE">` byl z primárního locale
+  odstraněn, natvrdo psaná čísla 34 / 37 / 32 jsou pryč. Ověřeno spuštěním
+  nasazeného bundlu nad staženými stránkami: vykreslí se **36**, všude stejně.
+- **Bundle** je připnutý na merge commit `7ddae37`. GTM `GTM-W6PR2VX` i všechny
+  čtyři Finsweet skripty v head zkontrolovány po zápisu.
+- **Komponenty**: 24 oprav překladu mimo menu a patičku, 6 terminologických
+  oprav v menu, 20 nálezů v obou patičkách včetně „ELEKTRO DRAPER" →
+  „ELEKTRO DRAPAČ".
+
+### Co zůstává mimo rozsah a nebylo opraveno
+
+| Kde | Co |
+|---|---|
+| `/de/` reference (CMS kolekce Reference) | Zákaznické citace používají „Lichtwerbung" místo glosářového „Leuchtreklame", 6×. Jsou to citace zákazníků, takže je otázka, jestli se do nich vůbec má sahat. V jedné je navíc rozbité „für die **hervorArbeit**". |
+| `/de/servisni-sluzby-a-pronajem-plosin` | V Q&A bloku věta „Jede Lichtwerbung würde niemals es sollte tagsüber nicht scheinen…" — rozpadlý strojový překlad. |
+| `Footer_2024-12`, uzel `a943362c-…a5e9` | Nemá žádnou `show--xx` třídu, takže se zobrazuje souběžně s jazykově hlídaným `a5eb`. Duplicitní odkaz jde odstranit jen v Designeru; text jsem srovnal. |
