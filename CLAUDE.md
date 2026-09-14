@@ -58,8 +58,13 @@ custom kódu. Ověřeno na tomhle webu:
 | Text a SEO v **primárním** locale | jen Designer — API píše výhradně do `/en` a `/de` |
 | Atributy (`aria-label`, `title`, `data-*`) per locale | **nejde nikde** — hodnota je společná všem jazykům |
 | Chybějící locale u existující CMS položky | jen Designer (CMS panel u položky) — přes API to nejde, `cmsLocaleIds` platí jen pro nově zakládané položky |
+| Cíl odkazu (`href`, vazba na stránku) per locale | jen Designer — `update_component_content` i `update_static_content` zápis **tiše přijmou** (`errors: []`), ale cíl nezmění; localizace umí jen text |
 
-Ten předposlední řádek stojí za zapamatování: `aria-label="Zkopírovat
+Poslední řádek je ten zákeřný: zápis vrátí prázdné `errors`, takže to
+vypadá, že se to povedlo. Ověřuj čtením zpátky, ne návratovým kódem.
+Takhle zůstal odkaz „Inspiration" v menu na `/en` a `/de` viset na `#`.
+
+Také stojí za zapamatování: `aria-label="Zkopírovat
 prompt"` na tlačítku u AI souhrnu zůstává česky i na `/en` a `/de`, protože
 Webflow lokalizaci atributů neumí. Viditelný text tlačítka přeložený je.
 Custom kódem by to „šlo", ale bylo by to přesně to přepisování, kterému se

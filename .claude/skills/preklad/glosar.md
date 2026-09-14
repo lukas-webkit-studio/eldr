@@ -292,11 +292,13 @@ ne závorka.
 | navigace, EN | položka menu „Orientation systems" | Wayfinding systems |
 | patička, EN | „**Lighted** advertising solutions from concept to completion." | illuminated advertising |
 | komponenta Jak probíhá výroba | odrážka „Nabídku vytvoříme zcela zdarma." neměla EN ani DE override, svítila česky na každé produktové stránce | „We prepare the quote completely free of charge." / „Das Angebot erstellen wir völlig kostenlos." |
+| **navbar, rozbalovátko „Tabule a světelné panely"** (14. 9. 2026) | Popisky byly v EN i DE posunuté o jeden proti kotvám: „Advertising boards"/„Werbetafeln" mířilo na `#svetelne-panely`, „Illuminated panels"/„Leuchtpaneele" na `#intarzie`, „Projecting signs"/„Auslegertransparente" na `#reklamni-tabule`. Sekce na stránce přitom přeložené správně byly — vada byla jen v menu. | Srovnáno podle glosáře: illuminated panels / Leuchtpaneele, acrylic glass inlays / Plexiglas-Intarsien, advertising boards / Werbetafeln. Německý nadpis rozbalovátka „Tafeln, Leuchtpaneele und Auslegertransparente" srovnán na „Tafeln und Leuchtpaneele" (čeština ani EN třetí položku nemají). |
 
 ### Otevřené
 
 | Co | Detail |
 |---|---|
+| **Odkaz „Inspiration" v menu vede na `#`** | Na `/en` i `/de` má položka menu `href="#"`, česky přitom míří na `/inspirace`. Stránka v obou locale existuje a vrací 200, takže obsah je v pořádku — jen se na něj z menu nedá dostat. **Přes API to nespravím:** `update_component_content` zápis přijme s prázdným `errors`, ale `href` ani `data-wf-link-page-id` nezmění; lokalizace umí jen text. Patří do Designeru (uzel `bbed6077-ce65-bdda-117f-76962e8015ab`, komponenta Navbar_2024-12). |
 | Zastaralý český meta title `/produkty/tabule-a-svetelne-panely` | Zní „Tabule, světelné panely a **výstrče**", ale výstrče má dnes vlastní stránku. EN i DE jsou věrné překlady té češtiny, takže je nechávám sedět s ní. Opravit se to musí nejdřív v češtině. |
 | Překlepy v českém originále | Banner „Pylony – velký“: „s odolnými **material**“ místo *materiály*, „vydrží **I** v náročných podmínkách“ místo *i*. V překladech opraveno, v češtině ne — do primárního locale se přes API zapsat nedá. |
 | `/en/produkty/pylony-a-totemy` | Proti CZ i DE chybí dva koncové nadpisy (sekce se v EN nerenderuje) — ověřit proč, může jít o nepřeloženou komponentu. |
