@@ -11,14 +11,15 @@ Zdroj je česká verze.
 
 | Stránka | URL |
 |---|---|
-| Výstrče, lékárenské znaky | `/produkty/vystrce-lekarenske-znaky` |
-| Velkoformátový tisk | `/produkty/velkoformatovy-tisk` |
-| Vstupní portály a architektonické prvky | `/produkty/architektonicke-prvky-vstupni-portaly-vlajky` |
-| Prvky podpory prodeje | `/produkty/prvky-podpory-prodeje-led-technologie` |
-| Designová a interiérová svítidla | `/produkty/designova-a-interierova-svitidla-specialni-projekty` |
-| Zámečnické konstrukce, opracování plexiskla | `/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla` |
+| Výstrče, lékárenské znaky | `/dev/vystrce-lekarenske-znaky` |
+| Velkoformátový tisk | `/dev/velkoformatovy-tisk` |
+| Vstupní portály a architektonické prvky | `/dev/vstupni-portaly` |
+| Prvky podpory prodeje | `/dev/prvky-podpory-prodeje` |
+| Designová a interiérová svítidla | `/dev/designova-svitidla` |
+| Zámečnické konstrukce, opracování plexiskla | `/dev/zamecnicke-konstrukce` |
 
-Celý obsah stránek je nový, starý překlad na něj nesedí.
+Jsou to stránky ve složce `/dev/`. Nepracuj na `/produkty/…` — tam jsou
+zatím staré verze, které se budou mazat.
 
 ## Menu
 
