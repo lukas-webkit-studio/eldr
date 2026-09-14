@@ -229,7 +229,7 @@ na kterou karta odkazuje, s příponou `-karta`.
 
 | Stránka | Karty |
 |---|---|
-| Výstrče | `vystrce-karta.png`, `atypicke-vystrce-karta.png`, `lekarenske-znaky-karta.png` |
+| Výstrče | `vystrce-karta.png`, `atypicke-vystrce-karta.png`, `lekarenske-znaky-karta.jpg` |
 | Velkoformátový tisk | `uvod-karta.png`, `rezana-grafika-karta.png`, `dalsi-druhy-polepu-karta.png`, `designove-obrazy-karta.png` |
 | Vstupní portály | `vstupni-portaly-karta.png`, `architektonicke-prvky-karta.png`, `vlajky-karta.png` |
 | Prvky podpory prodeje | `prvky-podpory-prodeje-karta.png`, `led-displaye-karta.png`, `led-obrazovky-karta.png` |
@@ -323,6 +323,20 @@ takže se EN/DE menu přeloží normálně.
 `set_visibility false` (Webflow nativně, ne CSS), sekce i karta na
 stránce už měly combo třídu `hide`. Až přijdou podklady, stačí trojí
 odkrytí.
+
+### Karta lékárenského znaku (Výstrče)
+
+Fotka z návrhu byla rozmazaná — export měl 1792 × 549 px, ale byl to
+upscale něčeho mnohem menšího, takže neon i cedule za sklem byly rozpité.
+
+Opraveno AI restaurací (Higgsfield, bytedance upscale). Přímo nešla:
+úzký pás 3,26 : 1 model dvakrát odmítl. Obrázek se proto zrcadlově
+doplnil na 4 : 3, prohnal upscalem na 4096 px a pás se z výsledku zase
+vyřízl. Výsledek `lekarenske-znaky-karta.jpg`, 2400 × 735 px, asset
+`6aa7bba631b9bc9655495824`. Původní rozmazaný asset smazán.
+
+Eskulapova mísa s hadem zůstala věrná, přibyl čitelný držák kříže
+i nápis „ogistra" na ceduli za sklem. Ostatní karty se nesahalo.
 
 ### Designová svítidla
 
