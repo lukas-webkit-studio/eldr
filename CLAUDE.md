@@ -55,10 +55,20 @@ custom kódu. Ověřeno na tomhle webu:
 | Interakce (IX2) | jen Designer |
 | Styly a třídy v sekundárním locale | jen Designer — `data_style_tool` píše globálně, ne per locale |
 | Obrázky v sekundárním locale | jen Designer, API je vrací, ale nezapíše |
-| Text a SEO v **primárním** locale | jen Designer — API píše výhradně do `/en` a `/de` |
+| SEO v **primárním** locale | jen Designer — `data_pages_tool` s `localeId` píše jen do `/en` a `/de` |
 | Atributy (`aria-label`, `title`, `data-*`) per locale | **nejde nikde** — hodnota je společná všem jazykům |
 | Chybějící locale u existující CMS položky | jen Designer (CMS panel u položky) — přes API to nejde, `cmsLocaleIds` platí jen pro nově zakládané položky |
 | Cíl odkazu (`href`, vazba na stránku) per locale | jen Designer — `update_component_content` i `update_static_content` zápis **tiše přijmou** (`errors: []`), ale cíl nezmění; localizace umí jen text |
+
+**Text v primárním locale přes API JDE** — jen jiným nástrojem. Lokalizační
+`update_static_content` píše výhradně do sekundárních locale, ale
+`data_element_tool > set_text` píše do Designeru, tedy do češtiny. Cílí se na
+**String uzel**, ne na obalující Block — `set_text` na `<div>` vrátí
+„This element doesn't support text". Uzel najdeš přes
+`query_elements` s `element_filter.text`. Stejný nástroj umí `remove_element`,
+což je jediná cesta, jak z češtiny odstranit prvek (viz `<span data-var="YOE">`
+níž). Zacházej s tím opatrně: je to zápis do primárního locale, který se
+propíše do všech jazyků.
 
 Poslední řádek je ten zákeřný: zápis vrátí prázdné `errors`, takže to
 vypadá, že se to povedlo. Ověřuj čtením zpátky, ne návratovým kódem.
@@ -206,6 +216,25 @@ a zjistit, jestli daný selektor vůbec někde je. Tímhle způsobem se našlo,
 
 Zálohy v `_backup/webflow/custom-code/` bývají zastaralé. Ground truth je
 živý web, ne ony.
+
+## Počet let na trhu
+
+Na webu je **jediná značka**: token `{#YOE#}`. Píše se jako čistý text, nikam
+se nevkládá žádný prvek, a `src/modules/10-vars.js` ho nahradí číslem
+(`aktuální rok − BASE_YEAR 1990`). Scan jde přes celé `<body>`, takže token
+funguje i mimo rich text — v hero štítcích, nadpisech i odrážkách.
+
+Dřív se to zapisovalo dvěma způsoby: `<span data-var="YOE">34</span>` v hero
+štítcích a `{#YOE#}` v článcích, k tomu natvrdo psaná čísla, která se mezi
+jazyky rozcházela (čeština počítala 36, angličtina měla 34, němčina 32).
+14. 9. 2026 se všechno sjednotilo na token a všechny `data-var` spany byly
+z primárního locale odstraněny.
+
+`fillDataVars` v modulu zůstává kvůli případným starším prvkům, ale nové
+`[data-var]` už nezakládej — **do textu patří `{#YOE#}`**.
+
+Do `<meta description>` token nepiš, JS ho v `<head>` nenahradí a vyhledávače
+čtou surové HTML. Tam číslo zůstává slovy („více než 30letou zkušeností").
 
 ## Měření
 

@@ -1,0 +1,29 @@
+{
+  "prekladyHotove": true,
+  "dokonceno": "2026-09-14T21:10:00Z",
+  "vetev": "claude/eldr-webflow-translations-skbeap",
+  "mergeCommit": "7ddae37",
+  "publikovano": {
+    "staging": "https://eldr.webflow.io",
+    "stagingPublished": "2026-09-14T21:02:50Z",
+    "produkce": "nepublikovano, posledni publish 2026-09-14T09:27:02Z"
+  },
+  "coJeHotovo": [
+    "osm novych /dev/ produktovych stranek prelozeno do EN a DE vcetne SEO",
+    "komponenty mimo menu a paticku: 24 oprav prekladu v EN a DE",
+    "navbar: 6 terminologickych oprav, drive posunute popisky u Tabule a svetelne panely srovnany",
+    "obe paticky: 20 nalezu opraveno vcetne ELEKTRO DRAPER -> ELEKTRO DRAPAC",
+    "pocet let na trhu sjednocen na jedinou znacku {#YOE#} ve vsech trech locale",
+    "bundle pripnuty na merge commit 7ddae37, scan tokenu jde pres cele body"
+  ],
+  "zbyvaNaCloveka": [
+    "skryt /inspirace pro EN a DE (draft je globalni, per locale jde jen v Designeru)",
+    "odkaz Inspiration v menu miri na # v EN i DE (cil odkazu API nezapise)",
+    "obrazky v EN a DE na /dev/ strankach ukazuji fotky z 3D napisu (lokalizace obrazku jen v Designeru)",
+    "vady v ceskem originale sepsane v docs/nalezy-dev-stranky.md"
+  ],
+  "slugy": {
+    "poznamka": "Slugy a kotvy za # nebyly nikde prekladany, meni se jen prefix /en/ a /de/. Prejmenovani slugu je bezpecne zacit.",
+    "pozor": "Navbar odkazuje na produkcni /produkty/... adresy, nove stranky maji zatim /dev/..."
+  }
+}
