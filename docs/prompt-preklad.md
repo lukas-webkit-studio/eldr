@@ -17,8 +17,6 @@ Zdroj je česká verze.
 | Prvky podpory prodeje | `/produkty/prvky-podpory-prodeje-led-technologie` |
 | Designová a interiérová svítidla | `/produkty/designova-a-interierova-svitidla-specialni-projekty` |
 | Zámečnické konstrukce, opracování plexiskla | `/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla` |
-| Orientační systémy | `/produkty/orientacni-systemy` |
-| Světelné panely a tabule | `/produkty/tabule-a-svetelne-panely` |
 
 Celý obsah stránek je nový, starý překlad na něj nesedí.
 
