@@ -439,6 +439,64 @@ dev kopie je nejspíš zbytek a **do prohození slugů nepatří** —
 prohazuje se šest stránek, ne sedm. Než se slugy prohodí, je to potřeba
 potvrdit.
 
+## Prohození slugů a staging (14. 9. 2026)
+
+Překlad byl podle `docs/stav-prekladu.json` hotový, proto se prohodily
+slugy šesti stránek. Nové stránky převzaly ostré adresy, staré se
+přejmenovaly na `…-old`, přesunuly do `/dev/` a jsou v draftu.
+
+| Stránka | Nová adresa | Stará stránka |
+|---|---|---|
+| Výstrče, lékárenské znaky | `/produkty/vystrce-lekarenske-znaky` | `/dev/vystrce-lekarenske-znaky-old` |
+| Velkoformátový tisk | `/produkty/velkoformatovy-tisk` | `/dev/velkoformatovy-tisk-old` |
+| Vstupní portály | `/produkty/architektonicke-prvky-vstupni-portaly-vlajky` | `…-old` |
+| Prvky podpory prodeje | `/produkty/prvky-podpory-prodeje-led-technologie` | `…-old` |
+| Designová svítidla | `/produkty/designova-a-interierova-svitidla-specialni-projekty` | `…-old` |
+| Zámečnické konstrukce | `/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla` | `…-old` |
+
+**`bulk_update_pages` ignoruje `parentFolderId` i `draft`.** Slug přepíše,
+zbytek tiše zahodí. Na přesun mezi složkami a na draft se musí
+`update_page_settings`, jedna stránka na akci.
+
+### Úklid `/dev/`
+
+Všech 20 stránek ve složce `/dev/` je nastavených na `draft: true`, takže
+se vůbec nepublikují — silnější než noindex. Ověřeno: `/dev/…` vrací 404.
+Spolu s `Disallow: /dev/` v robots.txt je to dvojitá pojistka.
+
+**Podsložky podle témat se přes API založit nedají** — `data_pages_tool`
+umí `create_page`, ale ne vytvořit složku stránek. To je jen v Designeru.
+Až složky vzniknou, přesun stránek do nich už přes API půjde.
+
+### Kontrola stagingu
+
+Deset produktových stránek × tři jazyky, staženo z `eldr.webflow.io`:
+
+- sekce, karty rozcestníku a obrázky sedí na všech 30 kombinacích
+- title i meta description má každá stránka ve všech jazycích
+- v EN ani DE nezůstal žádný český zbytek
+- **všech 34 kotev z menu míří na existující sekce**
+
+### Opraveno z reportu překladatelského chatu
+
+| Co | Kde |
+|---|---|
+| tlačítko „Jak probíhá výroba?" mířilo na `#` | doplněna kotva `#jak-probiha-vyroba`, funguje i v EN a DE |
+| „sklěněné" → „skleněné" | Designová svítidla, úvod sekce Neonové nápisy |
+| chybějící mezera za `</strong>` u cortenu | opraveno v CS, EN i DE |
+| „7 a 9segmentové" → „7- a 9segmentové" | Prvky podpory prodeje |
+| chybějící meta description | doplněna na všech šesti nových stránkách |
+
+### Co zbývá a přes API to nejde
+
+**49 obrázků v EN a DE ukazuje fotky z 3D nápisů** — locale override
+zděděný duplikací. Seznam po stránkách je v `docs/obrazky-en-de.md`.
+Lokalizace obrázku se přes API zapsat nedá.
+
+Dál: odkaz „Inspiration" v menu míří v EN i DE na `#` (cíl odkazu je
+per-locale a API ho nezapíše) a rozcestník Zámečnických nabízí jen dvě
+karty ze tří sekcí — v návrhu jsou ale karty taky jen dvě.
+
 ## Co je jinak, než by mělo být
 
 - ~~**Sedmá sekce Designových svítidel**~~ — **vyřešeno 14. 9. 2026**,
