@@ -389,6 +389,56 @@ podsvícení", oba agenti četli v návrhu „**teplé** bílé / **studené**
 modré". Rozdíl je jeden diakritický znak na rozmazaném renderu a na
 stránce je gramaticky správnější varianta, takže se **neměnilo**.
 
+## Publikace 14. 9. 2026 a kontrola živého webu
+
+Publikováno na `eldr.cz`, `www.eldr.cz` i webflow.io na výslovný pokyn
+zadavatele. Ověřeno stažením živých stránek:
+
+- v head je `GTM-W6PR2VX` a pět Finsweet skriptů — nic nezmizelo
+- bundle drží na commitu `0b12f9b` (do `src/` se nesahalo)
+- **robots.txt už `Disallow: /dev/` obsahuje** a v sitemapě je nula
+  `/dev/` adres — část H je hotová, nic ručně dodělávat netřeba
+- všechny čtyři zásahy do menu jsou venku: `#atypicke-zamecnicke-konstrukce`
+  a `#dalsi-druhy-polepu` sedí, rozbité `#polepy` i slepená kotva zmizely,
+  `#led-obrazovky` v menu není
+
+### Atribut `sizes` — audit všech stránek
+
+Zadavatel obrázky v Designeru proklikal. Ověřeno: **rozbitý vzorec
+`343px` se nevyskytuje ani jednou.** Sedí i pořadí sekcí a karet
+Designových svítidel včetně nové corten sekce.
+
+Zbývá ale devět obrázků, které Designerem neprošly — poznají se podle
+`sizes`, který neodpovídá skutečné šířce slotu:
+
+| Stránka | Obrázek | `sizes` | Proč |
+|---|---|---|---|
+| Zámečnické | `zamecnicke-konstrukce.jpg` | — | ukazuje na **smazaný** asset `6a9aa48b…` |
+| Zámečnické | `atypicke-zamecnicke-konstrukce.jpg` | — | ukazuje na **smazaný** asset `6aa31bf4…` |
+| Zámečnické | `opracovani-a-prodej-plexiskla.jpg` | `100vw` | ukazuje na **smazaný** asset `6a9aa48c…` |
+| Velkoformátový tisk | `uvod.jpg` | `120px` | slot je ~600 px, prohlížeč sáhne po 500w variantě |
+| Velkoformátový tisk | `rezana-grafika.jpg` | `120px` | totéž |
+| Velkoformátový tisk | 4 karty rozcestníku | `144px` / `121px` | bez breakpointů, karta je ~300 px |
+| Orientační systémy | produktová fotka | `150px` | totéž |
+| Výstrče | `lekarenske-znaky-karta.jpg` | bez `sizes` | nasazeno přes API 14. 9. |
+| Designová svítidla | `reklama-z-cortenoveho-plechu.jpg` | bez `sizes` | nasazeno přes API 14. 9. |
+
+Poslední dva nejsou rozmazané — bez `sizes` prohlížeč bere největší
+variantu. Jen zbytečně tahá data.
+
+Zámečnické tři jsou naopak **staré ořezy**: assety se 10. 9. nahradily
+novými, ale stránka pořád odkazuje na ty smazané. Soubory na S3 přežily,
+takže se zobrazují, ale je to předchozí verze včetně nevycentrované
+zastávky.
+
+### Světelné panely a tabule
+
+Stránka `/dev/svetelne-panely-a-tabule` vrací 404, protože má
+`draft: true`. Podle zadavatele je tahle stránka „už převedená", takže
+dev kopie je nejspíš zbytek a **do prohození slugů nepatří** —
+prohazuje se šest stránek, ne sedm. Než se slugy prohodí, je to potřeba
+potvrdit.
+
 ## Co je jinak, než by mělo být
 
 - ~~**Sedmá sekce Designových svítidel**~~ — **vyřešeno 14. 9. 2026**,
