@@ -154,3 +154,36 @@ nemá sahat, když může souběžně pracovat jiný chat.
 - Po publikaci ověřit, že se na `/en` a `/de` opravdu spouštějí interakce IX2.
   Na pěti stránkách měly původní překlady vymyšlená `data-w-id`, která
   v češtině neexistují — při přepisu jsem je nahradil českými originály.
+
+---
+
+## 6. Publikace na staging neproběhla
+
+Šest volání `data_sites_tool > publish_site` se `site_id 635940ec249b210e8902edd4`
+a `publishToWebflowSubdomain: true` (bez `customDomains`, tedy výhradně na
+`eldr.webflow.io`) mezi 13:58 a 14:24 UTC. Každé vrátilo
+`{customDomains: [], publishToWebflowSubdomain: true, publishScope: "site"}`
+bez chyby.
+
+`get_site` po celou dobu hlásí `lastPublished: 2026-09-14T12:35:58` a
+`previewUrl` se screenshotem z 12:35:58 — tedy z prvního volání téhož dne,
+které prošlo. Produkce se nehnula z 09:27:02 u obou domén.
+
+Živé stránky to potvrzují: `https://eldr.webflow.io/en/dev/velkoformatovy-tisk`
+má pořád český `<title>` a české tělo, zatímco `get_page_content` a
+`get_page_metadata` pro `localeId` EN i DE vrací kompletní překlad. Obsah
+tedy v Designeru je, jen se nepublikoval.
+
+Dál jsem to nezkoušel: jediné zbývající varianty volání by mířily na
+produkční domény.
+
+## 7. Drobnosti v překladu, které zůstaly
+
+| Kde | Co |
+|---|---|
+| `velkoformatovy-tisk`, EN, uzel `c9352813-…62745e` | Při opravě termínu na `window cover film` se u `<p>` zdvojila třída: `margin-bottom margin-xsmall margin-bottom margin-xsmall`. Lokalizační API třídu vnořeného prvku připojuje místo nahrazení. Renderuje se stejně, opakovaným zápisem to jen roste. |
+| `vystrce-lekarenske-znaky`, EN, uzel `12d758e8-…77e97` | H2 „Projecting signs of every type, made to measure" vypouští „provedení" z českého „Výstrče různých typů a provedení na míru". Němčina ho zachovává. |
+| napříč stránkami | Týž český řetězec má na různých stránkách různý překlad: hláška fotogalerie (3 varianty v EN, 3 v DE), odstavec „Podívejte se blíže…" (3 v EN, 2 v DE), tlačítko „Jak probíhá výroba?" (2 v EN, 2 v DE). |
+| `prvky-podpory-prodeje`, `zamecnicke-konstrukce` | Český meta title má „Rodinná firma / Rodinný podnik Elektro Drapač", EN i DE mají jen „Elektro Drapač". |
+| `designova-svitidla` | Glosář píše „žárovkový" s uvozovkami (`"lightbulb" illuminated sign`, `„Glühlampen"-Leuchtschrift`), na stránce jsou bez uvozovek. A „cortenový plech" je v EN jako `corten steel signage`, glosář má `corten sheet`. |
+| `orientacni-systemy`, EN, uzel `3fcad9d6-…fa0318` | Jediný uzel bez anglického override. Dědí českou hodnotu, která je „No items found.", takže anglicky se zobrazí správně — jen na ostatních stránkách ten uzel override má. |
