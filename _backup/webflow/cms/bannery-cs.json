@@ -1,0 +1,96 @@
+{
+  "_comment": "Záloha kolekce Bannery (primární locale cs) pořízená 2026-09-01 před migrací na lokalizované varianty. Pořízeno z data_cms_tool > list_collection_items, collection_id 6a90303011d6493faa8a946a, cmsLocaleId 653ad95be882f528b35cb5ef. Obsahuje už opravené překlepy. Migrace 1. 9. 2026 proběhla: položky byly smazány a založeny znovu s cmsLocaleIds, takže oldId už neplatí. Soubor slouží k obnově OBSAHU, ne ID.",
+  "collectionId": "6a90303011d6493faa8a946a",
+  "cmsLocaleId": "653ad95be882f528b35cb5ef",
+  "total": 15,
+  "items": [
+    {"oldId": "6a903099f077c43712717cc4", "name": "Světelné nápisy – malý", "slug": "svetelne-napisy-maly", "velky-banner": false,
+     "nadpis": "V ELDR nabízíme širokou škálu designů, které vám umožní přizpůsobit světelný nápis vašim potřebám.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717cc2", "name": "Světelné nápisy – velký", "slug": "svetelne-napisy-velky", "velky-banner": true,
+     "nadpis": "Světelné nápisy, které upoutají už z dálky",
+     "text-tlacitka": "Více našich světelných nápisů", "odkaz-tlacitka": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-3",
+     "text": "Přizpůsobíme nápis vašim potřebám. Kombinujeme estetický design s odolnými materiály, které vydrží i v náročných podmínkách.",
+     "obrazek-1": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1baa19b95f0c1684f0d_648931516726206e6aabe3ce_Profil%25205%2520a%25205s%2520(001).webp",
+     "obrazek-2": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1b83040e824c6bb3078_6492549bb45c012e449f7322_Profil%25205%2520a%25205s%2520(002%252C).webp"},
+
+    {"oldId": "6a903099f077c43712717cc0", "name": "Světelná reklama – malý", "slug": "svetelna-reklama-maly", "velky-banner": false,
+     "nadpis": "V ELDR nabízíme širokou škálu designů, které vám umožní přizpůsobit reklamu vašim potřebám.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717cbe", "name": "LED loga – velký", "slug": "led-loga-velky", "velky-banner": true,
+     "nadpis": "LED loga, které upoutají už z dálky",
+     "text-tlacitka": "Více našich LED reklam", "odkaz-tlacitka": "https://www.eldr.cz/produkty/prvky-podpory-prodeje-led-technologie",
+     "text": "Přizpůsobíme LED logo vašim potřebám. Kombinujeme estetický design s odolnými materiály, které vydrží i v náročných podmínkách.",
+     "obrazek-1": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1ba0cd40dfe15d4359b_648933afd07e20dd4b4fa2de_plno%2520plexi%2520(4).webp",
+     "obrazek-2": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2332ca640a95d4199a6_648934726726206e6aaf412a_plno%2520plexi%2520(14).webp"},
+
+    {"oldId": "6a903099f077c43712717cbc", "name": "LED loga – malý", "slug": "led-loga-maly", "velky-banner": false,
+     "nadpis": "V ELDR nabízíme širokou škálu designů, které vám umožní přizpůsobit LED logo vašim potřebám.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717cba", "name": "Řezaná grafika – malý", "slug": "rezana-grafika-maly", "velky-banner": false,
+     "nadpis": "V ELDR nabízíme širokou škálu designů, které vám umožní přizpůsobit řezanou grafiku vašim potřebám.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717cb8", "name": "Řezaná grafika – velký", "slug": "rezana-grafika-velky", "velky-banner": true,
+     "nadpis": "Zlepšete svoji vizuální prezentaci",
+     "text-tlacitka": "Více ukázek řezané grafiky", "odkaz-tlacitka": "https://www.eldr.cz/produkty/velkoformatovy-tisk#rezana-grafika",
+     "text": "Přeneste svou identitu na různé povrchy s naší řezanou grafikou. Prohlédněte si naše projekty a inspirujte se pro svou reklamu.",
+     "obrazek-1": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1f824e642b5059be93a_648c114f8061630c14bad2f7_polepy%2520(3).webp",
+     "obrazek-2": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17c2ca640a95d40c7b5_648c115d94aaad449a61b28e_polepy%2520(4).webp"},
+
+    {"oldId": "6a903099f077c43712717cb6", "name": "3D reklama – malý", "slug": "3d-reklama-maly", "velky-banner": false,
+     "nadpis": "Chcete reklamu, která vyčnívá? Řekněte nám, jaká je vaše představa.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717cb4", "name": "3D reklama – velký", "slug": "3d-reklama-velky", "velky-banner": true,
+     "nadpis": "3D nápisy, které upoutají už z dálky",
+     "text-tlacitka": "Více našich 3D nápisů", "odkaz-tlacitka": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena",
+     "text": "Přizpůsobíme 3D nápis vašim potřebám. Kombinujeme estetický design s odolnými materiály, které vydrží i v náročných podmínkách.",
+     "obrazek-1": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a237e16ed9cd48aa1fae_648931c5ea4cadddb8f58b4d_Profil%25205%2520a%25205s%2520(1%252C).webp",
+     "obrazek-2": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2353040e824c6bb97a3_6489329b396ac6e20ca9de1c_Se%25CC%258Ctelne%25CC%2581%2520znaky%2520-%2520Profil%25208%2520(001).webp"},
+
+    {"oldId": "6a903099f077c43712717cb2", "name": "Pylony – velký", "slug": "pylony-velky", "velky-banner": true,
+     "nadpis": "Pylony, které upoutají už z dálky",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": "Přizpůsobíme pylon vašim potřebám. Kombinujeme estetický design s odolnými materiály, které vydrží i v náročných podmínkách.",
+     "obrazek-1": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fce0dd6bef54209c53_648b9422c1e252090d3e6ae6_Sve%25CC%258Ctelny%25CC%2581%2520pylon%2520(02%252C).webp",
+     "obrazek-2": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a18197c4267d1dc9ee0d_648b9406841fda59d8f3a6a9_Sve%25CC%258Ctelny%25CC%2581%2520pylon%2520(02).webp"},
+
+    {"oldId": "6a903099f077c43712717cb0", "name": "Pylony – malý", "slug": "pylony-maly", "velky-banner": false,
+     "nadpis": "V ELDR nabízíme širokou škálu designů, které vám umožní přizpůsobit pylon vašim potřebám.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717cae", "name": "Totemy – malý", "slug": "totemy-maly", "velky-banner": false,
+     "nadpis": "V ELDR nabízíme širokou škálu designů, které vám umožní přizpůsobit totem vašim potřebám.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717cac", "name": "Totemy – velký", "slug": "totemy-velky", "velky-banner": true,
+     "nadpis": "Totemy, které upoutají už z dálky",
+     "text-tlacitka": "Více našich totemů", "odkaz-tlacitka": "https://www.eldr.cz/produkty/pylony-a-totemy#totemy",
+     "text": "Přizpůsobíme totem vašim potřebám. Kombinujeme estetický design s odolnými materiály, které vydrží i v náročných podmínkách.",
+     "obrazek-1": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bcce607a4520db8cc8_648b95484e74f0c8f5da675d_Sve%25CC%258Ctelny%25CC%2581%2520totem%2520(02).webp",
+     "obrazek-2": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a100d181c32cd0d868f0_64921c9100683c598b2b08ef_Sve%25CC%258Ctelny%25CC%2581%2520totem%2520(8%252C).webp"},
+
+    {"oldId": "6a903099f077c43712717caa", "name": "3D nápisy – malý", "slug": "3d-napisy-maly", "velky-banner": false,
+     "nadpis": "V ELDR nabízíme širokou škálu designů, které vám umožní přizpůsobit 3D nápis vašim potřebám.",
+     "text-tlacitka": "Cenová nabídka zdarma", "odkaz-tlacitka": "/kontakty#formular",
+     "text": null, "obrazek-1": null, "obrazek-2": null},
+
+    {"oldId": "6a903099f077c43712717ca8", "name": "3D nápisy – velký", "slug": "3d-napisy-velky", "velky-banner": true,
+     "nadpis": "3D nápisy, které upoutají už z dálky",
+     "text-tlacitka": "Více našich 3D nápisů", "odkaz-tlacitka": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena",
+     "text": "Přizpůsobíme 3D nápis vašim potřebám. Kombinujeme estetický design s odolnými materiály, které vydrží i v náročných podmínkách.",
+     "obrazek-1": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2349e21326067656a4a_648924ef510c7c1e8802d178_Podsvi%25CC%2581ceny%25CC%2581%2520na%25CC%2581pis%2520-%2520Profil%25203%2520(0001).webp",
+     "obrazek-2": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a235135f506b8f1563df_64893056c0a2086ed3b24f29_Sve%25CC%258Ctelne%25CC%2581%2520pi%25CC%2581smena%2520-%2520profil%25204%2520%2520(01%252C).webp"}
+  ]
+}

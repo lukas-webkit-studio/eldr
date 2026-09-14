@@ -348,6 +348,7 @@ function locale() {
    Globální proměnné a tokeny
    Původně: current-year.js
    Počítá roky praxe a doplňuje je do [data-var] a do tokenů {#YOE#}.
+   {#YOE#} je sjednocená značka; [data-var] zůstává kvůli starším prvkům.
    ========================================================================== */
 
 (function () {
@@ -390,7 +391,12 @@ function locale() {
 
   onReady(function () {
     fillDataVars(document);
-    $$('.w-richtext, [data-scan-tokens]').forEach(replaceTokensIn);
+    // Scan celého body, ne jen .w-richtext: token {#YOE#} je sjednocená značka
+    // pro počet let na trhu a musí fungovat i v běžných textech (hero štítky,
+    // nadpisy, odrážky). Ve Webflow to jinak nejde — do primárního locale se
+    // přes API nezapisuje a vkládat kvůli tomu per locale <span data-var>
+    // znamená prvek navíc, kterému Webflow přidělí vlastní data-w-id.
+    replaceTokensIn(document.body);
   });
 })();
 
