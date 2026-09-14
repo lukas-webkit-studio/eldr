@@ -135,14 +135,11 @@ a nepublikovaných.
 | Vstupní portály | `vstupni-portaly` | `6a9ab01047299df13695660e` | 3 | hotovo | hotovo | hotovo | ráno |
 | Prvky podpory prodeje | `prvky-podpory-prodeje` | `6a9ab0f0fdf55c29d79dc962` | 3 | hotovo | hotovo | 2 ze 3 | ráno |
 | Světelné panely a tabule | `svetelne-panely-a-tabule` | `6a9ab1e40aec35eaf9d1edec` | 4 | hotovo | hotovo | hotovo | ráno |
-| Designová svítidla | `designova-svitidla` | `6a9ab353346c1fa008c113d7` | 7 | hotovo\* | hotovo | 6 ze 7 | ráno |
+| Designová svítidla | `designova-svitidla` | `6a9ab353346c1fa008c113d7` | 7 | hotovo | hotovo | 6 ze 7 | ráno |
 
-\* Sedmá sekce („Reklama z cortenového plechu") se musela **postavit
-ručně** — vzorová stránka má jen šest produktových sekcí a API neumí
-sekci naklonovat. Postavená sekce je textová: má oddělovač, štítky,
-nadpis a tři odstavce, ale **nemá produktovou fotku, tlačítko ani
-galerii** a chybí jí odsazovací utility třídy (builder je odmítl).
-Viz „Co je jinak, než by mělo být".
+Sedmá sekce Designových svítidel („Reklama z cortenového plechu") se
+14. 9. 2026 postavila znovu — je to plnohodnotná `section_product`
+s fotkou, tlačítkem i štítky. Detail ve „Fázi 4".
 
 ## Sekce podle návrhu
 
@@ -301,16 +298,89 @@ nová stránka převzít **slug staré**, jinak se rozbijí URL i odkazy v menu.
 | `designova-svitidla` | `designova-a-interierova-svitidla-specialni-projekty` |
 | `zamecnicke-konstrukce` | `zamecnicke-konstrukce-na-miru-opracovani-plexiskla` |
 
+## Fáze 4 — kontrola stránek proti návrhu (14. 9. 2026)
+
+### Menu (`Navbar_2024-12`, komponenta `bbed6077-ce65-bdda-117f-76962e8014b6`)
+
+Tři nové odkazy už v komponentě byly, ale dva měly rozbitou kotvu:
+
+| Odkaz | Bylo | Je |
+|---|---|---|
+| Atypické zámečnické konstrukce | `#zamecnicke-konstrukceatypicke-zamecnicke-konstrukce` | `#atypicke-zamecnicke-konstrukce` |
+| Polepy | `#polepy` | `#dalsi-druhy-polepu` |
+| Designové obrazy | text s mezerou na konci | bez mezery |
+
+Kotvy ověřené proti `attributes.id` na dev stránkách, ne odhadem.
+
+**`localization-show-only_cs` se do menu nedává.** Ta třída má
+`display: none` a odkrývá ji až `body.lang-cs`, kterou přidává JS
+(`20-locale.js`). V navbaru nad ohybem by to znamenalo, že odkazy
+probliknou — a při výpadku bundlu by nebyly vůbec. Překlady se navíc
+podle dohodnutého pořadí (část I) dělají **před** publikací na produkci,
+takže se EN/DE menu přeloží normálně.
+
+**LED obrazovky skryté na třech místech:** odkaz v menu přes
+`set_visibility false` (Webflow nativně, ne CSS), sekce i karta na
+stránce už měly combo třídu `hide`. Až přijdou podklady, stačí trojí
+odkrytí.
+
+### Designová svítidla
+
+| Co bylo špatně | Jak to je teď |
+|---|---|
+| Karta „Reklama z cortenového plechu" byla sedmá | je pátá, podle návrhu |
+| Šest ze sedmi popisků karet bylo vymyšlených | přepsané doslova z Figmy |
+| Karta 7 se jmenovala „Designové stojací lampy" | „Designové stojací lampy na zakázku" |
+| Sedmá sekce byla ručně slepený `div` bez fotky, tlačítka a odsazení | postavená znovu přes `data_whtml_builder` jako plnohodnotná `section_product` |
+
+Nová corten sekce: `b0a3ee2d-fb05-415f-e275-4aa042ab94f0`. Má oddělovač,
+dva štítky se zaškrtávátky (SVG prošlo jako DOM prvky), h2, rich text
+s úvodem a dvěma odrážkami, tlačítko `CTA-Button-Primary` a fotku
+`6aa30fe10939b4e8f295d62b` v `product_image-wrapper clipped`.
+
+**Pozor na `set_dom_id` u prvků z whtml builderu** — vrací
+„Conflict … component map". Kotva se musí dát rovnou do HTML
+(`<section id="…">`), to projde.
+
+### Opravené texty sekcí
+
+| Sekce | Bylo | Je |
+|---|---|---|
+| Žárovkové nápisy | restaurace, obchody, **kina** nebo | **kino** nebo |
+| Neonové nápisy | Neonové trubice**:** umožňují **vytvořit** | Neonové trubice umožňují **vytvářet** |
+| Neonové nápisy | Umístění: **ideální jsou tam** | Umístění: **Jsou ideální tam** |
+| Blok layout253 | ze žárem tvarovaných **sklěněných** trubic | **skleněných** |
+| Blok layout253 | po naplnění plynem **září** červeně | **svítí** červeně |
+
+„svítí" je ověřené i proti živému webu, odkud designér text přebíral.
+
+### Co se ověřit nepodařilo
+
+Figma MCP má na tarifu Starter limit volání a **došel uprostřed
+kontroly**. Ověřené proti návrhu jsou sekce **Designová svítidla,
+Žárovkové nápisy, Neonové nápisy, blok layout253 a Světelná čísla domů**
+plus obě řady karet.
+
+**Neověřené zůstaly tři sekce: Mechové stěny, Reklama z cortenového
+plechu a Designové stojací lampy.** Jejich texty pocházejí
+z `produktove-stranky-texty.md`. Ve čtyřech ověřených sekcích měl tenhle
+dokument pět odchylek, takže u zbylých tří se s chybami počítat dá.
+Až limit povolí, patří na ně stejná kontrola — nody
+`1968:5646`, `1968:5727` / `1969:5808` a `1971:5970` v souboru
+`TYIPfNxhM7scK7QG6OCGGs`.
+
+Jedno slovo zůstalo sporné i v ověřené sekci: **Světelná čísla domů**
+mají na stránce „**teple** bílé světlo, nebo **studeně** modré
+podsvícení", oba agenti četli v návrhu „**teplé** bílé / **studené**
+modré". Rozdíl je jeden diakritický znak na rozmazaném renderu a na
+stránce je gramaticky správnější varianta, takže se **neměnilo**.
+
 ## Co je jinak, než by mělo být
 
-- **Sedmá sekce Designových svítidel** („Reklama z cortenového plechu")
-  je postavená ručně a je jen textová — bez fotky, bez tlačítka „Nezávazně
-  poptat", bez galerie a bez odsazovacích tříd. Nejrychlejší oprava je
-  v Designeru zduplikovat sousední produktovou sekci, přepsat texty
-  (jsou v `produktove-stranky-texty.md`), nastavit id
-  `reklama-z-cortenoveho-plechu` a ručně postavenou sekci smazat.
-- **Sedmá karta rozcestníku** na téže stránce je postavená stejným
-  způsobem. Odkaz i texty sedí, ale fotka je zástupná.
+- ~~**Sedmá sekce Designových svítidel**~~ — **vyřešeno 14. 9. 2026**,
+  postavená znovu jako plnohodnotná sekce, viz „Fáze 4".
+- ~~**Sedmá karta rozcestníku**~~ — **vyřešeno**, má správnou fotku,
+  správný popisek i správné pořadí.
 - **Ikony v bloku `section_layout253`** zůstaly zděděné z 3D nápisů
   (štětec, štít). V návrhu jsou jinde zaškrtávátka nebo otazník. Chce to
   přepsat `code` v HTML embedu, nebo nechat být — je to drobnost.
