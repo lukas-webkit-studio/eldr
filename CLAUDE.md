@@ -94,6 +94,15 @@ Změna v repu se na web nedostane, dokud se v Custom Code nepřepne připnutý
 commit. Po publikaci vždy ověř, co se doopravdy načítá — stáhni si živou
 stránku a najdi v ní ten commit.
 
+**`publish_site` může tiše neproběhnout.** Nástroj vrací jen ozvěnu
+parametrů (`{customDomains, publishToWebflowSubdomain, publishScope}`), ne
+výsledek publikace — vypadá to stejně, ať se publikovalo nebo ne. Ověřuj to
+`data_sites_tool > get_site`: **publikace proběhla, jen když se pohnul
+`lastPublished`** (u staging pole na úrovni webu, u produkce pole
+u konkrétní domény v `customDomains`). 14. 9. 2026 takhle čtyři volání za
+sebou neudělala nic a obsah zůstal jen v Designeru; první volání týž den
+přitom prošlo. Nehádej, čti `lastPublished`.
+
 **Uživatel na custom code sahat nemusí.** Přepnutí i publikace jdou přes
 API (`data_scripts_tool > set_site_freeform_code`,
 `data_sites_tool > publish_site`) a patří k dokončení práce, ne do seznamu
