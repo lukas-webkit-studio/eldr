@@ -561,3 +561,45 @@ karty ze tří sekcí — v návrhu jsou ale karty taky jen dvě.
   jen ověřené přes API. Než se bude publikovat, projdi je v Designeru.
 - **Překlady EN a DE** jsou u nových stránek prázdné. Slugy se
   neprohazují, dokud nebudou hotové.
+
+## Kontrola před produkcí (15. 9. 2026)
+
+Staging publikován znovu v 07:26 — ranní překliknutí obrázků v Designeru
+do buildu z 14. 9. 21:19 ještě nespadlo, odkaz pro klienta by ukazoval
+starou verzi.
+
+### Dvě věci, které by shodily spuštění
+
+**1. Všech šest prohozených stránek má `noindex` a chybí v sitemapě.**
+Nastavení se zdědilo z `/dev/` režimu. Ověřeno stažením živého HTML:
+
+| Stránka | `noindex` |
+|---|---|
+| Výstrče, Velkoformátový tisk, Portály, Podpora prodeje, Svítidla, Zámečnické | **ano** |
+| Orientační systémy, Světelné panely, 3D nápisy, Pylony | ne |
+
+V sitemapě (74 adres) je z produktových stránek jen Přehled, Orientační
+systémy, Světelné panely, 3D nápisy a Pylony. Šest nových chybí, staré
+verze z ní vypadly spolu s `draft: true`. Kdyby se publikovalo takhle,
+Google by šest produktových stránek zahodil.
+
+**Přes API to nejde** — `data_pages_tool` pole pro noindex ani pro
+vyřazení ze sitemapy nemá, `get_page_metadata` ho nevrací. Je to
+Designer, Page settings → SEO, u každé z šesti stránek.
+
+**2. Open Graph chyběl úplně.** Nové stránky se duplikovaly bez
+`titleCopied` / `descriptionCopied` a bez OG obrázku, takže se
+nerenderovaly žádné `og:*` ani `twitter:*` metatagy — sdílení odkazu na
+LinkedInu nebo ve Facebook Messengeru by vyrobilo holý text.
+**Opraveno přes API** u všech šesti: `titleCopied: true`,
+`descriptionCopied: true`, `imageUrl` na sdílený
+`65e9e62f5b3be4ac12c61741_eldr-open-graph-image.webp`, stejně jako to má
+Orientační systémy.
+
+### Dva obrázky pořád nejsou překliknuté
+
+Na `/produkty/velkoformatovy-tisk` mají `uvod.jpg` a `rezana-grafika.jpg`
+v `sizes` pořád `(max-width: 479px) 100vw, 120px`. Slot je ~600 px, takže
+prohlížeč sáhne po nejmenší variantě a fotka je rozmazaná. Zbytek
+produktových fotek `sizes` má v pořádku; `100vw` u čtyř dalších je jen
+zbytečně stažená data, ne rozmazání.
