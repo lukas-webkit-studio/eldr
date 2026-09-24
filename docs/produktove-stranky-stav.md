@@ -1,0 +1,651 @@
+# Přestavba produktových stránek — stav a zadání
+
+Živý stav rozpracované série. **Čte se jako první**, když práce pokračuje
+v nové session. Postup, mapa framů a technické limity jsou v
+`produktove-stranky-figma.md`, texty z návrhu v
+`produktove-stranky-texty.md`, element ID v `produktove-stranky-id-mapa.md`.
+
+## Rozhodnutí zadavatele (3. 9. 2026)
+
+1. **Sekce, které jsou v návrhu, ale nevede na ně odkaz z menu**
+   („Atypické zámečnické konstrukce", „Atypické výstrče", „Designové
+   obrazy") — **postavit** a **přidat odkaz do menu**. V sekundárních
+   locale je odkaz **skrýt** combo třídou `localization-show-only_cs`.
+2. **Publikuje se jednou, až bude hotová celá série.**
+3. **Obrázky se do stránek nevkládají** — zápis přes API rozbije `sizes`
+   a obrázek zešedne. Člověk je v Designeru překlikne podle seznamu níž.
+4. **Nejednoznačnosti se neobcházejí** — zvolí se nejbližší rozumná
+   varianta a zapíše se do „Rozhodnutí učiněná za pochodu".
+
+## Konvence produktového obrázku (10. 9. 2026)
+
+`product_image-wrapper` má **vždycky** combo třídu `clipped` a uvnitř
+**jediný** obrázek `product_image` — bez `localization-show-only_*`.
+
+Tři jazykové sloty zůstávají jen tam, kde je na obrázku **český text**,
+který se musí přeložit: **Světelné panely a tabule** a **3D nápisy**.
+Nikde jinde ne — fotka bez textu je pro všechny jazyky stejná.
+
+Hotovo na: Zámečnické, Výstrče, Velkoformátový tisk, Vstupní portály,
+Prvky podpory prodeje, Designová svítidla. Nesaháno na: Světelné panely
+a tabule, 3D nápisy, Pylony a totemy (ty jsou podle zadavatele 1:1).
+
+## Obrázky z Figmy v assetech (10. 9. 2026)
+
+Všechno leží pod `Produkty / <Produkt> / {Hero, Produkt, Karty}`.
+Názvy souborů odpovídají kotvě sekce, takže se v Designeru vybírají podle
+jména, ne podle náhledu.
+
+| Produkt | složka | Hero | Produkt | Karty |
+|---|---|---|---|---|
+| Výstrče | `6aa30fa01ac8ca35690d3775` | `6aa30faec395276afa5065fd` | `6aa30faf9ddbae94d8d1fb5d` | `6aa30faf1ac8ca35690d3aa3` |
+| Velkoformátový tisk | `6aa30fa042f3452230753c03` | `6aa30faf719b2d58cd0d3e10` | `6aa30faf8ca79fa57be1bdf4` | `6aa30fafad0e44f64602831d` |
+| Vstupní portály | `6aa30fa142f3452230753c23` | `6aa30faf466f13cadb572f6a` | `6aa30faf877a467eaa43803b` | `6aa30fb0976f8d96e6d6186e` |
+| Prvky podpory prodeje | `6aa30fa1bda15d8c3504bf75` | `6aa30fb0976f8d96e6d61895` | `6aa30fb04f2a2d65e79b9b8e` | `6aa30fb07928fa48c011c0c6` |
+| Designová svítidla | `6aa30fa17749407044bad08e` | `6aa30fb0d5fd851fcb6f9a3b` | `6aa30fb182720f7758da50b6` | `6aa30fb182720f7758da50cb` |
+
+| Zámečnické konstrukce | `6a9aa4837d59ae6369c9862a` | `6aa31be7bb2d9af4cd375e38` | `6aa31be8bf1153ab0cebf93a` | `6aa31be8bb2d9af4cd375f25` |
+
+Orientační systémy (`6a99a9ba4dfafeff4a964328`) podsložky nemají —
+jejich obrázky vznikly dřív.
+
+### Co se s obrázky dělalo
+
+- **Produkt** — ořezáno na 1:1, předmět doprostřed, JPEG q92, max 2200 px.
+  Ořez hledá těžiště hran a jasu; u šesti fotek byl posunutý ručně.
+  Šikmý ořez se **nedělá** — dělá ho `clipped` v CSS.
+- **Hero** — beze změny. Export je 5760 × 1408 px (4:1). Přidat 15 % nahoře
+  a dole nejde, ty pixely v exportu nejsou; šlo by to jen dogenerovat.
+- **Karty** — beze změny. Export je 1792 × 549 nebo 1346 × 558 px, což
+  odpovídá pásu `layout400_card-image-wrapper` (výška 9 rem).
+
+### Zámečnické konstrukce — přeříznuto 10. 9. 2026
+
+Tři produktové fotky byly nahrané v původním poměru z Figmy, ne 1:1.
+`zamecnicke-konstrukce.jpg` měl 1280 × 2560 px (na výšku), takže
+`object-fit: cover` z něj v sekci ukazoval prostřední pás — trávu a patu
+konstrukce. Návrh přitom ukazuje horní část: billboard, jeřáb, věž.
+
+Původní tři assety jsou **smazané** a nahrazené čtvercovými ořezy ve
+složce `Produkty / Zámečnické konstrukce / Produkt/`:
+
+| Soubor | Rozměr | Nové ID |
+|---|---|---|
+| `zamecnicke-konstrukce.jpg` | 1280 × 1280 | `6aa31bf38b809890ddb04924` |
+| `atypicke-zamecnicke-konstrukce.jpg` | 2088 × 2088 | `6aa37f0584ee19b4f9bd605a` |
+| `opracovani-a-prodej-plexiskla.jpg` | 972 × 972 | `6aa31bf4b3b526cb1fb2c55c` |
+
+**U zastávky se dogenerovávat muselo.** Zastávka i s betonovou deskou
+měří 1560 × 1672 px a její těžiště leží 90 px pod středem zdroje. Ve
+zdroji 2560 × 1920 proto žádný čtverec kolem ní nejde vycentrovat —
+dole není dost místa. První pokus (prostý ořez 1920 × 1920 od kraje)
+ji odsunul doprava dolů: nahoře pás stromů, dole nic.
+
+Postup, který to spravil:
+
+1. Outpaint 4:3 → 1:1 (Higgsfield), který přidal pás nad a pod originál.
+2. Model ale **přerenderoval celý obrázek** a zkomolil cedulku Elektro
+   Drapače na „Elektro Drapoč / GTENAMA Y.BELRVA". Použil se z něj proto
+   jen dogenerovaný pás.
+3. Originální pixely se vrátily zpátky přes celou svou plochu, se
+   změkčeným spodním okrajem (48 px) a barevně srovnaným pásem pod ním.
+4. Z výsledné plochy se vyřízl čtverec 2088 × 2088 vycentrovaný na
+   zastávku — okraj 264 px vlevo i vpravo, 208 px nahoře i dole.
+
+Vygenerovaných je jen **spodních 168 px** (tráva a hlína), zbytek je
+originál. Šev není vidět.
+
+Zbylé dvě fotky dogenerování nepotřebovaly, kolem předmětu bylo dost
+místa. `opracovani-a-prodej-plexiskla.jpg` má jen 972 px
+(zdroj z Figmy i z CMS galerie má stejných 1296 × 972, větší verze
+neexistuje). Na retině to bude o kousek měkčí; spravila by to jen jiná
+fotka.
+
+**Na `/dev/zamecnicke-konstrukce` jsou teď tři rozbité obrázky** — staré
+assety zmizely. Vyřeší se tím, že se v Designeru vyberou nové, což se
+u téhle stránky muselo udělat tak jako tak kvůli `sizes`.
+
+### Rozlišení produktových fotek
+
+Sedm zdrojů (corten, mechové stěny, LED displeje, čísla domů, řezaná
+grafika, výstrče, úvod tisku) přišlo z Figmy jen v 1254 × 1102 px. Jejich
+čtvercový ořez má 1102 px — na půlku šířky ve 2× retině to stačí přesně,
+rezerva žádná. Ostatní jsou 2000–2200 px.
+
+### Návrh nemá fotku pro
+
+`#led-obrazovky` (Prvky podpory prodeje) — v návrhu je na místě fotky jen
+barevná plocha. Slot zůstal prázdný.
+
+SAGASSER se v návrhu používá dvakrát: jako karta „Architektonické prvky"
+(Vstupní portály) a jako karta „LED displaye" (Prvky podpory prodeje).
+Není to omyl v přiřazení, tak to má návrh.
+
+## Stav stránek
+
+Všech sedm stránek stojí v `/dev/`, je vyřazených ze sitemapy
+a nepublikovaných.
+
+| Stránka | `/dev/` slug | pageId | Sekcí | Struktura | Texty | Galerie | Obrázky |
+|---|---|---|---|---|---|---|---|
+| Orientační systémy | `orientacni-systemy` | `6401fcf4e07002bda0fea1d5` | 1 | hotovo | hotovo | hotovo | ráno |
+| Zámečnické konstrukce | `zamecnicke-konstrukce` | `6a9aa29d3f076848d52e7d63` | 3 | hotovo | hotovo | hotovo | ráno |
+| Výstrče, lékárenské znaky | `vystrce-lekarenske-znaky` | `6a9aa82d1bc055833d458566` | 3 | hotovo | hotovo | 2 ze 3 | ráno |
+| Velkoformátový tisk | `velkoformatovy-tisk` | `6a9aada633cfcc4604230b5f` | 4 | hotovo | hotovo | 3 ze 4 | ráno |
+| Vstupní portály | `vstupni-portaly` | `6a9ab01047299df13695660e` | 3 | hotovo | hotovo | hotovo | ráno |
+| Prvky podpory prodeje | `prvky-podpory-prodeje` | `6a9ab0f0fdf55c29d79dc962` | 3 | hotovo | hotovo | 2 ze 3 | ráno |
+| Světelné panely a tabule | `svetelne-panely-a-tabule` | `6a9ab1e40aec35eaf9d1edec` | 4 | hotovo | hotovo | hotovo | ráno |
+| Designová svítidla | `designova-svitidla` | `6a9ab353346c1fa008c113d7` | 7 | hotovo | hotovo | 6 ze 7 | ráno |
+
+Sedmá sekce Designových svítidel („Reklama z cortenového plechu") se
+14. 9. 2026 postavila znovu — je to plnohodnotná `section_product`
+s fotkou, tlačítkem i štítky. Detail ve „Fázi 4".
+
+## Sekce podle návrhu
+
+Hvězdička = sekce bez odkazu v menu (rozhodnutí 1).
+
+| Stránka | Sekce v pořadí podle návrhu |
+|---|---|
+| Orientační systémy | `orientacni-systemy` |
+| Zámečnické konstrukce | `zamecnicke-konstrukce`, `atypicke-zamecnicke-konstrukce`\*, `opracovani-a-prodej-plexiskla` |
+| Výstrče | `vystrce`, `atypicke-vystrce`\*, `lekarenske-znaky` |
+| Velkoformátový tisk | `uvod`, `rezana-grafika`, `dalsi-druhy-polepu`, `designove-obrazy`\* |
+| Vstupní portály | `vstupni-portaly`, `architektonicke-prvky`, `vlajky` |
+| Prvky podpory prodeje | `prvky-podpory-prodeje`, `led-displaye`, `led-obrazovky` |
+| Světelné panely a tabule | `svetelne-panely`, `intarzie`, `reklamni-tabule`, `menuboardy` |
+| Designová svítidla | `designova-svitidla`, `zarovkove-svetelne-napisy`, `neonove-napisy`, `mechove-steny`, `reklama-z-cortenoveho-plechu`, `svetelna-cisla-domu`, `stojaci-lampy` |
+
+## Co člověk udělá ráno
+
+### A. Obrázky — proč to nejde přes API
+
+Zápis obrázku přes API rozbije atribut `sizes` a fotka se zobrazí
+rozmazaně (detail v `produktove-stranky-figma.md`). Každý obrázek se
+proto musí **v Designeru vybrat znovu ručně** — tím se `sizes`
+přepočítá. Týká se to hero fotky, obrázků na kartách rozcestníku
+a produktových fotek v sekcích.
+
+**Produktová fotka je jen jedna** pro všechny jazyky (viz konvence výš).
+Tři jazykové sloty zůstaly jen u Světelných panelů a 3D nápisů, kde je
+na grafice český text.
+
+### B. Hero fotky — konkrétní soubory
+
+Pět stránek má hero přímo z návrhu, nahraný a pojmenovaný. Zbytek bere
+tutéž fotku, jakou má dnes živý web.
+
+| Stránka | Asset |
+|---|---|
+| Výstrče | `Produkty / Výstrče / Hero / hero.png` (T-Mobile výstrč) |
+| Velkoformátový tisk | `Produkty / Velkoformátový tisk / Hero / hero.png` (plachta ČSOB) |
+| Vstupní portály | `Produkty / Vstupní portály / Hero / hero.png` (zelený portál) |
+| Prvky podpory prodeje | `Produkty / Prvky podpory prodeje / Hero / hero.png` (růžové T) |
+| Designová svítidla | `Produkty / Designová svítidla / Hero / hero.png` (neony na stropě) |
+| Světelné panely a tabule | `Sětelné znaky - Profil 8 (0001) 2.avif` (`68c02a773967296e4cfa1995`) |
+| Zámečnické konstrukce | `…_IMG_3839.webp` (`688755592e0a6fffa66ae8c6`) — hero se z Figmy nepodařilo stáhnout |
+
+### C. Produktové fotky, které už na webu jsou
+
+Tyhle stačí vybrat z assetů, jsou to přesně ty ze staré verze stránky:
+
+| Stránka / sekce | cs | en | de |
+|---|---|---|---|
+| Výstrče / `#vystrce` | `Vystrc se zasunutym plexi 1.png` | jen jeden obrázek | — |
+| Světelné panely / `#svetelne-panely` | `Svetelny panel.png` | `Svetelny panel_EN.png` | `Svetelny panel_DE.png` |
+| Světelné panely / `#intarzie` | `Plexiintarzie podlozena.png` | `Plexiintarzie podlozena_EN.png` | `Plexiintarzie podlozena_DE.png` |
+| Světelné panely / `#reklamni-tabule` | `Reklamni tabule.png` | `Reklamni tabule_EN.png` | `Reklamni tabule_DE.png` |
+| Světelné panely / `#menuboardy` | `UHK 1.avif` | — | — |
+| Orientační systémy / hero | `Produkty / Orientační systémy / hero.webp` | — | — |
+| Orientační systémy / sekce | `Produkty / Orientační systémy / orientacni-systemy-budov-a-arealu.png` | — | — |
+
+Zámečnické produktové fotky jsou v části D — byly znovu ořezané.
+
+### D. Produktové fotky z návrhu
+
+Devatenáct fotek z návrhu je ořezaných na 1:1 a nahraných. Leží ve
+složce **Produkty / <Produkt> / Produkt/**, soubor se jmenuje podle
+kotvy sekce — `#vystrce` → `vystrce.jpg`.
+
+| Stránka | Sekce → soubor |
+|---|---|
+| Výstrče | `vystrce.jpg`, `atypicke-vystrce.jpg`, `lekarenske-znaky.jpg` |
+| Velkoformátový tisk | `uvod.jpg`, `rezana-grafika.jpg`, `dalsi-druhy-polepu.jpg`, `designove-obrazy.jpg` |
+| Vstupní portály | `vstupni-portaly.jpg`, `architektonicke-prvky.jpg`, `vlajky.jpg` |
+| Prvky podpory prodeje | `prvky-podpory-prodeje.jpg`, `led-displaye.jpg` |
+| Zámečnické konstrukce | `zamecnicke-konstrukce.jpg`, `atypicke-zamecnicke-konstrukce.jpg`, `opracovani-a-prodej-plexiskla.jpg` |
+| Designová svítidla | `designova-svitidla.jpg`, `zarovkove-svetelne-napisy.jpg`, `neonove-napisy.jpg`, `mechove-steny.jpg`, `reklama-z-cortenoveho-plechu.jpg`, `svetelna-cisla-domu.jpg`, `stojaci-lampy.jpg` |
+
+Zbývá jen `#led-obrazovky` (Prvky podpory prodeje) — návrh tam fotku
+nemá, je tam barevná plocha. Vyber prosím vlastní z galerie produktu.
+
+Světelné panely mají fotky ze staré verze stránky, viz tabulka v části C.
+
+### E. Obrázky na kartách rozcestníku
+
+Dvacet karet z návrhu je nahraných beze změny ve složce
+**Produkty / <Produkt> / Karty/**. Soubor se jmenuje podle kotvy sekce,
+na kterou karta odkazuje, s příponou `-karta`.
+
+| Stránka | Karty |
+|---|---|
+| Výstrče | `vystrce-karta.png`, `atypicke-vystrce-karta.png`, `lekarenske-znaky-karta.jpg` |
+| Velkoformátový tisk | `uvod-karta.png`, `rezana-grafika-karta.png`, `dalsi-druhy-polepu-karta.png`, `designove-obrazy-karta.png` |
+| Vstupní portály | `vstupni-portaly-karta.png`, `architektonicke-prvky-karta.png`, `vlajky-karta.png` |
+| Prvky podpory prodeje | `prvky-podpory-prodeje-karta.png`, `led-displaye-karta.png`, `led-obrazovky-karta.png` |
+| Designová svítidla | `designova-svitidla-karta.png`, `zarovkove-svetelne-napisy-karta.png`, `neonove-napisy-karta.png`, `mechove-steny-karta.png`, `reklama-z-cortenoveho-plechu-karta.png`, `svetelna-cisla-domu-karta.png`, `stojaci-lampy-karta.png` |
+
+Zámečnické a Světelné panely karty z návrhu nemají — zůstávají zděděné
+z 3D nápisů.
+
+### F. Sekce bez galerie v CMS
+
+Čtyři sekce z návrhu nemají v poli **Fotogalerie** (kolekce Fotografie)
+svou možnost a přes API ji nejde přidat. U těch je galerie **skrytá**:
+
+| Sekce | Stránka |
+|---|---|
+| Atypické výstrče | Výstrče |
+| Designové obrazy | Velkoformátový tisk |
+| LED obrazovky | Prvky podpory prodeje |
+| Reklama z cortenového plechu | Designová svítidla |
+
+U „LED obrazovek" a „cortenu" je to stejné i na živém webu. U zbylých
+dvou: až v CMS založíš možnost a otaguješ fotky, stačí galerii odkrýt
+a nastavit filtr.
+
+### G. Menu
+
+Až budou stránky odsouhlasené, je potřeba do komponenty `Navbar_2024-12`
+přidat tři odkazy — `#atypicke-vystrce`, `#atypicke-zamecnicke-konstrukce`
+a `#designove-obrazy` — s combo třídou `localization-show-only_cs`.
+**Zatím to není udělané**, protože navbar je společný pro celý web
+a zásah do něj se projeví všude.
+
+### H. robots.txt
+
+`Disallow: /dev/` do Site settings → SEO. Dev stránky nemají `noindex`
+a ze sitemapy je vyřazuje jen nastavení u stránky. API na robots.txt
+nesahá.
+
+### I. Nasazení a překlady — dohodnuté pořadí
+
+Reklamy míří na dnešní adresy, takže **URL se měnit nesmí**. Prohození
+slugu novou URL nevyrábí: nová stránka převezme slug té staré, stará
+dostane `…-old`, adresa zůstane doslova stejná.
+
+Překlady se ale ztratí tak jako tak — texty jsou nové, starý překlad by
+neseděl. Proto pořadí:
+
+1. prohodit slugy (nová stránka na ostrý slug, stará na `…-old`)
+2. publikovat **jen na doménu webflow.io**, ne na produkci
+3. nechat přeložit do EN a DE
+4. publikovat na produkci
+
+Mezi krokem 1 a 4 **nesmí nikdo publikovat na produkci** — Webflow pouští
+ven celý web, takže by rozdělané stránky vystrčil s sebou.
+
+Dev stránky mají kratší slugy než ostré verze, takže při kroku 1 musí
+nová stránka převzít **slug staré**, jinak se rozbijí URL i odkazy v menu.
+
+| Dev slug | Ostrý slug, který má převzít |
+|---|---|
+| `vystrce-lekarenske-znaky` | `vystrce-lekarenske-znaky` |
+| `velkoformatovy-tisk` | `velkoformatovy-tisk` |
+| `vstupni-portaly` | `architektonicke-prvky-vstupni-portaly-vlajky` |
+| `prvky-podpory-prodeje` | `prvky-podpory-prodeje-led-technologie` |
+| `svetelne-panely-a-tabule` | `tabule-a-svetelne-panely` |
+| `designova-svitidla` | `designova-a-interierova-svitidla-specialni-projekty` |
+| `zamecnicke-konstrukce` | `zamecnicke-konstrukce-na-miru-opracovani-plexiskla` |
+
+## Fáze 4 — kontrola stránek proti návrhu (14. 9. 2026)
+
+### Menu (`Navbar_2024-12`, komponenta `bbed6077-ce65-bdda-117f-76962e8014b6`)
+
+Tři nové odkazy už v komponentě byly, ale dva měly rozbitou kotvu:
+
+| Odkaz | Bylo | Je |
+|---|---|---|
+| Atypické zámečnické konstrukce | `#zamecnicke-konstrukceatypicke-zamecnicke-konstrukce` | `#atypicke-zamecnicke-konstrukce` |
+| Polepy | `#polepy` | `#dalsi-druhy-polepu` |
+| Designové obrazy | text s mezerou na konci | bez mezery |
+
+Kotvy ověřené proti `attributes.id` na dev stránkách, ne odhadem.
+
+**`localization-show-only_cs` se do menu nedává.** Ta třída má
+`display: none` a odkrývá ji až `body.lang-cs`, kterou přidává JS
+(`20-locale.js`). V navbaru nad ohybem by to znamenalo, že odkazy
+probliknou — a při výpadku bundlu by nebyly vůbec. Překlady se navíc
+podle dohodnutého pořadí (část I) dělají **před** publikací na produkci,
+takže se EN/DE menu přeloží normálně.
+
+**LED obrazovky skryté na třech místech:** odkaz v menu přes
+`set_visibility false` (Webflow nativně, ne CSS), sekce i karta na
+stránce už měly combo třídu `hide`. Až přijdou podklady, stačí trojí
+odkrytí.
+
+### Karta lékárenského znaku (Výstrče)
+
+Fotka z návrhu byla rozmazaná — export měl 1792 × 549 px, ale byl to
+upscale něčeho mnohem menšího, takže neon i cedule za sklem byly rozpité.
+
+Opraveno AI restaurací (Higgsfield, bytedance upscale). Přímo nešla:
+úzký pás 3,26 : 1 model dvakrát odmítl. Obrázek se proto zrcadlově
+doplnil na 4 : 3, prohnal upscalem na 4096 px a pás se z výsledku zase
+vyřízl. Výsledek `lekarenske-znaky-karta.jpg`, 2400 × 735 px, asset
+`6aa7bba631b9bc9655495824`. Původní rozmazaný asset smazán.
+
+Eskulapova mísa s hadem zůstala věrná, přibyl čitelný držák kříže
+i nápis „ogistra" na ceduli za sklem. Ostatní karty se nesahalo.
+
+### Designová svítidla
+
+| Co bylo špatně | Jak to je teď |
+|---|---|
+| Karta „Reklama z cortenového plechu" byla sedmá | je pátá, podle návrhu |
+| Šest ze sedmi popisků karet bylo vymyšlených | přepsané doslova z Figmy |
+| Karta 7 se jmenovala „Designové stojací lampy" | „Designové stojací lampy na zakázku" |
+| Sedmá sekce byla ručně slepený `div` bez fotky, tlačítka a odsazení | postavená znovu přes `data_whtml_builder` jako plnohodnotná `section_product` |
+
+Nová corten sekce: `b0a3ee2d-fb05-415f-e275-4aa042ab94f0`. Má oddělovač,
+dva štítky se zaškrtávátky (SVG prošlo jako DOM prvky), h2, rich text
+s úvodem a dvěma odrážkami, tlačítko `CTA-Button-Primary` a fotku
+`6aa30fe10939b4e8f295d62b` v `product_image-wrapper clipped`.
+
+**Pozor na `set_dom_id` u prvků z whtml builderu** — vrací
+„Conflict … component map". Kotva se musí dát rovnou do HTML
+(`<section id="…">`), to projde.
+
+### Opravené texty sekcí
+
+| Sekce | Bylo | Je |
+|---|---|---|
+| Žárovkové nápisy | restaurace, obchody, **kina** nebo | **kino** nebo |
+| Neonové nápisy | Neonové trubice**:** umožňují **vytvořit** | Neonové trubice umožňují **vytvářet** |
+| Neonové nápisy | Umístění: **ideální jsou tam** | Umístění: **Jsou ideální tam** |
+| Blok layout253 | ze žárem tvarovaných **sklěněných** trubic | **skleněných** |
+| Blok layout253 | po naplnění plynem **září** červeně | **svítí** červeně |
+
+„svítí" je ověřené i proti živému webu, odkud designér text přebíral.
+
+### Co se ověřit nepodařilo
+
+Figma MCP má na tarifu Starter limit volání a **došel uprostřed
+kontroly**. Ověřené proti návrhu jsou sekce **Designová svítidla,
+Žárovkové nápisy, Neonové nápisy, blok layout253 a Světelná čísla domů**
+plus obě řady karet.
+
+**Neověřené zůstaly tři sekce: Mechové stěny, Reklama z cortenového
+plechu a Designové stojací lampy.** Jejich texty pocházejí
+z `produktove-stranky-texty.md`. Ve čtyřech ověřených sekcích měl tenhle
+dokument pět odchylek, takže u zbylých tří se s chybami počítat dá.
+Až limit povolí, patří na ně stejná kontrola — nody
+`1968:5646`, `1968:5727` / `1969:5808` a `1971:5970` v souboru
+`TYIPfNxhM7scK7QG6OCGGs`.
+
+Jedno slovo zůstalo sporné i v ověřené sekci: **Světelná čísla domů**
+mají na stránce „**teple** bílé světlo, nebo **studeně** modré
+podsvícení", oba agenti četli v návrhu „**teplé** bílé / **studené**
+modré". Rozdíl je jeden diakritický znak na rozmazaném renderu a na
+stránce je gramaticky správnější varianta, takže se **neměnilo**.
+
+## Publikace 14. 9. 2026 a kontrola živého webu
+
+Publikováno na `eldr.cz`, `www.eldr.cz` i webflow.io na výslovný pokyn
+zadavatele. Ověřeno stažením živých stránek:
+
+- v head je `GTM-W6PR2VX` a pět Finsweet skriptů — nic nezmizelo
+- bundle drží na commitu `0b12f9b` (do `src/` se nesahalo)
+- **robots.txt už `Disallow: /dev/` obsahuje** a v sitemapě je nula
+  `/dev/` adres — část H je hotová, nic ručně dodělávat netřeba
+- všechny čtyři zásahy do menu jsou venku: `#atypicke-zamecnicke-konstrukce`
+  a `#dalsi-druhy-polepu` sedí, rozbité `#polepy` i slepená kotva zmizely,
+  `#led-obrazovky` v menu není
+
+### Atribut `sizes` — audit všech stránek
+
+Zadavatel obrázky v Designeru proklikal. Ověřeno: **rozbitý vzorec
+`343px` se nevyskytuje ani jednou.** Sedí i pořadí sekcí a karet
+Designových svítidel včetně nové corten sekce.
+
+Zbývá ale devět obrázků, které Designerem neprošly — poznají se podle
+`sizes`, který neodpovídá skutečné šířce slotu:
+
+| Stránka | Obrázek | `sizes` | Proč |
+|---|---|---|---|
+| Zámečnické | `zamecnicke-konstrukce.jpg` | — | ukazuje na **smazaný** asset `6a9aa48b…` |
+| Zámečnické | `atypicke-zamecnicke-konstrukce.jpg` | — | ukazuje na **smazaný** asset `6aa31bf4…` |
+| Zámečnické | `opracovani-a-prodej-plexiskla.jpg` | `100vw` | ukazuje na **smazaný** asset `6a9aa48c…` |
+| Velkoformátový tisk | `uvod.jpg` | `120px` | slot je ~600 px, prohlížeč sáhne po 500w variantě |
+| Velkoformátový tisk | `rezana-grafika.jpg` | `120px` | totéž |
+| Velkoformátový tisk | 4 karty rozcestníku | `144px` / `121px` | bez breakpointů, karta je ~300 px |
+| Orientační systémy | produktová fotka | `150px` | totéž |
+| Výstrče | `lekarenske-znaky-karta.jpg` | bez `sizes` | nasazeno přes API 14. 9. |
+| Designová svítidla | `reklama-z-cortenoveho-plechu.jpg` | bez `sizes` | nasazeno přes API 14. 9. |
+
+Poslední dva nejsou rozmazané — bez `sizes` prohlížeč bere největší
+variantu. Jen zbytečně tahá data.
+
+Zámečnické tři jsou naopak **staré ořezy**: assety se 10. 9. nahradily
+novými, ale stránka pořád odkazuje na ty smazané. Soubory na S3 přežily,
+takže se zobrazují, ale je to předchozí verze včetně nevycentrované
+zastávky.
+
+### Světelné panely a tabule
+
+Stránka `/dev/svetelne-panely-a-tabule` vrací 404, protože má
+`draft: true`. Podle zadavatele je tahle stránka „už převedená", takže
+dev kopie je nejspíš zbytek a **do prohození slugů nepatří** —
+prohazuje se šest stránek, ne sedm. Než se slugy prohodí, je to potřeba
+potvrdit.
+
+## Prohození slugů a staging (14. 9. 2026)
+
+Překlad byl podle `docs/stav-prekladu.json` hotový, proto se prohodily
+slugy šesti stránek. Nové stránky převzaly ostré adresy, staré se
+přejmenovaly na `…-old`, přesunuly do `/dev/` a jsou v draftu.
+
+| Stránka | Nová adresa | Stará stránka |
+|---|---|---|
+| Výstrče, lékárenské znaky | `/produkty/vystrce-lekarenske-znaky` | `/dev/vystrce-lekarenske-znaky-old` |
+| Velkoformátový tisk | `/produkty/velkoformatovy-tisk` | `/dev/velkoformatovy-tisk-old` |
+| Vstupní portály | `/produkty/architektonicke-prvky-vstupni-portaly-vlajky` | `…-old` |
+| Prvky podpory prodeje | `/produkty/prvky-podpory-prodeje-led-technologie` | `…-old` |
+| Designová svítidla | `/produkty/designova-a-interierova-svitidla-specialni-projekty` | `…-old` |
+| Zámečnické konstrukce | `/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla` | `…-old` |
+
+**`bulk_update_pages` ignoruje `parentFolderId` i `draft`.** Slug přepíše,
+zbytek tiše zahodí. Na přesun mezi složkami a na draft se musí
+`update_page_settings`, jedna stránka na akci.
+
+### Úklid `/dev/`
+
+Všech 20 stránek ve složce `/dev/` je nastavených na `draft: true`, takže
+se vůbec nepublikují — silnější než noindex. Ověřeno: `/dev/…` vrací 404.
+Spolu s `Disallow: /dev/` v robots.txt je to dvojitá pojistka.
+
+**Podsložky podle témat se přes API založit nedají** — `data_pages_tool`
+umí `create_page`, ale ne vytvořit složku stránek. To je jen v Designeru.
+Až složky vzniknou, přesun stránek do nich už přes API půjde.
+
+### Kontrola stagingu
+
+Deset produktových stránek × tři jazyky, staženo z `eldr.webflow.io`:
+
+- sekce, karty rozcestníku a obrázky sedí na všech 30 kombinacích
+- title i meta description má každá stránka ve všech jazycích
+- v EN ani DE nezůstal žádný český zbytek
+- **všech 34 kotev z menu míří na existující sekce**
+
+### Opraveno z reportu překladatelského chatu
+
+| Co | Kde |
+|---|---|
+| tlačítko „Jak probíhá výroba?" mířilo na `#` | doplněna kotva `#jak-probiha-vyroba`, funguje i v EN a DE |
+| „sklěněné" → „skleněné" | Designová svítidla, úvod sekce Neonové nápisy |
+| chybějící mezera za `</strong>` u cortenu | opraveno v CS, EN i DE |
+| „7 a 9segmentové" → „7- a 9segmentové" | Prvky podpory prodeje |
+| chybějící meta description | doplněna na všech šesti nových stránkách |
+
+### Co zbývá a přes API to nejde
+
+**49 obrázků v EN a DE ukazuje fotky z 3D nápisů** — locale override
+zděděný duplikací. Seznam po stránkách je v `docs/obrazky-en-de.md`.
+Lokalizace obrázku se přes API zapsat nedá.
+
+Dál: odkaz „Inspiration" v menu míří v EN i DE na `#` (cíl odkazu je
+per-locale a API ho nezapíše) a rozcestník Zámečnických nabízí jen dvě
+karty ze tří sekcí — v návrhu jsou ale karty taky jen dvě.
+
+## Co je jinak, než by mělo být
+
+- ~~**Sedmá sekce Designových svítidel**~~ — **vyřešeno 14. 9. 2026**,
+  postavená znovu jako plnohodnotná sekce, viz „Fáze 4".
+- ~~**Sedmá karta rozcestníku**~~ — **vyřešeno**, má správnou fotku,
+  správný popisek i správné pořadí.
+- **Ikony v bloku `section_layout253`** zůstaly zděděné z 3D nápisů
+  (štětec, štít). V návrhu jsou jinde zaškrtávátka nebo otazník. Chce to
+  přepsat `code` v HTML embedu, nebo nechat být — je to drobnost.
+
+## Rozhodnutí učiněná za pochodu
+
+- **Chybný text karty u Výstrčí.** Návrh má u karty „Světelné výstrče"
+  popis, který patří k „Atypickým výstrčím" (doslovná kopie). Použil se
+  popis odvozený z vlastní sekce, aby karta popisovala svůj produkt.
+- **Šest odrážek u „Polepů"** (Velkoformátový tisk) se sloučilo do tří —
+  šablona má tři položky seznamu a přes API nejde další přidat. Obsah
+  zůstal celý, jen po dvojicích: vozidla + výlohy, perforované + krycí,
+  podlahy + prvky pro šeroslepé.
+- **Blok „Výstrče různých typů"** má v návrhu čtyři varianty pod sebou,
+  šablona `section_layout253` má dva sloupce. Varianty se rozdělily
+  2 + 2, obsah zůstal celý.
+- **Dvojblok „Vystouplá / Podložená plexiintarzie"** (Světelné panely) se
+  přesunul do `section_layout253` hned za sekci Intarzie — tvarem je to
+  přesně blok pro dvě položky.
+- **Sekce „Lékárenské znaky"** má v návrhu tučný odstavec a dvě krátké
+  odrážky; převedlo se to na tři odrážky (Oprávnění, Sortiment, Vhodné
+  pro), aby to sedělo do šablony.
+- **Popisy karet u Designových svítidel** se odvodily z úvodních vět
+  sekcí — v návrhu jsou v tak nízkém rozlišení, že se nedaly přečíst.
+- **Kroky procesu (`section_process-link`)** zůstaly, i když je návrh
+  u nových stránek nekreslí. Zadání znělo držet se struktury dvou
+  hotových stránek.
+- **Tlačítko v bloku `section_layout253`** („Jak probíhá výroba?")
+  zůstalo, i když ho návrh v tomhle bloku nemá. Je to funkční odkaz na
+  sekci níž.
+- **Pořadí štítků v hero.** Šablona je má v pořadí Kompletní servis →
+  Úsporné LED → Odborná montáž → Životnost desítky let, návrh přesně
+  obráceně. Nové stránky mají pořadí podle návrhu.
+- **Štítky v produktových sekcích.** Šablona má tři, návrh dva a oba
+  s ikonou. Maže se první štítek (jediný bez ikony) a druhému se přidá
+  odsazení — levnější než ikonu dostavovat.
+
+## Co zůstalo nedodělané
+
+- **Figma MCP došly volání** („You've reached the Figma MCP tool call
+  limit on the Starter plan"). Návrh se proto četl ze screenshotů framů
+  pořízených dřív a obrázky se přes MCP stáhnout nedaly. **Vyřešeno
+  ručně:** zadavatel exportoval frame z Figmy sám a nahrál ho do assetů
+  do `figma_zdroje/{Hero, Produkty, Karty}`. Odtud se soubory ořezaly,
+  pojmenovaly a zařadily — viz „Obrázky z Figmy v assetech".
+- **Sedmá karta a sedmá sekce Designových svítidel** mají teď správnou
+  fotku v assetech (`stojaci-lampy.jpg`, `stojaci-lampy-karta.png`),
+  ale sekce samotná je pořád ta ručně postavená textová — viz „Co je
+  jinak, než by mělo být".
+- **Kotvy ověřené proti menu.** Všech 23 id sekcí na nových stránkách
+  sedí znak po znaku s odkazy, které navbar na živém webu používá.
+  Ověřeno vytažením `href="/produkty/…#…"` z živého HTML a porovnáním
+  s `attributes.id` každé sekce přes API.
+- **Vizuální kontrola v prohlížeči.** Playwright se v tomhle prostředí
+  přes proxy nedostane ven, takže stránky nejsou prohlédnuté očima —
+  jen ověřené přes API. Než se bude publikovat, projdi je v Designeru.
+- **Překlady EN a DE** jsou u nových stránek prázdné. Slugy se
+  neprohazují, dokud nebudou hotové.
+
+## Kontrola před produkcí (15. 9. 2026)
+
+Staging publikován znovu v 07:26 — ranní překliknutí obrázků v Designeru
+do buildu z 14. 9. 21:19 ještě nespadlo, odkaz pro klienta by ukazoval
+starou verzi.
+
+### Dvě věci, které by shodily spuštění
+
+**1. Všech šest prohozených stránek má `noindex` a chybí v sitemapě.**
+Nastavení se zdědilo z `/dev/` režimu. Ověřeno stažením živého HTML:
+
+| Stránka | `noindex` |
+|---|---|
+| Výstrče, Velkoformátový tisk, Portály, Podpora prodeje, Svítidla, Zámečnické | **ano** |
+| Orientační systémy, Světelné panely, 3D nápisy, Pylony | ne |
+
+V sitemapě (74 adres) je z produktových stránek jen Přehled, Orientační
+systémy, Světelné panely, 3D nápisy a Pylony. Šest nových chybí, staré
+verze z ní vypadly spolu s `draft: true`. Kdyby se publikovalo takhle,
+Google by šest produktových stránek zahodil.
+
+**Přes API to nejde** — `data_pages_tool` pole pro noindex ani pro
+vyřazení ze sitemapy nemá, `get_page_metadata` ho nevrací. Je to
+Designer, Page settings → SEO, u každé z šesti stránek.
+
+**2. Open Graph chyběl úplně.** Nové stránky se duplikovaly bez
+`titleCopied` / `descriptionCopied` a bez OG obrázku, takže se
+nerenderovaly žádné `og:*` ani `twitter:*` metatagy — sdílení odkazu na
+LinkedInu nebo ve Facebook Messengeru by vyrobilo holý text.
+**Opraveno přes API** u všech šesti: `titleCopied: true`,
+`descriptionCopied: true`, `imageUrl` na sdílený
+`65e9e62f5b3be4ac12c61741_eldr-open-graph-image.webp`, stejně jako to má
+Orientační systémy.
+
+### Dva obrázky pořád nejsou překliknuté
+
+Na `/produkty/velkoformatovy-tisk` mají `uvod.jpg` a `rezana-grafika.jpg`
+v `sizes` pořád `(max-width: 479px) 100vw, 120px`. Slot je ~600 px, takže
+prohlížeč sáhne po nejmenší variantě a fotka je rozmazaná. Zbytek
+produktových fotek `sizes` má v pořádku; `100vw` u čtyř dalších je jen
+zbytečně stažená data, ne rozmazání.
+
+## Export textů do Google Docs (24. 9. 2026)
+
+Všech deset produktových stránek a osm blogových článků (CS, EN, DE)
+je vyexportovaných po prvcích do Google Docs — složka
+**Drive → ELDR → Texty webu 2026-09**. Postup a skripty jsou
+v `tools/texty-export/`.
+
+Zadání znělo „dvě přeložené stránky blogu", ale na stagingu i na
+produkci je do EN a DE přeložených **všech osm** článků (kopie
+`test-…-test` má jen EN a vynechala se). Exportovalo se všech osm.
+
+U článku „Světelné nápisy: Nejlepší způsob…" má EN a DE o čtyři odstavce
+víc než CS — překladatel rozdělil text jinak, štítky se tam napárují jen
+do `ODSTAVEC 6`.
+
+Při čtení zdrojů se ukázaly dvě chyby v českém originále, které se
+neopravovaly (export je věrný): „Zhliníkového" (Orientační systémy,
+DVOJBLOK, chybí mezera) a v menu za „LED displaye" zůstává svislítko
+navíc po skrytém odkazu na LED obrazovky.
+
+### Opravy z exportu (24. 9. 2026, jen staging)
+
+| Kde | Co | Jak |
+|---|---|---|
+| 3D nápisy, EN, DVOJBLOK odst. 2 a 3 | zbytky češtiny uprostřed anglického textu | `update_static_content` v EN locale, tučné části zrcadlí české |
+| 3D nápisy, EN, rozcestník karta 4 | „Large-format Illuminated Signs" dvakrát | → „3D Signs with Illuminated Face" (jako DE i H2 sekce) |
+| Orientační systémy, CS | „Zhliníkového" | `set_text` na String uzel — mění jen ten fragment, `<strong>` a `<br>` v odstavci zůstaly |
+| Patička `Footer_2024-12` | odkazy „Company presentation" a „Firmenpräsentation" vedly na český PDF VOP | `set_link` (file) na `ELDR_Company_Presentation.pdf` / `ELDR_Firmenpräsentation.pdf` z března 2026 |
+
+„WeatherResistance" chyba **nebyla** — v nadpisu je `<br>`, plain-text
+náhled ho slepil.
+
+Patička má dvě sady prezentačních odkazů: lokalizovaný hlavní odkaz
+(„Company introduction" / „Vorstellung des Unternehmens", správné soubory)
+a starší tři samostatné prvky s třídami `show--en` / `show--de`. Opravily
+se ty druhé. Odkaz „Personal data processing" v EN patičce vede na český
+GDPR PDF — anglická verze v assetech neexistuje (jen DE).
+
+Odkaz Link elementu v komponentě se mění přes `data_element_tool >
+set_link` se `scope_component_id`, i v primární locale. Text v secondary
+locale přes `update_static_content` bez `data-w-id` atributů projde.
+
+Publikováno jen na webflow.io. Dokumenty na Drivu přegenerované pro
+5 dotčených souborů (EN 3D nápisy, CS Orientační systémy, Společné
+prvky ×3), staré verze v koši.
