@@ -1,0 +1,105 @@
+# Závady a historie překladu eldr.cz
+
+Evidence toho, co bylo na webu špatně, co je opraveno a co zůstává
+otevřené. Čte ji skill `preklad` při práci ve Webflow. Pro překlad
+podkladů mimo Webflow (skill `preklad-podklady`) není potřeba —
+terminologie je v `glosar.md`.
+
+Nálezy z překladu nových `/dev/` produktových stránek ze 14. 9. 2026 jsou
+zvlášť v `docs/nalezy-dev-stranky.md`.
+
+---
+
+## 1. Závady na produkci
+
+### Opraveno 1. 9. 2026 (živě ověřeno)
+
+| Kde | Bylo | Je |
+|---|---|---|
+| `/en/produkty/vystrce-lekarenske-znaky` | „Variants of **plugs**", „Light **Plugs**" — *výstrč* jako elektrická zástrčka | projecting sign (na stránce 17×, „plug" 0×) |
+| `/de/produkty/vystrce-lekarenske-znaky` | „Varianten von **Steckern**", „**Lichtstecker**" | Ausleger (17×, „Stecker" 0×) |
+| `/de/…/vystrce…` | věta bez přísudku: „Stecker sind Leuchtkästen, die an den … Stützkonsolen." | doplněno „…die auf Halterungen senkrecht zur Gebäudefassade montiert werden." |
+| EN i DE `/…/vystrce…` | „Ing. arch. **Flashar**" a věta bez podmětu | Flašar; doplněno „we have had" / „hatten wir" |
+| `/de/produkty/tabule-a-svetelne-panely` | „Lichtpaneele" 7× vedle „Leuchtpaneele" 5× | Leuchtpaneel (12×, „Lichtpaneel" 0×) |
+| `/de/…/tabule…` | „Menütafeln" 3× vedle „Menüboards" 1× | Menüboard (4×, „Menütafel" 0×) |
+| `/en/produkty/tabule-a-svetelne-panely` | „Plexiglass" 4× vedle „acrylic glass" 2× | acrylic glass |
+| `/en/…/tabule…` | Title Case v nadpisech, jinde v EN není | větné psaní |
+| `/en/…/tabule…` | v odrážce *Placement* dvakrát týž výčet forem | ponechán účel + výčet, jako v DE a v podkladech |
+| meta title `/en/produkty/orientacni-systemy` | „**Wayfinding** systems" proti H1 „Orientation systems" | 4. 9. rozhodnuto opačně — v celém webu **wayfinding**, viz níž |
+| meta title `/en/…/vystrce…` | „Pharmacy sign and marking of pharmacies" — výstrče nezmíněny | Projecting signs and pharmacy signs |
+| meta title `/de/…/vystrce…` | „Apotheken-Emblem und Apotheken-Beschilderung" — totéž | Ausleger und Apothekenschilder |
+| meta description `/de/…/tabule…` | „Lichtreklame" | Leuchtreklame |
+| kolekce **Bannery** | neměla lokalizované varianty, bannery v EN i DE článcích běžely česky a CTA mířilo na český kontakt | 15 bannerů přeloženo do EN i DE, CTA s prefixem locale; ověřeno 15/15 položek ve všech třech locale, 0 cizojazyčných průsaků |
+| bannery, česky | 6× „s odolnými **material**" a „vydrží **I** v", 1× „**rezanou** grafikou" a „**rohlédněte** si" | opraveno v češtině (CMS položky přes API zapsat jdou) |
+| **blog (kolekce Inspirace)** | všech 8 článků se na `/en/` i `/de/` zobrazovalo česky | všech 8 přeloženo do EN i DE včetně SEO; ověřeno 16/16 stránek živě, nula českých zbytků, čeština bez regrese |
+| kolekce **Štítky** | názvy štítků česky ve všech locale — u článků i v chipech na výpisu | 4 štítky přeloženy do EN i DE; popisky Finsweet filtru na `/inspirace` přeloženy shodně, takže filtrování dál sedí (ověřeno: popisky i chipy se v každém locale kryjí) |
+| stránka **`/inspirace`** | EN i DE neměly ani jeden lokalizovaný uzel — H1, podtitul i popisky filtru česky, bez meta description | H1, podtitul, 4 popisky filtru, DE hlášky formuláře; SEO title i description pro EN i DE |
+| **šablona článku** (`detail_inspirace`) | „Přečtěte si také:", „Souhrn článku přes AI:", „Zkopírovat prompt" a chybová hláška u fotek běžely česky na **všech** EN i DE článcích | přeloženo do EN i DE; v DE navíc „No items found." → „Keine Einträge gefunden." |
+| **navigace** — otevírací doba u telefonu | uzel `text-block-13` neměl v EN ani DE override, svítilo „Po-Pá 8:00 – 16:00" na každé stránce | „Mon-Fri 8:00 – 16:00" / „Mo-Fr 8:00 – 16:00" |
+| **domovská stránka, DE** | u hodnocení stálo „Bewertet mit **4,9/5** Sternen von über **2.500** Bewertungen" — vedle čísla **4,4** na téže řádce. Česky je tam jen „Hodnocení Google". Vymyšlené hodnocení i počet recenzí, navíc si to na stránce odporovalo | „Google-Bewertung" |
+| **domovská stránka, EN** | popisek hodnocení zůstal česky („Hodnocení Google") | „Google rating" |
+| **domovská stránka, EN i DE** | nadpis sekce s taby zněl „How to Choose the Right Lighted Advertising for Your Needs" / „Wie wählt man eine Lichtreklame für seine Bedürfnisse aus?" — pozůstatek staršího českého nadpisu; česky tam dnes stojí „Světelná reklama na míru" | „Custom Illuminated Advertising" / „Maßgeschneiderte Leuchtreklame" |
+| **domovská stránka, DE** | claim v hero: „Höchste Qualität in der **Lichtwerbung**" | Leuchtreklame (podle glosáře) |
+| **stránka 404** | na `/en/…` i `/de/…` svítil u neexistující adresy český „Tudy cesta nevede…" | přeložena celá včetně SEO: „Looks like a wrong turn…" / „Hier geht es leider nicht weiter…" |
+| **domovská stránka, EN** | celá v Title Case („Make Your Business Stand Out", „All References"), jinde na webu je větné psaní | 18 uzlů převedeno na větné psaní |
+| **domovská stránka, EN** | čtyři varianty téhož termínu: „Light advertising" (title), „Lighting advertising" (description), „Lighted advertising" (text), „Illuminated advertising" (produktové stránky) | sjednoceno na **illuminated advertising** podle glosáře, včetně SEO |
+| **domovská stránka, EN** | hodnocení „4,4" s desetinnou čárkou | „4.4" — angličtina má tečku |
+| **termín orientační systém, EN** | živá stránka měla „orientation system" 16× a „wayfinding" 2× — doslovný převod z češtiny vedle oborového standardu | sjednoceno na **wayfinding system** (rozhodnuto s uživatelem 4. 9.); změněn glosář, SEO živé stránky i nová `/dev/` stránka. Němčina byla správně (*Wegeleitsystem*) a zůstává. |
+| **sdílené komponenty, EN** | „Why You Should Choose Our **Lighted** Advertising", „Get a Free Quote", „All References" — Title Case a starý termín, bily se s novým textem přímo na stránce | větné psaní a *illuminated advertising*; opraveny komponenty Záruka prvotřídní kvality, Důvěřují nám, Jak probíhá výroba a výchozí text CTA tlačítka |
+| glosář: `anodised` | v pravidlech stálo britské „anodised", ale produkce má **anodized** a je to v souladu s vlastním pravidlem o koncovkách -ize | opraveno na `anodized` |
+| **živá `/en/produkty/orientacni-systemy`** | „Lucid signage", „Workmanship communication", „Trendy creativity", „Professional Installation" — nesmyslné nebo Title Case štítky; k tomu americký pravopis (`aluminum`, `shopping centers`, `plexiglass`), „wayfinders" a „stand-offs" | celá stránka srovnána podle glosáře a podkladů; termín wayfinding, britský pravopis, `acrylic glass` |
+| navigace, EN | položka menu „Orientation systems" | Wayfinding systems |
+| patička, EN | „**Lighted** advertising solutions from concept to completion." | illuminated advertising |
+| komponenta Jak probíhá výroba | odrážka „Nabídku vytvoříme zcela zdarma." neměla EN ani DE override, svítila česky na každé produktové stránce | „We prepare the quote completely free of charge." / „Das Angebot erstellen wir völlig kostenlos." |
+| **navbar, rozbalovátko „Tabule a světelné panely"** (14. 9. 2026) | Popisky byly v EN i DE posunuté o jeden proti kotvám: „Advertising boards"/„Werbetafeln" mířilo na `#svetelne-panely`, „Illuminated panels"/„Leuchtpaneele" na `#intarzie`, „Projecting signs"/„Auslegertransparente" na `#reklamni-tabule`. Sekce na stránce přitom přeložené správně byly — vada byla jen v menu. | Srovnáno podle glosáře: illuminated panels / Leuchtpaneele, acrylic glass inlays / Plexiglas-Intarsien, advertising boards / Werbetafeln. Německý nadpis rozbalovátka „Tafeln, Leuchtpaneele und Auslegertransparente" srovnán na „Tafeln und Leuchtpaneele" (čeština ani EN třetí položku nemají). |
+
+### Otevřené
+
+| Co | Detail |
+|---|---|
+| **Odkaz „Inspiration" v menu vede na `#`** | Na `/en` i `/de` má položka menu `href="#"`, česky přitom míří na `/inspirace`. Stránka v obou locale existuje a vrací 200, takže obsah je v pořádku — jen se na něj z menu nedá dostat. **Přes API to nespravím:** `update_component_content` zápis přijme s prázdným `errors`, ale `href` ani `data-wf-link-page-id` nezmění; lokalizace umí jen text. Patří do Designeru (uzel `bbed6077-ce65-bdda-117f-76962e8015ab`, komponenta Navbar_2024-12). |
+| Zastaralý český meta title `/produkty/tabule-a-svetelne-panely` | Zní „Tabule, světelné panely a **výstrče**", ale výstrče má dnes vlastní stránku. EN i DE jsou věrné překlady té češtiny, takže je nechávám sedět s ní. Opravit se to musí nejdřív v češtině. |
+| Překlepy v českém originále | Banner „Pylony – velký“: „s odolnými **material**“ místo *materiály*, „vydrží **I** v náročných podmínkách“ místo *i*. V překladech opraveno, v češtině ne — do primárního locale se přes API zapsat nedá. |
+| `/en/produkty/pylony-a-totemy` | Proti CZ i DE chybí dva koncové nadpisy (sekce se v EN nerenderuje) — ověřit proč, může jít o nepřeloženou komponentu. |
+| Rozporná otevírací doba | Navigace u telefonního čísla říká **8:00 – 16:00**, ale CTA blok ve stejné navigaci i patička říkají **6:00 – 15:00**. Rozpor je už v češtině; překlady jsou věrné tomu, co tam stojí. Která doba platí, ať rozhodne uživatel. |
+| Překlep v české šabloně článku | „Jejda, **fotografie nepodařilo se zobrazit**." — správně *fotografii se nepodařilo zobrazit*. V EN i DE přeloženo správně, česky opravit nejde (statický text v primárním locale je přes API read-only). |
+| Stránka 404 nemá EN ani DE | Na `/en/…` i `/de/…` se u neexistující adresy zobrazí český „Tudy cesta nevede…". Je to statická stránka, přeložit ji jde — jen na ni zatím nedošlo. |
+| `/inspirace` česky nemá meta description a title je jen „Inspirace" | Do primárního locale API nepíše, patří to do Designeru. Navržený text: description „Kompletní průvodce světelnou reklamou. 💡 Prozkoumejte možnosti světelné reklamy a udělejte na své zákazníky nezapomenutelný dojem.", title „Inspirace \| Elektro Drapač" (jinde na webu je vždy `Něco \| Elektro Drapač`). |
+| **Kariéra není přeložená vůbec** | Stránka `/kariera` a všechny tři inzeráty (elektromechanik, montážní dělník, zámečník) běží na `/en` i `/de` celé česky — **49 unikátních řetězců**. Kolekce Pracovní příležitosti (`649c44274bd97b64c6db64f8`) i statická stránka. Největší zbývající kus. |
+| **Popisky fotogalerií** | **463 unikátních** popisků typu „Světelný pylon 12", „Orientační systém 34" z kolekce Fotografie (`646d5c52aab44e9fcf5974b8`). Jsou vidět v lightboxu po rozkliknutí fotky. Číslované, takže překlad je mechanický, ale je jich hodně. |
+| **Útržky na produktových stránkách** | ~18 řetězců: „Výrobky", „Ekonomické", „Nenáročné", „Zobrazit více", „Nenašli jste, co potřebujete?", „Nabídku vytvoříme zcela zdarma.", „Od první skici po finální instalaci.", blok o 3D vizualizaci a záruce (`/en/produkty/3d-napisy…`), „Výroba světelných reklam se špičkovým zpracováním a designem" + „na míru vašim potřebám", „Už z dálky zajišťují skvělou viditelnost reklamy…" (`/de/…/vystrce…`), „Společník, jednatel". |
+| **Nálezy v češtině na šesti produktových stránkách** (14. 9. 2026) | Sebráno při překladu nového obsahu. Do primárního locale API nepíše — všechno patří do Designeru. **Překlepy:** „Jejda, **fotografie** nepodařilo se zobrazit" (má být *fotografii se nepodařilo zobrazit*) — 3–6× na každé z šesti stránek; „samolepí**c**í" vedle správného „samolepicí" o dva odstavce výš (velkoformátový tisk); chybí spojka mezi „velkoplošná vertikální pila" a „formátovací pila" (zámečnické). **Nadpisy:** „**Led** displaye" a „**Led** obrazovky" — má být LED a *displeje*. **Věcné rozpory:** nadpis „Bezpečnostní prvky pro **šeroslepé**" nad textem o *slabozrakých* (není totéž); „Světelná čísla domů" nad textem nabízejícím i nesvětelná; Fremont Street datovaná na „počátek 20. století" (žárovková éra je 30.–40. léta). **Díry v textu:** „Z tohoto důvodu doporučujeme…" bez uvedeného důvodu (neony); „Více informací naleznete **zde**" — slovo *zde* není odkaz, žádné `<a>` v uzlu není. **Zbytky šablon:** trojice „Profil 1 / Ekonomické / Nenáročné" se opakuje až 7× na stránkách, kde žádné profily nejsou, na zámečnických i „1–40 m výška" a skrytý podtitul o světelné reklamě. **Anglicky v češtině:** „No items found." jako prázdný stav fotogalerie, 2–6× na stránku. **Meta titles užší než H1:** tisk nezmiňuje polepy, podpora prodeje nezmiňuje LED, zámečnické nezmiňují plexisklo, portály nezmiňují vlajky. **Nesoulad:** název stránky „Výstrče**,** lékárenské znaky" vs. H1 „Výstrče **a** lékárenské znaky". **Zastará:** „34 let zkušeností" je natvrdo v HTML, ne token `{#YOE#}`. |
+| **Vada, která byla živě na webu** (opraveno 14. 9. 2026) | Na pěti stránkách renderovalo `/en` i `/de` **„3434 years of experience" / „3434 Jahre Erfahrung"** — starý překlad měl číslo jednou uvnitř `<span data-var="YOE">` a podruhé za ním. Při přepisu odstraněno. Po publikaci ověřit, že se span pořád plní z `10-vars.js`. |
+| **data-w-id se v překladu rozejdou, když se HTML skládá znovu** (opraveno 14. 9. 2026) | Na německé verzi výstrčí měly tři uzly vlastní `data-w-id`, která v češtině neexistují — vzniklo to tím, že překladatel poskládal HTML znovu místo aby měnil jen text mezi tagy. **`data-w-id` je jediná vazba, na kterou se věší interakce IX2**, takže animace nastavená v Designeru se na takovém uzlu nespustí a API to ani nepřečte. Vždy kopíruj tagy z češtiny znak po znaku. |
+| **Termín a Title Case i mimo homepage** | Komponenty „Záruka prvotřídní kvality" a další mají v EN „lighted advertising" a Title Case („Why You Should Choose Our Lighted Advertising", „Get a Free Quote"). Glosář má **illuminated advertising** a větné psaní. Na homepage srovnáno, jinde ne. |
+| `aria-label="Zkopírovat prompt"` u tlačítka AI souhrnu | Zůstává česky i na `/en` a `/de`. Webflow lokalizaci atributů neumí ani v Designeru, ani přes API (ověřeno u Webflow AI proti jejich dokumentaci). Viditelný text tlačítka přeložený je, týká se to jen čteček obrazovky. Custom kódem neobcházet. |
+| CTA tlačítko říká v každém jazyce něco jiného | Výchozí text komponenty `CTA-Button-Primary`: česky **„Nezávazně poptat"**, anglicky **„Get a free quote"**, německy **„Leuchtreklame anfragen"**. Tři různé sliby — nezávaznost, cena zdarma, poptávka po světelné reklamě. Sjednotit chce rozhodnutí, co má tlačítko slibovat; věcně nejblíž češtině je EN *Enquire, no obligation* a DE *Unverbindlich anfragen* (to už se na webu u bannerů používá). |
+| Obrázky na `/dev/orientacni-systemy` se v EN a DE liší od češtiny | API vrací pro každý locale jiné `assetId`. Lokalizace obrázků jde jen v Designeru, takže to nemám jak srovnat — a je možné, že jde o starší nebo zástupné fotky. Před spuštěním stránky projít vizuálně. |
+| Banner „Světelné nápisy – velký TEST" nemá německou variantu | Položka `svetelne-napisy-velky-test` vznikla 1. 9. ve 12:58 mimo tuhle práci. Má češtinu a angličtinu, němčinu ne — na `/de` se proto do skryté knihovny vůbec nenačte. Zatím neškodí, žádný článek ji tokenem `[banner:…]` neodkazuje. Přidat jazyk jde jen v Designeru (CMS panel u položky), přes API ne. |
+| Anglicismus „Business" v DE | „Machen Sie Ihr Business sichtbar", „macht Ihr Business unübersehbar" — spíš *Unternehmen* nebo *Geschäft*. Nechávám na rozhodnutí, je to otázka tónu. |
+
+### Chyby v referenčních dokumentech (`docs/translation/`)
+
+Nepřebírat je:
+
+- `3D nápisy…_DE.docx` — nepřeložený český řádek „nápis z kartonu
+  (nedoporučujeme pro venkovní použití)" a „Varianten: (ukázky?)"
+- `Architektonické prvky…_DE.docx` — „Wir bei **Elektru** Drapač"
+  (skloňované jméno firmy)
+- `Zámečnické konstrukce_DE.docx` — meta title „**Schlosserko0nstruktionen**"
+- napříč DE dokumenty zůstala česká slova `Ukázky:`, `fotobanka`,
+  `proklik`, `odkaz`
+- `O nas_DE.docx` a `Reklamní pylony_DE.docx` mají od určitého odstavce
+  posun o jeden proti EN (jeden odstavec je v DE rozdělený) — při
+  porovnávání na to pozor
+
+---
+
+## 2. Neověřené
+
+Pro tyhle nemám v podkladech doložený překlad. Než je použiješ poprvé,
+navrhni variantu uživateli a doplň ji sem.
+
+- názvy pracovních pozic (kolekce Kariéra):
+  elektromechanik/elektrikář-montér, montážní dělník, zámečník
+- názvy referenčních projektů (kolekce Reference)
