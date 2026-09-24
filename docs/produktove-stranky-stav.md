@@ -603,3 +603,23 @@ v `sizes` pořád `(max-width: 479px) 100vw, 120px`. Slot je ~600 px, takže
 prohlížeč sáhne po nejmenší variantě a fotka je rozmazaná. Zbytek
 produktových fotek `sizes` má v pořádku; `100vw` u čtyř dalších je jen
 zbytečně stažená data, ne rozmazání.
+
+## Export textů do Google Docs (24. 9. 2026)
+
+Všech deset produktových stránek a osm blogových článků (CS, EN, DE)
+je vyexportovaných po prvcích do Google Docs — složka
+**Drive → ELDR → Texty webu 2026-09**. Postup a skripty jsou
+v `tools/texty-export/`.
+
+Zadání znělo „dvě přeložené stránky blogu", ale na stagingu i na
+produkci je do EN a DE přeložených **všech osm** článků (kopie
+`test-…-test` má jen EN a vynechala se). Exportovalo se všech osm.
+
+U článku „Světelné nápisy: Nejlepší způsob…" má EN a DE o čtyři odstavce
+víc než CS — překladatel rozdělil text jinak, štítky se tam napárují jen
+do `ODSTAVEC 6`.
+
+Při čtení zdrojů se ukázaly dvě chyby v českém originále, které se
+neopravovaly (export je věrný): „Zhliníkového" (Orientační systémy,
+DVOJBLOK, chybí mezera) a v menu za „LED displaye" zůstává svislítko
+navíc po skrytém odkazu na LED obrazovky.
