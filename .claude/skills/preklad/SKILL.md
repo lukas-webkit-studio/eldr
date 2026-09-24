@@ -145,7 +145,7 @@ Netvrď nic, cos neověřil. Po zápisu:
 2. **Zkontroluj, že nezbyla čeština.** Projeď výsledek na české diakritické
    znaky (`ěščřžýáíéůú`) a na typicky české řetězce. Zbytek češtiny v DE
    textu je nejčastější závada — v původních podkladech takových zůstalo
-   několik (viz glosář, sekce Známé chyby).
+   několik (viz `zavady.md` vedle glosáře).
 3. **Zkontroluj termíny proti glosáři.**
 4. **Po publikaci stáhni živou stránku** (`curl https://www.eldr.cz/de/…`)
    a ověř, že se opravdu načítá přeložená verze.
