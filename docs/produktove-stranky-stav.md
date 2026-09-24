@@ -623,3 +623,29 @@ Při čtení zdrojů se ukázaly dvě chyby v českém originále, které se
 neopravovaly (export je věrný): „Zhliníkového" (Orientační systémy,
 DVOJBLOK, chybí mezera) a v menu za „LED displaye" zůstává svislítko
 navíc po skrytém odkazu na LED obrazovky.
+
+### Opravy z exportu (24. 9. 2026, jen staging)
+
+| Kde | Co | Jak |
+|---|---|---|
+| 3D nápisy, EN, DVOJBLOK odst. 2 a 3 | zbytky češtiny uprostřed anglického textu | `update_static_content` v EN locale, tučné části zrcadlí české |
+| 3D nápisy, EN, rozcestník karta 4 | „Large-format Illuminated Signs" dvakrát | → „3D Signs with Illuminated Face" (jako DE i H2 sekce) |
+| Orientační systémy, CS | „Zhliníkového" | `set_text` na String uzel — mění jen ten fragment, `<strong>` a `<br>` v odstavci zůstaly |
+| Patička `Footer_2024-12` | odkazy „Company presentation" a „Firmenpräsentation" vedly na český PDF VOP | `set_link` (file) na `ELDR_Company_Presentation.pdf` / `ELDR_Firmenpräsentation.pdf` z března 2026 |
+
+„WeatherResistance" chyba **nebyla** — v nadpisu je `<br>`, plain-text
+náhled ho slepil.
+
+Patička má dvě sady prezentačních odkazů: lokalizovaný hlavní odkaz
+(„Company introduction" / „Vorstellung des Unternehmens", správné soubory)
+a starší tři samostatné prvky s třídami `show--en` / `show--de`. Opravily
+se ty druhé. Odkaz „Personal data processing" v EN patičce vede na český
+GDPR PDF — anglická verze v assetech neexistuje (jen DE).
+
+Odkaz Link elementu v komponentě se mění přes `data_element_tool >
+set_link` se `scope_component_id`, i v primární locale. Text v secondary
+locale přes `update_static_content` bez `data-w-id` atributů projde.
+
+Publikováno jen na webflow.io. Dokumenty na Drivu přegenerované pro
+5 dotčených souborů (EN 3D nápisy, CS Orientační systémy, Společné
+prvky ×3), staré verze v koši.
