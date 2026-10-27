@@ -16,6 +16,54 @@ Stránky, kterých se to týká:
 | `svetelne-panely-a-tabule` | `6a9ab1e40aec35eaf9d1edec` (draft) |
 | `orientacni-systemy` | `6a99120f6934e22ce69ad69d` |
 
+## Stav k 27. 10. 2026 (H1, issue #16)
+
+Ověřeno čtením zpátky ve Webflow a na stagingu (publikace 27. 10. 15:26 UTC).
+Produkce se nepublikovala. `[x]` = opraveno, `[ ]` = zůstává (důvod v závorce).
+
+### Výměna stránek a odkazy
+
+- [x] `/dev/orientacni-systemy` → `/produkty/orientacni-systemy`, stará stránka `/dev/orientacni-systemy-old` (draft)
+- [x] `/dev/svetelne-panely-a-tabule` → `/produkty/tabule-a-svetelne-panely`, stará `/dev/tabule-a-svetelne-panely-old` (draft)
+- [x] Navbar: 8 kategorií vedlo na staré `/dev/…-old` stránky, přepojeno na nové (všechny 3 jazyky, všechny kotvy existují)
+- [x] Dlaždice „Tabule a světelné panely“ na homepage přepojena na novou stránku
+- [x] Logo v patičce (`Footer_2024-12`) vedlo na `#`, teď na homepage
+- [ ] `/produkty` (přehled): 9 dlaždic `Výrobky__Item` vede na staré `/dev/…-old` (jen Designer — prop „Link“ instance API neumí nastavit na stránku)
+- [ ] Navbar „Inspiration“ v EN a DE vede na `#` (jen Designer, cíl odkazu per locale; položka je v EN/DE skrytá)
+- [ ] Navbar „Rental of work platforms“ v EN vede na českou `/servisni-sluzby-a-pronajem-plosin#pronajem-plosin` (jen Designer, DE je správně)
+- [x] Tlačítko „Jak probíhá výroba?“ už vede na `#jak-probiha-vyroba` (opraveno dřív)
+
+### Oddíl 2 — čeština
+
+- [x] Hláška galerie „Jejda, fotografie nepodařilo se zobrazit…“ → „Jejda, fotografie se nepodařilo zobrazit. Zkuste stránku načíst znovu.“ (10 stránek, CS/EN/DE)
+- [x] „No items found.“ → „Fotografie připravujeme.“ / „Photos coming soon.“ / „Fotos folgen in Kürze.“ (10 stránek)
+- [x] SEO Světelných panelů: title „Světelné panely a tabule | Elektro Drapač“ bez výstrčí, doplněná description a OG (CS/EN/DE)
+- [x] Meta titulky a descriptions ostatních stránek (opraveno dřív, ověřeno)
+- [x] „LED displaye“ → „LED displeje“ (navbar + 3× na podpoře prodeje)
+- [x] „7- a 9segmentové“, „sklěněné“, chybějící mezery za `</strong>`, „V Elektru Drapač“, „pod autorským zákonem“ (opraveno dřív, ověřeno)
+- [x] „nevyžadují žádnou údržbu jako živé rostliny“ → „na rozdíl od živých rostlin je nemusíte zalévat ani hnojit“ (DE srovnáno, EN bylo v pořádku)
+- [x] „Las Vegas na počátku 20. století“ → „ze starého Las Vegas“ (CS/EN/DE)
+- [x] „pro šeroslepé … slabozrakým“ → „usnadňují bezpečný pohyb lidem se zhoršeným zrakem“
+- [x] „i za špatného počasí i po setmění“ → „za špatného počasí i po setmění“
+- [x] „plexiintarzie“ → „plexi intarzie“ (sjednoceno s nadpisy)
+- [ ] „Zpracování:“ 2× na podpoře prodeje, tři `<br>` v Q&A orientačních systémů, `<strong>` u dvou dlaždic Světelných panelů (kosmetika, nechávám na Designer)
+- [ ] Zbytky obsahu z oddílu „Duplicitní a zbytkový obsah“, hero štítek „1–40 m výška“ na zámečnických konstrukcích (obsahové rozhodnutí)
+
+### Oddíly 1, 3, 4
+
+- [ ] Obrázky per locale (oddíl 1) — jen Designer
+- [ ] Override „Leuchtreklame anfragen“ u CTA — jen Designer
+- [x] DE „Lichtwerbung“ v komponentách Záruka a patička, „vertrauenuns“ (opraveno dřív, na stagingu už není)
+- [ ] „Lichtwerbung“ a „hervorArbeit“ v zákaznických citacích (CMS Reference) — otázka, jestli sahat do citací
+
+### Rozcestník pod hero
+
+- [x] Kombo třída `layout400_row.two`: na desktopu `max-width: calc((200% - 1rem) / 3)`, `margin: auto` → dva sloupce mají šířku sloupce ze tří (416 px při 1440) a jsou na středu; od tabletu dolů beze změny. Snímky v `docs/snimky/h1/`.
+
+### Poučení
+
+- Primární locale přes API jde: SEO (`update_page_settings` bez `localeId`) i text (`set_text`). Přesun stránky do jiné složky nechá na ni navázané odkazy, takže po výměně je potřeba projít navbar, homepage i `/produkty`.
+
 ---
 
 ## 1. Obrázky v EN a DE ukazují fotky z jiné stránky

@@ -55,7 +55,6 @@ custom kódu. Ověřeno na tomhle webu:
 | Interakce (IX2) | jen Designer |
 | Styly a třídy v sekundárním locale | jen Designer — `data_style_tool` píše globálně, ne per locale |
 | Obrázky v sekundárním locale | jen Designer, API je vrací, ale nezapíše |
-| SEO v **primárním** locale | jen Designer — `data_pages_tool` s `localeId` píše jen do `/en` a `/de` |
 | Atributy (`aria-label`, `title`, `data-*`) per locale | **nejde nikde** — hodnota je společná všem jazykům |
 | Chybějící locale u existující CMS položky | jen Designer (CMS panel u položky) — přes API to nejde, `cmsLocaleIds` platí jen pro nově zakládané položky |
 | Cíl odkazu (`href`, vazba na stránku) per locale | jen Designer — `update_component_content` i `update_static_content` zápis **tiše přijmou** (`errors: []`), ale cíl nezmění; localizace umí jen text |
@@ -69,6 +68,16 @@ custom kódu. Ověřeno na tomhle webu:
 což je jediná cesta, jak z češtiny odstranit prvek (viz `<span data-var="YOE">`
 níž). Zacházej s tím opatrně: je to zápis do primárního locale, který se
 propíše do všech jazyků.
+
+**SEO v primárním locale přes API taky JDE**: `data_pages_tool >
+update_page_settings` **bez** `localeId` (ověřeno 27. 10. 2026 čtením zpátky).
+S `localeId` píše do `/en` a `/de`.
+
+**Přesun stránky do jiné složky nechá na ni navázané odkazy.** Když se stará
+stránka přesune do `/dev/` a nová dostane její slug, navbar, homepage
+i `/produkty` dál ukazují na starou. Po výměně přepoj odkazy typu „stránka“
+(`set_link`). Výjimka: prop „Link“ na instancích `Výrobky__Item` na `/produkty`
+API na stránku nastavit neumí (jen URL, a ta se nelokalizuje) — to je Designer.
 
 Poslední řádek je ten zákeřný: zápis vrátí prázdné `errors`, takže to
 vypadá, že se to povedlo. Ověřuj čtením zpátky, ne návratovým kódem.
