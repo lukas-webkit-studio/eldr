@@ -45,6 +45,10 @@ var SEL = {
   // reference
   refLanguage:      '.sectionreference__collection__item__language, .reference_item-language',
 
+  // formulář — nahrávání příloh (nativní Webflow File Upload)
+  formUpload:       '.w-file-upload',
+  formUploadError:  '.w-file-upload-error-msg',
+
   /* --- HOOK TŘÍDY PRO GTM — NESTYLOVAT, NEMAZAT ---------------------------
      Na těchto třídách visí měření v Google Tag Manageru. Ve Webflow zůstávají
      na prvcích jako prázdné třídy (nula CSS vlastností); vzhled řídí
