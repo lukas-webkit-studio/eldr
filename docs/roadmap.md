@@ -21,7 +21,8 @@ Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
 
 - **H1 #16 hotovo** (PR #22): 10 produktových stránek na `/produkty/…` v novém vzhledu, CS/EN/DE, navbar přepojený, rozcestník se 2 sloupci užší a na střed. Staging 27. 10. 16:36.
 - **S1 #17 hotovo** (PR #21): přílohy v produkčním formuláři `Form__Basic`, 5 polí, 10 MB na soubor, odkaz v e-mailu (nativní notifikace Webflow).
-- **R1 #18 běží:** kontrola stagingu, jen čtení.
+- **R1 #18 hotovo:** verdikt „k publikaci NE“, blokovaly B1–B4.
+- **H2 #24 hotovo:** přes API opraveno B1 (obě stránky indexované, v sitemap), B4, P1, P4, P5 a drobnosti z kontroly v bloku adresy na Kontaktech (EN/DE). Staging 27. 10. 18:39. Zbývá Designer: B2 (dlaždice `/produkty` → 404), B3 (názvy polí příloh).
 - **L1 #19:** publikace produkce na pokyn Lukáše, plán 28. 10.
 - Testovací článek `/inspirace/test-…` je jen na produkci, z CMS je smazaný. Zmizí při publikaci, ověřit v L1.
 
