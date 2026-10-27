@@ -17,7 +17,15 @@ Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
 - `docs/stav-prekladu.json` popisuje stav k 14. 9., novější publikace
   stagingu v něm nejsou.
 
-### Schváleno klientem, termín pondělí 3. 11. 2026
+### Štafeta 27. 10. večer
+
+- **H1 #16 hotovo** (PR #22): 10 produktových stránek na `/produkty/…` v novém vzhledu, CS/EN/DE, navbar přepojený, rozcestník se 2 sloupci užší a na střed. Staging 27. 10. 16:36.
+- **S1 #17 hotovo** (PR #21): přílohy v produkčním formuláři `Form__Basic`, 5 polí, 10 MB na soubor, odkaz v e-mailu (nativní notifikace Webflow).
+- **R1 #18 běží:** kontrola stagingu, jen čtení.
+- **L1 #19:** publikace produkce na pokyn Lukáše, plán 28. 10.
+- Testovací článek `/inspirace/test-…` je jen na produkci, z CMS je smazaný. Zmizí při publikaci, ověřit v L1.
+
+### Schváleno klientem, termín pondělí 2. 11. 2026
 
 Po kontrole klientem jde faktura.
 
@@ -34,9 +42,9 @@ Spouští se, až Lukáš potvrdí, že klient schválil.
 | Úkol | Návrh ceny | Poznámka |
 |---|---|---|
 | JSON-LD strukturovaná data na všech stránkách (`85a630b6`) | 4 500 Kč | |
-| Struktura produktových stránek pro AI (`5dbfd455`) | 7 500 Kč | navazuje na publikované produktové stránky |
-| Sekce recenzí na homepage, Relume testimonial21 (`97c16e19`) | 1 500 Kč | změna rozvržení = přes návrh |
-| Překlad zbylých článků v blogu, cca 26 EN a 29 DE (`9c9a80c9`) | doplní Lukáš | poběží přes skill z S2 |
+| Struktura produktových stránek pro AI (`5dbfd455`) | 9 500 Kč | navazuje na publikované produktové stránky |
+| Sekce recenzí na homepage, Relume testimonial21 (`97c16e19`) | 2 500 Kč | změna rozvržení = přes návrh |
+| Další články v blogu (`9c9a80c9`) | nahrání 1 000 Kč, překlad 600 Kč/článek | na webu je 8 článků, všechny už v CS/EN/DE |
 | Analýza viditelnosti v AI (`2a74fc63`) | 12 000 Kč | stojí, klient ověřuje agenturu |
 | MVP konfigurátor (`d505d416`, `6ad1d4ff`) | 60 000 Kč | samostatná schůzka, zatím příkladové otázky |
 
@@ -49,9 +57,6 @@ Spouští se, až Lukáš potvrdí, že klient schválil.
 
 ## Na Lukášovi
 
-1. Varianta vzhledu nahrávání příloh a způsob doručení příloh (S1).
-2. Drafty Orientační systémy a Světelné panely v novém vzhledu: publikovat
-   s ostatními, nebo nechat v `/dev/`.
-3. Zdroj glosáře pro skill po přejmenování repa (S2).
-4. Souhlas s publikací produkce (L1).
-5. Kroky, které MCP neumí (seznam vznikne v R1 a H1).
+1. Kroky jen v Designeru ze seznamů v #16 a #17 (blokující: odkazy dlaždic na `/produkty`, názvy polí příloh, přístup k nahraným souborům).
+2. Pokyn k publikaci produkce (L1).
+3. Rozpor: `CLAUDE.md` popisuje bundle z jsDelivr, web ho bere z Cloudflare workeru, jehož nasazení v repu není. Doplnit postup do `CLAUDE.md`.
