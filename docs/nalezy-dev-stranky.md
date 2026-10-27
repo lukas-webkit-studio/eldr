@@ -18,7 +18,7 @@ Stránky, kterých se to týká:
 
 ## Stav k 27. 10. 2026 (H1, issue #16)
 
-Ověřeno čtením zpátky ve Webflow a na stagingu (publikace 27. 10. 15:26 UTC).
+Ověřeno čtením zpátky ve Webflow a na stagingu (publikace 27. 10. 15:36 UTC).
 Produkce se nepublikovala. `[x]` = opraveno, `[ ]` = zůstává (důvod v závorce).
 
 ### Výměna stránek a odkazy
@@ -52,7 +52,9 @@ Produkce se nepublikovala. `[x]` = opraveno, `[ ]` = zůstává (důvod v závor
 ### Oddíly 1, 3, 4
 
 - [ ] Obrázky per locale (oddíl 1) — jen Designer
-- [ ] Override „Leuchtreklame anfragen“ u CTA — jen Designer
+- [x] DE CTA „Leuchtreklame anfragen“ na Orientačních systémech a Světelných panelech → „Unverbindlich anfragen“ jako na ostatních 8 stránkách (override hodnoty jde přepsat, smazat ne)
+- [ ] „Kompletní nabídka“ na homepage v EN/DE zůstává česky (text není v lokalizačním API, jen Designer)
+- [ ] Světelné panely: 4 karty v rozcestníku `three` → čtvrtá sama na druhém řádku (rozhodnutí o rozvržení)
 - [x] DE „Lichtwerbung“ v komponentách Záruka a patička, „vertrauenuns“ (opraveno dřív, na stagingu už není)
 - [ ] „Lichtwerbung“ a „hervorArbeit“ v zákaznických citacích (CMS Reference) — otázka, jestli sahat do citací
 
