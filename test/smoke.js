@@ -359,7 +359,7 @@ run('Nahrávání příloh — čeština zůstává podle Designeru',
 // --- 7. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
-Promise.all(pending).then(() => {
+Promise.all(pending).catch(e => ok('odložená kontrola doběhla bez výjimky: ' + e.message, false)).then(() => {
   console.log(`\n${pass} prošlo, ${fail} selhalo`);
   process.exit(fail ? 1 : 0);
 });

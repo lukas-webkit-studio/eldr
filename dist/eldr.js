@@ -1189,9 +1189,9 @@ function locale() {
       nahrané. Proč ne ve Webflow: podmínka „předchozí pole má soubor“ je
       stav za běhu (atribut data-value na inputu), IX2 ani třída ho nevidí.
    2. Chybové hlášky v EN a DE. Webflow je drží v atributech
-      data-w-*-error, které jdou jen anglicky a společně pro všechny jazyky
-      (atributy nejde lokalizovat, viz CLAUDE.md). Čeština zůstává podle
-      Designeru, EN a DE se přepíšou podle jazyka stránky.
+      data-w-*-error. Atributy mají jednu hodnotu pro všechny jazyky a nejde
+      je lokalizovat (viz CLAUDE.md). Na české stránce zůstává hodnota
+      z Designeru, na /en a /de se přepíše podle jazyka stránky.
 
    Modul do repa vrácen 27. 10. 2026 (S1, #17) podle bundlu, který už běžel
    na webu — v repu do té doby chyběl.
