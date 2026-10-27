@@ -5,6 +5,7 @@ const { JSDOM } = require('jsdom');
 
 const bundle = fs.readFileSync(require('path').join(__dirname, '..', 'dist', 'eldr.js'), 'utf8');
 let pass = 0, fail = 0;
+const pending = [];   // kontroly, které čekají na MutationObserver
 const ok = (n, c) => { c ? (pass++, console.log('  ✅ ' + n)) : (fail++, console.log('  ❌ ' + n)); };
 
 /* Webflow plní <html lang> podle jazykové mutace, ne podle celé cesty.
@@ -324,8 +325,41 @@ run('Sdílení do AI — prompt v jazyce stránky',
     ok('anglická mutace dostane anglický prompt', q.includes('Visit this URL'));
   });
 
-// --- 6. prázdná stránka ---------------------------------------------------
+// --- 6. nahrávání příloh --------------------------------------------------
+const UPLOAD = n => `<div class="form_upload${n > 1 ? ' is-hidden' : ''} w-file-upload">
+  <input type="file" class="w-file-upload-input">
+  <div class="w-file-upload-error-msg" data-w-size-error="Upload failed. Max size for files is 10 MB."
+    data-w-type-error="Upload failed. Invalid file type."
+    data-w-generic-error="Upload failed. Something went wrong. Please retry.">Upload failed. Max size for files is 10 MB.</div></div>`;
+const UPLOAD_FORM = `<div id="form-kontakt" class="form__type1"><form><input id="jazyk">${[1, 2, 3].map(UPLOAD).join('')}</form></div>`;
+
+run('Nahrávání příloh — odkrývání dalšího pole a německé hlášky',
+  UPLOAD_FORM, 'https://www.eldr.cz/de/kontakty',
+  (win, doc) => {
+    const f = [...doc.querySelectorAll('.w-file-upload')];
+    ok('na začátku je vidět jen první pole', f[1].style.display === 'none' && f[2].style.display === 'none');
+    ok('chybová hláška přeložená do němčiny', f[0].querySelector('.w-file-upload-error-msg').textContent.startsWith('Hochladen fehlgeschlagen'));
+    win.dataLayer = [];
+    doc.querySelector('form').dispatchEvent(new win.Event('submit', { bubbles: true }));
+    ok('formulář s přílohami NEodpaluje contact_form_submit z bundlu', !win.dataLayer.some(e => e.event === 'contact_form_submit'));
+    f[0].querySelector('input').setAttribute('data-value', 'soubor.zip');
+    // MutationObserver volá zpětně jako microtask, Promise.then přijde až po něm.
+    pending.push(Promise.resolve().then(() => {
+      ok('po nahrání prvního souboru se ukáže druhé pole, třetí ne',
+        f[1].style.display === 'block' && f[2].style.display === 'none');
+    }));
+  });
+
+run('Nahrávání příloh — čeština zůstává podle Designeru',
+  UPLOAD_FORM, 'https://www.eldr.cz/kontakty',
+  (win, doc) => {
+    ok('česká stránka hlášku nepřepisuje', doc.querySelector('.w-file-upload-error-msg').textContent.startsWith('Upload failed. Max size'));
+  });
+
+// --- 7. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
-console.log(`\n${pass} prošlo, ${fail} selhalo`);
-process.exit(fail ? 1 : 0);
+Promise.all(pending).then(() => {
+  console.log(`\n${pass} prošlo, ${fail} selhalo`);
+  process.exit(fail ? 1 : 0);
+});

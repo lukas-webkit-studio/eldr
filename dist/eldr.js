@@ -1,7 +1,7 @@
 /*!
  * ELDR — sloučený skript webu eldr.cz
  * Sestaveno z src/modules/ — needituj tento soubor, uprav zdroj a spusť `node build.js`.
- * Moduly: 00-core.js, 05-banners.js, 10-vars.js, 20-locale.js, 30-scroll-lock.js, 31-gallery.js, 32-gallery-height.js, 40-counter.js, 41-long-text.js, 42-tabs.js, 43-video-modal.js, 44-history-swipe.js, 50-form-locale.js, 60-ai-share.js, 90-gtm-events.js
+ * Moduly: 00-core.js, 05-banners.js, 10-vars.js, 20-locale.js, 30-scroll-lock.js, 31-gallery.js, 32-gallery-height.js, 40-counter.js, 41-long-text.js, 42-tabs.js, 43-video-modal.js, 44-history-swipe.js, 50-form-locale.js, 51-form-upload.js, 60-ai-share.js, 90-gtm-events.js
  */
 (function () {
 'use strict';
@@ -52,6 +52,10 @@ var SEL = {
 
   // reference
   refLanguage:      '.sectionreference__collection__item__language, .reference_item-language',
+
+  // formulář — nahrávání příloh (nativní Webflow File Upload)
+  formUpload:       '.w-file-upload',
+  formUploadError:  '.w-file-upload-error-msg',
 
   /* --- HOOK TŘÍDY PRO GTM — NESTYLOVAT, NEMAZAT ---------------------------
      Na těchto třídách visí měření v Google Tag Manageru. Ve Webflow zůstávají
@@ -1173,6 +1177,87 @@ function locale() {
     var input = form.querySelector('#jazyk');
     if (input) input.value = locale();   // sdílená detekce z jádra
   }, true);
+})();
+
+/* ==========================================================================
+   Nahrávání příloh ve formuláři
+   Nativní Webflow File Upload (Kontakty, Produkty, /dev/kontakty-upload).
+   Webflow nahrává soubory sám; tady jsou jen dvě věci, které neumí:
+
+   1. Postupné odkrývání polí. Formulář má pět polí Příloha 1–5, pole 2–5
+      mají kombo třídu `is-hidden`. Další pole se ukáže, až když je předchozí
+      nahrané. Proč ne ve Webflow: podmínka „předchozí pole má soubor“ je
+      stav za běhu (atribut data-value na inputu), IX2 ani třída ho nevidí.
+   2. Chybové hlášky v EN a DE. Webflow je drží v atributech
+      data-w-*-error, které jdou jen anglicky a společně pro všechny jazyky
+      (atributy nejde lokalizovat, viz CLAUDE.md). Čeština zůstává podle
+      Designeru, EN a DE se přepíšou podle jazyka stránky.
+
+   Modul do repa vrácen 27. 10. 2026 (S1, #17) podle bundlu, který už běžel
+   na webu — v repu do té doby chyběl.
+   ========================================================================== */
+
+(function () {
+  var MESSAGES = {
+    en: {
+      size: 'Upload failed. The maximum file size is 10 MB.',
+      type: 'Upload failed. This file type is not allowed.',
+      generic: 'Upload failed. Please try again.'
+    },
+    de: {
+      size: 'Hochladen fehlgeschlagen. Die Datei darf höchstens 10 MB groß sein.',
+      type: 'Hochladen fehlgeschlagen. Dieser Dateityp ist nicht erlaubt.',
+      generic: 'Hochladen fehlgeschlagen. Bitte versuchen Sie es erneut.'
+    }
+  };
+
+  function hasFile(field) {
+    var input = $1('input[type="file"]', field);
+    return !!(input && input.getAttribute('data-value'));
+  }
+
+  /** Ukáže všechna nahraná pole a první prázdné, zbylá prázdná skryje. */
+  function updateVisibility(fields) {
+    var emptyShown = false;
+    fields.forEach(function (field, i) {
+      var show = hasFile(field) || !emptyShown;
+      if (!hasFile(field)) emptyShown = true;
+      if (i !== 0) field.style.display = show ? 'block' : 'none';
+    });
+  }
+
+  function translateErrors(lang) {
+    var msg = MESSAGES[lang];
+    if (!msg) return;
+    $$(SEL.formUploadError).forEach(function (el) {
+      var map = {};
+      map[el.getAttribute('data-w-size-error')] = msg.size;
+      map[el.getAttribute('data-w-type-error')] = msg.type;
+      map[el.getAttribute('data-w-generic-error')] = msg.generic;
+      var apply = function () {
+        var text = el.textContent.trim();
+        if (map[text] && text !== map[text]) el.textContent = map[text];
+      };
+      apply();
+      new MutationObserver(apply).observe(el, { childList: true, characterData: true, subtree: true });
+    });
+  }
+
+  onReady(function () {
+    if (!has(SEL.formUpload)) return;
+    translateErrors(locale());
+
+    $$('form').forEach(function (form) {
+      var fields = $$(SEL.formUpload, form);
+      if (fields.length < 2) return;
+      var update = function () { updateVisibility(fields); };
+      fields.forEach(function (field) {
+        var input = $1('input[type="file"]', field);
+        if (input) new MutationObserver(update).observe(input, { attributes: true, attributeFilter: ['data-value'] });
+      });
+      update();
+    });
+  });
 })();
 
 /* ==========================================================================
