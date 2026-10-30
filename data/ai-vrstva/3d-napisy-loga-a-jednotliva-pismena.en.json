@@ -7,10 +7,7 @@
       "value": "3D signs, logos, and letters",
       "quote": "3D signs, logos, and letters"
     },
-    "description": {
-      "value": "Production of illuminated signage with top-quality craftsmanship and custom design tailored to your needs.",
-      "quote": "Production of illuminated signage with top-quality craftsmanship and custom design tailored to your needs."
-    },
+    "description": null,
     "highlights": [
       {
         "value": "Decades of durability",
@@ -56,7 +53,7 @@
           "quote": "Weather resistance"
         },
         "value": {
-          "value": "Our illuminated signs are built to withstand all weather conditions and come with up to a 5-year warranty.",
+          "value": "come with up to a 5-year warranty",
           "quote": "Our illuminated signs are built to withstand all weather conditions and come with up to a 5-year warranty. High-quality materials with surface treatments ensure colour and appearance stability for many years."
         }
       },
@@ -66,7 +63,7 @@
           "quote": "Weather resistance"
         },
         "value": {
-          "value": "High-quality materials with surface treatments ensure colour and appearance stability for many years.",
+          "value": "materials with surface treatments ensure colour and appearance stability for many years",
           "quote": "Our illuminated signs are built to withstand all weather conditions and come with up to a 5-year warranty. High-quality materials with surface treatments ensure colour and appearance stability for many years."
         }
       }
@@ -95,7 +92,7 @@
             "quote": "Graphics: Unlimited colour options thanks to translucent film"
           },
           "value": {
-            "value": "Unlimited colour options thanks to translucent film",
+            "value": "colour options thanks to translucent film",
             "quote": "Graphics: Unlimited colour options thanks to translucent film"
           }
         },
@@ -105,7 +102,7 @@
             "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
           },
           "value": {
-            "value": "A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements",
+            "value": "A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing",
             "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
           }
         },
@@ -152,11 +149,7 @@
           "quote": "Lower production and maintenance costs compared to illuminated versions. Unlimited width and thickness."
         },
         {
-          "value": "Unlimited width and thickness.",
-          "quote": "Lower production and maintenance costs compared to illuminated versions. Unlimited width and thickness."
-        },
-        {
-          "value": "optional 3D printing for lighter components and exceptional precision",
+          "value": "optional 3D printing",
           "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
         },
         {
@@ -197,7 +190,7 @@
             "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
           },
           "value": {
-            "value": "Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)",
+            "value": "Aluminium, acrylic glass, sheet materials, optional use of 3D printing",
             "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
           }
         },
@@ -240,7 +233,7 @@
           "quote": "Elegant. Subtle. Option to combine front and back lighting."
         },
         {
-          "value": "optional use of 3D printing (lighter, surgically precise)",
+          "value": "optional use of 3D printing",
           "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
         }
       ],
@@ -263,7 +256,7 @@
         "quote": "Large-format illuminated signs"
       },
       "description": {
-        "value": "Durable signage for exposed, windy locations at height. It attracts attention from a distance and offers a long service life even in adverse conditions.",
+        "value": "Durable signage for exposed, windy locations at height.",
         "quote": "Durable signage for exposed, windy locations at height. It attracts attention from a distance and offers a long service life even in adverse conditions."
       },
       "image": {
@@ -277,7 +270,7 @@
             "quote": "Graphics: Unlimited colour options thanks to translucent film and paint finishes"
           },
           "value": {
-            "value": "Unlimited colour options thanks to translucent film and paint finishes",
+            "value": "colour options thanks to translucent film and paint finishes",
             "quote": "Graphics: Unlimited colour options thanks to translucent film and paint finishes"
           }
         },
@@ -301,10 +294,6 @@
         {
           "value": "A fixing rail integrated into the side of the letter secures the flexible face material.",
           "quote": "Robust, weather-resistant signage. A fixing rail integrated into the side of the letter secures the flexible face material. Unlimited size, lighting colour and body colour options."
-        },
-        {
-          "value": "Unlimited size, lighting colour and body colour options.",
-          "quote": "Robust, weather-resistant signage. A fixing rail integrated into the side of the letter secures the flexible face material. Unlimited size, lighting colour and body colour options."
         }
       ],
       "uses": [
@@ -325,10 +314,7 @@
         "value": "3D signs with illuminated face",
         "quote": "3D signs with illuminated face"
       },
-      "description": {
-        "value": "For indoor and outdoor use. The most popular type of illuminated 3D signage, with an illuminated face.",
-        "quote": "For indoor and outdoor use. The most popular type of illuminated 3D signage, with an illuminated face."
-      },
+      "description": null,
       "image": {
         "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
         "alt": "Profil 5s 1"
@@ -340,7 +326,7 @@
             "quote": "Graphics: Unlimited options of acrylic glass colours and translucent film"
           },
           "value": {
-            "value": "Unlimited options of acrylic glass colours and translucent film",
+            "value": "options of acrylic glass colours and translucent film",
             "quote": "Graphics: Unlimited options of acrylic glass colours and translucent film"
           }
         },
@@ -399,7 +385,7 @@
             "quote": "Graphics: Unlimited options through translucent film combined with coloured acrylic glass and LEDs"
           },
           "value": {
-            "value": "Unlimited options through translucent film combined with coloured acrylic glass and LEDs",
+            "value": "options through translucent film combined with coloured acrylic glass and LEDs",
             "quote": "Graphics: Unlimited options through translucent film combined with coloured acrylic glass and LEDs"
           }
         },
@@ -463,7 +449,7 @@
         "quote": "Solid acrylic 3D signs"
       },
       "description": {
-        "value": "Ideal for small signs and lettering with shapes that are difficult to form.",
+        "value": "for small signs and lettering with shapes that are difficult to form.",
         "quote": "For indoor and outdoor use. Ideal for small signs and lettering with shapes that are difficult to form."
       },
       "image": {
@@ -477,7 +463,7 @@
             "quote": "Graphics: Unlimited options through translucent film, paint finishes and LED colours"
           },
           "value": {
-            "value": "Unlimited options through translucent film, paint finishes and LED colours",
+            "value": "options through translucent film, paint finishes and LED colours",
             "quote": "Graphics: Unlimited options through translucent film, paint finishes and LED colours"
           }
         },
@@ -515,10 +501,6 @@
         },
         {
           "value": "Face and sides can be illuminated.",
-          "quote": "Ideal for small or intricately shaped signs. Face and sides can be illuminated. Affordable neon-like look with minimal energy consumption."
-        },
-        {
-          "value": "Affordable neon-like look with minimal energy consumption.",
           "quote": "Ideal for small or intricately shaped signs. Face and sides can be illuminated. Affordable neon-like look with minimal energy consumption."
         }
       ],

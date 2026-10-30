@@ -3,7 +3,6 @@
 > Výroba naší světelné reklamy probíhá kompletně v Česku. Světelnou reklamu navrhneme na míru podle firemní identity. Poskytujeme profesionální instalaci a servis.
 
 Web je ve třech jazycích: čeština (hlavní), angličtina (/en) a němčina (/de).
-Každá produktová stránka má strukturovaná data JSON-LD; všechny údaje v nich jsou převzaté z textu stránky.
 
 ## Kontakt
 
@@ -15,15 +14,15 @@ Každá produktová stránka má strukturovaná data JSON-LD; všechny údaje v 
 
 ## Produkty
 
-- [Reklamní pylony a totemy](https://www.eldr.cz/produkty/pylony-a-totemy): Pylony, Totemy. Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.
-- [3D nápisy, loga a písmena](https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena): Nesvětelné 3D nápisy, 3D nápisy se zadním podsvícením, Velkoformátové světelné nápisy, 3D nápisy se svítícím čelem, 3D nápisy se svítícím čelem a boky, Plno-plexisklové 3D nápisy. Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.
-- [Orientační systémy](https://www.eldr.cz/produkty/orientacni-systemy): Orientační systémy budov a areálů. Orientační systém, který bude perfektně sedět vašemu prostoru a zároveň komplexně plnit informační funkci.
+- [Reklamní pylony a totemy](https://www.eldr.cz/produkty/pylony-a-totemy): Pylony, Totemy.
+- [3D nápisy, loga a písmena](https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena): Nesvětelné 3D nápisy, 3D nápisy se zadním podsvícením, Velkoformátové světelné nápisy, 3D nápisy se svítícím čelem, 3D nápisy se svítícím čelem a boky, Plno-plexisklové 3D nápisy.
+- [Orientační systémy](https://www.eldr.cz/produkty/orientacni-systemy): Orientační systémy budov a areálů.
 - [Zámečnické konstrukce na míru, opracování plexiskla](https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla): Zámečnické konstrukce, Atypické zámečnické konstrukce, Opracování a prodej plexiskla, polykarbonátu.
-- [Výstrče, lékárenské znaky](https://www.eldr.cz/produkty/vystrce-lekarenske-znaky): Světelné výstrče, Atypické výstrče, Lékárenské znaky, Světelná výstrč a výstrč s intarzií, Výstrč na míru a nesvětelná výstrč. Už z dálky zajišťují skvělou viditelnost reklamy. Vyrábíme velké množství provedení, variant a tvarů.
+- [Výstrče, lékárenské znaky](https://www.eldr.cz/produkty/vystrce-lekarenske-znaky): Světelné výstrče, Atypické výstrče, Lékárenské znaky, Světelná výstrč a výstrč s intarzií, Výstrč na míru a nesvětelná výstrč.
 - [Velkoformátový digitální tisk, řezaná grafika, polepy](https://www.eldr.cz/produkty/velkoformatovy-tisk): Velkoformátový digitální tisk, Řezaná grafika, Polepy, Polepy vozidel a výloh, Perforované a krycí polepy oken, Polepy podlah a bezpečnostní prvky, Designové obrazy.
 - [Vstupní portály a architektonické prvky](https://www.eldr.cz/produkty/architektonicke-prvky-vstupni-portaly-vlajky): Vstupní portály, Architektonické světelné prvky, Reklamní vlajky.
 - [Prvky podpory prodeje, LED technologie](https://www.eldr.cz/produkty/prvky-podpory-prodeje-led-technologie): Prvky podpory prodeje, LED displeje, Segmentové displeje, Maticové displeje.
-- [Světelné panely a tabule](https://www.eldr.cz/produkty/tabule-a-svetelne-panely): Světelné panely, Plexi intarzie, Vystouplá plexi intarzie, Podložená plexi intarzie, Reklamní tabule, Menuboardy/infoboardy. Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem.
+- [Světelné panely a tabule](https://www.eldr.cz/produkty/tabule-a-svetelne-panely): Světelné panely, Plexi intarzie, Vystouplá plexi intarzie, Podložená plexi intarzie, Reklamní tabule, Menuboardy/infoboardy.
 - [Neonová a LED neonová designová svítidla](https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty): Designová svítidla, Žárovkové světelné nápisy, Neonové nápisy & imitace, Mechové stěny, Reklama z cortenového plechu, Světelná čísla domů, Designové stojací lampy na zakázku.
 
 ## Products (English)

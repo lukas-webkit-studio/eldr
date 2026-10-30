@@ -7,10 +7,7 @@
       "value": "Wayfinding systems",
       "quote": "Wayfinding systems"
     },
-    "description": {
-      "value": "A wayfinding system that fits your space perfectly and tells visitors everything they need to know.",
-      "quote": "A wayfinding system that fits your space perfectly and tells visitors everything they need to know."
-    },
+    "description": null,
     "highlights": [
       {
         "value": "Clear signage",
@@ -54,7 +51,7 @@
             "quote": "Graphics: a clear graphic solution in illuminated and non-illuminated versions, matched to the space and to your brand identity."
           },
           "value": {
-            "value": "a clear graphic solution in illuminated and non-illuminated versions, matched to the space and to your brand identity.",
+            "value": "graphic solution in illuminated and non-illuminated versions, matched to the space and to your brand identity.",
             "quote": "Graphics: a clear graphic solution in illuminated and non-illuminated versions, matched to the space and to your brand identity."
           }
         },
@@ -140,7 +137,7 @@
         "quote": "What are wayfinding systems made of?"
       },
       "answer": {
-        "value": "From sheet material in aluminium, Dibond or acrylic. A popular material with a strikingly attractive look is anodized aluminium. Other materials can be used as well — wood, stainless steel, acrylic glass.",
+        "value": "From sheet material in aluminium, Dibond or acrylic.",
         "quote": "From sheet material in aluminium, Dibond or acrylic. A popular material with a strikingly attractive look is anodized aluminium. Other materials can be used as well — wood, stainless steel, acrylic glass."
       }
     }

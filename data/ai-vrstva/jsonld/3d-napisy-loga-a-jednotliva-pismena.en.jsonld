@@ -111,31 +111,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "aluminium"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "acrylic glass"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "sheet materials"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "polystyrene"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "cardboard"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Profile 1"
                 },
@@ -151,23 +126,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "optional 3D printing for lighter components and exceptional precision"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "paint finishes to suit individual requirements"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Use",
                   "value": "For indoor and outdoor settings"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass"
                 }
               ],
               "provider": {
@@ -198,21 +158,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Aluminium"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "acrylic glass"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "sheet materials"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Profile 3"
                 },
@@ -228,18 +173,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "optional use of 3D printing (lighter, surgically precise)"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Use",
                   "value": "For indoor and outdoor use"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)"
                 }
               ],
               "provider": {
@@ -287,11 +222,6 @@
                   "@type": "PropertyValue",
                   "name": "Use",
                   "value": "for exposed, windy locations at height"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs"
                 }
               ],
               "provider": {
@@ -329,16 +259,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Up to 2 metres high, with no visible frame around the face."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "On façades, roofs, parapets, the ground or wood, or suspended from ceilings."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Suitable for indoor and outdoor use."
                 }
               ],
               "provider": {
@@ -374,16 +294,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Acrylic glass"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Dibond"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Profile 8"
                 },
@@ -396,11 +306,6 @@
                   "@type": "PropertyValue",
                   "name": "Use",
                   "value": "For indoor and outdoor use"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces"
                 }
               ],
               "provider": {
@@ -436,11 +341,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Acrylic glass"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Profile 9"
                 },
@@ -453,11 +353,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Affordable neon-like look with minimal energy consumption."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls"
                 }
               ],
               "provider": {

@@ -117,7 +117,7 @@
         "quote": "Řezanou grafikou rozumíme nápisy vyřezané ze samolepicí fólie. Výhodou řezané grafiky je její dlouhá životnost. Je vhodná na všechny typy reklamních a informačních nápisů."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika-p-500.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika.jpg",
         "alt": "Řezaná grafika na stěně interiéru restaurace KFC"
       },
       "properties": [
@@ -148,15 +148,10 @@
           "quote": "Materiály: samolepicí barevné fólie vhodné pro aplikaci na širokou škálu povrchů. Používané fólie mají stálobarevnost až sedm let."
         }
       ],
-      "variants": [
-        {
-          "value": "Výhodou řezané grafiky je její dlouhá životnost.",
-          "quote": "Řezanou grafikou rozumíme nápisy vyřezané ze samolepicí fólie. Výhodou řezané grafiky je její dlouhá životnost. Je vhodná na všechny typy reklamních a informačních nápisů."
-        }
-      ],
+      "variants": [],
       "uses": [
         {
-          "value": "Je vhodná na všechny typy reklamních a informačních nápisů.",
+          "value": "reklamních a informačních nápisů",
           "quote": "Řezanou grafikou rozumíme nápisy vyřezané ze samolepicí fólie. Výhodou řezané grafiky je její dlouhá životnost. Je vhodná na všechny typy reklamních a informačních nápisů."
         },
         {
@@ -177,7 +172,7 @@
         "quote": "Reklamní polepy vozů, výloh, oken i podlah – tištěnou i řezanou grafikou."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu.jpg",
         "alt": "Polep proskléné výlohy pobočky ČSOB"
       },
       "properties": [],
@@ -215,7 +210,7 @@
         "quote": "Polepy vozidel a výloh: celkové i částečné polepy vozidel, stejně jako samostatné nápisy. Návrh grafiky připravíme s vámi a zajistíme profesionální aplikaci. Polepy výloh a oken děláme tištěnou nebo řezanou grafikou – pro reklamní sdělení, informační texty, otevírací dobu, fotografie i loga."
       },
       "description": {
-        "value": "celkové i částečné polepy vozidel, stejně jako samostatné nápisy. Návrh grafiky připravíme s vámi a zajistíme profesionální aplikaci.",
+        "value": "celkové i částečné polepy vozidel, stejně jako samostatné nápisy.",
         "quote": "Polepy vozidel a výloh: celkové i částečné polepy vozidel, stejně jako samostatné nápisy. Návrh grafiky připravíme s vámi a zajistíme profesionální aplikaci. Polepy výloh a oken děláme tištěnou nebo řezanou grafikou – pro reklamní sdělení, informační texty, otevírací dobu, fotografie i loga."
       },
       "image": null,
@@ -316,7 +311,7 @@
         "quote": "Navrhujeme a vyrábíme velkoformátové obrazy a nástěnné grafiky pro restaurace, kavárny, retail i firemní prostory – od stylových ilustrací přes výrazné brandové motivy."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy.jpg",
         "alt": "Designové obrazy na stěně kavárny"
       },
       "properties": [

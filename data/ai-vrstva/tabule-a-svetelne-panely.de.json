@@ -8,7 +8,7 @@
       "quote": "Leuchtpaneele und Werbetafeln"
     },
     "description": {
-      "value": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m² – mit erstklassiger Verarbeitung und hochwertigem Design.",
+      "value": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m²",
       "quote": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m² – mit erstklassiger Verarbeitung und hochwertigem Design."
     },
     "highlights": [
@@ -64,7 +64,7 @@
             "quote": "Material: Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte. Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane, die für lange Lebensdauer und hochwertige Ausleuchtung sorgt."
           },
           "value": {
-            "value": "Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte. Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane, die für lange Lebensdauer und hochwertige Ausleuchtung sorgt.",
+            "value": "Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte. Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane",
             "quote": "Material: Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte. Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane, die für lange Lebensdauer und hochwertige Ausleuchtung sorgt."
           }
         },
@@ -257,7 +257,7 @@
         "quote": "Werbetafeln"
       },
       "description": {
-        "value": "Die Werbetafel, also die unbeleuchtete Werbeplatte, ist eine der einfachsten Lösungen für ein Werbeelement.",
+        "value": "Die Werbetafel, also die unbeleuchtete Werbeplatte",
         "quote": "Die Werbetafel, also die unbeleuchtete Werbeplatte, ist eine der einfachsten Lösungen für ein Werbeelement. Und sie bleibt flexibel – die Grafik auf der Tafel lässt sich jederzeit neu bekleben."
       },
       "image": {
@@ -359,7 +359,7 @@
             "quote": "Material: widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen. Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt."
           },
           "value": {
-            "value": "widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen. Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt.",
+            "value": "Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt.",
             "quote": "Material: widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen. Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt."
           }
         },
@@ -374,12 +374,7 @@
           }
         }
       ],
-      "materials": [
-        {
-          "value": "widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen",
-          "quote": "Material: widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen. Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt."
-        }
-      ],
+      "materials": [],
       "variants": [
         {
           "value": "Sie können doppelseitig ausgeführt werden, was den Wechsel erleichtert.",

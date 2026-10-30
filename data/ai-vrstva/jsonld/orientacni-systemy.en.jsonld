@@ -115,22 +115,12 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Variant",
-                  "value": "in illuminated and non-illuminated versions"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
                   "value": "indoor, outdoor and modular wayfinding systems"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Use",
                   "value": "Indoors and outdoors"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "indoors, outdoors, in buildings and across large sites — for example logistics parks, hospitals or department stores."
                 }
               ],
               "provider": {

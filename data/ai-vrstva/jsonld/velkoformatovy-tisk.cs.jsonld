@@ -82,41 +82,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "papír"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "samolepicí fólii"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "translucentní (prosvětlovací) fólii"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "perforovanou fólii"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "banner"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "textilní materiály"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Tisky laminujeme lesklou nebo matnou laminovací fólií, která zvyšuje odolnost zejména venku."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Digitální tisk často kombinujeme s řezanou grafikou"
                 },
@@ -145,7 +110,7 @@
               "name": "Řezaná grafika",
               "description": "Řezanou grafikou rozumíme nápisy vyřezané ze samolepicí fólie.",
               "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk#rezana-grafika",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika-p-500.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -159,11 +124,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "samolepicí barevné fólie vhodné pro aplikaci na širokou škálu povrchů"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Výhodou řezané grafiky je její dlouhá životnost."
                 },
@@ -171,11 +131,6 @@
                   "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Je vhodná na všechny typy reklamních a informačních nápisů."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "tou může být téměř jakýkoliv povrch s dostatečnou přilnavostí"
                 }
               ],
               "provider": {
@@ -192,7 +147,7 @@
               "name": "Polepy",
               "description": "Reklamní polepy vozů, výloh, oken i podlah – tištěnou i řezanou grafikou.",
               "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk#dalsi-druhy-polepu",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -332,7 +287,7 @@
               "name": "Designové obrazy",
               "description": "Navrhujeme a vyrábíme velkoformátové obrazy a nástěnné grafiky pro restaurace, kavárny, retail i firemní prostory",
               "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk#designove-obrazy",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -343,26 +298,6 @@
                   "@type": "PropertyValue",
                   "name": "Zpracování",
                   "value": "zajišťujeme grafický návrh, precizní velkoformátový tisk ve vysokém rozlišení i profesionální montáž – vše přizpůsobujeme konkrétnímu prostoru, světlu i identitě značky."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "plátno (canvas)"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "fólie"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "pevné desky jako Dibond či PVC"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "dodáváme obrazy v hliníkových i dřevěných rámech nebo v bezrámovém provedení"
                 },
                 {
                   "@type": "PropertyValue",

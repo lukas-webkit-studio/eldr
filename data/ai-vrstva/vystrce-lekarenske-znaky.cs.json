@@ -8,7 +8,7 @@
       "quote": "Výstrče, lékárenské znaky"
     },
     "description": {
-      "value": "Už z dálky zajišťují skvělou viditelnost reklamy. Vyrábíme velké množství provedení, variant a tvarů.",
+      "value": "Vyrábíme velké množství provedení, variant a tvarů.",
       "quote": "Už z dálky zajišťují skvělou viditelnost reklamy. Vyrábíme velké množství provedení, variant a tvarů."
     },
     "highlights": [
@@ -129,11 +129,11 @@
         "quote": "Atypické výstrče"
       },
       "description": {
-        "value": "Výstrč ve tvaru vašeho symbolu je reklama, kterou si zákazníci zapamatují. Tvar mluví za vás – i bez jediného slova.",
+        "value": "Výstrč ve tvaru vašeho symbolu",
         "quote": "Výstrč ve tvaru vašeho symbolu je reklama, kterou si zákazníci zapamatují. Tvar mluví za vás – i bez jediného slova."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce.jpg",
         "alt": "Kulatá atypická výstrč Petřín Park na cihlové fasádě"
       },
       "properties": [
@@ -188,7 +188,7 @@
         "quote": "Lékárenské znaky jsou pod autorským zákonem. A my patříme mezi několik málo firem, které mají oprávnění k jejich výrobě."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky.jpg",
         "alt": "Zelený světelný lékárenský kříž na fasádě"
       },
       "properties": [
@@ -255,7 +255,7 @@
       "materials": [],
       "variants": [
         {
-          "value": "Výstrč s intarzií má tvarované světelné 3D znaky pro jedinečný vzhled.",
+          "value": "Výstrč s intarzií má tvarované světelné 3D znaky",
           "quote": "Výstrč s osvětlením pro lepší viditelnost reklamy. Výstrč s intarzií má tvarované světelné 3D znaky pro jedinečný vzhled. Tvar výstrče lze přizpůsobit dle libosti, včetně atypických tvarů."
         },
         {
@@ -279,18 +279,8 @@
       "image": null,
       "properties": [],
       "materials": [],
-      "variants": [
-        {
-          "value": "Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace.",
-          "quote": "Výstrč přizpůsobená specifickým požadavkům klienta. Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace. Nesvětelné provedení se hodí tam, kde má reklama působit decentně a nadčasově."
-        }
-      ],
-      "uses": [
-        {
-          "value": "tam, kde má reklama působit decentně a nadčasově",
-          "quote": "Výstrč přizpůsobená specifickým požadavkům klienta. Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace. Nesvětelné provedení se hodí tam, kde má reklama působit decentně a nadčasově."
-        }
-      ]
+      "variants": [],
+      "uses": []
     }
   ],
   "faq": [],

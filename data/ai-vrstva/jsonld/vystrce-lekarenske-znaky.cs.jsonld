@@ -93,36 +93,6 @@
                   "@type": "PropertyValue",
                   "name": "Vhodné pro",
                   "value": "provozovny, které potřebují být vidět ze všech stran – obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "rám tvoří hliníková konstrukce"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "čelní strana výstrče je polepena tištěnou nebo řezanou grafikou"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "provozovny, které potřebují být vidět ze všech stran"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy"
                 }
               ],
               "provider": {
@@ -139,7 +109,7 @@
               "name": "Atypické výstrče",
               "description": "Výstrč ve tvaru vašeho symbolu je reklama, kterou si zákazníci zapamatují. Tvar mluví za vás – i bez jediného slova.",
               "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#atypicke-vystrce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -150,21 +120,6 @@
                   "@type": "PropertyValue",
                   "name": "Vhodné pro",
                   "value": "provozovny, které mají ikonický symbol okamžitě spojený s oborem – zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "tvar výstrče kopíruje siluetu symbolu vašeho oboru – zub, nůžky, srdce, klíč, sklenici nebo cokoliv, co zákazník okamžitě spojí s vaším podnikáním"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "provozovny, které mají ikonický symbol okamžitě spojený s oborem"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)"
                 }
               ],
               "provider": {
@@ -181,7 +136,7 @@
               "name": "Lékárenské znaky",
               "description": "Lékárenské znaky jsou pod autorským zákonem.",
               "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#lekarenske-znaky",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -195,28 +150,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "světelné i nesvětelné nápisy „Lékárna“"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "polepy výloh, podlah a pultů"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "další doplňkové lékárenské značení"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "slouží k jednotnému označení lékáren a zdravotnických zařízení"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "označení lékáren a označení ordinací"
                 }
               ],
               "provider": {

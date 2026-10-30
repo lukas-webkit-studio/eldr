@@ -123,7 +123,7 @@
         "quote": "We specialise in illuminated lines on building façades, façade lighting, dynamic advertising and façade bands. Our priority is to find the best technical and visual solution."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky-p-800.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky.jpg",
         "alt": "Světelná hvězda Mercedes na střeše budovy"
       },
       "properties": [
@@ -133,7 +133,7 @@
             "quote": "Materials: we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life."
           },
           "value": {
-            "value": "we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life.",
+            "value": "LED modules with a high IP rating – they stand up to the weather",
             "quote": "Materials: we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life."
           }
         },
@@ -150,7 +150,7 @@
       ],
       "materials": [
         {
-          "value": "we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life",
+          "value": "LED modules with a high IP rating – they stand up to the weather",
           "quote": "Materials: we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life."
         }
       ],
@@ -201,7 +201,7 @@
             "quote": "Execution: you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
           },
           "value": {
-            "value": "you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life.",
+            "value": "you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes",
             "quote": "Execution: you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
           }
         },
@@ -211,7 +211,7 @@
             "quote": "Placement: they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective."
           },
           "value": {
-            "value": "they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective.",
+            "value": "where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs.",
             "quote": "Placement: they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective."
           }
         }
@@ -220,10 +220,6 @@
         {
           "value": "textile advertising flags",
           "quote": "We make textile advertising flags including flagpoles, ideal wherever there is no room for other types of advertising such as billboards or large display signs."
-        },
-        {
-          "value": "Flags are made from quality materials that give them a long service life.",
-          "quote": "Execution: you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
         }
       ],
       "variants": [
@@ -250,7 +246,7 @@
           "quote": "We make textile advertising flags including flagpoles, ideal wherever there is no room for other types of advertising such as billboards or large display signs."
         },
         {
-          "value": "Ideal for places where there is not enough room for any other type of advertising.",
+          "value": "for places where there is not enough room for any other type of advertising.",
           "quote": "Ideal for places where there is not enough room for any other type of advertising."
         }
       ]

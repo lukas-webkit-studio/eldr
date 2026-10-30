@@ -7,10 +7,7 @@
       "value": "Wegeleitsysteme",
       "quote": "Wegeleitsysteme"
     },
-    "description": {
-      "value": "Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.",
-      "quote": "Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert."
-    },
+    "description": null,
     "highlights": [
       {
         "value": "Übersichtliche Beschilderung",
@@ -44,7 +41,7 @@
         "quote": "Wir fertigen das System nach Ihren Wünschen, oder Sie wählen aus unseren modularen Serien-Wegeleitsystemen. Möglich ist auch ein System aus kleinen Totems und Wegweisern."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6a991b5f017afb3097bc8182_orientacni-systemy-globus-p-800.png",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6a991b5f017afb3097bc8182_orientacni-systemy-globus.png",
         "alt": "Zelený orientační rozcestník s šipkami před hypermarketem Globus"
       },
       "properties": [
@@ -54,7 +51,7 @@
             "quote": "Grafik: eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
           },
           "value": {
-            "value": "eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität.",
+            "value": "grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität.",
             "quote": "Grafik: eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
           }
         },
@@ -140,7 +137,7 @@
         "quote": "Woraus werden Wegeleitsysteme gefertigt?"
       },
       "answer": {
-        "value": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas.",
+        "value": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl.",
         "quote": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
       }
     }

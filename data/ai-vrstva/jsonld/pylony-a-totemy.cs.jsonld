@@ -101,38 +101,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "noha pylonu je žárově zinková pro zamezení koroze, nebo je opatřena antikorozním nátěrem"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "Světelné panely jsou vybaveny úspornými LED diodami."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Tvar koruny může být jednostranný, oboustranný, trojúhelníkový nebo čtvercový."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "světelná nebo nesvětelná reklama, nápis nebo logo"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Pro lepší bezpečnost a servis lze přidat servisní lávky."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Vyrábíme je individuálně, přesně dle zákazníkova přání."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "označování hypermarketů, obchodních center, sídel firem a čerpacích stanic"
                 }
               ],
               "provider": {
@@ -168,28 +138,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "Menší vystačí s hliníkovou či ocelovou konstrukcí s žárovou úpravou zinkováním."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "Opláštění může být z akrylátu, kompozitu i hliníkových plechů dle přání zákazníka."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "Osvětlení zajišťují úsporné LED diody."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Světelné i nesvětelné"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Totemy lze tvarovat, klenout nebo doplnit o 3D nápisy."
                 },
                 {
                   "@type": "PropertyValue",
@@ -205,16 +155,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Vyrábíme je individuálně, přesně dle zákazníkova přání."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "na příjezdových komunikacích, u vjezdu do areálů, čerpacích stanic, obchodních domů nebo tam, kde je potřeba označení a navigace"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "Slouží i jako orientační systémy firem a interiérů."
                 }
               ],
               "provider": {

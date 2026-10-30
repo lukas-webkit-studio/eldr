@@ -33,7 +33,7 @@
         "quote": "Jedná se o rámy kolem vstupních dveří ve světelném či nesvětelném provedení, které se liší svým designem. Součástí portálů mohou být loga, nápisy nebo sdělení."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly-p-500.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly.jpg",
         "alt": "Zelený prosvětlený vstupní portál budovy"
       },
       "properties": [
@@ -123,7 +123,7 @@
         "quote": "Jsme specialisté na světelné linky na fasádě budov, osvětlení fasád, dynamickou reklamu a fasádní pásy. Naší prioritou je najít to nejlepší technické a vizuální řešení."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky-p-800.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky.jpg",
         "alt": "Světelná hvězda Mercedes na střeše budovy"
       },
       "properties": [
@@ -133,7 +133,7 @@
             "quote": "Materiály: používáme kvalitní LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům a zajišťují dlouhou životnost."
           },
           "value": {
-            "value": "používáme kvalitní LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům a zajišťují dlouhou životnost.",
+            "value": "LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům",
             "quote": "Materiály: používáme kvalitní LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům a zajišťují dlouhou životnost."
           }
         },
@@ -150,7 +150,7 @@
       ],
       "materials": [
         {
-          "value": "používáme kvalitní LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům a zajišťují dlouhou životnost",
+          "value": "LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům",
           "quote": "Materiály: používáme kvalitní LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům a zajišťují dlouhou životnost."
         }
       ],
@@ -191,7 +191,7 @@
         "quote": "Vyrábíme reklamní textilní vlajky včetně vlajkových stožárů, které jsou ideální pro umístění tam, kde není prostor pro jiné typy reklamy, jako jsou billboardy nebo poutače."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky-p-500.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky.jpg",
         "alt": "Reklamní vlajka ČSOB na fasádě budovy"
       },
       "properties": [
@@ -201,7 +201,7 @@
             "quote": "Zpracování: tvar vlajky si můžete zvolit podle typu umístění – nabízíme tradiční obdélníkové, ale i speciální tvary. Vlajky jsou vyráběny z kvalitních materiálů, které zajišťují jejich dlouhou životnost."
           },
           "value": {
-            "value": "tvar vlajky si můžete zvolit podle typu umístění – nabízíme tradiční obdélníkové, ale i speciální tvary. Vlajky jsou vyráběny z kvalitních materiálů, které zajišťují jejich dlouhou životnost.",
+            "value": "tvar vlajky si můžete zvolit podle typu umístění – nabízíme tradiční obdélníkové, ale i speciální tvary",
             "quote": "Zpracování: tvar vlajky si můžete zvolit podle typu umístění – nabízíme tradiční obdélníkové, ale i speciální tvary. Vlajky jsou vyráběny z kvalitních materiálů, které zajišťují jejich dlouhou životnost."
           }
         },
@@ -211,7 +211,7 @@
             "quote": "Umístění: vhodné jsou zejména na místech s velkým pohybem lidí, jako jsou městské ulice, nákupní centra, festivaly nebo veletrhy. Díky pohybu ve větru mohou vlajky přitahovat ještě větší pozornost, což zvyšuje jejich účinnost."
           },
           "value": {
-            "value": "vhodné jsou zejména na místech s velkým pohybem lidí, jako jsou městské ulice, nákupní centra, festivaly nebo veletrhy. Díky pohybu ve větru mohou vlajky přitahovat ještě větší pozornost, což zvyšuje jejich účinnost.",
+            "value": "vhodné jsou zejména na místech s velkým pohybem lidí, jako jsou městské ulice, nákupní centra, festivaly nebo veletrhy.",
             "quote": "Umístění: vhodné jsou zejména na místech s velkým pohybem lidí, jako jsou městské ulice, nákupní centra, festivaly nebo veletrhy. Díky pohybu ve větru mohou vlajky přitahovat ještě větší pozornost, což zvyšuje jejich účinnost."
           }
         }
@@ -220,10 +220,6 @@
         {
           "value": "reklamní textilní vlajky",
           "quote": "Vyrábíme reklamní textilní vlajky včetně vlajkových stožárů, které jsou ideální pro umístění tam, kde není prostor pro jiné typy reklamy, jako jsou billboardy nebo poutače."
-        },
-        {
-          "value": "Vlajky jsou vyráběny z kvalitních materiálů, které zajišťují jejich dlouhou životnost.",
-          "quote": "Zpracování: tvar vlajky si můžete zvolit podle typu umístění – nabízíme tradiční obdélníkové, ale i speciální tvary. Vlajky jsou vyráběny z kvalitních materiálů, které zajišťují jejich dlouhou životnost."
         }
       ],
       "variants": [

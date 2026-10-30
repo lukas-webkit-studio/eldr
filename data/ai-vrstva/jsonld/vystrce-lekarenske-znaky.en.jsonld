@@ -93,36 +93,6 @@
                   "@type": "PropertyValue",
                   "name": "Suitable for",
                   "value": "Premises that need to be seen from every side – shops on busy streets, restaurants, hotels and anywhere advertising has to attract attention after dark."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "The frame is an aluminium structure"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "the face is made of backlit acrylic glass or another sheet material"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "The face of the sign is covered with printed or plotter-cut graphics."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "Both the shape of the sign and the graphic design can be adapted exactly as you like, including custom shapes."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Premises that need to be seen from every side"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "shops on busy streets, restaurants, hotels and anywhere advertising has to attract attention after dark"
                 }
               ],
               "provider": {
@@ -139,7 +109,7 @@
               "name": "Custom-shaped projecting signs",
               "description": "A projecting sign shaped like your own symbol is advertising customers remember. The shape speaks for you – without a single word.",
               "url": "https://www.eldr.cz/en/produkty/vystrce-lekarenske-znaky#atypicke-vystrce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -150,21 +120,6 @@
                   "@type": "PropertyValue",
                   "name": "Suitable for",
                   "value": "Businesses with an iconic symbol instantly linked to their trade – dental surgeries (a tooth), hairdressers (scissors), cafés (a cup), wine shops (a vine), credit unions (a key)."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "The shape of the sign follows the silhouette of your trade’s symbol – a tooth, scissors, a heart, a key, a glass or anything a customer instantly connects with your business."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Businesses with an iconic symbol instantly linked to their trade"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "dental surgeries (a tooth), hairdressers (scissors), cafés (a cup), wine shops (a vine), credit unions (a key)"
                 }
               ],
               "provider": {
@@ -181,7 +136,7 @@
               "name": "Pharmacy signs",
               "description": "Pharmacy signs are protected by copyright law.",
               "url": "https://www.eldr.cz/en/produkty/vystrce-lekarenske-znaky#lekarenske-znaky",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -195,28 +150,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "Illuminated and non-illuminated “Pharmacy” signs"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "decals for shop windows, floors and counters"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "further supplementary pharmacy signage"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Use",
                   "value": "provide uniform signage for pharmacies and healthcare facilities"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Signage for pharmacies and for doctors’ surgeries."
                 }
               ],
               "provider": {

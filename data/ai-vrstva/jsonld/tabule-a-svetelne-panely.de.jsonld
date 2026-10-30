@@ -89,16 +89,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "bis zu einer Größe von 100 m²"
                 },
@@ -111,16 +101,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Leuchtende Vorderseite"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "auf die lichtdurchlässige Fläche lässt sich gedruckte oder geschnittene Grafik aufbringen"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "lassen sich problemlos an Gebäuden oder Pylonen montieren"
                 }
               ],
               "provider": {
@@ -156,16 +136,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "das Grundgerüst bilden Rahmen und Rückseite aus Aluminium"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Die Vorderseite ist mit einer lichtundurchlässigen Platte verkleidet, meist aus Blech oder einer Sandwichplatte – Dibond."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "herausragend oder unterlegt"
                 },
@@ -173,16 +143,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Je nach Ausführung unterscheiden sich Intarsien in Optik und Preis. Entscheidend ist, ob die Zeichen über die Paneelfläche hinausragen oder darunter liegen."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "bei kleinen Schriftzügen mit sehr feiner Schriftart"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "bei historischen Gebäuden, wo nicht in die Fassade gebohrt werden darf"
                 }
               ],
               "provider": {
@@ -275,28 +235,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Aluminium, Edelstahl, Messing, Verbundwerkstoffen, Acryl, Glas, Holz und Ähnlichem."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "mit gedruckter oder geschnittener Grafik, mit Sandstrahlen und Gravieren"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "die Grafik auf der Tafel lässt sich jederzeit neu bekleben"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Kennzeichnung von Betrieben, Information oder Orientierung"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Am häufigsten als unbeleuchtete Schriftzüge, Informationstafeln, Türschilder, Wegeleitsysteme und Ähnliches."
                 },
                 {
                   "@type": "PropertyValue",
@@ -337,18 +277,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Sie können doppelseitig ausgeführt werden, was den Wechsel erleichtert."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "vor allem in Schnellrestaurants, wo sie das aktuelle Speisen- und Getränkeangebot anzeigen"
                 }
               ],
               "provider": {

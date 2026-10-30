@@ -89,16 +89,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "aluminium frame and a back panel of aluminium or sandwich board"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Front face of acrylic glass or translucent vinyl canvas"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "in sizes up to 100 m²"
                 },
@@ -111,16 +101,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Illuminated face"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "printed or cut graphics can be applied to the translucent surface"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "easy to mount on buildings or pylons"
                 }
               ],
               "provider": {
@@ -156,16 +136,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "the body is formed by an aluminium frame and back panel"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "The front face is covered with an opaque board, usually sheet metal or a sandwich board – Dibond."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "protruding or backed"
                 },
@@ -173,16 +143,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "The two versions differ in look and in price. It comes down to whether the characters sit above the surface of the panel or below it."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "for small signs set in very fine typefaces"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "on historic buildings, for example, where drilling into the façade is not possible"
                 }
               ],
               "provider": {
@@ -275,28 +235,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "aluminium, stainless steel, brass, composite materials, acrylates, glass, wood and the like."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "printed or cut graphics, sandblasting and engraving"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "the graphics on the board can be re-applied at any time"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "marking premises, information or wayfinding purposes"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Most often as non-illuminated signs, information boards, door plates, wayfinding systems and the like."
                 },
                 {
                   "@type": "PropertyValue",
@@ -337,18 +277,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "durable materials that ensure a long service life"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "They can be double-sided for easy changing."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "in fast-food restaurants, where they display the current food and drink offer"
                 }
               ],
               "provider": {

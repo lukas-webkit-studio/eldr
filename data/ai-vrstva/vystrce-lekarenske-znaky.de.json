@@ -8,7 +8,7 @@
       "quote": "Ausleger und Apothekenschilder"
     },
     "description": {
-      "value": "Schon aus der Ferne sorgen sie für hervorragende Sichtbarkeit Ihrer Werbung. Wir fertigen eine große Auswahl an Ausführungen, Varianten und Formen.",
+      "value": "Wir fertigen eine große Auswahl an Ausführungen, Varianten und Formen.",
       "quote": "Schon aus der Ferne sorgen sie für hervorragende Sichtbarkeit Ihrer Werbung. Wir fertigen eine große Auswahl an Ausführungen, Varianten und Formen."
     },
     "highlights": [
@@ -129,7 +129,7 @@
         "quote": "Ausleger in Sonderformen"
       },
       "description": {
-        "value": "Ein Ausleger in Form Ihres Symbols ist Werbung, die Kunden im Gedächtnis bleibt. Die Form spricht für Sie – ganz ohne Worte.",
+        "value": "Ein Ausleger in Form Ihres Symbols",
         "quote": "Ein Ausleger in Form Ihres Symbols ist Werbung, die Kunden im Gedächtnis bleibt. Die Form spricht für Sie – ganz ohne Worte."
       },
       "image": {
@@ -255,7 +255,7 @@
       "materials": [],
       "variants": [
         {
-          "value": "Der Ausleger mit Intarsie hat geformte leuchtende 3D-Zeichen für ein einzigartiges Erscheinungsbild.",
+          "value": "Der Ausleger mit Intarsie hat geformte leuchtende 3D-Zeichen",
           "quote": "Ein Ausleger mit Beleuchtung für bessere Sichtbarkeit Ihrer Werbung. Der Ausleger mit Intarsie hat geformte leuchtende 3D-Zeichen für ein einzigartiges Erscheinungsbild. Die Form des Auslegers lässt sich beliebig anpassen, auch in Sonderformen."
         },
         {
@@ -279,18 +279,8 @@
       "image": null,
       "properties": [],
       "materials": [],
-      "variants": [
-        {
-          "value": "Der unbeleuchtete Ausleger ist stilvoll und unaufdringlich, ideal für eine elegante und moderne Präsentation.",
-          "quote": "Ein Ausleger, der an die speziellen Anforderungen des Kunden angepasst ist. Der unbeleuchtete Ausleger ist stilvoll und unaufdringlich, ideal für eine elegante und moderne Präsentation. Die unbeleuchtete Ausführung eignet sich überall dort, wo Werbung dezent und zeitlos wirken soll."
-        }
-      ],
-      "uses": [
-        {
-          "value": "überall dort, wo Werbung dezent und zeitlos wirken soll",
-          "quote": "Ein Ausleger, der an die speziellen Anforderungen des Kunden angepasst ist. Der unbeleuchtete Ausleger ist stilvoll und unaufdringlich, ideal für eine elegante und moderne Präsentation. Die unbeleuchtete Ausführung eignet sich überall dort, wo Werbung dezent und zeitlos wirken soll."
-        }
-      ]
+      "variants": [],
+      "uses": []
     }
   ],
   "faq": [],

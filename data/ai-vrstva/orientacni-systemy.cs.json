@@ -7,10 +7,7 @@
       "value": "Orientační systémy",
       "quote": "Orientační systémy"
     },
-    "description": {
-      "value": "Orientační systém, který bude perfektně sedět vašemu prostoru a zároveň komplexně plnit informační funkci.",
-      "quote": "Orientační systém, který bude perfektně sedět vašemu prostoru a zároveň komplexně plnit informační funkci."
-    },
+    "description": null,
     "highlights": [
       {
         "value": "Přehledné značení",
@@ -54,7 +51,7 @@
             "quote": "Grafika: přehledné grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky."
           },
           "value": {
-            "value": "přehledné grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky.",
+            "value": "grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky.",
             "quote": "Grafika: přehledné grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky."
           }
         },
@@ -140,7 +137,7 @@
         "quote": "Z čeho se vyrábějí orientační systémy?"
       },
       "answer": {
-        "value": "Z hliníkového, dibondového nebo akrylátového deskového materiálu. Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník. Je možné využít i další materiály – dřevo, nerez, plexisklo.",
+        "value": "Z hliníkového, dibondového nebo akrylátového deskového materiálu.",
         "quote": "Z hliníkového, dibondového nebo akrylátového deskového materiálu. Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník. Je možné využít i další materiály – dřevo, nerez, plexisklo."
       }
     }

@@ -68,7 +68,7 @@
               "name": "Designer lighting",
               "description": "we can build you any designer light, made to measure.",
               "url": "https://www.eldr.cz/en/produkty/designova-a-interierova-svitidla-specialni-projekty#designova-svitidla",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe082720f7758da6a3b_designova-svitidla-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe082720f7758da6a3b_designova-svitidla.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -82,23 +82,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "modern minimalist pieces or a lavish, creative solution"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "designer lights come in all shapes and sizes"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Use",
                   "value": "Indoors"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "for commercial spaces as well as residential interiors, whether that means restaurants, offices or hotels"
                 }
               ],
               "provider": {
@@ -129,33 +114,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "a sheet-metal body"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "highly efficient LED bulbs"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "let you choose the shade of light"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Use",
                   "value": "Indoors and outdoors"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "they work especially well in commercial spaces, restaurants, shops, cinemas or club venues"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Mount them above the entrance, on the building façade, or use them as interior decoration."
                 }
               ],
               "provider": {
@@ -196,11 +156,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "acrylic glass"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Neon sign imitation in acrylic glass"
                 },
@@ -213,16 +168,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Choose from a range of widths and colour variations."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "ideal wherever originality, style and a true neon impression are the goal."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "with no glass involved, a safer choice indoors"
                 }
               ],
               "provider": {
@@ -255,16 +200,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "moss pictures carrying an advertising message"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "ideal for offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "where they combine beautifully with advertising lettering and logos"
                 }
               ],
               "provider": {
@@ -292,21 +227,6 @@
                   "@type": "PropertyValue",
                   "name": "Placement",
                   "value": "corten steel is used not only for advertising lettering but also for a range of design features such as logos, graphic patterns and decorative panels, which can go on building façades or into outdoor spaces."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "weathering steel (known as rusted steel)"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "corten steel"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "not only for advertising lettering but also for a range of design features such as logos, graphic patterns and decorative panels"
                 },
                 {
                   "@type": "PropertyValue",
@@ -338,7 +258,7 @@
               "name": "Illuminated house numbers",
               "description": "Give your home something special and dress up its exterior with an illuminated or non-illuminated number. Illuminated numbers are not only a practical solution but a design feature in their own right.",
               "url": "https://www.eldr.cz/en/produkty/designova-a-interierova-svitidla-specialni-projekty#svetelna-cisla-domu",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -357,28 +277,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "various types of backlighting that keep the number visible at night"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "a version without backlighting"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "Warm white light or cool blue backlighting"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Use",
                   "value": "Outdoors"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "suit any style and any type of building"
                 }
               ],
               "provider": {
@@ -395,7 +295,7 @@
               "name": "Designer floor lamps made to order",
               "description": "Have a lamp made to order, or pick from our ready-made designs and finished luminaires.",
               "url": "https://www.eldr.cz/en/produkty/designova-a-interierova-svitidla-specialni-projekty#stojaci-lampy",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1aab0713b5ffc26de_stojaci-lampy-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1aab0713b5ffc26de_stojaci-lampy.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -411,26 +311,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "made to order, or pick from our ready-made designs and finished luminaires"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "the full colour spectrum, wireless lighting"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "Control by remote, through the Hue app, Apple Home, DALI and other systems."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "an interior accessory"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "They work in commercial spaces too, for example as product display stands or supports for notices and directional signs."
                 }
               ],
               "provider": {

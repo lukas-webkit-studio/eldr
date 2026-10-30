@@ -8,7 +8,7 @@
       "quote": "Projecting signs and pharmacy signs"
     },
     "description": {
-      "value": "They give your advertising outstanding visibility even from a distance. We make a wide range of designs, variants and shapes.",
+      "value": "We make a wide range of designs, variants and shapes.",
       "quote": "They give your advertising outstanding visibility even from a distance. We make a wide range of designs, variants and shapes."
     },
     "highlights": [
@@ -129,11 +129,11 @@
         "quote": "Custom-shaped projecting signs"
       },
       "description": {
-        "value": "A projecting sign shaped like your own symbol is advertising customers remember. The shape speaks for you – without a single word.",
+        "value": "A projecting sign shaped like your own symbol",
         "quote": "A projecting sign shaped like your own symbol is advertising customers remember. The shape speaks for you – without a single word."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce.jpg",
         "alt": "Kulatá atypická výstrč Petřín Park na cihlové fasádě"
       },
       "properties": [
@@ -188,7 +188,7 @@
         "quote": "Pharmacy signs are protected by copyright law. And we are one of the few companies licensed to produce them."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky.jpg",
         "alt": "Zelený světelný lékárenský kříž na fasádě"
       },
       "properties": [
@@ -255,7 +255,7 @@
       "materials": [],
       "variants": [
         {
-          "value": "The inlaid version has shaped illuminated 3D characters for a unique look.",
+          "value": "The inlaid version has shaped illuminated 3D characters",
           "quote": "A projecting sign with lighting for better advertising visibility. The inlaid version has shaped illuminated 3D characters for a unique look. The shape of the sign can be adapted exactly as you like, including custom shapes."
         },
         {
@@ -279,18 +279,8 @@
       "image": null,
       "properties": [],
       "materials": [],
-      "variants": [
-        {
-          "value": "The non-illuminated version is stylish and understated, ideal for an elegant, modern presentation.",
-          "quote": "A projecting sign tailored to the client’s specific requirements. The non-illuminated version is stylish and understated, ideal for an elegant, modern presentation. A non-illuminated design suits anywhere advertising should look discreet and timeless."
-        }
-      ],
-      "uses": [
-        {
-          "value": "anywhere advertising should look discreet and timeless",
-          "quote": "A projecting sign tailored to the client’s specific requirements. The non-illuminated version is stylish and understated, ideal for an elegant, modern presentation. A non-illuminated design suits anywhere advertising should look discreet and timeless."
-        }
-      ]
+      "variants": [],
+      "uses": []
     }
   ],
   "faq": [],

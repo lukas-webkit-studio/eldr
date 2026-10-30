@@ -68,7 +68,7 @@
               "name": "Zámečnické konstrukce",
               "description": "Reklamní nosiče vyrábíme na míru přímo v našich výrobních prostorách.",
               "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#zamecnicke-konstrukce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -79,11 +79,6 @@
                   "@type": "PropertyValue",
                   "name": "Montáž",
                   "value": "konstrukce instalujeme s ohledem na statiku, bezpečnost a dlouhodobou odolnost, aby výsledné řešení spolehlivě fungovalo v každém prostředí."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "železo, ocel, hliník a nerez"
                 },
                 {
                   "@type": "PropertyValue",
@@ -105,7 +100,7 @@
               "name": "Atypické zámečnické konstrukce",
               "description": "Realizujeme širokou škálu nestandardních řešení, která vyžadují individuální přístup, technické know-how a kvalitní řemeslné provedení.",
               "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#atypicke-zamecnicke-konstrukce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -116,16 +111,6 @@
                   "@type": "PropertyValue",
                   "name": "Materiály a technologie",
                   "value": "disponujeme technologiemi pro svařování, ohýbání a další obrábění kovů. Pracujeme s materiály jako železo, ocel, hliník a nerez, vždy podle konkrétních požadavků projektu a plánovaného využití konstrukce."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "železo, ocel, hliník a nerez"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "fotbalové střídačky a branky, autobusové zastávky, stříšky a pergoly, zábradlí apod."
                 },
                 {
                   "@type": "PropertyValue",
@@ -173,16 +158,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Velkorozměrné"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "plexi krytů, stojánků i ochranných štítů"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "leštění hran diamantovou bruskou, opalování hran plamenem a tvarování materiálu za tepla v peci"
                 },
                 {
                   "@type": "PropertyValue",

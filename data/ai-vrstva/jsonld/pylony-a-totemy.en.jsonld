@@ -101,38 +101,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "the pylon base is galvanised to minimise corrosion or treated with an anti-corrosion coating"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "The illuminated panels are fitted with energy-saving LED diodes."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "The crown can be single-sided, double-sided, triangular, or square."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "illuminated or non-illuminated advertising, text, or a logo"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "For improved safety and easier servicing, service platforms can be added."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "We custom-manufacture every structure precisely according to the client's specifications"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "signage for hypermarkets, shopping centres, company headquarters, and petrol stations"
                 }
               ],
               "provider": {
@@ -168,28 +138,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Smaller units can use an aluminium frame or a hot-dip galvanised steel frame."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "The cladding can be made of acrylic, composite material or aluminium sheets, to suit the customer’s requirements."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Illumination is provided by energy-saving LED diodes."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Illuminated and non-illuminated"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "Totems can be shaped, curved, or enhanced with 3D lettering."
                 },
                 {
                   "@type": "PropertyValue",
@@ -205,16 +155,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "We custom-manufacture every structure precisely according to the client's specifications"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "on access roads, at the entrances to complexes, petrol stations, department stores, or wherever signage and navigation are required"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "Can serve as an orientation system for companies and interiors."
                 }
               ],
               "provider": {

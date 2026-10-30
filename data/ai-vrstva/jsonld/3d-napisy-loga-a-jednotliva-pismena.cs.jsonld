@@ -111,31 +111,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "hliník"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "plexisklo"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "deskový materiál"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "polystyren"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "karton"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Profil 1"
                 },
@@ -151,23 +126,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "možné využití 3D tisku (lehčí, chirurgicky přesné)"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "lakování dle individuálních potřeb"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Do interiérů a exteriérů"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo, na sklo"
                 }
               ],
               "provider": {
@@ -198,21 +158,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "hliník"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "plexisklo"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "deskový materiál"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Profil 3"
                 },
@@ -228,18 +173,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "možné využití 3D tisku (lehčí, chirurgicky přesné)"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Do interiérů i exteriérů"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo (nebo jiné pozadí pro aura efekt)"
                 }
               ],
               "provider": {
@@ -287,11 +222,6 @@
                   "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "do výšek, kde je větrno"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo a další dle potřeb zákazníka"
                 }
               ],
               "provider": {
@@ -334,16 +264,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Čelní plocha bez viditelného rámečku."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "vhodné pro interiér i exteriér"
                 }
               ],
               "provider": {
@@ -379,16 +299,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "plexisklo"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "dibond"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Profil 8"
                 },
@@ -401,11 +311,6 @@
                   "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Do interiérů a exteriérů"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "na fasádu, střechu, atiky, na zem, zavešení do stropu, na dřevo, průčelí obchodních jednotek, vnitřní prostory"
                 }
               ],
               "provider": {
@@ -441,11 +346,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "plexisklo"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Profil 9"
                 },
@@ -458,11 +358,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Cenově dostupný vzhled neonu s minimální spotřebou energie."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "vhodný především do interiéru - na kancelářské zdi, chodby, recepce, vstupní haly"
                 }
               ],
               "provider": {

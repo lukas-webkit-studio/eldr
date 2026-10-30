@@ -68,7 +68,7 @@
               "name": "Eingangsportale",
               "description": "Dabei handelt es sich um Rahmen rund um die Eingangstür, in beleuchteter oder unbeleuchteter Ausführung und in unterschiedlichem Design.",
               "url": "https://www.eldr.cz/de/produkty/architektonicke-prvky-vstupni-portaly-vlajky#vstupni-portaly",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly-p-500.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -87,16 +87,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Die Portale bestehen aus einer Aluminiumkonstruktion, in der LEDs untergebracht werden können."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Je nach gewünschter Leuchtkraft wird sie entweder mit Acrylglas oder mit Sandwichmaterial für eine unbeleuchtete Ausführung verkleidet."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "in beleuchteter oder unbeleuchteter Ausführung"
                 },
@@ -107,23 +97,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Auf dem Portal lässt sich ein 3D-Schriftzug anbringen, oder es wird als Plexiglas-Intarsie gefertigt."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Das Portal kann beleuchtet oder unbeleuchtet sein, auch mit erhabenem Schriftzug."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "Innen und außen"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "An Eingängen von Geschäften oder Firmen – sie markieren den Zugang klar, ziehen Aufmerksamkeit auf sich und geben Besuchern die nötigen Informationen."
                 },
                 {
                   "@type": "PropertyValue",
@@ -145,7 +120,7 @@
               "name": "Architektonische Leuchtelemente",
               "description": "Lichtlinien an Gebäudefassaden, Fassadenbeleuchtung, dynamische Werbung und Fassadenbänder",
               "url": "https://www.eldr.cz/de/produkty/architektonicke-prvky-vstupni-portaly-vlajky#architektonicke-prvky",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -156,11 +131,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Neben dem Design kümmern wir uns auch um die technischen Details, die richtige Befestigung und die Anpassung an den jeweiligen Raum, das Material und die Betriebsbedingungen vor Ort."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Wir verwenden hochwertige LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung und sorgen für eine lange Lebensdauer."
                 },
                 {
                   "@type": "PropertyValue",
@@ -202,7 +172,7 @@
               "name": "Werbefahnen",
               "description": "Wir fertigen Werbefahnen aus Textil samt Fahnenmasten",
               "url": "https://www.eldr.cz/de/produkty/architektonicke-prvky-vstupni-portaly-vlajky#vlajky",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky-p-500.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -221,16 +191,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Die Fahnen werden aus hochwertigen Materialien gefertigt, die für eine lange Lebensdauer sorgen."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "samt Fahnenmasten"
                 },
@@ -238,11 +198,6 @@
                   "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "Innen und außen"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Orte mit viel Publikumsverkehr wie Innenstadtstraßen, Einkaufszentren, Festivals oder Messen"
                 },
                 {
                   "@type": "PropertyValue",

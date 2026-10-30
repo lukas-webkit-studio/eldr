@@ -33,7 +33,7 @@
         "quote": "Dabei handelt es sich um Rahmen rund um die Eingangstür, in beleuchteter oder unbeleuchteter Ausführung und in unterschiedlichem Design. In das Portal lassen sich Logos, Schriftzüge oder eine Botschaft integrieren."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly-p-500.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly.jpg",
         "alt": "Zelený prosvětlený vstupní portál budovy"
       },
       "properties": [
@@ -123,7 +123,7 @@
         "quote": "Wir sind Spezialisten für Lichtlinien an Gebäudefassaden, Fassadenbeleuchtung, dynamische Werbung und Fassadenbänder. Unsere Priorität ist es, die beste technische und visuelle Lösung zu finden."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky-p-800.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky.jpg",
         "alt": "Světelná hvězda Mercedes na střeše budovy"
       },
       "properties": [
@@ -133,7 +133,7 @@
             "quote": "Materialien: Wir verwenden hochwertige LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung und sorgen für eine lange Lebensdauer."
           },
           "value": {
-            "value": "Wir verwenden hochwertige LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung und sorgen für eine lange Lebensdauer.",
+            "value": "LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung",
             "quote": "Materialien: Wir verwenden hochwertige LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung und sorgen für eine lange Lebensdauer."
           }
         },
@@ -150,7 +150,7 @@
       ],
       "materials": [
         {
-          "value": "Wir verwenden hochwertige LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung und sorgen für eine lange Lebensdauer.",
+          "value": "LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung",
           "quote": "Materialien: Wir verwenden hochwertige LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung und sorgen für eine lange Lebensdauer."
         }
       ],
@@ -191,7 +191,7 @@
         "quote": "Wir fertigen Werbefahnen aus Textil samt Fahnenmasten – ideal überall dort, wo für andere Werbeformen wie Plakatwände oder große Werbeschilder kein Platz ist."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky-p-500.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky.jpg",
         "alt": "Reklamní vlajka ČSOB na fasádě budovy"
       },
       "properties": [
@@ -201,7 +201,7 @@
             "quote": "Ausführung: Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen. Die Fahnen werden aus hochwertigen Materialien gefertigt, die für eine lange Lebensdauer sorgen."
           },
           "value": {
-            "value": "Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen. Die Fahnen werden aus hochwertigen Materialien gefertigt, die für eine lange Lebensdauer sorgen.",
+            "value": "Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen",
             "quote": "Ausführung: Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen. Die Fahnen werden aus hochwertigen Materialien gefertigt, die für eine lange Lebensdauer sorgen."
           }
         },
@@ -211,7 +211,7 @@
             "quote": "Platzierung: Besonders geeignet sind Orte mit viel Publikumsverkehr wie Innenstadtstraßen, Einkaufszentren, Festivals oder Messen. Durch die Bewegung im Wind ziehen Fahnen noch mehr Blicke auf sich – das steigert ihre Wirkung."
           },
           "value": {
-            "value": "Besonders geeignet sind Orte mit viel Publikumsverkehr wie Innenstadtstraßen, Einkaufszentren, Festivals oder Messen. Durch die Bewegung im Wind ziehen Fahnen noch mehr Blicke auf sich – das steigert ihre Wirkung.",
+            "value": "Besonders geeignet sind Orte mit viel Publikumsverkehr wie Innenstadtstraßen, Einkaufszentren, Festivals oder Messen.",
             "quote": "Platzierung: Besonders geeignet sind Orte mit viel Publikumsverkehr wie Innenstadtstraßen, Einkaufszentren, Festivals oder Messen. Durch die Bewegung im Wind ziehen Fahnen noch mehr Blicke auf sich – das steigert ihre Wirkung."
           }
         }
@@ -220,10 +220,6 @@
         {
           "value": "Werbefahnen aus Textil",
           "quote": "Wir fertigen Werbefahnen aus Textil samt Fahnenmasten – ideal überall dort, wo für andere Werbeformen wie Plakatwände oder große Werbeschilder kein Platz ist."
-        },
-        {
-          "value": "Die Fahnen werden aus hochwertigen Materialien gefertigt, die für eine lange Lebensdauer sorgen.",
-          "quote": "Ausführung: Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen. Die Fahnen werden aus hochwertigen Materialien gefertigt, die für eine lange Lebensdauer sorgen."
         }
       ],
       "variants": [
@@ -250,7 +246,7 @@
           "quote": "Wir fertigen Werbefahnen aus Textil samt Fahnenmasten – ideal überall dort, wo für andere Werbeformen wie Plakatwände oder große Werbeschilder kein Platz ist."
         },
         {
-          "value": "Ideal für Orte, an denen für andere Werbeformen zu wenig Platz ist.",
+          "value": "für Orte, an denen für andere Werbeformen zu wenig Platz ist.",
           "quote": "Ideal für Orte, an denen für andere Werbeformen zu wenig Platz ist."
         }
       ]

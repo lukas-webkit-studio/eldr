@@ -68,7 +68,7 @@
               "name": "Designová svítidla",
               "description": "vám na míru zhotovíme jakékoliv designové svítidlo.",
               "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#designova-svitidla",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe082720f7758da6a3b_designova-svitidla-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe082720f7758da6a3b_designova-svitidla.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -82,23 +82,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "moderní minimalistické prvky, nebo o luxusní, kreativní řešení"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "designová svítidla mohou mít různé tvary a velikosti"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Interiér"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "jak pro komerční prostory, tak i pro rezidenční interiéry, ať už jde o restaurace, kanceláře anebo hotely"
                 }
               ],
               "provider": {
@@ -115,7 +100,7 @@
               "name": "Žárovkové světelné nápisy",
               "description": "žárovkový světelný nápis tvoří plechový korpus, v němž jsou umístěny žárovičky.",
               "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#zarovkove-svetelne-napisy",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0976f8d96e6d62e19_zarovkove-svetelne-napisy-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0976f8d96e6d62e19_zarovkove-svetelne-napisy.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -129,33 +114,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "plechový korpus"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "vysoce úsporné LED žárovky"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "s možností volby odstínu světla"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Interiér a exteriér"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "vhodné jsou zejména pro komerční prostory, restaurace, obchody, kino nebo klubové prostory"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "Můžete je umístit nad vchod, na fasádu budovy, nebo použít jako interiérovou dekoraci."
                 }
               ],
               "provider": {
@@ -172,7 +132,7 @@
               "name": "Neonové nápisy & imitace",
               "description": "Tento typ světelné reklamy tvoří plastové pásky různých barev, které lze tvarovat do libovolných nápisů.",
               "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#neonove-napisy",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0c83c52ac949691e7_neonove-napisy-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0c83c52ac949691e7_neonove-napisy.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -196,11 +156,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "plexisklo"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Imitace neonového nápisu z plexiskla"
                 },
@@ -213,16 +168,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Volit můžete z různých šířek i barevných variací."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "Jsou ideální tam, kde je cílem originalita, styl a skutečný neonový dojem."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "díky absenci skla i bezpečnější volba do interiéru"
                 }
               ],
               "provider": {
@@ -239,7 +184,7 @@
               "name": "Mechové stěny",
               "description": "Ve spolupráci s našimi dodavateli jsme schopni pro vás zhotovit nejen mechové stěny, ale také mechové obrazy s reklamním nápisem.",
               "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#mechove-steny",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1c7fe0fb2b0470b46_mechove-steny-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1c7fe0fb2b0470b46_mechove-steny.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -255,16 +200,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "mechové obrazy s reklamním nápisem"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "ideální jsou pro kancelářské prostory, firemní lobby a recepce, restaurace a hotely, obchodní prostory nebo showroomy"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "kde se dají skvěle kombinovat s reklamními nápisy a logy"
                 }
               ],
               "provider": {
@@ -292,21 +227,6 @@
                   "@type": "PropertyValue",
                   "name": "Umístění",
                   "value": "cortenová ocel se používá nejen pro reklamní nápisy, ale i pro různé designové prvky, jako jsou loga, grafické vzory a dekorativní panely, které lze umístit na fasády budov nebo do venkovních prostor."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "patinující ocel (známá jako rezavá ocel)"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "cortenová ocel"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "nejen pro reklamní nápisy, ale i pro různé designové prvky, jako jsou loga, grafické vzory a dekorativní panely"
                 },
                 {
                   "@type": "PropertyValue",
@@ -338,7 +258,7 @@
               "name": "Světelná čísla domů",
               "description": "Přidejte svému obydlí výjimečnosti a zkrášlete jeho exteriér pomocí světelného či nesvětelného čísla. Světelná čísla jsou nejen praktickým řešením, ale i designovým prvkem.",
               "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#svetelna-cisla-domu",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -357,28 +277,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "různých typů podsvícení, které zajistí viditelnost i v noci"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "varianty bez podsvícení"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "teple bílé světlo, nebo studeně modré podsvícení"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Exteriér"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "k jakémukoliv stylu a typu budovy"
                 }
               ],
               "provider": {
@@ -395,7 +295,7 @@
               "name": "Designové stojací lampy na zakázku",
               "description": "Nechte si lampu vyrobit na zakázku, nebo si vyberte z připravených návrhů či z nabídky hotových svítidel.",
               "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#stojaci-lampy",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1aab0713b5ffc26de_stojaci-lampy-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1aab0713b5ffc26de_stojaci-lampy.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -411,26 +311,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "na zakázku, nebo si vyberte z připravených návrhů či z nabídky hotových svítidel"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "v celém barevném spektru, bezdrátové svícení"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Možnost ovládání dálkovým ovladačem, prostřednictvím aplikace Hue, Apple Home, DALI a dalších systémů."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "interiérový doplněk"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "Lze je využít i v komerčních prostorách například jako stojan na produkty či upozornění a směrovky."
                 }
               ],
               "provider": {

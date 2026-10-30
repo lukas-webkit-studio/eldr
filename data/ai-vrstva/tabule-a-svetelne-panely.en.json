@@ -8,7 +8,7 @@
       "quote": "Illuminated panels and boards"
     },
     "description": {
-      "value": "We make illuminated panels tailored to your needs in sizes up to 100 m², with first-class craftsmanship and design.",
+      "value": "We make illuminated panels tailored to your needs in sizes up to 100 m²",
       "quote": "We make illuminated panels tailored to your needs in sizes up to 100 m², with first-class craftsmanship and design."
     },
     "highlights": [
@@ -64,7 +64,7 @@
             "quote": "Material: aluminium frame and a back panel of aluminium or sandwich board. Front face of acrylic glass or translucent vinyl canvas, which ensures a long service life and excellent light transmission."
           },
           "value": {
-            "value": "aluminium frame and a back panel of aluminium or sandwich board. Front face of acrylic glass or translucent vinyl canvas, which ensures a long service life and excellent light transmission.",
+            "value": "aluminium frame and a back panel of aluminium or sandwich board. Front face of acrylic glass or translucent vinyl canvas",
             "quote": "Material: aluminium frame and a back panel of aluminium or sandwich board. Front face of acrylic glass or translucent vinyl canvas, which ensures a long service life and excellent light transmission."
           }
         },
@@ -257,7 +257,7 @@
         "quote": "Advertising boards"
       },
       "description": {
-        "value": "An advertising board, or non-illuminated sign panel, is one of the simplest advertising solutions there is.",
+        "value": "An advertising board, or non-illuminated sign panel",
         "quote": "An advertising board, or non-illuminated sign panel, is one of the simplest advertising solutions there is. And it stays flexible – the graphics on the board can be re-applied at any time."
       },
       "image": {
@@ -359,7 +359,7 @@
             "quote": "Material: durable materials that ensure a long service life. The materials are designed for changing graphics and for use in restaurants."
           },
           "value": {
-            "value": "durable materials that ensure a long service life. The materials are designed for changing graphics and for use in restaurants.",
+            "value": "The materials are designed for changing graphics and for use in restaurants.",
             "quote": "Material: durable materials that ensure a long service life. The materials are designed for changing graphics and for use in restaurants."
           }
         },
@@ -374,12 +374,7 @@
           }
         }
       ],
-      "materials": [
-        {
-          "value": "durable materials that ensure a long service life",
-          "quote": "Material: durable materials that ensure a long service life. The materials are designed for changing graphics and for use in restaurants."
-        }
-      ],
+      "materials": [],
       "variants": [
         {
           "value": "They can be double-sided for easy changing.",

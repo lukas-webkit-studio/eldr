@@ -33,7 +33,7 @@
         "quote": "Looking for unconventional designer lighting for your space? Years of experience mean we can build you any designer light, made to measure."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe082720f7758da6a3b_designova-svitidla-p-800.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe082720f7758da6a3b_designova-svitidla.jpg",
         "alt": "Barevná designová svítidla na stropě interiéru"
       },
       "properties": [
@@ -102,7 +102,7 @@
             "quote": "Construction: a bulb-lit sign is built around a sheet-metal body holding the bulbs. We care about quality and about the environment, so we use highly efficient LED bulbs and let you choose the shade of light."
           },
           "value": {
-            "value": "a bulb-lit sign is built around a sheet-metal body holding the bulbs. We care about quality and about the environment, so we use highly efficient LED bulbs and let you choose the shade of light.",
+            "value": "LED bulbs and let you choose the shade of light",
             "quote": "Construction: a bulb-lit sign is built around a sheet-metal body holding the bulbs. We care about quality and about the environment, so we use highly efficient LED bulbs and let you choose the shade of light."
           }
         },
@@ -112,7 +112,7 @@
             "quote": "Placement: they work especially well in commercial spaces, restaurants, shops, cinemas or club venues, where they draw customers in and give the place a character of its own. Mount them above the entrance, on the building façade, or use them as interior decoration."
           },
           "value": {
-            "value": "they work especially well in commercial spaces, restaurants, shops, cinemas or club venues, where they draw customers in and give the place a character of its own. Mount them above the entrance, on the building façade, or use them as interior decoration.",
+            "value": "they work especially well in commercial spaces, restaurants, shops, cinemas or club venues",
             "quote": "Placement: they work especially well in commercial spaces, restaurants, shops, cinemas or club venues, where they draw customers in and give the place a character of its own. Mount them above the entrance, on the building façade, or use them as interior decoration."
           }
         }
@@ -123,7 +123,7 @@
           "quote": "Construction: a bulb-lit sign is built around a sheet-metal body holding the bulbs. We care about quality and about the environment, so we use highly efficient LED bulbs and let you choose the shade of light."
         },
         {
-          "value": "highly efficient LED bulbs",
+          "value": "LED bulbs",
           "quote": "Construction: a bulb-lit sign is built around a sheet-metal body holding the bulbs. We care about quality and about the environment, so we use highly efficient LED bulbs and let you choose the shade of light."
         }
       ],
@@ -170,18 +170,8 @@
             "quote": "Neon sign imitation in acrylic glass: we bend acrylic glass into the shape you choose and light it from within with quality LED modules. The result is a luxurious effect with significant savings compared with classic neon – and with no glass involved, a safer choice indoors."
           },
           "value": {
-            "value": "we bend acrylic glass into the shape you choose and light it from within with quality LED modules. The result is a luxurious effect with significant savings compared with classic neon – and with no glass involved, a safer choice indoors.",
+            "value": "we bend acrylic glass into the shape you choose and light it from within",
             "quote": "Neon sign imitation in acrylic glass: we bend acrylic glass into the shape you choose and light it from within with quality LED modules. The result is a luxurious effect with significant savings compared with classic neon – and with no glass involved, a safer choice indoors."
-          }
-        },
-        {
-          "name": {
-            "value": "Placement",
-            "quote": "Placement: ideal wherever originality, style and a true neon impression are the goal. You end up with an illuminated feature that impresses through its looks and its craftsmanship alike."
-          },
-          "value": {
-            "value": "ideal wherever originality, style and a true neon impression are the goal.",
-            "quote": "Placement: ideal wherever originality, style and a true neon impression are the goal. You end up with an illuminated feature that impresses through its looks and its craftsmanship alike."
           }
         }
       ],
@@ -215,10 +205,6 @@
       ],
       "uses": [
         {
-          "value": "ideal wherever originality, style and a true neon impression are the goal.",
-          "quote": "Placement: ideal wherever originality, style and a true neon impression are the goal. You end up with an illuminated feature that impresses through its looks and its craftsmanship alike."
-        },
-        {
           "value": "with no glass involved, a safer choice indoors",
           "quote": "Neon sign imitation in acrylic glass: we bend acrylic glass into the shape you choose and light it from within with quality LED modules. The result is a luxurious effect with significant savings compared with classic neon – and with no glass involved, a safer choice indoors."
         }
@@ -246,7 +232,17 @@
             "quote": "Why a moss wall: they look superb and they bring practical benefits. They are environmentally friendly, easy to look after and need none of the care live plants demand. On top of that they improve room acoustics and help clean the air."
           },
           "value": {
-            "value": "They are environmentally friendly, easy to look after and need none of the care live plants demand. On top of that they improve room acoustics and help clean the air.",
+            "value": "easy to look after and need none of the care live plants demand",
+            "quote": "Why a moss wall: they look superb and they bring practical benefits. They are environmentally friendly, easy to look after and need none of the care live plants demand. On top of that they improve room acoustics and help clean the air."
+          }
+        },
+        {
+          "name": {
+            "value": "Why a moss wall",
+            "quote": "Why a moss wall: they look superb and they bring practical benefits. They are environmentally friendly, easy to look after and need none of the care live plants demand. On top of that they improve room acoustics and help clean the air."
+          },
+          "value": {
+            "value": "they improve room acoustics",
             "quote": "Why a moss wall: they look superb and they bring practical benefits. They are environmentally friendly, easy to look after and need none of the care live plants demand. On top of that they improve room acoustics and help clean the air."
           }
         },
@@ -256,7 +252,7 @@
             "quote": "Placement: ideal for offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms, where they combine beautifully with advertising lettering and logos."
           },
           "value": {
-            "value": "ideal for offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms, where they combine beautifully with advertising lettering and logos.",
+            "value": "offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms",
             "quote": "Placement: ideal for offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms, where they combine beautifully with advertising lettering and logos."
           }
         }
@@ -270,11 +266,7 @@
       ],
       "uses": [
         {
-          "value": "ideal for offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms",
-          "quote": "Placement: ideal for offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms, where they combine beautifully with advertising lettering and logos."
-        },
-        {
-          "value": "where they combine beautifully with advertising lettering and logos",
+          "value": "offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms",
           "quote": "Placement: ideal for offices, company lobbies and receptions, restaurants and hotels, retail spaces or showrooms, where they combine beautifully with advertising lettering and logos."
         }
       ]
@@ -287,7 +279,7 @@
         "quote": "Corten steel signage"
       },
       "description": {
-        "value": "A material with a natural rust patina that takes on a unique look over time and is ideal for façades or outdoor spaces.",
+        "value": "A material with a natural rust patina",
         "quote": "A material with a natural rust patina that takes on a unique look over time and is ideal for façades or outdoor spaces."
       },
       "image": {
@@ -301,7 +293,7 @@
             "quote": "Material: weathering steel (known as rusted steel) is highly durable and ideal above all for outdoor placement. Its distinctive appearance comes from the naturally rusty patina that develops over time, adding a unique aesthetic effect."
           },
           "value": {
-            "value": "weathering steel (known as rusted steel) is highly durable and ideal above all for outdoor placement. Its distinctive appearance comes from the naturally rusty patina that develops over time, adding a unique aesthetic effect.",
+            "value": "Its distinctive appearance comes from the naturally rusty patina that develops over time",
             "quote": "Material: weathering steel (known as rusted steel) is highly durable and ideal above all for outdoor placement. Its distinctive appearance comes from the naturally rusty patina that develops over time, adding a unique aesthetic effect."
           }
         },
@@ -338,7 +330,7 @@
           "quote": "Outdoors and indoors"
         },
         {
-          "value": "ideal for façades or outdoor spaces",
+          "value": "for façades or outdoor spaces",
           "quote": "A material with a natural rust patina that takes on a unique look over time and is ideal for façades or outdoor spaces."
         },
         {
@@ -354,12 +346,9 @@
         "value": "Illuminated house numbers",
         "quote": "Illuminated house numbers"
       },
-      "description": {
-        "value": "Give your home something special and dress up its exterior with an illuminated or non-illuminated number. Illuminated numbers are not only a practical solution but a design feature in their own right.",
-        "quote": "Give your home something special and dress up its exterior with an illuminated or non-illuminated number. Illuminated numbers are not only a practical solution but a design feature in their own right."
-      },
+      "description": null,
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu-p-800.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu.jpg",
         "alt": "Podsvícené číslo domu 334 na betonové fasádě"
       },
       "properties": [
@@ -369,7 +358,7 @@
             "quote": "Version: choose from various types of backlighting that keep the number visible at night, or a version without backlighting that works as an elegant, modern detail. Warm white light or cool blue backlighting, we will match it to your wishes."
           },
           "value": {
-            "value": "choose from various types of backlighting that keep the number visible at night, or a version without backlighting that works as an elegant, modern detail. Warm white light or cool blue backlighting, we will match it to your wishes.",
+            "value": "choose from various types of backlighting that keep the number visible at night, or a version without backlighting",
             "quote": "Version: choose from various types of backlighting that keep the number visible at night, or a version without backlighting that works as an elegant, modern detail. Warm white light or cool blue backlighting, we will match it to your wishes."
           }
         },
@@ -379,7 +368,7 @@
             "quote": "Installation: we take care of the complete production and installation of numbers that suit any style and any type of building."
           },
           "value": {
-            "value": "we take care of the complete production and installation of numbers that suit any style and any type of building.",
+            "value": "we take care of the complete production and installation of numbers",
             "quote": "Installation: we take care of the complete production and installation of numbers that suit any style and any type of building."
           }
         }
@@ -407,10 +396,6 @@
         {
           "value": "Outdoors",
           "quote": "Outdoors"
-        },
-        {
-          "value": "suit any style and any type of building",
-          "quote": "Installation: we take care of the complete production and installation of numbers that suit any style and any type of building."
         }
       ]
     },
@@ -426,7 +411,7 @@
         "quote": "Have a lamp made to order, or pick from our ready-made designs and finished luminaires. Our team of technicians is never daunted by a challenge and will turn your vision into something real."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1aab0713b5ffc26de_stojaci-lampy-p-800.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1aab0713b5ffc26de_stojaci-lampy.jpg",
         "alt": "Designová stojací lampa na zakázku v tmavém interiéru"
       },
       "properties": [
@@ -446,7 +431,7 @@
             "quote": "Lighting: the full colour spectrum, wireless lighting and other innovative features are a matter of course in our projects. Control by remote, through the Hue app, Apple Home, DALI and other systems."
           },
           "value": {
-            "value": "the full colour spectrum, wireless lighting and other innovative features are a matter of course in our projects. Control by remote, through the Hue app, Apple Home, DALI and other systems.",
+            "value": "the full colour spectrum, wireless lighting",
             "quote": "Lighting: the full colour spectrum, wireless lighting and other innovative features are a matter of course in our projects. Control by remote, through the Hue app, Apple Home, DALI and other systems."
           }
         }
@@ -487,16 +472,6 @@
       "answer": {
         "value": "Classic neon signs are made of glass tubes shaped under heat which, once filled with gas, glow red. Other light colours are achieved by filling the tube with phosphor powder and argon. Each tube carries a welded-on electrode connected to a high-voltage transformer, insulated with a silicone sleeve.",
         "quote": "Classic neon signs are made of glass tubes shaped under heat which, once filled with gas, glow red. Other light colours are achieved by filling the tube with phosphor powder and argon. Each tube carries a welded-on electrode connected to a high-voltage transformer, insulated with a silicone sleeve."
-      }
-    },
-    {
-      "question": {
-        "value": "Why do we recommend neon sign imitations instead?",
-        "quote": "Why do we recommend neon sign imitations instead?"
-      },
-      "answer": {
-        "value": "Because they deliver a luxurious look at an affordable price. Traditional neon signs are beautiful, but they come with drawbacks such as a higher purchase price, demanding maintenance and high energy consumption. Modern neon sign imitations, however, offer the same visual effect at a substantially lower price.",
-        "quote": "Because they deliver a luxurious look at an affordable price. Traditional neon signs are beautiful, but they come with drawbacks such as a higher purchase price, demanding maintenance and high energy consumption. Modern neon sign imitations, however, offer the same visual effect at a substantially lower price."
       }
     }
   ],

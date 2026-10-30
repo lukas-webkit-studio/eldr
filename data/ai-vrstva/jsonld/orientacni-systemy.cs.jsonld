@@ -115,22 +115,12 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Provedení",
-                  "value": "ve světelném i nesvětelném provedení"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
                   "value": "Interiérové, exteriérové i modulové orientační systémy"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Použití",
                   "value": "Interiér i exteriér"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "do interiérů, exteriérů, budov i rozsáhlých areálů, například v logistických parcích, nemocnicích nebo obchodních domech."
                 }
               ],
               "provider": {

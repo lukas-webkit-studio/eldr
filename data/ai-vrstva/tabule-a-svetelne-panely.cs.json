@@ -8,7 +8,7 @@
       "quote": "Světelné panely a tabule"
     },
     "description": {
-      "value": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem.",
+      "value": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m²",
       "quote": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem."
     },
     "highlights": [
@@ -64,7 +64,7 @@
             "quote": "Materiál: hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
           },
           "value": {
-            "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení.",
+            "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty",
             "quote": "Materiál: hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
           }
         },
@@ -257,7 +257,7 @@
         "quote": "Reklamní tabule"
       },
       "description": {
-        "value": "Reklamní tabule, neboli nesvětelná reklamní deska, je jedním z nejjednodušších řešení reklamního prvku.",
+        "value": "Reklamní tabule, neboli nesvětelná reklamní deska",
         "quote": "Reklamní tabule, neboli nesvětelná reklamní deska, je jedním z nejjednodušších řešení reklamního prvku. Lze počítat s flexibilitou – grafiku na tabuli lze znovu přelepit."
       },
       "image": {
@@ -359,7 +359,7 @@
             "quote": "Materiál: odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
           },
           "value": {
-            "value": "odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích.",
+            "value": "Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích.",
             "quote": "Materiál: odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
           }
         },
@@ -374,12 +374,7 @@
           }
         }
       ],
-      "materials": [
-        {
-          "value": "odolné materiály, které zajišťují dlouhou životnost",
-          "quote": "Materiál: odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
-        }
-      ],
+      "materials": [],
       "variants": [
         {
           "value": "Mohou být oboustranné pro snadnou výměnu.",

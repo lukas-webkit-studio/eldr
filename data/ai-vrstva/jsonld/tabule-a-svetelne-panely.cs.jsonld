@@ -89,16 +89,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "Přední plocha z plexiskla nebo prosvětlovací vinylové plachty"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "do velikosti 100 m²"
                 },
@@ -111,16 +101,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Svítící čelní strana"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "se dají snadno namontovat na budovy či pylony"
                 }
               ],
               "provider": {
@@ -156,16 +136,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "kostru tvoří rám a zadní strana z hliníku"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "vystouplá, nebo podložená"
                 },
@@ -173,16 +143,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Podle provedení se intarzie liší vzhledem i cenou. Rozdíl je v tom, jestli znaky vystupují nad úroveň panelu, nebo jsou pod ní."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "u malých nápisů s velice tenkým fontem písma"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "u historických budov, kde není možnost vrtat do fasády"
                 }
               ],
               "provider": {
@@ -275,28 +235,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "tištěnou či řezanou grafikou, pískováním a gravírováním"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "grafiku na tabuli lze znovu přelepit"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "označení provozoven, informační nebo orientační účely"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod."
                 },
                 {
                   "@type": "PropertyValue",
@@ -337,18 +277,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Materiál",
-                  "value": "odolné materiály, které zajišťují dlouhou životnost"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Mohou být oboustranné pro snadnou výměnu."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Použití",
-                  "value": "v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů"
                 }
               ],
               "provider": {

@@ -111,31 +111,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Aluminium"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Plexiglas"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Plattenmaterial"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Polystyrol"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Karton"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Profil 1"
                 },
@@ -151,23 +126,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Lackierung nach individuellen Anforderungen"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "Für Innen- und Außenbereiche"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "An Fassade, Dach, Attika, am Boden, abgehängt von der Decke, auf Holz, auf Glas"
                 }
               ],
               "provider": {
@@ -198,21 +158,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Aluminium"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Plexiglas"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Plattenmaterial"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Profil 3"
                 },
@@ -228,18 +173,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "Für den Innen- und Außenbereich"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "An Fassade, Dach, Attika, am Boden, abgehängt von der Decke, auf Holz (oder einem anderen Hintergrund für den Aura-Effekt)"
                 }
               ],
               "provider": {
@@ -287,11 +222,6 @@
                   "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "für windige Standorte in großer Höhe"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt, auf Holz und an weiteren Standorten nach Kundenwunsch"
                 }
               ],
               "provider": {
@@ -334,16 +264,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Vorderseite ohne sichtbaren Rahmen."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt und auf Holz."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Für den Innen- und Außenbereich geeignet."
                 }
               ],
               "provider": {
@@ -379,16 +299,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Plexiglas"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Dibond"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Profil 8"
                 },
@@ -401,11 +311,6 @@
                   "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "Für den Innen- und Außenbereich"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt, auf Holz, an Ladenfronten und in Innenräumen"
                 }
               ],
               "provider": {
@@ -441,11 +346,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Plexiglas"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Profil 9"
                 },
@@ -458,11 +358,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Preiswerte Neon-Optik bei minimalem Energieverbrauch."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Vor allem für den Innenbereich geeignet, an Bürowänden sowie in Fluren, Empfangsbereichen und Eingangshallen"
                 }
               ],
               "provider": {

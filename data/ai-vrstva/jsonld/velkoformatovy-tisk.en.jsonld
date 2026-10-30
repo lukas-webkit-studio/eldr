@@ -82,41 +82,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "paper"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "self-adhesive film"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "translucent (backlighting) film"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "perforated film"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "banner"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "textile materials"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "We laminate the prints with a gloss or matt laminating film, which increases resistance above all outdoors."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "We often combine digital printing with plotter-cut graphics"
                 },
@@ -145,7 +110,7 @@
               "name": "Plotter-cut graphics",
               "description": "By plotter-cut graphics we mean lettering cut out of self-adhesive film.",
               "url": "https://www.eldr.cz/en/produkty/velkoformatovy-tisk#rezana-grafika",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika-p-500.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -159,11 +124,6 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "coloured self-adhesive films suitable for application to a wide range of surfaces"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Its advantage is a long service life."
                 },
@@ -171,11 +131,6 @@
                   "@type": "PropertyValue",
                   "name": "Use",
                   "value": "It suits every type of advertising and information lettering."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Use",
-                  "value": "which can be almost any surface with sufficient adhesion"
                 }
               ],
               "provider": {
@@ -192,7 +147,7 @@
               "name": "Decals",
               "description": "Advertising decals for vehicles, shop windows, glazing and floors – in printed as well as plotter-cut graphics.",
               "url": "https://www.eldr.cz/en/produkty/velkoformatovy-tisk#dalsi-druhy-polepu",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -332,7 +287,7 @@
               "name": "Design wall art",
               "description": "We design and produce large-format pictures and wall graphics for restaurants, cafés, retail and corporate spaces",
               "url": "https://www.eldr.cz/en/produkty/velkoformatovy-tisk#designove-obrazy",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -343,26 +298,6 @@
                   "@type": "PropertyValue",
                   "name": "Processing",
                   "value": "we take care of the artwork, precise high-resolution large-format printing and professional installation – everything tailored to the particular space, its light and the brand identity."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "canvas"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "films"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "rigid boards such as Dibond or PVC"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "supply the pictures in aluminium or wooden frames or frameless"
                 },
                 {
                   "@type": "PropertyValue",

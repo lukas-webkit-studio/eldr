@@ -7,10 +7,7 @@
       "value": "3D-Schriftzüge, Logos und Buchstaben",
       "quote": "3D-Schriftzüge, Logos und Buchstaben"
     },
-    "description": {
-      "value": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und maßgeschneidertem Design nach Ihren Bedürfnissen.",
-      "quote": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und maßgeschneidertem Design nach Ihren Bedürfnissen."
-    },
+    "description": null,
     "highlights": [
       {
         "value": "Jahrzehntelange Lebensdauer",
@@ -56,7 +53,7 @@
           "quote": "Wetterbeständigkeit"
         },
         "value": {
-          "value": "Unsere Leuchtreklamen sind für alle Wetterbedingungen gerüstet und werden mit bis zu 5 Jahren Garantie geliefert.",
+          "value": "werden mit bis zu 5 Jahren Garantie geliefert",
           "quote": "Unsere Leuchtreklamen sind für alle Wetterbedingungen gerüstet und werden mit bis zu 5 Jahren Garantie geliefert. Hochwertige Materialien mit Oberflächenbehandlung garantieren langanhaltende Beständigkeit von Farbe und Erscheinungsbild."
         }
       },
@@ -66,7 +63,7 @@
           "quote": "Wetterbeständigkeit"
         },
         "value": {
-          "value": "Hochwertige Materialien mit Oberflächenbehandlung garantieren langanhaltende Beständigkeit von Farbe und Erscheinungsbild.",
+          "value": "Materialien mit Oberflächenbehandlung garantieren langanhaltende Beständigkeit von Farbe und Erscheinungsbild",
           "quote": "Unsere Leuchtreklamen sind für alle Wetterbedingungen gerüstet und werden mit bis zu 5 Jahren Garantie geliefert. Hochwertige Materialien mit Oberflächenbehandlung garantieren langanhaltende Beständigkeit von Farbe und Erscheinungsbild."
         }
       }
@@ -95,7 +92,7 @@
             "quote": "Grafik: Unbegrenzte Farboptionen dank transluzenter Folie"
           },
           "value": {
-            "value": "Unbegrenzte Farboptionen dank transluzenter Folie",
+            "value": "Farboptionen dank transluzenter Folie",
             "quote": "Grafik: Unbegrenzte Farboptionen dank transluzenter Folie"
           }
         },
@@ -105,7 +102,7 @@
             "quote": "Korpus: Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision sowie Lackierung nach individuellen Anforderungen"
           },
           "value": {
-            "value": "Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision sowie Lackierung nach individuellen Anforderungen",
+            "value": "Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck",
             "quote": "Korpus: Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision sowie Lackierung nach individuellen Anforderungen"
           }
         },
@@ -152,11 +149,7 @@
           "quote": "Geringere Produktions- und Wartungskosten im Vergleich zu beleuchteten Varianten. Unbegrenzte Breite und Stärke."
         },
         {
-          "value": "Unbegrenzte Breite und Stärke.",
-          "quote": "Geringere Produktions- und Wartungskosten im Vergleich zu beleuchteten Varianten. Unbegrenzte Breite und Stärke."
-        },
-        {
-          "value": "optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision",
+          "value": "optionaler Einsatz von 3D-Druck",
           "quote": "Korpus: Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision sowie Lackierung nach individuellen Anforderungen"
         },
         {
@@ -197,7 +190,7 @@
             "quote": "Korpus: Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)"
           },
           "value": {
-            "value": "Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)",
+            "value": "Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck",
             "quote": "Korpus: Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)"
           }
         },
@@ -240,7 +233,7 @@
           "quote": "Elegant. Dezent. Möglichkeit zur Kombination von Vorder- und Hintergrundbeleuchtung."
         },
         {
-          "value": "optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)",
+          "value": "optional Einsatz von 3D-Druck",
           "quote": "Korpus: Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)"
         }
       ],
@@ -263,7 +256,7 @@
         "quote": "Großformatige Leuchtschriftzüge"
       },
       "description": {
-        "value": "Robuste Werbung für windige Standorte in großer Höhe. Sie fällt schon von Weitem auf und bietet auch unter widrigen Bedingungen eine lange Lebensdauer.",
+        "value": "Robuste Werbung für windige Standorte in großer Höhe.",
         "quote": "Robuste Werbung für windige Standorte in großer Höhe. Sie fällt schon von Weitem auf und bietet auch unter widrigen Bedingungen eine lange Lebensdauer."
       },
       "image": {
@@ -277,7 +270,7 @@
             "quote": "Grafik: Unbegrenzte Farbmöglichkeiten durch transluzente Folie und Lackierung"
           },
           "value": {
-            "value": "Unbegrenzte Farbmöglichkeiten durch transluzente Folie und Lackierung",
+            "value": "Farbmöglichkeiten durch transluzente Folie und Lackierung",
             "quote": "Grafik: Unbegrenzte Farbmöglichkeiten durch transluzente Folie und Lackierung"
           }
         },
@@ -301,10 +294,6 @@
         {
           "value": "Eine in die Seitenkonstruktion des Buchstabens integrierte Befestigungsleiste hält die Frontbespannung.",
           "quote": "Robuste, witterungsbeständige Werbeanlage. Eine in die Seitenkonstruktion des Buchstabens integrierte Befestigungsleiste hält die Frontbespannung. Unbegrenzte Möglichkeiten bei Abmessungen, Lichtfarben und Korpusfarben."
-        },
-        {
-          "value": "Unbegrenzte Möglichkeiten bei Abmessungen, Lichtfarben und Korpusfarben.",
-          "quote": "Robuste, witterungsbeständige Werbeanlage. Eine in die Seitenkonstruktion des Buchstabens integrierte Befestigungsleiste hält die Frontbespannung. Unbegrenzte Möglichkeiten bei Abmessungen, Lichtfarben und Korpusfarben."
         }
       ],
       "uses": [
@@ -325,10 +314,7 @@
         "value": "3D-Schriftzüge mit leuchtender Vorderseite",
         "quote": "3D-Schriftzüge mit leuchtender Vorderseite"
       },
-      "description": {
-        "value": "Für den Innen- und Außenbereich. Die beliebteste Variante von 3D-Leuchtschriftzügen mit leuchtender Vorderseite.",
-        "quote": "Für den Innen- und Außenbereich. Die beliebteste Variante von 3D-Leuchtschriftzügen mit leuchtender Vorderseite."
-      },
+      "description": null,
       "image": {
         "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
         "alt": "Profil 5s 1"
@@ -340,7 +326,7 @@
             "quote": "Grafik: Unbegrenzte Optionen bei Plexiglasfarben und transluzenter Folie"
           },
           "value": {
-            "value": "Unbegrenzte Optionen bei Plexiglasfarben und transluzenter Folie",
+            "value": "Optionen bei Plexiglasfarben und transluzenter Folie",
             "quote": "Grafik: Unbegrenzte Optionen bei Plexiglasfarben und transluzenter Folie"
           }
         },
@@ -403,7 +389,7 @@
             "quote": "Grafik: Unbegrenzte Möglichkeiten durch transluzente Folie in Kombination mit farbigem Plexiglas und LEDs"
           },
           "value": {
-            "value": "Unbegrenzte Möglichkeiten durch transluzente Folie in Kombination mit farbigem Plexiglas und LEDs",
+            "value": "Möglichkeiten durch transluzente Folie in Kombination mit farbigem Plexiglas und LEDs",
             "quote": "Grafik: Unbegrenzte Möglichkeiten durch transluzente Folie in Kombination mit farbigem Plexiglas und LEDs"
           }
         },
@@ -467,7 +453,7 @@
         "quote": "3D-Schriftzüge aus Vollplexiglas"
       },
       "description": {
-        "value": "Ideal für kleine Schriftzüge und schwer formbare Buchstaben.",
+        "value": "für kleine Schriftzüge und schwer formbare Buchstaben.",
         "quote": "Für den Innen- und Außenbereich. Ideal für kleine Schriftzüge und schwer formbare Buchstaben."
       },
       "image": {
@@ -481,7 +467,7 @@
             "quote": "Grafik: Unbegrenzte Möglichkeiten durch transluzente Folie, Lackierung und LED-Farben"
           },
           "value": {
-            "value": "Unbegrenzte Möglichkeiten durch transluzente Folie, Lackierung und LED-Farben",
+            "value": "Möglichkeiten durch transluzente Folie, Lackierung und LED-Farben",
             "quote": "Grafik: Unbegrenzte Möglichkeiten durch transluzente Folie, Lackierung und LED-Farben"
           }
         },
@@ -519,10 +505,6 @@
         },
         {
           "value": "Vorder- und Seitenflächen können beleuchtet sein.",
-          "quote": "Ideal für kleine oder aufwendig geformte Schriftzüge. Vorder- und Seitenflächen können beleuchtet sein. Preiswerte Neon-Optik bei minimalem Energieverbrauch."
-        },
-        {
-          "value": "Preiswerte Neon-Optik bei minimalem Energieverbrauch.",
           "quote": "Ideal für kleine oder aufwendig geformte Schriftzüge. Vorder- und Seitenflächen können beleuchtet sein. Preiswerte Neon-Optik bei minimalem Energieverbrauch."
         }
       ],

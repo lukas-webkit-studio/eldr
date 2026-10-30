@@ -117,7 +117,7 @@
         "quote": "By plotter-cut graphics we mean lettering cut out of self-adhesive film. Its advantage is a long service life. It suits every type of advertising and information lettering."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika-p-500.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika.jpg",
         "alt": "Řezaná grafika na stěně interiéru restaurace KFC"
       },
       "properties": [
@@ -148,15 +148,10 @@
           "quote": "Materials: coloured self-adhesive films suitable for application to a wide range of surfaces. The films we use stay colour-fast for up to seven years."
         }
       ],
-      "variants": [
-        {
-          "value": "Its advantage is a long service life.",
-          "quote": "By plotter-cut graphics we mean lettering cut out of self-adhesive film. Its advantage is a long service life. It suits every type of advertising and information lettering."
-        }
-      ],
+      "variants": [],
       "uses": [
         {
-          "value": "It suits every type of advertising and information lettering.",
+          "value": "advertising and information lettering",
           "quote": "By plotter-cut graphics we mean lettering cut out of self-adhesive film. Its advantage is a long service life. It suits every type of advertising and information lettering."
         },
         {
@@ -177,7 +172,7 @@
         "quote": "Advertising decals for vehicles, shop windows, glazing and floors – in printed as well as plotter-cut graphics."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu.jpg",
         "alt": "Polep proskléné výlohy pobočky ČSOB"
       },
       "properties": [],
@@ -215,7 +210,7 @@
         "quote": "Vehicle and shop window decals: full and partial vehicle wraps as well as standalone lettering. We prepare the artwork together with you and take care of professional application. We produce shop window and glazing decals using printed or plotter-cut graphics – for advertising messages, information texts, opening hours, photographs and logos."
       },
       "description": {
-        "value": "full and partial vehicle wraps as well as standalone lettering. We prepare the artwork together with you and take care of professional application.",
+        "value": "full and partial vehicle wraps as well as standalone lettering.",
         "quote": "Vehicle and shop window decals: full and partial vehicle wraps as well as standalone lettering. We prepare the artwork together with you and take care of professional application. We produce shop window and glazing decals using printed or plotter-cut graphics – for advertising messages, information texts, opening hours, photographs and logos."
       },
       "image": null,
@@ -316,7 +311,7 @@
         "quote": "We design and produce large-format pictures and wall graphics for restaurants, cafés, retail and corporate spaces – from stylish illustrations to bold brand motifs."
       },
       "image": {
-        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy-p-1600.jpg",
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy.jpg",
         "alt": "Designové obrazy na stěně kavárny"
       },
       "properties": [

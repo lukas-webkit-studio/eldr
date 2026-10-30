@@ -3,180 +3,210 @@
   "slug": "pylony-a-totemy",
   "lang": "cs",
   "title": "Reklamní pylony a totemy – popis pro AI (CS)",
-  "bytes": 27573
+  "zdroje": 19,
+  "bytes": 20572
  },
  {
   "slug": "pylony-a-totemy",
   "lang": "en",
   "title": "Reklamní pylony a totemy – popis pro AI (EN)",
-  "bytes": 27305
+  "zdroje": 19,
+  "bytes": 20676
  },
  {
   "slug": "pylony-a-totemy",
   "lang": "de",
   "title": "Reklamní pylony a totemy – popis pro AI (DE)",
-  "bytes": 28158
+  "zdroje": 19,
+  "bytes": 21135
  },
  {
   "slug": "3d-napisy-loga-a-jednotliva-pismena",
   "lang": "cs",
   "title": "3D nápisy, loga a písmena – popis pro AI (CS)",
-  "bytes": 54269
+  "zdroje": 54,
+  "bytes": 44980
  },
  {
   "slug": "3d-napisy-loga-a-jednotliva-pismena",
   "lang": "en",
   "title": "3D nápisy, loga a písmena – popis pro AI (EN)",
-  "bytes": 51559
+  "zdroje": 53,
+  "bytes": 42740
  },
  {
   "slug": "3d-napisy-loga-a-jednotliva-pismena",
   "lang": "de",
   "title": "3D nápisy, loga a písmena – popis pro AI (DE)",
-  "bytes": 54324
+  "zdroje": 54,
+  "bytes": 45416
  },
  {
   "slug": "orientacni-systemy",
   "lang": "cs",
   "title": "Orientační systémy – popis pro AI (CS)",
-  "bytes": 18803
+  "zdroje": 18,
+  "bytes": 17353
  },
  {
   "slug": "orientacni-systemy",
   "lang": "en",
   "title": "Orientační systémy – popis pro AI (EN)",
-  "bytes": 17463
+  "zdroje": 18,
+  "bytes": 16189
  },
  {
   "slug": "orientacni-systemy",
   "lang": "de",
   "title": "Orientační systémy – popis pro AI (DE)",
-  "bytes": 18077
+  "zdroje": 18,
+  "bytes": 16624
  },
  {
   "slug": "zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
   "lang": "cs",
   "title": "Zámečnické konstrukce na míru, opracování plexiskla – popis pro AI (CS)",
-  "bytes": 26553
+  "zdroje": 20,
+  "bytes": 24387
  },
  {
   "slug": "zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
   "lang": "en",
   "title": "Zámečnické konstrukce na míru, opracování plexiskla – popis pro AI (EN)",
-  "bytes": 25590
+  "zdroje": 20,
+  "bytes": 23601
  },
  {
   "slug": "zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
   "lang": "de",
   "title": "Zámečnické konstrukce na míru, opracování plexiskla – popis pro AI (DE)",
-  "bytes": 26649
+  "zdroje": 20,
+  "bytes": 24462
  },
  {
   "slug": "vystrce-lekarenske-znaky",
   "lang": "cs",
   "title": "Výstrče, lékárenské znaky – popis pro AI (CS)",
-  "bytes": 33104
+  "zdroje": 25,
+  "bytes": 26362
  },
  {
   "slug": "vystrce-lekarenske-znaky",
   "lang": "en",
   "title": "Výstrče, lékárenské znaky – popis pro AI (EN)",
-  "bytes": 31523
+  "zdroje": 25,
+  "bytes": 25211
  },
  {
   "slug": "vystrce-lekarenske-znaky",
   "lang": "de",
   "title": "Výstrče, lékárenské znaky – popis pro AI (DE)",
-  "bytes": 33100
+  "zdroje": 25,
+  "bytes": 26343
  },
  {
   "slug": "velkoformatovy-tisk",
   "lang": "cs",
   "title": "Velkoformátový digitální tisk, řezaná grafika, polepy – popis pro AI (CS)",
-  "bytes": 43049
+  "zdroje": 44,
+  "bytes": 38121
  },
  {
   "slug": "velkoformatovy-tisk",
   "lang": "en",
   "title": "Velkoformátový digitální tisk, řezaná grafika, polepy – popis pro AI (EN)",
-  "bytes": 41582
+  "zdroje": 44,
+  "bytes": 37098
  },
  {
   "slug": "velkoformatovy-tisk",
   "lang": "de",
   "title": "Velkoformátový digitální tisk, řezaná grafika, polepy – popis pro AI (DE)",
-  "bytes": 43848
+  "zdroje": 44,
+  "bytes": 39225
  },
  {
   "slug": "architektonicke-prvky-vstupni-portaly-vlajky",
   "lang": "cs",
   "title": "Vstupní portály a architektonické prvky – popis pro AI (CS)",
-  "bytes": 32098
+  "zdroje": 28,
+  "bytes": 26613
  },
  {
   "slug": "architektonicke-prvky-vstupni-portaly-vlajky",
   "lang": "en",
   "title": "Vstupní portály a architektonické prvky – popis pro AI (EN)",
-  "bytes": 30314
+  "zdroje": 28,
+  "bytes": 25333
  },
  {
   "slug": "architektonicke-prvky-vstupni-portaly-vlajky",
   "lang": "de",
   "title": "Vstupní portály a architektonické prvky – popis pro AI (DE)",
-  "bytes": 31410
+  "zdroje": 28,
+  "bytes": 25938
  },
  {
   "slug": "prvky-podpory-prodeje-led-technologie",
   "lang": "cs",
   "title": "Prvky podpory prodeje, LED technologie – popis pro AI (CS)",
-  "bytes": 24000
+  "zdroje": 25,
+  "bytes": 22740
  },
  {
   "slug": "prvky-podpory-prodeje-led-technologie",
   "lang": "en",
   "title": "Prvky podpory prodeje, LED technologie – popis pro AI (EN)",
-  "bytes": 23198
+  "zdroje": 25,
+  "bytes": 22467
  },
  {
   "slug": "prvky-podpory-prodeje-led-technologie",
   "lang": "de",
   "title": "Prvky podpory prodeje, LED technologie – popis pro AI (DE)",
-  "bytes": 24351
+  "zdroje": 25,
+  "bytes": 23124
  },
  {
   "slug": "tabule-a-svetelne-panely",
   "lang": "cs",
   "title": "Světelné panely a tabule – popis pro AI (CS)",
-  "bytes": 41387
+  "zdroje": 39,
+  "bytes": 33893
  },
  {
   "slug": "tabule-a-svetelne-panely",
   "lang": "en",
   "title": "Světelné panely a tabule – popis pro AI (EN)",
-  "bytes": 39635
+  "zdroje": 39,
+  "bytes": 32890
  },
  {
   "slug": "tabule-a-svetelne-panely",
   "lang": "de",
   "title": "Světelné panely a tabule – popis pro AI (DE)",
-  "bytes": 41739
+  "zdroje": 39,
+  "bytes": 34344
  },
  {
   "slug": "designova-a-interierova-svitidla-specialni-projekty",
   "lang": "cs",
   "title": "Neonová a LED neonová designová svítidla – popis pro AI (CS)",
-  "bytes": 60187
+  "zdroje": 47,
+  "bytes": 47335
  },
  {
   "slug": "designova-a-interierova-svitidla-specialni-projekty",
   "lang": "en",
   "title": "Neonová a LED neonová designová svítidla – popis pro AI (EN)",
-  "bytes": 56272
+  "zdroje": 47,
+  "bytes": 44660
  },
  {
   "slug": "designova-a-interierova-svitidla-specialni-projekty",
   "lang": "de",
   "title": "Neonová a LED neonová designová svítidla – popis pro AI (DE)",
-  "bytes": 59140
+  "zdroje": 47,
+  "bytes": 46783
  }
 ]

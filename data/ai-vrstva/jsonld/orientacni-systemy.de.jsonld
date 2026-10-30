@@ -70,7 +70,7 @@
               "name": "Wegeleitsysteme für Gebäude und Areale",
               "description": "Wir fertigen das System nach Ihren Wünschen, oder Sie wählen aus unseren modularen Serien-Wegeleitsystemen.",
               "url": "https://www.eldr.cz/de/produkty/orientacni-systemy#orientacni-systemy",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6a991b5f017afb3097bc8182_orientacni-systemy-globus-p-800.png",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6a991b5f017afb3097bc8182_orientacni-systemy-globus.png",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -115,22 +115,12 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Ausführung",
-                  "value": "in beleuchteter und unbeleuchteter Ausführung"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
                   "value": "Wegeleitsysteme für innen, außen und in modularer Bauweise"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "Innen und außen"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern."
                 }
               ],
               "provider": {

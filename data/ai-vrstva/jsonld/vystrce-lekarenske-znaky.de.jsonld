@@ -93,36 +93,6 @@
                   "@type": "PropertyValue",
                   "name": "Geeignet für",
                   "value": "Betriebe, die von allen Seiten gesehen werden müssen – Geschäfte in belebten Straßen, Restaurants, Hotels und überall dort, wo Werbung auch im Dunkeln Aufmerksamkeit erregen muss."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Den Rahmen bildet eine Aluminiumkonstruktion"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "die Frontfläche besteht aus hinterleuchtetem Plexiglas oder einem anderen Plattenmaterial"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Die Frontseite des Auslegers wird mit gedruckter oder geschnittener Grafik beklebt."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Sowohl die Form des Auslegers als auch die grafische Gestaltung lassen sich beliebig anpassen, auch in Sonderformen."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Betriebe, die von allen Seiten gesehen werden müssen"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Geschäfte in belebten Straßen, Restaurants, Hotels und überall dort, wo Werbung auch im Dunkeln Aufmerksamkeit erregen muss"
                 }
               ],
               "provider": {
@@ -150,21 +120,6 @@
                   "@type": "PropertyValue",
                   "name": "Geeignet für",
                   "value": "Betriebe mit einem ikonischen Symbol, das sofort mit der Branche verbunden wird – Zahnarztpraxen (Zahn), Friseursalons (Schere), Cafés (Tasse), Weinhandlungen (Weinrebe), Kreditgenossenschaften (Schlüssel)."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Die Form des Auslegers folgt der Silhouette des Symbols Ihrer Branche – ein Zahn, eine Schere, ein Herz, ein Schlüssel, ein Glas oder alles, was Kunden sofort mit Ihrem Unternehmen verbinden."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Betriebe mit einem ikonischen Symbol, das sofort mit der Branche verbunden wird"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Zahnarztpraxen (Zahn), Friseursalons (Schere), Cafés (Tasse), Weinhandlungen (Weinrebe), Kreditgenossenschaften (Schlüssel)"
                 }
               ],
               "provider": {
@@ -195,28 +150,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Beleuchtete und unbeleuchtete „Apotheke“-Schriftzüge"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Beklebungen von Schaufenstern, Böden und Theken"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "weitere ergänzende Apothekenbeschilderung"
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "dienen der einheitlichen Kennzeichnung von Apotheken und medizinischen Einrichtungen"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Kennzeichnung von Apotheken und Arztpraxen."
                 }
               ],
               "provider": {

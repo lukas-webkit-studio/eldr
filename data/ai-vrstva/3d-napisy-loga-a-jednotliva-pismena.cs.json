@@ -7,10 +7,7 @@
       "value": "3D nápisy, loga a písmena",
       "quote": "3D nápisy, loga a písmena"
     },
-    "description": {
-      "value": "Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.",
-      "quote": "Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám."
-    },
+    "description": null,
     "highlights": [
       {
         "value": "Kompletní servis",
@@ -56,7 +53,7 @@
           "quote": "Odolnost vůči povětrnostním vlivům"
         },
         "value": {
-          "value": "Světelné reklamy vyrábíme tak, aby odolaly všem rozmarům počasí a poskytujeme na ně až 5 letou záruku.",
+          "value": "poskytujeme na ně až 5 letou záruku",
           "quote": "Světelné reklamy vyrábíme tak, aby odolaly všem rozmarům počasí a poskytujeme na ně až 5 letou záruku. Naše kvalitní materiály s úpravou povrchu zajišťují stálost barev a vzhledu po mnoho let."
         }
       },
@@ -66,7 +63,7 @@
           "quote": "Odolnost vůči povětrnostním vlivům"
         },
         "value": {
-          "value": "Naše kvalitní materiály s úpravou povrchu zajišťují stálost barev a vzhledu po mnoho let.",
+          "value": "materiály s úpravou povrchu zajišťují stálost barev a vzhledu po mnoho let",
           "quote": "Světelné reklamy vyrábíme tak, aby odolaly všem rozmarům počasí a poskytujeme na ně až 5 letou záruku. Naše kvalitní materiály s úpravou povrchu zajišťují stálost barev a vzhledu po mnoho let."
         }
       }
@@ -95,7 +92,7 @@
             "quote": "Grafika: neomezené barevné možnosti díky translucentní fólii"
           },
           "value": {
-            "value": "neomezené barevné možnosti díky translucentní fólii",
+            "value": "barevné možnosti díky translucentní fólii",
             "quote": "Grafika: neomezené barevné možnosti díky translucentní fólii"
           }
         },
@@ -105,7 +102,7 @@
             "quote": "Korpus: široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku (lehčí, chirurgicky přesné) a lakování dle individuálních potřeb"
           },
           "value": {
-            "value": "široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku (lehčí, chirurgicky přesné) a lakování dle individuálních potřeb",
+            "value": "široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku",
             "quote": "Korpus: široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku (lehčí, chirurgicky přesné) a lakování dle individuálních potřeb"
           }
         },
@@ -152,11 +149,7 @@
           "quote": "Nižší náklady na výrobu a údržbu v porovnání se světelnými variantami. Neomezená šířka a tloušťka."
         },
         {
-          "value": "Neomezená šířka a tloušťka.",
-          "quote": "Nižší náklady na výrobu a údržbu v porovnání se světelnými variantami. Neomezená šířka a tloušťka."
-        },
-        {
-          "value": "možné využití 3D tisku (lehčí, chirurgicky přesné)",
+          "value": "možné využití 3D tisku",
           "quote": "Korpus: široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku (lehčí, chirurgicky přesné) a lakování dle individuálních potřeb"
         },
         {
@@ -197,7 +190,7 @@
             "quote": "Korpus: hliník, plexisklo, deskový materiál, možné využití 3D tisku (lehčí, chirurgicky přesné)"
           },
           "value": {
-            "value": "hliník, plexisklo, deskový materiál, možné využití 3D tisku (lehčí, chirurgicky přesné)",
+            "value": "hliník, plexisklo, deskový materiál, možné využití 3D tisku",
             "quote": "Korpus: hliník, plexisklo, deskový materiál, možné využití 3D tisku (lehčí, chirurgicky přesné)"
           }
         },
@@ -240,7 +233,7 @@
           "quote": "Elegantní. Decentní. S možností kombinace předního a zadního podsvícení."
         },
         {
-          "value": "možné využití 3D tisku (lehčí, chirurgicky přesné)",
+          "value": "možné využití 3D tisku",
           "quote": "Korpus: hliník, plexisklo, deskový materiál, možné využití 3D tisku (lehčí, chirurgicky přesné)"
         }
       ],
@@ -263,7 +256,7 @@
         "quote": "Velkoformátové světelné nápisy"
       },
       "description": {
-        "value": "Odolná reklama do výšek, kde je větrno. Poutá z dálky, zaručuje dlouhou životnost i v nepříznivých podmínkách.",
+        "value": "Odolná reklama do výšek, kde je větrno.",
         "quote": "Odolná reklama do výšek, kde je větrno. Poutá z dálky, zaručuje dlouhou životnost i v nepříznivých podmínkách."
       },
       "image": {
@@ -277,7 +270,7 @@
             "quote": "Grafika: neomezené barevné možnosti díky translucentní fólii a lakování"
           },
           "value": {
-            "value": "neomezené barevné možnosti díky translucentní fólii a lakování",
+            "value": "barevné možnosti díky translucentní fólii a lakování",
             "quote": "Grafika: neomezené barevné možnosti díky translucentní fólii a lakování"
           }
         },
@@ -301,10 +294,6 @@
         {
           "value": "Bytelná reklama, odolávající povětrnostním vlivům díky upevňovacímu lemu.",
           "quote": "Bytelná reklama, odolávající povětrnostním vlivům díky upevňovacímu lemu. Neomezené rozměry, barvy svícení a korpusu."
-        },
-        {
-          "value": "Neomezené rozměry, barvy svícení a korpusu.",
-          "quote": "Bytelná reklama, odolávající povětrnostním vlivům díky upevňovacímu lemu. Neomezené rozměry, barvy svícení a korpusu."
         }
       ],
       "uses": [
@@ -325,10 +314,7 @@
         "value": "3D nápisy se svítícím čelem",
         "quote": "3D nápisy se svítícím čelem"
       },
-      "description": {
-        "value": "Do interiérů a exteriérů. Nejoblíbenější varianta 3D světelných nápisů s čelním prosvícením.",
-        "quote": "Do interiérů a exteriérů. Nejoblíbenější varianta 3D světelných nápisů s čelním prosvícením."
-      },
+      "description": null,
       "image": {
         "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
         "alt": "Profil 5s 1"
@@ -340,7 +326,7 @@
             "quote": "Grafika: neomezené možnosti barev plexiskla a průsvitné fólie"
           },
           "value": {
-            "value": "neomezené možnosti barev plexiskla a průsvitné fólie",
+            "value": "možnosti barev plexiskla a průsvitné fólie",
             "quote": "Grafika: neomezené možnosti barev plexiskla a průsvitné fólie"
           }
         },
@@ -403,7 +389,7 @@
             "quote": "Grafika: neomezené možnosti díky translucentní fólii v kombinaci s barevností plexiskla a LED diod"
           },
           "value": {
-            "value": "neomezené možnosti díky translucentní fólii v kombinaci s barevností plexiskla a LED diod",
+            "value": "možnosti díky translucentní fólii v kombinaci s barevností plexiskla a LED diod",
             "quote": "Grafika: neomezené možnosti díky translucentní fólii v kombinaci s barevností plexiskla a LED diod"
           }
         },
@@ -467,7 +453,7 @@
         "quote": "Plno-plexisklové 3D nápisy"
       },
       "description": {
-        "value": "Ideální pro drobné nápisy a nápisy s těžko tvarovatelným písmem.",
+        "value": "pro drobné nápisy a nápisy s těžko tvarovatelným písmem.",
         "quote": "Do interiérů a exteriérů. Ideální pro drobné nápisy a nápisy s těžko tvarovatelným písmem."
       },
       "image": {
@@ -481,7 +467,7 @@
             "quote": "Grafika: neomezené možnosti díky translucentní fólii, lakování a barevnosti LED diod"
           },
           "value": {
-            "value": "neomezené možnosti díky translucentní fólii, lakování a barevnosti LED diod",
+            "value": "možnosti díky translucentní fólii, lakování a barevnosti LED diod",
             "quote": "Grafika: neomezené možnosti díky translucentní fólii, lakování a barevnosti LED diod"
           }
         },
@@ -519,10 +505,6 @@
         },
         {
           "value": "Světelná může být čelní strana i boky.",
-          "quote": "Ideální pro drobné nápisy, nebo nápisy se spletitým písmem. Světelná může být čelní strana i boky. Cenově dostupný vzhled neonu s minimální spotřebou energie."
-        },
-        {
-          "value": "Cenově dostupný vzhled neonu s minimální spotřebou energie.",
           "quote": "Ideální pro drobné nápisy, nebo nápisy se spletitým písmem. Světelná může být čelní strana i boky. Cenově dostupný vzhled neonu s minimální spotřebou energie."
         }
       ],

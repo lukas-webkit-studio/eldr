@@ -101,38 +101,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Der Fuß des Pylons ist zur Verhinderung von Korrosion feuerverzinkt oder mit einer Korrosionsschutzbeschichtung versehen."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Die Lichtpaneele sind mit energiesparenden LED-Dioden ausgestattet."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Die Krone kann einseitig, beidseitig, dreieckig oder quadratisch sein."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "beleuchtete oder unbeleuchtete Werbung, Schriftzüge oder Logos"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Für mehr Sicherheit und besseren Service können Wartungsstege angebracht werden."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Wir fertigen sie individuell, genau nach den Wünschen des Kunden."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Kennzeichnung von Hypermärkten, Einkaufszentren, Firmensitzen und Tankstellen"
                 }
               ],
               "provider": {
@@ -168,28 +138,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Für kleinere Totems genügt eine Aluminiumkonstruktion oder eine feuerverzinkte Stahlkonstruktion."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Die Verkleidung kann je nach Kundenwunsch aus Acrylat, Verbundwerkstoff oder Aluminiumblech bestehen."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Die Beleuchtung erfolgt durch energiesparende LEDs."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Beleuchtet und unbeleuchtet"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Die Totems können geformt, gewölbt oder mit 3D-Beschriftungen ergänzt werden."
                 },
                 {
                   "@type": "PropertyValue",
@@ -205,16 +155,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Wir fertigen sie individuell, genau nach den Wünschen des Kunden."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "an Zufahrtsstraßen, an Einfahrten zu Geländen, Tankstellen, Kaufhäusern oder überall dort, wo Beschilderung und Navigation erforderlich sind"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Einsatz",
-                  "value": "Dienen auch als Orientierungssysteme für Betriebe und Innenräume."
                 }
               ],
               "provider": {

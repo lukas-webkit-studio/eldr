@@ -68,7 +68,7 @@
               "name": "Metal structures",
               "description": "We manufacture sign structures to order right in our own production facilities.",
               "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#zamecnicke-konstrukce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -79,11 +79,6 @@
                   "@type": "PropertyValue",
                   "name": "Installation",
                   "value": "we install every structure with structural stability in mind, safety and long-term durability, so that the finished solution works reliably in any environment."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "iron, steel, aluminium and stainless steel"
                 },
                 {
                   "@type": "PropertyValue",
@@ -105,7 +100,7 @@
               "name": "Non-standard metal structures",
               "description": "We deliver a wide range of non-standard solutions that call for an individual approach, technical know-how and genuine craftsmanship.",
               "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#atypicke-zamecnicke-konstrukce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -116,16 +111,6 @@
                   "@type": "PropertyValue",
                   "name": "Materials and technology",
                   "value": "we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, always to suit the specific requirements of the project and the intended use of the structure."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "iron, steel, aluminium and stainless steel"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "football dugouts and goals, bus shelters, canopies and pergolas, railings and more."
                 },
                 {
                   "@type": "PropertyValue",
@@ -173,16 +158,6 @@
                   "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Large-format"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "acrylic covers, display stands and protective screens"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Variant",
-                  "value": "edge polishing with a diamond grinder, flame polishing of edges and heat forming the material in an oven"
                 },
                 {
                   "@type": "PropertyValue",

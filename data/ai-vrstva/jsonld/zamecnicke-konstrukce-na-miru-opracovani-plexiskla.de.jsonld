@@ -68,7 +68,7 @@
               "name": "Metallkonstruktionen",
               "description": "Werbeträger fertigen wir maßgeschneidert direkt in unseren eigenen Produktionsräumen.",
               "url": "https://www.eldr.cz/de/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#zamecnicke-konstrukce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce-p-800.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -79,11 +79,6 @@
                   "@type": "PropertyValue",
                   "name": "Montage",
                   "value": "wir installieren die Konstruktionen unter Berücksichtigung von Statik, Sicherheit und langfristiger Beständigkeit, damit die fertige Lösung in jeder Umgebung zuverlässig funktioniert."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Eisen, Stahl, Aluminium und Edelstahl"
                 },
                 {
                   "@type": "PropertyValue",
@@ -105,7 +100,7 @@
               "name": "Atypische Metallkonstruktionen",
               "description": "Wir realisieren ein breites Spektrum an Sonderlösungen, die individuelles Vorgehen, technisches Know-how und hochwertige handwerkliche Ausführung verlangen.",
               "url": "https://www.eldr.cz/de/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#atypicke-zamecnicke-konstrukce",
-              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce-p-1600.jpg",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -116,16 +111,6 @@
                   "@type": "PropertyValue",
                   "name": "Materialien und Technologien",
                   "value": "wir verfügen über Technologien zum Schweißen, Biegen und zur weiteren Metallbearbeitung. Wir arbeiten mit Materialien wie Eisen, Stahl, Aluminium und Edelstahl – immer nach den konkreten Anforderungen des Projekts und der geplanten Nutzung der Konstruktion."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Material",
-                  "value": "Eisen, Stahl, Aluminium und Edelstahl"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Spielerunterstände und Fußballtore, Bushaltestellen, Vordächer und Pergolen, Geländer und Ähnliches."
                 },
                 {
                   "@type": "PropertyValue",
@@ -173,16 +158,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Großformatig"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Plexiglas-Abdeckungen, Aufstellern und Schutzschilden"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "das Polieren der Kanten mit der Diamantschleifmaschine, das Flammpolieren der Kanten und das Warmverformen des Materials im Ofen"
                 },
                 {
                   "@type": "PropertyValue",
