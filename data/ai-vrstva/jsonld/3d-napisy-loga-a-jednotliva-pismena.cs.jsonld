@@ -1,0 +1,360 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#webpage",
+      "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena",
+      "name": "3D nápisy, loga a písmena",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Naše produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "3D nápisy, loga a písmena",
+          "item": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba",
+      "name": "3D nápisy, loga a písmena",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Každý detail dle vašich představ",
+          "value": "Vyberte si z široké škály materiálů, barev a způsobů podsvícení."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Každý detail dle vašich představ",
+          "value": "Před samotnou výrobou vám připravíme 3D vizualizaci, abyste měli přesnou představu o výsledném vzhledu."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Odolnost vůči povětrnostním vlivům",
+          "value": "poskytujeme na ně až 5 letou záruku"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Odolnost vůči povětrnostním vlivům",
+          "value": "materiály s úpravou povrchu zajišťují stálost barev a vzhledu po mnoho let"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#katalog",
+        "name": "3D nápisy, loga a písmena",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-1",
+              "name": "Nesvětelné 3D nápisy",
+              "description": "Do interiérů a exteriérů, kde není nutné upoutávat pozornost světelnou reklamou.",
+              "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-1",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fd135f506b8f152f4a_648922f87beb1c9d9b17d22b_Profil%25201%2520(01).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "barevné možnosti díky translucentní fólii"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo, na sklo"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Profil 1"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Nižší náklady na výrobu a údržbu v porovnání se světelnými variantami."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "lakování dle individuálních potřeb"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Do interiérů a exteriérů"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-3",
+              "name": "3D nápisy se zadním podsvícením",
+              "description": "Do interiérů i exteriérů. Díky nepřímému tlumenému podsvícení působí elegantním, decentním dojmem.",
+              "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-3",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2349e21326067656a4a_648924ef510c7c1e8802d178_Podsvi%25CC%2581ceny%25CC%2581%2520na%25CC%2581pis%2520-%2520Profil%25203%2520(0001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "hliník, plexisklo, deskový materiál, možné využití 3D tisku"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo (nebo jiné pozadí pro aura efekt)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Profil 3"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "3D nápisy se zadním podsvícením „aura“"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "S možností kombinace předního a zadního podsvícení."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Do interiérů i exteriérů"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
+              "name": "Velkoformátové světelné nápisy",
+              "description": "Odolná reklama do výšek, kde je větrno.",
+              "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2352298e32104eb3c34_64892fd80421491be3ffb6dc_Sve%25CC%258Ctelne%25CC%2581%2520pi%25CC%2581smena%2520-%2520profil%25204%2520%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "barevné možnosti díky translucentní fólii a lakování"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo a další dle potřeb zákazníka"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Profil 4"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Bytelná reklama, odolávající povětrnostním vlivům díky upevňovacímu lemu."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "do výšek, kde je větrno"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
+              "name": "3D nápisy se svítícím čelem",
+              "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "možnosti barev plexiskla a průsvitné fólie"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "na fasádu, střechu, atiky, na zem, zavěšení do stropu, na dřevo – vhodné pro interiér i exteriér."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Profil 5s"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Rozměr do 2 metrů na výšku."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Čelní plocha bez viditelného rámečku."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-8",
+              "name": "3D nápisy se svítícím čelem a boky",
+              "description": "Do interiérů a exteriérů. Prosvícená může být jak čelní strana znaků, tak její boky.",
+              "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-8",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bb267c6b32d1ee7d05_64893241d1a77b591af29378_Se%25CC%258Ctelne%25CC%2581%2520znaky%2520-%2520Profil%25208%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "možnosti díky translucentní fólii v kombinaci s barevností plexiskla a LED diod"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "plexisklo a dibond"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "na fasádu, střechu, atiky, na zem, zavešení do stropu, na dřevo, průčelí obchodních jednotek, vnitřní prostory."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Profil 8"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Nápis je prosvětlený i bočně, co zaručuje viditelnost z různých úhlů pohledu."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Do interiérů a exteriérů"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
+              "name": "Plno-plexisklové 3D nápisy",
+              "description": "pro drobné nápisy a nápisy s těžko tvarovatelným písmem.",
+              "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bae0dd6bef54205b61_64bfc6681406f7a5ffd232b6_649bfb9d07992cfbf59d224e_6489336a18b47a0c318dd8d0_plno%2520plexi%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "možnosti díky translucentní fólii, lakování a barevnosti LED diod"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "plexisklo"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "vhodný především do interiéru - na kancelářské zdi, chodby, recepce, vstupní haly"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Profil 9"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Světelná může být čelní strana i boky."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

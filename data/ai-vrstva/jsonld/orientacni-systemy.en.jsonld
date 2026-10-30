@@ -1,0 +1,160 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#webpage",
+      "url": "https://www.eldr.cz/en/produkty/orientacni-systemy",
+      "name": "Wayfinding systems",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our products",
+          "item": "https://www.eldr.cz/en/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Wayfinding systems",
+          "item": "https://www.eldr.cz/en/produkty/orientacni-systemy"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#sluzba",
+      "name": "Wayfinding systems",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/produkty/orientacni-systemy",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#katalog",
+        "name": "Wayfinding systems",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#orientacni-systemy",
+              "name": "Wayfinding systems for buildings and sites",
+              "description": "We will build the system to your specification, or you can choose from our standard modular wayfinding systems.",
+              "url": "https://www.eldr.cz/en/produkty/orientacni-systemy#orientacni-systemy",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6a991b5f017afb3097bc8182_orientacni-systemy-globus.png",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "graphic solution in illuminated and non-illuminated versions, matched to the space and to your brand identity."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Installation",
+                  "value": "on the wall, on spacers, on suspension cables, on free-standing structures, or as totems and signposts."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "indoors, outdoors, in buildings and across large sites — for example logistics parks, hospitals or department stores."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "From sheet material in aluminium, Dibond or acrylic."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "anodized aluminium"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Other materials can be used as well — wood, stainless steel, acrylic glass."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Custom-made"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Another option is a system of small totems and signposts."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "indoor, outdoor and modular wayfinding systems"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "Indoors and outdoors"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#faq",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/en/produkty/orientacni-systemy#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a wayfinding system for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a set of information boards, direction signs and labels that makes it easier for people to get around. It helps visitors quickly grasp how the space is laid out and find the right way without having to ask staff."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are wayfinding systems made of?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From sheet material in aluminium, Dibond or acrylic."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+{
+  "slug": "3d-napisy-loga-a-jednotliva-pismena",
+  "lang": "en",
+  "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena",
+  "page": {
+    "name": {
+      "value": "3D signs, logos, and letters",
+      "quote": "3D signs, logos, and letters"
+    },
+    "description": null,
+    "highlights": [
+      {
+        "value": "Decades of durability",
+        "quote": "Decades of durability"
+      },
+      {
+        "value": "Energy-efficient LEDs",
+        "quote": "Energy-efficient LEDs"
+      },
+      {
+        "value": "Professional installation",
+        "quote": "Professional installation"
+      },
+      {
+        "value": "Full service",
+        "quote": "Full service"
+      }
+    ],
+    "properties": [
+      {
+        "name": {
+          "value": "Every detail to your liking",
+          "quote": "Every detail to your liking"
+        },
+        "value": {
+          "value": "Choose from a wide variety of materials, colours, and lighting options.",
+          "quote": "From the first sketch to final installation. Choose from a wide variety of materials, colours, and lighting options. Before production, we prepare a 3D visualisation so you can see exactly what the final product will look like."
+        }
+      },
+      {
+        "name": {
+          "value": "Every detail to your liking",
+          "quote": "Every detail to your liking"
+        },
+        "value": {
+          "value": "Before production, we prepare a 3D visualisation so you can see exactly what the final product will look like.",
+          "quote": "From the first sketch to final installation. Choose from a wide variety of materials, colours, and lighting options. Before production, we prepare a 3D visualisation so you can see exactly what the final product will look like."
+        }
+      },
+      {
+        "name": {
+          "value": "Weather resistance",
+          "quote": "Weather resistance"
+        },
+        "value": {
+          "value": "come with up to a 5-year warranty",
+          "quote": "Our illuminated signs are built to withstand all weather conditions and come with up to a 5-year warranty. High-quality materials with surface treatments ensure colour and appearance stability for many years."
+        }
+      },
+      {
+        "name": {
+          "value": "Weather resistance",
+          "quote": "Weather resistance"
+        },
+        "value": {
+          "value": "materials with surface treatments ensure colour and appearance stability for many years",
+          "quote": "Our illuminated signs are built to withstand all weather conditions and come with up to a 5-year warranty. High-quality materials with surface treatments ensure colour and appearance stability for many years."
+        }
+      }
+    ]
+  },
+  "products": [
+    {
+      "key": "profil-1",
+      "anchor": "profil-1",
+      "name": {
+        "value": "Non-illuminated 3D signs",
+        "quote": "Non-illuminated 3D signs"
+      },
+      "description": {
+        "value": "For indoor and outdoor settings where illuminated advertising is not needed to attract attention.",
+        "quote": "For indoor and outdoor settings where illuminated advertising is not needed to attract attention."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fd135f506b8f152f4a_648922f87beb1c9d9b17d22b_Profil%25201%2520(01).webp",
+        "alt": "Profil 1 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Graphics",
+            "quote": "Graphics: Unlimited colour options thanks to translucent film"
+          },
+          "value": {
+            "value": "colour options thanks to translucent film",
+            "quote": "Graphics: Unlimited colour options thanks to translucent film"
+          }
+        },
+        {
+          "name": {
+            "value": "Body",
+            "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+          },
+          "value": {
+            "value": "A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing",
+            "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass"
+          },
+          "value": {
+            "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass",
+            "quote": "Placement: On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass"
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "aluminium",
+          "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+        },
+        {
+          "value": "acrylic glass",
+          "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+        },
+        {
+          "value": "sheet materials",
+          "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+        },
+        {
+          "value": "polystyrene",
+          "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+        },
+        {
+          "value": "cardboard",
+          "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+        }
+      ],
+      "variants": [
+        {
+          "value": "Profile 1",
+          "quote": "Profile 1"
+        },
+        {
+          "value": "Lower production and maintenance costs compared to illuminated versions.",
+          "quote": "Lower production and maintenance costs compared to illuminated versions. Unlimited width and thickness."
+        },
+        {
+          "value": "optional 3D printing",
+          "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+        },
+        {
+          "value": "paint finishes to suit individual requirements",
+          "quote": "Body: A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+        }
+      ],
+      "uses": [
+        {
+          "value": "For indoor and outdoor settings",
+          "quote": "For indoor and outdoor settings where illuminated advertising is not needed to attract attention."
+        },
+        {
+          "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass",
+          "quote": "Placement: On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass"
+        }
+      ]
+    },
+    {
+      "key": "profil-3",
+      "anchor": "profil-3",
+      "name": {
+        "value": "3D signs with backlighting",
+        "quote": "3D signs with backlighting"
+      },
+      "description": {
+        "value": "For indoor and outdoor use. Soft, indirect backlighting creates an elegant, understated effect.",
+        "quote": "For indoor and outdoor use. Soft, indirect backlighting creates an elegant, understated effect."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2349e21326067656a4a_648924ef510c7c1e8802d178_Podsvi%25CC%2581ceny%25CC%2581%2520na%25CC%2581pis%2520-%2520Profil%25203%2520(0001).webp",
+        "alt": "Profil 3 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Body",
+            "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
+          },
+          "value": {
+            "value": "Aluminium, acrylic glass, sheet materials, optional use of 3D printing",
+            "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)"
+          },
+          "value": {
+            "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)",
+            "quote": "Placement: On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)"
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "Aluminium",
+          "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
+        },
+        {
+          "value": "acrylic glass",
+          "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
+        },
+        {
+          "value": "sheet materials",
+          "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
+        }
+      ],
+      "variants": [
+        {
+          "value": "Profile 3",
+          "quote": "Profile 3"
+        },
+        {
+          "value": "3D signs with “Aura” backlighting",
+          "quote": "3D signs with “Aura” backlighting"
+        },
+        {
+          "value": "Option to combine front and back lighting.",
+          "quote": "Elegant. Subtle. Option to combine front and back lighting."
+        },
+        {
+          "value": "optional use of 3D printing",
+          "quote": "Body: Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
+        }
+      ],
+      "uses": [
+        {
+          "value": "For indoor and outdoor use",
+          "quote": "For indoor and outdoor use. Soft, indirect backlighting creates an elegant, understated effect."
+        },
+        {
+          "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)",
+          "quote": "Placement: On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)"
+        }
+      ]
+    },
+    {
+      "key": "profil-4",
+      "anchor": "profil-4",
+      "name": {
+        "value": "Large-format illuminated signs",
+        "quote": "Large-format illuminated signs"
+      },
+      "description": {
+        "value": "Durable signage for exposed, windy locations at height.",
+        "quote": "Durable signage for exposed, windy locations at height. It attracts attention from a distance and offers a long service life even in adverse conditions."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2352298e32104eb3c34_64892fd80421491be3ffb6dc_Sve%25CC%258Ctelne%25CC%2581%2520pi%25CC%2581smena%2520-%2520profil%25204%2520%2520(00001).webp",
+        "alt": "Profil 4 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Graphics",
+            "quote": "Graphics: Unlimited colour options thanks to translucent film and paint finishes"
+          },
+          "value": {
+            "value": "colour options thanks to translucent film and paint finishes",
+            "quote": "Graphics: Unlimited colour options thanks to translucent film and paint finishes"
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs"
+          },
+          "value": {
+            "value": "On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs",
+            "quote": "Placement: On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs"
+          }
+        }
+      ],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Profile 4",
+          "quote": "Profile 4"
+        },
+        {
+          "value": "A fixing rail integrated into the side of the letter secures the flexible face material.",
+          "quote": "Robust, weather-resistant signage. A fixing rail integrated into the side of the letter secures the flexible face material. Unlimited size, lighting colour and body colour options."
+        }
+      ],
+      "uses": [
+        {
+          "value": "for exposed, windy locations at height",
+          "quote": "Durable signage for exposed, windy locations at height. It attracts attention from a distance and offers a long service life even in adverse conditions."
+        },
+        {
+          "value": "On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs",
+          "quote": "Placement: On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs"
+        }
+      ]
+    },
+    {
+      "key": "profil-5s",
+      "anchor": "profil-5s",
+      "name": {
+        "value": "3D signs with illuminated face",
+        "quote": "3D signs with illuminated face"
+      },
+      "description": null,
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
+        "alt": "Profil 5s 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Graphics",
+            "quote": "Graphics: Unlimited options of acrylic glass colours and translucent film"
+          },
+          "value": {
+            "value": "options of acrylic glass colours and translucent film",
+            "quote": "Graphics: Unlimited options of acrylic glass colours and translucent film"
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: On façades, roofs, parapets, the ground or wood, or suspended from ceilings. Suitable for indoor and outdoor use."
+          },
+          "value": {
+            "value": "On façades, roofs, parapets, the ground or wood, or suspended from ceilings. Suitable for indoor and outdoor use.",
+            "quote": "Placement: On façades, roofs, parapets, the ground or wood, or suspended from ceilings. Suitable for indoor and outdoor use."
+          }
+        }
+      ],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Profile 5s",
+          "quote": "Profile 5s"
+        },
+        {
+          "value": "Up to 2 metres high, with no visible frame around the face.",
+          "quote": "The most popular choice for 3D signage. A striking sign offering excellent value for money. Up to 2 metres high, with no visible frame around the face."
+        }
+      ],
+      "uses": [
+        {
+          "value": "On façades, roofs, parapets, the ground or wood, or suspended from ceilings.",
+          "quote": "Placement: On façades, roofs, parapets, the ground or wood, or suspended from ceilings. Suitable for indoor and outdoor use."
+        },
+        {
+          "value": "Suitable for indoor and outdoor use.",
+          "quote": "Placement: On façades, roofs, parapets, the ground or wood, or suspended from ceilings. Suitable for indoor and outdoor use."
+        }
+      ]
+    },
+    {
+      "key": "profil-8",
+      "anchor": "profil-8",
+      "name": {
+        "value": "3D signs with illuminated face and sides",
+        "quote": "3D signs with illuminated face and sides"
+      },
+      "description": {
+        "value": "For indoor and outdoor use. Both the face and sides of the letters can be illuminated.",
+        "quote": "For indoor and outdoor use. Both the face and sides of the letters can be illuminated."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bb267c6b32d1ee7d05_64893241d1a77b591af29378_Se%25CC%258Ctelne%25CC%2581%2520znaky%2520-%2520Profil%25208%2520(00001).webp",
+        "alt": "Profil 8 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Graphics",
+            "quote": "Graphics: Unlimited options through translucent film combined with coloured acrylic glass and LEDs"
+          },
+          "value": {
+            "value": "options through translucent film combined with coloured acrylic glass and LEDs",
+            "quote": "Graphics: Unlimited options through translucent film combined with coloured acrylic glass and LEDs"
+          }
+        },
+        {
+          "name": {
+            "value": "Body",
+            "quote": "Body: Acrylic glass and Dibond"
+          },
+          "value": {
+            "value": "Acrylic glass and Dibond",
+            "quote": "Body: Acrylic glass and Dibond"
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces"
+          },
+          "value": {
+            "value": "On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces",
+            "quote": "Placement: On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces"
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "Acrylic glass",
+          "quote": "Body: Acrylic glass and Dibond"
+        },
+        {
+          "value": "Dibond",
+          "quote": "Body: Acrylic glass and Dibond"
+        }
+      ],
+      "variants": [
+        {
+          "value": "Profile 8",
+          "quote": "Profile 8"
+        },
+        {
+          "value": "Face and sides are illuminated, ensuring visibility from different angles.",
+          "quote": "Face and sides are illuminated, ensuring visibility from different angles. The most impressive and vibrant sign option."
+        }
+      ],
+      "uses": [
+        {
+          "value": "For indoor and outdoor use",
+          "quote": "For indoor and outdoor use. Both the face and sides of the letters can be illuminated."
+        },
+        {
+          "value": "On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces",
+          "quote": "Placement: On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces"
+        }
+      ]
+    },
+    {
+      "key": "profil-9",
+      "anchor": "profil-9",
+      "name": {
+        "value": "Solid acrylic 3D signs",
+        "quote": "Solid acrylic 3D signs"
+      },
+      "description": {
+        "value": "for small signs and lettering with shapes that are difficult to form.",
+        "quote": "For indoor and outdoor use. Ideal for small signs and lettering with shapes that are difficult to form."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bae0dd6bef54205b61_64bfc6681406f7a5ffd232b6_649bfb9d07992cfbf59d224e_6489336a18b47a0c318dd8d0_plno%2520plexi%2520(00001).webp",
+        "alt": "Profil 9 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Graphics",
+            "quote": "Graphics: Unlimited options through translucent film, paint finishes and LED colours"
+          },
+          "value": {
+            "value": "options through translucent film, paint finishes and LED colours",
+            "quote": "Graphics: Unlimited options through translucent film, paint finishes and LED colours"
+          }
+        },
+        {
+          "name": {
+            "value": "Body",
+            "quote": "Body: Acrylic glass"
+          },
+          "value": {
+            "value": "Acrylic glass",
+            "quote": "Body: Acrylic glass"
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls"
+          },
+          "value": {
+            "value": "Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls",
+            "quote": "Placement: Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls"
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "Acrylic glass",
+          "quote": "Body: Acrylic glass"
+        }
+      ],
+      "variants": [
+        {
+          "value": "Profile 9",
+          "quote": "Profile 9"
+        },
+        {
+          "value": "Face and sides can be illuminated.",
+          "quote": "Ideal for small or intricately shaped signs. Face and sides can be illuminated. Affordable neon-like look with minimal energy consumption."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls",
+          "quote": "Placement: Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls"
+        }
+      ]
+    }
+  ],
+  "faq": [],
+  "vynechano": [
+    {
+      "text": "Úvodní věta „Production of illuminated signage with top-quality craftsmanship and custom design tailored to your needs.“",
+      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
+    },
+    {
+      "text": "Štítky u profilů, např. „Economical“, „Most eye-catching“, „Popular choice“",
+      "duvod": "Štítky hodnotí, ale nic neměří. Věcné údaje o profilech přebíráme z jejich podrobného popisu."
+    },
+    {
+      "text": "Věta „The most impressive and vibrant sign option.“ u profilu 8",
+      "duvod": "Superlativ bez měřitelného obsahu. Viditelnost z různých úhlů popisuje věcná věta téhož profilu."
+    },
+    {
+      "text": "Věty „The most popular choice for 3D signage. A striking sign offering excellent value for money.“ u profilu 5s",
+      "duvod": "Oblíbenost ani poměr ceny a kvality stránka ničím nedokládá. Rozměr do 2 metrů a čelo bez rámečku přebíráme."
+    },
+    {
+      "text": "Popis karty „The most popular type of illuminated 3D signage, with an illuminated face.“",
+      "duvod": "Superlativ „nejoblíbenější“ stránka nedokládá. Svítící čelo vyjadřuje už název výrobku, popis proto vynecháváme."
+    },
+    {
+      "text": "Slova „Elegant. Subtle.“ u profilu 3",
+      "duvod": "Hodnoticí přídavná jména bez údaje. Vzhled nepřímého podsvícení popisuje text karty, který přebíráme."
+    },
+    {
+      "text": "Blok „Turn darkness into opportunity“ s úvodním textem",
+      "duvod": "Obecný marketingový úvod. Rozsah od nesvětelných po LED nápisy pokrývají jednotlivé profily."
+    },
+    {
+      "text": "Slogan „From the first sketch to final installation.“",
+      "duvod": "Slogan bez konkrétního údaje. Výběr materiálů a 3D vizualizaci z téhož odstavce přebíráme."
+    },
+    {
+      "text": "Obrat „built to withstand all weather conditions“ u odolnosti světelných reklam",
+      "duvod": "Absolutní tvrzení bez parametru. Z věty přebíráme jen konkrétní záruku až 5 let."
+    },
+    {
+      "text": "Přívlastek „High-quality“ u materiálů s úpravou povrchu",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Úpravu povrchu a stálost barev přebíráme."
+    },
+    {
+      "text": "Věty „Unlimited width and thickness.“ a „Unlimited size, lighting colour and body colour options.“ a slovo „Unlimited“ u grafiky profilů",
+      "duvod": "Absolutní tvrzení bez čísla. Doporučujeme na webu uvést skutečné maximální rozměry profilů 1 a 4."
+    },
+    {
+      "text": "Dovětky „for lighter components and exceptional precision“ a „(lighter, surgically precise)“ u 3D tisku",
+      "duvod": "Nadsázka bez měřitelné přesnosti. Samotnou možnost 3D tisku přebíráme."
+    },
+    {
+      "text": "Věta „It attracts attention from a distance and offers a long service life even in adverse conditions.“ u profilu 4",
+      "duvod": "Slib účinku a životnosti bez čísla. Přebíráme jen určení pro větrná místa ve výšce."
+    },
+    {
+      "text": "Věta „Affordable neon-like look with minimal energy consumption.“ u profilu 9",
+      "duvod": "Cenu ani spotřebu stránka nevyčísluje. Pokud na webu doplníte konkrétní příkon, údaj rádi převezmeme."
+    },
+    {
+      "text": "Slovo „Ideal“ v popisu profilu 9",
+      "duvod": "Hodnoticí slovo. Přebíráme jen určení pro drobné nápisy a těžko tvarovatelné písmo."
+    },
+    {
+      "text": "Úvodní věta sekce profilu 9 „Ideal for small or intricately shaped signs.“",
+      "duvod": "Věta opakuje popis z karty téhož profilu, údaj by se zdvojil."
+    },
+    {
+      "text": "Použití „For indoor and outdoor use“ z karty 3D nápisů se svítícím čelem",
+      "duvod": "Stejné použití uvádí sekce profilu 5s, údaj by se zdvojil."
+    },
+    {
+      "text": "Použití „For indoor and outdoor use“ z karty plno-plexisklových nápisů",
+      "duvod": "Karta uvádí interiér i exteriér, sekce profilu 9 hlavně interiér. Prosíme o rozhodnutí, který údaj platí."
+    },
+    {
+      "text": "Šest přehledových karet a šest sekcí profilů",
+      "duvod": "Karty odkazují na sekce stejných profilů. Spojujeme je proto do šesti výrobků, aby se údaje neopakovaly."
+    },
+    {
+      "text": "Věta „Explore a diverse range of profiles with different characteristics and technical solutions.“",
+      "duvod": "Věta jen uvádí rozcestník profilů a o profilech nic konkrétního neříká."
+    },
+    {
+      "text": "Tlačítka „Request a no-obligation quote“, „How it’s made“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Schémata profilů bez popisku",
+      "duvod": "Schémata jsou jen v anglické a německé verzi. U výrobků používáme fotky, které jsou ve všech jazycích stejné."
+    },
+    {
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+    }
+  ]
+}

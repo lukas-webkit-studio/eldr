@@ -26,5 +26,12 @@ module.exports = [
       'no-unused-vars': ['warn', { args: 'none' }],
       'no-undef': 'error'
     }
+  },
+  {
+    // Node skripty (build, testy, vrstva pro AI): globály Node 18+, v prohlížečovém bundlu nemají co dělat.
+    files: ['scripts/**/*.js', 'test/**/*.js', 'build.js'],
+    languageOptions: {
+      globals: { fetch: 'readonly', URLSearchParams: 'readonly', Buffer: 'readonly' }
+    }
   }
 ];

@@ -1,0 +1,260 @@
+{
+  "slug": "zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
+  "lang": "en",
+  "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
+  "page": {
+    "name": {
+      "value": "Bespoke metal structures and acrylic glass processing",
+      "quote": "Bespoke metal structures and acrylic glass processing"
+    },
+    "description": null,
+    "highlights": [
+      {
+        "value": "Custom-made",
+        "quote": "Custom-made"
+      }
+    ],
+    "properties": []
+  },
+  "products": [
+    {
+      "key": "zamecnicke-konstrukce",
+      "anchor": "zamecnicke-konstrukce",
+      "name": {
+        "value": "Metal structures",
+        "quote": "Metal structures"
+      },
+      "description": {
+        "value": "We manufacture sign structures to order right in our own production facilities.",
+        "quote": "We manufacture sign structures to order right in our own production facilities. Experienced metalworkers deliver precise craftsmanship from the first design to the final build, with the emphasis on strength, function and a long service life."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce.jpg",
+        "alt": "Jeřáb osazuje reklamní billboard na ocelovou příhradovou konstrukci"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Materials",
+            "quote": "Materials: we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, to suit the specific requirements of the project and the applicable standards."
+          },
+          "value": {
+            "value": "we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, to suit the specific requirements of the project and the applicable standards.",
+            "quote": "Materials: we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, to suit the specific requirements of the project and the applicable standards."
+          }
+        },
+        {
+          "name": {
+            "value": "Installation",
+            "quote": "Installation: we install every structure with structural stability in mind, safety and long-term durability, so that the finished solution works reliably in any environment."
+          },
+          "value": {
+            "value": "we install every structure with structural stability in mind, safety and long-term durability",
+            "quote": "Installation: we install every structure with structural stability in mind, safety and long-term durability, so that the finished solution works reliably in any environment."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "iron, steel, aluminium and stainless steel",
+          "quote": "Materials: we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, to suit the specific requirements of the project and the applicable standards."
+        }
+      ],
+      "variants": [],
+      "uses": [
+        {
+          "value": "Indoors and outdoors",
+          "quote": "Indoors and outdoors"
+        }
+      ]
+    },
+    {
+      "key": "atypicke-zamecnicke-konstrukce",
+      "anchor": "atypicke-zamecnicke-konstrukce",
+      "name": {
+        "value": "Non-standard metal structures",
+        "quote": "Non-standard metal structures"
+      },
+      "description": {
+        "value": "We deliver a wide range of non-standard solutions",
+        "quote": "We deliver a wide range of non-standard solutions that call for an individual approach, technical know-how and genuine craftsmanship. We adapt every project to your requirements, to the way it will be used and to the environment it will stand in."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce.jpg",
+        "alt": "Autobusová zastávka z hliníkové konstrukce s polykarbonátovou střechou"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Typical projects",
+            "quote": "Typical projects: football dugouts and goals, bus shelters, canopies and pergolas, railings and more."
+          },
+          "value": {
+            "value": "football dugouts and goals, bus shelters, canopies and pergolas, railings and more.",
+            "quote": "Typical projects: football dugouts and goals, bus shelters, canopies and pergolas, railings and more."
+          }
+        },
+        {
+          "name": {
+            "value": "Materials and technology",
+            "quote": "Materials and technology: we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, always to suit the specific requirements of the project and the intended use of the structure."
+          },
+          "value": {
+            "value": "we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, always to suit the specific requirements of the project and the intended use of the structure.",
+            "quote": "Materials and technology: we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, always to suit the specific requirements of the project and the intended use of the structure."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "iron, steel, aluminium and stainless steel",
+          "quote": "Materials and technology: we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, always to suit the specific requirements of the project and the intended use of the structure."
+        }
+      ],
+      "variants": [
+        {
+          "value": "football dugouts and goals, bus shelters, canopies and pergolas, railings and more.",
+          "quote": "Typical projects: football dugouts and goals, bus shelters, canopies and pergolas, railings and more."
+        },
+        {
+          "value": "We adapt every project to your requirements, to the way it will be used and to the environment it will stand in.",
+          "quote": "We deliver a wide range of non-standard solutions that call for an individual approach, technical know-how and genuine craftsmanship. We adapt every project to your requirements, to the way it will be used and to the environment it will stand in."
+        }
+      ],
+      "uses": []
+    },
+    {
+      "key": "opracovani-a-prodej-plexiskla",
+      "anchor": "opracovani-a-prodej-plexiskla",
+      "name": {
+        "value": "Processing and sale of acrylic glass and polycarbonate",
+        "quote": "Processing and sale of acrylic glass and polycarbonate"
+      },
+      "description": {
+        "value": "We cut material to an accuracy of 1/10 mm, with a cutting area of 2,000 × 4,000 mm.",
+        "quote": "We cut material to an accuracy of 1/10 mm, with a cutting area of 2,000 × 4,000 mm. We keep most colours and sheet sizes in stock, so we can prepare acrylic glass to your dimensions while you wait."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf4b3b526cb1fb2c55c_opracovani-a-prodej-plexiskla.jpg",
+        "alt": "Červený dělicí panel z plexiskla s řezanou grafikou v kavárně"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Batch production",
+            "quote": "Batch production: we handle batch production of acrylic covers, display stands and protective screens. Our solutions are used by joiners, opticians, banks and orchestras alike. We also work with manufacturers of interior fittings (furniture)."
+          },
+          "value": {
+            "value": "we handle batch production of acrylic covers, display stands and protective screens.",
+            "quote": "Batch production: we handle batch production of acrylic covers, display stands and protective screens. Our solutions are used by joiners, opticians, banks and orchestras alike. We also work with manufacturers of interior fittings (furniture)."
+          }
+        },
+        {
+          "name": {
+            "value": "Technical facilities",
+            "quote": "Technical facilities: we have a fully equipped “acrylic shop” with professional machinery, including vertical panel saws and sizing saws that guarantee first-class results."
+          },
+          "value": {
+            "value": "we have a fully equipped “acrylic shop” with professional machinery, including vertical panel saws and sizing saws",
+            "quote": "Technical facilities: we have a fully equipped “acrylic shop” with professional machinery, including vertical panel saws and sizing saws that guarantee first-class results."
+          }
+        },
+        {
+          "name": {
+            "value": "Advanced processing techniques",
+            "quote": "Advanced processing techniques: we use professional acrylic glass techniques such as edge polishing with a diamond grinder, flame polishing of edges and heat forming the material in an oven."
+          },
+          "value": {
+            "value": "we use professional acrylic glass techniques such as edge polishing with a diamond grinder, flame polishing of edges and heat forming the material in an oven.",
+            "quote": "Advanced processing techniques: we use professional acrylic glass techniques such as edge polishing with a diamond grinder, flame polishing of edges and heat forming the material in an oven."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "acrylic glass and polycarbonate",
+          "quote": "Processing and sale of acrylic glass and polycarbonate, cut to size. We cut to an accuracy of 1/10 mm and handle batch production, edge polishing and heat forming."
+        }
+      ],
+      "variants": [
+        {
+          "value": "Large-format",
+          "quote": "Large-format"
+        },
+        {
+          "value": "acrylic covers, display stands and protective screens",
+          "quote": "Batch production: we handle batch production of acrylic covers, display stands and protective screens. Our solutions are used by joiners, opticians, banks and orchestras alike. We also work with manufacturers of interior fittings (furniture)."
+        },
+        {
+          "value": "edge polishing with a diamond grinder, flame polishing of edges and heat forming the material in an oven",
+          "quote": "Advanced processing techniques: we use professional acrylic glass techniques such as edge polishing with a diamond grinder, flame polishing of edges and heat forming the material in an oven."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Our solutions are used by joiners, opticians, banks and orchestras alike.",
+          "quote": "Batch production: we handle batch production of acrylic covers, display stands and protective screens. Our solutions are used by joiners, opticians, banks and orchestras alike. We also work with manufacturers of interior fittings (furniture)."
+        },
+        {
+          "value": "We also work with manufacturers of interior fittings (furniture).",
+          "quote": "Batch production: we handle batch production of acrylic covers, display stands and protective screens. Our solutions are used by joiners, opticians, banks and orchestras alike. We also work with manufacturers of interior fittings (furniture)."
+        }
+      ]
+    }
+  ],
+  "faq": [],
+  "vynechano": [
+    {
+      "text": "Štítek „1–40 m height“ v úvodu stránky",
+      "duvod": "Stránka neříká, čeho se výška týká, a u plexiskla nedává smysl. Doporučujeme štítek na webu opravit."
+    },
+    {
+      "text": "Věta „We keep most colours and sheet sizes in stock, so we can prepare acrylic glass to your dimensions while you wait.“",
+      "duvod": "Skladová zásoba a lhůta se mohou měnit, proto je k vlastnostem výrobku nepřiřazujeme."
+    },
+    {
+      "text": "Dovětek „that guarantee first-class results“ u technologického zázemí",
+      "duvod": "Superlativ bez měřitelného obsahu. Vybavení dílny včetně pil přebíráme."
+    },
+    {
+      "text": "Obrat „so that the finished solution works reliably in any environment“ u montáže",
+      "duvod": "Absolutní slib bez měřitelného obsahu. Ohled na statiku, bezpečnost a odolnost přebíráme."
+    },
+    {
+      "text": "Obrat „an individual approach, technical know-how and genuine craftsmanship“ u atypických konstrukcí",
+      "duvod": "Hodnoticí obraty o firmě. Přebíráme jen to, že jde o nestandardní řešení."
+    },
+    {
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
+    },
+    {
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
+    },
+    {
+      "text": "Karty rozcestníku pod úvodem stránky",
+      "duvod": "Karty odkazují na sekce výrobků. Údaje přebíráme přímo ze sekcí, aby se neopakovaly."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Tlačítka „Request a no-obligation quote“, „All references“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+    }
+  ]
+}

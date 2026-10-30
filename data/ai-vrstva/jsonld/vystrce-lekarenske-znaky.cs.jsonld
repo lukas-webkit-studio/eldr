@@ -1,0 +1,207 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#webpage",
+      "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky",
+      "name": "Výstrče, lékárenské znaky",
+      "description": "Vyrábíme velké množství provedení, variant a tvarů.",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Naše produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Výstrče, lékárenské znaky",
+          "item": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#sluzba",
+      "name": "Výstrče, lékárenské znaky",
+      "description": "Vyrábíme velké množství provedení, variant a tvarů.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Výstrče různých typů a provedení na míru",
+          "value": "Výroba je možná ve velkém množství provedení, variant a tvarů. Může se jednat o čtvercovou či kruhovou výstrč, ale také může být tvarována dle libosti – například zub pro zubní ambulanci."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#katalog",
+        "name": "Výstrče, lékárenské znaky",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#vystrce",
+              "name": "Světelné výstrče",
+              "description": "Reklama, která svítí dnem i nocí. LED podsvětlení zajišťuje rovnoměrnou viditelnost i za špatného počasí.",
+              "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#vystrce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fde9a38c372ef8c1437_vystrce.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "čelní strana výstrče je polepena tištěnou nebo řezanou grafikou. Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "rám tvoří hliníková konstrukce, čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu. K vnitřnímu rámu jsou přivařeny konzoly určené k upevnění výstrče na zeď."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Vhodné pro",
+                  "value": "provozovny, které potřebují být vidět ze všech stran – obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#atypicke-vystrce",
+              "name": "Atypické výstrče",
+              "description": "Výstrč ve tvaru vašeho symbolu",
+              "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#atypicke-vystrce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "tvar výstrče kopíruje siluetu symbolu vašeho oboru – zub, nůžky, srdce, klíč, sklenici nebo cokoliv, co zákazník okamžitě spojí s vaším podnikáním."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Vhodné pro",
+                  "value": "provozovny, které mají ikonický symbol okamžitě spojený s oborem – zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#lekarenske-znaky",
+              "name": "Lékárenské znaky",
+              "description": "Lékárenské znaky jsou pod autorským zákonem.",
+              "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#lekarenske-znaky",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Sortiment",
+                  "value": "světelné i nesvětelné nápisy „Lékárna“, polepy výloh, podlah a pultů a další doplňkové lékárenské značení."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Vhodné pro",
+                  "value": "označení lékáren a označení ordinací."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "slouží k jednotnému označení lékáren a zdravotnických zařízení"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#svetelna-vystrc-a-vystrc-s-intarzii",
+              "name": "Světelná výstrč a výstrč s intarzií",
+              "description": "Výstrč s osvětlením pro lepší viditelnost reklamy.",
+              "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Výstrč s intarzií má tvarované světelné 3D znaky"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Tvar výstrče lze přizpůsobit dle libosti, včetně atypických tvarů."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky#vystrc-na-miru-a-nesvetelna-vystrc",
+              "name": "Výstrč na míru a nesvětelná výstrč",
+              "description": "Výstrč přizpůsobená specifickým požadavkům klienta.",
+              "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

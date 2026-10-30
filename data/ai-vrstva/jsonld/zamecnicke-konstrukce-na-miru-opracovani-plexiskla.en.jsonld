@@ -1,0 +1,183 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#webpage",
+      "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
+      "name": "Bespoke metal structures and acrylic glass processing",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our products",
+          "item": "https://www.eldr.cz/en/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bespoke metal structures and acrylic glass processing",
+          "item": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#sluzba",
+      "name": "Bespoke metal structures and acrylic glass processing",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#katalog",
+        "name": "Bespoke metal structures and acrylic glass processing",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#zamecnicke-konstrukce",
+              "name": "Metal structures",
+              "description": "We manufacture sign structures to order right in our own production facilities.",
+              "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#zamecnicke-konstrukce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materials",
+                  "value": "we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, to suit the specific requirements of the project and the applicable standards."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Installation",
+                  "value": "we install every structure with structural stability in mind, safety and long-term durability"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "Indoors and outdoors"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#atypicke-zamecnicke-konstrukce",
+              "name": "Non-standard metal structures",
+              "description": "We deliver a wide range of non-standard solutions",
+              "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#atypicke-zamecnicke-konstrukce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Typical projects",
+                  "value": "football dugouts and goals, bus shelters, canopies and pergolas, railings and more."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materials and technology",
+                  "value": "we have the technology for welding, bending and other metal machining. We work with materials such as iron, steel, aluminium and stainless steel, always to suit the specific requirements of the project and the intended use of the structure."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "We adapt every project to your requirements, to the way it will be used and to the environment it will stand in."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#opracovani-a-prodej-plexiskla",
+              "name": "Processing and sale of acrylic glass and polycarbonate",
+              "description": "We cut material to an accuracy of 1/10 mm, with a cutting area of 2,000 × 4,000 mm.",
+              "url": "https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#opracovani-a-prodej-plexiskla",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf4b3b526cb1fb2c55c_opracovani-a-prodej-plexiskla.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Batch production",
+                  "value": "we handle batch production of acrylic covers, display stands and protective screens."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Technical facilities",
+                  "value": "we have a fully equipped “acrylic shop” with professional machinery, including vertical panel saws and sizing saws"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Advanced processing techniques",
+                  "value": "we use professional acrylic glass techniques such as edge polishing with a diamond grinder, flame polishing of edges and heat forming the material in an oven."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "acrylic glass and polycarbonate"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Large-format"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "Our solutions are used by joiners, opticians, banks and orchestras alike."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "We also work with manufacturers of interior fittings (furniture)."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

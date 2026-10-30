@@ -11,7 +11,9 @@
     "lint": "npx eslint src/modules build.js test scripts",
     "prettier": "npx prettier src build.js test --check",
     "format": "npx prettier src build.js test --write && npm run lint",
-    "check": "npm run build && npm run test && npm run data && npm run lint"
+    "check": "npm run build && npm run test && npm run data && npm run test:ai && npm run lint",
+    "test:ai": "node scripts/ai-vrstva/test-dohledatelnost.js && node scripts/ai-vrstva/test-jsonld.js && node scripts/overeni/test-robots.js",
+    "validate:ai": "node scripts/ai-vrstva/validator.js data/ai-vrstva/jsonld/*.jsonld"
   },
   "author": "",
   "license": "ISC",

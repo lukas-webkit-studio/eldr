@@ -34,6 +34,15 @@ Publikováno a ověřeno: 10 produktových stránek CS/EN/DE, menu, přílohy ve
 - CMS Reference: překlady, Polytex bez EN, dkLAB render (#26).
 - Designer drobnosti po publikaci (úkol `d30a2c84`).
 
+### Štafeta 31. 10. – S5 #35 popis produktů pro AI
+
+- **Hotovo na stagingu, produkci publikuje koordinátor po R2.** JSON-LD na 30 URL (10 produktových stránek × CS/EN/DE), nativní schema markup ve Webflow, čteno zpátky 30/30. Starý `Organization` z head custom code pylonů a 3D nápisů smazán.
+- 44 výrobků a služeb na jazyk, 315/314/316 údajů s odkazem na zdroj, 3 otázky s odpovědí. Test dohledatelnosti 1 604/1 604 citací v `npm run check`.
+- Staging 31. 10. 00:42: 210/210 kontrol robotů (7 User-Agentů × 30 URL), validator.schema.org 30/30 bez chyb a varování, snímky před a po shodné. Výstup `docs/overeni-s5-staging.md`.
+- Model `Service` místo `Product` (Google u produktu bez ceny hlásí chybu). Rich Results Test z cloudu nejde, je v „Na Lukášovi“.
+- `llms.txt` připravený v repu, nahrání jen ručně (Na Lukášovi).
+- Google Docs pro klienta ve složce 02 (30 + 2).
+
 ### Štafeta 30. 10.
 
 - **S3 #26 hotovo, na homepage:** Lukáš vybral variantu A. Sekce recenzí na homepage (CS/EN/DE) je nahrazená pásem z CMS Reference: 22 recenzí v HTML, plynulé zpomalení při hoveru, reduced motion bez posunu. Nadpis a tlačítko „Všechny reference“ jsou původní prvky, takže zůstaly překlady i GTM. Staging 30. 10., produkci publikuje koordinátor. `/dev/recenze` je v draftu.
@@ -84,3 +93,7 @@ Spouští se, až Lukáš potvrdí, že klient schválil.
 1. Designer drobnosti po publikaci (dashboard `d30a2c84`).
 2. Přístup k Cloudflare workeru `eldr-web` nebo postup nasazení.
 3. Rozpor: `CLAUDE.md` popisuje bundle z jsDelivr, web ho bere z Cloudflare workeru, jehož nasazení v repu není. Doplnit postup do `CLAUDE.md`.
+4. **S5 #35 – nahrát `llms.txt`:** Webflow → Site settings → SEO → LLMs.txt → Upload file → soubor `data/ai-vrstva/llms.txt` z repa → Save changes → publikovat. Ověřit `https://www.eldr.cz/llms.txt`. Přes API to jde jen na tarifu Enterprise.
+5. **S5 #35 – Google Rich Results Test ručně** (z cloudu nejde): https://search.google.com/test/rich-results na `https://eldr.webflow.io/produkty/orientacni-systemy` a `https://eldr.webflow.io/produkty/pylony-a-totemy`. Čeká se 0 chyb, detekované jen „Drobečková navigace“ (a u orientačních systémů „Často kladené otázky“). Výsledek zapsat do #35.
+6. **S5 #35 – rozhodnout o textech na webu** (vrstva je přebírá doslova nebo je vynechala): štítek „1–40 m výška“ na zámečnických konstrukcích, karta „Neonové nápisy & imitace“ (plastové pásky × sklo), H1 svítidel „Neonová a LED neonová…“, profil 9 interiér × exteriér, „záložny (klíč)“ u výstrčí, procesní blok „světelné reklamy“ na stránce tisku, překlepy „uspůsobit“, „zavešení“. Seznam s odkazy je v `data/ai-vrstva/_overeni/`.
+7. **S5 #35 – web bez JavaScriptu:** `src/eldr.css` skrývá `.localization-show-only_*` (`display:none`), dokud JS nepřidá třídu jazyka. Robot bez JS proto v češtině nevidí část fotek výrobků. Token `{#YOE#}` vidí nenahrazený. Řešení patří do Webflow (nativní lokalizace prvků).
