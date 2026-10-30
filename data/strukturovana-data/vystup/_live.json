@@ -1,6 +1,6 @@
 {
   "zaklad": "https://eldr.webflow.io",
-  "kdy": "2026-10-30T23:02:20.605Z",
+  "kdy": "2026-10-30T23:30:28.791Z",
   "radky": [
     {
       "url": "https://eldr.webflow.io/",
@@ -217,10 +217,7 @@
       "jazyk": "cs",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/inspirace/rezana-grafika-zaujmete-zakaznika-na-prvni-pohled",
@@ -234,20 +231,14 @@
       "jazyk": "cs",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/inspirace/svetelna-reklama-propagujte-sve-podnikani-moderne",
       "jazyk": "cs",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/inspirace/svetelne-napisy-nejlepsi-zpusob-jak-zvyraznit-sve-podnikani",
@@ -296,20 +287,14 @@
       "jazyk": "en",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/en/inspirace/svetelna-reklama-propagujte-sve-podnikani-moderne",
       "jazyk": "en",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/en/inspirace/svetelne-napisy-nejlepsi-zpusob-jak-zvyraznit-sve-podnikani",
@@ -344,10 +329,7 @@
       "jazyk": "de",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/de/inspirace/rezana-grafika-zaujmete-zakaznika-na-prvni-pohled",
@@ -361,20 +343,14 @@
       "jazyk": "de",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/de/inspirace/svetelna-reklama-propagujte-sve-podnikani-moderne",
       "jazyk": "de",
       "typy": "WebPage, BlogPosting, BreadcrumbList",
       "chyby": [],
-      "upozorneni": [
-        "mezera na kraji textu (@graph[0].description)",
-        "mezera na kraji textu (@graph[1].description)"
-      ]
+      "upozorneni": []
     },
     {
       "url": "https://eldr.webflow.io/de/inspirace/svetelne-napisy-nejlepsi-zpusob-jak-zvyraznit-sve-podnikani",
