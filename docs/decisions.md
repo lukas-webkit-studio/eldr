@@ -3,6 +3,14 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-10-31 · S7 · Data CMS Reference a texty (#36)
+
+- **Alt fotek recenzí jde přes nové textové pole `alt-fotky`, ne přes alt v obrázkovém poli.** Zápis `obrazek.alt` do sekundárního locale vyžaduje i `url` a Webflow pak obrázek nahraje znovu jako nový soubor jen pro ten jazyk. Obrázek se tím od češtiny odpojí (ověřeno na Schobeli EN, obsah souboru stejný). Textové pole se píše bez vedlejších účinků. Na homepage je alt obrázku navázaný na `name`, napojení na `alt-fotky` je krok v Designeru.
+- **Fotky v pásu se nezmenšovaly přes API.** Výměna souboru je nevratná a mění obrázek i na `/reference`. Webflow má zmenšené varianty (`-p-500`, `-p-800`) hotové, na `/reference` je posílá v `srcset`, na homepage ne. Zapnutí je nastavení obrázku v Designeru: 5,1 MB → asi 1,8 MB.
+- **`priorita` v EN/DE se srovnává s češtinou.** Pole je lokalizované a rozdíl dělal jiné pořadí pásu v jazycích.
+- **Citace se překládají věrně, jméno firmy podle glosáře** („Elektro Drapač“ i tam, kde zákazník psal „ELEKTRO DRAPAČ“ nebo „Elektrodrapač“). SAGASSER má originál v němčině, DE se nepřekládá.
+- **Do primárního locale se psalo jen nové pole `alt-fotky`** a meta description Kariéry a Reference (dřív prázdné). Chyby v českých datech (`Kostel krista krále`, `specialista` malým, mezery na konci jmen, `Assistent`) zůstávají na Lukášovi.
+
 ## 2026-10-31 · S6 · Strukturovaná data (#34)
 
 - **Zápis nativně ve Webflow**, schema markup stránky (`bulk_update_pages_schema_markup`), každý jazyk zvlášť. Vypíše se v `<head>` surového HTML, takže ho čtou i roboti bez JS. Locale bez vlastního zápisu dědí češtinu, proto se zapisují vždy CS, EN i DE. Žádný JS v bundlu.

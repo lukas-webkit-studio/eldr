@@ -6,6 +6,7 @@
       "@id": "https://www.eldr.cz/en/muzeum-svetelnych-reklam#webpage",
       "url": "https://www.eldr.cz/en/muzeum-svetelnych-reklam",
       "name": "Museum of Light Advertisements",
+      "description": "Illuminated advertising through history. Our museum of illuminated advertisements has interesting and historic pieces, not only from our workshop.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://www.eldr.cz/#website"
