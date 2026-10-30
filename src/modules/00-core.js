@@ -45,6 +45,9 @@ var SEL = {
   // reference
   refLanguage:      '.sectionreference__collection__item__language, .reference_item-language',
 
+  // homepage — pás recenzí
+  testimonialMarquee: '.testimonial21_marquee',
+
   // formulář — nahrávání příloh (nativní Webflow File Upload)
   formUpload:       '.w-file-upload',
   formUploadError:  '.w-file-upload-error-msg',

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Pás recenzí — plynulý posun se zpomalením při hoveru (#26, /dev/recenze)
+   Pás recenzí — plynulý posun se zpomalením při hoveru (#26, dočasně z custom code homepage)
    ==========================================================================
    Proč ne Webflow Interactions: IX3 umí timeline jen přehrát nebo
    pozastavit, rychlost plynule měnit neumí. Lukáš 30. 10. chce, aby se pás
@@ -7,9 +7,10 @@
    přes IX3 hover v testu na stagingu vůbec nezabrala (hover řídí vlastní
    instanci timeline, ne tu spuštěnou při načtení).
 
-   Je to dev prototyp: načítá se jen v custom code stránky /dev/recenze,
-   ne v bundlu. Po schválení se přesune do src/modules/ a dev skript
-   ze stránky zmizí.
+   Dočasná kopie modulu src/modules/45-testimonial-marquee.js. Načítá se
+   z custom code homepage, dokud Cloudflare worker (eldr-web) neservíruje
+   bundle s tímto modulem. Po nasazení workeru řádek z homepage i tenhle
+   soubor smazat.
 
    Markup (Webflow):
      .testimonial21_marquee    ořezový obal (třída, ne atribut: zápis atributu
@@ -31,7 +32,10 @@
 
   function init(root) {
     var track = root.firstElementChild;
-    if (!track) return;
+    // Stejný kód je i v bundlu (src/modules/45-testimonial-marquee.js);
+    // kdo je první, ten pás řídí.
+    if (!track || root.hasAttribute('data-marquee-ready')) return;
+    root.setAttribute('data-marquee-ready', '');
 
     // Ve Webflow má obal overflow-x: auto, takže bez JS a při reduced motion
     // jde pás posunout ručně (prstem, trackpadem). Ořez jen při animaci.
