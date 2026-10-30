@@ -356,6 +356,16 @@ run('Nahrávání příloh — čeština zůstává podle Designeru',
     ok('česká stránka hlášku nepřepisuje', doc.querySelector('.w-file-upload-error-msg').textContent.startsWith('Upload failed. Max size'));
   });
 
+// --- 6b. pás recenzí ------------------------------------------------------
+run('Pás recenzí — modul převezme ořez a nespustí se dvakrát',
+  `<div class="testimonial21_marquee"><div class="testimonial21_track"><div>a</div><div aria-hidden="true">a</div></div></div>`,
+  'https://www.eldr.cz/',
+  (win, doc) => {
+    const m = doc.querySelector('.testimonial21_marquee');
+    ok('obal má ořez jen při animaci', m.style.overflow === 'hidden');
+    ok('obal je označený jako spuštěný', m.hasAttribute('data-marquee-ready'));
+  });
+
 // --- 7. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
