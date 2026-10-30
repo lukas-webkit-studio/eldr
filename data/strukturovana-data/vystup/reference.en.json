@@ -6,6 +6,7 @@
       "@id": "https://www.eldr.cz/en/reference#webpage",
       "url": "https://www.eldr.cz/en/reference",
       "name": "References",
+      "description": "Completed projects by the family company Elektro Drapač. Our clients include Komerční banka, Česká spořitelna, O2, Tchibo, Sephora, Puma and Prague Zoo.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://www.eldr.cz/#website"

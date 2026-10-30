@@ -6,6 +6,7 @@
       "@id": "https://www.eldr.cz/de/muzeum-svetelnych-reklam#webpage",
       "url": "https://www.eldr.cz/de/muzeum-svetelnych-reklam",
       "name": "Museum für Lichtwerbung",
+      "description": "Leuchtreklame im Wandel der Geschichte. Im Museum für Leuchtreklamen finden Sie interessante und historische Stücke – nicht nur aus unserer Werkstatt.",
       "inLanguage": "de",
       "isPartOf": {
         "@id": "https://www.eldr.cz/#website"

@@ -6,6 +6,7 @@
       "@id": "https://www.eldr.cz/kariera#webpage",
       "url": "https://www.eldr.cz/kariera",
       "name": "Kariéra",
+      "description": "Aktuální pracovní nabídky rodinné firmy Elektro Drapač, výrobce světelné reklamy. Životopis a krátký průvodní dopis nám pošlete na myska@eldr.cz.",
       "inLanguage": "cs",
       "isPartOf": {
         "@id": "https://www.eldr.cz/#website"
