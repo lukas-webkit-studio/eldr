@@ -105,7 +105,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/68d98f011cd6352b1663fa9b_totemy-pylony-menu-1-p-500.avif",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/68d98f011cd6352b1663fa9b_totemy-pylony-menu-1.avif",
    "alt": "",
    "anchor": null
   },
@@ -121,7 +121,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/68d98f0389e1be722af0fd89_totemy-pylony-menu-2-p-500.avif",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/68d98f0389e1be722af0fd89_totemy-pylony-menu-2.avif",
    "alt": "",
    "anchor": null
   },
@@ -1053,12 +1053,6 @@
    "type": "a",
    "text": "Webkit.Studio",
    "anchor": "twitter"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6910ddf12e63b8d4b1c1c064_Na%CC%81vrh%20bez%20na%CC%81zvu%20(5)-p-500.avif",
-   "alt": "",
-   "anchor": null
   }
  ]
 }

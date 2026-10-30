@@ -47,7 +47,8 @@ function collect() {
       if (SKIP.has(node.tagName.toUpperCase()) || hidden(node)) return;
       if (node.id && /^[a-z][a-z0-9-]*$/.test(node.id) && !/^w-node|^pop-up$/.test(node.id)) lastAnchor = node.id;
       if (node.tagName === 'IMG') {
-        const src = node.currentSrc || node.getAttribute('src') || '';
+        // Atribut src = originál; currentSrc by vrátil zmenšenou variantu ze srcsetu (-p-500).
+        const src = node.getAttribute('src') || '';
         blocks.push({ type: 'img', src, alt: node.getAttribute('alt') || '', anchor: anchorOf(node) || lastAnchor });
         return;
       }

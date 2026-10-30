@@ -79,7 +79,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa2c9f7935e3f54d8f6b296_UHK%203-p-1600.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa2c9f7935e3f54d8f6b296_UHK%203.png",
    "alt": "",
    "anchor": null
   },
@@ -157,7 +157,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce-p-800.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce.jpg",
    "alt": "Jeřáb osazuje reklamní billboard na ocelovou příhradovou konstrukci",
    "anchor": "zamecnicke-konstrukce"
   },
@@ -402,7 +402,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce-p-1600.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce.jpg",
    "alt": "Autobusová zastávka z hliníkové konstrukce s polykarbonátovou střechou",
    "anchor": "atypicke-zamecnicke-konstrukce"
   },
@@ -854,30 +854,6 @@
    "type": "a",
    "text": "Webkit.Studio",
    "anchor": "twitter"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa2c9f7935e3f54d8f6b296_UHK%203-p-500.png",
-   "alt": "",
-   "anchor": null
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce-p-500.jpg",
-   "alt": "Jeřáb osazuje reklamní billboard na ocelovou příhradovou konstrukci",
-   "anchor": "zamecnicke-konstrukce"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce-p-500.jpg",
-   "alt": "Autobusová zastávka z hliníkové konstrukce s polykarbonátovou střechou",
-   "anchor": "atypicke-zamecnicke-konstrukce"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf4b3b526cb1fb2c55c_opracovani-a-prodej-plexiskla-p-500.jpg",
-   "alt": "Červený dělicí panel z plexiskla s řezanou grafikou v kavárně",
-   "anchor": "opracovani-a-prodej-plexiskla"
   }
  ]
 }

@@ -15,7 +15,6 @@ module.exports = [
         Swiper: 'readonly', PureCounter: 'readonly',
         module: 'writable', require: 'readonly', __dirname: 'readonly',
         process: 'readonly', URL: 'readonly',
-        fetch: 'readonly', URLSearchParams: 'readonly', Buffer: 'readonly',
         // sdílené napříč moduly (build.js je slučuje do jednoho IIFE)
         SEL: 'readonly', $$: 'readonly', $1: 'readonly',
         onReady: 'readonly', has: 'readonly', hasJQ: 'readonly',
@@ -25,6 +24,13 @@ module.exports = [
     rules: {
       'no-unused-vars': ['warn', { args: 'none' }],
       'no-undef': 'error'
+    }
+  },
+  {
+    // Node skripty (build, testy, vrstva pro AI): globály Node 18+, v prohlížečovém bundlu nemají co dělat.
+    files: ['scripts/**/*.js', 'test/**/*.js', 'build.js'],
+    languageOptions: {
+      globals: { fetch: 'readonly', URLSearchParams: 'readonly', Buffer: 'readonly' }
     }
   }
 ];

@@ -84,7 +84,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcc08773eb2fc8c3261_UHK%203%20(2)-p-1080.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcc08773eb2fc8c3261_UHK%203%20(2).png",
    "alt": "Zeleně prosvětlený vstupní portál administrativní budovy za soumraku",
    "anchor": null
   },
@@ -95,7 +95,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c03d87549753331a5b6_Image%20(Replace)%20(7)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c03d87549753331a5b6_Image%20(Replace)%20(7).png",
    "alt": "Vstupní portál prodejny Rossmann s červeným rámem",
    "anchor": null
   },
@@ -111,7 +111,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c038743a834fc2705fe_Image%20(Replace)%20(8)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c038743a834fc2705fe_Image%20(Replace)%20(8).png",
    "alt": "Modře prosvětlená fasáda prodejny Sagasser v noci",
    "anchor": null
   },
@@ -127,7 +127,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c049b5d6bf77787119b_Image%20(Replace)%20(9)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c049b5d6bf77787119b_Image%20(Replace)%20(9).png",
    "alt": "Reklamní vlajky UniCredit Bank na fasádě domu",
    "anchor": null
   },
@@ -183,7 +183,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly-p-500.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly.jpg",
    "alt": "Zelený prosvětlený vstupní portál budovy",
    "anchor": "vstupni-portaly"
   },
@@ -350,7 +350,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky-p-800.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky.jpg",
    "alt": "Světelná hvězda Mercedes na střeše budovy",
    "anchor": "architektonicke-prvky"
   },
@@ -380,7 +380,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/65434c2da84463c2201e41f2_64893b16d07e20dd4b58305f_Architektonicke%CC%81%20prvky%20%20(01%2C)-p-3200-p-1600.webp",
+   "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/65434c2da84463c2201e41f2_64893b16d07e20dd4b58305f_Architektonicke%CC%81%20prvky%20%20(01%2C)-p-3200.webp",
    "alt": "Architektonický prvek 1",
    "anchor": "architektonicke-prvky"
   },
@@ -511,7 +511,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky-p-500.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky.jpg",
    "alt": "Reklamní vlajka ČSOB na fasádě budovy",
    "anchor": "vlajky"
   },
@@ -906,24 +906,6 @@
    "type": "a",
    "text": "Webkit.Studio",
    "anchor": "twitter"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcc08773eb2fc8c3261_UHK%203%20(2)-p-500.png",
-   "alt": "Zeleně prosvětlený vstupní portál administrativní budovy za soumraku",
-   "anchor": null
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky-p-500.jpg",
-   "alt": "Světelná hvězda Mercedes na střeše budovy",
-   "anchor": "architektonicke-prvky"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/65434c2da84463c2201e41f2_64893b16d07e20dd4b58305f_Architektonicke%CC%81%20prvky%20%20(01%2C)-p-3200-p-500.webp",
-   "alt": "Architektonický prvek 1",
-   "anchor": "architektonicke-prvky"
   }
  ]
 }

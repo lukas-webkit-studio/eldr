@@ -94,7 +94,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bf801c14270d93815ad_Se%CC%8Ctelne%CC%81%20znaky%20-%20Profil%208%20(0001)%201%20(1)-p-1600.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bf801c14270d93815ad_Se%CC%8Ctelne%CC%81%20znaky%20-%20Profil%208%20(0001)%201%20(1).png",
    "alt": "Červený světelný výstrč T-Mobile nad vchodem do prodejny",
    "anchor": null
   },
@@ -105,7 +105,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c03b7fc2a699aca7437_Image%20(Replace)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c03b7fc2a699aca7437_Image%20(Replace).png",
    "alt": "Žlutý světelný výstrč Albi nad vchodem do prodejny",
    "anchor": null
   },
@@ -121,7 +121,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c03cd41f2ca016136e7_Image%20(Replace)%20(1)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c03cd41f2ca016136e7_Image%20(Replace)%20(1).png",
    "alt": "Atypický výstrč ve tvaru zubu s nápisem Zubní ordinace",
    "anchor": null
   },
@@ -137,7 +137,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa7bba631b9bc9655495824_lekarenske-znaky-karta-p-500.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa7bba631b9bc9655495824_lekarenske-znaky-karta.jpg",
    "alt": "Zelený světelný lékárenský kříž nad vchodem do lékárny",
    "anchor": null
   },
@@ -478,7 +478,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce-p-1600.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce.jpg",
    "alt": "Kulatá atypická výstrč Petřín Park na cihlové fasádě",
    "anchor": "atypicke-vystrce"
   },
@@ -524,7 +524,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky-p-1600.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky.jpg",
    "alt": "Zelený světelný lékárenský kříž na fasádě",
    "anchor": "lekarenske-znaky"
   },
@@ -919,30 +919,6 @@
    "type": "a",
    "text": "Webkit.Studio",
    "anchor": "twitter"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bf801c14270d93815ad_Se%CC%8Ctelne%CC%81%20znaky%20-%20Profil%208%20(0001)%201%20(1)-p-500.png",
-   "alt": "Červený světelný výstrč T-Mobile nad vchodem do prodejny",
-   "anchor": null
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fde9a38c372ef8c1437_vystrce-p-500.jpg",
-   "alt": "Světelná výstrč obchodu RE.BRUNS kolmo k fasádě",
-   "anchor": "vystrce"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce-p-500.jpg",
-   "alt": "Kulatá atypická výstrč Petřín Park na cihlové fasádě",
-   "anchor": "atypicke-vystrce"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky-p-500.jpg",
-   "alt": "Zelený světelný lékárenský kříž na fasádě",
-   "anchor": "lekarenske-znaky"
   }
  ]
 }

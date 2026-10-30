@@ -7,12 +7,12 @@
 const fs = require('fs');
 const path = require('path');
 const { STRANKY, LOCALES, BASE, urlFor } = require('./stranky');
-const { build, load } = require('./jsonld');
-const { facts, norm } = require('./test-dohledatelnost');
+const { build, load, UI } = require('./jsonld');
+const { DIR: DATA, facts, norm } = require('./udaje');
 
-const DIR = path.join(__dirname, '..', '..', 'data', 'ai-vrstva', 'jsonld');
+const DIR = path.join(DATA, 'jsonld');
 const ZAKAZANE = ['offers', 'price', 'priceCurrency', 'aggregateRating', 'review', 'reviewRating'];
-const POPISKY = new Set(['Domů', 'Produkty', 'Provedení', 'Použití', 'Materiál', 'Home', 'Products', 'Variant', 'Use', 'Material', 'Startseite', 'Produkte', 'Ausführung', 'Einsatz']);
+const POPISKY = new Set(Object.values(UI).flatMap(Object.values));
 const STRUKTURA = new Set(['@context', '@type', '@id', 'url', 'item', 'image', 'inLanguage']);
 
 let pass = 0, fail = 0;
@@ -49,7 +49,7 @@ for (const { slug } of STRANKY) {
     ok(`${name}: odkaz na firmu a web`, json.includes(`"@type":"Organization","@id":"${BASE}/#organization"`) && json.includes(`"@type":"WebSite","@id":"${BASE}/#website"`));
     ok(`${name}: inLanguage`, g[0].inLanguage === lang);
 
-    const known = new Set(facts(data).map(f => norm(f.value)));
+    const known = new Set(facts(data).filter(f => f.vrstva).map(f => norm(f.value)));
     const nedohledane = strings.filter(s => s !== 'https://schema.org' && !POPISKY.has(s) && !known.has(norm(s)));
     ok(`${name}: všechny texty mají zdroj`, nedohledane.length === 0, nedohledane.slice(0, 3).join(' | '));
   }

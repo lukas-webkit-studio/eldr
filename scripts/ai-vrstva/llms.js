@@ -1,8 +1,9 @@
 /* Generátor /llms.txt (formát llmstxt.org) z dat vrstvy pro AI (issue #35).
 
-   Všechny texty jsou převzaté z webu: názvy a popisy z data/ai-vrstva/*.json,
+   Údaje o firmě a produktech jsou převzaté z webu: názvy z data/ai-vrstva/*.json,
    firemní údaje doslovně z patičky produktových stránek (CITACE níž — test
-   dohledatelnosti je ověřuje proti snímku). Nadpisy sekcí jsou jen navigace.
+   dohledatelnosti je ověřuje proti snímku). Autorské jsou jen nadpisy sekcí
+   a věta o jazykových verzích.
 
    node scripts/ai-vrstva/llms.js → data/ai-vrstva/llms.txt */
 const fs = require('fs');
@@ -27,8 +28,7 @@ function build() {
   const out = [];
   out.push('# ELEKTRO DRAPAČ s.r.o. (ELDR)', '');
   out.push(`> ${CITACE.vyroba} ${CITACE.navrh} ${CITACE.montaz}`, '');
-  out.push('Web je ve třech jazycích: čeština (hlavní), angličtina (/en) a němčina (/de).');
-  out.push('Každá produktová stránka má strukturovaná data JSON-LD; všechny údaje v nich jsou převzaté z textu stránky.', '');
+  out.push('Web je ve třech jazycích: čeština (hlavní), angličtina (/en) a němčina (/de).', '');
 
   out.push('## Kontakt', '');
   out.push(`- ${CITACE.firma}`);
@@ -40,9 +40,7 @@ function build() {
   out.push('## Produkty', '');
   for (const { slug } of STRANKY) {
     const cs = load(slug, 'cs');
-    const names = cs.products.map(p => p.name.value).join(', ');
-    const desc = cs.page.description ? ` ${cs.page.description.value}` : '';
-    out.push(`- [${cs.page.name.value}](${cs.url}): ${names}.${desc}`);
+    out.push(`- [${cs.page.name.value}](${cs.url}): ${cs.products.map(p => p.name.value).join(', ')}.`);
   }
   out.push('');
 

@@ -89,7 +89,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948ea79fac5dae6e8fd6c71_Generated%20Image%20Dec%2022%202025%20from%20Google%20AI%20Studio-p-800.jpeg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948ea79fac5dae6e8fd6c71_Generated%20Image%20Dec%2022%202025%20from%20Google%20AI%20Studio.jpeg",
    "alt": "",
    "anchor": null
   },
@@ -100,7 +100,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f37f8a4167b8b2eab_6-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f37f8a4167b8b2eab_6.png",
    "alt": "",
    "anchor": null
   },
@@ -116,7 +116,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f8917739beae5872c_3-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f8917739beae5872c_3.png",
    "alt": "",
    "anchor": null
   },
@@ -132,7 +132,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f37f8a4167b8b2e97_5-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f37f8a4167b8b2e97_5.png",
    "alt": "",
    "anchor": null
   },
@@ -148,7 +148,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f982190a0a0802d40_4-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948e71f982190a0a0802d40_4.png",
    "alt": "",
    "anchor": null
   },
@@ -204,7 +204,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcbf27bd9d1c84d96362_Profil%2012_DE-p-800.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcbf27bd9d1c84d96362_Profil%2012_DE.png",
    "alt": "",
    "anchor": "svetelne-panely"
   },
@@ -454,7 +454,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc22dfb1a552c278eff_Profil%2010_DE-p-800.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc22dfb1a552c278eff_Profil%2010_DE.png",
    "alt": "",
    "anchor": "intarzie"
   },
@@ -739,7 +739,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc1b6faec4718085ba0_Profil%2011_DE-p-800.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc1b6faec4718085ba0_Profil%2011_DE.png",
    "alt": "",
    "anchor": "reklamni-tabule"
   },
@@ -941,7 +941,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc07ed97a0b0ecdfd26_Profil%205s_DE-p-800.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc07ed97a0b0ecdfd26_Profil%205s_DE.png",
    "alt": "",
    "anchor": "menuboardy"
   },
@@ -1306,36 +1306,6 @@
    "type": "a",
    "text": "Webkit.Studio",
    "anchor": "twitter"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6948ea79fac5dae6e8fd6c71_Generated%20Image%20Dec%2022%202025%20from%20Google%20AI%20Studio-p-500.jpeg",
-   "alt": "",
-   "anchor": null
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcbf27bd9d1c84d96362_Profil%2012_DE-p-500.png",
-   "alt": "",
-   "anchor": "svetelne-panely"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc22dfb1a552c278eff_Profil%2010_DE-p-500.png",
-   "alt": "",
-   "anchor": "intarzie"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc1b6faec4718085ba0_Profil%2011_DE-p-500.png",
-   "alt": "",
-   "anchor": "reklamni-tabule"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/691cdcc07ed97a0b0ecdfd26_Profil%205s_DE-p-500.png",
-   "alt": "",
-   "anchor": "menuboardy"
   }
  ]
 }

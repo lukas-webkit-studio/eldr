@@ -84,7 +84,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcd5501aef827fd1cf7_UHK%203%20(1)-p-1600.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcd5501aef827fd1cf7_UHK%203%20(1).png",
    "alt": "Růžové prosvětlené logo T ve výloze prodejny T-Mobile",
    "anchor": null
   },
@@ -95,7 +95,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c047763a83709200678_Image%20(Replace)%20(10)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c047763a83709200678_Image%20(Replace)%20(10).png",
    "alt": "Reklamní stojany s logem MG v autosalonu",
    "anchor": null
   },
@@ -111,7 +111,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c0408773eb2fc8c4a51_Image%20(Replace)%20(11)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30c0408773eb2fc8c4a51_Image%20(Replace)%20(11).png",
    "alt": "Modře prosvětlená fasáda prodejny Sagasser s LED nápisem",
    "anchor": null
   },
@@ -162,7 +162,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf2c202b989a5643a2_prvky-podpory-prodeje-p-800.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf2c202b989a5643a2_prvky-podpory-prodeje.jpg",
    "alt": "Reklamní stojany MG připravené ve výrobě",
    "anchor": "prvky-podpory-prodeje"
   },
@@ -407,7 +407,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0f699af81297179fb_led-displaye-p-800.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0f699af81297179fb_led-displaye.jpg",
    "alt": "LED displej s cenami pohonných hmot na totemu čerpací stanice OLVAN",
    "anchor": "led-displaye"
   },
@@ -772,24 +772,6 @@
    "type": "a",
    "text": "Webkit.Studio",
    "anchor": "twitter"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcd5501aef827fd1cf7_UHK%203%20(1)-p-500.png",
-   "alt": "Růžové prosvětlené logo T ve výloze prodejny T-Mobile",
-   "anchor": null
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf2c202b989a5643a2_prvky-podpory-prodeje-p-500.jpg",
-   "alt": "Reklamní stojany MG připravené ve výrobě",
-   "anchor": "prvky-podpory-prodeje"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0f699af81297179fb_led-displaye-p-500.jpg",
-   "alt": "LED displej s cenami pohonných hmot na totemu čerpací stanice OLVAN",
-   "anchor": "led-displaye"
   }
  ]
 }

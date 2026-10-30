@@ -6,53 +6,15 @@
    na stránce. Výsledek: počet údajů a podíl dohledaných — musí být 100 %.
 
    Spuštění: node scripts/ai-vrstva/test-dohledatelnost.js [--live]
-   --live   místo uloženého snímku stáhne aktuální stránku (vyžaduje Playwright)
+   --live   místo uloženého snímku vyrenderuje aktuální stránku (Playwright).
+            Tím se zjistí, jestli se text webu od snímku nezměnil.
 */
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
+const { execFileSync } = require('child_process');
 const { STRANKY, LOCALES, urlFor } = require('./stranky');
-
-const DIR = path.join(__dirname, '..', '..', 'data', 'ai-vrstva');
-
-const norm = s => String(s)
-  .normalize('NFC')
-  .replace(/[­​-‍⁠﻿]/g, '')
-  .replace(/[“”„‟«»″]/g, '"')
-  .replace(/[‘’‚‛′]/g, "'")
-  .replace(/[‐-―−]/g, '-')
-  .replace(/[\s     ]+/g, ' ')
-  .trim();
-
-/* Projde údaje souboru stránky a vrátí je jako [{path, value, quote}]. */
-function facts(data) {
-  const out = [];
-  const add = (p, f) => { if (f) out.push({ path: p, value: f.value, quote: f.quote }); };
-  const list = (p, arr) => (arr || []).forEach((f, i) => add(`${p}[${i}]`, f));
-  add('page.name', data.page && data.page.name);
-  add('page.description', data.page && data.page.description);
-  list('page.highlights', data.page && data.page.highlights);
-  ((data.page && data.page.properties) || []).forEach((pp, j) => {
-    add(`page.properties[${j}].name`, pp.name);
-    add(`page.properties[${j}].value`, pp.value);
-  });
-  (data.products || []).forEach((pr, i) => {
-    const p = `products[${i}:${pr.key}]`;
-    add(`${p}.name`, pr.name);
-    add(`${p}.description`, pr.description);
-    (pr.properties || []).forEach((pp, j) => {
-      add(`${p}.properties[${j}].name`, pp.name);
-      add(`${p}.properties[${j}].value`, pp.value);
-    });
-    list(`${p}.materials`, pr.materials);
-    list(`${p}.variants`, pr.variants);
-    list(`${p}.uses`, pr.uses);
-  });
-  (data.faq || []).forEach((q, i) => {
-    add(`faq[${i}].question`, q.question);
-    add(`faq[${i}].answer`, q.answer);
-  });
-  return out;
-}
+const { DIR, norm, facts } = require('./udaje');
 
 function check(data, text, outline) {
   const errors = [];
@@ -78,17 +40,27 @@ function check(data, text, outline) {
   return { total: all.length, found, errors };
 }
 
-async function liveSnapshot(slug, lang) {
-  const { execFileSync } = require('child_process');
-  const tmp = fs.mkdtempSync(path.join(require('os').tmpdir(), 'ai-vrstva-'));
-  execFileSync('node', [path.join(__dirname, 'snapshot.js'), '--out', tmp, slug], { stdio: 'ignore' });
+/* Živý snímek jedné stránky ve všech jazycích (snapshot.js renderuje všechny tři najednou). */
+function liveSnapshot(slug) {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'ai-vrstva-'));
+  try {
+    execFileSync('node', [path.join(__dirname, 'snapshot.js'), '--out', tmp, slug], { stdio: ['ignore', 'ignore', 'inherit'] });
+    const out = {};
+    for (const lang of Object.keys(LOCALES)) out[lang] = readSnapshot(tmp, slug, lang);
+    return out;
+  } finally {
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
+}
+
+function readSnapshot(dir, slug, lang) {
   return {
-    text: fs.readFileSync(path.join(tmp, `${slug}.${lang}.txt`), 'utf8'),
-    outline: JSON.parse(fs.readFileSync(path.join(tmp, `${slug}.${lang}.outline.json`), 'utf8'))
+    text: fs.readFileSync(path.join(dir, `${slug}.${lang}.txt`), 'utf8'),
+    outline: JSON.parse(fs.readFileSync(path.join(dir, `${slug}.${lang}.outline.json`), 'utf8'))
   };
 }
 
-async function main() {
+function main() {
   const live = process.argv.includes('--live');
   let total = 0, found = 0, files = 0, fail = 0;
   const cache = {};
@@ -97,16 +69,8 @@ async function main() {
       const file = path.join(DIR, `${slug}.${lang}.json`);
       if (!fs.existsSync(file)) { console.log(`  ❌ ${slug}.${lang}.json chybí`); fail++; continue; }
       const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-      let src;
-      if (live) {
-        cache[slug] = cache[slug] || {};
-        src = cache[slug][lang] || (cache[slug][lang] = await liveSnapshot(slug, lang));
-      } else {
-        src = {
-          text: fs.readFileSync(path.join(DIR, '_zdroj', `${slug}.${lang}.txt`), 'utf8'),
-          outline: JSON.parse(fs.readFileSync(path.join(DIR, '_zdroj', `${slug}.${lang}.outline.json`), 'utf8'))
-        };
-      }
+      if (live && !cache[slug]) cache[slug] = liveSnapshot(slug);
+      const src = live ? cache[slug][lang] : readSnapshot(path.join(DIR, '_zdroj'), slug, lang);
       const meta = [];
       if (data.slug !== slug) meta.push(`slug ${data.slug} ≠ ${slug}`);
       if (data.lang !== lang) meta.push(`lang ${data.lang} ≠ ${lang}`);
@@ -133,8 +97,8 @@ async function main() {
   }
   const pct = total ? ((found / total) * 100).toFixed(1) : '0.0';
   console.log(`\nDohledatelnost: ${files} souborů, ${found}/${total} údajů (${pct} %)${live ? ' — živý web' : ''}`);
-  if (fail || found !== total || files !== STRANKY.length * 3) process.exit(1);
+  if (fail || found !== total || files !== STRANKY.length * Object.keys(LOCALES).length) process.exit(1);
 }
 
-if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });
-module.exports = { norm, facts, check };
+if (require.main === module) main();
+module.exports = { check };

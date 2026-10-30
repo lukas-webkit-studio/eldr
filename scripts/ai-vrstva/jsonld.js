@@ -9,47 +9,64 @@
    stránka <URL>#webpage, drobečky <URL>#breadcrumb, položky <URL>#<klíč>,
    URL bez lomítka na konci, inLanguage cs/en/de.
 
-   Varianta modelu se volí parametrem (A/B/C/D), vybraná je VARIANTA níž —
-   výsledky testů jsou v docs/decisions.md.
+   Model (varianta D, viz docs/decisions.md): WebPage → mainEntity Service
+   (kategorie stránky) → hasOfferCatalog → Offer.itemOffered → Service
+   (jednotlivé výrobky, bez ceny). Parametr --variant A vygeneruje výrobky
+   jako Product — jen pro srovnávací test v Google Rich Results Testu.
 */
 const fs = require('fs');
 const path = require('path');
 const { STRANKY, LOCALES, BASE } = require('./stranky');
+const { DIR, norm } = require('./udaje');
 
 const VARIANTA = 'D';
-const DIR = path.join(__dirname, '..', '..', 'data', 'ai-vrstva');
 
 /* Odkazy nesou @type, jinak validátor na samotné stránce uzel nezná
    (plný popis firmy a webu je jen na homepage, lane S6). */
 const ORG = { '@type': 'Organization', '@id': `${BASE}/#organization` };
 const WEBSITE = { '@type': 'WebSite', '@id': `${BASE}/#website` };
 
-/* Popisky navigace a polí. Nejsou to údaje o výrobku, jen názvy. */
+/* Popisky navigace a polí. Nejsou to údaje o výrobku, jen názvy. Drobečky
+   jsou sjednocené s ostatními stránkami webu (S6, #34): značka a titulek
+   stránky /produkty v daném jazyce. */
 const UI = {
-  cs: { home: 'Domů', produkty: 'Produkty', variant: 'Provedení', use: 'Použití', material: 'Materiál' },
-  en: { home: 'Home', produkty: 'Products', variant: 'Variant', use: 'Use', material: 'Material' },
-  de: { home: 'Startseite', produkty: 'Produkte', variant: 'Ausführung', use: 'Einsatz', material: 'Material' }
+  cs: { home: 'Elektro Drapač', produkty: 'Naše produkty', variant: 'Provedení', use: 'Použití', material: 'Materiál' },
+  en: { home: 'Elektro Drapač', produkty: 'Our products', variant: 'Variant', use: 'Use', material: 'Material' },
+  de: { home: 'Elektro Drapač', produkty: 'Unsere Produkte', variant: 'Ausführung', use: 'Einsatz', material: 'Material' }
 };
 
 const v = f => (f && f.value ? f.value.trim() : undefined);
-const clean = o => JSON.parse(JSON.stringify(o)); // zahodí undefined a prázdné hodnoty
+const clean = o => JSON.parse(JSON.stringify(o)); // zahodí klíče s hodnotou undefined
 
-function pv(name, value) {
-  return { '@type': 'PropertyValue', name, value };
+/* Parametry výrobku jako dvojice název/hodnota/citace, v pořadí: parametry
+   ze stránky, materiály, provedení, použití. Hodnota, která už je obsažená
+   v dřívější hodnotě (např. materiál uvnitř parametru „Materiál: …“), se
+   vynechá, ať se tatáž věta neopakuje. */
+function vlastnosti(pr, lang, { materialy = true } = {}) {
+  const ui = UI[lang];
+  const all = [
+    ...(pr.properties || []).map(p => ({ name: v(p.name), value: v(p.value), quote: p.value.quote, skupina: 'parametr' })),
+    ...(materialy ? (pr.materials || []).map(f => ({ name: ui.material, value: v(f), quote: f.quote, skupina: 'material' })) : []),
+    ...(pr.variants || []).map(f => ({ name: ui.variant, value: v(f), quote: f.quote, skupina: 'provedeni' })),
+    ...(pr.uses || []).map(f => ({ name: ui.use, value: v(f), quote: f.quote, skupina: 'pouziti' }))
+  ];
+  const out = [];
+  for (const p of all) {
+    const n = norm(p.value);
+    if (out.some(o => norm(o.value).includes(n))) continue;
+    out.push(p);
+  }
+  return out;
 }
 
-/* Výrobek. Ve variantě D jako Service (výroba na zakázku, bez ceny):
-   Google u Service nehlásí chybějící offers/review/aggregateRating, které
-   u Product bez ceny hlásí. Materiály jdou do additionalProperty, protože
-   Service nemá vlastnost `material`. */
-function product(d, pr, url, ui, variant) {
+const pv = p => ({ '@type': 'PropertyValue', name: p.name, value: p.value });
+
+/* Výrobek. Ve variantě D jako Service (výroba na zakázku, bez ceny): Google
+   u Product bez offers/review/aggregateRating hlásí chybu, u Service nic
+   nevyžaduje. Service nemá `material`, proto materiály jdou do additionalProperty. */
+function vyrobek(pr, url, lang, variant) {
   const asService = variant === 'D';
-  const props = [
-    ...(pr.properties || []).map(p => pv(v(p.name), v(p.value))),
-    ...(asService ? (pr.materials || []).map(f => pv(ui.material, v(f))) : []),
-    ...(pr.variants || []).map(f => pv(ui.variant, v(f))),
-    ...(pr.uses || []).map(f => pv(ui.use, v(f)))
-  ];
+  const props = vlastnosti(pr, lang, { materialy: asService }).map(pv);
   return {
     '@type': asService ? 'Service' : 'Product',
     '@id': `${url}#${pr.key}`,
@@ -69,11 +86,10 @@ function build(d, variant = VARIANTA) {
   const ui = UI[lang];
   const url = d.url;
   const home = `${BASE}${LOCALES[lang].prefix}`;
-  const products = (d.products || []).map(pr => product(d, pr, url, ui, variant));
-  const refs = products.map(p => ({ '@id': p['@id'] }));
+  const products = (d.products || []).map(pr => vyrobek(pr, url, lang, variant));
 
   const page = {
-    '@type': variant === 'B' ? 'CollectionPage' : 'WebPage',
+    '@type': 'WebPage',
     '@id': `${url}#webpage`,
     url,
     name: v(d.page.name),
@@ -88,7 +104,7 @@ function build(d, variant = VARIANTA) {
     '@type': 'BreadcrumbList',
     '@id': `${url}#breadcrumb`,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: ui.home, item: home || BASE },
+      { '@type': 'ListItem', position: 1, name: ui.home, item: home },
       { '@type': 'ListItem', position: 2, name: ui.produkty, item: `${home}/produkty` },
       { '@type': 'ListItem', position: 3, name: v(d.page.name), item: url }
     ]
@@ -96,50 +112,25 @@ function build(d, variant = VARIANTA) {
 
   const graph = [page, crumbs];
 
-  if (variant === 'A' || variant === 'D') {
-    // Služba výroby na zakázku s katalogem; výrobky jako itemOffered bez ceny.
-    const service = {
-      '@type': 'Service',
-      '@id': `${url}#sluzba`,
-      name: v(d.page.name),
-      description: v(d.page.description),
-      provider: ORG,
-      url,
-      additionalProperty: ((d.page.properties || []).length && variant === 'D')
-        ? d.page.properties.map(p => pv(v(p.name), v(p.value))) : undefined,
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        '@id': `${url}#katalog`,
-        name: v(d.page.name),
-        itemListElement: products.map(p => ({ '@type': 'Offer', itemOffered: p }))
-      }
-    };
-    page.mainEntity = { '@id': service['@id'] };
-    graph.push(service);
-  } else if (variant === 'B') {
-    // Výpis výrobků na stránce, výrobky jako samostatné uzly.
-    const list = {
-      '@type': 'ItemList',
-      '@id': `${url}#vyrobky`,
-      name: v(d.page.name),
-      numberOfItems: products.length,
-      itemListElement: refs.map((r, i) => ({ '@type': 'ListItem', position: i + 1, item: r }))
-    };
-    page.mainEntity = { '@id': list['@id'] };
-    graph.push(list, ...products);
-  } else if (variant === 'C') {
-    // Jako A, ale výrobky jsou rovnou v Offer.itemOffered a stránka je popisuje
-    // přes `about` (bez samostatného uzlu Service).
-    const catalog = {
+  // Služba výroby na zakázku s katalogem; výrobky jako itemOffered bez ceny.
+  const service = {
+    '@type': 'Service',
+    '@id': `${url}#sluzba`,
+    name: v(d.page.name),
+    description: v(d.page.description),
+    provider: ORG,
+    url,
+    additionalProperty: (d.page.properties || []).length
+      ? d.page.properties.map(p => pv({ name: v(p.name), value: v(p.value) })) : undefined,
+    hasOfferCatalog: {
       '@type': 'OfferCatalog',
       '@id': `${url}#katalog`,
       name: v(d.page.name),
-      offeredBy: ORG,
-      itemListElement: products.map(p => ({ '@type': 'Offer', offeredBy: ORG, itemOffered: p }))
-    };
-    page.mainEntity = { '@id': catalog['@id'] };
-    graph.push(catalog);
-  }
+      itemListElement: products.map(p => ({ '@type': 'Offer', itemOffered: p }))
+    }
+  };
+  page.mainEntity = { '@id': service['@id'] };
+  graph.push(service);
 
   if ((d.faq || []).length) {
     graph.push({
@@ -162,7 +153,7 @@ function load(slug, lang) {
   return JSON.parse(fs.readFileSync(path.join(DIR, `${slug}.${lang}.json`), 'utf8'));
 }
 
-/* node scripts/ai-vrstva/jsonld.js [--variant A|B|C] [--out dir] — zapíše <slug>.<lang>.jsonld */
+/* node scripts/ai-vrstva/jsonld.js [--variant D|A] [--out dir] — zapíše <slug>.<lang>.jsonld */
 if (require.main === module) {
   const args = process.argv.slice(2);
   const opt = (n, def) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : def; };
@@ -180,4 +171,4 @@ if (require.main === module) {
   console.log(`JSON-LD (varianta ${variant}): ${n} souborů → ${path.relative(process.cwd(), out)}`);
 }
 
-module.exports = { build, load, VARIANTA };
+module.exports = { build, load, vlastnosti, UI, VARIANTA };

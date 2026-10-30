@@ -79,7 +79,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcdf517a183374afd53_UHK%203%20(4)-p-500.png",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30bcdf517a183374afd53_UHK%203%20(4).png",
    "alt": "Velkoformátová reklamní plachta ČSOB Pojišťovny na fasádě budovy",
    "anchor": null
   },
@@ -593,7 +593,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/67b343a3711dd52e23103f0f_IMG_4757-p-1600.webp",
+   "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/67b343a3711dd52e23103f0f_IMG_4757.webp",
    "alt": "Další druhy polepů 28 - polep auta Rudlof Net.",
    "anchor": "dalsi-druhy-polepu"
   },
@@ -777,7 +777,7 @@
   },
   {
    "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy-p-1600.jpg",
+   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy.jpg",
    "alt": "Designové obrazy na stěně kavárny",
    "anchor": "designove-obrazy"
   },
@@ -1058,18 +1058,6 @@
    "type": "a",
    "text": "Webkit.Studio",
    "anchor": "twitter"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/67b343a3711dd52e23103f0f_IMG_4757-p-500.webp",
-   "alt": "Další druhy polepů 28 - polep auta Rudlof Net.",
-   "anchor": "dalsi-druhy-polepu"
-  },
-  {
-   "type": "img",
-   "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy-p-500.jpg",
-   "alt": "Designové obrazy na stěně kavárny",
-   "anchor": "designove-obrazy"
   }
  ]
 }
