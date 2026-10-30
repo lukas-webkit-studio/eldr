@@ -3,6 +3,12 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-10-30 · Lukáš (přes K01) · Výběr varianty recenzí
+
+- Na homepage jde varianta A. Skript patří do bundlu. Data v CMS Reference (překlady, obrázky) se řeší později samostatně. Render u dkLAB zatím zůstává. `/dev/recenze` po přesunu do draftu. (#26)
+- Na homepage zůstaly původní prvky nadpisu „Řekli o nás“ a tlačítka „Všechny reference“, jen se přesunuly. Proto se zachovaly překlady EN/DE i GTM hook `.button--primary`. Kopie pásu pro smyčku je jen z `div`, takže AI nevidí recenze dvakrát jako `h3`/`blockquote`. (#26)
+- Bundle se servíruje z Cloudflare workeru, který se z repa nenasazuje. Dokud se worker nenasadí, homepage načítá kopii modulu z jsDelivr (připnutý merge commit) a pojistka `data-marquee-ready` brání dvojímu spuštění. (#26, PR #31)
+
 ## 2026-10-30 · Lukáš (přes K01) a S3 · Sekce recenzí
 
 - Varianta A „vypadá moc dobře“, zůstává beze změny. Na stejnou dev stránku přibyly varianty B a C ke srovnání. (#26)
