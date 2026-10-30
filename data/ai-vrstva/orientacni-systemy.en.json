@@ -144,32 +144,44 @@
   ],
   "vynechano": [
     {
-      "text": "Nadpis „Wayfinding systems to suit the space and the need“ (dříve jako vlastnost stránky)",
-      "duvod": "Nadpis sekce, ne štítek vlastnosti. Věta pod ním je ve vrstvě jako provedení výrobku (interiérové, exteriérové i modulové systémy), znovu by se opakovala."
+      "text": "Úvodní věta „A wayfinding system that fits your space perfectly and tells visitors everything they need to know.“",
+      "duvod": "Věta hodnotí, ale výrobek věcně nepopisuje. Doporučujeme ji na webu nahradit konkrétním popisem."
     },
     {
-      "text": "Gallery captions (Czech alt texts „Orientační systém 20“ etc., 30 photos)",
-      "duvod": "Popisky fotek v galerii realizací, ne výrobky ani parametry."
+      "text": "Přívlastek „clear“ u grafiky",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Grafické řešení a jeho provedení přebíráme."
     },
     {
-      "text": "Block “How is illuminated advertising made?” (We receive your enquiry → Within 2 business days: We send a price estimate → Immediately afterwards: We provide a tailored final offer → Within 4–8 weeks: We install)",
-      "duvod": "Nadpis je otázka, ale pod ním je jen společný postup zakázky (poptávka, odhad ceny, nabídka, instalace) stejný na všech produktových stránkách — ne odpověď o orientačních systémech, proto není ve faq. Lhůty a sliby se do popisu výrobku nepřebírají."
+      "text": "Věta „A popular material with a strikingly attractive look is anodized aluminium.“ v odpovědi o materiálech",
+      "duvod": "Hodnocení vzhledu bez údaje. Eloxovaný hliník i další materiály uvádíme přímo u výrobku."
     },
     {
-      "text": "“Trusted by leading Czech and international companies” and the text below",
-      "duvod": "Společný blok o referencích a firmě, ne o výrobku."
+      "text": "Nadpis „Wayfinding systems to suit the space and the need“",
+      "duvod": "Nadpis sekce bez vlastního údaje. Větu pod ním přebíráme jako provedení výrobku."
     },
     {
-      "text": "Block “Why you should choose our illuminated advertising” (6 points) and “Illuminated advertising solutions from concept to completion.”",
-      "duvod": "Tvrzení o firmě a o světelné reklamě obecně (nejdéle působící výrobce, výroba v Česku, LED), ne parametr orientačních systémů."
+      "text": "Úvodní fotka nad sekcí výrobku",
+      "duvod": "Fotka leží mimo sekci výrobku. K výrobku přiřazujeme fotku přímo ze sekce orientačních systémů."
     },
     {
-      "text": "“Request a no-obligation quote”, “All references”",
-      "duvod": "Tlačítka výzvy k akci bez obsahu."
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
-      "text": "Hero photo (alt „Orientační systém se závěsnými cedulemi v hale hypermarketu“)",
-      "duvod": "Mimo sekci výrobku; jako obrázek výrobku použita fotka rozcestníku Globus ze sekce #orientacni-systemy. Pozor: alt obou fotek je na /en česky (Webflow alt nelokalizuje)."
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Request a no-obligation quote“, „All references“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

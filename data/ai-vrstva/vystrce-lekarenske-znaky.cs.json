@@ -286,48 +286,60 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Galerie realizací (popisky „Světelná výstrč 1“ … „Světelná výstrč 55“, „Lékárenský znak 1“ … „Lékárenský znak 15“)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry."
+      "text": "Věta „Už z dálky zajišťují skvělou viditelnost reklamy.“ v úvodu stránky",
+      "duvod": "Hodnoticí obrat bez měřitelného obsahu. Z úvodu přebíráme jen druhou větu o provedeních."
     },
     {
-      "text": "Štítky sekcí „Nepřehlédnutelné“, „Zaujme i kolemjdoucí“, „Tvar podle brandingu“, „Nápadné na první pohled“, „Standardizované“, „Rozpoznatelné“",
-      "duvod": "Marketingové štítky bez obsahu."
+      "text": "Věty „…je reklama, kterou si zákazníci zapamatují. Tvar mluví za vás – i bez jediného slova.“ u atypických výstrčí",
+      "duvod": "Slib účinku bez měřitelného obsahu. Přebíráme jen to, že výstrč má tvar vašeho symbolu."
     },
     {
-      "text": "Reklama, která svítí dnem i nocí. LED podsvětlení zajišťuje rovnoměrnou viditelnost za špatného počasí i po setmění.",
-      "duvod": "Úvodní věta sekce #vystrce, téměř shodná s popisem na kartě „Světelné výstrče“, který je ve vrstvě jako popis."
+      "text": "Obrat „pro jedinečný vzhled“ u výstrče s intarzií",
+      "duvod": "Hodnoticí obrat bez obsahu. Tvarované světelné 3D znaky přebíráme."
     },
     {
-      "text": "Viditelná reklama na ocelové konstrukci je nepřehlédnutelná i z velké dálky a proto i účinná.",
-      "duvod": "Marketingová věta v sekci #atypicke-vystrce; „ocelová konstrukce“ tu není uvedena jako materiál výrobku (není to štítek „Materiál:“), proto se do materiálů nepřebírá."
+      "text": "Věta „Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace.“ a použití „tam, kde má reklama působit decentně a nadčasově“",
+      "duvod": "Hodnoticí slova bez konkrétního údaje o výrobku nebo prostředí."
     },
     {
-      "text": "Nabízíme širokou škálu světelných i nesvětelných nápisů „Lékárna“, polepů výloh, podlah a pultů, a dalšího označení.",
-      "duvod": "Duplicitní se štítkem „Sortiment:“, který je ve vrstvě."
+      "text": "Štítky „Nepřehlédnutelné“, „Zaujme i kolemjdoucí“, „Nápadné na první pohled“ a další",
+      "duvod": "Štítky hodnotí, ale nic konkrétního neměří."
     },
     {
-      "text": "Podívejte se blíže na to, co vás zajímá. Pamatujte, všechno jde uzpůsobit:",
-      "duvod": "Navigační úvod ke kartám, bez konkrétního údaje; možnost provedení na míru pokrývá vlastnost „Výstrče různých typů a provedení na míru“."
+      "text": "Úvodní věta sekce světelných výstrčí „Reklama, která svítí dnem i nocí…“",
+      "duvod": "Téměř shodně ji uvádí karta, jejíž popis už přebíráme."
     },
     {
-      "text": "Odkaz „Jak probíhá výroba?“ a sekce „Jak probíhá výroba světelné reklamy?“ (Obdržíme poptávku → Do 2 pracovních dní: Pošleme odhad ceny → Obratem: Dodáme závaznou nabídku na míru → Do 4-8 týdnů: Instalujeme)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, ne o výrobku; nadpis není FAQ. Lhůty se do popisu výrobků nepřebírají."
+      "text": "Věta „Viditelná reklama na ocelové konstrukci je nepřehlédnutelná i z velké dálky a proto i účinná.“ u atypických výstrčí",
+      "duvod": "Slib účinku bez údaje a ocelová konstrukce u výstrčí jinde nefiguruje. Doporučujeme větu na webu ověřit."
+    },
+    {
+      "text": "Věta „Nabízíme širokou škálu světelných i nesvětelných nápisů…“ u lékárenských znaků",
+      "duvod": "Věta opakuje sortiment lékárenských znaků, který už přebíráme."
+    },
+    {
+      "text": "Věta „A my patříme mezi několik málo firem, které mají oprávnění k jejich výrobě.“ a odstavec o spolupráci s Ing. arch. Flašarem",
+      "duvod": "Jde o tvrzení o firmě, ne o vlastnosti lékárenských znaků. Na stránce zůstávají."
+    },
+    {
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
+    },
+    {
+      "text": "Tlačítka „Nezávazně poptat“, „Jak probíhá výroba?“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
       "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
-      "duvod": "Společné bloky o firmě, ne o výrobku."
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Navigace, tlačítka („Nezávazně poptat“, „Poptat výrobu“, „Získat cenovou nabídku“, „Zobrazit reference“), kontakty a patička",
-      "duvod": "Nejsou to údaje o výrobku."
-    },
-    {
-      "text": "A my patříme mezi několik málo firem, které mají oprávnění k jejich výrobě.",
-      "duvod": "Druhá věta popisu karty „Lékárenské znaky“ je tvrzení o firmě (jedna z mála oprávněných), ne údaj o výrobku; v popisu zůstala jen první věta."
-    },
-    {
-      "text": "Oprávnění: jsme jednou z mála firem oprávněných k výrobě lékárenských křížů. Spolupráce s Ing. arch. Flašarem nám umožnila podílet se na výrobě velkého množství těchto křížů.",
-      "duvod": "Tvrzení o firmě (oprávnění, spolupráce s Ing. arch. Flašarem, počet vyrobených křížů), ne vlastnost výrobku; vyřazeno při ověření."
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     }
   ]
 }

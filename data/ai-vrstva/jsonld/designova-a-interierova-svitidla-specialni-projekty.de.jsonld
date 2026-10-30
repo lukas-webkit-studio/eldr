@@ -29,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Startseite",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/de"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkte",
+          "name": "Unsere Produkte",
           "item": "https://www.eldr.cz/de/produkty"
         },
         {
@@ -105,17 +105,27 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Ausführung",
-                  "value": "ein Leuchtschriftzug mit Lampen besteht aus einem Blechkorpus, in dem die Lämpchen sitzen. Wir achten auf Qualität und Umweltverträglichkeit und setzen hocheffiziente LED-Lampen ein – die Lichtfarbe wählen Sie selbst."
+                  "value": "LED-Lampen ein – die Lichtfarbe wählen Sie selbst"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Platzierung",
-                  "value": "besonders geeignet für Gewerberäume, Restaurants, Geschäfte, Kinos oder Clubs, wo sie die Aufmerksamkeit der Kunden auf sich ziehen und dem Ort einen unverwechselbaren Charakter geben. Sie lassen sich über dem Eingang, an der Gebäudefassade oder als Innendekoration anbringen."
+                  "value": "besonders geeignet für Gewerberäume, Restaurants, Geschäfte, Kinos oder Clubs"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Blechkorpus"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Einsatz",
                   "value": "Innen und außen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Sie lassen sich über dem Eingang, an der Gebäudefassade oder als Innendekoration anbringen."
                 }
               ],
               "provider": {
@@ -137,12 +147,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Imitation von Neonschriften aus Plexiglas",
-                  "value": "Wir biegen Plexiglas in die gewünschte Form und durchleuchten es mit hochwertigen LED-Modulen. Das Ergebnis ist ein luxuriöser Effekt bei deutlicher Ersparnis gegenüber klassischem Neon – und ohne Glas zugleich die sicherere Wahl für den Innenbereich."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Platzierung",
-                  "value": "Ideal überall dort, wo Originalität, Stil und echte Neon-Wirkung gefragt sind."
+                  "value": "Wir biegen Plexiglas in die gewünschte Form und durchleuchten es"
                 },
                 {
                   "@type": "PropertyValue",
@@ -168,6 +173,11 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Sie wählen aus unterschiedlichen Breiten und Farbvarianten."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "ohne Glas zugleich die sicherere Wahl für den Innenbereich"
                 }
               ],
               "provider": {
@@ -189,12 +199,17 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Warum eine Mooswand",
-                  "value": "Sie ist umweltverträglich, leicht zu handhaben und muss im Gegensatz zu lebenden Pflanzen weder gegossen noch gedüngt werden. Zusätzlich verbessert sie die Raumakustik und hilft, die Luft zu reinigen."
+                  "value": "leicht zu handhaben und muss im Gegensatz zu lebenden Pflanzen weder gegossen noch gedüngt werden"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Warum eine Mooswand",
+                  "value": "verbessert sie die Raumakustik"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Platzierung",
-                  "value": "ideal für Büroräume, Firmenlobbys und Empfangsbereiche, Restaurants und Hotels, Geschäftsräume oder Showrooms, wo sie sich hervorragend mit Werbeschriftzügen und Logos kombinieren lässt."
+                  "value": "Büroräume, Firmenlobbys und Empfangsbereiche, Restaurants und Hotels, Geschäftsräume oder Showrooms"
                 },
                 {
                   "@type": "PropertyValue",
@@ -214,19 +229,24 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/de/produkty/designova-a-interierova-svitidla-specialni-projekty#reklama-z-cortenoveho-plechu",
               "name": "Werbung aus Cortenblech",
-              "description": "Ein Material mit natürlicher Rostpatina, das mit der Zeit ein einzigartiges Aussehen entwickelt und sich ideal für Fassaden oder den Außenbereich eignet.",
+              "description": "Ein Material mit natürlicher Rostpatina",
               "url": "https://www.eldr.cz/de/produkty/designova-a-interierova-svitidla-specialni-projekty#reklama-z-cortenoveho-plechu",
               "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe10939b4e8f295d62b_reklama-z-cortenoveho-plechu.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Material",
-                  "value": "wetterfester Stahl (bekannt als Rostbaustahl) ist äußerst widerstandsfähig und vor allem für den Außenbereich ideal. Sein charakteristisches Aussehen verdankt er der natürlichen Rostpatina, die sich mit der Zeit entwickelt und für einen einzigartigen ästhetischen Effekt sorgt."
+                  "value": "Sein charakteristisches Aussehen verdankt er der natürlichen Rostpatina, die sich mit der Zeit entwickelt"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Platzierung",
                   "value": "Cortenstahl kommt nicht nur für Werbeschriftzüge zum Einsatz, sondern auch für verschiedene Designelemente wie Logos, grafische Muster und dekorative Paneele, die sich an Gebäudefassaden oder im Außenbereich anbringen lassen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "wetterfester Stahl (bekannt als Rostbaustahl)"
                 },
                 {
                   "@type": "PropertyValue",
@@ -236,7 +256,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Einsatz",
-                  "value": "sich ideal für Fassaden oder den Außenbereich eignet"
+                  "value": "für Fassaden oder den Außenbereich"
                 },
                 {
                   "@type": "PropertyValue",
@@ -256,24 +276,28 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/de/produkty/designova-a-interierova-svitidla-specialni-projekty#svetelna-cisla-domu",
               "name": "Leuchtende Hausnummern",
-              "description": "Verleihen Sie Ihrem Zuhause das gewisse Etwas und verschönern Sie seine Außenansicht mit einer leuchtenden oder unbeleuchteten Hausnummer. Leuchtende Hausnummern sind nicht nur eine praktische Lösung, sondern auch ein Designelement.",
               "url": "https://www.eldr.cz/de/produkty/designova-a-interierova-svitidla-specialni-projekty#svetelna-cisla-domu",
               "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu.jpg",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Ausführung",
-                  "value": "Sie wählen aus verschiedenen Arten der Hinterleuchtung, die auch nachts für Sichtbarkeit sorgen, oder aus Varianten ohne Hinterleuchtung, die als elegantes, modernes Detail wirken. Ob warmweißes Licht oder kaltblaue Hinterleuchtung – wir richten uns ganz nach Ihren Wünschen."
+                  "value": "Sie wählen aus verschiedenen Arten der Hinterleuchtung, die auch nachts für Sichtbarkeit sorgen, oder aus Varianten ohne Hinterleuchtung"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Montage",
-                  "value": "Wir übernehmen die komplette Fertigung und Montage der Hausnummern, die zu jedem Stil und jedem Gebäudetyp passen."
+                  "value": "Wir übernehmen die komplette Fertigung und Montage der Hausnummern"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "einer leuchtenden oder unbeleuchteten Hausnummer"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Ob warmweißes Licht oder kaltblaue Hinterleuchtung"
                 },
                 {
                   "@type": "PropertyValue",
@@ -305,12 +329,17 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Beleuchtung",
-                  "value": "das gesamte Farbspektrum, kabelloses Licht und weitere innovative Elemente sind bei unseren Projekten selbstverständlich. Steuerung per Fernbedienung, über die Hue-App, Apple Home, DALI und weitere Systeme."
+                  "value": "das gesamte Farbspektrum, kabelloses Licht"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "nach Maß fertigen oder wählen Sie aus vorbereiteten Entwürfen und fertigen Leuchten"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Steuerung per Fernbedienung, über die Hue-App, Apple Home, DALI und weitere Systeme."
                 }
               ],
               "provider": {
@@ -336,14 +365,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Klassische Neonschriften bestehen aus unter Hitze geformten Glasröhren, die nach dem Füllen mit Gas rot leuchten. Andere Lichtfarben entstehen, indem die Röhre mit Leuchtstoffpulver und Argon gefüllt wird. An jeder Röhre ist eine Elektrode angeschweißt, die mit einem Hochspannungstransformator verbunden und mit einer Silikonhülle isoliert ist."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Warum empfehlen wir lieber Imitationen von Neonschriften?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wegen der luxuriösen Optik zum erschwinglichen Preis. Klassische Neonschriften sind zwar wunderschön, haben aber ihre Nachteile, etwa den höheren Anschaffungspreis, den Wartungsaufwand und den hohen Energieverbrauch. Moderne Imitationen von Neonschriften bieten jedoch denselben visuellen Effekt, und das zu einem deutlich niedrigeren Preis."
           }
         }
       ]

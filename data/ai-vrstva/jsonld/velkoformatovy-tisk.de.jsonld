@@ -29,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Startseite",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/de"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkte",
+          "name": "Unsere Produkte",
           "item": "https://www.eldr.cz/de/produkty"
         },
         {
@@ -124,13 +124,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Ihr Vorteil ist die lange Lebensdauer."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Einsatz",
-                  "value": "Sie eignet sich für alle Arten von Werbe- und Informationsschriften."
+                  "value": "Werbe- und Informationsschriften"
                 }
               ],
               "provider": {
@@ -187,7 +182,7 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/de/produkty/velkoformatovy-tisk#polepy-vozidel-a-vyloh",
               "name": "Fahrzeug- und Schaufensterbeklebung",
-              "description": "Voll- und Teilbeklebungen von Fahrzeugen ebenso wie einzelne Schriftzüge. Den Grafikentwurf erarbeiten wir gemeinsam mit Ihnen und übernehmen die fachgerechte Applikation.",
+              "description": "Voll- und Teilbeklebungen von Fahrzeugen ebenso wie einzelne Schriftzüge.",
               "url": "https://www.eldr.cz/de/produkty/velkoformatovy-tisk",
               "additionalProperty": [
                 {

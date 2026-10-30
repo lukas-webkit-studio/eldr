@@ -29,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/en"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Products",
+          "name": "Our products",
           "item": "https://www.eldr.cz/en/produkty"
         },
         {
@@ -125,7 +125,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Materials",
-                  "value": "we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life."
+                  "value": "LED modules with a high IP rating – they stand up to the weather"
                 },
                 {
                   "@type": "PropertyValue",
@@ -177,12 +177,12 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Execution",
-                  "value": "you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
+                  "value": "you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Placement",
-                  "value": "they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective."
+                  "value": "where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs."
                 },
                 {
                   "@type": "PropertyValue",
@@ -207,7 +207,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Use",
-                  "value": "Ideal for places where there is not enough room for any other type of advertising."
+                  "value": "for places where there is not enough room for any other type of advertising."
                 }
               ],
               "provider": {

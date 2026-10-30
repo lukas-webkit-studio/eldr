@@ -375,64 +375,56 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "„{#YOE#} years of experience“ (hero label)",
-      "duvod": "Ve snímku bez JS je jen token {#YOE#}, číslo doplní až skript. Navíc jde o tvrzení o firmě, ne o výrobku."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "Intro above the tiles „Take a closer look at whatever interests you. Remember, everything can be adjusted:“",
-      "duvod": "Navigační výzva k dlaždicím, ne popis stránky. Stránka pod H1 jiný perex nemá, proto je page.description null; přizpůsobení pokrývá štítek „Custom-made“."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Hero tiles „Plotter-cut graphics – Lettering cut from self-adhesive film = long service life.“, „Decals – Advertising decals for vehicles…“, „Design wall art – Large-format pictures and wall graphics…“",
-      "duvod": "Zkrácené opakování textu ze sekcí výrobků; z dlaždic je vzat jen název výrobku (sekce nemají vlastní nadpis) a u velkoformátového tisku popis."
+      "text": "Dlaždice v úvodu stránky s krátkými popisy výrobků",
+      "duvod": "Dlaždice zkráceně opakují text sekcí. Přebíráme z nich jen názvy výrobků a popis velkoformátového tisku."
     },
     {
-      "text": "Buttons „Request a no-obligation quote“, „How it’s made“",
-      "duvod": "Odkazy (CTA), ne obsah. „How it’s made“ je odkaz, ne otázka s odpovědí, proto nejde do faq."
+      "text": "Věta „The result: a visual element that enhances the atmosphere, supports the brand…“ u designových obrazů",
+      "duvod": "Slib účinku bez měřitelného obsahu, ne parametr výrobku."
     },
     {
-      "text": "Image gallery (Czech captions „Polep 1“, „Řezaná grafika 3“ etc.)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry."
+      "text": "Odstavce „Quality and service life come first“, „Modern technology“ a „Maximum durability“",
+      "duvod": "Odstavce mluví o vybavení firmy a používají superlativy. Latexový tisk, laminaci a ochranu před poškozením přebíráme."
     },
     {
-      "text": "„The result: a visual element that enhances the atmosphere, supports the brand and turns the interior into a place customers remember and photograph.“ (Design wall art)",
-      "duvod": "Marketingový slib účinku bez měřitelného obsahu, ne parametr výrobku."
+      "text": "Věta „Its advantage is a long service life.“",
+      "duvod": "Obecné tvrzení bez čísla. Konkrétní stálobarevnost fólií až sedm let přebíráme."
     },
     {
-      "text": "Block „How is illuminated advertising made?“ (We receive your enquiry → price estimate → offer → We install)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, navíc o světelné reklamě, ne o tisku a polepech. Do faq nejde."
+      "text": "Obrat „every type“ u použití řezané grafiky",
+      "duvod": "Absolutní tvrzení, které odporuje uvedenému omezení u barevných přechodů. Přebíráme jen reklamní a informační nápisy."
     },
     {
-      "text": "„Trusted by leading Czech and international companies“ and „Why you should choose our illuminated advertising“",
-      "duvod": "Společné bloky o firmě (o světelné reklamě), ne o výrobcích této stránky."
+      "text": "Věta „We prepare the artwork together with you and take care of professional application.“ u polepů vozidel",
+      "duvod": "Věta popisuje službu firmy, ne vlastnost polepu."
     },
     {
-      "text": "Alt texty obrázků výrobků",
-      "duvod": "Na /en jsou alt texty česky (Webflow je v sekundárním locale nepřevzalo); v image.alt jsou ponechány doslova tak, jak na stránce jsou."
+      "text": "Tlačítka „Request a no-obligation quote“, „How it’s made“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     },
     {
-      "text": "vlastnost „colour fastness: for at least three years“",
-      "duvod": "Název vlastnosti vytržený z věty (není štítek na stránce); celá věta o stálobarevnosti zůstává ve vlastnosti „Processing“."
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a mluví o světelné reklamě, ne o tisku a polepech."
     },
     {
-      "text": "Quality and service life come first – We run modern large-format printing on our own latex printer and finish it with protective lamination, which gives us rich colours and lasting resistance even outdoors.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Processing“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Modern technology – We own a modern printer built for digital printing of large-format advertising and banners. We work with latex printing technology. It achieves full, rich colours that stay true for years, even with detailed artwork and demanding colour combinations.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Processing“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     },
     {
-      "text": "Maximum durability – We laminate our prints, which ensures maximum colour durability, above all on prints outdoors that are exposed to constant sunlight. Lamination also protects the advertisement against mechanical damage, and you can choose between a gloss or matt laminating film.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Processing“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
-    },
-    {
-      "text": "vlastnost „colour-fast: for up to seven years“",
-      "duvod": "Název vlastnosti vytržený z věty; údaj o stálobarevnosti fólií zůstává ve vlastnosti „Materials“."
-    },
-    {
-      "text": "It cannot produce colour gradients or more complex motifs at the quality digital printing achieves. Where needed, we therefore combine the two techniques.",
-      "duvod": "Omezení techniky, ne provedení; zůstává ve vlastnosti „Processing“."
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

@@ -230,44 +230,64 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Galerie realizací (popisky „Světelný pylon 1“, „Světelný totem 52“ apod.)",
-      "duvod": "Jsou to popisky fotek, ne výrobky ani parametry. Z galerie je převzat jen první obrázek sekce jako `image` výrobku; alt text je i na /de česky (Webflow alt nelokalizuje)."
+      "text": "Úvodní věta „Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und Design, das auf Ihre Bedürfnisse zugeschnitten ist.“",
+      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
     },
     {
-      "text": "„Wir haben Hunderte von Projekten realisiert…“ und der Rekord: der höchste Pylon in der Tschechischen Republik, der 37 Meter hohe Hyundai-Pylon in Nošovice",
-      "duvod": "Tvrzení o firmě, ne parametr výrobku. Patří k popisu firmy (S6), na stránce zůstává."
+      "text": "Věta „Auch aus großer Entfernung gut sichtbar und daher sehr wirkungsvoll.“ v popisu pylonů",
+      "duvod": "Slib účinku bez měřitelného obsahu. Přebíráme jen první, věcnou větu popisu."
     },
     {
-      "text": "Úvodní odstavec sekce Pylone „Die sichtbare Werbung auf der Stahlkonstruktion ist auch aus großer Entfernung nicht zu übersehen und daher sehr wirkungsvoll.“",
-      "duvod": "Opakuje popis výrobku z nabídky nad sekcí (ten je převzat jako `description`), nepřináší nový údaj."
+      "text": "Úvodní věta sekce pylonů „Die sichtbare Werbung auf der Stahlkonstruktion ist auch aus großer Entfernung nicht zu übersehen und daher sehr wirkungsvoll.“",
+      "duvod": "Věta opakuje popis pylonů a stojí na nepodloženém slibu účinnosti."
     },
     {
-      "text": "„Schauen Sie sich genauer an, was Sie interessiert. Denken Sie daran, dass alles angepasst werden kann:“",
-      "duvod": "Navigační úvod k rozcestníku výrobků, ne údaj o výrobku."
+      "text": "Věta „Die Gestaltungsmöglichkeiten für Totems und Pylone sind nahezu unbegrenzt.“",
+      "duvod": "Absolutní tvrzení bez čísla. Výšku 1 až 40 m a individuální výrobu ze stejného odstavce přebíráme."
     },
     {
-      "text": "Blok „Wir erhalten Ihre Anfrage → Kostenschätzung → verbindliches Angebot → Wir installieren“, „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky a firmě, ne o výrobku. Lhůty a sliby kvality se do popisu výrobků nepřebírají. Nadpis „Warum ist unsere Leuchtreklame die richtige Wahl?“ je řečnická otázka, do `faq` nepatří."
+      "text": "Obraty „so gestaltet sind, dass sie Aufmerksamkeit erregen“ a „breite Auswahl an Werbemöglichkeiten“ u totemů",
+      "duvod": "Sliby účinku bez měřitelného obsahu. Obsah grafiky a přizpůsobení tvaru přebíráme."
     },
     {
       "text": "Štítky „Unübersehbare Werbung“, „360°-Sichtbarkeit“, „Unbegrenzte Möglichkeiten“",
-      "duvod": "Marketingové štítky bez měřitelného obsahu."
+      "duvod": "Štítky hodnotí, ale nic konkrétního neměří."
     },
     {
-      "text": "Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“, navigace a patička s kontakty",
-      "duvod": "Ovládací prvky a kontakty firmy, ne údaje o výrobku."
-    },
-    {
-      "text": "FAQ",
-      "duvod": "Stránka nemá žádný nadpis ve tvaru otázky (kromě řečnického „Warum…?“ ve společném bloku), `faq` je prázdné."
-    },
-    {
-      "text": "Vlastnost stránky „Die Gestaltungsmöglichkeiten für Totems und Pylone“",
-      "duvod": "Název vlastnosti je úlomek věty („… jsou téměř neomezené“), ne štítek, a „téměř neomezené“ je marketingové tvrzení. Věta o individuální výrobě („Wir fertigen sie individuell, genau nach den Wünschen des Kunden.“) přesunuta do `variants` obou výrobků (ověřovatel 30. 10. 2026)."
+      "text": "Věta „Wir haben Hunderte von Projekten realisiert…“ a údaj o nejvyšším pylonu v ČR (Hyundai v Nošovicích, 37 m)",
+      "duvod": "Jde o údaje o firmě, ne parametry výrobku. Na stránce zůstávají, k výrobkům je nepřiřazujeme."
     },
     {
       "text": "Použití totemů „ermöglicht es, Werbung an Orten zu platzieren, an denen Beschilderung und Navigation erforderlich sind“",
-      "duvod": "Úlomek věty začínající slovesem a duplicita položky „Umístění“ (označení a navigace) téhož výrobku (ověřovatel 30. 10. 2026)."
+      "duvod": "Věta opakuje umístění totemů, které přebíráme z podrobnějšího popisu."
+    },
+    {
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
+    },
+    {
+      "text": "Otázky a odpovědi",
+      "duvod": "Stránka nemá žádný nadpis ve tvaru otázky s odpovědí, otázky a odpovědi proto zůstávají prázdné."
+    },
+    {
+      "text": "Blok s kroky zakázky od „Wir erhalten Ihre Anfrage“ po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

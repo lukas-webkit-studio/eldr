@@ -29,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Domů",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkty",
+          "name": "Naše produkty",
           "item": "https://www.eldr.cz/produkty"
         },
         {
@@ -125,7 +125,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Materiály",
-                  "value": "používáme kvalitní LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům a zajišťují dlouhou životnost."
+                  "value": "LED moduly s vysokou IP ochranou – jsou odolné vůči povětrnostním vlivům"
                 },
                 {
                   "@type": "PropertyValue",
@@ -177,12 +177,12 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Zpracování",
-                  "value": "tvar vlajky si můžete zvolit podle typu umístění – nabízíme tradiční obdélníkové, ale i speciální tvary. Vlajky jsou vyráběny z kvalitních materiálů, které zajišťují jejich dlouhou životnost."
+                  "value": "tvar vlajky si můžete zvolit podle typu umístění – nabízíme tradiční obdélníkové, ale i speciální tvary"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Umístění",
-                  "value": "vhodné jsou zejména na místech s velkým pohybem lidí, jako jsou městské ulice, nákupní centra, festivaly nebo veletrhy. Díky pohybu ve větru mohou vlajky přitahovat ještě větší pozornost, což zvyšuje jejich účinnost."
+                  "value": "vhodné jsou zejména na místech s velkým pohybem lidí, jako jsou městské ulice, nákupní centra, festivaly nebo veletrhy."
                 },
                 {
                   "@type": "PropertyValue",

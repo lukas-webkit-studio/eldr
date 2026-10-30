@@ -205,56 +205,56 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Hero štítek „1–40 m Höhe“",
-      "duvod": "Na stránce není řečeno, čeho se výška týká; žádný výrobek na stránce výšku neuvádí a u plexiskla nedává smysl. Údaj 1–40 m je na webu doložený jen u pylonů („Výška reklamních věží se pohybuje od 1 do 40 metrů“ na /produkty/pylony-a-totemy). Bez podmětu by ve vrstvě byl nepodložené tvrzení. Rozhodne člověk – viz protokol _overeni."
+      "text": "Štítek „1–40 m Höhe“ v úvodu stránky",
+      "duvod": "Stránka neříká, čeho se výška týká, a u plexiskla nedává smysl. Doporučujeme štítek na webu opravit."
     },
     {
-      "text": "Die meisten Farben und Plattenformate halten wir auf Lager, Plexiglas nach Maß fertigen wir daher direkt, während Sie warten.",
-      "duvod": "Skladová dostupnost a lhůta („na počkání“), ne provedení výrobku. Lhůty a sliby se do vrstvy nepřebírají (stejně jako u bloku o průběhu zakázky)."
+      "text": "Věta „Die meisten Farben und Plattenformate halten wir auf Lager, Plexiglas nach Maß fertigen wir daher direkt, während Sie warten.“",
+      "duvod": "Skladová zásoba a lhůta se mohou měnit, proto je k vlastnostem výrobku nepřiřazujeme."
     },
     {
-      "text": "Vlastnosti „přesnost“ a „řezná plocha“ vytažené z věty o formátování (1/10 mm, 2 000 × 4 000 mm)",
-      "duvod": "Stránka pro ně nemá štítek, název vlastnosti byl kostrbaté slovo z věty. Údaje zůstávají v popisu výrobku (celá věta o formátování)."
+      "text": "Dovětek „die eine erstklassige Verarbeitung garantieren“ u technologického zázemí",
+      "duvod": "Superlativ bez měřitelného obsahu. Vybavení dílny včetně pil přebíráme."
     },
     {
-      "text": "Dovětky „… které zaručují prvotřídní zpracování“ (technologické zázemí) a věty o zákaznících ve vlastnosti sériové výroby",
-      "duvod": "Hodnota vlastnosti zkrácena na souvislý úsek o výrobku; „prvotřídní“ je marketingové hodnocení. Věty o zákaznících a spolupráci s výrobci nábytku zůstávají v použití (uses)."
+      "text": "Obrat „damit die fertige Lösung in jeder Umgebung zuverlässig funktioniert“ u montáže",
+      "duvod": "Absolutní slib bez měřitelného obsahu. Ohled na statiku, bezpečnost a odolnost přebíráme."
     },
     {
-      "text": "Hero-Label „{#YOE#} Jahre Erfahrung“",
-      "duvod": "Tvrzení o firmě, ne o výrobku; ve zdroji bez JS je jen token {#YOE#}."
+      "text": "Obrat „individuelles Vorgehen, technisches Know-how und hochwertige handwerkliche Ausführung“ u atypických konstrukcí",
+      "duvod": "Hodnoticí obraty o firmě. Přebíráme jen to, že jde o nestandardní řešení."
     },
     {
-      "text": "Perex pod H1",
-      "duvod": "Stránka pod H1 žádný perex nemá, proto page.description = null."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "„Sehen Sie sich genauer an, was Sie interessiert. Denken Sie daran: Alles lässt sich anpassen:“",
-      "duvod": "Navigační výzva k rozcestníku, bez konkrétního údaje."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Rozcestník pod hero: karty „Metallkonstruktionen“ a „Verarbeitung von Plexiglas“",
-      "duvod": "Karty rozcestníku odkazují na sekce (href=\"#zamecnicke-konstrukce\", href=\"#opracovani-a-prodej-plexiskla\", ověřeno v HTML všech tří jazyků), jsou tedy sloučené s výrobky. Název prvního výrobku je z karty, protože sekce #zamecnicke-konstrukce vlastní nadpis nemá; název třetího z nadpisu sekce. Ostatní údaje karet (přesnost 1/10 mm, sériová výroba, leštění hran, tvarování za tepla) jsou ve vrstvě ze sekcí."
+      "text": "Karty rozcestníku pod úvodem stránky",
+      "duvod": "Karty odkazují na sekce výrobků. Údaje přebíráme přímo ze sekcí, aby se neopakovaly."
     },
     {
-      "text": "Galerie realizací (popisky fotek)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. Alt texty obrázků jsou i v DE česky (Webflow je nelokalizuje), přebírají se tak, jak jsou na stránce."
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     },
     {
-      "text": "Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“",
-      "duvod": "Výzvy k akci bez obsahu."
+      "text": "Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     },
     {
-      "text": "Blok „Wie entsteht eine Leuchtreklame?“ (Wir erhalten Ihre Anfrage → Kostenschätzung → Angebot → Wir installieren)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, ne o výrobku; není to FAQ."
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
-      "text": "„Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
-      "duvod": "Společné bloky o firmě a tvrzení o kvalitě, ne o výrobku."
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Patička (adresa, kontakty, odkazy)",
-      "duvod": "Údaje o firmě, ne o výrobku."
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

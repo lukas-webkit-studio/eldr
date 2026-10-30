@@ -34,16 +34,14 @@
 <h2>Otázky a odpovědi</h2>
 <p>Stránka neobsahuje otázky s odpovědí. Popis pro AI je proto také nemá, žádné jsme nedoplňovali.</p>
 <h2>Co do popisu nešlo a proč</h2><ul>
-<li><b>„Sagen Sie uns einfach, was Sie sich vorstellen, und wir fertigen Ihre Verkaufsförderungselemente maßgeschneidert.“ (konec bodu u prvků podpory prodeje) a z něj odvozená varianta „wir fertigen Ihre Verkaufsförderungselemente maßgeschneidert“</b> – Ověřovatel: slib služby firmy, ne vlastnost výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci. Že jde o výrobu na míru, říká už popis z karty.</li>
-<li><b>Vlastnosti „Bezeichnet werden sie mit den Abkürzungen“ a „Gesteuert werden sie“</b> – Ověřovatel: stránka tu žádný štítek nemá, název byl vytržen z věty. Celé věty přesunuty do variants, vlastnosti zrušeny.</li>
-<li><b>Hero-Label „{#YOE#} Jahre Erfahrung“</b> – Tvrzení o firmě (počet let na trhu), ne o výrobku; ve snímku bez JS je jen nevyplněný token {#YOE#}.</li>
-<li><b>Perex pod H1 (page.description = null)</b> – Stránka pod H1 žádný perex nemá — následuje jen obecná výzva „Sehen Sie sich genauer an, was Sie interessiert. Denken Sie daran, alles lässt sich anpassen:“.</li>
-<li><b>Galerie realizací (popisky „Prvek podpory prodeje 1“ …, „Led display 1“ …) a obrázky karet v rozcestníku</b> – Popisky fotek, ne výrobky ani parametry. Alt texty obrázků jsou i na /de česky (Webflow je v sekundárním locale přes API nepřekládá); bere se, co na stránce je.</li>
-<li><b>Tlačítka „Unverbindlich anfragen“ a ostatní výzvy k akci</b> – Výzvy k akci bez obsahu.</li>
-<li><b>Blok „Wie entsteht eine Leuchtreklame?“ (Wir erhalten Ihre Anfrage → Kostenschätzung → Angebot → Wir installieren)</b> – Společný blok všech produktových stránek o průběhu zakázky, ne o výrobku. Do faq se nedává.</li>
-<li><b>Nadpis „Warum ist unsere Leuchtreklame die richtige Wahl?“ a body pod ním</b> – Formálně otázka, ale je to společný blok o firmě a světelné reklamě obecně (v CS nadpis „Elektro Drapač je zárukou prvotřídní kvality“), ne FAQ k těmto výrobkům. Do faq se nedává.</li>
-<li><b>Blok „Führende tschechische und ausländische Unternehmen vertrauen uns“</b> – Společný blok o firmě.</li>
-<li><b>Navigace, kontakty, adresa a patička</b> – Společné prvky webu.</li>
+<li><b>Věta „Sagen Sie uns einfach, was Sie sich vorstellen, und wir fertigen Ihre Verkaufsförderungselemente maßgeschneidert.“</b> – Věta slibuje službu firmy. Výrobu na míru už uvádí popis výrobku z karty.</li>
+<li><b>Štítek s počtem let zkušeností v úvodu stránky</b> – Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí.</li>
+<li><b>Výzva nad kartami výrobků, že vše jde přizpůsobit</b> – Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí.</li>
+<li><b>Galerie realizací, popisky fotek a obrázky karet v rozcestníku</b> – Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce.</li>
+<li><b>Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“ a další výzvy k akci, navigace a patička</b> – Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích.</li>
+<li><b>Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž</b> – Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme.</li>
+<li><b>Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“</b> – Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích.</li>
+<li><b>Popisky obrázků na německé verzi stránky</b> – Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit.</li>
 </ul>
 <h2>Příloha: přesný kód</h2>
 <p>Takto je popis pro AI zapsaný v hlavičce stránky. Obsahuje stejné údaje jako dokument výš, jen ve formátu pro stroje. Kontrolovat ho nemusíte, slouží jako doklad.</p>
@@ -78,13 +76,13 @@
         {
           &quot;@type&quot;: &quot;ListItem&quot;,
           &quot;position&quot;: 1,
-          &quot;name&quot;: &quot;Startseite&quot;,
+          &quot;name&quot;: &quot;Elektro Drapač&quot;,
           &quot;item&quot;: &quot;https://www.eldr.cz/de&quot;
         },
         {
           &quot;@type&quot;: &quot;ListItem&quot;,
           &quot;position&quot;: 2,
-          &quot;name&quot;: &quot;Produkte&quot;,
+          &quot;name&quot;: &quot;Unsere Produkte&quot;,
           &quot;item&quot;: &quot;https://www.eldr.cz/de/produkty&quot;
         },
         {

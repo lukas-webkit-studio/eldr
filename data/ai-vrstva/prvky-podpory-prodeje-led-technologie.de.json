@@ -195,44 +195,36 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "„Sagen Sie uns einfach, was Sie sich vorstellen, und wir fertigen Ihre Verkaufsförderungselemente maßgeschneidert.“ (konec bodu u prvků podpory prodeje) a z něj odvozená varianta „wir fertigen Ihre Verkaufsförderungselemente maßgeschneidert“",
-      "duvod": "Ověřovatel: slib služby firmy, ne vlastnost výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci. Že jde o výrobu na míru, říká už popis z karty."
+      "text": "Věta „Sagen Sie uns einfach, was Sie sich vorstellen, und wir fertigen Ihre Verkaufsförderungselemente maßgeschneidert.“",
+      "duvod": "Věta slibuje službu firmy. Výrobu na míru už uvádí popis výrobku z karty."
     },
     {
-      "text": "Vlastnosti „Bezeichnet werden sie mit den Abkürzungen“ a „Gesteuert werden sie“",
-      "duvod": "Ověřovatel: stránka tu žádný štítek nemá, název byl vytržen z věty. Celé věty přesunuty do variants, vlastnosti zrušeny."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "Hero-Label „{#YOE#} Jahre Erfahrung“",
-      "duvod": "Tvrzení o firmě (počet let na trhu), ne o výrobku; ve snímku bez JS je jen nevyplněný token {#YOE#}."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Perex pod H1 (page.description = null)",
-      "duvod": "Stránka pod H1 žádný perex nemá — následuje jen obecná výzva „Sehen Sie sich genauer an, was Sie interessiert. Denken Sie daran, alles lässt sich anpassen:“."
+      "text": "Galerie realizací, popisky fotek a obrázky karet v rozcestníku",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     },
     {
-      "text": "Galerie realizací (popisky „Prvek podpory prodeje 1“ …, „Led display 1“ …) a obrázky karet v rozcestníku",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. Alt texty obrázků jsou i na /de česky (Webflow je v sekundárním locale přes API nepřekládá); bere se, co na stránce je."
+      "text": "Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     },
     {
-      "text": "Tlačítka „Unverbindlich anfragen“ a ostatní výzvy k akci",
-      "duvod": "Výzvy k akci bez obsahu."
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
-      "text": "Blok „Wie entsteht eine Leuchtreklame?“ (Wir erhalten Ihre Anfrage → Kostenschätzung → Angebot → Wir installieren)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, ne o výrobku. Do faq se nedává."
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Nadpis „Warum ist unsere Leuchtreklame die richtige Wahl?“ a body pod ním",
-      "duvod": "Formálně otázka, ale je to společný blok o firmě a světelné reklamě obecně (v CS nadpis „Elektro Drapač je zárukou prvotřídní kvality“), ne FAQ k těmto výrobkům. Do faq se nedává."
-    },
-    {
-      "text": "Blok „Führende tschechische und ausländische Unternehmen vertrauen uns“",
-      "duvod": "Společný blok o firmě."
-    },
-    {
-      "text": "Navigace, kontakty, adresa a patička",
-      "duvod": "Společné prvky webu."
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

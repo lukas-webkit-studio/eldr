@@ -230,44 +230,60 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Galerie realizací (popisky „Světelný pylon 1“, „Světelný totem 52“ apod.)",
-      "duvod": "Jsou to popisky fotek, ne výrobky ani parametry. Z galerie je převzat jen první obrázek sekce jako `image` výrobku."
+      "text": "Úvodní věta „Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.“",
+      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
     },
     {
-      "text": "„Máme za sebou stovky realizací…“ a rekord: nejvyšší pylon v ČR, 37 metrů vysoký Hyundai v Nošovicích",
-      "duvod": "Tvrzení o firmě, ne parametr výrobku. Patří k popisu firmy (S6), na stránce zůstává."
+      "text": "Věta „Nepřehlédnutelný i z velké dálky, a proto velmi účinný.“ v popisu pylonů",
+      "duvod": "Slib účinku bez měřitelného obsahu. Přebíráme jen první, věcnou větu popisu."
     },
     {
-      "text": "Úvodní odstavec sekce Pylony „Viditelná reklama na ocelové konstrukci je nepřehlédnutelná i z velké dálky a proto maximálně účinná.“",
-      "duvod": "Opakuje popis výrobku z nabídky nad sekcí (ten je převzat jako `description`), nepřináší nový údaj."
+      "text": "Úvodní věta sekce pylonů „Viditelná reklama na ocelové konstrukci je nepřehlédnutelná i z velké dálky a proto maximálně účinná.“",
+      "duvod": "Věta opakuje popis pylonů a stojí na nepodloženém slibu účinnosti."
     },
     {
-      "text": "„Podívejte se blíže na to, co vás zajímá. Pamatujte, všechno jde uzpůsobit:“",
-      "duvod": "Navigační úvod k rozcestníku výrobků, ne údaj o výrobku."
+      "text": "Věta „Možnosti provedení totemů a pylonů jsou téměř neomezené.“",
+      "duvod": "Absolutní tvrzení bez čísla. Výšku 1 až 40 m a individuální výrobu ze stejného odstavce přebíráme."
     },
     {
-      "text": "Blok „Obdržíme poptávku → Pošleme odhad ceny → nabídka → Instalujeme“, „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky a firmě, ne o výrobku. Lhůty a sliby kvality se do popisu výrobků nepřebírají."
+      "text": "Obraty „navrženy tak, aby přitahovaly pozornost“ a „široké možnosti propagace“ u totemů",
+      "duvod": "Sliby účinku bez měřitelného obsahu. Obsah grafiky a přizpůsobení tvaru přebíráme."
     },
     {
       "text": "Štítky „Nepřehlédnutelná reklama“, „360 ° viditelnost“, „Neomezené možnosti“",
-      "duvod": "Marketingové štítky bez měřitelného obsahu."
+      "duvod": "Štítky hodnotí, ale nic konkrétního neměří."
     },
     {
-      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“, „Získat cenovou nabídku“, „Zobrazit reference“, navigace a patička s kontakty",
-      "duvod": "Ovládací prvky a kontakty firmy, ne údaje o výrobku."
-    },
-    {
-      "text": "FAQ",
-      "duvod": "Stránka nemá žádný nadpis ve tvaru otázky, `faq` je prázdné."
-    },
-    {
-      "text": "Vlastnost stránky „Možnosti provedení totemů a pylonů“",
-      "duvod": "Název vlastnosti je úlomek věty („… jsou téměř neomezené“), ne štítek, a „téměř neomezené“ je marketingové tvrzení. Věta o individuální výrobě („Vyrábíme je individuálně, přesně dle zákazníkova přání.“) přesunuta do `variants` obou výrobků (ověřovatel 30. 10. 2026)."
+      "text": "Věta „Máme za sebou stovky realizací…“ a údaj o nejvyšším pylonu v ČR (Hyundai v Nošovicích, 37 m)",
+      "duvod": "Jde o údaje o firmě, ne parametry výrobku. Na stránce zůstávají, k výrobkům je nepřiřazujeme."
     },
     {
       "text": "Použití totemů „umožňují umístit reklamu na místa s potřebou označení a navigace“",
-      "duvod": "Úlomek věty začínající slovesem a duplicita položky „Umístění“ (označení a navigace) téhož výrobku (ověřovatel 30. 10. 2026)."
+      "duvod": "Věta opakuje umístění totemů, které přebíráme z podrobnějšího popisu."
+    },
+    {
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
+    },
+    {
+      "text": "Otázky a odpovědi",
+      "duvod": "Stránka nemá žádný nadpis ve tvaru otázky s odpovědí, otázky a odpovědi proto zůstávají prázdné."
+    },
+    {
+      "text": "Blok s kroky zakázky od „Obdržíme poptávku“ po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     }
   ]
 }

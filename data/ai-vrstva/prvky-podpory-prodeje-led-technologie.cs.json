@@ -195,40 +195,32 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "„Stačí se jen domluvit a my vám vyrobíme reklamní prvky podporující váš prodej na míru.“ (konec bodu u prvků podpory prodeje) a z něj odvozená varianta „my vám vyrobíme reklamní prvky podporující váš prodej na míru“",
-      "duvod": "Ověřovatel: slib služby firmy, ne vlastnost výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci. Že jde o výrobu na míru, říká už popis z karty."
+      "text": "Věta „Stačí se jen domluvit a my vám vyrobíme reklamní prvky podporující váš prodej na míru.“",
+      "duvod": "Věta slibuje službu firmy. Výrobu na míru už uvádí popis výrobku z karty."
     },
     {
-      "text": "Vlastnosti „Označují se zkratkami“ a „Ovládají se“",
-      "duvod": "Ověřovatel: stránka tu žádný štítek nemá, název byl vytržen z věty. Celé věty přesunuty do variants, vlastnosti zrušeny."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "Štítek „{#YOE#} let zkušeností“ v hero",
-      "duvod": "Tvrzení o firmě (počet let na trhu), ne o výrobku; navíc ve snímku bez JS je jen nevyplněný token {#YOE#}, ne číslo."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Perex pod H1 (page.description = null)",
-      "duvod": "Stránka pod H1 žádný perex nemá — hned za štítky následuje obecná výzva „Podívejte se blíže na to, co vás zajímá. Pamatujte, všechno jde uzpůsobit:“, která výrobek nepopisuje."
+      "text": "Galerie realizací, popisky fotek a obrázky karet v rozcestníku",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     },
     {
-      "text": "Galerie realizací (popisky „Prvek podpory prodeje 1“ … „24“, „Led display 1“ … „10“) a obrázky karet v rozcestníku",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. U výrobků je použit hlavní obrázek sekce s popisným alt."
+      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     },
     {
-      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“, „Získat cenovou nabídku“, „Zobrazit reference“",
-      "duvod": "Výzvy k akci bez obsahu."
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
-      "text": "Blok „Jak probíhá výroba světelné reklamy?“ (Obdržíme poptávku → Pošleme odhad ceny → nabídka → Instalujeme)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, ne o výrobku. Do faq se nedává, lhůty se do popisu výrobků nepřebírají."
-    },
-    {
-      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“ včetně bodů",
-      "duvod": "Společné bloky o firmě a světelné reklamě obecně, ne o těchto výrobcích."
-    },
-    {
-      "text": "Navigace, kontakty, adresa a patička",
-      "duvod": "Společné prvky webu."
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     }
   ]
 }

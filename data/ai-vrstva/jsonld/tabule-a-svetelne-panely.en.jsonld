@@ -6,7 +6,7 @@
       "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#webpage",
       "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely",
       "name": "Illuminated panels and boards",
-      "description": "We make illuminated panels tailored to your needs in sizes up to 100 m², with first-class craftsmanship and design.",
+      "description": "We make illuminated panels tailored to your needs in sizes up to 100 m²",
       "inLanguage": "en",
       "isPartOf": {
         "@type": "WebSite",
@@ -30,13 +30,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/en"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Products",
+          "name": "Our products",
           "item": "https://www.eldr.cz/en/produkty"
         },
         {
@@ -51,7 +51,7 @@
       "@type": "Service",
       "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#sluzba",
       "name": "Illuminated panels and boards",
-      "description": "We make illuminated panels tailored to your needs in sizes up to 100 m², with first-class craftsmanship and design.",
+      "description": "We make illuminated panels tailored to your needs in sizes up to 100 m²",
       "provider": {
         "@type": "Organization",
         "@id": "https://www.eldr.cz/#organization"
@@ -80,7 +80,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Material",
-                  "value": "aluminium frame and a back panel of aluminium or sandwich board. Front face of acrylic glass or translucent vinyl canvas, which ensures a long service life and excellent light transmission."
+                  "value": "aluminium frame and a back panel of aluminium or sandwich board. Front face of acrylic glass or translucent vinyl canvas"
                 },
                 {
                   "@type": "PropertyValue",
@@ -214,7 +214,7 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#reklamni-tabule",
               "name": "Advertising boards",
-              "description": "An advertising board, or non-illuminated sign panel, is one of the simplest advertising solutions there is.",
+              "description": "An advertising board, or non-illuminated sign panel",
               "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#reklamni-tabule",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a182a11d00d56e90ca24_64914091d08ddae77be92e2c_1.webp",
               "additionalProperty": [
@@ -268,7 +268,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Material",
-                  "value": "durable materials that ensure a long service life. The materials are designed for changing graphics and for use in restaurants."
+                  "value": "The materials are designed for changing graphics and for use in restaurants."
                 },
                 {
                   "@type": "PropertyValue",

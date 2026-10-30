@@ -6,7 +6,7 @@
       "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#webpage",
       "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely",
       "name": "Světelné panely a tabule",
-      "description": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem.",
+      "description": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m²",
       "inLanguage": "cs",
       "isPartOf": {
         "@type": "WebSite",
@@ -30,13 +30,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Domů",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkty",
+          "name": "Naše produkty",
           "item": "https://www.eldr.cz/produkty"
         },
         {
@@ -51,7 +51,7 @@
       "@type": "Service",
       "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#sluzba",
       "name": "Světelné panely a tabule",
-      "description": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem.",
+      "description": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m²",
       "provider": {
         "@type": "Organization",
         "@id": "https://www.eldr.cz/#organization"
@@ -80,7 +80,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Materiál",
-                  "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
+                  "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty"
                 },
                 {
                   "@type": "PropertyValue",
@@ -214,7 +214,7 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#reklamni-tabule",
               "name": "Reklamní tabule",
-              "description": "Reklamní tabule, neboli nesvětelná reklamní deska, je jedním z nejjednodušších řešení reklamního prvku.",
+              "description": "Reklamní tabule, neboli nesvětelná reklamní deska",
               "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#reklamni-tabule",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a182a11d00d56e90ca24_64914091d08ddae77be92e2c_1.webp",
               "additionalProperty": [
@@ -268,7 +268,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Materiál",
-                  "value": "odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
+                  "value": "Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
                 },
                 {
                   "@type": "PropertyValue",

@@ -286,48 +286,64 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Galerie realizací (obrázky s českými popisky „Světelná výstrč 1“ … „Lékárenský znak 15“)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. Alt texty obrázků jsou i na /de česky (Webflow je v sekundárním locale nepřeložilo)."
+      "text": "Věta „Schon aus der Ferne sorgen sie für hervorragende Sichtbarkeit Ihrer Werbung.“ v úvodu stránky",
+      "duvod": "Hodnoticí obrat bez měřitelného obsahu. Z úvodu přebíráme jen druhou větu o provedeních."
     },
     {
-      "text": "Štítky „Unübersehbar“, „Fällt Passanten auf“, „Form nach Ihrem Branding“, „Auf den ersten Blick auffällig“, „Standardisiert“, „Erkennbar“",
-      "duvod": "Marketingové štítky bez obsahu."
+      "text": "Věty „…ist Werbung, die Kunden im Gedächtnis bleibt. Die Form spricht für Sie – ganz ohne Worte.“ u atypických výstrčí",
+      "duvod": "Slib účinku bez měřitelného obsahu. Přebíráme jen to, že výstrč má tvar vašeho symbolu."
     },
     {
-      "text": "Werbung, die Tag und Nacht leuchtet. Die LED-Hinterleuchtung sorgt für gleichmäßige Sichtbarkeit auch bei schlechtem Wetter und nach Einbruch der Dunkelheit.",
-      "duvod": "Úvodní věta sekce #vystrce, téměř shodná s popisem na kartě „Leuchtausleger“, který je ve vrstvě jako popis."
+      "text": "Obrat „für ein einzigartiges Erscheinungsbild“ u výstrče s intarzií",
+      "duvod": "Hodnoticí obrat bez obsahu. Tvarované světelné 3D znaky přebíráme."
     },
     {
-      "text": "Sichtbare Werbung auf einer Stahlkonstruktion ist auch aus großer Entfernung unübersehbar – und genau deshalb wirkungsvoll.",
-      "duvod": "Marketingová věta v sekci #atypicke-vystrce; „Stahlkonstruktion“ tu není uvedena jako materiál výrobku (není to štítek „Material:“)."
+      "text": "Věta „Der unbeleuchtete Ausleger ist stilvoll und unaufdringlich, ideal für eine elegante und moderne Präsentation.“ a použití „überall dort, wo Werbung dezent und zeitlos wirken soll“",
+      "duvod": "Hodnoticí slova bez konkrétního údaje o výrobku nebo prostředí."
     },
     {
-      "text": "Wir bieten eine breite Palette an beleuchteten und unbeleuchteten „Apotheke“-Schriftzügen, Beklebungen von Schaufenstern, Böden und Theken sowie weiteren Beschilderungen.",
-      "duvod": "Duplicitní se štítkem „Sortiment:“, který je ve vrstvě."
+      "text": "Štítky „Unübersehbar“, „Fällt Passanten auf“, „Auf den ersten Blick auffällig“ a další",
+      "duvod": "Štítky hodnotí, ale nic konkrétního neměří."
     },
     {
-      "text": "Schauen Sie sich genauer an, was Sie interessiert. Denken Sie daran, alles lässt sich anpassen:",
-      "duvod": "Navigační úvod ke kartám, bez konkrétního údaje."
+      "text": "Úvodní věta sekce světelných výstrčí „Werbung, die Tag und Nacht leuchtet…“",
+      "duvod": "Téměř shodně ji uvádí karta, jejíž popis už přebíráme."
     },
     {
-      "text": "Odkaz „So läuft die Produktion ab“ a sekce „Wie entsteht eine Leuchtreklame?“ (Wir erhalten Ihre Anfrage → Innerhalb von 2 Werktagen → Unmittelbar danach → Innerhalb von 4–8 Wochen: Wir installieren)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky; nadpis je otázka, ale pod ním jsou jen obecné kroky zakázky, proto není ve faq."
+      "text": "Věta „Sichtbare Werbung auf einer Stahlkonstruktion ist auch aus großer Entfernung unübersehbar – und genau deshalb wirkungsvoll.“ u atypických výstrčí",
+      "duvod": "Slib účinku bez údaje a ocelová konstrukce u výstrčí jinde nefiguruje. Doporučujeme větu na webu ověřit."
+    },
+    {
+      "text": "Věta „Wir bieten eine breite Palette an beleuchteten und unbeleuchteten…“ u lékárenských znaků",
+      "duvod": "Věta opakuje sortiment lékárenských znaků, který už přebíráme."
+    },
+    {
+      "text": "Věta „Und wir gehören zu den wenigen Unternehmen, die zu ihrer Herstellung berechtigt sind.“ a odstavec o spolupráci s Ing. arch. Flašarem",
+      "duvod": "Jde o tvrzení o firmě, ne o vlastnosti lékárenských znaků. Na stránce zůstávají."
+    },
+    {
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
+    },
+    {
+      "text": "Tlačítka „Unverbindlich anfragen“, „So läuft die Produktion ab“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
       "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
-      "duvod": "Společné bloky o firmě, ne o výrobku. Druhý nadpis je otázka, ale je to marketingový blok, ne FAQ."
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Navigace, tlačítka („Unverbindlich anfragen“, „Alle Referenzen“), kontakty a patička",
-      "duvod": "Nejsou to údaje o výrobku."
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     },
     {
-      "text": "Und wir gehören zu den wenigen Unternehmen, die zu ihrer Herstellung berechtigt sind.",
-      "duvod": "Druhá věta popisu karty „Apothekenschilder“ je tvrzení o firmě (jedna z mála oprávněných), ne údaj o výrobku; v popisu zůstala jen první věta."
-    },
-    {
-      "text": "Berechtigung: Wir sind eines der wenigen Unternehmen, die zur Herstellung von Apothekenkreuzen berechtigt sind. Die Zusammenarbeit mit Ing. arch. Flašar hat es uns ermöglicht, an der Herstellung einer großen Zahl dieser Kreuze mitzuwirken.",
-      "duvod": "Tvrzení o firmě (oprávnění, spolupráce s Ing. arch. Flašarem, počet vyrobených křížů), ne vlastnost výrobku; vyřazeno při ověření."
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

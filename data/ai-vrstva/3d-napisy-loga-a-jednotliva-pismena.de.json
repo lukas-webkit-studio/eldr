@@ -519,64 +519,108 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Štítky profilů „Kostengünstig“, „Wartungsarm“, „Stilvoll“, „Zeitlos“, „Extrem widerstandsfähig“, „Großformatig“, „Beliebteste Wahl“, „Erschwinglich“, „Auffällig“, „Vielseitig“, „Kleine Zeichen“, „Komplexe Konturen“",
-      "duvod": "Marketingové štítky; věcný obsah je v popisu profilu, odkud se přebírá."
+      "text": "Úvodní věta „Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und maßgeschneidertem Design nach Ihren Bedürfnissen.“",
+      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
     },
     {
-      "text": "„Die eindrucksvollste und lebendigste Lösung.“ (Profil 8)",
-      "duvod": "Superlativ bez měřitelného obsahu."
+      "text": "Štítky u profilů, např. „Kostengünstig“, „Auffällig“, „Beliebteste Wahl“",
+      "duvod": "Štítky hodnotí, ale nic neměří. Věcné údaje o profilech přebíráme z jejich podrobného popisu."
     },
     {
-      "text": "Blok „Verwandeln Sie Dunkelheit in eine Chance“ – „Von klassischen unbeleuchteten Schriftzügen bis hin zu modernen LED-Varianten. Wir bieten Lösungen, die perfekt zu Ihrem Konzept passen.“",
-      "duvod": "Marketingový úvod; rozsah od nesvětelných po LED nápisy pokrývají jednotlivé výrobky."
+      "text": "Věta „Die eindrucksvollste und lebendigste Lösung.“ u profilu 8",
+      "duvod": "Superlativ bez měřitelného obsahu. Viditelnost z různých úhlů popisuje věcná věta téhož profilu."
     },
     {
-      "text": "„Von der ersten Skizze bis zur finalen Montage.“",
-      "duvod": "Slogan bez konkrétního údaje; konkrétní věty téhož odstavce jsou v page.properties."
+      "text": "Věty „Die beliebteste Wahl für 3D-Schriftzüge. Auffällige Gestaltung mit bestem Preis-Leistungs-Verhältnis.“ u profilu 5s",
+      "duvod": "Oblíbenost ani poměr ceny a kvality stránka ničím nedokládá. Rozměr do 2 metrů a čelo bez rámečku přebíráme."
     },
     {
-      "text": "Odkazy „So läuft die Produktion ab“, „Unverbindlich anfragen“, „Alle Referenzen“",
-      "duvod": "Výzvy k akci, ne údaje o výrobku."
+      "text": "Popis karty „Die beliebteste Variante von 3D-Leuchtschriftzügen mit leuchtender Vorderseite.“",
+      "duvod": "Superlativ „nejoblíbenější“ stránka nedokládá. Svítící čelo vyjadřuje už název výrobku, popis proto vynecháváme."
     },
     {
-      "text": "Nadpis „Wie entsteht eine Leuchtreklame?“ a kroky „Wir erhalten Ihre Anfrage → Innerhalb von 2 Werktagen: Wir senden eine Kostenschätzung → Unmittelbar danach: Wir erstellen ein maßgeschneidertes Angebot → Innerhalb von 4–8 Wochen: Wir installieren“",
-      "duvod": "Společný blok produktových stránek o průběhu zakázky, ne o výrobku; nadpis není FAQ."
+      "text": "Slova „Elegant. Dezent.“ u profilu 3",
+      "duvod": "Hodnoticí přídavná jména bez údaje. Vzhled nepřímého podsvícení popisuje text karty, který přebíráme."
     },
     {
-      "text": "„Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“ s body",
-      "duvod": "Tvrzení o firmě, společný blok všech produktových stránek. „Warum …?“ je řečnická otázka nad seznamem výhod firmy, ne FAQ."
+      "text": "Blok „Verwandeln Sie Dunkelheit in eine Chance“ s úvodním textem",
+      "duvod": "Obecný marketingový úvod. Rozsah od nesvětelných po LED nápisy pokrývají jednotlivé profily."
     },
     {
-      "text": "Galerie realizací (popisky „Profil 1 1“ apod.) a schémata profilů bez alt textu (např. „Profil 10_DE.png“)",
-      "duvod": "Popisky fotek, ne parametry. Jako obrázek výrobku je převzata první fotka s alt textem, stejná jako v CS a EN."
+      "text": "Slogan „Von der ersten Skizze bis zur finalen Montage.“",
+      "duvod": "Slogan bez konkrétního údaje. Výběr materiálů a 3D vizualizaci z téhož odstavce přebíráme."
     },
     {
-      "text": "„Elegant. Dezent.“ (Profil 3)",
-      "duvod": "Hodnotící přídavná jména bez údaje; tentýž dojem popisuje karta, která je teď `description` výrobku (ověřovatel 30. 10. 2026)."
+      "text": "Obrat „für alle Wetterbedingungen gerüstet“ u odolnosti světelných reklam",
+      "duvod": "Absolutní tvrzení bez parametru. Z věty přebíráme jen konkrétní záruku až 5 let."
     },
     {
-      "text": "„Die beliebteste Wahl für 3D-Schriftzüge. Auffällige Gestaltung mit bestem Preis-Leistungs-Verhältnis.“ (Profil 5s)",
-      "duvod": "Marketingové tvrzení („nejlepší poměr kvality a ceny“ / „nejpopulárnější“), ne parametr. Rozměr a čelní plocha z téhož odstavce převedeny z vlastností s kostrbatým názvem do `variants` (ověřovatel 30. 10. 2026)."
+      "text": "Přívlastek „Hochwertige“ u materiálů s úpravou povrchu",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Úpravu povrchu a stálost barev přebíráme."
     },
     {
-      "text": "Použití z karty „Für den Innen- und Außenbereich“ (3D-Schriftzüge mit leuchtender Vorderseite)",
-      "duvod": "Duplicita použití ze sekce profilu („Für den Innen- und Außenbereich geeignet.“) (ověřovatel 30. 10. 2026)."
+      "text": "Věty „Unbegrenzte Breite und Stärke.“ a „Unbegrenzte Möglichkeiten bei Abmessungen, Lichtfarben und Korpusfarben.“ a slovo „Unbegrenzte“ u grafiky profilů",
+      "duvod": "Absolutní tvrzení bez čísla. Doporučujeme na webu uvést skutečné maximální rozměry profilů 1 a 4."
     },
     {
-      "text": "Použití z karty „Für den Innen- und Außenbereich“ (3D-Schriftzüge aus Vollplexiglas)",
-      "duvod": "Odporuje sekci profilu, která uvádí „Vor allem für den Innenbereich geeignet, an Bürowänden sowie in Fluren, Empfangsbereichen und Eingangshallen“. Ponechána podrobnější sekce; rozpor má rozhodnout člověk (ověřovatel 30. 10. 2026)."
+      "text": "Dovětky „für leichtere Bauteile und höchste Präzision“ a „(leichter, chirurgisch präzise)“ u 3D tisku",
+      "duvod": "Nadsázka bez měřitelné přesnosti. Samotnou možnost 3D tisku přebíráme."
     },
     {
-      "text": "Úvodní věta sekce „Ideal für kleine oder aufwendig geformte Schriftzüge.“ (Profil 9)",
-      "duvod": "Opakuje popis z karty, který je `description` výrobku (ověřovatel 30. 10. 2026)."
+      "text": "Věta „Sie fällt schon von Weitem auf und bietet auch unter widrigen Bedingungen eine lange Lebensdauer.“ u profilu 4",
+      "duvod": "Slib účinku a životnosti bez čísla. Přebíráme jen určení pro větrná místa ve výšce."
     },
     {
-      "text": "Duplicita karet a profilů",
-      "duvod": "Šest přehledových karet odkazuje v surovém HTML na sekce profilů (`href=\"#profil-1\"`, `#profil-3`, `#profil-4`, `#profil-5s`, `#profil-8`, `#profil-9`, ověřeno ve všech třech jazycích). Sloučeno do šesti výrobků s kotvou sekce: název a popis z karty, vlastnosti a obrázek ze sekce, číslo profilu jako provedení (ověřovatel 30. 10. 2026)."
+      "text": "Věta „Preiswerte Neon-Optik bei minimalem Energieverbrauch.“ u profilu 9",
+      "duvod": "Cenu ani spotřebu stránka nevyčísluje. Pokud na webu doplníte konkrétní příkon, údaj rádi převezmeme."
     },
     {
-      "text": "Vlastnost stránky „Entdecken Sie eine Vielzahl von Profilen mit unterschiedlichen Eigenschaften und technischen Lösungen.“ → „alles kann angepasst werden“",
-      "duvod": "Navigační úvod k rozcestníku profilů (na pylonech vyřazen stejně), název je celá věta, ne štítek (ověřovatel 30. 10. 2026)."
+      "text": "Slovo „Ideal“ v popisu profilu 9",
+      "duvod": "Hodnoticí slovo. Přebíráme jen určení pro drobné nápisy a těžko tvarovatelné písmo."
+    },
+    {
+      "text": "Úvodní věta sekce profilu 9 „Ideal für kleine oder aufwendig geformte Schriftzüge.“",
+      "duvod": "Věta opakuje popis z karty téhož profilu, údaj by se zdvojil."
+    },
+    {
+      "text": "Použití „Für den Innen- und Außenbereich“ z karty 3D nápisů se svítícím čelem",
+      "duvod": "Stejné použití uvádí sekce profilu 5s, údaj by se zdvojil."
+    },
+    {
+      "text": "Použití „Für den Innen- und Außenbereich“ z karty plno-plexisklových nápisů",
+      "duvod": "Karta uvádí interiér i exteriér, sekce profilu 9 hlavně interiér. Prosíme o rozhodnutí, který údaj platí."
+    },
+    {
+      "text": "Šest přehledových karet a šest sekcí profilů",
+      "duvod": "Karty odkazují na sekce stejných profilů. Spojujeme je proto do šesti výrobků, aby se údaje neopakovaly."
+    },
+    {
+      "text": "Věta „Entdecken Sie eine Vielzahl von Profilen mit unterschiedlichen Eigenschaften und technischen Lösungen.“",
+      "duvod": "Věta jen uvádí rozcestník profilů a o profilech nic konkrétního neříká."
+    },
+    {
+      "text": "Tlačítka „Unverbindlich anfragen“, „So läuft die Produktion ab“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Schémata profilů bez popisku",
+      "duvod": "Schémata jsou jen v anglické a německé verzi. U výrobků používáme fotky, které jsou ve všech jazycích stejné."
+    },
+    {
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

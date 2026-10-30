@@ -29,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Domů",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkty",
+          "name": "Naše produkty",
           "item": "https://www.eldr.cz/produkty"
         },
         {
@@ -124,13 +124,8 @@
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Výhodou řezané grafiky je její dlouhá životnost."
-                },
-                {
-                  "@type": "PropertyValue",
                   "name": "Použití",
-                  "value": "Je vhodná na všechny typy reklamních a informačních nápisů."
+                  "value": "reklamních a informačních nápisů"
                 }
               ],
               "provider": {
@@ -187,7 +182,7 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#polepy-vozidel-a-vyloh",
               "name": "Polepy vozidel a výloh",
-              "description": "celkové i částečné polepy vozidel, stejně jako samostatné nápisy. Návrh grafiky připravíme s vámi a zajistíme profesionální aplikaci.",
+              "description": "celkové i částečné polepy vozidel, stejně jako samostatné nápisy.",
               "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk",
               "additionalProperty": [
                 {

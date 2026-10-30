@@ -477,60 +477,100 @@
   ],
   "vynechano": [
     {
-      "text": "„{#YOE#} years of experience“ (hero)",
-      "duvod": "Obsahuje token {#YOE#}, který na stránce nahrazuje JS číslem; ve snímku bez JS číslo není a token do vrstvy nepatří."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "„Looking for something unique for your space? Unconventional designer lighting can completely change the atmosphere of an interior / a room…“",
-      "duvod": "Obecný úvod, který se se stejným zněním opakuje v sekcích designových svítidel i žárovkových nápisů (začíná řečnickou otázkou); nepopisuje konkrétní výrobek."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Texty karet „How do you give an office or company interior that finishing touch? …“, „Even something as plain as a house number…“, „There is only ever one original. …“",
-      "duvod": "Úvodní karty v přehledu nad sekcemi jsou řečnické otázky nebo marketingové teasery; z karet byly převzaty jen věcné údaje (názvy, popis designových svítidel, žárovkových nápisů a neonových nápisů, výskyt cortenu v exteriéru)."
+      "text": "Úvod „Looking for something unique for your space?…“ v sekcích designových svítidel a žárovkových nápisů",
+      "duvod": "Obecný úvod s řečnickou otázkou se opakuje ve dvou sekcích a žádný výrobek nepopisuje."
     },
     {
-      "text": "„Neon signs: a classic with a modern twist“ + „Neon signs are a timeless classic…“",
+      "text": "Texty úvodních karet nad sekcemi výrobků",
+      "duvod": "Karty obsahují řečnické otázky a upoutávky. Přebíráme z nich jen názvy a věcné popisy výrobků."
+    },
+    {
+      "text": "Nadpis „Neon signs: a classic with a modern twist“ a věta „Neon signs are a timeless classic…“",
       "duvod": "Marketingový nadpis a věta bez věcného obsahu."
     },
     {
-      "text": "Odkaz „How is it made?“ v sekci neonových nápisů",
-      "duvod": "Odkaz na společný blok průběhu zakázky, ne otázka s odpovědí."
+      "text": "Obrat „Years of experience mean“ v popisu designových svítidel",
+      "duvod": "Tvrzení o zkušenostech firmy. Z věty přebíráme jen výrobu svítidel na míru."
     },
     {
-      "text": "„How is illuminated advertising made?“ a kroky „We receive your enquiry → We send a price estimate → We provide a tailored final offer → We install“",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky (lhůty, nabídka, instalace), ne o výrobku; do faq ani k výrobkům se nepřebírá."
+      "text": "Text karty „For those who want a retro touch…“ o starém Las Vegas",
+      "duvod": "Marketingová upoutávka. Žárovkový nápis popisujeme větou o jeho konstrukci ze sekce."
     },
     {
-      "text": "„Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“ s body pod ním",
-      "duvod": "Společný blok o firmě (důvěra, kvalita, výroba v ČR, servis), ne údaj o výrobcích této stránky."
+      "text": "Obrat „We care about quality and about the environment“ a přívlastek „highly efficient“ u LED žárovek",
+      "duvod": "Hodnoticí a ekologická tvrzení bez čísla. Přebíráme LED žárovky s volbou odstínu světla."
     },
     {
-      "text": "Galerie realizací (alt jsou česky: „Designové svítidlo 1“, „Neonová reklama 1“ apod.)",
-      "duvod": "Popisky fotek v galeriích realizací, ne výrobky ani parametry."
+      "text": "Obrat „where they draw customers in and give the place a character of its own“ u žárovkových nápisů",
+      "duvod": "Slib účinku bez měřitelného obsahu. Výčet vhodných prostor přebíráme."
     },
     {
-      "text": "„Request a no-obligation quote“",
-      "duvod": "Tlačítko výzvy k akci."
+      "text": "Věta „The result is a luxurious effect with significant savings compared with classic neon“ a přívlastek „quality“ u LED modulů",
+      "duvod": "Srovnání s klasickými neony bez čísla. Doporučujeme na webu uvést konkrétní úsporu, například spotřebu."
     },
     {
-      "text": "Popis stránky „Take a closer look at whatever catches your eye. And remember, every detail can be adapted to you:“ a vlastnost stránky „Custom-made → every detail can be adapted to you“",
-      "duvod": "Stránka nemá perex pod H1; autor použil navigační větu nad kartami (na stránce Tabule je táž věta vyřazená jako navigační). Vlastnost slepovala štítek z hera s kusem této věty, na stránce spolu nesouvisí. Popis stránky je null (ověřovatel 30. 10. 2026)."
+      "text": "Umístění „ideal wherever originality, style and a true neon impression are the goal.“",
+      "duvod": "Hodnoticí věta, která neuvádí žádné konkrétní místo ani prostředí."
     },
     {
-      "text": "Úvod popisu designových svítidel: „Years of experience mean“",
-      "duvod": "Tvrzení o zkušenostech firmy, ne údaj o výrobku; v popisu zůstává jen část o výrobě na míru."
+      "text": "Věta „You end up with an illuminated feature that impresses through its looks and its craftsmanship alike.“",
+      "duvod": "Hodnoticí marketingová věta bez údaje o výrobku."
     },
     {
-      "text": "Text karty „For those who want a retro touch and a sign that looks straight out of old Las Vegas.“",
-      "duvod": "Marketingová upoutávka (retro / Las Vegas), ne popis výrobku. Popisem výrobku je věta o konstrukci ze sekce."
+      "text": "Otázka „Why do we recommend neon sign imitations instead?“ a odpověď na ni",
+      "duvod": "Odpověď stojí na srovnání „za podstatně nižší cenu“ bez čísel. Doporučujeme doplnit konkrétní ceny nebo spotřebu."
     },
     {
-      "text": "Druhá věta umístění neonových nápisů: „You end up with an illuminated feature that impresses through its looks and its craftsmanship alike.“",
-      "duvod": "Hodnotící marketingová věta (estetika, řemeslo), ne údaj o umístění."
+      "text": "Úvod „they look superb and they bring practical benefits“ u mechových stěn",
+      "duvod": "Hodnoticí obrat bez obsahu. Konkrétní výhody, tedy snadnou údržbu a akustiku, přebíráme."
     },
     {
-      "text": "Úvod vlastnosti mechových stěn: „they look superb and they bring practical benefits.“",
-      "duvod": "Hodnotící obrat bez obsahu; konkrétní výhody (údržba, akustika, vzduch) zůstávají."
+      "text": "Tvrzení, že mechové stěny jsou „environmentally friendly“ a „help clean the air“",
+      "duvod": "Ekologické a zdravotní tvrzení stránka ničím nedokládá. Doporučujeme doplnit zdroj nebo měření."
+    },
+    {
+      "text": "Obrat „where they combine beautifully with advertising lettering and logos“ a slovo „ideal“ u mechových stěn",
+      "duvod": "Hodnoticí slova bez obsahu. Výčet prostor přebíráme, mechové obrazy s nápisem jsou uvedeny zvlášť."
+    },
+    {
+      "text": "Obraty „unique look“, „highly durable“ a „ideal“ u cortenové oceli",
+      "duvod": "Hodnoticí slova bez měřitelného obsahu. Přebíráme rezavou patinu a vhodnost do exteriéru."
+    },
+    {
+      "text": "Popis světelných čísel „Give your home something special…“ a obraty „an elegant, modern detail“, „any style and any type of building“",
+      "duvod": "Marketingové a absolutní obraty bez údaje. Přebíráme typy podsvícení, barvy světla a montáž."
+    },
+    {
+      "text": "Obrat „and other innovative features are a matter of course in our projects“ u stojacích lamp",
+      "duvod": "Obecné tvrzení bez konkrétního prvku. Konkrétní způsoby svícení a ovládání přebíráme."
+    },
+    {
+      "text": "Tlačítka „Request a no-obligation quote“, „How is it made?“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

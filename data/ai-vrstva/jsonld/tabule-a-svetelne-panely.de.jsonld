@@ -6,7 +6,7 @@
       "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#webpage",
       "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely",
       "name": "Leuchtpaneele und Werbetafeln",
-      "description": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m² – mit erstklassiger Verarbeitung und hochwertigem Design.",
+      "description": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m²",
       "inLanguage": "de",
       "isPartOf": {
         "@type": "WebSite",
@@ -30,13 +30,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Startseite",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/de"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkte",
+          "name": "Unsere Produkte",
           "item": "https://www.eldr.cz/de/produkty"
         },
         {
@@ -51,7 +51,7 @@
       "@type": "Service",
       "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#sluzba",
       "name": "Leuchtpaneele und Werbetafeln",
-      "description": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m² – mit erstklassiger Verarbeitung und hochwertigem Design.",
+      "description": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m²",
       "provider": {
         "@type": "Organization",
         "@id": "https://www.eldr.cz/#organization"
@@ -80,7 +80,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Material",
-                  "value": "Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte. Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane, die für lange Lebensdauer und hochwertige Ausleuchtung sorgt."
+                  "value": "Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte. Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane"
                 },
                 {
                   "@type": "PropertyValue",
@@ -214,7 +214,7 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#reklamni-tabule",
               "name": "Werbetafeln",
-              "description": "Die Werbetafel, also die unbeleuchtete Werbeplatte, ist eine der einfachsten Lösungen für ein Werbeelement.",
+              "description": "Die Werbetafel, also die unbeleuchtete Werbeplatte",
               "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#reklamni-tabule",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a182a11d00d56e90ca24_64914091d08ddae77be92e2c_1.webp",
               "additionalProperty": [
@@ -268,7 +268,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Material",
-                  "value": "widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen. Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt."
+                  "value": "Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt."
                 },
                 {
                   "@type": "PropertyValue",

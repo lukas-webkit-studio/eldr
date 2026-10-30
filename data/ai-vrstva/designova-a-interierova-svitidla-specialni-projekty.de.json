@@ -477,60 +477,100 @@
   ],
   "vynechano": [
     {
-      "text": "„{#YOE#} Jahre Erfahrung“ (hero)",
-      "duvod": "Obsahuje token {#YOE#}, který na stránce nahrazuje JS číslem; ve snímku bez JS číslo není a token do vrstvy nepatří."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "„Suchen Sie etwas Einzigartiges für Ihre Räume? Außergewöhnliche Designbeleuchtung kann die Atmosphäre eines Innenraums / Raums völlig verändern…“",
-      "duvod": "Obecný úvod, který se se stejným zněním opakuje v sekcích designových svítidel i žárovkových nápisů (začíná řečnickou otázkou); nepopisuje konkrétní výrobek."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Texty karet „Wie verleihen Sie Büro- oder Firmenräumen den letzten Schliff? …“, „Selbst etwas so Schlichtes wie eine Hausnummer…“, „Ein Original gibt es nur einmal. …“",
-      "duvod": "Úvodní karty v přehledu nad sekcemi jsou řečnické otázky nebo marketingové teasery; z karet byly převzaty jen věcné údaje (názvy, popis designových svítidel, žárovkových nápisů a neonových nápisů, výskyt cortenu v exteriéru)."
+      "text": "Úvod „Suchen Sie etwas Einzigartiges für Ihre Räume?…“ v sekcích designových svítidel a žárovkových nápisů",
+      "duvod": "Obecný úvod s řečnickou otázkou se opakuje ve dvou sekcích a žádný výrobek nepopisuje."
     },
     {
-      "text": "„Neonschriften: ein Klassiker mit modernem Twist“ + „Neonschriften sind zeitlose Klassiker…“",
+      "text": "Texty úvodních karet nad sekcemi výrobků",
+      "duvod": "Karty obsahují řečnické otázky a upoutávky. Přebíráme z nich jen názvy a věcné popisy výrobků."
+    },
+    {
+      "text": "Nadpis „Neonschriften: ein Klassiker mit modernem Twist“ a věta „Neonschriften sind zeitlose Klassiker…“",
       "duvod": "Marketingový nadpis a věta bez věcného obsahu."
     },
     {
-      "text": "Odkaz „Wie wird gefertigt?“ v sekci neonových nápisů",
-      "duvod": "Odkaz na společný blok průběhu zakázky, ne otázka s odpovědí."
+      "text": "Obrat „Dank langjähriger Erfahrung“ v popisu designových svítidel",
+      "duvod": "Tvrzení o zkušenostech firmy. Z věty přebíráme jen výrobu svítidel na míru."
     },
     {
-      "text": "„Wie entsteht eine Leuchtreklame?“ a kroky „Wir erhalten Ihre Anfrage → Kostenschätzung → maßgeschneidertes Angebot → Wir installieren“",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky (lhůty, nabídka, instalace), ne o výrobku; do faq ani k výrobkům se nepřebírá."
+      "text": "Text karty „Für alle, die sich einen Retro-Touch wünschen…“ o starém Las Vegas",
+      "duvod": "Marketingová upoutávka. Žárovkový nápis popisujeme větou o jeho konstrukci ze sekce."
     },
     {
-      "text": "„Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“ s body pod ním",
-      "duvod": "Společný blok o firmě (důvěra, kvalita, výroba v ČR, servis), ne údaj o výrobcích této stránky."
+      "text": "Obrat „Wir achten auf Qualität und Umweltverträglichkeit“ a přívlastek „hocheffiziente“ u LED žárovek",
+      "duvod": "Hodnoticí a ekologická tvrzení bez čísla. Přebíráme LED žárovky s volbou odstínu světla."
     },
     {
-      "text": "Galerie realizací (alt jsou česky: „Designové svítidlo 1“, „Neonová reklama 1“ apod.)",
-      "duvod": "Popisky fotek v galeriích realizací, ne výrobky ani parametry."
+      "text": "Obrat „wo sie die Aufmerksamkeit der Kunden auf sich ziehen und dem Ort einen unverwechselbaren Charakter geben“ u žárovkových nápisů",
+      "duvod": "Slib účinku bez měřitelného obsahu. Výčet vhodných prostor přebíráme."
     },
     {
-      "text": "„Unverbindlich anfragen“",
-      "duvod": "Tlačítko výzvy k akci."
+      "text": "Věta „Das Ergebnis ist ein luxuriöser Effekt bei deutlicher Ersparnis gegenüber klassischem Neon“ a přívlastek „hochwertigen“ u LED modulů",
+      "duvod": "Srovnání s klasickými neony bez čísla. Doporučujeme na webu uvést konkrétní úsporu, například spotřebu."
     },
     {
-      "text": "Popis stránky „Schauen Sie sich genauer an, was Sie interessiert. Und denken Sie daran: Alles lässt sich anpassen:“ a vlastnost stránky „Maßgeschneidert → Alles lässt sich anpassen“",
-      "duvod": "Stránka nemá perex pod H1; autor použil navigační větu nad kartami (na stránce Tabule je táž věta vyřazená jako navigační). Vlastnost slepovala štítek z hera s kusem této věty, na stránce spolu nesouvisí. Popis stránky je null (ověřovatel 30. 10. 2026)."
+      "text": "Umístění „Ideal überall dort, wo Originalität, Stil und echte Neon-Wirkung gefragt sind.“",
+      "duvod": "Hodnoticí věta, která neuvádí žádné konkrétní místo ani prostředí."
     },
     {
-      "text": "Úvod popisu designových svítidel: „Dank langjähriger Erfahrung“",
-      "duvod": "Tvrzení o zkušenostech firmy, ne údaj o výrobku; v popisu zůstává jen část o výrobě na míru."
+      "text": "Věta „Es entsteht ein Leuchtelement, das durch seine Ästhetik ebenso überzeugt wie durch die handwerkliche Verarbeitung.“",
+      "duvod": "Hodnoticí marketingová věta bez údaje o výrobku."
     },
     {
-      "text": "Text karty „Für alle, die sich einen Retro-Touch wünschen und deren Werbung wie aus dem alten Las Vegas aussehen soll.“",
-      "duvod": "Marketingová upoutávka (retro / Las Vegas), ne popis výrobku. Popisem výrobku je věta o konstrukci ze sekce."
+      "text": "Otázka „Warum empfehlen wir lieber Imitationen von Neonschriften?“ a odpověď na ni",
+      "duvod": "Odpověď stojí na srovnání „za podstatně nižší cenu“ bez čísel. Doporučujeme doplnit konkrétní ceny nebo spotřebu."
     },
     {
-      "text": "Druhá věta umístění neonových nápisů: „Es entsteht ein Leuchtelement, das durch seine Ästhetik ebenso überzeugt wie durch die handwerkliche Verarbeitung.“",
-      "duvod": "Hodnotící marketingová věta (estetika, řemeslo), ne údaj o umístění."
+      "text": "Úvod „sie sieht großartig aus und bringt praktische Vorteile“ u mechových stěn",
+      "duvod": "Hodnoticí obrat bez obsahu. Konkrétní výhody, tedy snadnou údržbu a akustiku, přebíráme."
     },
     {
-      "text": "Úvod vlastnosti mechových stěn: „sie sieht großartig aus und bringt praktische Vorteile.“",
-      "duvod": "Hodnotící obrat bez obsahu; konkrétní výhody (údržba, akustika, vzduch) zůstávají."
+      "text": "Tvrzení, že mechové stěny jsou „umweltverträglich“ a „hilft, die Luft zu reinigen“",
+      "duvod": "Ekologické a zdravotní tvrzení stránka ničím nedokládá. Doporučujeme doplnit zdroj nebo měření."
+    },
+    {
+      "text": "Obrat „wo sie sich hervorragend mit Werbeschriftzügen und Logos kombinieren lässt“ a slovo „ideal“ u mechových stěn",
+      "duvod": "Hodnoticí slova bez obsahu. Výčet prostor přebíráme, mechové obrazy s nápisem jsou uvedeny zvlášť."
+    },
+    {
+      "text": "Obraty „einzigartiges Aussehen“, „äußerst widerstandsfähig“ a „ideal“ u cortenové oceli",
+      "duvod": "Hodnoticí slova bez měřitelného obsahu. Přebíráme rezavou patinu a vhodnost do exteriéru."
+    },
+    {
+      "text": "Popis světelných čísel „Verleihen Sie Ihrem Zuhause das gewisse Etwas…“ a obraty „elegantes, modernes Detail“, „zu jedem Stil und jedem Gebäudetyp“",
+      "duvod": "Marketingové a absolutní obraty bez údaje. Přebíráme typy podsvícení, barvy světla a montáž."
+    },
+    {
+      "text": "Obrat „und weitere innovative Elemente sind bei unseren Projekten selbstverständlich“ u stojacích lamp",
+      "duvod": "Obecné tvrzení bez konkrétního prvku. Konkrétní způsoby svícení a ovládání přebíráme."
+    },
+    {
+      "text": "Tlačítka „Unverbindlich anfragen“, „Wie wird gefertigt?“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

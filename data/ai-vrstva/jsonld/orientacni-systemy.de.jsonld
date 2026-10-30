@@ -6,7 +6,6 @@
       "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#webpage",
       "url": "https://www.eldr.cz/de/produkty/orientacni-systemy",
       "name": "Wegeleitsysteme",
-      "description": "Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.",
       "inLanguage": "de",
       "isPartOf": {
         "@type": "WebSite",
@@ -30,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Startseite",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/de"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkte",
+          "name": "Unsere Produkte",
           "item": "https://www.eldr.cz/de/produkty"
         },
         {
@@ -51,7 +50,6 @@
       "@type": "Service",
       "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#sluzba",
       "name": "Wegeleitsysteme",
-      "description": "Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.",
       "provider": {
         "@type": "Organization",
         "@id": "https://www.eldr.cz/#organization"
@@ -75,7 +73,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Grafik",
-                  "value": "eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
+                  "value": "grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
                 },
                 {
                   "@type": "PropertyValue",
@@ -153,7 +151,7 @@
           "name": "Woraus werden Wegeleitsysteme gefertigt?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
+            "text": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl."
           }
         }
       ]

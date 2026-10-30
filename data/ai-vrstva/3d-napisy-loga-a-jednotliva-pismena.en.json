@@ -515,64 +515,108 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Štítky profilů „Economical“, „Low-maintenance“, „Stylish“, „Timeless“, „Extremely durable“, „Large-scale“, „Popular choice“, „Affordable“, „Most eye-catching“, „Versatile“, „Small characters“, „Complex contours“",
-      "duvod": "Marketingové štítky; věcný obsah je v popisu profilu, odkud se přebírá."
+      "text": "Úvodní věta „Production of illuminated signage with top-quality craftsmanship and custom design tailored to your needs.“",
+      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
     },
     {
-      "text": "„The most impressive and vibrant sign option.“ (Profile 8)",
-      "duvod": "Superlativ bez měřitelného obsahu."
+      "text": "Štítky u profilů, např. „Economical“, „Most eye-catching“, „Popular choice“",
+      "duvod": "Štítky hodnotí, ale nic neměří. Věcné údaje o profilech přebíráme z jejich podrobného popisu."
     },
     {
-      "text": "Blok „Turn darkness into opportunity“ – „From classic non-illuminated signs to modern LED options. We offer solutions that fit perfectly into your concept.“",
-      "duvod": "Marketingový úvod; rozsah od nesvětelných po LED nápisy pokrývají jednotlivé výrobky."
+      "text": "Věta „The most impressive and vibrant sign option.“ u profilu 8",
+      "duvod": "Superlativ bez měřitelného obsahu. Viditelnost z různých úhlů popisuje věcná věta téhož profilu."
     },
     {
-      "text": "„From the first sketch to final installation.“",
-      "duvod": "Slogan bez konkrétního údaje; konkrétní věty téhož odstavce jsou v page.properties."
+      "text": "Věty „The most popular choice for 3D signage. A striking sign offering excellent value for money.“ u profilu 5s",
+      "duvod": "Oblíbenost ani poměr ceny a kvality stránka ničím nedokládá. Rozměr do 2 metrů a čelo bez rámečku přebíráme."
     },
     {
-      "text": "Odkazy „How it’s made“, „Request a no-obligation quote“, „All references“",
-      "duvod": "Výzvy k akci, ne údaje o výrobku."
+      "text": "Popis karty „The most popular type of illuminated 3D signage, with an illuminated face.“",
+      "duvod": "Superlativ „nejoblíbenější“ stránka nedokládá. Svítící čelo vyjadřuje už název výrobku, popis proto vynecháváme."
     },
     {
-      "text": "Nadpis „How is illuminated advertising made?“ a kroky „We receive your enquiry → Within 2 business days: We send a price estimate → Immediately afterwards: We provide a tailored final offer → Within 4–8 weeks: We install“",
-      "duvod": "Společný blok produktových stránek o průběhu zakázky, ne o výrobku; nadpis není FAQ."
+      "text": "Slova „Elegant. Subtle.“ u profilu 3",
+      "duvod": "Hodnoticí přídavná jména bez údaje. Vzhled nepřímého podsvícení popisuje text karty, který přebíráme."
     },
     {
-      "text": "„Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“ s body",
-      "duvod": "Tvrzení o firmě, společný blok všech produktových stránek."
+      "text": "Blok „Turn darkness into opportunity“ s úvodním textem",
+      "duvod": "Obecný marketingový úvod. Rozsah od nesvětelných po LED nápisy pokrývají jednotlivé profily."
     },
     {
-      "text": "Galerie realizací (popisky „Profil 1 1“ apod.) a schémata profilů bez alt textu (např. „Profil 15_EN.png“)",
-      "duvod": "Popisky fotek, ne parametry. Jako obrázek výrobku je převzata první fotka s alt textem, stejná jako v CS a DE."
+      "text": "Slogan „From the first sketch to final installation.“",
+      "duvod": "Slogan bez konkrétního údaje. Výběr materiálů a 3D vizualizaci z téhož odstavce přebíráme."
     },
     {
-      "text": "„Elegant. Subtle.“ (Profile 3)",
-      "duvod": "Hodnotící přídavná jména bez údaje; tentýž dojem popisuje karta, která je teď `description` výrobku (ověřovatel 30. 10. 2026)."
+      "text": "Obrat „built to withstand all weather conditions“ u odolnosti světelných reklam",
+      "duvod": "Absolutní tvrzení bez parametru. Z věty přebíráme jen konkrétní záruku až 5 let."
     },
     {
-      "text": "„The most popular choice for 3D signage. A striking sign offering excellent value for money.“ (Profile 5s)",
-      "duvod": "Marketingové tvrzení („nejlepší poměr kvality a ceny“ / „nejpopulárnější“), ne parametr. Rozměr a čelní plocha z téhož odstavce převedeny z vlastností s kostrbatým názvem do `variants` (ověřovatel 30. 10. 2026)."
+      "text": "Přívlastek „High-quality“ u materiálů s úpravou povrchu",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Úpravu povrchu a stálost barev přebíráme."
     },
     {
-      "text": "Použití z karty „For indoor and outdoor use“ (3D signs with illuminated face)",
-      "duvod": "Duplicita použití ze sekce profilu („Suitable for indoor and outdoor use.“) (ověřovatel 30. 10. 2026)."
+      "text": "Věty „Unlimited width and thickness.“ a „Unlimited size, lighting colour and body colour options.“ a slovo „Unlimited“ u grafiky profilů",
+      "duvod": "Absolutní tvrzení bez čísla. Doporučujeme na webu uvést skutečné maximální rozměry profilů 1 a 4."
     },
     {
-      "text": "Použití z karty „For indoor and outdoor use“ (Solid acrylic 3D signs)",
-      "duvod": "Odporuje sekci profilu, která uvádí „Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls“. Ponechána podrobnější sekce; rozpor má rozhodnout člověk (ověřovatel 30. 10. 2026)."
+      "text": "Dovětky „for lighter components and exceptional precision“ a „(lighter, surgically precise)“ u 3D tisku",
+      "duvod": "Nadsázka bez měřitelné přesnosti. Samotnou možnost 3D tisku přebíráme."
     },
     {
-      "text": "Úvodní věta sekce „Ideal for small or intricately shaped signs.“ (Profile 9)",
-      "duvod": "Opakuje popis z karty, který je `description` výrobku (ověřovatel 30. 10. 2026)."
+      "text": "Věta „It attracts attention from a distance and offers a long service life even in adverse conditions.“ u profilu 4",
+      "duvod": "Slib účinku a životnosti bez čísla. Přebíráme jen určení pro větrná místa ve výšce."
     },
     {
-      "text": "Duplicita karet a profilů",
-      "duvod": "Šest přehledových karet odkazuje v surovém HTML na sekce profilů (`href=\"#profil-1\"`, `#profil-3`, `#profil-4`, `#profil-5s`, `#profil-8`, `#profil-9`, ověřeno ve všech třech jazycích). Sloučeno do šesti výrobků s kotvou sekce: název a popis z karty, vlastnosti a obrázek ze sekce, číslo profilu jako provedení (ověřovatel 30. 10. 2026)."
+      "text": "Věta „Affordable neon-like look with minimal energy consumption.“ u profilu 9",
+      "duvod": "Cenu ani spotřebu stránka nevyčísluje. Pokud na webu doplníte konkrétní příkon, údaj rádi převezmeme."
     },
     {
-      "text": "Vlastnost stránky „Explore a diverse range of profiles with different characteristics and technical solutions.“ → „everything can be adjusted“",
-      "duvod": "Navigační úvod k rozcestníku profilů (na pylonech vyřazen stejně), název je celá věta, ne štítek (ověřovatel 30. 10. 2026)."
+      "text": "Slovo „Ideal“ v popisu profilu 9",
+      "duvod": "Hodnoticí slovo. Přebíráme jen určení pro drobné nápisy a těžko tvarovatelné písmo."
+    },
+    {
+      "text": "Úvodní věta sekce profilu 9 „Ideal for small or intricately shaped signs.“",
+      "duvod": "Věta opakuje popis z karty téhož profilu, údaj by se zdvojil."
+    },
+    {
+      "text": "Použití „For indoor and outdoor use“ z karty 3D nápisů se svítícím čelem",
+      "duvod": "Stejné použití uvádí sekce profilu 5s, údaj by se zdvojil."
+    },
+    {
+      "text": "Použití „For indoor and outdoor use“ z karty plno-plexisklových nápisů",
+      "duvod": "Karta uvádí interiér i exteriér, sekce profilu 9 hlavně interiér. Prosíme o rozhodnutí, který údaj platí."
+    },
+    {
+      "text": "Šest přehledových karet a šest sekcí profilů",
+      "duvod": "Karty odkazují na sekce stejných profilů. Spojujeme je proto do šesti výrobků, aby se údaje neopakovaly."
+    },
+    {
+      "text": "Věta „Explore a diverse range of profiles with different characteristics and technical solutions.“",
+      "duvod": "Věta jen uvádí rozcestník profilů a o profilech nic konkrétního neříká."
+    },
+    {
+      "text": "Tlačítka „Request a no-obligation quote“, „How it’s made“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Schémata profilů bez popisku",
+      "duvod": "Schémata jsou jen v anglické a německé verzi. U výrobků používáme fotky, které jsou ve všech jazycích stejné."
+    },
+    {
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

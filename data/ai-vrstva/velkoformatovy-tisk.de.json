@@ -375,64 +375,56 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "„{#YOE#} Jahre Erfahrung“ (Label im Hero)",
-      "duvod": "Ve snímku bez JS je jen token {#YOE#}, číslo doplní až skript. Navíc jde o tvrzení o firmě, ne o výrobku."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "Einleitung über den Kacheln „Sehen Sie sich genauer an, was Sie interessiert. Denken Sie daran: Alles lässt sich anpassen:“",
-      "duvod": "Navigační výzva k dlaždicím, ne popis stránky. Stránka pod H1 jiný perex nemá, proto je page.description null; přizpůsobení pokrývá štítek „Maßgeschneidert“."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Kacheln im Hero „Geschnittene Foliengrafik – Schriftzüge aus selbstklebender Folie geschnitten = lange Lebensdauer.“, „Beklebungen – Werbebeklebungen für Fahrzeuge…“, „Design-Wandbilder – Großformatige Bilder und Wandgrafiken…“",
-      "duvod": "Zkrácené opakování textu ze sekcí výrobků; z dlaždic je vzat jen název výrobku (sekce nemají vlastní nadpis) a u velkoformátového tisku popis."
+      "text": "Dlaždice v úvodu stránky s krátkými popisy výrobků",
+      "duvod": "Dlaždice zkráceně opakují text sekcí. Přebíráme z nich jen názvy výrobků a popis velkoformátového tisku."
     },
     {
-      "text": "Buttons „Unverbindlich anfragen“, „So läuft die Produktion ab“",
-      "duvod": "Odkazy (CTA), ne obsah ani otázka, proto nejde do faq."
+      "text": "Věta „Das Ergebnis: ein visuelles Element, das die Atmosphäre verstärkt, die Marke stärkt…“ u designových obrazů",
+      "duvod": "Slib účinku bez měřitelného obsahu, ne parametr výrobku."
     },
     {
-      "text": "Bildergalerie (tschechische Bildunterschriften „Polep 1“, „Řezaná grafika 3“ usw.)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry."
+      "text": "Odstavce „Qualität und Lebensdauer stehen an erster Stelle“, „Moderne Technologie“ a „Maximale Haltbarkeit“",
+      "duvod": "Odstavce mluví o vybavení firmy a používají superlativy. Latexový tisk, laminaci a ochranu před poškozením přebíráme."
     },
     {
-      "text": "„Das Ergebnis: ein visuelles Element, das die Atmosphäre verstärkt, die Marke stärkt und aus dem Innenraum einen Ort macht, den Kunden sich merken und fotografieren.“ (Design-Wandbilder)",
-      "duvod": "Marketingový slib účinku bez měřitelného obsahu, ne parametr výrobku."
+      "text": "Věta „Ihr Vorteil ist die lange Lebensdauer.“",
+      "duvod": "Obecné tvrzení bez čísla. Konkrétní stálobarevnost fólií až sedm let přebíráme."
     },
     {
-      "text": "Block „Wie entsteht eine Leuchtreklame?“ (Wir erhalten Ihre Anfrage → Kostenschätzung → Angebot → Wir installieren)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, navíc o světelné reklamě, ne o tisku a polepech. Do faq nejde."
+      "text": "Obrat „alle Arten“ u použití řezané grafiky",
+      "duvod": "Absolutní tvrzení, které odporuje uvedenému omezení u barevných přechodů. Přebíráme jen reklamní a informační nápisy."
     },
     {
-      "text": "„Führende tschechische und ausländische Unternehmen vertrauen uns“ und „Warum ist unsere Leuchtreklame die richtige Wahl?“",
-      "duvod": "Společné bloky o firmě (o světelné reklamě), ne o výrobcích této stránky."
+      "text": "Věta „Den Grafikentwurf erarbeiten wir gemeinsam mit Ihnen und übernehmen die fachgerechte Applikation.“ u polepů vozidel",
+      "duvod": "Věta popisuje službu firmy, ne vlastnost polepu."
     },
     {
-      "text": "Alt texty obrázků výrobků",
-      "duvod": "Na /de jsou alt texty česky (Webflow je v sekundárním locale nepřevzalo); v image.alt jsou ponechány doslova tak, jak na stránce jsou."
+      "text": "Tlačítka „Unverbindlich anfragen“, „So läuft die Produktion ab“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     },
     {
-      "text": "vlastnost „Farbechtheit: mindestens drei Jahre“",
-      "duvod": "Název vlastnosti vytržený z věty (není štítek na stránce); celá věta o stálobarevnosti zůstává ve vlastnosti „Verarbeitung“."
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a mluví o světelné reklamě, ne o tisku a polepech."
     },
     {
-      "text": "Qualität und Lebensdauer stehen an erster Stelle – Modernen Großformatdruck realisieren wir auf unserem eigenen Drucker mit Latex-Technologie und schützender Laminierung – das ergibt satte Farben und dauerhafte Beständigkeit auch im Außenbereich.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Verarbeitung“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Moderne Technologie – Wir besitzen einen modernen Drucker für den Digitaldruck großflächiger Werbung und Banner. Wir arbeiten mit der Latexdruck-Technologie. Sie erreicht volle, satte und langfristig beständige Farben – auch bei detaillierten grafischen Entwürfen und anspruchsvollen Farbkombinationen.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Verarbeitung“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     },
     {
-      "text": "Maximale Haltbarkeit – Wir laminieren unsere Drucke und sorgen so für maximale Farbbeständigkeit – vor allem bei Drucken im Freien, die ständiger Sonneneinstrahlung ausgesetzt sind. Die Laminierung schützt die Werbung außerdem vor mechanischer Beschädigung, und Sie haben die Wahl zwischen glänzender oder matter Laminierfolie.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Verarbeitung“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
-    },
-    {
-      "text": "vlastnost „farbecht: bis zu sieben Jahre“",
-      "duvod": "Název vlastnosti vytržený z věty; údaj o stálobarevnosti fólií zůstává ve vlastnosti „Materialien“."
-    },
-    {
-      "text": "Farbverläufe oder komplexere Motive lassen sich damit nicht in der Qualität des Digitaldrucks umsetzen. Bei Bedarf kombinieren wir daher beide Techniken.",
-      "duvod": "Omezení techniky, ne provedení; zůstává ve vlastnosti „Verarbeitung“."
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

@@ -29,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Startseite",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/de"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkte",
+          "name": "Unsere Produkte",
           "item": "https://www.eldr.cz/de/produkty"
         },
         {
@@ -125,7 +125,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Materialien",
-                  "value": "Wir verwenden hochwertige LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung und sorgen für eine lange Lebensdauer."
+                  "value": "LED-Module mit hoher IP-Schutzart – sie trotzen der Witterung"
                 },
                 {
                   "@type": "PropertyValue",
@@ -177,17 +177,22 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Ausführung",
-                  "value": "Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen. Die Fahnen werden aus hochwertigen Materialien gefertigt, die für eine lange Lebensdauer sorgen."
+                  "value": "Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Platzierung",
-                  "value": "Besonders geeignet sind Orte mit viel Publikumsverkehr wie Innenstadtstraßen, Einkaufszentren, Festivals oder Messen. Durch die Bewegung im Wind ziehen Fahnen noch mehr Blicke auf sich – das steigert ihre Wirkung."
+                  "value": "Besonders geeignet sind Orte mit viel Publikumsverkehr wie Innenstadtstraßen, Einkaufszentren, Festivals oder Messen."
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Material",
                   "value": "Werbefahnen aus Textil"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Die Form der Fahne wählen Sie passend zum Standort – wir bieten klassische rechteckige ebenso wie Sonderformen."
                 },
                 {
                   "@type": "PropertyValue",
@@ -207,7 +212,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Einsatz",
-                  "value": "Ideal für Orte, an denen für andere Werbeformen zu wenig Platz ist."
+                  "value": "für Orte, an denen für andere Werbeformen zu wenig Platz ist."
                 }
               ],
               "provider": {

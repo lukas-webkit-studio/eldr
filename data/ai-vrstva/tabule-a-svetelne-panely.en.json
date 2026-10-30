@@ -392,36 +392,56 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Galerie realizací (popisky „Světelný panel 1“, „Plexintarzie 1“, „Reklamní tabule 1“, „Menuboard 1“ apod. — alt texty jsou i na /en česky)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. Z každé galerie převzat jen první obrázek jako obrázek výrobku."
+      "text": "Obrat „with first-class craftsmanship and design“ v úvodní větě",
+      "duvod": "Superlativ bez měřitelného obsahu. Z úvodní věty přebíráme výrobu na míru do velikosti 100 m²."
     },
     {
-      "text": "Profilové nákresy u sekcí (Profil 17_EN, Profil 15_EN, Profil 16_EN, Profil 5s_EN) s prázdným alt",
-      "duvod": "Jsou jen v EN a DE, v CS chybí; obrázek výrobku bere galerijní fotku s neprázdným alt, aby byl ve všech jazycích stejný."
+      "text": "Obrat „which ensures a long service life and excellent light transmission“ u světelných panelů",
+      "duvod": "Hodnoticí obrat bez čísla. Materiály rámu a přední plochy přebíráme."
     },
     {
-      "text": "Krátké popisy na kartách v přehledu (např. „A modern advertising element that delivers high visibility thanks to its illuminated face.“)",
-      "duvod": "Upoutávky na sekce níž; věcný obsah je pokrytý podrobným popisem v sekci. Z karty Advertising boards převzato jen použití „for signage and orientation in a space“."
+      "text": "Obrat „is one of the simplest advertising solutions there is“ u reklamních tabulí",
+      "duvod": "Superlativ bez měřitelného obsahu. Přebíráme jen to, že jde o nesvětelnou desku."
     },
     {
-      "text": "Štítky „Easy to install“, „Eye-catching look“, „Aura of light“, „Low initial cost“, „Fast delivery“, „Easy to change“, „Long service life“",
-      "duvod": "Marketingové štítky bez měřitelného obsahu nebo sliby ceny a lhůty. Aura of light je převzata z popisu vystouplé intarzie. Štítek „Illuminated face“ převzat jako provedení světelného panelu."
+      "text": "Obrat „durable materials that ensure a long service life“ u menuboardů",
+      "duvod": "Stránka neuvádí konkrétní materiál ani životnost. Přebíráme přizpůsobení materiálů pro výměnu grafiky."
     },
     {
-      "text": "„Take a closer look at whatever interests you. And remember, everything can be customized:“",
-      "duvod": "Navigační věta bez konkrétního údaje."
+      "text": "Krátké popisy na kartách, např. „A modern advertising element that delivers high visibility thanks to its illuminated face.“",
+      "duvod": "Karty jen upoutávají na sekce níže. Věcné údaje přebíráme z podrobnějších popisů v sekcích."
     },
     {
-      "text": "Odkaz „How it’s made“ v sekci intarzie a blok „How is illuminated advertising made?“ (enquiry → price estimate → offer → install)",
-      "duvod": "Není to FAQ: odkaz je tlačítko, blok je společný průběh zakázky na všech produktových stránkách. Lhůty se do popisu výrobků nepřebírají."
+      "text": "Štítky „Eye-catching look“, „Low initial cost“, „Fast delivery“, „Long service life“ a další",
+      "duvod": "Štítky hodnotí nebo slibují cenu a lhůtu bez čísla. Světelnou auru a svítící čelo přebíráme z popisů."
     },
     {
-      "text": "„Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
-      "duvod": "Společné bloky o firmě, ne o výrobcích na této stránce."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
     },
     {
-      "text": "Vlastnosti stránky vytažené z perexu: „sizes → in sizes up to 100 m²“; „We make illuminated panels → tailored to your needs“",
-      "duvod": "Názvy vlastností nejsou štítky, ale slova vytržená z věty (ověřovatel 30. 10. 2026). Perex zůstává jako popis stránky; údaj o maximální velikosti přesunut jako provedení k výrobku Světelné panely, o kterém věta mluví. „Na míru vašim potřebám“ je obecný slib bez parametru."
+      "text": "Profilové nákresy u sekcí bez popisku",
+      "duvod": "Nákresy jsou jen v anglické a německé verzi. U výrobků používáme fotky, které jsou ve všech jazycích stejné."
+    },
+    {
+      "text": "Tlačítka „Request a no-obligation quote“, „How it’s made“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

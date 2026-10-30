@@ -6,7 +6,6 @@
       "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#webpage",
       "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena",
       "name": "3D-Schriftzüge, Logos und Buchstaben",
-      "description": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und maßgeschneidertem Design nach Ihren Bedürfnissen.",
       "inLanguage": "de",
       "isPartOf": {
         "@type": "WebSite",
@@ -30,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Startseite",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/de"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkte",
+          "name": "Unsere Produkte",
           "item": "https://www.eldr.cz/de/produkty"
         },
         {
@@ -51,7 +50,6 @@
       "@type": "Service",
       "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba",
       "name": "3D-Schriftzüge, Logos und Buchstaben",
-      "description": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und maßgeschneidertem Design nach Ihren Bedürfnissen.",
       "provider": {
         "@type": "Organization",
         "@id": "https://www.eldr.cz/#organization"
@@ -71,12 +69,12 @@
         {
           "@type": "PropertyValue",
           "name": "Wetterbeständigkeit",
-          "value": "Unsere Leuchtreklamen sind für alle Wetterbedingungen gerüstet und werden mit bis zu 5 Jahren Garantie geliefert."
+          "value": "werden mit bis zu 5 Jahren Garantie geliefert"
         },
         {
           "@type": "PropertyValue",
           "name": "Wetterbeständigkeit",
-          "value": "Hochwertige Materialien mit Oberflächenbehandlung garantieren langanhaltende Beständigkeit von Farbe und Erscheinungsbild."
+          "value": "Materialien mit Oberflächenbehandlung garantieren langanhaltende Beständigkeit von Farbe und Erscheinungsbild"
         }
       ],
       "hasOfferCatalog": {
@@ -97,12 +95,12 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Grafik",
-                  "value": "Unbegrenzte Farboptionen dank transluzenter Folie"
+                  "value": "Farboptionen dank transluzenter Folie"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Korpus",
-                  "value": "Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision sowie Lackierung nach individuellen Anforderungen"
+                  "value": "Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck"
                 },
                 {
                   "@type": "PropertyValue",
@@ -122,7 +120,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Ausführung",
-                  "value": "Unbegrenzte Breite und Stärke."
+                  "value": "Lackierung nach individuellen Anforderungen"
                 },
                 {
                   "@type": "PropertyValue",
@@ -149,7 +147,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Korpus",
-                  "value": "Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)"
+                  "value": "Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck"
                 },
                 {
                   "@type": "PropertyValue",
@@ -189,14 +187,14 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
               "name": "Großformatige Leuchtschriftzüge",
-              "description": "Robuste Werbung für windige Standorte in großer Höhe. Sie fällt schon von Weitem auf und bietet auch unter widrigen Bedingungen eine lange Lebensdauer.",
+              "description": "Robuste Werbung für windige Standorte in großer Höhe.",
               "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2352298e32104eb3c34_64892fd80421491be3ffb6dc_Sve%25CC%258Ctelne%25CC%2581%2520pi%25CC%2581smena%2520-%2520profil%25204%2520%2520(00001).webp",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Grafik",
-                  "value": "Unbegrenzte Farbmöglichkeiten durch transluzente Folie und Lackierung"
+                  "value": "Farbmöglichkeiten durch transluzente Folie und Lackierung"
                 },
                 {
                   "@type": "PropertyValue",
@@ -212,11 +210,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Eine in die Seitenkonstruktion des Buchstabens integrierte Befestigungsleiste hält die Frontbespannung."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Unbegrenzte Möglichkeiten bei Abmessungen, Lichtfarben und Korpusfarben."
                 },
                 {
                   "@type": "PropertyValue",
@@ -236,14 +229,13 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
               "name": "3D-Schriftzüge mit leuchtender Vorderseite",
-              "description": "Für den Innen- und Außenbereich. Die beliebteste Variante von 3D-Leuchtschriftzügen mit leuchtender Vorderseite.",
               "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Grafik",
-                  "value": "Unbegrenzte Optionen bei Plexiglasfarben und transluzenter Folie"
+                  "value": "Optionen bei Plexiglasfarben und transluzenter Folie"
                 },
                 {
                   "@type": "PropertyValue",
@@ -285,7 +277,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Grafik",
-                  "value": "Unbegrenzte Möglichkeiten durch transluzente Folie in Kombination mit farbigem Plexiglas und LEDs"
+                  "value": "Möglichkeiten durch transluzente Folie in Kombination mit farbigem Plexiglas und LEDs"
                 },
                 {
                   "@type": "PropertyValue",
@@ -325,14 +317,14 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
               "name": "3D-Schriftzüge aus Vollplexiglas",
-              "description": "Ideal für kleine Schriftzüge und schwer formbare Buchstaben.",
+              "description": "für kleine Schriftzüge und schwer formbare Buchstaben.",
               "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bae0dd6bef54205b61_64bfc6681406f7a5ffd232b6_649bfb9d07992cfbf59d224e_6489336a18b47a0c318dd8d0_plno%2520plexi%2520(00001).webp",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Grafik",
-                  "value": "Unbegrenzte Möglichkeiten durch transluzente Folie, Lackierung und LED-Farben"
+                  "value": "Möglichkeiten durch transluzente Folie, Lackierung und LED-Farben"
                 },
                 {
                   "@type": "PropertyValue",
@@ -353,11 +345,6 @@
                   "@type": "PropertyValue",
                   "name": "Ausführung",
                   "value": "Vorder- und Seitenflächen können beleuchtet sein."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Ausführung",
-                  "value": "Preiswerte Neon-Optik bei minimalem Energieverbrauch."
                 }
               ],
               "provider": {

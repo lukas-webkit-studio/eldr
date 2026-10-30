@@ -6,7 +6,6 @@
       "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#webpage",
       "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena",
       "name": "3D nápisy, loga a písmena",
-      "description": "Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.",
       "inLanguage": "cs",
       "isPartOf": {
         "@type": "WebSite",
@@ -30,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Domů",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Produkty",
+          "name": "Naše produkty",
           "item": "https://www.eldr.cz/produkty"
         },
         {
@@ -51,7 +50,6 @@
       "@type": "Service",
       "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba",
       "name": "3D nápisy, loga a písmena",
-      "description": "Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.",
       "provider": {
         "@type": "Organization",
         "@id": "https://www.eldr.cz/#organization"
@@ -71,12 +69,12 @@
         {
           "@type": "PropertyValue",
           "name": "Odolnost vůči povětrnostním vlivům",
-          "value": "Světelné reklamy vyrábíme tak, aby odolaly všem rozmarům počasí a poskytujeme na ně až 5 letou záruku."
+          "value": "poskytujeme na ně až 5 letou záruku"
         },
         {
           "@type": "PropertyValue",
           "name": "Odolnost vůči povětrnostním vlivům",
-          "value": "Naše kvalitní materiály s úpravou povrchu zajišťují stálost barev a vzhledu po mnoho let."
+          "value": "materiály s úpravou povrchu zajišťují stálost barev a vzhledu po mnoho let"
         }
       ],
       "hasOfferCatalog": {
@@ -97,12 +95,12 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Grafika",
-                  "value": "neomezené barevné možnosti díky translucentní fólii"
+                  "value": "barevné možnosti díky translucentní fólii"
                 },
                 {
                   "@type": "PropertyValue",
                   "name": "Korpus",
-                  "value": "široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku (lehčí, chirurgicky přesné) a lakování dle individuálních potřeb"
+                  "value": "široká škála materiálů přes hliník, plexisklo, deskový materiál, polystyren, karton, možné využití 3D tisku"
                 },
                 {
                   "@type": "PropertyValue",
@@ -122,7 +120,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Provedení",
-                  "value": "Neomezená šířka a tloušťka."
+                  "value": "lakování dle individuálních potřeb"
                 },
                 {
                   "@type": "PropertyValue",
@@ -149,7 +147,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Korpus",
-                  "value": "hliník, plexisklo, deskový materiál, možné využití 3D tisku (lehčí, chirurgicky přesné)"
+                  "value": "hliník, plexisklo, deskový materiál, možné využití 3D tisku"
                 },
                 {
                   "@type": "PropertyValue",
@@ -189,14 +187,14 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
               "name": "Velkoformátové světelné nápisy",
-              "description": "Odolná reklama do výšek, kde je větrno. Poutá z dálky, zaručuje dlouhou životnost i v nepříznivých podmínkách.",
+              "description": "Odolná reklama do výšek, kde je větrno.",
               "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2352298e32104eb3c34_64892fd80421491be3ffb6dc_Sve%25CC%258Ctelne%25CC%2581%2520pi%25CC%2581smena%2520-%2520profil%25204%2520%2520(00001).webp",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Grafika",
-                  "value": "neomezené barevné možnosti díky translucentní fólii a lakování"
+                  "value": "barevné možnosti díky translucentní fólii a lakování"
                 },
                 {
                   "@type": "PropertyValue",
@@ -212,11 +210,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Bytelná reklama, odolávající povětrnostním vlivům díky upevňovacímu lemu."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Neomezené rozměry, barvy svícení a korpusu."
                 },
                 {
                   "@type": "PropertyValue",
@@ -236,14 +229,13 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
               "name": "3D nápisy se svítícím čelem",
-              "description": "Do interiérů a exteriérů. Nejoblíbenější varianta 3D světelných nápisů s čelním prosvícením.",
               "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Grafika",
-                  "value": "neomezené možnosti barev plexiskla a průsvitné fólie"
+                  "value": "možnosti barev plexiskla a průsvitné fólie"
                 },
                 {
                   "@type": "PropertyValue",
@@ -285,7 +277,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Grafika",
-                  "value": "neomezené možnosti díky translucentní fólii v kombinaci s barevností plexiskla a LED diod"
+                  "value": "možnosti díky translucentní fólii v kombinaci s barevností plexiskla a LED diod"
                 },
                 {
                   "@type": "PropertyValue",
@@ -325,14 +317,14 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
               "name": "Plno-plexisklové 3D nápisy",
-              "description": "Ideální pro drobné nápisy a nápisy s těžko tvarovatelným písmem.",
+              "description": "pro drobné nápisy a nápisy s těžko tvarovatelným písmem.",
               "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bae0dd6bef54205b61_64bfc6681406f7a5ffd232b6_649bfb9d07992cfbf59d224e_6489336a18b47a0c318dd8d0_plno%2520plexi%2520(00001).webp",
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
                   "name": "Grafika",
-                  "value": "neomezené možnosti díky translucentní fólii, lakování a barevnosti LED diod"
+                  "value": "možnosti díky translucentní fólii, lakování a barevnosti LED diod"
                 },
                 {
                   "@type": "PropertyValue",
@@ -353,11 +345,6 @@
                   "@type": "PropertyValue",
                   "name": "Provedení",
                   "value": "Světelná může být čelní strana i boky."
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "Provedení",
-                  "value": "Cenově dostupný vzhled neonu s minimální spotřebou energie."
                 }
               ],
               "provider": {

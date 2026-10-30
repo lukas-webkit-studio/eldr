@@ -195,40 +195,36 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "„Just tell us what you have in mind and we will make sales promotion items to measure.“ (konec bodu u prvků podpory prodeje) a z něj odvozená varianta „we will make sales promotion items to measure“",
-      "duvod": "Ověřovatel: slib služby firmy, ne vlastnost výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci. Že jde o výrobu na míru, říká už popis z karty."
+      "text": "Věta „Just tell us what you have in mind and we will make sales promotion items to measure.“",
+      "duvod": "Věta slibuje službu firmy. Výrobu na míru už uvádí popis výrobku z karty."
     },
     {
-      "text": "Vlastnosti „They are known by the abbreviations“ a „They are controlled by“",
-      "duvod": "Ověřovatel: stránka tu žádný štítek nemá, název byl vytržen z věty. Celé věty přesunuty do variants, vlastnosti zrušeny."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "Hero label “{#YOE#} years of experience”",
-      "duvod": "Tvrzení o firmě (počet let na trhu), ne o výrobku; ve snímku bez JS je jen nevyplněný token {#YOE#}."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Perex pod H1 (page.description = null)",
-      "duvod": "Stránka pod H1 žádný perex nemá — následuje jen obecná výzva „Take a closer look at whatever interests you. Remember, everything can be adjusted:“."
+      "text": "Galerie realizací, popisky fotek a obrázky karet v rozcestníku",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     },
     {
-      "text": "Galerie realizací (popisky „Prvek podpory prodeje 1“ …, „Led display 1“ …) a obrázky karet v rozcestníku",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. Alt texty obrázků jsou i na /en česky (Webflow je v sekundárním locale přes API nepřekládá); bere se, co na stránce je."
+      "text": "Tlačítka „Request a no-obligation quote“, „All references“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     },
     {
-      "text": "Tlačítka „Request a no-obligation quote“ a ostatní výzvy k akci",
-      "duvod": "Výzvy k akci bez obsahu."
+      "text": "Blok „How is illuminated advertising made?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
-      "text": "Blok „How is illuminated advertising made?“ (We receive your enquiry → price estimate → offer → We install)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, ne o výrobku. Do faq se nedává."
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“ včetně bodů",
-      "duvod": "Společné bloky o firmě a světelné reklamě obecně, ne o těchto výrobcích."
-    },
-    {
-      "text": "Navigace, kontakty, adresa a patička",
-      "duvod": "Společné prvky webu."
+      "text": "Popisky obrázků na anglické verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

@@ -255,44 +255,56 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Věta nad kartami „Podívejte se blíže na to, co vás zajímá. Pamatujte, všechno jde uzpůsobit:“ (dosud page.description)",
-      "duvod": "Ověřovatel: obecná výzva rozcestníku, ne perex stránky ani popis výrobku; page.description = null (stejně jako na stránce prvky-podpory-prodeje-led-technologie)."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "„Náš tým vytvoří individuální návrh s ohledem na možnosti budovy.“ (konec bodu Zpracování u vstupních portálů)",
-      "duvod": "Ověřovatel: tvrzení o službě firmy, ne vlastnost výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci."
+      "text": "Věta „Náš tým vytvoří individuální návrh s ohledem na možnosti budovy.“ u vstupních portálů",
+      "duvod": "Věta popisuje službu firmy, ne vlastnost portálu, proto ji k výrobku nepřiřazujeme."
     },
     {
-      "text": "„Výsledkem je čisté řešení s vysokou funkčností a dlouhou životností.“ (konec bodu Zpracování u architektonických prvků)",
-      "duvod": "Ověřovatel: marketingový slib výsledku, ne parametr výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci."
+      "text": "Věta „Výsledkem je čisté řešení s vysokou funkčností a dlouhou životností.“ u architektonických prvků",
+      "duvod": "Slib výsledku bez měřitelného obsahu, ne parametr výrobku."
     },
     {
-      "text": "Hero štítek „{#YOE#} let zkušeností“",
-      "duvod": "Tvrzení o firmě, ne o výrobcích; ve snímku bez JS je jen neodsazený token {#YOE#}, číslo dopočítává až JS."
+      "text": "Obrat „kvalitní LED moduly … zajišťují dlouhou životnost“ u architektonických prvků",
+      "duvod": "Hodnoticí slova bez čísla. Přebíráme vysokou IP ochranu a odolnost vůči povětrnostním vlivům."
     },
     {
-      "text": "Úvodní věta karty „V Elektru Drapač milujeme výzvy a rádi se podílíme na vymýšlení a realizaci unikátních architektonických projektů.“ a věta „Naší prioritou je najít to nejlepší technické a vizuální řešení.“",
-      "duvod": "Tvrzení o firmě a jejím přístupu, ne parametr výrobku (zůstávají jen v citaci popisu)."
+      "text": "Věta „Vlajky jsou vyráběny z kvalitních materiálů, které zajišťují jejich dlouhou životnost.“",
+      "duvod": "Stránka neuvádí konkrétní materiál ani životnost. Doporučujeme na webu doplnit, z čeho se vlajky šijí."
     },
     {
-      "text": "Věta karty „Vstupní portály představují efektivní způsob, jak upoutat pozornost zákazníka…“",
-      "duvod": "Marketingové hodnocení; z věty je převzato jen umístění „přímo v místě prodeje“."
+      "text": "Věta „Díky pohybu ve větru mohou vlajky přitahovat ještě větší pozornost, což zvyšuje jejich účinnost.“",
+      "duvod": "Srovnávací tvrzení o účinnosti bez měřitelného obsahu. Výčet vhodných míst přebíráme."
     },
     {
-      "text": "Galerie realizací (popisky „Světelný vstupní portál 1“, „Architektonický prvek 1“, „Reklamní vlajka 1“ apod.) a obrázky karet v úvodu (Rossmann, Sagasser, UniCredit)",
-      "duvod": "Popisky fotek a obrázky rozcestníku, ne výrobky ani parametry. Ke každému výrobku je vzat obrázek z jeho sekce."
+      "text": "Věty „V Elektru Drapač milujeme výzvy…“ a „Naší prioritou je najít to nejlepší technické a vizuální řešení.“",
+      "duvod": "Věty mluví o firmě a jejím přístupu, ne o vlastnostech výrobků."
     },
     {
-      "text": "Blok „Jak probíhá výroba světelné reklamy?“ (Obdržíme poptávku → odhad ceny do 2 pracovních dní → nabídka → instalace do 4–8 týdnů)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, ne odpověď o těchto výrobcích; do faq nepatří."
+      "text": "Věta „Vstupní portály představují efektivní způsob, jak upoutat pozornost zákazníka…“",
+      "duvod": "Marketingové hodnocení. Z věty přebíráme jen umístění přímo v místě prodeje."
+    },
+    {
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
+    },
+    {
+      "text": "Galerie realizací, popisky fotek a obrázky karet v úvodu stránky",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
       "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
-      "duvod": "Společné bloky o firmě; tvrzení o firmě a sliby kvality se do popisu výrobků nepřebírají."
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“, „Získat cenovou nabídku“, navigace, kontakty a patička",
-      "duvod": "Ovládací prvky a společné části webu, ne obsah o výrobcích."
+      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     }
   ]
 }

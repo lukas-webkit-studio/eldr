@@ -144,32 +144,44 @@
   ],
   "vynechano": [
     {
-      "text": "Nadpis „Wegeleitsysteme passend zum Raum und zum Bedarf“ (dříve jako vlastnost stránky)",
-      "duvod": "Nadpis sekce, ne štítek vlastnosti. Věta pod ním je ve vrstvě jako provedení výrobku (interiérové, exteriérové i modulové systémy), znovu by se opakovala."
+      "text": "Úvodní věta „Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.“",
+      "duvod": "Věta hodnotí, ale výrobek věcně nepopisuje. Doporučujeme ji na webu nahradit konkrétním popisem."
     },
     {
-      "text": "Galerie (tschechische Alt-Texte „Orientační systém 20“ usw., 30 Fotos)",
-      "duvod": "Popisky fotek v galerii realizací, ne výrobky ani parametry."
+      "text": "Přívlastek „übersichtliche“ u grafiky",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Grafické řešení a jeho provedení přebíráme."
     },
     {
-      "text": "Block „Wie entsteht eine Leuchtreklame?“ (Wir erhalten Ihre Anfrage → Innerhalb von 2 Werktagen: Wir senden eine Kostenschätzung → Unmittelbar danach: Wir erstellen ein maßgeschneidertes Angebot → Innerhalb von 4–8 Wochen: Wir installieren)",
-      "duvod": "Nadpis je otázka, ale pod ním je jen společný postup zakázky (poptávka, odhad ceny, nabídka, instalace) stejný na všech produktových stránkách — ne odpověď o orientačních systémech, proto není ve faq. Lhůty a sliby se do popisu výrobku nepřebírají."
+      "text": "Věta „Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium.“ v odpovědi o materiálech",
+      "duvod": "Hodnocení vzhledu bez údaje. Eloxovaný hliník i další materiály uvádíme přímo u výrobku."
     },
     {
-      "text": "„Führende tschechische und ausländische Unternehmen vertrauen uns“ und der Text darunter",
-      "duvod": "Společný blok o referencích a firmě, ne o výrobku."
+      "text": "Nadpis „Wegeleitsysteme passend zum Raum und zum Bedarf“",
+      "duvod": "Nadpis sekce bez vlastního údaje. Větu pod ním přebíráme jako provedení výrobku."
     },
     {
-      "text": "Block „Warum ist unsere Leuchtreklame die richtige Wahl?“ (6 Punkte) und „Kostengünstige Komplettlösungen für Leuchtreklame vom Entwurf bis zur Montage.“",
-      "duvod": "Tvrzení o firmě a o světelné reklamě obecně (nejdéle působící výrobce, výroba v Česku, LED), ne parametr orientačních systémů."
+      "text": "Úvodní fotka nad sekcí výrobku",
+      "duvod": "Fotka leží mimo sekci výrobku. K výrobku přiřazujeme fotku přímo ze sekce orientačních systémů."
     },
     {
-      "text": "„Unverbindlich anfragen“, „Alle Referenzen“",
-      "duvod": "Tlačítka výzvy k akci bez obsahu."
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
     },
     {
-      "text": "Hero-Foto (alt „Orientační systém se závěsnými cedulemi v hale hypermarketu“)",
-      "duvod": "Mimo sekci výrobku; jako obrázek výrobku použita fotka rozcestníku Globus ze sekce #orientacni-systemy. Pozor: alt obou fotek je na /de česky (Webflow alt nelokalizuje)."
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

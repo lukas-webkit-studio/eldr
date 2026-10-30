@@ -144,32 +144,44 @@
   ],
   "vynechano": [
     {
-      "text": "Nadpis „Orientační systémy podle prostoru i potřeb“ (dříve jako vlastnost stránky)",
-      "duvod": "Nadpis sekce, ne štítek vlastnosti. Věta pod ním je ve vrstvě jako provedení výrobku (interiérové, exteriérové i modulové systémy), znovu by se opakovala."
+      "text": "Úvodní věta „Orientační systém, který bude perfektně sedět vašemu prostoru a zároveň komplexně plnit informační funkci.“",
+      "duvod": "Věta hodnotí, ale výrobek věcně nepopisuje. Doporučujeme ji na webu nahradit konkrétním popisem."
     },
     {
-      "text": "Galerie realizací (popisky „Orientační systém 20“ apod., 30 fotek)",
-      "duvod": "Popisky fotek v galerii realizací, ne výrobky ani parametry."
+      "text": "Přívlastek „přehledné“ u grafiky",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Grafické řešení a jeho provedení přebíráme."
     },
     {
-      "text": "Blok „Jak probíhá výroba světelné reklamy?“ (Obdržíme poptávku → Do 2 pracovních dní: Pošleme odhad ceny → Obratem: Dodáme závaznou nabídku na míru → Do 4-8 týdnů: Instalujeme)",
-      "duvod": "Nadpis je otázka, ale pod ním je jen společný postup zakázky (poptávka, odhad ceny, nabídka, instalace) stejný na všech produktových stránkách — ne odpověď o orientačních systémech, proto není ve faq. Lhůty a sliby se do popisu výrobku nepřebírají."
+      "text": "Věta „Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník.“ v odpovědi o materiálech",
+      "duvod": "Hodnocení vzhledu bez údaje. Eloxovaný hliník i další materiály uvádíme přímo u výrobku."
     },
     {
-      "text": "„Důvěřují nám přední české i zahraniční firmy“ a text pod ním",
-      "duvod": "Společný blok o referencích a firmě, ne o výrobku."
+      "text": "Nadpis „Orientační systémy podle prostoru i potřeb“",
+      "duvod": "Nadpis sekce bez vlastního údaje. Větu pod ním přebíráme jako provedení výrobku."
     },
     {
-      "text": "Blok „Elektro Drapač je zárukou prvotřídní kvality“ (6 bodů) a „Kompletní úsporná řešení světelné reklamy od designu až po montáž.“",
-      "duvod": "Tvrzení o firmě a o světelné reklamě obecně (nejdéle působící výrobce, výroba v Česku, LED), ne parametr orientačních systémů."
+      "text": "Úvodní fotka nad sekcí výrobku",
+      "duvod": "Fotka leží mimo sekci výrobku. K výrobku přiřazujeme fotku přímo ze sekce orientačních systémů."
     },
     {
-      "text": "„Nezávazně poptat“, „Poptat výrobu“, „Získat cenovou nabídku“, „Zobrazit reference“",
-      "duvod": "Tlačítka výzvy k akci bez obsahu."
+      "text": "Fotka rozcestníku Globus na české verzi stránky",
+      "duvod": "Česká stránka ji ukáže až po načtení skriptu, vyhledávače ji proto nevidí. Používáme jinou fotku ze sekce."
     },
     {
-      "text": "Úvodní fotka v hero (alt „Orientační systém se závěsnými cedulemi v hale hypermarketu“)",
-      "duvod": "Leží mimo sekci výrobku (bez kotvy), proto jako obrázek výrobku použita první fotka ze sekce #orientacni-systemy, která je vidět bez JS. Fotka rozcestníku Globus v HTML české verze JE (třída localization-show-only_cs), ale bez JS ji skryje pravidlo v src/eldr.css (.localization-show-only_* {display:none}, zobrazení až přes body.lang-cs z JS). Na /en a /de ji ukáže Webflow pravidlo :lang(), proto tam obrázek výrobku je Globus."
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     }
   ]
 }

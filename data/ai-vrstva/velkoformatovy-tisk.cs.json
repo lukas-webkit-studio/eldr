@@ -375,60 +375,52 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "„{#YOE#} let zkušeností“ (štítek v hero)",
-      "duvod": "Ve snímku bez JS je jen token {#YOE#}, číslo doplní až skript. Navíc jde o tvrzení o firmě, ne o výrobku."
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
     },
     {
-      "text": "Perex nad dlaždicemi „Podívejte se blíže na to, co vás zajímá. Pamatujte, všechno jde uzpůsobit:“",
-      "duvod": "Navigační výzva k dlaždicím, ne popis stránky. Stránka pod H1 jiný perex nemá, proto je page.description null; přizpůsobení pokrývá štítek „Na míru“."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
     },
     {
-      "text": "Dlaždice v hero „Řezaná grafika – Nápisy vyřezané ze samolepicí fólie = dlouhá životnost.“, „Polepy – Reklamní polepy vozů, výloh, oken i podlah.“, „Designové obrazy – Velkoformátové obrazy a nástěnné grafiky…“",
-      "duvod": "Zkrácené opakování textu ze sekcí výrobků; z dlaždic je vzat jen název výrobku (sekce řezané grafiky, polepů a obrazů nemají vlastní nadpis) a u velkoformátového tisku popis."
+      "text": "Dlaždice v úvodu stránky s krátkými popisy výrobků",
+      "duvod": "Dlaždice zkráceně opakují text sekcí. Přebíráme z nich jen názvy výrobků a popis velkoformátového tisku."
     },
     {
-      "text": "Tlačítka „Nezávazně poptat“, „Jak probíhá výroba?“",
-      "duvod": "Odkazy (CTA), ne obsah. „Jak probíhá výroba?“ je odkaz, ne nadpis s odpovědí, proto nejde do faq."
+      "text": "Věta „Výsledek: vizuální prvek, který posiluje atmosféru, podporuje značku…“ u designových obrazů",
+      "duvod": "Slib účinku bez měřitelného obsahu, ne parametr výrobku."
     },
     {
-      "text": "Galerie realizací (popisky „Polep 1“, „Řezaná grafika 3“, „Další druhy polepů 28 - polep auta Rudlof Net.“ apod.)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry."
+      "text": "Odstavce „Klademe důraz na kvalitu a životnost“, „Moderní technologie“ a „Maximální trvanlivost“",
+      "duvod": "Odstavce mluví o vybavení firmy a používají superlativy. Latexový tisk, laminaci a ochranu před poškozením přebíráme."
     },
     {
-      "text": "„Výsledek: vizuální prvek, který posiluje atmosféru, podporuje značku a dělá z interiéru místo, které si zákazníci pamatují i fotí.“ (Designové obrazy)",
-      "duvod": "Marketingový slib účinku bez měřitelného obsahu, ne parametr výrobku."
+      "text": "Věta „Výhodou řezané grafiky je její dlouhá životnost.“",
+      "duvod": "Obecné tvrzení bez čísla. Konkrétní stálobarevnost fólií až sedm let přebíráme."
     },
     {
-      "text": "Blok „Jak probíhá výroba světelné reklamy?“ (Obdržíme poptávku → Pošleme odhad ceny → nabídka → Instalujeme)",
-      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, navíc o světelné reklamě, ne o tisku a polepech. Do faq nejde."
+      "text": "Obrat „na všechny typy“ u použití řezané grafiky",
+      "duvod": "Absolutní tvrzení, které odporuje uvedenému omezení u barevných přechodů. Přebíráme jen reklamní a informační nápisy."
     },
     {
-      "text": "„Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
-      "duvod": "Společné bloky o firmě (o světelné reklamě), ne o výrobcích této stránky."
+      "text": "Věta „Návrh grafiky připravíme s vámi a zajistíme profesionální aplikaci.“ u polepů vozidel",
+      "duvod": "Věta popisuje službu firmy, ne vlastnost polepu."
     },
     {
-      "text": "vlastnost „stálobarevnost: minimálně po dobu tří let“",
-      "duvod": "Název vlastnosti vytržený z věty (není štítek na stránce); celá věta o stálobarevnosti zůstává ve vlastnosti „Zpracování“."
+      "text": "Tlačítka „Nezávazně poptat“, „Jak probíhá výroba?“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
     },
     {
-      "text": "Klademe důraz na kvalitu a životnost – Moderní velkoformátový tisk realizujeme na vlastní tiskárně s latexovou technologií a ochrannou laminací, díky čemuž dosahujeme sytých barev a dlouhodobé odolnosti i v exteriéru.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Zpracování“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a mluví o světelné reklamě, ne o tisku a polepech."
     },
     {
-      "text": "Moderní technologie – Vlastníme moderní tiskárnu určenou pro digitální tisk velkoplošných reklam a bannerů. Používáme technologii latexového tisku. Ta umožňuje dosáhnout plných, sytých a dlouhodobě stálých barev, a to i u detailních grafických návrhů a náročných barevných kombinací.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Zpracování“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
     },
     {
-      "text": "Maximální trvanlivost – Tisky laminujeme, čímž se postaráme o maximální trvanlivost barev, a to hlavně u tisků venku, vystavených neustálému slunečnímu záření. Laminace chrání reklamu rovněž před mechanickým poškozením a na výběr je mezi lesklou či matnou laminovací fólií.",
-      "duvod": "Mezititulek sekce, ne štítek vlastnosti; text je o firmě (vlastní tiskárna, „maximální“ trvanlivost) a technologické údaje (latex, laminace) už jsou ve vlastnosti „Zpracování“. Nový údaj o ochraně před mechanickým poškozením převzat do provedení."
-    },
-    {
-      "text": "vlastnost „stálobarevnost: až sedm let“",
-      "duvod": "Název vlastnosti vytržený z věty; údaj o stálobarevnosti fólií zůstává ve vlastnosti „Materiály“."
-    },
-    {
-      "text": "Neumožňuje zhotovení například barevných přechodů a složitějších motivů v takové kvalitě jako digitální tisk. V případě potřeby proto tyto dvě techniky kombinujeme.",
-      "duvod": "Omezení techniky, ne provedení; zůstává ve vlastnosti „Zpracování“."
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     }
   ]
 }

@@ -392,36 +392,56 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Galerie realizací (popisky „Světelný panel 1“, „Plexintarzie 1“, „Reklamní tabule 1“, „Menuboard 1“ apod. — alt texty jsou i na /de česky)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. Z každé galerie převzat jen první obrázek jako obrázek výrobku."
+      "text": "Obrat „mit erstklassiger Verarbeitung und hochwertigem Design“ v úvodní větě",
+      "duvod": "Superlativ bez měřitelného obsahu. Z úvodní věty přebíráme výrobu na míru do velikosti 100 m²."
     },
     {
-      "text": "Profilové nákresy u sekcí (Profil 12_DE, Profil 10_DE, Profil 11_DE, Profil 5s_DE) s prázdným alt",
-      "duvod": "Jsou jen v EN a DE, v CS chybí; obrázek výrobku bere galerijní fotku s neprázdným alt, aby byl ve všech jazycích stejný."
+      "text": "Obrat „die für lange Lebensdauer und hochwertige Ausleuchtung sorgt“ u světelných panelů",
+      "duvod": "Hodnoticí obrat bez čísla. Materiály rámu a přední plochy přebíráme."
     },
     {
-      "text": "Krátké popisy na kartách v přehledu (např. „Ein modernes Werbeelement, das dank leuchtender Vorderseite für hohe Sichtbarkeit sorgt.“)",
-      "duvod": "Upoutávky na sekce níž; věcný obsah je pokrytý podrobným popisem v sekci. Z karty Werbetafeln převzato jen použití „zur Kennzeichnung und Orientierung im Raum“."
+      "text": "Obrat „ist eine der einfachsten Lösungen für ein Werbeelement“ u reklamních tabulí",
+      "duvod": "Superlativ bez měřitelného obsahu. Přebíráme jen to, že jde o nesvětelnou desku."
     },
     {
-      "text": "Štítky „Einfache Montage“, „Attraktive Optik“, „Lichtaura“, „Niedriger Anschaffungspreis“, „Schnelle Lieferung“, „Einfacher Wechsel“, „Lange Lebensdauer“",
-      "duvod": "Marketingové štítky bez měřitelného obsahu nebo sliby ceny a lhůty. Lichtaura je převzata z popisu herausragende Intarsie. Štítek „Leuchtende Vorderseite“ převzat jako provedení světelného panelu."
+      "text": "Obrat „widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen“ u menuboardů",
+      "duvod": "Stránka neuvádí konkrétní materiál ani životnost. Přebíráme přizpůsobení materiálů pro výměnu grafiky."
     },
     {
-      "text": "„Sehen Sie sich genauer an, was Sie interessiert. Und denken Sie daran: Alles lässt sich anpassen:“",
-      "duvod": "Navigační věta bez konkrétního údaje."
+      "text": "Krátké popisy na kartách, např. „Ein modernes Werbeelement, das dank leuchtender Vorderseite für hohe Sichtbarkeit sorgt.“",
+      "duvod": "Karty jen upoutávají na sekce níže. Věcné údaje přebíráme z podrobnějších popisů v sekcích."
     },
     {
-      "text": "Odkaz „So läuft die Produktion ab“ v sekci intarzie a blok „Wie entsteht eine Leuchtreklame?“ (Anfrage → Kostenschätzung → Angebot → Installation)",
-      "duvod": "Není to FAQ: odkaz je tlačítko, blok je společný průběh zakázky na všech produktových stránkách. Lhůty se do popisu výrobků nepřebírají."
+      "text": "Štítky „Attraktive Optik“, „Niedriger Anschaffungspreis“, „Schnelle Lieferung“, „Lange Lebensdauer“ a další",
+      "duvod": "Štítky hodnotí nebo slibují cenu a lhůtu bez čísla. Světelnou auru a svítící čelo přebíráme z popisů."
     },
     {
-      "text": "„Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
-      "duvod": "Společné bloky o firmě, ne o výrobcích na této stránce."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
     },
     {
-      "text": "Vlastnosti stránky vytažené z perexu: „Größe → bis zu einer Größe von 100 m²“; „Leuchtpaneele fertigen wir → maßgeschneidert nach Ihren Bedürfnissen“",
-      "duvod": "Názvy vlastností nejsou štítky, ale slova vytržená z věty (ověřovatel 30. 10. 2026). Perex zůstává jako popis stránky; údaj o maximální velikosti přesunut jako provedení k výrobku Světelné panely, o kterém věta mluví. „Na míru vašim potřebám“ je obecný slib bez parametru."
+      "text": "Profilové nákresy u sekcí bez popisku",
+      "duvod": "Nákresy jsou jen v anglické a německé verzi. U výrobků používáme fotky, které jsou ve všech jazycích stejné."
+    },
+    {
+      "text": "Tlačítka „Unverbindlich anfragen“, „So läuft die Produktion ab“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
     }
   ]
 }

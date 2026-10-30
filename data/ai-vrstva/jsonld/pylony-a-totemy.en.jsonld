@@ -6,7 +6,6 @@
       "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#webpage",
       "url": "https://www.eldr.cz/en/produkty/pylony-a-totemy",
       "name": "Advertising pylons and totems",
-      "description": "We produce custom illuminated advertising to meet your needs, with top-quality craftsmanship and design.",
       "inLanguage": "en",
       "isPartOf": {
         "@type": "WebSite",
@@ -30,13 +29,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "Elektro Drapač",
           "item": "https://www.eldr.cz/en"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Products",
+          "name": "Our products",
           "item": "https://www.eldr.cz/en/produkty"
         },
         {
@@ -51,7 +50,6 @@
       "@type": "Service",
       "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#sluzba",
       "name": "Advertising pylons and totems",
-      "description": "We produce custom illuminated advertising to meet your needs, with top-quality craftsmanship and design.",
       "provider": {
         "@type": "Organization",
         "@id": "https://www.eldr.cz/#organization"
@@ -80,7 +78,7 @@
               "@type": "Service",
               "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#pylony",
               "name": "Pylons",
-              "description": "Advertisements featuring the company logo, displayed on a steel structure of variable height in a prime location. Eye-catching and visible even from greater distances, making them particularly effective.",
+              "description": "Advertisements featuring the company logo, displayed on a steel structure of variable height in a prime location.",
               "url": "https://www.eldr.cz/en/produkty/pylony-a-totemy#pylony",
               "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17b135f506b8f149faa_648b93d0e4fd3f1c74afa950_Sve%25CC%258Ctelny%25CC%2581%2520pylon%2520(1).webp",
               "additionalProperty": [
@@ -124,7 +122,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Graphics",
-                  "value": "the display area can feature text, logos, and images designed to capture maximum attention. Illumination is provided by energy-saving LED diodes. Totems can be shaped, curved, or enhanced with 3D lettering."
+                  "value": "the display area can feature text, logos, and images"
                 },
                 {
                   "@type": "PropertyValue",
@@ -138,8 +136,18 @@
                 },
                 {
                   "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Illumination is provided by energy-saving LED diodes."
+                },
+                {
+                  "@type": "PropertyValue",
                   "name": "Variant",
                   "value": "Illuminated and non-illuminated"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Totems can be shaped, curved, or enhanced with 3D lettering."
                 },
                 {
                   "@type": "PropertyValue",
@@ -149,7 +157,7 @@
                 {
                   "@type": "PropertyValue",
                   "name": "Variant",
-                  "value": "The shape and design can be customised to suit your needs, offering broad promotional possibilities."
+                  "value": "The shape and design can be customised to suit your needs"
                 },
                 {
                   "@type": "PropertyValue",

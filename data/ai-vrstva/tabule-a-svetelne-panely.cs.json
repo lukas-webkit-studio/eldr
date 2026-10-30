@@ -392,32 +392,48 @@
   "faq": [],
   "vynechano": [
     {
-      "text": "Galerie realizací (popisky „Světelný panel 1“, „Plexintarzie 1“, „Reklamní tabule 1“, „Menuboard 1“ apod.)",
-      "duvod": "Popisky fotek, ne výrobky ani parametry. Z každé galerie převzat jen první obrázek jako obrázek výrobku."
+      "text": "Obrat „se špičkovým zpracováním a designem“ v úvodní větě",
+      "duvod": "Superlativ bez měřitelného obsahu. Z úvodní věty přebíráme výrobu na míru do velikosti 100 m²."
     },
     {
-      "text": "Krátké popisy na kartách v přehledu (např. „Moderní reklamní prvek, který zajišťuje vysokou viditelnost díky svítící čelní straně.“)",
-      "duvod": "Upoutávky na sekce níž; věcný obsah je pokrytý podrobným popisem v sekci. Z karty Reklamní tabule převzato jen použití „sloužící k označení a orientaci v prostoru“."
+      "text": "Obrat „která zajišťuje dlouhou životnost a kvalitní prosvětlení“ u světelných panelů",
+      "duvod": "Hodnoticí obrat bez čísla. Materiály rámu a přední plochy přebíráme."
     },
     {
-      "text": "Štítky „Nenáročné na montáž“, „Atraktivní vzhled“, „Světelná aura“, „Nízká pořizovací cena“, „Rychlé dodání“, „Snadná výměna“, „Dlouhá životnost“",
-      "duvod": "Marketingové štítky bez měřitelného obsahu nebo sliby ceny a lhůty. Světelná aura je převzata z popisu vystouplé intarzie, kde je vysvětlená. Štítek „Svítící čelní strana“ převzat jako provedení světelného panelu."
+      "text": "Obrat „je jedním z nejjednodušších řešení reklamního prvku“ u reklamních tabulí",
+      "duvod": "Superlativ bez měřitelného obsahu. Přebíráme jen to, že jde o nesvětelnou desku."
     },
     {
-      "text": "„Podívejte se blíže na to, co vás zajímá. Pamatujte, všechno jde uzpůsobit:“",
-      "duvod": "Navigační věta bez konkrétního údaje."
+      "text": "Obrat „odolné materiály, které zajišťují dlouhou životnost“ u menuboardů",
+      "duvod": "Stránka neuvádí konkrétní materiál ani životnost. Přebíráme přizpůsobení materiálů pro výměnu grafiky."
     },
     {
-      "text": "Odkaz „Jak probíhá výroba?“ v sekci intarzie a blok „Jak probíhá výroba světelné reklamy?“ (Obdržíme poptávku → Pošleme odhad ceny → nabídka → Instalujeme)",
-      "duvod": "Není to FAQ: odkaz je tlačítko, blok je společný průběh zakázky na všech produktových stránkách, ne odpověď o těchto výrobcích. Lhůty se do popisu výrobků nepřebírají."
+      "text": "Krátké popisy na kartách, např. „Moderní reklamní prvek, který zajišťuje vysokou viditelnost díky svítící čelní straně.“",
+      "duvod": "Karty jen upoutávají na sekce níže. Věcné údaje přebíráme z podrobnějších popisů v sekcích."
     },
     {
-      "text": "„Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
-      "duvod": "Společné bloky o firmě, ne o výrobcích na této stránce."
+      "text": "Štítky „Atraktivní vzhled“, „Nízká pořizovací cena“, „Rychlé dodání“, „Dlouhá životnost“ a další",
+      "duvod": "Štítky hodnotí nebo slibují cenu a lhůtu bez čísla. Světelnou auru a svítící čelo přebíráme z popisů."
     },
     {
-      "text": "Vlastnosti stránky vytažené z perexu: „velikosti → do velikosti 100 m²“; „Světelné panely vyrábíme → na míru vašim potřebám“",
-      "duvod": "Názvy vlastností nejsou štítky, ale slova vytržená z věty (ověřovatel 30. 10. 2026). Perex zůstává jako popis stránky; údaj o maximální velikosti přesunut jako provedení k výrobku Světelné panely, o kterém věta mluví. „Na míru vašim potřebám“ je obecný slib bez parametru."
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
+    },
+    {
+      "text": "Tlačítka „Nezávazně poptat“, „Jak probíhá výroba?“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
     }
   ]
 }
