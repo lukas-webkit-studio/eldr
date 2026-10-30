@@ -1,0 +1,364 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#webpage",
+      "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely",
+      "name": "Světelné panely a tabule",
+      "description": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem.",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Domů",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Světelné panely a tabule",
+          "item": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#sluzba",
+      "name": "Světelné panely a tabule",
+      "description": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#katalog",
+        "name": "Světelné panely a tabule",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#svetelne-panely",
+              "name": "Světelné panely",
+              "description": "Box s hliníkovým rámem, který na přední straně využívá prosvětlovací materiál.",
+              "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#svetelne-panely",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f2298e32104ea8387_64914456ce1ed295b0e48957_Sve%25CC%258Ctelny%25CC%2581%2520panel%2520().webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku. Tyto grafické možnosti umožňují přizpůsobení vzhledu panelu podle potřeby a specifických požadavků."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "světelné panely se dají snadno namontovat na budovy či pylony."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Přední plocha z plexiskla nebo prosvětlovací vinylové plachty"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "do velikosti 100 m²"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "V nabídce je několik variant, včetně plachtového a plexisklového panelu a varianty s 3D písmem."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Svítící čelní strana"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "se dají snadno namontovat na budovy či pylony"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#intarzie",
+              "name": "Plexi intarzie",
+              "description": "Intarzie je světelný panel s vystouplými nebo vnořenými znaky.",
+              "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#intarzie",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a105a11d00d56e90552c_6492100095d82614b3c59ea3_Plexintarzie%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "jedná se o vhodnější provedení u malých nápisů s velice tenkým fontem písma, kdy by nebylo možné tvarovat jako samostatný 3D nápis."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "kostru tvoří rám a zadní strana z hliníku. Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "výhodou např. u historických budov, kde není možnost vrtat do fasády – elektropřívod je veden pouze do jednoho místa."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "kostru tvoří rám a zadní strana z hliníku"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "vystouplá, nebo podložená"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Podle provedení se intarzie liší vzhledem i cenou. Rozdíl je v tom, jestli znaky vystupují nad úroveň panelu, nebo jsou pod ní."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "u malých nápisů s velice tenkým fontem písma"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "u historických budov, kde není možnost vrtat do fasády"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#vystoupla-plexi-intarzie",
+              "name": "Vystouplá plexi intarzie",
+              "description": "Znaky jsou nad úrovní panelu a vytvářejí 3D efekt.",
+              "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#intarzie",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "světelné znaky z masivního plexiskla"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Do čelní strany jsou prořezané otvory, do nichž jsou vsazeny světelné znaky z masivního plexiskla."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Díky prosvětleným bokům písmen vzniká světelná aura."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#podlozena-plexi-intarzie",
+              "name": "Podložená plexi intarzie",
+              "description": "Znaky jsou pod úrovní panelu.",
+              "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#intarzie",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Jde o ekonomičtější variantu, neboť se znaky nemusejí tvarovat a výroba je méně pracná."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "U tohoto provedení nevzniká světelná aura."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#reklamni-tabule",
+              "name": "Reklamní tabule",
+              "description": "Reklamní tabule, neboli nesvětelná reklamní deska, je jedním z nejjednodušších řešení reklamního prvku.",
+              "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#reklamni-tabule",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a182a11d00d56e90ca24_64914091d08ddae77be92e2c_1.webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "sdělení na jejich povrchu může být zrealizováno tištěnou či řezanou grafikou, pískováním a gravírováním."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "jedná se o nesvětelné desky vyráběné z různých materiálů, jako je hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "označení provozoven, informační nebo orientační účely. Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "tištěnou či řezanou grafikou, pískováním a gravírováním"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "grafiku na tabuli lze znovu přelepit"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "označení provozoven, informační nebo orientační účely"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "sloužící k označení a orientaci v prostoru"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#menuboardy",
+              "name": "Menuboardy/infoboardy",
+              "description": "Menuboardy jsou speciální panely s vyměnitelnými motivy. Mohou být oboustranné pro snadnou výměnu.",
+              "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely#menuboardy",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f9b1fb16baa83187b_64913c4a32d5e1196d2a731d_1.webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "umožňují zobrazení aktuálních nabídek pomocí vyměnitelných motivů. Grafiku lze snadno měnit a přizpůsobovat."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "používají se především v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "odolné materiály, které zajišťují dlouhou životnost"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Mohou být oboustranné pro snadnou výměnu."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

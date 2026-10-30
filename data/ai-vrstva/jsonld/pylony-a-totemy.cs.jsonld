@@ -1,0 +1,230 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#webpage",
+      "url": "https://www.eldr.cz/produkty/pylony-a-totemy",
+      "name": "Reklamní pylony a totemy",
+      "description": "Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Domů",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Reklamní pylony a totemy",
+          "item": "https://www.eldr.cz/produkty/pylony-a-totemy"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#sluzba",
+      "name": "Reklamní pylony a totemy",
+      "description": "Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/pylony-a-totemy",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Výška reklamních věží",
+          "value": "od 1 do 40 metrů"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Výroba reklamních pylonů a totemů od A do Z",
+          "value": "Reklamní pylony a totemy jsme schopni zpracovat kompletně na klíč nebo navázat na jakoukoliv fázi již probíhajícího projektu. Vypracujeme projekt, vizualizaci, statické výpočty a certifikáty použitého materiálu plus výrobní dokumentaci. Taktéž zajistíme světelné studie a revize. Při přípravě projektu umíme pomocí naší vysokozdvižné techniky zajistit simulaci umístění a výšky totemu přímo na místě."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#katalog",
+        "name": "Reklamní pylony a totemy",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#pylony",
+              "name": "Pylony",
+              "description": "Reklamy nesoucí logo společnosti na libovolně vysoké ocelové konstrukci na příhodném místě. Nepřehlédnutelný i z velké dálky, a proto velmi účinný.",
+              "url": "https://www.eldr.cz/produkty/pylony-a-totemy#pylony",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17b135f506b8f149faa_648b93d0e4fd3f1c74afa950_Sve%25CC%258Ctelny%25CC%2581%2520pylon%2520(1).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "koruna pylonu je klíčovou částí, kde může být umístěna světelná nebo nesvětelná reklama, nápis nebo logo. Tvar koruny může být jednostranný, oboustranný, trojúhelníkový nebo čtvercový."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "noha pylonu je žárově zinková pro zamezení koroze, nebo je opatřena antikorozním nátěrem. Světelné panely jsou vybaveny úspornými LED diodami."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "označování hypermarketů, obchodních center, sídel firem a čerpacích stanic. Pro kotvení je nutný betonový základ dle statického posudku. Pro lepší bezpečnost a servis lze přidat servisní lávky."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "noha pylonu je žárově zinková pro zamezení koroze, nebo je opatřena antikorozním nátěrem"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Světelné panely jsou vybaveny úspornými LED diodami."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Tvar koruny může být jednostranný, oboustranný, trojúhelníkový nebo čtvercový."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "světelná nebo nesvětelná reklama, nápis nebo logo"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Pro lepší bezpečnost a servis lze přidat servisní lávky."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Vyrábíme je individuálně, přesně dle zákazníkova přání."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "označování hypermarketů, obchodních center, sídel firem a čerpacích stanic"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/pylony-a-totemy#totemy",
+              "name": "Totemy",
+              "description": "Reklamy, které upoutají pozornost na cestě a zároveň fungují jako orientační body, usnadňující pohyb v okolí a zajišťující snadnou navigaci.",
+              "url": "https://www.eldr.cz/produkty/pylony-a-totemy#totemy",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fbe13855e17ee6d891_648b94c3ab4adc28ad1284d6_Sve%25CC%258Ctelny%25CC%2581%2520totem%2520(0001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "může zahrnovat texty, loga i obrázky navrženy tak, aby přitahovaly pozornost. Osvětlení zajišťují úsporné LED diody. Totemy lze tvarovat, klenout nebo doplnit o 3D nápisy."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "kotví se do betonového základu. Menší vystačí s hliníkovou či ocelovou konstrukcí s žárovou úpravou zinkováním. Opláštění může být z akrylátu, kompozitu i hliníkových plechů dle přání zákazníka."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "na příjezdových komunikacích, u vjezdu do areálů, čerpacích stanic, obchodních domů nebo tam, kde je potřeba označení a navigace. Slouží i jako orientační systémy firem a interiérů."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Menší vystačí s hliníkovou či ocelovou konstrukcí s žárovou úpravou zinkováním."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Opláštění může být z akrylátu, kompozitu i hliníkových plechů dle přání zákazníka."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Osvětlení zajišťují úsporné LED diody."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Světelné i nesvětelné"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Totemy lze tvarovat, klenout nebo doplnit o 3D nápisy."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Samostatně stojící reklamy"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Tvar a design může být přizpůsoben potřebám (široké možnosti propagace)."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Vyrábíme je individuálně, přesně dle zákazníkova přání."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "na příjezdových komunikacích, u vjezdu do areálů, čerpacích stanic, obchodních domů nebo tam, kde je potřeba označení a navigace"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Slouží i jako orientační systémy firem a interiérů."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#webpage",
+      "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
+      "name": "Zámečnické konstrukce na míru, opracování plexiskla",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Domů",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Zámečnické konstrukce na míru, opracování plexiskla",
+          "item": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#sluzba",
+      "name": "Zámečnické konstrukce na míru, opracování plexiskla",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#katalog",
+        "name": "Zámečnické konstrukce na míru, opracování plexiskla",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#zamecnicke-konstrukce",
+              "name": "Zámečnické konstrukce",
+              "description": "Reklamní nosiče vyrábíme na míru přímo v našich výrobních prostorách.",
+              "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#zamecnicke-konstrukce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf38b809890ddb04924_zamecnicke-konstrukce-p-800.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiály",
+                  "value": "disponujeme technologiemi pro svařování, ohýbání a další obrábění kovů. Pracujeme s materiály jako železo, ocel, hliník a nerez, podle konkrétních požadavků projektu a norem."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Montáž",
+                  "value": "konstrukce instalujeme s ohledem na statiku, bezpečnost a dlouhodobou odolnost, aby výsledné řešení spolehlivě fungovalo v každém prostředí."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "železo, ocel, hliník a nerez"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Interiér i exteriér"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#atypicke-zamecnicke-konstrukce",
+              "name": "Atypické zámečnické konstrukce",
+              "description": "Realizujeme širokou škálu nestandardních řešení, která vyžadují individuální přístup, technické know-how a kvalitní řemeslné provedení.",
+              "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#atypicke-zamecnicke-konstrukce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa37f0584ee19b4f9bd605a_atypicke-zamecnicke-konstrukce-p-1600.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Typické realizace",
+                  "value": "fotbalové střídačky a branky, autobusové zastávky, stříšky a pergoly, zábradlí apod."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiály a technologie",
+                  "value": "disponujeme technologiemi pro svařování, ohýbání a další obrábění kovů. Pracujeme s materiály jako železo, ocel, hliník a nerez, vždy podle konkrétních požadavků projektu a plánovaného využití konstrukce."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "železo, ocel, hliník a nerez"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "fotbalové střídačky a branky, autobusové zastávky, stříšky a pergoly, zábradlí apod."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Každý projekt přizpůsobujeme požadavkům, provozu i prostředí, ve kterém bude stát."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#opracovani-a-prodej-plexiskla",
+              "name": "Opracování a prodej plexiskla, polykarbonátu",
+              "description": "Materiál formátujeme s přesností na 1/10 mm o řezné ploše 2 000 × 4 000 mm.",
+              "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla#opracovani-a-prodej-plexiskla",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa31bf4b3b526cb1fb2c55c_opracovani-a-prodej-plexiskla.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Sériová výroba",
+                  "value": "zajišťujeme sériovou výrobu plexi krytů, stojánků i ochranných štítů."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Technologické zázemí",
+                  "value": "disponujeme plně vybavenou „plexikárnou“ s profesionální technikou, včetně vertikálních pil a formátovacích pil"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Pokročilé techniky opracování",
+                  "value": "používáme profesionální postupy opracování plexiskla, jako je leštění hran diamantovou bruskou, opalování hran plamenem a tvarování materiálu za tepla v peci."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "plexiskla, polykarbonátu"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Velkorozměrné"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "plexi krytů, stojánků i ochranných štítů"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "leštění hran diamantovou bruskou, opalování hran plamenem a tvarování materiálu za tepla v peci"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Naše řešení využívají truhláři, optiky, banky i orchestry."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Spolupracujeme s výrobci interiérových prvků (nábytek)."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

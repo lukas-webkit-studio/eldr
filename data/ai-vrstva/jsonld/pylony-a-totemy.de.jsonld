@@ -1,0 +1,230 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#webpage",
+      "url": "https://www.eldr.cz/de/produkty/pylony-a-totemy",
+      "name": "Werbepylone und Totems",
+      "description": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und Design, das auf Ihre Bedürfnisse zugeschnitten ist.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkte",
+          "item": "https://www.eldr.cz/de/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Werbepylone und Totems",
+          "item": "https://www.eldr.cz/de/produkty/pylony-a-totemy"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#sluzba",
+      "name": "Werbepylone und Totems",
+      "description": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und Design, das auf Ihre Bedürfnisse zugeschnitten ist.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/de/produkty/pylony-a-totemy",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Die Höhe der Werbetürme",
+          "value": "von 1 bis 40 Metern"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Herstellung von Werbepylonen und Totems von A bis Z",
+          "value": "Wir können Werbepylone und Totems komplett schlüsselfertig realisieren oder in jeder Phase in ein laufendes Projekt einsteigen. Wir erstellen die Projektplanung, Visualisierung, statischen Berechnungen, Materialzertifikate und Fertigungsunterlagen. Außerdem kümmern wir uns um Lichtstudien und Prüfungen. Bei der Projektvorbereitung können wir mithilfe unserer Hebetechnik die Position und Höhe des Totems direkt vor Ort simulieren."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#katalog",
+        "name": "Werbepylone und Totems",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#pylony",
+              "name": "Pylone",
+              "description": "Werbung mit dem Firmenlogo auf einer beliebig hohen Stahlkonstruktion an einem geeigneten Standort. Auch aus großer Entfernung gut sichtbar und daher sehr wirkungsvoll.",
+              "url": "https://www.eldr.cz/de/produkty/pylony-a-totemy#pylony",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17b135f506b8f149faa_648b93d0e4fd3f1c74afa950_Sve%25CC%258Ctelny%25CC%2581%2520pylon%2520(1).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Die Krone des Pylons ist der zentrale Teil, an dem beleuchtete oder unbeleuchtete Werbung, Schriftzüge oder Logos angebracht werden können. Die Krone kann einseitig, beidseitig, dreieckig oder quadratisch sein."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Der Fuß des Pylons ist zur Verhinderung von Korrosion feuerverzinkt oder mit einer Korrosionsschutzbeschichtung versehen. Die Lichtpaneele sind mit energiesparenden LED-Dioden ausgestattet."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Aufstellung",
+                  "value": "Kennzeichnung von Hypermärkten, Einkaufszentren, Firmensitzen und Tankstellen. Für die Verankerung ist gemäß statischer Berechnung ein Betonfundament erforderlich. Für mehr Sicherheit und besseren Service können Wartungsstege angebracht werden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Der Fuß des Pylons ist zur Verhinderung von Korrosion feuerverzinkt oder mit einer Korrosionsschutzbeschichtung versehen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Die Lichtpaneele sind mit energiesparenden LED-Dioden ausgestattet."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Die Krone kann einseitig, beidseitig, dreieckig oder quadratisch sein."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "beleuchtete oder unbeleuchtete Werbung, Schriftzüge oder Logos"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Für mehr Sicherheit und besseren Service können Wartungsstege angebracht werden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Wir fertigen sie individuell, genau nach den Wünschen des Kunden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Kennzeichnung von Hypermärkten, Einkaufszentren, Firmensitzen und Tankstellen"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/pylony-a-totemy#totemy",
+              "name": "Totems",
+              "description": "Werbung, die auf der Straße Aufmerksamkeit erregt und gleichzeitig als Orientierungspunkt dient, erleichtert die Fortbewegung in der Umgebung und sorgt für eine einfache Navigation.",
+              "url": "https://www.eldr.cz/de/produkty/pylony-a-totemy#totemy",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fbe13855e17ee6d891_648b94c3ab4adc28ad1284d6_Sve%25CC%258Ctelny%25CC%2581%2520totem%2520(0001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Kann Texte, Logos und Bilder enthalten, die so gestaltet sind, dass sie Aufmerksamkeit erregen. Die Beleuchtung erfolgt durch energiesparende LEDs. Die Totems können geformt, gewölbt oder mit 3D-Beschriftungen ergänzt werden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Verankerung im Betonfundament. Für kleinere Totems genügt eine Aluminiumkonstruktion oder eine feuerverzinkte Stahlkonstruktion. Die Verkleidung kann je nach Kundenwunsch aus Acrylat, Verbundwerkstoff oder Aluminiumblech bestehen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Aufstellung",
+                  "value": "an Zufahrtsstraßen, an Einfahrten zu Geländen, Tankstellen, Kaufhäusern oder überall dort, wo Beschilderung und Navigation erforderlich sind. Dienen auch als Orientierungssysteme für Betriebe und Innenräume."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Für kleinere Totems genügt eine Aluminiumkonstruktion oder eine feuerverzinkte Stahlkonstruktion."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Die Verkleidung kann je nach Kundenwunsch aus Acrylat, Verbundwerkstoff oder Aluminiumblech bestehen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Die Beleuchtung erfolgt durch energiesparende LEDs."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Beleuchtet und unbeleuchtet"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Die Totems können geformt, gewölbt oder mit 3D-Beschriftungen ergänzt werden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Freistehende Werbung"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Form und Design können an die Bedürfnisse angepasst werden (breite Auswahl an Werbemöglichkeiten)."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Wir fertigen sie individuell, genau nach den Wünschen des Kunden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "an Zufahrtsstraßen, an Einfahrten zu Geländen, Tankstellen, Kaufhäusern oder überall dort, wo Beschilderung und Navigation erforderlich sind"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Dienen auch als Orientierungssysteme für Betriebe und Innenräume."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

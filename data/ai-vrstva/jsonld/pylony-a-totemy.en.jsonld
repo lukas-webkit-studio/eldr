@@ -1,0 +1,230 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#webpage",
+      "url": "https://www.eldr.cz/en/produkty/pylony-a-totemy",
+      "name": "Advertising pylons and totems",
+      "description": "We produce custom illuminated advertising to meet your needs, with top-quality craftsmanship and design.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://www.eldr.cz/en/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Advertising pylons and totems",
+          "item": "https://www.eldr.cz/en/produkty/pylony-a-totemy"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#sluzba",
+      "name": "Advertising pylons and totems",
+      "description": "We produce custom illuminated advertising to meet your needs, with top-quality craftsmanship and design.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/produkty/pylony-a-totemy",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "height",
+          "value": "from 1 to 40 metres"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Advertising pylons and totems from design to installation",
+          "value": "We can deliver advertising pylons and totems as a complete turnkey project or take over at any stage of an existing project. We prepare the project design, visualisation, structural calculations, material certificates and production documentation. We also arrange lighting studies and inspections. During project preparation, we can use our lifting equipment to simulate the position and height of the totem on site."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#katalog",
+        "name": "Advertising pylons and totems",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#pylony",
+              "name": "Pylons",
+              "description": "Advertisements featuring the company logo, displayed on a steel structure of variable height in a prime location. Eye-catching and visible even from greater distances, making them particularly effective.",
+              "url": "https://www.eldr.cz/en/produkty/pylony-a-totemy#pylony",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17b135f506b8f149faa_648b93d0e4fd3f1c74afa950_Sve%25CC%258Ctelny%25CC%2581%2520pylon%2520(1).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "the pylon crown is the primary section where illuminated or non-illuminated advertising, text, or a logo can be placed. The crown can be single-sided, double-sided, triangular, or square."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "the pylon base is galvanised to minimise corrosion or treated with an anti-corrosion coating. The illuminated panels are fitted with energy-saving LED diodes."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "signage for hypermarkets, shopping centres, company headquarters, and petrol stations. A concrete foundation is required for anchoring, as specified in the structural assessment. For improved safety and easier servicing, service platforms can be added."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "the pylon base is galvanised to minimise corrosion or treated with an anti-corrosion coating"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "The illuminated panels are fitted with energy-saving LED diodes."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "The crown can be single-sided, double-sided, triangular, or square."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "illuminated or non-illuminated advertising, text, or a logo"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "For improved safety and easier servicing, service platforms can be added."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "We custom-manufacture every structure precisely according to the client's specifications"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "signage for hypermarkets, shopping centres, company headquarters, and petrol stations"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/pylony-a-totemy#totemy",
+              "name": "Totems",
+              "description": "Advertisements designed to attract attention on the road while simultaneously serving as prominent landmarks, simplifying movement in the area and guaranteeing easy navigation.",
+              "url": "https://www.eldr.cz/en/produkty/pylony-a-totemy#totemy",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fbe13855e17ee6d891_648b94c3ab4adc28ad1284d6_Sve%25CC%258Ctelny%25CC%2581%2520totem%2520(0001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "the display area can feature text, logos, and images designed to capture maximum attention. Illumination is provided by energy-saving LED diodes. Totems can be shaped, curved, or enhanced with 3D lettering."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Anchored in a concrete foundation. Smaller units can use an aluminium frame or a hot-dip galvanised steel frame. The cladding can be made of acrylic, composite material or aluminium sheets, to suit the customer’s requirements."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "on access roads, at the entrances to complexes, petrol stations, department stores, or wherever signage and navigation are required. Can serve as an orientation system for companies and interiors."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Smaller units can use an aluminium frame or a hot-dip galvanised steel frame."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "The cladding can be made of acrylic, composite material or aluminium sheets, to suit the customer’s requirements."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Illumination is provided by energy-saving LED diodes."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Illuminated and non-illuminated"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Totems can be shaped, curved, or enhanced with 3D lettering."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Freestanding advertisements"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "The shape and design can be customised to suit your needs, offering broad promotional possibilities."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "We custom-manufacture every structure precisely according to the client's specifications"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "on access roads, at the entrances to complexes, petrol stations, department stores, or wherever signage and navigation are required"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "Can serve as an orientation system for companies and interiors."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

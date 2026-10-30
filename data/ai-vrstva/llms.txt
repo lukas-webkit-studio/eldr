@@ -1,0 +1,60 @@
+# ELEKTRO DRAPAČ s.r.o. (ELDR)
+
+> Výroba naší světelné reklamy probíhá kompletně v Česku. Světelnou reklamu navrhneme na míru podle firemní identity. Poskytujeme profesionální instalaci a servis.
+
+Web je ve třech jazycích: čeština (hlavní), angličtina (/en) a němčina (/de).
+Každá produktová stránka má strukturovaná data JSON-LD; všechny údaje v nich jsou převzaté z textu stránky.
+
+## Kontakt
+
+- ELEKTRO DRAPAČ s.r.o. Žďárecká 177, Velké Poříčí
+- Kancelář Praha Gutova 3317/15, Praha 10 - Strašnice. Schůzka v kanceláři s obchodním zástupcem pouze dle telefonické domluvy.
+- Telefon: +420 491 482 500 (Po - Pá 6:00 - 15:00)
+- E-mail: eldr@eldr.cz
+- [Kontakty](https://www.eldr.cz/kontakty)
+
+## Produkty
+
+- [Reklamní pylony a totemy](https://www.eldr.cz/produkty/pylony-a-totemy): Pylony, Totemy. Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.
+- [3D nápisy, loga a písmena](https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena): Nesvětelné 3D nápisy, 3D nápisy se zadním podsvícením, Velkoformátové světelné nápisy, 3D nápisy se svítícím čelem, 3D nápisy se svítícím čelem a boky, Plno-plexisklové 3D nápisy. Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.
+- [Orientační systémy](https://www.eldr.cz/produkty/orientacni-systemy): Orientační systémy budov a areálů. Orientační systém, který bude perfektně sedět vašemu prostoru a zároveň komplexně plnit informační funkci.
+- [Zámečnické konstrukce na míru, opracování plexiskla](https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla): Zámečnické konstrukce, Atypické zámečnické konstrukce, Opracování a prodej plexiskla, polykarbonátu.
+- [Výstrče, lékárenské znaky](https://www.eldr.cz/produkty/vystrce-lekarenske-znaky): Světelné výstrče, Atypické výstrče, Lékárenské znaky, Světelná výstrč a výstrč s intarzií, Výstrč na míru a nesvětelná výstrč. Už z dálky zajišťují skvělou viditelnost reklamy. Vyrábíme velké množství provedení, variant a tvarů.
+- [Velkoformátový digitální tisk, řezaná grafika, polepy](https://www.eldr.cz/produkty/velkoformatovy-tisk): Velkoformátový digitální tisk, Řezaná grafika, Polepy, Polepy vozidel a výloh, Perforované a krycí polepy oken, Polepy podlah a bezpečnostní prvky, Designové obrazy.
+- [Vstupní portály a architektonické prvky](https://www.eldr.cz/produkty/architektonicke-prvky-vstupni-portaly-vlajky): Vstupní portály, Architektonické světelné prvky, Reklamní vlajky.
+- [Prvky podpory prodeje, LED technologie](https://www.eldr.cz/produkty/prvky-podpory-prodeje-led-technologie): Prvky podpory prodeje, LED displeje, Segmentové displeje, Maticové displeje.
+- [Světelné panely a tabule](https://www.eldr.cz/produkty/tabule-a-svetelne-panely): Světelné panely, Plexi intarzie, Vystouplá plexi intarzie, Podložená plexi intarzie, Reklamní tabule, Menuboardy/infoboardy. Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem.
+- [Neonová a LED neonová designová svítidla](https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty): Designová svítidla, Žárovkové světelné nápisy, Neonové nápisy & imitace, Mechové stěny, Reklama z cortenového plechu, Světelná čísla domů, Designové stojací lampy na zakázku.
+
+## Products (English)
+
+- [Advertising pylons and totems](https://www.eldr.cz/en/produkty/pylony-a-totemy): Pylons, Totems.
+- [3D signs, logos, and letters](https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena): Non-illuminated 3D signs, 3D signs with backlighting, Large-format illuminated signs, 3D signs with illuminated face, 3D signs with illuminated face and sides, Solid acrylic 3D signs.
+- [Wayfinding systems](https://www.eldr.cz/en/produkty/orientacni-systemy): Wayfinding systems for buildings and sites.
+- [Bespoke metal structures and acrylic glass processing](https://www.eldr.cz/en/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla): Metal structures, Non-standard metal structures, Processing and sale of acrylic glass and polycarbonate.
+- [Projecting signs and pharmacy signs](https://www.eldr.cz/en/produkty/vystrce-lekarenske-znaky): Illuminated projecting signs, Custom-shaped projecting signs, Pharmacy signs, Illuminated and inlaid projecting signs, Bespoke and non-illuminated projecting signs.
+- [Large-format digital printing, plotter-cut graphics and decals](https://www.eldr.cz/en/produkty/velkoformatovy-tisk): Large-format digital printing, Plotter-cut graphics, Decals, Vehicle and shop window decals, Perforated and privacy window films, Floor decals and safety features, Design wall art.
+- [Entrance portals and architectural elements](https://www.eldr.cz/en/produkty/architektonicke-prvky-vstupni-portaly-vlajky): Entrance portals, Architectural illuminated elements, Advertising flags.
+- [Sales promotion items and LED technology](https://www.eldr.cz/en/produkty/prvky-podpory-prodeje-led-technologie): Sales promotion items, LED displays, Segment displays, Matrix displays.
+- [Illuminated panels and boards](https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely): Illuminated panels, Acrylic glass inlays, Protruding acrylic glass inlay, Backed acrylic glass inlay, Advertising boards, Menu boards/info boards.
+- [Neon and LED neon designer lights](https://www.eldr.cz/en/produkty/designova-a-interierova-svitidla-specialni-projekty): Designer lighting, Bulb-lit signs, Neon signs & imitations, Moss walls, Corten steel signage, Illuminated house numbers, Designer floor lamps made to order.
+
+## Produkte (Deutsch)
+
+- [Werbepylone und Totems](https://www.eldr.cz/de/produkty/pylony-a-totemy): Pylone, Totems.
+- [3D-Schriftzüge, Logos und Buchstaben](https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena): Nicht leuchtende 3D-Schriftzüge, 3D-Schriftzüge mit Hintergrundbeleuchtung, Großformatige Leuchtschriftzüge, 3D-Schriftzüge mit leuchtender Vorderseite, 3D-Schriftzüge mit leuchtender Vorderseite und Seiten, 3D-Schriftzüge aus Vollplexiglas.
+- [Wegeleitsysteme](https://www.eldr.cz/de/produkty/orientacni-systemy): Wegeleitsysteme für Gebäude und Areale.
+- [Maßgefertigte Metallkonstruktionen, Plexiglas-Verarbeitung](https://www.eldr.cz/de/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla): Metallkonstruktionen, Atypische Metallkonstruktionen, Verarbeitung und Verkauf von Plexiglas und Polycarbonat.
+- [Ausleger und Apothekenschilder](https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky): Leuchtausleger, Ausleger in Sonderformen, Apothekenschilder, Leuchtausleger und Ausleger mit Intarsie, Maßgefertigte und unbeleuchtete Ausleger.
+- [Großformatiger Digitaldruck, geschnittene Foliengrafik und Beklebungen](https://www.eldr.cz/de/produkty/velkoformatovy-tisk): Großformatiger Digitaldruck, Geschnittene Foliengrafik, Beklebungen, Fahrzeug- und Schaufensterbeklebung, Perforierte und abdeckende Fensterbeklebungen, Bodenbeklebungen und Sicherheitselemente, Design-Wandbilder.
+- [Eingangsportale und architektonische Elemente](https://www.eldr.cz/de/produkty/architektonicke-prvky-vstupni-portaly-vlajky): Eingangsportale, Architektonische Leuchtelemente, Werbefahnen.
+- [Elemente der Verkaufsförderung und LED-Technologie](https://www.eldr.cz/de/produkty/prvky-podpory-prodeje-led-technologie): Elemente der Verkaufsförderung, LED-Displays, Segment-Displays, Matrix-Displays.
+- [Leuchtpaneele und Werbetafeln](https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely): Leuchtpaneele, Plexiglas-Intarsien, Herausragende Plexiglasintarsie, Unterlegte Plexiglasintarsie, Werbetafeln, Menüboards/Infoboards.
+- [Design-Leuchten aus Neon und LED-Neon](https://www.eldr.cz/de/produkty/designova-a-interierova-svitidla-specialni-projekty): Design-Leuchten, Leuchtschriftzüge mit Lampen, Neonschriften & Imitationen, Mooswände, Werbung aus Cortenblech, Leuchtende Hausnummern, Design-Stehlampen nach Maß.
+
+## Optional
+
+- [O nás](https://www.eldr.cz/o-nas)
+- [Reference](https://www.eldr.cz/reference)
+- [Servisní služby a pronájem plošin](https://www.eldr.cz/servisni-sluzby-a-pronajem-plosin)
+- [Inspirace](https://www.eldr.cz/inspirace)

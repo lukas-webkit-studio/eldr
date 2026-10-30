@@ -1,0 +1,473 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#webpage",
+      "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena",
+      "name": "3D signs, logos, and letters",
+      "description": "Production of illuminated signage with top-quality craftsmanship and custom design tailored to your needs.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://www.eldr.cz/en/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "3D signs, logos, and letters",
+          "item": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba",
+      "name": "3D signs, logos, and letters",
+      "description": "Production of illuminated signage with top-quality craftsmanship and custom design tailored to your needs.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Every detail to your liking",
+          "value": "Choose from a wide variety of materials, colours, and lighting options."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Every detail to your liking",
+          "value": "Before production, we prepare a 3D visualisation so you can see exactly what the final product will look like."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Weather resistance",
+          "value": "Our illuminated signs are built to withstand all weather conditions and come with up to a 5-year warranty."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Weather resistance",
+          "value": "High-quality materials with surface treatments ensure colour and appearance stability for many years."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#katalog",
+        "name": "3D signs, logos, and letters",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-1",
+              "name": "Non-illuminated 3D signs",
+              "description": "For indoor and outdoor settings where illuminated advertising is not needed to attract attention.",
+              "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-1",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fd135f506b8f152f4a_648922f87beb1c9d9b17d22b_Profil%25201%2520(01).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "Unlimited colour options thanks to translucent film"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Body",
+                  "value": "A wide range of materials, including aluminium, acrylic glass, sheet materials, polystyrene and cardboard, with optional 3D printing for lighter components and exceptional precision, plus paint finishes to suit individual requirements"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "aluminium"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "acrylic glass"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "sheet materials"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "polystyrene"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "cardboard"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Profile 1"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Lower production and maintenance costs compared to illuminated versions."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Unlimited width and thickness."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "optional 3D printing for lighter components and exceptional precision"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "paint finishes to suit individual requirements"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "For indoor and outdoor settings"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood, on glass"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-3",
+              "name": "3D signs with backlighting",
+              "description": "For indoor and outdoor use. Soft, indirect backlighting creates an elegant, understated effect.",
+              "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-3",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2349e21326067656a4a_648924ef510c7c1e8802d178_Podsvi%25CC%2581ceny%25CC%2581%2520na%25CC%2581pis%2520-%2520Profil%25203%2520(0001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Body",
+                  "value": "Aluminium, acrylic glass, sheet materials, optional use of 3D printing (lighter, surgically precise)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Aluminium"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "acrylic glass"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "sheet materials"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Profile 3"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "3D signs with “Aura” backlighting"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Option to combine front and back lighting."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "optional use of 3D printing (lighter, surgically precise)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "For indoor and outdoor use"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "On facades, roofs, parapets, ground-mounted, ceiling-hung, on wood (or other background for an aura effect)"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
+              "name": "Large-format illuminated signs",
+              "description": "Durable signage for exposed, windy locations at height. It attracts attention from a distance and offers a long service life even in adverse conditions.",
+              "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2352298e32104eb3c34_64892fd80421491be3ffb6dc_Sve%25CC%258Ctelne%25CC%2581%2520pi%25CC%2581smena%2520-%2520profil%25204%2520%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "Unlimited colour options thanks to translucent film and paint finishes"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Profile 4"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "A fixing rail integrated into the side of the letter secures the flexible face material."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Unlimited size, lighting colour and body colour options."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "for exposed, windy locations at height"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "On façades, roofs, parapets, the ground or wood, suspended from ceilings, and in other locations to suit the customer’s needs"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
+              "name": "3D signs with illuminated face",
+              "description": "For indoor and outdoor use. The most popular type of illuminated 3D signage, with an illuminated face.",
+              "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "Unlimited options of acrylic glass colours and translucent film"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "On façades, roofs, parapets, the ground or wood, or suspended from ceilings. Suitable for indoor and outdoor use."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Profile 5s"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Up to 2 metres high, with no visible frame around the face."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "On façades, roofs, parapets, the ground or wood, or suspended from ceilings."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "Suitable for indoor and outdoor use."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-8",
+              "name": "3D signs with illuminated face and sides",
+              "description": "For indoor and outdoor use. Both the face and sides of the letters can be illuminated.",
+              "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-8",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bb267c6b32d1ee7d05_64893241d1a77b591af29378_Se%25CC%258Ctelne%25CC%2581%2520znaky%2520-%2520Profil%25208%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "Unlimited options through translucent film combined with coloured acrylic glass and LEDs"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Body",
+                  "value": "Acrylic glass and Dibond"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Acrylic glass"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Dibond"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Profile 8"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Face and sides are illuminated, ensuring visibility from different angles."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "For indoor and outdoor use"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "On façades, roofs, parapets, the ground, wood and shopfronts, suspended from ceilings, or in interior spaces"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
+              "name": "Solid acrylic 3D signs",
+              "description": "Ideal for small signs and lettering with shapes that are difficult to form.",
+              "url": "https://www.eldr.cz/en/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bae0dd6bef54205b61_64bfc6681406f7a5ffd232b6_649bfb9d07992cfbf59d224e_6489336a18b47a0c318dd8d0_plno%2520plexi%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "Unlimited options through translucent film, paint finishes and LED colours"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Body",
+                  "value": "Acrylic glass"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Acrylic glass"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Profile 9"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Face and sides can be illuminated."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Affordable neon-like look with minimal energy consumption."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "Primarily for indoor use, on office walls and in corridors, reception areas and entrance halls"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

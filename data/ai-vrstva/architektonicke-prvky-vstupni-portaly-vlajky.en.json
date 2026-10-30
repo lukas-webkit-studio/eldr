@@ -1,0 +1,302 @@
+{
+  "slug": "architektonicke-prvky-vstupni-portaly-vlajky",
+  "lang": "en",
+  "url": "https://www.eldr.cz/en/produkty/architektonicke-prvky-vstupni-portaly-vlajky",
+  "page": {
+    "name": {
+      "value": "Entrance portals and architectural elements",
+      "quote": "Entrance portals and architectural elements"
+    },
+    "description": null,
+    "highlights": [
+      {
+        "value": "Custom-made",
+        "quote": "Custom-made"
+      },
+      {
+        "value": "Unlimited creativity",
+        "quote": "Unlimited creativity"
+      }
+    ],
+    "properties": []
+  },
+  "products": [
+    {
+      "key": "vstupni-portaly",
+      "anchor": "vstupni-portaly",
+      "name": {
+        "value": "Entrance portals",
+        "quote": "Entrance portals"
+      },
+      "description": {
+        "value": "These are frames around the entrance door, in an illuminated or non-illuminated version, differing in design.",
+        "quote": "These are frames around the entrance door, in an illuminated or non-illuminated version, differing in design. Portals can incorporate logos, lettering or a message."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf8ca79fa57be1d895_vstupni-portaly.jpg",
+        "alt": "Zelený prosvětlený vstupní portál budovy"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Materials",
+            "quote": "Materials: portals are built on an aluminium structure that can house LEDs. Depending on the lighting required, it is clad either in acrylic or in composite sheet material, which is non-illuminated."
+          },
+          "value": {
+            "value": "portals are built on an aluminium structure that can house LEDs. Depending on the lighting required, it is clad either in acrylic or in composite sheet material, which is non-illuminated.",
+            "quote": "Materials: portals are built on an aluminium structure that can house LEDs. Depending on the lighting required, it is clad either in acrylic or in composite sheet material, which is non-illuminated."
+          }
+        },
+        {
+          "name": {
+            "value": "Execution",
+            "quote": "Execution: a 3D sign can be mounted on the portal, or it can be made as an acrylic glass inlay. The portal can be illuminated, non-illuminated or fitted with raised lettering. Our team will create an individual design that respects what the building allows."
+          },
+          "value": {
+            "value": "a 3D sign can be mounted on the portal, or it can be made as an acrylic glass inlay. The portal can be illuminated, non-illuminated or fitted with raised lettering.",
+            "quote": "Execution: a 3D sign can be mounted on the portal, or it can be made as an acrylic glass inlay. The portal can be illuminated, non-illuminated or fitted with raised lettering. Our team will create an individual design that respects what the building allows."
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: at the entrances to shops or company premises, to mark the way in clearly, attract attention and give visitors the information they need."
+          },
+          "value": {
+            "value": "at the entrances to shops or company premises, to mark the way in clearly, attract attention and give visitors the information they need.",
+            "quote": "Placement: at the entrances to shops or company premises, to mark the way in clearly, attract attention and give visitors the information they need."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "portals are built on an aluminium structure that can house LEDs",
+          "quote": "Materials: portals are built on an aluminium structure that can house LEDs. Depending on the lighting required, it is clad either in acrylic or in composite sheet material, which is non-illuminated."
+        },
+        {
+          "value": "Depending on the lighting required, it is clad either in acrylic or in composite sheet material, which is non-illuminated.",
+          "quote": "Materials: portals are built on an aluminium structure that can house LEDs. Depending on the lighting required, it is clad either in acrylic or in composite sheet material, which is non-illuminated."
+        }
+      ],
+      "variants": [
+        {
+          "value": "in an illuminated or non-illuminated version",
+          "quote": "These are frames around the entrance door, in an illuminated or non-illuminated version, differing in design. Portals can incorporate logos, lettering or a message."
+        },
+        {
+          "value": "Portals can incorporate logos, lettering or a message.",
+          "quote": "These are frames around the entrance door, in an illuminated or non-illuminated version, differing in design. Portals can incorporate logos, lettering or a message."
+        },
+        {
+          "value": "a 3D sign can be mounted on the portal, or it can be made as an acrylic glass inlay",
+          "quote": "Execution: a 3D sign can be mounted on the portal, or it can be made as an acrylic glass inlay. The portal can be illuminated, non-illuminated or fitted with raised lettering. Our team will create an individual design that respects what the building allows."
+        },
+        {
+          "value": "The portal can be illuminated, non-illuminated or fitted with raised lettering.",
+          "quote": "Execution: a 3D sign can be mounted on the portal, or it can be made as an acrylic glass inlay. The portal can be illuminated, non-illuminated or fitted with raised lettering. Our team will create an individual design that respects what the building allows."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Indoors and outdoors",
+          "quote": "Indoors and outdoors"
+        },
+        {
+          "value": "at the entrances to shops or company premises, to mark the way in clearly, attract attention and give visitors the information they need",
+          "quote": "Placement: at the entrances to shops or company premises, to mark the way in clearly, attract attention and give visitors the information they need."
+        },
+        {
+          "value": "right at the point of sale",
+          "quote": "Entrance portals are an effective way to attract the customer's attention right at the point of sale."
+        }
+      ]
+    },
+    {
+      "key": "architektonicke-prvky",
+      "anchor": "architektonicke-prvky",
+      "name": {
+        "value": "Architectural illuminated elements",
+        "quote": "Architectural illuminated elements"
+      },
+      "description": {
+        "value": "illuminated lines on building façades, façade lighting, dynamic advertising and façade bands",
+        "quote": "We specialise in illuminated lines on building façades, façade lighting, dynamic advertising and façade bands. Our priority is to find the best technical and visual solution."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae312645760e_architektonicke-prvky-p-800.jpg",
+        "alt": "Světelná hvězda Mercedes na střeše budovy"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Materials",
+            "quote": "Materials: we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life."
+          },
+          "value": {
+            "value": "we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life.",
+            "quote": "Materials: we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life."
+          }
+        },
+        {
+          "name": {
+            "value": "Execution",
+            "quote": "Execution: alongside the design we also handle technical details, secure fixings and adaptation to the particular space, materials and operating conditions. The result is a clean solution with high functionality and a long service life."
+          },
+          "value": {
+            "value": "alongside the design we also handle technical details, secure fixings and adaptation to the particular space, materials and operating conditions.",
+            "quote": "Execution: alongside the design we also handle technical details, secure fixings and adaptation to the particular space, materials and operating conditions. The result is a clean solution with high functionality and a long service life."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life",
+          "quote": "Materials: we use high-quality LED modules with a high IP rating – they stand up to the weather and ensure a long service life."
+        }
+      ],
+      "variants": [
+        {
+          "value": "illuminated lines on building façades",
+          "quote": "We specialise in illuminated lines on building façades, façade lighting, dynamic advertising and façade bands. Our priority is to find the best technical and visual solution."
+        },
+        {
+          "value": "façade lighting",
+          "quote": "We specialise in illuminated lines on building façades, façade lighting, dynamic advertising and façade bands. Our priority is to find the best technical and visual solution."
+        },
+        {
+          "value": "dynamic advertising",
+          "quote": "We specialise in illuminated lines on building façades, façade lighting, dynamic advertising and façade bands. Our priority is to find the best technical and visual solution."
+        },
+        {
+          "value": "façade bands",
+          "quote": "We specialise in illuminated lines on building façades, façade lighting, dynamic advertising and façade bands. Our priority is to find the best technical and visual solution."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Indoors and outdoors",
+          "quote": "Indoors and outdoors"
+        }
+      ]
+    },
+    {
+      "key": "vlajky",
+      "anchor": "vlajky",
+      "name": {
+        "value": "Advertising flags",
+        "quote": "Advertising flags"
+      },
+      "description": {
+        "value": "We make textile advertising flags including flagpoles",
+        "quote": "We make textile advertising flags including flagpoles, ideal wherever there is no room for other types of advertising such as billboards or large display signs."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf180fae3126457625_vlajky.jpg",
+        "alt": "Reklamní vlajka ČSOB na fasádě budovy"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Execution",
+            "quote": "Execution: you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
+          },
+          "value": {
+            "value": "you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life.",
+            "quote": "Execution: you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
+          }
+        },
+        {
+          "name": {
+            "value": "Placement",
+            "quote": "Placement: they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective."
+          },
+          "value": {
+            "value": "they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective.",
+            "quote": "Placement: they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "textile advertising flags",
+          "quote": "We make textile advertising flags including flagpoles, ideal wherever there is no room for other types of advertising such as billboards or large display signs."
+        },
+        {
+          "value": "Flags are made from quality materials that give them a long service life.",
+          "quote": "Execution: you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
+        }
+      ],
+      "variants": [
+        {
+          "value": "you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes",
+          "quote": "Execution: you can choose the shape of the flag to suit the location – we offer traditional rectangles as well as special shapes. Flags are made from quality materials that give them a long service life."
+        },
+        {
+          "value": "including flagpoles",
+          "quote": "We make textile advertising flags including flagpoles, ideal wherever there is no room for other types of advertising such as billboards or large display signs."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Indoors and outdoors",
+          "quote": "Indoors and outdoors"
+        },
+        {
+          "value": "where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs",
+          "quote": "Placement: they work best where large numbers of people pass by, such as city streets, shopping centres, festivals or trade fairs. Because they move in the wind, flags can draw even more attention, which makes them more effective."
+        },
+        {
+          "value": "wherever there is no room for other types of advertising such as billboards or large display signs",
+          "quote": "We make textile advertising flags including flagpoles, ideal wherever there is no room for other types of advertising such as billboards or large display signs."
+        },
+        {
+          "value": "Ideal for places where there is not enough room for any other type of advertising.",
+          "quote": "Ideal for places where there is not enough room for any other type of advertising."
+        }
+      ]
+    }
+  ],
+  "faq": [],
+  "vynechano": [
+    {
+      "text": "Věta nad kartami „Take a closer look at whatever interests you. Remember, everything can be tailored to you:“ (dosud page.description)",
+      "duvod": "Ověřovatel: obecná výzva rozcestníku, ne perex stránky ani popis výrobku; page.description = null (stejně jako na stránce prvky-podpory-prodeje-led-technologie)."
+    },
+    {
+      "text": "„Our team will create an individual design that respects what the building allows.“ (konec bodu Zpracování u vstupních portálů)",
+      "duvod": "Ověřovatel: tvrzení o službě firmy, ne vlastnost výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci."
+    },
+    {
+      "text": "„The result is a clean solution with high functionality and a long service life.“ (konec bodu Zpracování u architektonických prvků)",
+      "duvod": "Ověřovatel: marketingový slib výsledku, ne parametr výrobku; hodnota vlastnosti zkrácena, plná věta zůstává v citaci."
+    },
+    {
+      "text": "Hero label “{#YOE#} years of experience”",
+      "duvod": "Tvrzení o firmě, ne o výrobcích; ve snímku bez JS je jen token {#YOE#}."
+    },
+    {
+      "text": "“At Elektro Drapač we love a challenge and enjoy helping to devise and deliver one-off architectural projects.” a “Our priority is to find the best technical and visual solution.”",
+      "duvod": "Tvrzení o firmě a jejím přístupu, ne parametr výrobku."
+    },
+    {
+      "text": "“Entrance portals are an effective way to attract the customer's attention…”",
+      "duvod": "Marketingové hodnocení; převzato jen umístění „right at the point of sale“."
+    },
+    {
+      "text": "Galerie realizací a obrázky karet v úvodu",
+      "duvod": "Popisky fotek a obrázky rozcestníku, ne výrobky. Alt texty obrázků jsou i na /en česky (Webflow alt nelokalizuje) — přebírají se doslova."
+    },
+    {
+      "text": "Blok „How is illuminated advertising made?“ (enquiry → price estimate within 2 business days → offer → installation within 4–8 weeks)",
+      "duvod": "Společný blok všech produktových stránek o průběhu zakázky; do faq nepatří."
+    },
+    {
+      "text": "Bloky „Trusted by leading Czech and international companies“ a „Why you should choose our illuminated advertising“",
+      "duvod": "Společné bloky o firmě, tvrzení o firmě se nepřebírají. Nadpis „Why you should…“ je otázkou jen formálně a odpovědí jsou sliby kvality firmy, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Request a no-obligation quote“ apod., navigace, kontakty a patička",
+      "duvod": "Ovládací prvky a společné části webu."
+    }
+  ]
+}

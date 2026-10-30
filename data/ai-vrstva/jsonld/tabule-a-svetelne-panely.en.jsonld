@@ -1,0 +1,364 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#webpage",
+      "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely",
+      "name": "Illuminated panels and boards",
+      "description": "We make illuminated panels tailored to your needs in sizes up to 100 m², with first-class craftsmanship and design.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://www.eldr.cz/en/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Illuminated panels and boards",
+          "item": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#sluzba",
+      "name": "Illuminated panels and boards",
+      "description": "We make illuminated panels tailored to your needs in sizes up to 100 m², with first-class craftsmanship and design.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#katalog",
+        "name": "Illuminated panels and boards",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#svetelne-panely",
+              "name": "Illuminated panels",
+              "description": "A box with an aluminium frame whose front face is made of a translucent material.",
+              "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#svetelne-panely",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f2298e32104ea8387_64914456ce1ed295b0e48957_Sve%25CC%258Ctelny%25CC%2581%2520panel%2520().webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "printed or cut graphics can be applied to the translucent surface. These options let you adapt the look of the panel to your needs and specific requirements."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "aluminium frame and a back panel of aluminium or sandwich board. Front face of acrylic glass or translucent vinyl canvas, which ensures a long service life and excellent light transmission."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "illuminated panels are easy to mount on buildings or pylons."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "aluminium frame and a back panel of aluminium or sandwich board"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Front face of acrylic glass or translucent vinyl canvas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "in sizes up to 100 m²"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Several versions are available, including vinyl canvas and acrylic glass panels and a version with 3D lettering."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Illuminated face"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "printed or cut graphics can be applied to the translucent surface"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "easy to mount on buildings or pylons"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#intarzie",
+              "name": "Acrylic glass inlays",
+              "description": "An inlay is an illuminated panel with protruding or recessed characters.",
+              "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#intarzie",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a105a11d00d56e90552c_6492100095d82614b3c59ea3_Plexintarzie%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "the better choice for small signs set in very fine typefaces, which could not be shaped as a standalone 3D sign."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "the body is formed by an aluminium frame and back panel. The front face is covered with an opaque board, usually sheet metal or a sandwich board – Dibond."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "an advantage on historic buildings, for example, where drilling into the façade is not possible – the power supply runs to a single point only."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "the body is formed by an aluminium frame and back panel"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "The front face is covered with an opaque board, usually sheet metal or a sandwich board – Dibond."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "protruding or backed"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "The two versions differ in look and in price. It comes down to whether the characters sit above the surface of the panel or below it."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "for small signs set in very fine typefaces"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "on historic buildings, for example, where drilling into the façade is not possible"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#vystoupla-plexi-intarzie",
+              "name": "Protruding acrylic glass inlay",
+              "description": "The characters sit above the panel surface and create a 3D effect.",
+              "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#intarzie",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "illuminated characters of solid acrylic glass"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "Openings are cut into the front face and illuminated characters of solid acrylic glass are set into them."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "The illuminated sides of the letters create an aura of light."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#podlozena-plexi-intarzie",
+              "name": "Backed acrylic glass inlay",
+              "description": "The characters sit below the panel surface.",
+              "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#intarzie",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "This is the more economical option, because the characters do not have to be shaped and production is less labour-intensive."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "This version does not create an aura of light."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#reklamni-tabule",
+              "name": "Advertising boards",
+              "description": "An advertising board, or non-illuminated sign panel, is one of the simplest advertising solutions there is.",
+              "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#reklamni-tabule",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a182a11d00d56e90ca24_64914091d08ddae77be92e2c_1.webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "the message on the surface can be produced with printed or cut graphics, sandblasting and engraving."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "these are non-illuminated panels made from a range of materials such as aluminium, stainless steel, brass, composite materials, acrylates, glass, wood and the like."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "marking premises, information or wayfinding purposes. Most often as non-illuminated signs, information boards, door plates, wayfinding systems and the like."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "aluminium, stainless steel, brass, composite materials, acrylates, glass, wood and the like."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "printed or cut graphics, sandblasting and engraving"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "the graphics on the board can be re-applied at any time"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "marking premises, information or wayfinding purposes"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "Most often as non-illuminated signs, information boards, door plates, wayfinding systems and the like."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "for signage and orientation in a space"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#menuboardy",
+              "name": "Menu boards/info boards",
+              "description": "Menu boards are special panels with interchangeable artwork. They can be double-sided for easy changing.",
+              "url": "https://www.eldr.cz/en/produkty/tabule-a-svetelne-panely#menuboardy",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f9b1fb16baa83187b_64913c4a32d5e1196d2a731d_1.webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Graphics",
+                  "value": "they let you display current offers using interchangeable artwork. The graphics are easy to change and adapt."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "durable materials that ensure a long service life. The materials are designed for changing graphics and for use in restaurants."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Placement",
+                  "value": "used above all in fast-food restaurants, where they display the current food and drink offer."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "durable materials that ensure a long service life"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Variant",
+                  "value": "They can be double-sided for easy changing."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Use",
+                  "value": "in fast-food restaurants, where they display the current food and drink offer"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

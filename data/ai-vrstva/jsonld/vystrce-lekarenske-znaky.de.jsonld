@@ -1,0 +1,284 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#webpage",
+      "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky",
+      "name": "Ausleger und Apothekenschilder",
+      "description": "Schon aus der Ferne sorgen sie für hervorragende Sichtbarkeit Ihrer Werbung. Wir fertigen eine große Auswahl an Ausführungen, Varianten und Formen.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkte",
+          "item": "https://www.eldr.cz/de/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ausleger und Apothekenschilder",
+          "item": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#sluzba",
+      "name": "Ausleger und Apothekenschilder",
+      "description": "Schon aus der Ferne sorgen sie für hervorragende Sichtbarkeit Ihrer Werbung. Wir fertigen eine große Auswahl an Ausführungen, Varianten und Formen.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Ausleger aller Typen und Ausführungen, maßgefertigt",
+          "value": "Die Fertigung ist in einer großen Auswahl an Ausführungen, Varianten und Formen möglich. Der Ausleger kann quadratisch oder rund sein, ebenso aber auch eine beliebige Form haben – zum Beispiel ein Zahn für eine Zahnarztpraxis."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#katalog",
+        "name": "Ausleger und Apothekenschilder",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#vystrce",
+              "name": "Leuchtausleger",
+              "description": "Werbung, die Tag und Nacht leuchtet. Die LED-Hinterleuchtung sorgt für gleichmäßige Sichtbarkeit auch bei schlechtem Wetter.",
+              "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#vystrce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fde9a38c372ef8c1437_vystrce.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Die Frontseite des Auslegers wird mit gedruckter oder geschnittener Grafik beklebt. Sowohl die Form des Auslegers als auch die grafische Gestaltung lassen sich beliebig anpassen, auch in Sonderformen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Den Rahmen bildet eine Aluminiumkonstruktion, die Frontfläche besteht aus hinterleuchtetem Plexiglas oder einem anderen Plattenmaterial. Am Innenrahmen sind Konsolen angeschweißt, mit denen der Ausleger an der Wand befestigt wird."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Geeignet für",
+                  "value": "Betriebe, die von allen Seiten gesehen werden müssen – Geschäfte in belebten Straßen, Restaurants, Hotels und überall dort, wo Werbung auch im Dunkeln Aufmerksamkeit erregen muss."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Den Rahmen bildet eine Aluminiumkonstruktion"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "die Frontfläche besteht aus hinterleuchtetem Plexiglas oder einem anderen Plattenmaterial"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Die Frontseite des Auslegers wird mit gedruckter oder geschnittener Grafik beklebt."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Sowohl die Form des Auslegers als auch die grafische Gestaltung lassen sich beliebig anpassen, auch in Sonderformen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Betriebe, die von allen Seiten gesehen werden müssen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Geschäfte in belebten Straßen, Restaurants, Hotels und überall dort, wo Werbung auch im Dunkeln Aufmerksamkeit erregen muss"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#atypicke-vystrce",
+              "name": "Ausleger in Sonderformen",
+              "description": "Ein Ausleger in Form Ihres Symbols ist Werbung, die Kunden im Gedächtnis bleibt. Die Form spricht für Sie – ganz ohne Worte.",
+              "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#atypicke-vystrce",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Die Form des Auslegers folgt der Silhouette des Symbols Ihrer Branche – ein Zahn, eine Schere, ein Herz, ein Schlüssel, ein Glas oder alles, was Kunden sofort mit Ihrem Unternehmen verbinden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Geeignet für",
+                  "value": "Betriebe mit einem ikonischen Symbol, das sofort mit der Branche verbunden wird – Zahnarztpraxen (Zahn), Friseursalons (Schere), Cafés (Tasse), Weinhandlungen (Weinrebe), Kreditgenossenschaften (Schlüssel)."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Die Form des Auslegers folgt der Silhouette des Symbols Ihrer Branche – ein Zahn, eine Schere, ein Herz, ein Schlüssel, ein Glas oder alles, was Kunden sofort mit Ihrem Unternehmen verbinden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Betriebe mit einem ikonischen Symbol, das sofort mit der Branche verbunden wird"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Zahnarztpraxen (Zahn), Friseursalons (Schere), Cafés (Tasse), Weinhandlungen (Weinrebe), Kreditgenossenschaften (Schlüssel)"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#lekarenske-znaky",
+              "name": "Apothekenschilder",
+              "description": "Apothekenschilder stehen unter Urheberrechtsschutz.",
+              "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#lekarenske-znaky",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Sortiment",
+                  "value": "Beleuchtete und unbeleuchtete „Apotheke“-Schriftzüge, Beklebungen von Schaufenstern, Böden und Theken sowie weitere ergänzende Apothekenbeschilderung."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Geeignet für",
+                  "value": "Kennzeichnung von Apotheken und Arztpraxen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Beleuchtete und unbeleuchtete „Apotheke“-Schriftzüge"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Beklebungen von Schaufenstern, Böden und Theken"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "weitere ergänzende Apothekenbeschilderung"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "dienen der einheitlichen Kennzeichnung von Apotheken und medizinischen Einrichtungen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Kennzeichnung von Apotheken und Arztpraxen."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#svetelna-vystrc-a-vystrc-s-intarzii",
+              "name": "Leuchtausleger und Ausleger mit Intarsie",
+              "description": "Ein Ausleger mit Beleuchtung für bessere Sichtbarkeit Ihrer Werbung.",
+              "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Der Ausleger mit Intarsie hat geformte leuchtende 3D-Zeichen für ein einzigartiges Erscheinungsbild."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Die Form des Auslegers lässt sich beliebig anpassen, auch in Sonderformen."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky#vystrc-na-miru-a-nesvetelna-vystrc",
+              "name": "Maßgefertigte und unbeleuchtete Ausleger",
+              "description": "Ein Ausleger, der an die speziellen Anforderungen des Kunden angepasst ist.",
+              "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Der unbeleuchtete Ausleger ist stilvoll und unaufdringlich, ideal für eine elegante und moderne Präsentation."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "überall dort, wo Werbung dezent und zeitlos wirken soll"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

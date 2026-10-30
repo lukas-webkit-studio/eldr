@@ -1,0 +1,364 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#webpage",
+      "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely",
+      "name": "Leuchtpaneele und Werbetafeln",
+      "description": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m² – mit erstklassiger Verarbeitung und hochwertigem Design.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkte",
+          "item": "https://www.eldr.cz/de/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Leuchtpaneele und Werbetafeln",
+          "item": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#sluzba",
+      "name": "Leuchtpaneele und Werbetafeln",
+      "description": "Leuchtpaneele fertigen wir maßgeschneidert nach Ihren Bedürfnissen bis zu einer Größe von 100 m² – mit erstklassiger Verarbeitung und hochwertigem Design.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#katalog",
+        "name": "Leuchtpaneele und Werbetafeln",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#svetelne-panely",
+              "name": "Leuchtpaneele",
+              "description": "Ein Kasten mit Aluminiumrahmen, dessen Vorderseite aus lichtdurchlässigem Material besteht.",
+              "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#svetelne-panely",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f2298e32104ea8387_64914456ce1ed295b0e48957_Sve%25CC%258Ctelny%25CC%2581%2520panel%2520().webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "auf die lichtdurchlässige Fläche lässt sich gedruckte oder geschnittene Grafik aufbringen. Damit passen Sie das Erscheinungsbild des Paneels genau an Ihren Bedarf und Ihre Anforderungen an."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte. Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane, die für lange Lebensdauer und hochwertige Ausleuchtung sorgt."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "Leuchtpaneele lassen sich problemlos an Gebäuden oder Pylonen montieren."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Aluminiumrahmen und Rückseite aus Aluminium oder Sandwichplatte"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Vorderseite aus Plexiglas oder lichtdurchlässiger Vinylplane"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "bis zu einer Größe von 100 m²"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Erhältlich sind mehrere Varianten, darunter Paneele mit Vinylplane und mit Plexiglas sowie eine Variante mit 3D-Schrift."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Leuchtende Vorderseite"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "auf die lichtdurchlässige Fläche lässt sich gedruckte oder geschnittene Grafik aufbringen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "lassen sich problemlos an Gebäuden oder Pylonen montieren"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#intarzie",
+              "name": "Plexiglas-Intarsien",
+              "description": "Eine Intarsie ist ein Leuchtpaneel mit herausragenden oder eingelassenen Zeichen.",
+              "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#intarzie",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a105a11d00d56e90552c_6492100095d82614b3c59ea3_Plexintarzie%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "die bessere Lösung bei kleinen Schriftzügen mit sehr feiner Schriftart, die sich nicht als eigenständiger 3D-Schriftzug formen ließen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "das Grundgerüst bilden Rahmen und Rückseite aus Aluminium. Die Vorderseite ist mit einer lichtundurchlässigen Platte verkleidet, meist aus Blech oder einer Sandwichplatte – Dibond."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "von Vorteil z. B. bei historischen Gebäuden, wo nicht in die Fassade gebohrt werden darf – die Stromzuführung wird nur an eine einzige Stelle geführt."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "das Grundgerüst bilden Rahmen und Rückseite aus Aluminium"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Die Vorderseite ist mit einer lichtundurchlässigen Platte verkleidet, meist aus Blech oder einer Sandwichplatte – Dibond."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "herausragend oder unterlegt"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Je nach Ausführung unterscheiden sich Intarsien in Optik und Preis. Entscheidend ist, ob die Zeichen über die Paneelfläche hinausragen oder darunter liegen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "bei kleinen Schriftzügen mit sehr feiner Schriftart"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "bei historischen Gebäuden, wo nicht in die Fassade gebohrt werden darf"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#vystoupla-plexi-intarzie",
+              "name": "Herausragende Plexiglasintarsie",
+              "description": "Die Zeichen liegen über der Paneelfläche und erzeugen einen 3D-Effekt.",
+              "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#intarzie",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Leuchtzeichen aus massivem Plexiglas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "In die Vorderseite werden Öffnungen geschnitten, in die Leuchtzeichen aus massivem Plexiglas eingesetzt werden."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Durch die leuchtenden Seiten der Buchstaben entsteht eine Lichtaura."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#podlozena-plexi-intarzie",
+              "name": "Unterlegte Plexiglasintarsie",
+              "description": "Die Zeichen liegen unter der Paneelfläche.",
+              "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#intarzie",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Das ist die kostengünstigere Variante, denn die Zeichen müssen nicht geformt werden und die Fertigung ist weniger aufwendig."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Bei dieser Ausführung entsteht keine Lichtaura."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#reklamni-tabule",
+              "name": "Werbetafeln",
+              "description": "Die Werbetafel, also die unbeleuchtete Werbeplatte, ist eine der einfachsten Lösungen für ein Werbeelement.",
+              "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#reklamni-tabule",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a182a11d00d56e90ca24_64914091d08ddae77be92e2c_1.webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "die Botschaft auf der Oberfläche lässt sich mit gedruckter oder geschnittener Grafik, mit Sandstrahlen und Gravieren umsetzen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "es handelt sich um unbeleuchtete Platten aus unterschiedlichen Materialien wie Aluminium, Edelstahl, Messing, Verbundwerkstoffen, Acryl, Glas, Holz und Ähnlichem."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "Kennzeichnung von Betrieben, Information oder Orientierung. Am häufigsten als unbeleuchtete Schriftzüge, Informationstafeln, Türschilder, Wegeleitsysteme und Ähnliches."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Aluminium, Edelstahl, Messing, Verbundwerkstoffen, Acryl, Glas, Holz und Ähnlichem."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "mit gedruckter oder geschnittener Grafik, mit Sandstrahlen und Gravieren"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "die Grafik auf der Tafel lässt sich jederzeit neu bekleben"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Kennzeichnung von Betrieben, Information oder Orientierung"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Am häufigsten als unbeleuchtete Schriftzüge, Informationstafeln, Türschilder, Wegeleitsysteme und Ähnliches."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "zur Kennzeichnung und Orientierung im Raum"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#menuboardy",
+              "name": "Menüboards/Infoboards",
+              "description": "Menüboards sind spezielle Paneele mit austauschbaren Motiven. Sie können doppelseitig ausgeführt werden, was den Wechsel erleichtert.",
+              "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely#menuboardy",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f9b1fb16baa83187b_64913c4a32d5e1196d2a731d_1.webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "sie zeigen aktuelle Angebote über austauschbare Motive. Die Grafik lässt sich leicht wechseln und anpassen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen. Sie sind auf den Grafikwechsel und den Einsatz in der Gastronomie ausgelegt."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "vor allem in Schnellrestaurants, wo sie das aktuelle Speisen- und Getränkeangebot anzeigen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "widerstandsfähige Materialien, die für eine lange Lebensdauer sorgen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Sie können doppelseitig ausgeführt werden, was den Wechsel erleichtert."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "vor allem in Schnellrestaurants, wo sie das aktuelle Speisen- und Getränkeangebot anzeigen"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

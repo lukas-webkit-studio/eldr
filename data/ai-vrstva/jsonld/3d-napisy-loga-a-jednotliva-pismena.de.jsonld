@@ -1,0 +1,478 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#webpage",
+      "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena",
+      "name": "3D-Schriftzüge, Logos und Buchstaben",
+      "description": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und maßgeschneidertem Design nach Ihren Bedürfnissen.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkte",
+          "item": "https://www.eldr.cz/de/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "3D-Schriftzüge, Logos und Buchstaben",
+          "item": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#sluzba",
+      "name": "3D-Schriftzüge, Logos und Buchstaben",
+      "description": "Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und maßgeschneidertem Design nach Ihren Bedürfnissen.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Jedes Detail nach Ihren Vorstellungen",
+          "value": "Wählen Sie aus einer Vielzahl von Materialien, Farben und Beleuchtungsoptionen."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Jedes Detail nach Ihren Vorstellungen",
+          "value": "Vor der eigentlichen Produktion erstellen wir eine 3D-Visualisierung, damit Sie eine genaue Vorstellung vom Endergebnis haben."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Wetterbeständigkeit",
+          "value": "Unsere Leuchtreklamen sind für alle Wetterbedingungen gerüstet und werden mit bis zu 5 Jahren Garantie geliefert."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Wetterbeständigkeit",
+          "value": "Hochwertige Materialien mit Oberflächenbehandlung garantieren langanhaltende Beständigkeit von Farbe und Erscheinungsbild."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#katalog",
+        "name": "3D-Schriftzüge, Logos und Buchstaben",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-1",
+              "name": "Nicht leuchtende 3D-Schriftzüge",
+              "description": "Für Innen- und Außenbereiche, in denen keine Leuchtreklame benötigt wird, um Aufmerksamkeit zu erregen.",
+              "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-1",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1fd135f506b8f152f4a_648922f87beb1c9d9b17d22b_Profil%25201%2520(01).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Unbegrenzte Farboptionen dank transluzenter Folie"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "Große Auswahl an Materialien wie Aluminium, Plexiglas, Plattenmaterial, Polystyrol und Karton; optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision sowie Lackierung nach individuellen Anforderungen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "An Fassade, Dach, Attika, am Boden, abgehängt von der Decke, auf Holz, auf Glas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Aluminium"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Plexiglas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Plattenmaterial"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Polystyrol"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Karton"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Profil 1"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Geringere Produktions- und Wartungskosten im Vergleich zu beleuchteten Varianten."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Unbegrenzte Breite und Stärke."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "optionaler Einsatz von 3D-Druck für leichtere Bauteile und höchste Präzision"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Lackierung nach individuellen Anforderungen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Für Innen- und Außenbereiche"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "An Fassade, Dach, Attika, am Boden, abgehängt von der Decke, auf Holz, auf Glas"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-3",
+              "name": "3D-Schriftzüge mit Hintergrundbeleuchtung",
+              "description": "Für den Innen- und Außenbereich. Die sanfte, indirekte Hinterleuchtung erzeugt eine elegante, dezente Wirkung.",
+              "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-3",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2349e21326067656a4a_648924ef510c7c1e8802d178_Podsvi%25CC%2581ceny%25CC%2581%2520na%25CC%2581pis%2520-%2520Profil%25203%2520(0001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "Aluminium, Plexiglas, Plattenmaterial; optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "An Fassade, Dach, Attika, am Boden, abgehängt von der Decke, auf Holz (oder einem anderen Hintergrund für den Aura-Effekt)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Aluminium"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Plexiglas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Plattenmaterial"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Profil 3"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "3D-Schriftzüge mit Hintergrundbeleuchtung „Aura“"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Möglichkeit zur Kombination von Vorder- und Hintergrundbeleuchtung."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "optional Einsatz von 3D-Druck (leichter, chirurgisch präzise)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Für den Innen- und Außenbereich"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "An Fassade, Dach, Attika, am Boden, abgehängt von der Decke, auf Holz (oder einem anderen Hintergrund für den Aura-Effekt)"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
+              "name": "Großformatige Leuchtschriftzüge",
+              "description": "Robuste Werbung für windige Standorte in großer Höhe. Sie fällt schon von Weitem auf und bietet auch unter widrigen Bedingungen eine lange Lebensdauer.",
+              "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-4",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a2352298e32104eb3c34_64892fd80421491be3ffb6dc_Sve%25CC%258Ctelne%25CC%2581%2520pi%25CC%2581smena%2520-%2520profil%25204%2520%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Unbegrenzte Farbmöglichkeiten durch transluzente Folie und Lackierung"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt, auf Holz und an weiteren Standorten nach Kundenwunsch"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Profil 4"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Eine in die Seitenkonstruktion des Buchstabens integrierte Befestigungsleiste hält die Frontbespannung."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Unbegrenzte Möglichkeiten bei Abmessungen, Lichtfarben und Korpusfarben."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "für windige Standorte in großer Höhe"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt, auf Holz und an weiteren Standorten nach Kundenwunsch"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
+              "name": "3D-Schriftzüge mit leuchtender Vorderseite",
+              "description": "Für den Innen- und Außenbereich. Die beliebteste Variante von 3D-Leuchtschriftzügen mit leuchtender Vorderseite.",
+              "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-5s",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a238f21b0c7e02c7b179_6489311b98d83b71ff3dd57d_Profil%25205%2520a%25205s%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Unbegrenzte Optionen bei Plexiglasfarben und transluzenter Folie"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt und auf Holz. Für den Innen- und Außenbereich geeignet."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Profil 5s"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Bis zu 2 Meter hoch."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Vorderseite ohne sichtbaren Rahmen."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt und auf Holz."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Für den Innen- und Außenbereich geeignet."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-8",
+              "name": "3D-Schriftzüge mit leuchtender Vorderseite und Seiten",
+              "description": "Für den Innen- und Außenbereich. Sowohl die Vorderseite als auch die Seitenflächen der Zeichen können beleuchtet werden.",
+              "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-8",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bb267c6b32d1ee7d05_64893241d1a77b591af29378_Se%25CC%258Ctelne%25CC%2581%2520znaky%2520-%2520Profil%25208%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Unbegrenzte Möglichkeiten durch transluzente Folie in Kombination mit farbigem Plexiglas und LEDs"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "Plexiglas und Dibond"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt, auf Holz, an Ladenfronten und in Innenräumen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Plexiglas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Dibond"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Profil 8"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Leuchtende Vorder- und Seitenflächen sorgen für Sichtbarkeit aus verschiedenen Perspektiven."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Für den Innen- und Außenbereich"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "An Fassaden, auf Dächern, an Attiken, am Boden, von der Decke abgehängt, auf Holz, an Ladenfronten und in Innenräumen"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
+              "name": "3D-Schriftzüge aus Vollplexiglas",
+              "description": "Ideal für kleine Schriftzüge und schwer formbare Buchstaben.",
+              "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena#profil-9",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1bae0dd6bef54205b61_64bfc6681406f7a5ffd232b6_649bfb9d07992cfbf59d224e_6489336a18b47a0c318dd8d0_plno%2520plexi%2520(00001).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "Unbegrenzte Möglichkeiten durch transluzente Folie, Lackierung und LED-Farben"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Korpus",
+                  "value": "Plexiglas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Platzierung",
+                  "value": "Vor allem für den Innenbereich geeignet, an Bürowänden sowie in Fluren, Empfangsbereichen und Eingangshallen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Plexiglas"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Profil 9"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Vorder- und Seitenflächen können beleuchtet sein."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Preiswerte Neon-Optik bei minimalem Energieverbrauch."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Vor allem für den Innenbereich geeignet, an Bürowänden sowie in Fluren, Empfangsbereichen und Eingangshallen"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

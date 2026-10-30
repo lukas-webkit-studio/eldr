@@ -1,0 +1,343 @@
+{
+  "slug": "vystrce-lekarenske-znaky",
+  "lang": "cs",
+  "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky",
+  "page": {
+    "name": {
+      "value": "Výstrče, lékárenské znaky",
+      "quote": "Výstrče, lékárenské znaky"
+    },
+    "description": {
+      "value": "Už z dálky zajišťují skvělou viditelnost reklamy. Vyrábíme velké množství provedení, variant a tvarů.",
+      "quote": "Už z dálky zajišťují skvělou viditelnost reklamy. Vyrábíme velké množství provedení, variant a tvarů."
+    },
+    "highlights": [
+      {
+        "value": "Životnost desítky let",
+        "quote": "Životnost desítky let"
+      },
+      {
+        "value": "Úsporné LED",
+        "quote": "Úsporné LED"
+      },
+      {
+        "value": "Odborná montáž",
+        "quote": "Odborná montáž"
+      },
+      {
+        "value": "Kompletní servis",
+        "quote": "Kompletní servis"
+      }
+    ],
+    "properties": [
+      {
+        "name": {
+          "value": "Výstrče různých typů a provedení na míru",
+          "quote": "Výstrče různých typů a provedení na míru"
+        },
+        "value": {
+          "value": "Výroba je možná ve velkém množství provedení, variant a tvarů. Může se jednat o čtvercovou či kruhovou výstrč, ale také může být tvarována dle libosti – například zub pro zubní ambulanci.",
+          "quote": "Výroba je možná ve velkém množství provedení, variant a tvarů. Může se jednat o čtvercovou či kruhovou výstrč, ale také může být tvarována dle libosti – například zub pro zubní ambulanci."
+        }
+      }
+    ]
+  },
+  "products": [
+    {
+      "key": "vystrce",
+      "anchor": "vystrce",
+      "name": {
+        "value": "Světelné výstrče",
+        "quote": "Světelné výstrče"
+      },
+      "description": {
+        "value": "Reklama, která svítí dnem i nocí. LED podsvětlení zajišťuje rovnoměrnou viditelnost i za špatného počasí.",
+        "quote": "Reklama, která svítí dnem i nocí. LED podsvětlení zajišťuje rovnoměrnou viditelnost i za špatného počasí."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fde9a38c372ef8c1437_vystrce.jpg",
+        "alt": "Světelná výstrč obchodu RE.BRUNS kolmo k fasádě"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafika",
+            "quote": "Grafika: čelní strana výstrče je polepena tištěnou nebo řezanou grafikou. Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů."
+          },
+          "value": {
+            "value": "čelní strana výstrče je polepena tištěnou nebo řezanou grafikou. Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů.",
+            "quote": "Grafika: čelní strana výstrče je polepena tištěnou nebo řezanou grafikou. Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů."
+          }
+        },
+        {
+          "name": {
+            "value": "Materiál",
+            "quote": "Materiál: rám tvoří hliníková konstrukce, čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu. K vnitřnímu rámu jsou přivařeny konzoly určené k upevnění výstrče na zeď."
+          },
+          "value": {
+            "value": "rám tvoří hliníková konstrukce, čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu. K vnitřnímu rámu jsou přivařeny konzoly určené k upevnění výstrče na zeď.",
+            "quote": "Materiál: rám tvoří hliníková konstrukce, čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu. K vnitřnímu rámu jsou přivařeny konzoly určené k upevnění výstrče na zeď."
+          }
+        },
+        {
+          "name": {
+            "value": "Vhodné pro",
+            "quote": "Vhodné pro: provozovny, které potřebují být vidět ze všech stran – obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy."
+          },
+          "value": {
+            "value": "provozovny, které potřebují být vidět ze všech stran – obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy.",
+            "quote": "Vhodné pro: provozovny, které potřebují být vidět ze všech stran – obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "rám tvoří hliníková konstrukce",
+          "quote": "Materiál: rám tvoří hliníková konstrukce, čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu. K vnitřnímu rámu jsou přivařeny konzoly určené k upevnění výstrče na zeď."
+        },
+        {
+          "value": "čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu",
+          "quote": "Materiál: rám tvoří hliníková konstrukce, čelní plocha je z prosvíceného plexiskla nebo jiného deskového materiálu. K vnitřnímu rámu jsou přivařeny konzoly určené k upevnění výstrče na zeď."
+        }
+      ],
+      "variants": [
+        {
+          "value": "čelní strana výstrče je polepena tištěnou nebo řezanou grafikou",
+          "quote": "Grafika: čelní strana výstrče je polepena tištěnou nebo řezanou grafikou. Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů."
+        },
+        {
+          "value": "Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů.",
+          "quote": "Grafika: čelní strana výstrče je polepena tištěnou nebo řezanou grafikou. Tvar výstrče i grafické zpracování lze přizpůsobit dle libosti, včetně atypických tvarů."
+        }
+      ],
+      "uses": [
+        {
+          "value": "provozovny, které potřebují být vidět ze všech stran",
+          "quote": "Vhodné pro: provozovny, které potřebují být vidět ze všech stran – obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy."
+        },
+        {
+          "value": "obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy",
+          "quote": "Vhodné pro: provozovny, které potřebují být vidět ze všech stran – obchody na frekventovaných ulicích, restaurace, hotely a všude tam, kde reklama musí upoutat pozornost i za tmy."
+        }
+      ]
+    },
+    {
+      "key": "atypicke-vystrce",
+      "anchor": "atypicke-vystrce",
+      "name": {
+        "value": "Atypické výstrče",
+        "quote": "Atypické výstrče"
+      },
+      "description": {
+        "value": "Výstrč ve tvaru vašeho symbolu je reklama, kterou si zákazníci zapamatují. Tvar mluví za vás – i bez jediného slova.",
+        "quote": "Výstrč ve tvaru vašeho symbolu je reklama, kterou si zákazníci zapamatují. Tvar mluví za vás – i bez jediného slova."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d43d0_atypicke-vystrce-p-1600.jpg",
+        "alt": "Kulatá atypická výstrč Petřín Park na cihlové fasádě"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafika",
+            "quote": "Grafika: tvar výstrče kopíruje siluetu symbolu vašeho oboru – zub, nůžky, srdce, klíč, sklenici nebo cokoliv, co zákazník okamžitě spojí s vaším podnikáním."
+          },
+          "value": {
+            "value": "tvar výstrče kopíruje siluetu symbolu vašeho oboru – zub, nůžky, srdce, klíč, sklenici nebo cokoliv, co zákazník okamžitě spojí s vaším podnikáním.",
+            "quote": "Grafika: tvar výstrče kopíruje siluetu symbolu vašeho oboru – zub, nůžky, srdce, klíč, sklenici nebo cokoliv, co zákazník okamžitě spojí s vaším podnikáním."
+          }
+        },
+        {
+          "name": {
+            "value": "Vhodné pro",
+            "quote": "Vhodné pro: provozovny, které mají ikonický symbol okamžitě spojený s oborem – zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)."
+          },
+          "value": {
+            "value": "provozovny, které mají ikonický symbol okamžitě spojený s oborem – zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč).",
+            "quote": "Vhodné pro: provozovny, které mají ikonický symbol okamžitě spojený s oborem – zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)."
+          }
+        }
+      ],
+      "materials": [],
+      "variants": [
+        {
+          "value": "tvar výstrče kopíruje siluetu symbolu vašeho oboru – zub, nůžky, srdce, klíč, sklenici nebo cokoliv, co zákazník okamžitě spojí s vaším podnikáním",
+          "quote": "Grafika: tvar výstrče kopíruje siluetu symbolu vašeho oboru – zub, nůžky, srdce, klíč, sklenici nebo cokoliv, co zákazník okamžitě spojí s vaším podnikáním."
+        }
+      ],
+      "uses": [
+        {
+          "value": "provozovny, které mají ikonický symbol okamžitě spojený s oborem",
+          "quote": "Vhodné pro: provozovny, které mají ikonický symbol okamžitě spojený s oborem – zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)."
+        },
+        {
+          "value": "zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)",
+          "quote": "Vhodné pro: provozovny, které mají ikonický symbol okamžitě spojený s oborem – zubní ordinace (zub), kadeřnictví (nůžky), kavárny (šálek), vinotéky (vinná réva), záložny (klíč)."
+        }
+      ]
+    },
+    {
+      "key": "lekarenske-znaky",
+      "anchor": "lekarenske-znaky",
+      "name": {
+        "value": "Lékárenské znaky",
+        "quote": "Lékárenské znaky"
+      },
+      "description": {
+        "value": "Lékárenské znaky jsou pod autorským zákonem.",
+        "quote": "Lékárenské znaky jsou pod autorským zákonem. A my patříme mezi několik málo firem, které mají oprávnění k jejich výrobě."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdfe7d8bb3bee0fd4b5_lekarenske-znaky-p-1600.jpg",
+        "alt": "Zelený světelný lékárenský kříž na fasádě"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Sortiment",
+            "quote": "Sortiment: světelné i nesvětelné nápisy „Lékárna“, polepy výloh, podlah a pultů a další doplňkové lékárenské značení."
+          },
+          "value": {
+            "value": "světelné i nesvětelné nápisy „Lékárna“, polepy výloh, podlah a pultů a další doplňkové lékárenské značení.",
+            "quote": "Sortiment: světelné i nesvětelné nápisy „Lékárna“, polepy výloh, podlah a pultů a další doplňkové lékárenské značení."
+          }
+        },
+        {
+          "name": {
+            "value": "Vhodné pro",
+            "quote": "Vhodné pro: označení lékáren a označení ordinací."
+          },
+          "value": {
+            "value": "označení lékáren a označení ordinací.",
+            "quote": "Vhodné pro: označení lékáren a označení ordinací."
+          }
+        }
+      ],
+      "materials": [],
+      "variants": [
+        {
+          "value": "světelné i nesvětelné nápisy „Lékárna“",
+          "quote": "Sortiment: světelné i nesvětelné nápisy „Lékárna“, polepy výloh, podlah a pultů a další doplňkové lékárenské značení."
+        },
+        {
+          "value": "polepy výloh, podlah a pultů",
+          "quote": "Sortiment: světelné i nesvětelné nápisy „Lékárna“, polepy výloh, podlah a pultů a další doplňkové lékárenské značení."
+        },
+        {
+          "value": "další doplňkové lékárenské značení",
+          "quote": "Sortiment: světelné i nesvětelné nápisy „Lékárna“, polepy výloh, podlah a pultů a další doplňkové lékárenské značení."
+        }
+      ],
+      "uses": [
+        {
+          "value": "slouží k jednotnému označení lékáren a zdravotnických zařízení",
+          "quote": "Jsou chráněny autorským zákonem a slouží k jednotnému označení lékáren a zdravotnických zařízení. Nabízíme širokou škálu světelných i nesvětelných nápisů „Lékárna“, polepů výloh, podlah a pultů, a dalšího označení."
+        },
+        {
+          "value": "označení lékáren a označení ordinací",
+          "quote": "Vhodné pro: označení lékáren a označení ordinací."
+        }
+      ]
+    },
+    {
+      "key": "svetelna-vystrc-a-vystrc-s-intarzii",
+      "anchor": null,
+      "name": {
+        "value": "Světelná výstrč a výstrč s intarzií",
+        "quote": "Světelná výstrč a výstrč s intarzií"
+      },
+      "description": {
+        "value": "Výstrč s osvětlením pro lepší viditelnost reklamy.",
+        "quote": "Výstrč s osvětlením pro lepší viditelnost reklamy. Výstrč s intarzií má tvarované světelné 3D znaky pro jedinečný vzhled. Tvar výstrče lze přizpůsobit dle libosti, včetně atypických tvarů."
+      },
+      "image": null,
+      "properties": [],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Výstrč s intarzií má tvarované světelné 3D znaky pro jedinečný vzhled.",
+          "quote": "Výstrč s osvětlením pro lepší viditelnost reklamy. Výstrč s intarzií má tvarované světelné 3D znaky pro jedinečný vzhled. Tvar výstrče lze přizpůsobit dle libosti, včetně atypických tvarů."
+        },
+        {
+          "value": "Tvar výstrče lze přizpůsobit dle libosti, včetně atypických tvarů.",
+          "quote": "Výstrč s osvětlením pro lepší viditelnost reklamy. Výstrč s intarzií má tvarované světelné 3D znaky pro jedinečný vzhled. Tvar výstrče lze přizpůsobit dle libosti, včetně atypických tvarů."
+        }
+      ],
+      "uses": []
+    },
+    {
+      "key": "vystrc-na-miru-a-nesvetelna-vystrc",
+      "anchor": null,
+      "name": {
+        "value": "Výstrč na míru a nesvětelná výstrč",
+        "quote": "Výstrč na míru a nesvětelná výstrč"
+      },
+      "description": {
+        "value": "Výstrč přizpůsobená specifickým požadavkům klienta.",
+        "quote": "Výstrč přizpůsobená specifickým požadavkům klienta. Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace. Nesvětelné provedení se hodí tam, kde má reklama působit decentně a nadčasově."
+      },
+      "image": null,
+      "properties": [],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace.",
+          "quote": "Výstrč přizpůsobená specifickým požadavkům klienta. Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace. Nesvětelné provedení se hodí tam, kde má reklama působit decentně a nadčasově."
+        }
+      ],
+      "uses": [
+        {
+          "value": "tam, kde má reklama působit decentně a nadčasově",
+          "quote": "Výstrč přizpůsobená specifickým požadavkům klienta. Nesvětelná výstrč je stylová a nenápadná, ideální pro elegantní a moderní prezentace. Nesvětelné provedení se hodí tam, kde má reklama působit decentně a nadčasově."
+        }
+      ]
+    }
+  ],
+  "faq": [],
+  "vynechano": [
+    {
+      "text": "Galerie realizací (popisky „Světelná výstrč 1“ … „Světelná výstrč 55“, „Lékárenský znak 1“ … „Lékárenský znak 15“)",
+      "duvod": "Popisky fotek, ne výrobky ani parametry."
+    },
+    {
+      "text": "Štítky sekcí „Nepřehlédnutelné“, „Zaujme i kolemjdoucí“, „Tvar podle brandingu“, „Nápadné na první pohled“, „Standardizované“, „Rozpoznatelné“",
+      "duvod": "Marketingové štítky bez obsahu."
+    },
+    {
+      "text": "Reklama, která svítí dnem i nocí. LED podsvětlení zajišťuje rovnoměrnou viditelnost za špatného počasí i po setmění.",
+      "duvod": "Úvodní věta sekce #vystrce, téměř shodná s popisem na kartě „Světelné výstrče“, který je ve vrstvě jako popis."
+    },
+    {
+      "text": "Viditelná reklama na ocelové konstrukci je nepřehlédnutelná i z velké dálky a proto i účinná.",
+      "duvod": "Marketingová věta v sekci #atypicke-vystrce; „ocelová konstrukce“ tu není uvedena jako materiál výrobku (není to štítek „Materiál:“), proto se do materiálů nepřebírá."
+    },
+    {
+      "text": "Nabízíme širokou škálu světelných i nesvětelných nápisů „Lékárna“, polepů výloh, podlah a pultů, a dalšího označení.",
+      "duvod": "Duplicitní se štítkem „Sortiment:“, který je ve vrstvě."
+    },
+    {
+      "text": "Podívejte se blíže na to, co vás zajímá. Pamatujte, všechno jde uzpůsobit:",
+      "duvod": "Navigační úvod ke kartám, bez konkrétního údaje; možnost provedení na míru pokrývá vlastnost „Výstrče různých typů a provedení na míru“."
+    },
+    {
+      "text": "Odkaz „Jak probíhá výroba?“ a sekce „Jak probíhá výroba světelné reklamy?“ (Obdržíme poptávku → Do 2 pracovních dní: Pošleme odhad ceny → Obratem: Dodáme závaznou nabídku na míru → Do 4-8 týdnů: Instalujeme)",
+      "duvod": "Společný blok všech produktových stránek o průběhu zakázky, ne o výrobku; nadpis není FAQ. Lhůty se do popisu výrobků nepřebírají."
+    },
+    {
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Společné bloky o firmě, ne o výrobku."
+    },
+    {
+      "text": "Navigace, tlačítka („Nezávazně poptat“, „Poptat výrobu“, „Získat cenovou nabídku“, „Zobrazit reference“), kontakty a patička",
+      "duvod": "Nejsou to údaje o výrobku."
+    },
+    {
+      "text": "A my patříme mezi několik málo firem, které mají oprávnění k jejich výrobě.",
+      "duvod": "Druhá věta popisu karty „Lékárenské znaky“ je tvrzení o firmě (jedna z mála oprávněných), ne údaj o výrobku; v popisu zůstala jen první věta."
+    },
+    {
+      "text": "Oprávnění: jsme jednou z mála firem oprávněných k výrobě lékárenských křížů. Spolupráce s Ing. arch. Flašarem nám umožnila podílet se na výrobě velkého množství těchto křížů.",
+      "duvod": "Tvrzení o firmě (oprávnění, spolupráce s Ing. arch. Flašarem, počet vyrobených křížů), ne vlastnost výrobku; vyřazeno při ověření."
+    }
+  ]
+}

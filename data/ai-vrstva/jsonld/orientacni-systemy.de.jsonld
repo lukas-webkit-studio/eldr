@@ -1,0 +1,172 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#webpage",
+      "url": "https://www.eldr.cz/de/produkty/orientacni-systemy",
+      "name": "Wegeleitsysteme",
+      "description": "Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkte",
+          "item": "https://www.eldr.cz/de/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Wegeleitsysteme",
+          "item": "https://www.eldr.cz/de/produkty/orientacni-systemy"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#sluzba",
+      "name": "Wegeleitsysteme",
+      "description": "Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/de/produkty/orientacni-systemy",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#katalog",
+        "name": "Wegeleitsysteme",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#orientacni-systemy",
+              "name": "Wegeleitsysteme für Gebäude und Areale",
+              "description": "Wir fertigen das System nach Ihren Wünschen, oder Sie wählen aus unseren modularen Serien-Wegeleitsystemen.",
+              "url": "https://www.eldr.cz/de/produkty/orientacni-systemy#orientacni-systemy",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6a991b5f017afb3097bc8182_orientacni-systemy-globus-p-800.png",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafik",
+                  "value": "eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Montage",
+                  "value": "an der Wand, auf Abstandshaltern, an Abhängeseilen, auf freistehenden Konstruktionen oder als Totems und Wegweiser."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatzort",
+                  "value": "in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "eloxiertes Aluminium"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Material",
+                  "value": "Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Maßgeschneidert"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Möglich ist auch ein System aus kleinen Totems und Wegweisern."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "in beleuchteter und unbeleuchteter Ausführung"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Ausführung",
+                  "value": "Wegeleitsysteme für innen, außen und in modularer Bauweise"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "Innen und außen"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Einsatz",
+                  "value": "in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#faq",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/de/produkty/orientacni-systemy#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wozu dient ein Wegeleitsystem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es ist ein System aus Informationstafeln, Wegweisern und Schildern, das Menschen die Orientierung erleichtert. Es hilft Besuchern, die Struktur des Raums schnell zu erfassen und den richtigen Weg zu finden, ohne das Personal fragen zu müssen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Woraus werden Wegeleitsysteme gefertigt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
+          }
+        }
+      ]
+    }
+  ]
+}

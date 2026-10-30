@@ -1,0 +1,393 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#webpage",
+      "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk",
+      "name": "Velkoformátový digitální tisk, řezaná grafika, polepy",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Domů",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Velkoformátový digitální tisk, řezaná grafika, polepy",
+          "item": "https://www.eldr.cz/produkty/velkoformatovy-tisk"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#sluzba",
+      "name": "Velkoformátový digitální tisk, řezaná grafika, polepy",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#katalog",
+        "name": "Velkoformátový digitální tisk, řezaná grafika, polepy",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#uvod",
+              "name": "Velkoformátový digitální tisk",
+              "description": "Lze detailně vyhotovit jakýkoliv design a barevnou kombinaci.",
+              "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk#uvod",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdff699af8129717988_uvod.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiály",
+                  "value": "je možné potisknout papír, samolepicí fólii, translucentní (prosvětlovací) fólii, perforovanou fólii, banner a textilní materiály."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Zpracování",
+                  "value": "latexový digitální tisk s možností detailního zpracování jakéhokoliv designu a barevné kombinace. Tisky laminujeme lesklou nebo matnou laminovací fólií, která zvyšuje odolnost zejména venku. Za stálobarevnost tisků ručíme minimálně po dobu tří let."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "papír"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "samolepicí fólii"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "translucentní (prosvětlovací) fólii"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "perforovanou fólii"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "banner"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "textilní materiály"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Tisky laminujeme lesklou nebo matnou laminovací fólií, která zvyšuje odolnost zejména venku."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Digitální tisk často kombinujeme s řezanou grafikou"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Laminace chrání reklamu rovněž před mechanickým poškozením"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Interiér i exteriér"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#rezana-grafika",
+              "name": "Řezaná grafika",
+              "description": "Řezanou grafikou rozumíme nápisy vyřezané ze samolepicí fólie.",
+              "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk#rezana-grafika",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf294524812b82d670_rezana-grafika-p-500.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiály",
+                  "value": "samolepicí barevné fólie vhodné pro aplikaci na širokou škálu povrchů. Používané fólie mají stálobarevnost až sedm let."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Zpracování",
+                  "value": "nápis je plotrem vyřezán do požadovaného tvaru a následně aplikován na podkladovou plochu – tou může být téměř jakýkoliv povrch s dostatečnou přilnavostí. Neumožňuje zhotovení například barevných přechodů a složitějších motivů v takové kvalitě jako digitální tisk. V případě potřeby proto tyto dvě techniky kombinujeme."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "samolepicí barevné fólie vhodné pro aplikaci na širokou škálu povrchů"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Výhodou řezané grafiky je její dlouhá životnost."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Je vhodná na všechny typy reklamních a informačních nápisů."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "tou může být téměř jakýkoliv povrch s dostatečnou přilnavostí"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#dalsi-druhy-polepu",
+              "name": "Polepy",
+              "description": "Reklamní polepy vozů, výloh, oken i podlah – tištěnou i řezanou grafikou.",
+              "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk#dalsi-druhy-polepu",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d4415_dalsi-druhy-polepu-p-1600.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "tištěnou i řezanou grafikou"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Polepy vozidel a výloh"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Perforované a krycí polepy oken"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Polepy podlah a bezpečnostní prvky"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Reklamní polepy vozů, výloh, oken i podlah"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#polepy-vozidel-a-vyloh",
+              "name": "Polepy vozidel a výloh",
+              "description": "celkové i částečné polepy vozidel, stejně jako samostatné nápisy. Návrh grafiky připravíme s vámi a zajistíme profesionální aplikaci.",
+              "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "celkové i částečné polepy vozidel"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "samostatné nápisy"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Polepy výloh a oken děláme tištěnou nebo řezanou grafikou"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "pro reklamní sdělení, informační texty, otevírací dobu, fotografie i loga"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#perforovane-a-kryci-polepy-oken",
+              "name": "Perforované a krycí polepy oken",
+              "description": "perforované fólie omezují vhled do interiéru, zároveň se zachovává výhled ven a nedochází k velkému omezení světla dovnitř.",
+              "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "nejčastěji používáme pískovanou fólii, která propouští světlo, ale omezuje průhled"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Krycí polepy zabraňují pohledu zvenku dovnitř"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Do fólie v různých odstínech lze vyřezávat motivy."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#polepy-podlah-a-bezpecnostni-prvky",
+              "name": "Polepy podlah a bezpečnostní prvky",
+              "description": "samolepicí protiskluzové fólie efektivně využívají prostor pro reklamu a hodí se do provozoven i veřejných prostor.",
+              "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "samolepicí protiskluzové fólie"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "hodí se do provozoven i veřejných prostor"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Bezpečnostní prvky usnadňují bezpečný pohyb lidem se zhoršeným zrakem."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/velkoformatovy-tisk#designove-obrazy",
+              "name": "Designové obrazy",
+              "description": "Navrhujeme a vyrábíme velkoformátové obrazy a nástěnné grafiky pro restaurace, kavárny, retail i firemní prostory",
+              "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk#designove-obrazy",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf719b2d58cd0d442c_designove-obrazy-p-1600.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiály a tisk",
+                  "value": "tiskneme na plátno (canvas), fólie i pevné desky jako Dibond či PVC, dodáváme obrazy v hliníkových i dřevěných rámech nebo v bezrámovém provedení."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Zpracování",
+                  "value": "zajišťujeme grafický návrh, precizní velkoformátový tisk ve vysokém rozlišení i profesionální montáž – vše přizpůsobujeme konkrétnímu prostoru, světlu i identitě značky."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "plátno (canvas)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "fólie"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "pevné desky jako Dibond či PVC"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "dodáváme obrazy v hliníkových i dřevěných rámech nebo v bezrámovém provedení"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "od stylových ilustrací přes výrazné brandové motivy"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "pro restaurace, kavárny, retail i firemní prostory"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Interiér"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
