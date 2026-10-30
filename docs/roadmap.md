@@ -17,6 +17,18 @@ Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
 - `docs/stav-prekladu.json` popisuje stav k 14. 9., novější publikace
   stagingu v něm nejsou.
 
+### Produkce 30. 10. 2026 22:56
+
+Publikováno a ověřeno: 10 produktových stránek CS/EN/DE, menu, přílohy ve formuláři (`Příloha 1–5`), recenze (varianta A) na homepage, SEO a `noindex` oprava, testovací článek pryč. L1 #19 zavřené.
+
+**Otevřené:**
+- S4 #29: zápis e-mailu zákazníkovi do Make 2867189 (Lukáš povolil v #29 21:48). Po zápisu testovací odeslání.
+- Schválené do 3. 11.: strukturovaná data (`85a630b6`), popis produktů pro AI 12 500 Kč (`5dbfd455`), blog 2 500 Kč (`9c9a80c9`, čeká na články od klienta).
+- Skill pro překlady (`d30f9ece`) až s přesunem GitHubu pod org `eldr`.
+- Cloudflare worker: nasazení z repa, pak smazat kopii marquee z custom code homepage a `src/dev/`; opravit `CLAUDE.md`.
+- CMS Reference: překlady, Polytex bez EN, dkLAB render (#26).
+- Designer drobnosti po publikaci (úkol `d30a2c84`).
+
 ### Štafeta 30. 10.
 
 - **S3 #26 hotovo, na homepage:** Lukáš vybral variantu A. Sekce recenzí na homepage (CS/EN/DE) je nahrazená pásem z CMS Reference: 22 recenzí v HTML, plynulé zpomalení při hoveru, reduced motion bez posunu. Nadpis a tlačítko „Všechny reference“ jsou původní prvky, takže zůstaly překlady i GTM. Staging 30. 10., produkci publikuje koordinátor. `/dev/recenze` je v draftu.
@@ -64,6 +76,6 @@ Spouští se, až Lukáš potvrdí, že klient schválil.
 
 ## Na Lukášovi
 
-1. Kroky jen v Designeru ze seznamů v #16 a #17 (blokující: odkazy dlaždic na `/produkty`, názvy polí příloh, přístup k nahraným souborům).
-2. Pokyn k publikaci produkce (L1).
+1. Designer drobnosti po publikaci (dashboard `d30a2c84`).
+2. Přístup k Cloudflare workeru `eldr-web` nebo postup nasazení.
 3. Rozpor: `CLAUDE.md` popisuje bundle z jsDelivr, web ho bere z Cloudflare workeru, jehož nasazení v repu není. Doplnit postup do `CLAUDE.md`.

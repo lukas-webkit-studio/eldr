@@ -48,6 +48,19 @@ session, hlídám, zapisuju zpětnou vazbu. Kód nepíšu, jen dokumentaci.
   (úkol `687d09ea`) je potřeba vložit do chatu nebo do issue.
 - Ze dvou Webflow připojení vidí site ELDR jen jedno. Druhé vrací 404.
 
+## Poučení z K01 (27.–30. 10. 2026)
+
+- **Nejdřív ověř, pak piš Lukášovi.** Pošta, dashboard a živý web se kontrolují dřív, než mu zadáš úkol. Nezadávej mu, co je už hotové.
+- **Ptej se a navrhuj, nerozhoduj za něj** (fakturace, rozsah, změny vzhledu). Nevymýšlej řešení, která nezadal (viditelný blok, podstránky).
+- **Stručně.** Jedna zpráva: co je hotové, co zbývá, co musí udělat on. Bez esejí.
+- **Co jde přes API, udělej sám.** Lukášovi jen to, co API neumí: prop „Link“ typu stránka na instancích komponent, Name u File Upload (API zapíše jen do schématu formuláře, HTML zůstane „File“), interakce, obrázky per locale.
+- **Ověřuj na publikovaném HTML** (curl stagingu), ne v Designeru ani návratovým kódem.
+- **Odkazy na stránku jdou za ID stránky.** Po přesunu staré stránky do `/dev/` vedou dlaždice dál na ni. Staré stránky mají v názvu „(old)“.
+- **Zápis do produkčního Make** session udělá jen se souhlasem napsaným Lukášem pod jeho účtem v issue. Přeposlaný souhlas nebere.
+- **Bundle jde z Cloudflare workeru `eldr-web`**, který se z repa nenasazuje. `CLAUDE.md` o jsDelivr je zastaralé.
+- Čti `standardy-stafeta` a drž hlavičku promptu; dotazy session se šetří posíláním do existující session (`send_message`), pokud má kontext pod ~300k.
+
 ## Historie
 
 - 2026-10-27 · K01 · založení štafetových dokumentů.
+- 2026-10-30 · K01 · produkce publikovaná 22:56, předání novému koordinátorovi.
