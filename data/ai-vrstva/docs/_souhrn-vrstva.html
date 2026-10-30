@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8"><title>Popis produktů pro AI – jak vrstva funguje a jak je ověřená</title></head><body>
+<h1>Popis produktů pro AI – jak vrstva funguje a jak je ověřená</h1>
+
+<p><b>Stručně:</b> Ke každé z 10 produktových stránek webu eldr.cz jsme ve všech třech jazycích přidali strojově čitelný popis výrobků. Vyhledávače a AI asistenti z něj poznají, co na stránce nabízíte, z čeho se to vyrábí a kde se to používá. <b>Návštěvník webu žádnou změnu nevidí.</b> Všech 1 649 údajů jsme převzali doslova z textu stránek a u každého je odkaz na místo, odkud pochází.</p>
+
+<h2>Co přesně vrstva je?</h2>
+<p>Je to krátký blok kódu v hlavičce každé stránky ve formátu JSON-LD. Tento formát čtou Google, Bing i AI asistenti (ChatGPT, Perplexity, Claude). Popisuje stejný obsah jako stránka, jen ve struktuře, které stroj rozumí bez hádání: „tohle je výrobek, tohle jeho materiál, tohle místo použití“.</p>
+<p>Vrstva je zapsaná přímo ve Webflow, ne skriptem v prohlížeči. Roboti ji proto vidí i bez spuštění JavaScriptu. Většina AI robotů JavaScript nespouští.</p>
+
+<h2>Co vrstva obsahuje?</h2>
+<table border="1" cellpadding="4">
+<tr><th></th><th>CS</th><th>EN</th><th>DE</th></tr>
+<tr><td>Stránky</td><td>10</td><td>10</td><td>10</td></tr>
+<tr><td>Výrobky a služby</td><td>44</td><td>44</td><td>44</td></tr>
+<tr><td>Parametry (např. Materiál, Montáž, Umístění)</td><td>79</td><td>79</td><td>79</td></tr>
+<tr><td>Materiály</td><td>56</td><td>56</td><td>56</td></tr>
+<tr><td>Provedení a varianty</td><td>111</td><td>110</td><td>111</td></tr>
+<tr><td>Otázky s odpovědí</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><td><b>Údaje celkem</b></td><td><b>550</b></td><td><b>549</b></td><td><b>550</b></td></tr>
+<tr><td>Údaje s odkazem na zdroj</td><td>100 %</td><td>100 %</td><td>100 %</td></tr>
+</table>
+<p>Anglická verze má o jeden údaj méně. Na anglické stránce profilu 5s jsou rozměr a čelní plocha v jedné větě, v češtině a němčině ve dvou.</p>
+<p>Ke každé stránce je v podsložkách CS, EN a DE samostatný dokument. Najdete v něm všechny výrobky s parametry, odkazy na zdroj a na konci přesný kód vrstvy.</p>
+
+<h2>Jak jsme ověřili, že nic není vymyšlené?</h2>
+<ol>
+<li><b>Zdroj je jen web.</b> Údaje jsme brali z publikovaných stránek eldr.cz tak, jak je vidí robot bez JavaScriptu. Anglické a německé údaje pocházejí z anglických a německých stránek, nic jsme nepřekládali.</li>
+<li><b>Doslovná citace u každého údaje.</b> Ke každé hodnotě je uložená citace ze stránky. Automatický test projde všech 1 649 údajů a ověří, že citace na stránce opravdu je. Výsledek: 1 649 z 1 649, tedy 100 %. Test běží při každé změně.</li>
+<li><b>Nezávislá kontrola každé stránky.</b> Údaje sestavil jeden zpracovatel a pak je prošel jiný. Ten stránku načetl znovu a hledal údaje mimo text, s posunutým významem nebo chybějící. Našel a opravil 48 nedostatků. Například vyřadil tvrzení o firmě, která nepopisují výrobek, a sloučil výrobky, které stránka popisuje dvakrát.</li>
+<li><b>Oficiální validátor.</b> Kód všech 30 stránek prošel validátorem schema.org s výsledkem 0 chyb a 0 varování.</li>
+</ol>
+
+<h2>Co do vrstvy záměrně nešlo?</h2>
+<ul>
+<li><b>Ceny, hodnocení a recenze.</b> Na produktových stránkách nejsou, takže je nemá ani vrstva.</li>
+<li><b>Tvrzení o firmě</b>, například rekordy nebo „jedni z mála“. Patří k popisu firmy, ne k výrobku.</li>
+<li><b>Marketingové štítky bez obsahu</b>, například „Neomezené možnosti“.</li>
+<li><b>Společné bloky</b> o průběhu zakázky a o kvalitě, které jsou stejné na všech stránkách.</li>
+<li><b>Popisky fotek v galeriích.</b></li>
+</ul>
+<p>U každé stránky je v dokumentu oddíl „Co do popisu nešlo a proč“.</p>
+
+<h2>Proč jsou výrobky popsané jako služby?</h2>
+<p>Google u typu „produkt“ vyžaduje cenu, hodnocení nebo recenze. Bez nich ho hlásí jako chybu. Vyrábíte na zakázku a ceny na webu neuvádíte, takže vymyšlenou cenu doplnit nechceme. Výrobky jsou proto popsané jako zakázková výroba („služba“). To odpovídá skutečnosti a parametry, materiály i provedení zůstávají zachované. Google tak nemá co hlásit jako chybu.</p>
+
+<h2>Co vrstva neslibuje?</h2>
+<ul>
+<li><b>Lepší pozici ve vyhledávání ani zmínky v AI odpovědích nezaručuje.</b> Jen usnadňuje strojům přesně pochopit, co nabízíte.</li>
+<li><b>Hvězdičky nebo ceny ve výsledcích Google nepřinese</b>, protože ty potřebují hodnocení a ceny.</li>
+<li><b>Otázky s odpovědí</b> zobrazuje Google ve výsledcích jen u vybraných webů, typicky státních a zdravotnických. Pro AI asistenty ale mají význam.</li>
+</ul>
+
+<h2>Na co si dát pozor při úpravách webu?</h2>
+<p>Vrstva popisuje stránky ke dni 30. 10. 2026. Když se změní text produktové stránky, je potřeba změnit i vrstvu, jinak se rozejdou. Automatický test na to upozorní. Úpravu zajistíme my.</p>
+
+<h2>Výsledky z ostrého webu</h2>
+<p>[Doplní se po zveřejnění: dostupnost pro 7 robotů (Googlebot, Bingbot, GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot), výsledky validátorů a Google Rich Results Testu na všech 30 stránkách.]</p>
+</body></html>
