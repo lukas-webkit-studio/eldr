@@ -62,7 +62,7 @@
     {
       "@type": "Service",
       "@id": "https://www.eldr.cz/de/servisni-sluzby-a-pronajem-plosin#pronajem-plosin",
-      "name": "Vermietung von Bohranlagen",
+      "name": "Vermietung von Arbeitsbühnen",
       "provider": {
         "@id": "https://www.eldr.cz/#organization"
       },

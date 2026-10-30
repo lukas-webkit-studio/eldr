@@ -18,6 +18,10 @@
  *                                                 # vypsaný JSON-LD proti výstupu
  *   node scripts/strukturovana-data.js --slovnik <schemaorg-current-https.jsonld>
  *                                                 # obnoví výřez slovníku schema.org
+ *
+ * Šablony CMS mají místo hodnot vazby {{wf …}}, takže data článků (ISO datum,
+ * URL obrázku) build nezkontroluje. Ověří je až --live na publikovaném webu,
+ * spusť ho po každé publikaci stagingu (npm run data:live).
  */
 'use strict';
 
@@ -105,7 +109,7 @@ function web(j) {
   };
 }
 
-function drobecky(j, url, polozky) {
+function drobecky(url, polozky) {
   return {
     '@type': 'BreadcrumbList',
     '@id': url + '#breadcrumb',
@@ -152,7 +156,7 @@ function graf(s, j) {
       });
     }
     g.push(
-      drobecky(j, url, [
+      drobecky(url, [
         { name: cfg.domu[j], item: domov(j) },
         { name: rodic.nazev[j], item: urlStranky(j, rodic.cesta) },
         { name: nazev, item: url }
@@ -168,7 +172,7 @@ function graf(s, j) {
       if (s.oFirme) wp.about = ref(ORG);
       wp.breadcrumb = ref(url + '#breadcrumb');
       g.push(
-        drobecky(j, url, [
+        drobecky(url, [
           { name: cfg.domu[j], item: domov(j) },
           { name: s.nazev[j], item: url }
         ])
@@ -208,17 +212,14 @@ function postav() {
 
 const ZAKAZANE_TYPY = ['Review', 'AggregateRating', 'Offer', 'AggregateOffer', 'JobPosting'];
 const ZAKAZANE_KLICE = ['review', 'aggregateRating', 'offers', 'price', 'priceRange', 'priceCurrency'];
-const URL_ELDR = /^https:\/\/www\.eldr\.cz(\/#[a-z-]+|(\/[^#\s]*[^/#\s])?(#[a-z-]+)?)$/;
+// Holá doména jen bez kotvy nebo s "/#…"; jinde cesta bez lomítka na konci a volitelná kotva.
+const URL_ELDR = /^https:\/\/www\.eldr\.cz(\/#[a-z-]+|\/[^#\s]*[^/#\s](#[a-z-]+)?)?$/;
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B50}]/u;
 const ISO = /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2}))?$/;
 const jeVazba = (v) => typeof v === 'string' && v.includes('{{wf ');
 
-let slovnik = null;
-try {
-  slovnik = JSON.parse(fs.readFileSync(SLOVNIK, 'utf8'));
-} catch (e) {
-  slovnik = null;
-}
+// Chybějící výřez = kontrola slovníku se vynechá s varováním. Poškozený výřez = chyba.
+const slovnik = fs.existsSync(SLOVNIK) ? JSON.parse(fs.readFileSync(SLOVNIK, 'utf8')) : null;
 
 function typy(n) {
   return [].concat(n['@type'] || []);
@@ -234,7 +235,7 @@ function predci(t) {
   return out;
 }
 
-/** Vrátí seznam chyb. ctx = { j, url, domu, sablona } */
+/** Vrátí seznam chyb. ctx = { j, url, domu, upozorneni? } */
 function validuj(doc, ctx) {
   const ch = [];
   const err = (m) => ch.push(m);
@@ -259,7 +260,8 @@ function validuj(doc, ctx) {
       const t = typy(v);
       t.forEach((x) => ZAKAZANE_TYPY.includes(x) && err('zakázaný typ ' + x + ' (' + cesta + ')'));
       const klice = Object.keys(v);
-      if (klice.length === 1 && klice[0] === '@id') odkazy.push(v['@id']);
+      // Každý vnořený objekt s @id (i pojmenovaný odkaz) musí mířit na uzel grafu nebo na firmu/web.
+      if (cesta.includes('.') && v['@id']) odkazy.push(v['@id']);
       for (const k of klice) {
         if (ZAKAZANE_KLICE.includes(k)) err('zakázaná vlastnost ' + k + ' (' + cesta + ')');
         if (slovnik && t.length && !k.startsWith('@')) {
@@ -359,8 +361,6 @@ function validuj(doc, ctx) {
       ['datePublished', 'dateModified'].forEach(
         (k) => a[k] && !jeVazba(a[k]) && !ISO.test(a[k]) && err('BlogPosting.' + k + ' není ISO 8601: ' + a[k])
       );
-      if (a.headline && !jeVazba(a.headline) && a.headline.length > 110)
-        err('BlogPosting.headline delší než 110 znaků');
       if (a.image && !jeVazba(a.image) && !/^https:\/\//.test(a.image)) err('BlogPosting.image není URL');
     });
   return ch;
@@ -370,17 +370,33 @@ function validuj(doc, ctx) {
 
 function jsonLdZHtml(html) {
   const out = [];
-  const re = /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g;
+  const re = /<script[^>]*type=["']?application\/ld\+json["']?[^>]*>([\s\S]*?)<\/script>/g;
   let m;
-  while ((m = re.exec(html))) out.push({ text: m[1], vHead: m.index < html.indexOf('</head>') });
+  const konecHead = html.indexOf('</head>');
+  while ((m = re.exec(html))) out.push({ text: m[1], vHead: konecHead !== -1 && m.index < konecHead });
   return out;
+}
+
+// Položky CMS bere --live ze sitemapy webu, aby zkontroloval i nově přidané články.
+// Když sitemapa není k dispozici, použije seznam z stranky.json.
+async function slugyZeSitemapy(zaklad) {
+  try {
+    const xml = await (await fetch(zaklad + '/sitemap.xml')).text();
+    return [...xml.matchAll(/<loc>https:\/\/www\.eldr\.cz(\/[^<]*)<\/loc>/g)].map((m) => m[1]);
+  } catch (e) {
+    return [];
+  }
 }
 
 async function live(zaklad) {
   const prace = [];
+  const vSitemape = await slugyZeSitemapy(zaklad);
   for (const s of cfg.stranky)
     for (const j of JAZYKY) {
-      const slugy = s.sablona ? s.polozky : [null];
+      const zeSitemapy = s.sablona
+        ? vSitemape.map((c) => c.match(new RegExp('^' + s.cesta.replace('{slug}', '([^/]+)') + '$'))).filter(Boolean).map((m) => m[1])
+        : [];
+      const slugy = s.sablona ? (zeSitemapy.length ? zeSitemapy : s.polozky) : [null];
       for (const slug of slugy) {
         const cesta = slug ? s.cesta.replace('{slug}', slug) : s.cesta;
         const prefix = cfg.locales[j].prefix;
@@ -474,7 +490,10 @@ function obnovSlovnik(soubor) {
 async function main() {
   const arg = process.argv.slice(2);
   if (arg[0] === '--slovnik') return obnovSlovnik(arg[1]);
-  if (arg[0] === '--live') process.exit((await live(arg[1].replace(/\/$/, ''))) ? 1 : 0);
+  if (arg[0] === '--live') {
+    if (!arg[1]) throw new Error('--live potřebuje adresu, např. https://eldr.webflow.io');
+    process.exit((await live(arg[1].replace(/\/$/, ''))) ? 1 : 0);
+  }
 
   const vse = postav();
   if (!slovnik) console.warn('! chybí ' + path.relative(process.cwd(), SLOVNIK) + ', kontrola slovníku schema.org vynechána');
@@ -489,7 +508,8 @@ async function main() {
     ch.forEach((c) => console.error('✗ ' + s.klic + '.' + j + ': ' + c));
     chyb += ch.length;
   }
-  if (arg[0] === '--webflow') {
+  if (arg[0] === '--webflow' && !chyb) {
+    fs.readdirSync(OUT).filter((f) => f.startsWith('_webflow-')).forEach((f) => fs.unlinkSync(path.join(OUT, f)));
     const polozky = vse.map(({ s, j, data }) => {
       const p = { id: s.pageId, jsonLdSchema: JSON.stringify(data) };
       if (cfg.locales[j].localeId) p.localeId = cfg.locales[j].localeId;

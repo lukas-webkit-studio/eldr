@@ -62,7 +62,7 @@
     {
       "@type": "Service",
       "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#pronajem-plosin",
-      "name": "Rental of rigs",
+      "name": "Rental of work platforms",
       "provider": {
         "@id": "https://www.eldr.cz/#organization"
       },

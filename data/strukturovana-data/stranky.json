@@ -1,4 +1,5 @@
 {
+  "_poznamka_sluzby": "Pronájem plošin EN/DE podle položky v menu webu (Rental of work platforms / Vermietung von Arbeitsbühnen), ne podle nadpisu sekce, kde je chybný překlad (rigs / Bohranlagen).",
   "_popis": "Zdroj pravdy JSON-LD pro stránky mimo 10 produktových (ty má S5 #35). Texty jsou z viditelného obsahu a meta description webu v daném jazyce (stav 30. 10. 2026), emoji odstraněné. Kde meta description v daném jazyce chybí nebo je nepřeložená, description se vynechává. Skript scripts/strukturovana-data.js z toho staví grafy do vystup/.",
   "site_id": "635940ec249b210e8902edd4",
   "locales": {
@@ -93,7 +94,7 @@
       },
       "sluzby": [
         { "kotva": "servis", "nazev": { "cs": "Pravidelný servis a údržba", "en": "Regular service and maintenance", "de": "Regelmäßiger Service und Wartung" } },
-        { "kotva": "pronajem-plosin", "nazev": { "cs": "Pronájem plošin", "en": "Rental of rigs", "de": "Vermietung von Bohranlagen" } },
+        { "kotva": "pronajem-plosin", "nazev": { "cs": "Pronájem plošin", "en": "Rental of work platforms", "de": "Vermietung von Arbeitsbühnen" } },
         { "kotva": "ochrana-proti-ptactvu", "nazev": { "cs": "Instalace ochranných systémů proti ptactvu", "en": "Installation of bird protection systems", "de": "Installation von Vogelschutzsystemen" } },
         { "kotva": "svetelne-mereni", "nazev": { "cs": "Světelné měření reklamy", "en": "Light measurement of advertising", "de": "Lichtmessung von Werbung" } }
       ],
