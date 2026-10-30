@@ -1,0 +1,110 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.eldr.cz/de/produkty#webpage",
+      "url": "https://www.eldr.cz/de/produkty",
+      "name": "Unsere Produkte",
+      "description": "Maßgeschneiderte 3D-Schriftzüge, Pylone, Leuchtpaneele, Wegeleitsysteme und Beklebungen. Vom Aufkleber bis zum großen Pylon, mit fachgerechter Montage.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/produkty#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/de/produkty#itemlist"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/produkty#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Unsere Produkte",
+          "item": "https://www.eldr.cz/de/produkty"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.eldr.cz/de/produkty#itemlist",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "3D-Schriftzüge, Logos und einzelne Buchstaben",
+          "url": "https://www.eldr.cz/de/produkty/3d-napisy-loga-a-jednotliva-pismena"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Schilder und Leuchtpaneele",
+          "url": "https://www.eldr.cz/de/produkty/tabule-a-svetelne-panely"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pylone und Totems",
+          "url": "https://www.eldr.cz/de/produkty/pylony-a-totemy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Ausleger, Apothekenschilder",
+          "url": "https://www.eldr.cz/de/produkty/vystrce-lekarenske-znaky"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Wegeleitsysteme",
+          "url": "https://www.eldr.cz/de/produkty/orientacni-systemy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Großformatiger Digitaldruck, geschnittene Grafiken, Beklebungen",
+          "url": "https://www.eldr.cz/de/produkty/velkoformatovy-tisk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Architektonische Elemente, Eingangsportale, Fahnen",
+          "url": "https://www.eldr.cz/de/produkty/architektonicke-prvky-vstupni-portaly-vlajky"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Design- und Innenleuchten und Sonderprojekte",
+          "url": "https://www.eldr.cz/de/produkty/designova-a-interierova-svitidla-specialni-projekty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Verkaufsunterstützende Elemente, LED-Technologie",
+          "url": "https://www.eldr.cz/de/produkty/prvky-podpory-prodeje-led-technologie"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Maßgeschneiderte Schlosserkonstruktionen, Plexiglasverarbeitung",
+          "url": "https://www.eldr.cz/de/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla"
+        }
+      ]
+    }
+  ]
+}

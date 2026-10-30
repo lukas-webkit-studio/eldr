@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.eldr.cz/en/o-nas#webpage",
+      "url": "https://www.eldr.cz/en/o-nas",
+      "name": "About us",
+      "description": "Illuminated advertising and design luminaires including installation. We are a family-owned company with more than 30 years of experience in the market.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "about": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/o-nas#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/o-nas#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About us",
+          "item": "https://www.eldr.cz/en/o-nas"
+        }
+      ]
+    }
+  ]
+}

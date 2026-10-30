@@ -3,6 +3,20 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-10-31 · S6 · Strukturovaná data (#34)
+
+- **Zápis nativně ve Webflow**, schema markup stránky (`bulk_update_pages_schema_markup`), každý jazyk zvlášť. Vypíše se v `<head>` surového HTML, takže ho čtou i roboti bez JS. Locale bez vlastního zápisu dědí češtinu, proto se zapisují vždy CS, EN i DE. Žádný JS v bundlu.
+- **Zdroj pravdy je repo:** `data/strukturovana-data/firma.json` a `stranky.json`. Skript `scripts/strukturovana-data.js` staví grafy do `vystup/` a hlídá je v `npm run check` (konvence `@id`, kanonické URL, drobečky, zakázané typy, výřez slovníku schema.org). `--live <url>` porovná vypsaný JSON-LD s výstupem.
+- **Články Inspirace:** šablona CMS má `BlogPosting` s vazbami na pole (`name`, `perex`, `hlavni-obrazek`, `datum`, `updated-on`, `slug`). Nové články dostanou data samy, i v EN a DE. Autor a vydavatel je firma, protože web autora u článku nezobrazuje. `datePublished` = pole Datum (ukazuje ho výpis článků), `dateModified` = poslední úprava (ukazuje ji detail článku).
+- **Firma je popsaná jen na homepage** (`Organization` + `LocalBusiness`, `@id https://www.eldr.cz/#organization`), jinde jen odkaz. Výjimka: u článku má `author` a `publisher` jméno a URL firmy, protože Google odkaz na uzel z jiné stránky nerozbalí.
+- **Kariéra bez `JobPosting`:** pozice jsou zveřejněné 28.–29. 5. 2025 bez data konce a nevíme, jestli jsou aktuální. Google za prošlé inzeráty penalizuje. Popis pozice je navíc rich text, jehož HTML by vazba do JSON nevložila bezpečně. Stránky mají `WebPage` a drobečky. Až Lukáš potvrdí aktuálnost, dá se `JobPosting` doplnit.
+- **Záměrně vynecháno:** `Review` a `AggregateRating` z recenzí na vlastním webu (Google je bere jako self-serving a nezobrazí je), ceny a `Offer` (web je neuvádí), `SearchAction` (web nemá vyhledávání), `foundingDate` (web uvádí 1989 i 1990, ARES 1997), `geo` (souřadnice web neuvádí), konkrétní podtyp `LocalBusiness` (web žádný nedokládá).
+- **Názvy v drobečcích** jsou titulky stránek bez značky („Naše produkty“, „Kontakty“…), první položka „Elektro Drapač“. K `/produkty` nevede v navigaci přímý odkaz (rozbalovací položka se jmenuje „Naše nabídka / Our Products / Unser Angebot“), proto titulek. Názvy poslány S5 #35 ke sjednocení.
+- **Pronájem plošin EN/DE** podle položky v menu webu („Rental of work platforms“ / „Vermietung von Arbeitsbühnen“). Nadpis sekce na stránce má chybný překlad („Rental of rigs“ / „Vermietung von Bohranlagen“ = vrtné soupravy), to je textová vada mimo S6.
+- **Otevřené hypotézy z kontroly (neověřeno):** (1) jestli Webflow při dosazení vazby CMS escapuje rovnou uvozovku `"` v názvu nebo perexu; dnešní texty ji nemají, `npm run data:live` po publikaci by rozbitý JSON odhalil. (2) `dateModified` = systémové `updated-on` se mění i při překladu nebo úpravě SEO; odpovídá ale datu, které detail článku ukazuje. (3) Služby na servisu mají jen `url` stránky, kotvy kromě `#pronajem-plosin` na stránce nejsou.
+- **Rich Results Test se automatizovat nepodařil** (v headless prohlížeči zůstane tlačítko neaktivní, obcházet kontrolu robotů nebudeme). Náhrada: validátor schema.org 0 chyb na 60 URL + kontrola povinných polí Googlu ve skriptu. Ruční test z odkazů v Google Docu po publikaci (R2 #37).
+- Starý `LocalBusiness` v custom code stránek `/`, `/kontakty` a `/servisni-sluzby-a-pronajem-plosin` odstraněn, záloha v `_backup/webflow/custom-code/page-head-localbusiness-do-2026-10-30.html`.
+
 ## 2026-10-30 · Lukáš (přes K01) · Výběr varianty recenzí
 
 - Na homepage jde varianta A. Skript patří do bundlu. Data v CMS Reference (překlady, obrázky) se řeší později samostatně. Render u dkLAB zatím zůstává. `/dev/recenze` po přesunu do draftu. (#26)

@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.eldr.cz/en/kontakty#webpage",
+      "url": "https://www.eldr.cz/en/kontakty",
+      "name": "Contact",
+      "description": "Email or call us on weekdays from 6 am to 3 pm. Our headquarters are in Velké Poříčí; meetings at our Prague office are by phone appointment.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "about": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/kontakty#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/kontakty#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://www.eldr.cz/en/kontakty"
+        }
+      ]
+    }
+  ]
+}

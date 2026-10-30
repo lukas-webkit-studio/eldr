@@ -17,6 +17,10 @@ Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
 - `docs/stav-prekladu.json` popisuje stav k 14. 9., novější publikace
   stagingu v něm nejsou.
 
+### Štafeta noc 30.–31. 10.
+
+- **S6 #34 strukturovaná data (staging):** JSON-LD na 20 stránkách × CS/EN/DE = 60 URL, nativně ve Webflow (schema markup stránky). Zdroj a kontrola v `data/strukturovana-data/` a `npm run data` / `npm run data:live`. Články Inspirace a pozice v Kariéře z vazeb na CMS, nové články automaticky. Starý `LocalBusiness` z custom code tří stránek pryč. Validátor schema.org 0 chyb na 60 URL. Produkci publikuje koordinátor po R2 #37; Rich Results Test na produkci doplní R2.
+
 ### Produkce 30. 10. 2026 22:56
 
 Publikováno a ověřeno: 10 produktových stránek CS/EN/DE, menu, přílohy ve formuláři (`Příloha 1–5`), recenze (varianta A) na homepage, SEO a `noindex` oprava, testovací článek pryč. L1 #19 zavřené.
