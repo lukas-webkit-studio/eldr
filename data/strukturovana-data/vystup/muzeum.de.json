@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/de/muzeum-svetelnych-reklam#webpage",
+      "url": "https://www.eldr.cz/de/muzeum-svetelnych-reklam",
+      "name": "Museum für Lichtwerbung",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/muzeum-svetelnych-reklam#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/muzeum-svetelnych-reklam#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Museum für Lichtwerbung",
+          "item": "https://www.eldr.cz/de/muzeum-svetelnych-reklam"
+        }
+      ]
+    }
+  ]
+}

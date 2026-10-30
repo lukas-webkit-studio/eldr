@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.eldr.cz/de/kontakty#webpage",
+      "url": "https://www.eldr.cz/de/kontakty",
+      "name": "Kontakt",
+      "description": "Schreiben oder rufen Sie uns an, werktags von 6 bis 15 Uhr. Unser Firmensitz ist in Velké Poříčí, Termine im Prager Büro nach telefonischer Vereinbarung.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "about": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/kontakty#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/kontakty#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kontakt",
+          "item": "https://www.eldr.cz/de/kontakty"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.eldr.cz/de/inspirace#webpage",
+      "url": "https://www.eldr.cz/de/inspirace",
+      "name": "Inspiration",
+      "description": "Der komplette Leitfaden zur Leuchtreklame. Entdecken Sie die Möglichkeiten der Leuchtreklame und hinterlassen Sie bei Ihren Kunden einen unvergesslichen Eindruck.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/de/inspirace#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/de/inspirace#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Inspiration",
+          "item": "https://www.eldr.cz/de/inspirace"
+        }
+      ]
+    }
+  ]
+}

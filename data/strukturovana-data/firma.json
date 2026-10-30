@@ -1,0 +1,59 @@
+{
+  "_zdroje": {
+    "nazev, adresy, IC, DIC, telefon, e-mail, hodiny": "https://www.eldr.cz/kontakty (blok Kde nás najdete, patička) — stav 30. 10. 2026",
+    "IC a DIC overene": "ARES, https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/25280236 — obchodní firma ELEKTRO DRAPAČ s.r.o., sídlo Žďárecká 177, 54932 Velké Poříčí (30. 10. 2026)",
+    "sameAs": "ikony sociálních sítí v patičce www.eldr.cz (bez sledovacích parametrů)",
+    "logo": "logo v navigaci, 440 × 113 px, WebP",
+    "image": "Open Graph obrázek homepage",
+    "popis": "meta description homepage v daném jazyce, bez emoji",
+    "alternateName": "zkratka ELDR, kterou web používá v titulcích článků",
+    "foundingDate": "záměrně vynecháno: O nás uvádí založení 1989 i působení na trhu od 1990, ARES zápis s.r.o. 1997"
+  },
+  "web": "https://www.eldr.cz",
+  "name": "Elektro Drapač",
+  "legalName": "ELEKTRO DRAPAČ s.r.o.",
+  "alternateName": "ELDR",
+  "ico": "25280236",
+  "vatID": "CZ25280236",
+  "telephone": "+420491482500",
+  "email": "eldr@eldr.cz",
+  "logo": {
+    "url": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/636a570a2304e176d79cf28c_elektro-drapac-logo-440.webp",
+    "width": 440,
+    "height": 113
+  },
+  "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/65e9e62f5b3be4ac12c61741_eldr-open-graph-image.webp",
+  "otviraciDoba": { "dny": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "od": "06:00", "do": "15:00" },
+  "sidlo": {
+    "streetAddress": "Žďárecká 177",
+    "addressLocality": "Velké Poříčí",
+    "postalCode": "549 32",
+    "addressCountry": "CZ"
+  },
+  "kancelarPraha": {
+    "name": { "cs": "Kancelář Praha", "en": "Prague office", "de": "Büro Prag" },
+    "description": {
+      "cs": "Schůzka s obchodním zástupcem pouze dle telefonické domluvy.",
+      "en": "Meetings with a sales representative by phone appointment only.",
+      "de": "Treffen mit einem Vertriebsmitarbeiter nur nach telefonischer Vereinbarung."
+    },
+    "address": {
+      "streetAddress": "Gutova 3317/15",
+      "addressLocality": { "cs": "Praha 10 - Strašnice", "en": "Praha 10 - Strašnice", "de": "Prag 10 - Strašnice" },
+      "postalCode": "100 00",
+      "addressCountry": "CZ"
+    }
+  },
+  "sameAs": [
+    "https://www.facebook.com/elektrodrapac/",
+    "https://www.instagram.com/elektrodrapac/",
+    "https://www.youtube.com/@elektrodrapacs.r.o.-svetel5850",
+    "https://www.linkedin.com/company/elektrodrapac/",
+    "https://twitter.com/DrapacElektro"
+  ],
+  "popis": {
+    "cs": "Světelná reklama i designová svítidla včetně montáže. Jsme rodinná firma s více než 30letou zkušeností na trhu.",
+    "en": "Illuminated advertising and design luminaires including installation. We are a family-owned company with more than 30 years of experience in the market.",
+    "de": "Beleuchtung, Werbe- und Designleuchten inklusive Installation. Wir sind ein Familienunternehmen mit mehr als 30 Jahren Erfahrung auf dem Markt."
+  }
+}

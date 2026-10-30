@@ -1,0 +1,282 @@
+{
+ "_zdroj": "https://schema.org/version/latest/schemaorg-current-https.jsonld",
+ "tridy": {
+  "Organization": [
+   "Thing"
+  ],
+  "Thing": [],
+  "LocalBusiness": [
+   "Organization",
+   "Place"
+  ],
+  "Place": [
+   "Thing"
+  ],
+  "ImageObject": [
+   "MediaObject"
+  ],
+  "MediaObject": [
+   "CreativeWork"
+  ],
+  "CreativeWork": [
+   "Thing"
+  ],
+  "PropertyValue": [
+   "StructuredValue"
+  ],
+  "StructuredValue": [
+   "Intangible"
+  ],
+  "Intangible": [
+   "Thing"
+  ],
+  "PostalAddress": [
+   "ContactPoint"
+  ],
+  "ContactPoint": [
+   "StructuredValue"
+  ],
+  "OpeningHoursSpecification": [
+   "StructuredValue"
+  ],
+  "WebSite": [
+   "CreativeWork"
+  ],
+  "WebPage": [
+   "CreativeWork"
+  ],
+  "CollectionPage": [
+   "WebPage"
+  ],
+  "BreadcrumbList": [
+   "ItemList"
+  ],
+  "ItemList": [
+   "Intangible"
+  ],
+  "ListItem": [
+   "Intangible"
+  ],
+  "ContactPage": [
+   "WebPage"
+  ],
+  "AboutPage": [
+   "WebPage"
+  ],
+  "Service": [
+   "Intangible"
+  ],
+  "BlogPosting": [
+   "SocialMediaPosting"
+  ],
+  "SocialMediaPosting": [
+   "Article"
+  ],
+  "Article": [
+   "CreativeWork"
+  ]
+ },
+ "vlastnosti": {
+  "name": [
+   "Thing"
+  ],
+  "legalName": [
+   "Organization"
+  ],
+  "alternateName": [
+   "Thing"
+  ],
+  "url": [
+   "Thing"
+  ],
+  "logo": [
+   "Brand",
+   "Certification",
+   "Organization",
+   "Place",
+   "Product",
+   "Service"
+  ],
+  "width": [
+   "MediaObject",
+   "OfferShippingDetails",
+   "Product",
+   "ShippingConditions",
+   "VisualArtwork"
+  ],
+  "height": [
+   "MediaObject",
+   "OfferShippingDetails",
+   "Person",
+   "Product",
+   "ShippingConditions",
+   "VisualArtwork"
+  ],
+  "image": [
+   "Thing"
+  ],
+  "description": [
+   "Thing"
+  ],
+  "identifier": [
+   "Thing"
+  ],
+  "propertyID": [
+   "PropertyValue"
+  ],
+  "value": [
+   "MonetaryAmount",
+   "PropertyValue",
+   "QuantitativeValue"
+  ],
+  "vatID": [
+   "Organization",
+   "Person"
+  ],
+  "telephone": [
+   "ContactPoint",
+   "Organization",
+   "Person",
+   "Place"
+  ],
+  "email": [
+   "ContactPoint",
+   "Organization",
+   "Person"
+  ],
+  "address": [
+   "GeoCoordinates",
+   "GeoShape",
+   "Organization",
+   "Person",
+   "Place"
+  ],
+  "streetAddress": [
+   "PostalAddress"
+  ],
+  "addressLocality": [
+   "PostalAddress"
+  ],
+  "postalCode": [
+   "DefinedRegion",
+   "GeoCoordinates",
+   "GeoShape",
+   "PostalAddress"
+  ],
+  "addressCountry": [
+   "DefinedRegion",
+   "GeoCoordinates",
+   "GeoShape",
+   "PostalAddress"
+  ],
+  "location": [
+   "Action",
+   "Event",
+   "InteractionCounter",
+   "Organization"
+  ],
+  "openingHoursSpecification": [
+   "Place"
+  ],
+  "dayOfWeek": [
+   "EducationalOccupationalProgram",
+   "OpeningHoursSpecification"
+  ],
+  "opens": [
+   "OpeningHoursSpecification"
+  ],
+  "closes": [
+   "OpeningHoursSpecification"
+  ],
+  "contactPoint": [
+   "HealthInsurancePlan",
+   "Organization",
+   "Person"
+  ],
+  "contactType": [
+   "ContactPoint"
+  ],
+  "hoursAvailable": [
+   "ContactPoint",
+   "LocationFeatureSpecification",
+   "Service"
+  ],
+  "sameAs": [
+   "Thing"
+  ],
+  "inLanguage": [
+   "BroadcastService",
+   "CommunicateAction",
+   "CreativeWork",
+   "Event",
+   "LinkRole",
+   "PronounceableText",
+   "WriteAction"
+  ],
+  "publisher": [
+   "CreativeWork",
+   "FinancialIncentive"
+  ],
+  "isPartOf": [
+   "CreativeWork"
+  ],
+  "about": [
+   "Certification",
+   "CommunicateAction",
+   "CreativeWork",
+   "DefinedTerm",
+   "DefinedTermSet",
+   "Event"
+  ],
+  "breadcrumb": [
+   "WebPage"
+  ],
+  "mainEntity": [
+   "CreativeWork"
+  ],
+  "itemListElement": [
+   "ItemList"
+  ],
+  "position": [
+   "CreativeWork",
+   "ListItem"
+  ],
+  "item": [
+   "DataFeedItem",
+   "ListItem"
+  ],
+  "numberOfItems": [
+   "ItemList"
+  ],
+  "provider": [
+   "Action",
+   "CreativeWork",
+   "EducationalOccupationalProgram",
+   "FinancialIncentive",
+   "Invoice",
+   "OfferShippingDetails",
+   "ParcelDelivery",
+   "Reservation",
+   "Service",
+   "Trip"
+  ],
+  "headline": [
+   "CreativeWork"
+  ],
+  "datePublished": [
+   "Certification",
+   "CreativeWork"
+  ],
+  "dateModified": [
+   "CreativeWork",
+   "DataFeedItem"
+  ],
+  "author": [
+   "CreativeWork",
+   "Rating"
+  ],
+  "mainEntityOfPage": [
+   "Thing"
+  ]
+ }
+}
