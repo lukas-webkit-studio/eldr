@@ -17,6 +17,11 @@ Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
 - `docs/stav-prekladu.json` popisuje stav k 14. 9., novější publikace
   stagingu v něm nejsou.
 
+### Štafeta noc 30.–31. 10.
+
+- **S7 #36 recenze a texty (staging):** 22 recenzí v CMS Reference přeloženo znovu do EN/DE (věrně, podle glosáře, kontrola u dvou stolů), Polytex EN doplněn přes API, pořadí srovnané s CS, nové pole `alt-fotky` ve třech jazycích. Na `/`, `/en`, `/de` 22/22 recenzí s textem, jménem a fotkou v HTML bez JS. Mimo recenze: Servis EN/DE (pracovní plošiny), O nás EN (m², úvod), Muzeum SEO EN/DE, meta description Kariéra a Reference ve 3 jazycích, názvy pozic EN/DE, perexy 3 článků, JSON-LD. Staging 31. 10. 00:29, produkce nepublikovaná. Tabulka před/po: `docs/s7-recenze-preklady.md`. Na Lukášovi: Designer (alt a `srcset` obrázků v pásu), fotka dkLAB, fotka Studio REMA (nápis CLARIOS), české chyby v CMS.
+- **S6 #34 strukturovaná data (staging):** JSON-LD na 20 stránkách × CS/EN/DE = 60 URL, nativně ve Webflow (schema markup stránky). Zdroj a kontrola v `data/strukturovana-data/` a `npm run data` / `npm run data:live`. Články Inspirace a pozice v Kariéře z vazeb na CMS, nové články automaticky. Starý `LocalBusiness` z custom code tří stránek pryč. Validátor schema.org 0 chyb na 60 URL. Produkci publikuje koordinátor po R2 #37; Rich Results Test na produkci doplní R2.
+
 ### Produkce 30. 10. 2026 22:56
 
 Publikováno a ověřeno: 10 produktových stránek CS/EN/DE, menu, přílohy ve formuláři (`Příloha 1–5`), recenze (varianta A) na homepage, SEO a `noindex` oprava, testovací článek pryč. L1 #19 zavřené.

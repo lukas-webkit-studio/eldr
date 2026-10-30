@@ -3,7 +3,7 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
-## 2026-10-30 · S5 · Popis produktů pro AI na produktových stránkách (#35)
+## 2026-10-31 · S5 · Popis produktů pro AI na produktových stránkách (#35)
 
 - **Zdroj údajů = viditelný text stránky bez JS.** `scripts/ai-vrstva/snapshot.js` renderuje stránku s vypnutým JavaScriptem a bere jen prvky, které nejsou `display:none`. Každý údaj v `data/ai-vrstva/*.json` má doslovnou citaci; `npm run check` ověřuje, že je ve snímku. EN/DE se citují z EN/DE stránek, nepřekládá se. Snímek je zmrazený: změnu webu ukáže až `test-dohledatelnost.js --live`.
 - **Model JSON-LD: varianta D** — `WebPage` → `mainEntity` `Service` (kategorie stránky) → `hasOfferCatalog` → `OfferCatalog` → `Offer.itemOffered` → `Service` (jednotlivé výrobky, bez ceny). Parametry, materiály, provedení a použití jsou `additionalProperty` (`PropertyValue`), protože `Service` nemá `material`. Plus `BreadcrumbList` a `FAQPage` tam, kde stránka má otázku s odpovědí (orientační systémy, svítidla).
@@ -13,6 +13,27 @@ nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 - **Zápis nativně** přes `bulk_update_pages_schema_markup` (CS bez `localeId`, EN/DE s ním). Jazyk bez vlastního zápisu zdědí češtinu. Starý blok `Organization` z head custom code pylonů a 3D nápisů smazán (custom code obsahoval jen ten blok).
 - **`llms.txt`** přes API jen pro Enterprise (site Enterprise není). Nativně: Site settings → SEO → LLMs.txt → Upload file. Soubor generuje `scripts/ai-vrstva/llms.js`.
 - **Co vrstva nepřebírá:** tvrzení o firmě (rekordy, „jedni z mála“), superlativy a srovnání, zdravotní a ekologická tvrzení bez čísla, marketingové štítky, krátké body z úvodu stránky, společné bloky o průběhu zakázky a kvalitě, popisky galerií, token `{#YOE#}` (robot bez JS ho vidí nenahrazený). Konkrétní záruky s číslem (např. „až 5 let“) jako vlastnost výrobku zůstávají. Seznam po stránkách je v `vynechano` každého souboru.
+## 2026-10-31 · S7 · Data CMS Reference a texty (#36)
+
+- **Alt fotek recenzí jde přes nové textové pole `alt-fotky`, ne přes alt v obrázkovém poli.** Zápis `obrazek.alt` do sekundárního locale vyžaduje i `url` a Webflow pak obrázek nahraje znovu jako nový soubor jen pro ten jazyk. Obrázek se tím od češtiny odpojí (ověřeno na Schobeli EN, obsah souboru stejný). Textové pole se píše bez vedlejších účinků. Na homepage je alt obrázku navázaný na `name`, napojení na `alt-fotky` je krok v Designeru.
+- **Fotky v pásu se nezmenšovaly přes API.** Výměna souboru je nevratná a mění obrázek i na `/reference`. Webflow má zmenšené varianty (`-p-500`, `-p-800`) hotové, na `/reference` je posílá v `srcset`, na homepage ne. Zapnutí je nastavení obrázku v Designeru: 5,1 MB → asi 1,8 MB.
+- **`priorita` v EN/DE se srovnává s češtinou.** Pole je lokalizované a rozdíl dělal jiné pořadí pásu v jazycích.
+- **Citace se překládají věrně, jméno firmy podle glosáře** („Elektro Drapač“ i tam, kde zákazník psal „ELEKTRO DRAPAČ“ nebo „Elektrodrapač“). SAGASSER má originál v němčině, DE se nepřekládá.
+- **Do primárního locale se psalo jen nové pole `alt-fotky`** a meta description Kariéry a Reference (dřív prázdné). Chyby v českých datech (`Kostel krista krále`, `specialista` malým, mezery na konci jmen, `Assistent`) zůstávají na Lukášovi.
+
+## 2026-10-31 · S6 · Strukturovaná data (#34)
+
+- **Zápis nativně ve Webflow**, schema markup stránky (`bulk_update_pages_schema_markup`), každý jazyk zvlášť. Vypíše se v `<head>` surového HTML, takže ho čtou i roboti bez JS. Locale bez vlastního zápisu dědí češtinu, proto se zapisují vždy CS, EN i DE. Žádný JS v bundlu.
+- **Zdroj pravdy je repo:** `data/strukturovana-data/firma.json` a `stranky.json`. Skript `scripts/strukturovana-data.js` staví grafy do `vystup/` a hlídá je v `npm run check` (konvence `@id`, kanonické URL, drobečky, zakázané typy, výřez slovníku schema.org). `--live <url>` porovná vypsaný JSON-LD s výstupem.
+- **Články Inspirace:** šablona CMS má `BlogPosting` s vazbami na pole (`name`, `perex`, `hlavni-obrazek`, `datum`, `updated-on`, `slug`). Nové články dostanou data samy, i v EN a DE. Autor a vydavatel je firma, protože web autora u článku nezobrazuje. `datePublished` = pole Datum (ukazuje ho výpis článků), `dateModified` = poslední úprava (ukazuje ji detail článku).
+- **Firma je popsaná jen na homepage** (`Organization` + `LocalBusiness`, `@id https://www.eldr.cz/#organization`), jinde jen odkaz. Výjimka: u článku má `author` a `publisher` jméno a URL firmy, protože Google odkaz na uzel z jiné stránky nerozbalí.
+- **Kariéra bez `JobPosting`:** pozice jsou zveřejněné 28.–29. 5. 2025 bez data konce a nevíme, jestli jsou aktuální. Google za prošlé inzeráty penalizuje. Popis pozice je navíc rich text, jehož HTML by vazba do JSON nevložila bezpečně. Stránky mají `WebPage` a drobečky. Až Lukáš potvrdí aktuálnost, dá se `JobPosting` doplnit.
+- **Záměrně vynecháno:** `Review` a `AggregateRating` z recenzí na vlastním webu (Google je bere jako self-serving a nezobrazí je), ceny a `Offer` (web je neuvádí), `SearchAction` (web nemá vyhledávání), `foundingDate` (web uvádí 1989 i 1990, ARES 1997), `geo` (souřadnice web neuvádí), konkrétní podtyp `LocalBusiness` (web žádný nedokládá).
+- **Názvy v drobečcích** jsou titulky stránek bez značky („Naše produkty“, „Kontakty“…), první položka „Elektro Drapač“. K `/produkty` nevede v navigaci přímý odkaz (rozbalovací položka se jmenuje „Naše nabídka / Our Products / Unser Angebot“), proto titulek. Názvy poslány S5 #35 ke sjednocení.
+- **Pronájem plošin EN/DE** podle položky v menu webu („Rental of work platforms“ / „Vermietung von Arbeitsbühnen“). Nadpis sekce na stránce má chybný překlad („Rental of rigs“ / „Vermietung von Bohranlagen“ = vrtné soupravy), to je textová vada mimo S6.
+- **Otevřené hypotézy z kontroly (neověřeno):** (1) jestli Webflow při dosazení vazby CMS escapuje rovnou uvozovku `"` v názvu nebo perexu; dnešní texty ji nemají, `npm run data:live` po publikaci by rozbitý JSON odhalil. (2) `dateModified` = systémové `updated-on` se mění i při překladu nebo úpravě SEO; odpovídá ale datu, které detail článku ukazuje. (3) Služby na servisu mají jen `url` stránky, kotvy kromě `#pronajem-plosin` na stránce nejsou.
+- **Rich Results Test se automatizovat nepodařil** (v headless prohlížeči zůstane tlačítko neaktivní, obcházet kontrolu robotů nebudeme). Náhrada: validátor schema.org 0 chyb na 60 URL + kontrola povinných polí Googlu ve skriptu. Ruční test z odkazů v Google Docu po publikaci (R2 #37).
+- Starý `LocalBusiness` v custom code stránek `/`, `/kontakty` a `/servisni-sluzby-a-pronajem-plosin` odstraněn, záloha v `_backup/webflow/custom-code/page-head-localbusiness-do-2026-10-30.html`.
 
 ## 2026-10-30 · Lukáš (přes K01) · Výběr varianty recenzí
 

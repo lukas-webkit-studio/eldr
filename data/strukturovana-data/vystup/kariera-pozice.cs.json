@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/kariera/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}#webpage",
+      "url": "https://www.eldr.cz/kariera/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+      "name": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/kariera/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/kariera/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kariéra",
+          "item": "https://www.eldr.cz/kariera"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+          "item": "https://www.eldr.cz/kariera/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}"
+        }
+      ]
+    }
+  ]
+}

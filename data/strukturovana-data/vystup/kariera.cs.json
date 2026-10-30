@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.eldr.cz/kariera#webpage",
+      "url": "https://www.eldr.cz/kariera",
+      "name": "Kariéra",
+      "description": "Aktuální pracovní nabídky rodinné firmy Elektro Drapač, výrobce světelné reklamy. Životopis a krátký průvodní dopis nám pošlete na myska@eldr.cz.",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/kariera#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/kariera#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kariéra",
+          "item": "https://www.eldr.cz/kariera"
+        }
+      ]
+    }
+  ]
+}

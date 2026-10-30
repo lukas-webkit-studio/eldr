@@ -1,0 +1,116 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.eldr.cz/#organization",
+      "name": "Elektro Drapač",
+      "legalName": "ELEKTRO DRAPAČ s.r.o.",
+      "alternateName": "ELDR",
+      "url": "https://www.eldr.cz",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/636a570a2304e176d79cf28c_elektro-drapac-logo-440.webp",
+        "width": 440,
+        "height": 113
+      },
+      "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/65e9e62f5b3be4ac12c61741_eldr-open-graph-image.webp",
+      "description": "Světelná reklama i designová svítidla včetně montáže. Jsme rodinná firma s více než 30letou zkušeností na trhu.",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "IČO",
+        "value": "25280236"
+      },
+      "vatID": "CZ25280236",
+      "telephone": "+420491482500",
+      "email": "eldr@eldr.cz",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Žďárecká 177",
+        "addressLocality": "Velké Poříčí",
+        "postalCode": "549 32",
+        "addressCountry": "CZ"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Kancelář Praha",
+        "description": "Schůzka s obchodním zástupcem pouze dle telefonické domluvy.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gutova 3317/15",
+          "addressLocality": "Praha 10 - Strašnice",
+          "postalCode": "100 00",
+          "addressCountry": "CZ"
+        }
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "06:00",
+        "closes": "15:00"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+420491482500",
+        "email": "eldr@eldr.cz",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "06:00",
+          "closes": "15:00"
+        }
+      },
+      "sameAs": [
+        "https://www.facebook.com/elektrodrapac/",
+        "https://www.instagram.com/elektrodrapac/",
+        "https://www.youtube.com/@elektrodrapacs.r.o.-svetel5850",
+        "https://www.linkedin.com/company/elektrodrapac/",
+        "https://twitter.com/DrapacElektro"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.eldr.cz/#website",
+      "url": "https://www.eldr.cz",
+      "name": "Elektro Drapač",
+      "alternateName": "ELDR",
+      "inLanguage": "cs",
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/#webpage",
+      "url": "https://www.eldr.cz",
+      "name": "Světelná reklama",
+      "description": "Světelná reklama i designová svítidla včetně montáže. Jsme rodinná firma s více než 30letou zkušeností na trhu.",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "about": {
+        "@id": "https://www.eldr.cz/#organization"
+      }
+    }
+  ]
+}

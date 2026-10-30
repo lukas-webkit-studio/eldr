@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/muzeum-svetelnych-reklam#webpage",
+      "url": "https://www.eldr.cz/muzeum-svetelnych-reklam",
+      "name": "Muzeum světelných reklam",
+      "description": "Světelná reklama napříč historií. V muzeu světelných reklam najdete zajímavé a historické kousky nejen z naší dílny.",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/muzeum-svetelnych-reklam#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/muzeum-svetelnych-reklam#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Muzeum světelných reklam",
+          "item": "https://www.eldr.cz/muzeum-svetelnych-reklam"
+        }
+      ]
+    }
+  ]
+}

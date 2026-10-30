@@ -1,0 +1,426 @@
+{
+  "zaklad": "https://eldr.webflow.io",
+  "kdy": "2026-10-30T23:30:28.791Z",
+  "radky": [
+    {
+      "url": "https://eldr.webflow.io/",
+      "jazyk": "cs",
+      "typy": "Organization, LocalBusiness, WebSite, WebPage",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en",
+      "jazyk": "en",
+      "typy": "Organization, LocalBusiness, WebSite, WebPage",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de",
+      "jazyk": "de",
+      "typy": "Organization, LocalBusiness, WebSite, WebPage",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/produkty",
+      "jazyk": "cs",
+      "typy": "CollectionPage, BreadcrumbList, ItemList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/produkty",
+      "jazyk": "en",
+      "typy": "CollectionPage, BreadcrumbList, ItemList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/produkty",
+      "jazyk": "de",
+      "typy": "CollectionPage, BreadcrumbList, ItemList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/kontakty",
+      "jazyk": "cs",
+      "typy": "ContactPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/kontakty",
+      "jazyk": "en",
+      "typy": "ContactPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/kontakty",
+      "jazyk": "de",
+      "typy": "ContactPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/reference",
+      "jazyk": "cs",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/reference",
+      "jazyk": "en",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/reference",
+      "jazyk": "de",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/o-nas",
+      "jazyk": "cs",
+      "typy": "AboutPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/o-nas",
+      "jazyk": "en",
+      "typy": "AboutPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/o-nas",
+      "jazyk": "de",
+      "typy": "AboutPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/servisni-sluzby-a-pronajem-plosin",
+      "jazyk": "cs",
+      "typy": "WebPage, BreadcrumbList, Service",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/servisni-sluzby-a-pronajem-plosin",
+      "jazyk": "en",
+      "typy": "WebPage, BreadcrumbList, Service",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/servisni-sluzby-a-pronajem-plosin",
+      "jazyk": "de",
+      "typy": "WebPage, BreadcrumbList, Service",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/muzeum-svetelnych-reklam",
+      "jazyk": "cs",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/muzeum-svetelnych-reklam",
+      "jazyk": "en",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/muzeum-svetelnych-reklam",
+      "jazyk": "de",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/kariera",
+      "jazyk": "cs",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/kariera",
+      "jazyk": "en",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/kariera",
+      "jazyk": "de",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace",
+      "jazyk": "cs",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace",
+      "jazyk": "en",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace",
+      "jazyk": "de",
+      "typy": "CollectionPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/3d-napis-jak-ziskat-pozornost-zakazniku",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/7-duvodu-proc-si-poridit-reklamni-totem-2",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/jak-vybrat-reklamni-pylon",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/pozdvihnete-svuj-byznys-budte-neprehlednutelni-s-3d-reklamou-2",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/rezana-grafika-zaujmete-zakaznika-na-prvni-pohled",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/rozsvitte-svuj-brand-proc-je-svetelne-led-logo-dobrou-volbou",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/svetelna-reklama-propagujte-sve-podnikani-moderne",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/inspirace/svetelne-napisy-nejlepsi-zpusob-jak-zvyraznit-sve-podnikani",
+      "jazyk": "cs",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/3d-napis-jak-ziskat-pozornost-zakazniku",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/7-duvodu-proc-si-poridit-reklamni-totem-2",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/jak-vybrat-reklamni-pylon",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/pozdvihnete-svuj-byznys-budte-neprehlednutelni-s-3d-reklamou-2",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/rezana-grafika-zaujmete-zakaznika-na-prvni-pohled",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/rozsvitte-svuj-brand-proc-je-svetelne-led-logo-dobrou-volbou",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/svetelna-reklama-propagujte-sve-podnikani-moderne",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/inspirace/svetelne-napisy-nejlepsi-zpusob-jak-zvyraznit-sve-podnikani",
+      "jazyk": "en",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/3d-napis-jak-ziskat-pozornost-zakazniku",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/7-duvodu-proc-si-poridit-reklamni-totem-2",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/jak-vybrat-reklamni-pylon",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/pozdvihnete-svuj-byznys-budte-neprehlednutelni-s-3d-reklamou-2",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/rezana-grafika-zaujmete-zakaznika-na-prvni-pohled",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/rozsvitte-svuj-brand-proc-je-svetelne-led-logo-dobrou-volbou",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/svetelna-reklama-propagujte-sve-podnikani-moderne",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/inspirace/svetelne-napisy-nejlepsi-zpusob-jak-zvyraznit-sve-podnikani",
+      "jazyk": "de",
+      "typy": "WebPage, BlogPosting, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/kariera/elektromechanik-elektrikar-monter",
+      "jazyk": "cs",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/kariera/montazni-delnik",
+      "jazyk": "cs",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/kariera/zamecnik",
+      "jazyk": "cs",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/kariera/elektromechanik-elektrikar-monter",
+      "jazyk": "en",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/kariera/montazni-delnik",
+      "jazyk": "en",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/en/kariera/zamecnik",
+      "jazyk": "en",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/kariera/elektromechanik-elektrikar-monter",
+      "jazyk": "de",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/kariera/montazni-delnik",
+      "jazyk": "de",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    },
+    {
+      "url": "https://eldr.webflow.io/de/kariera/zamecnik",
+      "jazyk": "de",
+      "typy": "WebPage, BreadcrumbList",
+      "chyby": [],
+      "upozorneni": []
+    }
+  ]
+}
