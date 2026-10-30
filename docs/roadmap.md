@@ -17,6 +17,11 @@ Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
 - `docs/stav-prekladu.json` popisuje stav k 14. 9., novější publikace
   stagingu v něm nejsou.
 
+### Štafeta 30. 10.
+
+- **S3 #26 hotovo (návrh ke schválení):** `/dev/recenze` na stagingu, 3 varianty sekce recenzí (A = karta s fotkou 4:3, B = kompaktní se žlutou linkou, C = velká citace s fotkou vedle). Zdroj CMS Reference jako homepage, 22 recenzí v HTML v CS/EN/DE, noindex, mimo sitemapu. Posun řídí dev skript `src/dev/testimonial-marquee.js` (plynulé zpomalení při hoveru), připnutý jen na dev stránce. Čeká na výběr varianty Lukášem, pak samostatné issue na přesun na homepage. Staging 30. 10.
+- Nalezeno mimo rozsah S3 (CMS Reference): chybný strojový překlad EN/DE u více položek, Polytex bez EN, dkLAB má AI render místo fotky realizace, obrázky až 4000 px bez zmenšení. Seznam v #26.
+
 ### Štafeta 27. 10. večer
 
 - **H1 #16 hotovo** (PR #22): 10 produktových stránek na `/produkty/…` v novém vzhledu, CS/EN/DE, navbar přepojený, rozcestník se 2 sloupci užší a na střed. Staging 27. 10. 16:36.
@@ -44,7 +49,7 @@ Spouští se, až Lukáš potvrdí, že klient schválil.
 |---|---|---|
 | JSON-LD strukturovaná data na všech stránkách (`85a630b6`) | 4 500 Kč | |
 | Struktura produktových stránek pro AI (`5dbfd455`) | 9 500 Kč | navazuje na publikované produktové stránky |
-| Sekce recenzí na homepage, Relume testimonial21 (`97c16e19`) | 2 500 Kč | změna rozvržení = přes návrh |
+| Sekce recenzí na homepage, Relume testimonial21 (`97c16e19`) | 2 500 Kč | schváleno 30. 10.; návrh na `/dev/recenze` (S3 #26), čeká na výběr varianty |
 | Další články v blogu (`9c9a80c9`) | nahrání 1 000 Kč, překlad 600 Kč/článek | na webu je 8 článků, všechny už v CS/EN/DE |
 | Analýza viditelnosti v AI (`2a74fc63`) | 12 000 Kč | stojí, klient ověřuje agenturu |
 | MVP konfigurátor (`d505d416`, `6ad1d4ff`) | 60 000 Kč | samostatná schůzka, zatím příkladové otázky |
