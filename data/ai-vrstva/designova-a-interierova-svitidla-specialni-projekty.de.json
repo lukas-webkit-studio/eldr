@@ -514,7 +514,7 @@
     },
     {
       "text": "Věta „Das Ergebnis ist ein luxuriöser Effekt bei deutlicher Ersparnis gegenüber klassischem Neon“ a přívlastek „hochwertigen“ u LED modulů",
-      "duvod": "Srovnání s klasickými neony bez čísla. Doporučujeme na webu uvést konkrétní úsporu, například spotřebu."
+      "duvod": "Srovnání s klasickými neony bez čísla. Proto v popisu pro AI není."
     },
     {
       "text": "Umístění „Ideal überall dort, wo Originalität, Stil und echte Neon-Wirkung gefragt sind.“",
@@ -526,7 +526,7 @@
     },
     {
       "text": "Otázka „Warum empfehlen wir lieber Imitationen von Neonschriften?“ a odpověď na ni",
-      "duvod": "Odpověď stojí na srovnání „za podstatně nižší cenu“ bez čísel. Doporučujeme doplnit konkrétní ceny nebo spotřebu."
+      "duvod": "Odpověď stojí na srovnání „za podstatně nižší cenu“ bez čísel. Proto v popisu pro AI není."
     },
     {
       "text": "Úvod „sie sieht großartig aus und bringt praktische Vorteile“ u mechových stěn",
@@ -534,7 +534,7 @@
     },
     {
       "text": "Tvrzení, že mechové stěny jsou „umweltverträglich“ a „hilft, die Luft zu reinigen“",
-      "duvod": "Ekologické a zdravotní tvrzení stránka ničím nedokládá. Doporučujeme doplnit zdroj nebo měření."
+      "duvod": "Ekologické a zdravotní tvrzení bez ověřitelného údaje. Proto v popisu pro AI není."
     },
     {
       "text": "Obrat „wo sie sich hervorragend mit Werbeschriftzügen und Logos kombinieren lässt“ a slovo „ideal“ u mechových stěn",
@@ -570,7 +570,7 @@
     },
     {
       "text": "Popisky obrázků na německé verzi stránky",
-      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
     }
   ]
 }

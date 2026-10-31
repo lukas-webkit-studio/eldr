@@ -231,7 +231,7 @@
   "vynechano": [
     {
       "text": "Úvodní věta „Herstellung von Leuchtreklamen mit hochwertiger Verarbeitung und Design, das auf Ihre Bedürfnisse zugeschnitten ist.“",
-      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
+      "duvod": "Hodnoticí tvrzení bez ověřitelného údaje, výrobek věcně nepopisuje. Proto v popisu pro AI není."
     },
     {
       "text": "Věta „Auch aus großer Entfernung gut sichtbar und daher sehr wirkungsvoll.“ v popisu pylonů",
@@ -287,7 +287,7 @@
     },
     {
       "text": "Popisky obrázků na německé verzi stránky",
-      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
     }
   ]
 }
