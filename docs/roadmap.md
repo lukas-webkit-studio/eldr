@@ -5,17 +5,13 @@ Zdroj pravdy o úkolech, cenách a termínech je dashboard (projekt
 
 ## Stav
 
-Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
+Aktualizováno 31. 10. 2026 ráno (koordinátor K02). Časy v Europe/Prague.
 
-- **Webflow:** staging publikován 27. 10. 14:10, poslední změna v Designeru
-  27. 10. 14:39. **Produkce** naposled publikována **14. 9. 2026 11:27**.
-- 27. 10. opravena třída `Button--Primary` (`text-align: center`)
-  v Designeru, bez publikace produkce.
-- Nové produktové stránky jsou na stagingu pod `/produkty/<slug>`, přeložené
-  do EN a DE. Otevřené nálezy: `docs/nalezy-dev-stranky.md`.
-- Nahrávání příloh běží na testovací stránce `/dev/kontakty-upload`.
-- `docs/stav-prekladu.json` popisuje stav k 14. 9., novější publikace
-  stagingu v něm nejsou.
+- **Webflow:** produkce publikována **31. 10. 2026 01:11:42** (obě domény), od té doby beze změn.
+- **Dodávka do 3. 11.** (e-mail Myškovi 29. 10.): strukturovaná data (S6 #34), popis produktů pro AI (S5 #35) a recenze (S7 #36) jsou **hotové na produkci**, nezávisle zkontrolované (R2 #37). Pro klienta 47 Google Docs ve složce `ELDR/Dodávka 2026-11-03`, vstup „00 Přehled dodávky“. Koncept e-mailu Myškovi je v Gmailu (neodeslaný).
+- **Zbývá:** blog (S8 #38, čeká na texty od klienta), ruční kroky Lukáše (dashboard `cb1f8f9e`), Make e-mail (S4 #29, import blueprintu).
+- Skill pro překlady (`d30f9ece`) Myška neschválil, termín 30. 11. s přesunem GitHubu.
+- Plán a průběh noci: `docs/noc-2026-10-31.md`.
 
 ### Štafeta noc 30.–31. 10.
 
@@ -29,10 +25,10 @@ Publikováno a ověřeno: 10 produktových stránek CS/EN/DE, menu, přílohy ve
 
 **Otevřené:**
 - S4 #29: zápis e-mailu zákazníkovi do Make 2867189 (Lukáš povolil v #29 21:48). Po zápisu testovací odeslání.
-- Schválené do 3. 11.: strukturovaná data (`85a630b6`), popis produktů pro AI 12 500 Kč (`5dbfd455`), blog 2 500 Kč (`9c9a80c9`, čeká na články od klienta).
+- ~~Schválené do 3. 11.: strukturovaná data, popis produktů pro AI~~ hotovo 31. 10. (S6, S5). Blog 2 500 Kč (`9c9a80c9`) čeká na články od klienta (S8 #38).
 - Skill pro překlady (`d30f9ece`) až s přesunem GitHubu pod org `eldr`.
-- Cloudflare worker: nasazení z repa, pak smazat kopii marquee z custom code homepage a `src/dev/`; opravit `CLAUDE.md`.
-- CMS Reference: překlady, Polytex bez EN, dkLAB render (#26).
+- Cloudflare worker: nasazení z repa, pak smazat kopii marquee z custom code homepage a `src/dev/`. `CLAUDE.md` opravené 31. 10.
+- CMS Reference: překlady a Polytex EN hotové 31. 10. (S7 #36). Zbývá fotka dkLAB a Studio REMA od klienta.
 - Designer drobnosti po publikaci (úkol `d30a2c84`).
 
 ### Štafeta 31. 10. – S5 #35 popis produktů pro AI
@@ -93,8 +89,12 @@ Spouští se, až Lukáš potvrdí, že klient schválil.
 
 1. Designer drobnosti po publikaci (dashboard `d30a2c84`).
 2. Přístup k Cloudflare workeru `eldr-web` nebo postup nasazení.
-3. Rozpor: `CLAUDE.md` popisuje bundle z jsDelivr, web ho bere z Cloudflare workeru, jehož nasazení v repu není. Doplnit postup do `CLAUDE.md`.
+3. ~~Rozpor `CLAUDE.md` × Cloudflare worker~~ opraveno 31. 10. (K02). Postup nasazení workeru do repa pořád chybí (bod 2).
 4. **S5 #35 – nahrát `llms.txt`:** Webflow → Site settings → SEO → LLMs.txt → Upload file → soubor `data/ai-vrstva/llms.txt` z repa → Save changes → publikovat. Ověřit `https://www.eldr.cz/llms.txt`. Přes API to jde jen na tarifu Enterprise.
-5. **S5 #35 – Google Rich Results Test ručně** (z cloudu nejde): https://search.google.com/test/rich-results na `https://eldr.webflow.io/produkty/orientacni-systemy` a `https://eldr.webflow.io/produkty/pylony-a-totemy`. Čeká se 0 chyb, detekované jen „Drobečková navigace“ (a u orientačních systémů „Často kladené otázky“). Výsledek zapsat do #35.
+5. **Rich Results Test ručně na 7 vzorových URL** (z cloudu nejde): seznam s odkazy „Otestovat“ v Google Docu „Strukturovaná data – přehled stránek“ (složka 01), výsledek do posledního sloupce. Čeká se 0 chyb.
 6. **S5 #35 – rozhodnout o textech na webu** (vrstva je přebírá doslova nebo je vynechala): štítek „1–40 m výška“ na zámečnických konstrukcích, karta „Neonové nápisy & imitace“ (plastové pásky × sklo), H1 svítidel „Neonová a LED neonová…“, profil 9 interiér × exteriér, „záložny (klíč)“ u výstrčí, procesní blok „světelné reklamy“ na stránce tisku, překlepy „uspůsobit“, „zavešení“. Seznam s odkazy je v `data/ai-vrstva/_overeni/`.
 7. **S5 #35 – web bez JavaScriptu:** `src/eldr.css` skrývá `.localization-show-only_*` (`display:none`), dokud JS nepřidá třídu jazyka. Robot bez JS proto v češtině nevidí část fotek výrobků. Token `{#YOE#}` vidí nenahrazený. Řešení patří do Webflow (nativní lokalizace prvků).
+8. **Před odesláním e-mailu Myškovi** (koncept v Gmailu, vlákno „Shrnutí callu…“): nasdílet složku `ELDR/Dodávka 2026-11-03` na `myska@eldr.cz`, nahrát `llms.txt` (bod 4), spustit Rich Results Test (bod 5).
+9. **Make S4 #29:** import blueprintu `_backup/make/2867189-2026-10-30-navrh-s4.json` do scénáře 2867189, pak testovací odeslání. K 31. 10. 04:20 neproběhlo (`lastEdit` 27. 8.).
+10. **Designer:** datum v šabloně Inspirace navázat na pole Datum (3 články ukazují 30.10.2026), alt a `srcset` v pásu recenzí, „Kompletní nabídka“ česky na `/en` a `/de`.
+11. **Otázky:** rok založení (web 1989 i 1990, ARES 1997); aktuálnost a e-mail pozic v Kariéře; skrytá sekce LED obrazovky; nabídnout korekturu textů webu (interní seznam v #35).
