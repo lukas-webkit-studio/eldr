@@ -99,19 +99,27 @@ který nástroj píše kam, je v `.claude/skills/preklad/SKILL.md`.
 
 ## Nasazení
 
-Bundle se servíruje z jsDelivr, připnutý na konkrétní commit:
+**Od 21. 10. 2026 se bundle servíruje z Cloudflare workeru `eldr-web`**
+(ověřeno na produkci 31. 10. 2026):
 
 ```
-https://cdn.jsdelivr.net/gh/lukas-webkit-studio/eldr@<commit>/dist/eldr.min.css
-https://cdn.jsdelivr.net/gh/lukas-webkit-studio/eldr@<commit>/dist/eldr.min.js
+https://eldr-web.webkit-studio.workers.dev/eldr.min.css
+https://eldr-web.webkit-studio.workers.dev/eldr.min.js
 ```
 
 CSS je v **Site settings → Custom Code → Head**, JS ve **Footer**.
-`.min.` soubory v repu nejsou — jsDelivr minifikuje sám.
 
-Změna v repu se na web nedostane, dokud se v Custom Code nepřepne připnutý
-commit. Po publikaci vždy ověř, co se doopravdy načítá — stáhni si živou
-stránku a najdi v ní ten commit.
+**Worker se z tohoto repa nenasazuje sám** a postup nasazení v repu zatím
+není (přístup a postup má Lukáš, úkol `6d765415`). Změna v `src/` se tedy
+na web nedostane, dokud někdo worker znovu nenasadí. Poslední nasazení
+21. 10. 2026. Výjimka do té doby: homepage načítá
+`src/dev/testimonial-marquee.js` z jsDelivr (připnutý merge commit, PR #31).
+Po nasazení workeru ten řádek z custom code homepage i soubor smaž.
+
+Po publikaci vždy ověř, co se doopravdy načítá — stáhni si živou stránku
+a najdi v ní adresu bundlu (a u jsDelivr commit).
+
+Odstavec o pinování commitu níž platí pro všechno, co se načítá z jsDelivr.
 
 **`publish_site` může tiše neproběhnout.** Nástroj vrací jen ozvěnu
 parametrů (`{customDomains, publishToWebflowSubdomain, publishScope}`), ne
@@ -138,8 +146,9 @@ na `@main` ani na plovoucí tag.
 
 Při nasazení už jednou došlo k přepsání celého site head a z produkce
 zmizel GTM loader i Finsweet skripty. Vkládej vždy celý blok najednou a po
-publikaci zkontroluj, že v head je `GTM-W6PR2VX` a všechny čtyři Finsweet
-skripty.
+publikaci zkontroluj, že v head je `GTM-W6PR2VX` a všech pět Finsweet
+skriptů (`cmsfilter`, `richtext`, `scrolldisable`, `attributes@2`,
+`cookie-consent`).
 
 ## Když na webu dělá víc chatů najednou
 
@@ -203,7 +212,7 @@ npm run lint
 npm run check    # všechno dohromady
 ```
 
-`dist/` se commituje — jsDelivr servíruje přímo z repa.
+`dist/` se commituje (dřív z něj servíroval jsDelivr, dnes ho worker bere jako zdroj při nasazení).
 
 ### Struktura
 
@@ -225,6 +234,27 @@ a zjistit, jestli daný selektor vůbec někde je. Tímhle způsobem se našlo,
 
 Zálohy v `_backup/webflow/custom-code/` bývají zastaralé. Ground truth je
 živý web, ne ony.
+
+## Strukturovaná data (JSON-LD)
+
+Od 31. 10. 2026 má všech 90 URL (30 stránek × CS/EN/DE) JSON-LD zapsaný
+**nativně ve Webflow** (`data_pages_tool > bulk_update_pages_schema_markup`,
+každý jazyk zvlášť s `localeId`). Vypíše se do `<head>` v surovém HTML.
+**Do custom code ani do JS JSON-LD nepatří** — AI roboti JS nespouštějí.
+
+- **Zdroj pravdy je v repu**, do Webflow se zapisuje z něj:
+  `data/strukturovana-data/` (20 stránek, S6 #34) a `data/ai-vrstva/`
+  (10 produktových stránek, S5 #35, každý údaj s citací zdroje).
+- `npm run data` validuje zdroj, `npm run data:live` porovná staging
+  s repem, `npm run test:ai` hlídá dohledatelnost údajů na stránkách.
+- Jazyk bez vlastního zápisu **zdědí češtinu** — zapisuj vždy všechny tři.
+- Šablona článků Inspirace má vazby na pole CMS, nové články dostanou
+  `BlogPosting` samy.
+- Změníš-li text, ze kterého data vycházejí (meta description, názvy,
+  parametry na produktové stránce), uprav i data v repu a zapiš znovu.
+- Záměrně **ne**: `Review`/`AggregateRating` z vlastních recenzí, ceny,
+  `Product` bez ceny (Google hlásí chybu, proto `Service` + katalog).
+  Zdůvodnění v `docs/decisions.md`.
 
 ## Počet let na trhu
 
