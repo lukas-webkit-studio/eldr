@@ -6,7 +6,7 @@
       "@id": "https://www.eldr.cz/en/kariera#webpage",
       "url": "https://www.eldr.cz/en/kariera",
       "name": "Careers",
-      "description": "Current job openings at Elektro Drapač, a family company making illuminated advertising. Send your CV and a short cover letter to myska@eldr.cz.",
+      "description": "Current job openings at Elektro Drapač, a family company making illuminated advertising. Send your CV to myska@eldr.cz.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://www.eldr.cz/#website"
