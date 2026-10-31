@@ -57,10 +57,23 @@ session, hlídám, zapisuju zpětnou vazbu. Kód nepíšu, jen dokumentaci.
 - **Ověřuj na publikovaném HTML** (curl stagingu), ne v Designeru ani návratovým kódem.
 - **Odkazy na stránku jdou za ID stránky.** Po přesunu staré stránky do `/dev/` vedou dlaždice dál na ni. Staré stránky mají v názvu „(old)“.
 - **Zápis do produkčního Make** session udělá jen se souhlasem napsaným Lukášem pod jeho účtem v issue. Přeposlaný souhlas nebere.
-- **Bundle jde z Cloudflare workeru `eldr-web`**, který se z repa nenasazuje. `CLAUDE.md` o jsDelivr je zastaralé.
+- **Bundle jde z Cloudflare workeru `eldr-web`**, který se z repa nenasazuje. `CLAUDE.md` je od 31. 10. opravené. Cloudflare MCP worker vidí (seznam), ale kód nepřečte a nasadit neumí.
 - Čti `standardy-stafeta` a drž hlavičku promptu; dotazy session se šetří posíláním do existující session (`send_message`), pokud má kontext pod ~300k.
+
+## Poučení z K02 (noc 30.–31. 10. 2026)
+
+- **Pětihodinový limit je společný pro celý účet.** Tři Opus session se subagenty ho vyčerpaly za dvě hodiny. Session po resetu **samy nepokračují**: koordinátor je musí probudit `send_message` („limit se obnovil, pokračuj, nejdřív zkontroluj, co už je hotové“). Budíky `send_later` po hodině jsou nutné, ale budík, který padne do limitu nebo restartu, se ztratí: proto jich naplánuj víc.
+- **Hotovo session ověřuj sám na stagingu dřív, než pustíš další krok** (curl, JSON-LD, texty). Stačí vzorek, ale vlastní.
+- **Nezávislá kontrola R2 se vyplatila.** Bez důvěry v hlášení autorů našla nepodložené tvrzení v meta Kariéry („průvodní dopis“) a nevhodná doporučení v dokumentech pro klienta. Kontrolor neopravuje, opravy jdou autorovi přes `send_message`.
+- **Malé navazující opravy posílej autorovi, který má kontext** (`send_message`), ne nové session. S7 opravila meta za 3 minuty.
+- **Rozšíření rozsahu zapiš do issue komentářem** dřív, než session spustíš. S7 dostala „část B“ (opravy textů z nálezů S6) a zvládla ji v jednom běhu.
+- **Google Rich Results Test z cloudu nejde** (headless prohlížeč, tlačítko zůstane neaktivní). Validátor schema.org jde volat přímo (`POST validator.schema.org/validate`). Oficiální test Googlu dělá Lukáš ručně na vzorových stránkách.
+- **Schema markup přes API:** jazyk bez vlastního zápisu zdědí češtinu, šablona CMS umí vazby na pole. Podrobnosti v `CLAUDE.md`, sekce Strukturovaná data.
+- **Publikace:** `lastUpdated` bývá pár sekund po `lastPublished` (3–19 s) kvůli publikaci samotné. Když rozdíl nejde vysvětlit, podívej se do logu session (`list_events`), kdo zapisoval.
+- **Texty EN/DE nespouštěj přes noc bez Lukáše,** pokud se kříží s rozpracovanou korekturou (`2474d5db`).
 
 ## Historie
 
 - 2026-10-27 · K01 · založení štafetových dokumentů.
 - 2026-10-30 · K01 · produkce publikovaná 22:56, předání novému koordinátorovi.
+- 2026-10-31 · K02 · noční dodávka 3. 11.: S5, S6, S7, R2; produkce publikovaná 01:11:42.
