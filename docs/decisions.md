@@ -3,6 +3,13 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-10-31 · S3 · Nižší karty recenzí (#46)
+
+- **Obrázek 16:9**, ne 3:2. Na všech 22 fotkách zůstane nápis i logo celé (kontrola středového ořezu). 3:2 by kartu zvedlo o 36 px bez přínosu.
+- **Pás 651 → 406 px** na 1440 × 900 (72 % → 45 % okna), mobil 591 → 390 px. Citace 3 řádky místo 6 (embed sekce), menší odsazení a mezery, mezera mezi kartami 1,5 → 1 rem (mobil 0,75 rem).
+- **Vlastní třídy `testimonial21_company`, `_name`, `_position`** místo sdílených `SectionReference__Collection__Item__*`. Sdílené třídy platí i na `/reference`, jejich zmenšení by změnilo i tu stránku.
+- **Zpomalení při hoveru zůstává na celém pásu** včetně mezer mezi kartami (`mouseenter` na `.testimonial21_marquee`). Nad nadpisem, tlačítkem a mimo sekci jede pás plnou rychlostí. Při 406 px pás už nezabírá celou obrazovku, takže kurzor na něm nezůstává náhodou.
+
 ## 2026-10-31 · S5 · Popis produktů pro AI na produktových stránkách (#35)
 
 - **Zdroj údajů = viditelný text stránky bez JS.** `scripts/ai-vrstva/snapshot.js` renderuje stránku s vypnutým JavaScriptem a bere jen prvky, které nejsou `display:none`. Každý údaj v `data/ai-vrstva/*.json` má doslovnou citaci; `npm run check` ověřuje, že je ve snímku. EN/DE se citují z EN/DE stránek, nepřekládá se. Snímek je zmrazený: změnu webu ukáže až `test-dohledatelnost.js --live`.
@@ -20,13 +27,6 @@ nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 - **`priorita` v EN/DE se srovnává s češtinou.** Pole je lokalizované a rozdíl dělal jiné pořadí pásu v jazycích.
 - **Citace se překládají věrně, jméno firmy podle glosáře** („Elektro Drapač“ i tam, kde zákazník psal „ELEKTRO DRAPAČ“ nebo „Elektrodrapač“). SAGASSER má originál v němčině, DE se nepřekládá.
 - **Do primárního locale se psalo jen nové pole `alt-fotky`** a meta description Kariéry a Reference (dřív prázdné). Chyby v českých datech (`Kostel krista krále`, `specialista` malým, mezery na konci jmen, `Assistent`) zůstávají na Lukášovi.
-
-## 2026-10-31 · S3 · Nižší karty recenzí (#46)
-
-- **Obrázek 16:9**, ne 3:2. Na všech 22 fotkách zůstane nápis i logo celé (kontrola středového ořezu). 3:2 by kartu zvedlo o 36 px bez přínosu.
-- **Pás 651 → 406 px** na 1440 × 900 (72 % → 45 % okna), mobil 591 → 390 px. Citace 3 řádky místo 6 (embed sekce), menší odsazení a mezery, mezera mezi kartami 1,5 → 1 rem (mobil 0,75 rem).
-- **Vlastní třídy `testimonial21_company`, `_name`, `_position`** místo sdílených `SectionReference__Collection__Item__*`. Sdílené třídy platí i na `/reference`, jejich zmenšení by změnilo i tu stránku.
-- **Zpomalení při hoveru zůstává na celém pásu** včetně mezer mezi kartami (`mouseenter` na `.testimonial21_marquee`). Nad nadpisem, tlačítkem a mimo sekci jede pás plnou rychlostí. Při 406 px pás už nezabírá celou obrazovku, takže kurzor na něm nezůstává náhodou.
 
 ## 2026-10-31 · S6 · Strukturovaná data (#34)
 
