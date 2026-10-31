@@ -1,0 +1,160 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/orientacni-systemy#webpage",
+      "url": "https://www.eldr.cz/produkty/orientacni-systemy",
+      "name": "Orientační systémy",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/orientacni-systemy#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/orientacni-systemy#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/orientacni-systemy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Naše produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Orientační systémy",
+          "item": "https://www.eldr.cz/produkty/orientacni-systemy"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/orientacni-systemy#sluzba",
+      "name": "Orientační systémy",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/orientacni-systemy",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/orientacni-systemy#katalog",
+        "name": "Orientační systémy",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/orientacni-systemy#orientacni-systemy",
+              "name": "Orientační systémy budov a areálů",
+              "description": "Systém vám vytvoříme dle vašeho přání nebo si můžete vybrat ze sériových modulových orientačních systémů.",
+              "url": "https://www.eldr.cz/produkty/orientacni-systemy#orientacni-systemy",
+              "image": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1049a85f6041b3019c5_6491169ad3154796a036b096_Orientac%25CC%258Cni%25CC%2581%2520syste%25CC%2581m%2520(8).webp",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Grafika",
+                  "value": "grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Montáž",
+                  "value": "na zeď, distanční trny, závěsná lanka, samostatné konstrukce i formou totemů a rozcestníků."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "do interiérů, exteriérů, budov i rozsáhlých areálů, například v logistických parcích, nemocnicích nebo obchodních domech."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Z hliníkového, dibondového nebo akrylátového deskového materiálu."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "eloxovaný hliník"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Je možné využít i další materiály – dřevo, nerez, plexisklo."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Na míru"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Zvolit můžete i systém malých totemů a rozcestníků."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Interiérové, exteriérové i modulové orientační systémy"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Interiér i exteriér"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.eldr.cz/produkty/orientacni-systemy#faq",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/produkty/orientacni-systemy#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "K čemu slouží orientační systémy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je to soustava informačních tabulí, ukazatelů a cedulek, která usnadňuje pohyb osob. Pomáhá návštěvníkům rychle pochopit strukturu prostoru a najít správný směr bez nutnosti ptát se obsluhy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Z čeho se vyrábějí orientační systémy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Z hliníkového, dibondového nebo akrylátového deskového materiálu."
+          }
+        }
+      ]
+    }
+  ]
+}

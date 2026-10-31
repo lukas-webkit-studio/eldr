@@ -17,6 +17,11 @@ Aktualizováno 27. 10. 2026 (koordinátor K01). Časy v Europe/Prague.
 - `docs/stav-prekladu.json` popisuje stav k 14. 9., novější publikace
   stagingu v něm nejsou.
 
+### Štafeta noc 30.–31. 10.
+
+- **S7 #36 recenze a texty (staging):** 22 recenzí v CMS Reference přeloženo znovu do EN/DE (věrně, podle glosáře, kontrola u dvou stolů), Polytex EN doplněn přes API, pořadí srovnané s CS, nové pole `alt-fotky` ve třech jazycích. Na `/`, `/en`, `/de` 22/22 recenzí s textem, jménem a fotkou v HTML bez JS. Mimo recenze: Servis EN/DE (pracovní plošiny), O nás EN (m², úvod), Muzeum SEO EN/DE, meta description Kariéra a Reference ve 3 jazycích, názvy pozic EN/DE, perexy 3 článků, JSON-LD. Staging 31. 10. 00:29, produkce nepublikovaná. Tabulka před/po: `docs/s7-recenze-preklady.md`. Na Lukášovi: Designer (alt a `srcset` obrázků v pásu), fotka dkLAB, fotka Studio REMA (nápis CLARIOS), české chyby v CMS.
+- **S6 #34 strukturovaná data (staging):** JSON-LD na 20 stránkách × CS/EN/DE = 60 URL, nativně ve Webflow (schema markup stránky). Zdroj a kontrola v `data/strukturovana-data/` a `npm run data` / `npm run data:live`. Články Inspirace a pozice v Kariéře z vazeb na CMS, nové články automaticky. Starý `LocalBusiness` z custom code tří stránek pryč. Validátor schema.org 0 chyb na 60 URL. Produkci publikuje koordinátor po R2 #37; Rich Results Test na produkci doplní R2.
+
 ### Produkce 30. 10. 2026 22:56
 
 Publikováno a ověřeno: 10 produktových stránek CS/EN/DE, menu, přílohy ve formuláři (`Příloha 1–5`), recenze (varianta A) na homepage, SEO a `noindex` oprava, testovací článek pryč. L1 #19 zavřené.
@@ -28,6 +33,15 @@ Publikováno a ověřeno: 10 produktových stránek CS/EN/DE, menu, přílohy ve
 - Cloudflare worker: nasazení z repa, pak smazat kopii marquee z custom code homepage a `src/dev/`; opravit `CLAUDE.md`.
 - CMS Reference: překlady, Polytex bez EN, dkLAB render (#26).
 - Designer drobnosti po publikaci (úkol `d30a2c84`).
+
+### Štafeta 31. 10. – S5 #35 popis produktů pro AI
+
+- **Hotovo na stagingu, produkci publikuje koordinátor po R2.** JSON-LD na 30 URL (10 produktových stránek × CS/EN/DE), nativní schema markup ve Webflow, čteno zpátky 30/30. Starý `Organization` z head custom code pylonů a 3D nápisů smazán.
+- 44 výrobků a služeb na jazyk, 315/314/316 údajů s odkazem na zdroj, 3 otázky s odpovědí. Test dohledatelnosti 1 604/1 604 citací v `npm run check`.
+- Staging 31. 10. 00:42: 210/210 kontrol robotů (7 User-Agentů × 30 URL), validator.schema.org 30/30 bez chyb a varování, snímky před a po shodné. Výstup `docs/overeni-s5-staging.md`.
+- Model `Service` místo `Product` (Google u produktu bez ceny hlásí chybu). Rich Results Test z cloudu nejde, je v „Na Lukášovi“.
+- `llms.txt` připravený v repu, nahrání jen ručně (Na Lukášovi).
+- Google Docs pro klienta ve složce 02 (30 + 2).
 
 ### Štafeta 30. 10.
 
@@ -79,3 +93,7 @@ Spouští se, až Lukáš potvrdí, že klient schválil.
 1. Designer drobnosti po publikaci (dashboard `d30a2c84`).
 2. Přístup k Cloudflare workeru `eldr-web` nebo postup nasazení.
 3. Rozpor: `CLAUDE.md` popisuje bundle z jsDelivr, web ho bere z Cloudflare workeru, jehož nasazení v repu není. Doplnit postup do `CLAUDE.md`.
+4. **S5 #35 – nahrát `llms.txt`:** Webflow → Site settings → SEO → LLMs.txt → Upload file → soubor `data/ai-vrstva/llms.txt` z repa → Save changes → publikovat. Ověřit `https://www.eldr.cz/llms.txt`. Přes API to jde jen na tarifu Enterprise.
+5. **S5 #35 – Google Rich Results Test ručně** (z cloudu nejde): https://search.google.com/test/rich-results na `https://eldr.webflow.io/produkty/orientacni-systemy` a `https://eldr.webflow.io/produkty/pylony-a-totemy`. Čeká se 0 chyb, detekované jen „Drobečková navigace“ (a u orientačních systémů „Často kladené otázky“). Výsledek zapsat do #35.
+6. **S5 #35 – rozhodnout o textech na webu** (vrstva je přebírá doslova nebo je vynechala): štítek „1–40 m výška“ na zámečnických konstrukcích, karta „Neonové nápisy & imitace“ (plastové pásky × sklo), H1 svítidel „Neonová a LED neonová…“, profil 9 interiér × exteriér, „záložny (klíč)“ u výstrčí, procesní blok „světelné reklamy“ na stránce tisku, překlepy „uspůsobit“, „zavešení“. Seznam s odkazy je v `data/ai-vrstva/_overeni/`.
+7. **S5 #35 – web bez JavaScriptu:** `src/eldr.css` skrývá `.localization-show-only_*` (`display:none`), dokud JS nepřidá třídu jazyka. Robot bez JS proto v češtině nevidí část fotek výrobků. Token `{#YOE#}` vidí nenahrazený. Řešení patří do Webflow (nativní lokalizace prvků).

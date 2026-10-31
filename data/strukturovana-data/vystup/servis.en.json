@@ -1,0 +1,90 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#webpage",
+      "url": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin",
+      "name": "Service and maintenance of advertisements",
+      "description": "Extend the service life of your advertisement. We offer service, repair and washing of all outdoor and indoor signs.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#servis"
+        },
+        {
+          "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#pronajem-plosin"
+        },
+        {
+          "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#ochrana-proti-ptactvu"
+        },
+        {
+          "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#svetelne-mereni"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Service and maintenance of advertisements",
+          "item": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#servis",
+      "name": "Regular service and maintenance",
+      "provider": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#pronajem-plosin",
+      "name": "Rental of work platforms",
+      "provider": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#ochrana-proti-ptactvu",
+      "name": "Installation of bird protection systems",
+      "provider": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin#svetelne-mereni",
+      "name": "Light measurement of advertising",
+      "provider": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/en/servisni-sluzby-a-pronajem-plosin"
+    }
+  ]
+}

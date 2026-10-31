@@ -1,0 +1,226 @@
+{
+  "slug": "prvky-podpory-prodeje-led-technologie",
+  "lang": "cs",
+  "url": "https://www.eldr.cz/produkty/prvky-podpory-prodeje-led-technologie",
+  "page": {
+    "name": {
+      "value": "Prvky podpory prodeje, LED technologie",
+      "quote": "Prvky podpory prodeje, LED technologie"
+    },
+    "description": null,
+    "highlights": [
+      {
+        "value": "Na míru",
+        "quote": "Na míru"
+      },
+      {
+        "value": "Neomezená kreativita",
+        "quote": "Neomezená kreativita"
+      }
+    ],
+    "properties": []
+  },
+  "products": [
+    {
+      "key": "prvky-podpory-prodeje",
+      "anchor": "prvky-podpory-prodeje",
+      "name": {
+        "value": "Prvky podpory prodeje",
+        "quote": "Prvky podpory prodeje"
+      },
+      "description": {
+        "value": "Propagační a reklamní prvky POP/POS na míru – stojany, displeje, totemy, držáky letáků i výlohové polepy ve široké škále barev.",
+        "quote": "Propagační a reklamní prvky POP/POS na míru – stojany, displeje, totemy, držáky letáků i výlohové polepy ve široké škále barev."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fdf2c202b989a5643a2_prvky-podpory-prodeje.jpg",
+        "alt": "Reklamní stojany MG připravené ve výrobě"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Umíme zhotovit",
+            "quote": "Umíme zhotovit: stojany, displeje, poutače, reklamní totemy, regálové dekorace, držáky letáků, pokladní stojánky, nástěnné rámy, dekorace nákupních vozíků, výlohové polepy, tašky a držáky nápojů, samolepky a další."
+          },
+          "value": {
+            "value": "stojany, displeje, poutače, reklamní totemy, regálové dekorace, držáky letáků, pokladní stojánky, nástěnné rámy, dekorace nákupních vozíků, výlohové polepy, tašky a držáky nápojů, samolepky a další.",
+            "quote": "Umíme zhotovit: stojany, displeje, poutače, reklamní totemy, regálové dekorace, držáky letáků, pokladní stojánky, nástěnné rámy, dekorace nákupních vozíků, výlohové polepy, tašky a držáky nápojů, samolepky a další."
+          }
+        },
+        {
+          "name": {
+            "value": "Zpracování",
+            "quote": "Zpracování: existuje velké množství barevného provedení a široká škála použitelných materiálů. Stačí se jen domluvit a my vám vyrobíme reklamní prvky podporující váš prodej na míru."
+          },
+          "value": {
+            "value": "existuje velké množství barevného provedení a široká škála použitelných materiálů.",
+            "quote": "Zpracování: existuje velké množství barevného provedení a široká škála použitelných materiálů. Stačí se jen domluvit a my vám vyrobíme reklamní prvky podporující váš prodej na míru."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "široká škála použitelných materiálů",
+          "quote": "Zpracování: existuje velké množství barevného provedení a široká škála použitelných materiálů. Stačí se jen domluvit a my vám vyrobíme reklamní prvky podporující váš prodej na míru."
+        }
+      ],
+      "variants": [
+        {
+          "value": "stojany, displeje, poutače, reklamní totemy, regálové dekorace, držáky letáků, pokladní stojánky, nástěnné rámy, dekorace nákupních vozíků, výlohové polepy, tašky a držáky nápojů, samolepky a další.",
+          "quote": "Umíme zhotovit: stojany, displeje, poutače, reklamní totemy, regálové dekorace, držáky letáků, pokladní stojánky, nástěnné rámy, dekorace nákupních vozíků, výlohové polepy, tašky a držáky nápojů, samolepky a další."
+        },
+        {
+          "value": "existuje velké množství barevného provedení",
+          "quote": "Zpracování: existuje velké množství barevného provedení a široká škála použitelných materiálů. Stačí se jen domluvit a my vám vyrobíme reklamní prvky podporující váš prodej na míru."
+        },
+        {
+          "value": "Označují se zkratkami POP (point of purchase) a POS (point of sale).",
+          "quote": "Propagační a reklamní prvky se umisťují do obchodních prostor. Mají upoutat zákazníkovu pozornost, a tím zvýšit jeho zájem o koupi. Označují se zkratkami POP (point of purchase) a POS (point of sale)."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Interiér i exteriér",
+          "quote": "Interiér i exteriér"
+        },
+        {
+          "value": "Propagační a reklamní prvky se umisťují do obchodních prostor.",
+          "quote": "Propagační a reklamní prvky se umisťují do obchodních prostor. Mají upoutat zákazníkovu pozornost, a tím zvýšit jeho zájem o koupi. Označují se zkratkami POP (point of purchase) a POS (point of sale)."
+        }
+      ]
+    },
+    {
+      "key": "led-displaye",
+      "anchor": "led-displaye",
+      "name": {
+        "value": "LED displeje",
+        "quote": "LED displeje"
+      },
+      "description": {
+        "value": "LED displeje slouží k zobrazení času, data, teploty, ceny (u čerpacích stanic) nebo k jinému informačnímu účelu.",
+        "quote": "LED displeje slouží k zobrazení času, data, teploty, ceny (u čerpacích stanic) nebo k jinému informačnímu účelu."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0f699af81297179fb_led-displaye.jpg",
+        "alt": "LED displej s cenami pohonných hmot na totemu čerpací stanice OLVAN"
+      },
+      "properties": [],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Vybírat můžete z mnoha barev a dvou typů displejů",
+          "quote": "LED displeje zobrazují například čas, datum, teplotu či cenu (u čerpacích stanic). Ovládají se dálkovým ovladačem, aplikací nebo přes datovou síť. Jsou i součástí reklamních totemů. Vybírat můžete z mnoha barev a dvou typů displejů:"
+        },
+        {
+          "value": "Ovládají se dálkovým ovladačem, aplikací nebo přes datovou síť.",
+          "quote": "LED displeje zobrazují například čas, datum, teplotu či cenu (u čerpacích stanic). Ovládají se dálkovým ovladačem, aplikací nebo přes datovou síť. Jsou i součástí reklamních totemů. Vybírat můžete z mnoha barev a dvou typů displejů:"
+        },
+        {
+          "value": "Segmentové displeje",
+          "quote": "Segmentové displeje: umějí zobrazit číslice od 0 do 9 a textové znaky. Podle počtu segmentů se dělí na čtyři typy: 7- a 9segmentové zobrazují číslice a některé textové znaky, 14- a 16segmentové zobrazují číslice a textové znaky latinky."
+        },
+        {
+          "value": "Maticové displeje",
+          "quote": "Maticové displeje: jsou tvořeny polem LED diod seskupených povětšinou do čtvercové matice. Na čtvercové matici 8 × 8 LED lze kromě čísel a textu zobrazovat i jednoduchou grafiku."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Interiér i exteriér",
+          "quote": "Interiér i exteriér"
+        },
+        {
+          "value": "zobrazují například čas, datum, teplotu či cenu (u čerpacích stanic)",
+          "quote": "LED displeje zobrazují například čas, datum, teplotu či cenu (u čerpacích stanic). Ovládají se dálkovým ovladačem, aplikací nebo přes datovou síť. Jsou i součástí reklamních totemů. Vybírat můžete z mnoha barev a dvou typů displejů:"
+        },
+        {
+          "value": "Jsou i součástí reklamních totemů.",
+          "quote": "LED displeje zobrazují například čas, datum, teplotu či cenu (u čerpacích stanic). Ovládají se dálkovým ovladačem, aplikací nebo přes datovou síť. Jsou i součástí reklamních totemů. Vybírat můžete z mnoha barev a dvou typů displejů:"
+        }
+      ]
+    },
+    {
+      "key": "segmentove-displeje",
+      "anchor": null,
+      "name": {
+        "value": "Segmentové displeje",
+        "quote": "Segmentové displeje: umějí zobrazit číslice od 0 do 9 a textové znaky. Podle počtu segmentů se dělí na čtyři typy: 7- a 9segmentové zobrazují číslice a některé textové znaky, 14- a 16segmentové zobrazují číslice a textové znaky latinky."
+      },
+      "description": {
+        "value": "umějí zobrazit číslice od 0 do 9 a textové znaky.",
+        "quote": "Segmentové displeje: umějí zobrazit číslice od 0 do 9 a textové znaky. Podle počtu segmentů se dělí na čtyři typy: 7- a 9segmentové zobrazují číslice a některé textové znaky, 14- a 16segmentové zobrazují číslice a textové znaky latinky."
+      },
+      "image": null,
+      "properties": [],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Podle počtu segmentů se dělí na čtyři typy",
+          "quote": "Segmentové displeje: umějí zobrazit číslice od 0 do 9 a textové znaky. Podle počtu segmentů se dělí na čtyři typy: 7- a 9segmentové zobrazují číslice a některé textové znaky, 14- a 16segmentové zobrazují číslice a textové znaky latinky."
+        },
+        {
+          "value": "7- a 9segmentové zobrazují číslice a některé textové znaky",
+          "quote": "Segmentové displeje: umějí zobrazit číslice od 0 do 9 a textové znaky. Podle počtu segmentů se dělí na čtyři typy: 7- a 9segmentové zobrazují číslice a některé textové znaky, 14- a 16segmentové zobrazují číslice a textové znaky latinky."
+        },
+        {
+          "value": "14- a 16segmentové zobrazují číslice a textové znaky latinky",
+          "quote": "Segmentové displeje: umějí zobrazit číslice od 0 do 9 a textové znaky. Podle počtu segmentů se dělí na čtyři typy: 7- a 9segmentové zobrazují číslice a některé textové znaky, 14- a 16segmentové zobrazují číslice a textové znaky latinky."
+        }
+      ],
+      "uses": []
+    },
+    {
+      "key": "maticove-displeje",
+      "anchor": null,
+      "name": {
+        "value": "Maticové displeje",
+        "quote": "Maticové displeje: jsou tvořeny polem LED diod seskupených povětšinou do čtvercové matice. Na čtvercové matici 8 × 8 LED lze kromě čísel a textu zobrazovat i jednoduchou grafiku."
+      },
+      "description": {
+        "value": "jsou tvořeny polem LED diod seskupených povětšinou do čtvercové matice.",
+        "quote": "Maticové displeje: jsou tvořeny polem LED diod seskupených povětšinou do čtvercové matice. Na čtvercové matici 8 × 8 LED lze kromě čísel a textu zobrazovat i jednoduchou grafiku."
+      },
+      "image": null,
+      "properties": [],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Na čtvercové matici 8 × 8 LED lze kromě čísel a textu zobrazovat i jednoduchou grafiku.",
+          "quote": "Maticové displeje: jsou tvořeny polem LED diod seskupených povětšinou do čtvercové matice. Na čtvercové matici 8 × 8 LED lze kromě čísel a textu zobrazovat i jednoduchou grafiku."
+        }
+      ],
+      "uses": []
+    }
+  ],
+  "faq": [],
+  "vynechano": [
+    {
+      "text": "Věta „Stačí se jen domluvit a my vám vyrobíme reklamní prvky podporující váš prodej na míru.“",
+      "duvod": "Věta slibuje službu firmy. Výrobu na míru už uvádí popis výrobku z karty."
+    },
+    {
+      "text": "Štítek s počtem let zkušeností v úvodu stránky",
+      "duvod": "Údaj se týká firmy, ne výrobku. Číslo navíc doplňuje až skript, takže ho vyhledávače nevidí."
+    },
+    {
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet. Pod hlavním nadpisem jiný úvodní text není, popis stránky proto chybí."
+    },
+    {
+      "text": "Galerie realizací, popisky fotek a obrázky karet v rozcestníku",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    }
+  ]
+}

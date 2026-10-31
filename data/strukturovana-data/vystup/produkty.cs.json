@@ -1,0 +1,110 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.eldr.cz/produkty#webpage",
+      "url": "https://www.eldr.cz/produkty",
+      "name": "Naše produkty",
+      "description": "3D nápisy, pylony, světelné panely, orientační systémy i polepy na míru. Vyrobíme vše od samolepky po velký pylon a postaráme se o odbornou montáž.",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty#itemlist"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Naše produkty",
+          "item": "https://www.eldr.cz/produkty"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.eldr.cz/produkty#itemlist",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "3D nápisy, loga a jednotlivá písmena",
+          "url": "https://www.eldr.cz/produkty/3d-napisy-loga-a-jednotliva-pismena"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Světelné panely a tabule",
+          "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Reklamní pylony a totemy",
+          "url": "https://www.eldr.cz/produkty/pylony-a-totemy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Výstrče, Lékárenské znaky",
+          "url": "https://www.eldr.cz/produkty/vystrce-lekarenske-znaky"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Orientační systémy",
+          "url": "https://www.eldr.cz/produkty/orientacni-systemy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Velkoformátový digitální tisk, řezaná grafika, polepy",
+          "url": "https://www.eldr.cz/produkty/velkoformatovy-tisk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Architektonické prvky, vstupní portály, vlajky",
+          "url": "https://www.eldr.cz/produkty/architektonicke-prvky-vstupni-portaly-vlajky"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Designová a interiérová svítidla a speciální projekty",
+          "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Prvky podpory prodeje, LED technologie",
+          "url": "https://www.eldr.cz/produkty/prvky-podpory-prodeje-led-technologie"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Zámečnické konstrukce na míru, opracování plexiskla",
+          "url": "https://www.eldr.cz/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla"
+        }
+      ]
+    }
+  ]
+}

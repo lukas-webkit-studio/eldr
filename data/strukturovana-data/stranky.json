@@ -1,0 +1,181 @@
+{
+  "_poznamka_sluzby": "Pronájem plošin EN/DE podle položky v menu webu (Rental of work platforms / Vermietung von Arbeitsbühnen). Nadpis sekce na stránce měl chybný překlad (rigs / Bohranlagen), opraveno v S7 #36 (30. 10. 2026), teď se shoduje s menu.",
+  "_popis": "Zdroj pravdy JSON-LD pro stránky mimo 10 produktových (ty má S5 #35). Texty jsou z viditelného obsahu a meta description webu v daném jazyce (stav 30. 10. 2026), emoji odstraněné. Kde meta description v daném jazyce chybí nebo je nepřeložená, description se vynechává. Skript scripts/strukturovana-data.js z toho staví grafy do vystup/.",
+  "site_id": "635940ec249b210e8902edd4",
+  "locales": {
+    "cs": { "localeId": null, "prefix": "" },
+    "en": { "localeId": "66052b1245cd8094542338a5", "prefix": "/en" },
+    "de": { "localeId": "66052b1245cd8094542338a6", "prefix": "/de" }
+  },
+  "domu": { "cs": "Elektro Drapač", "en": "Elektro Drapač", "de": "Elektro Drapač" },
+  "stranky": [
+    {
+      "klic": "domu",
+      "pageId": "674e725e07d93a82350b2f32",
+      "cesta": "",
+      "typ": "WebPage",
+      "nazev": { "cs": "Světelná reklama", "en": "Illuminated advertising", "de": "Leuchtreklame" },
+      "popis": {
+        "cs": "Světelná reklama i designová svítidla včetně montáže. Jsme rodinná firma s více než 30letou zkušeností na trhu.",
+        "en": "Illuminated advertising and design luminaires including installation. We are a family-owned company with more than 30 years of experience in the market.",
+        "de": "Beleuchtung, Werbe- und Designleuchten inklusive Installation. Wir sind ein Familienunternehmen mit mehr als 30 Jahren Erfahrung auf dem Markt."
+      },
+      "staryJsonLdVCustomCode": true
+    },
+    {
+      "klic": "produkty",
+      "pageId": "63872b31c54d066b165f8ea0",
+      "cesta": "/produkty",
+      "typ": "CollectionPage",
+      "nazev": { "cs": "Naše produkty", "en": "Our products", "de": "Unsere Produkte" },
+      "popis": {
+        "cs": "3D nápisy, pylony, světelné panely, orientační systémy i polepy na míru. Vyrobíme vše od samolepky po velký pylon a postaráme se o odbornou montáž.",
+        "en": "Custom-made 3D signs, pylons, illuminated panels, wayfinding systems and decals. We make everything from a sticker to a large pylon, with expert installation.",
+        "de": "Maßgeschneiderte 3D-Schriftzüge, Pylone, Leuchtpaneele, Wegeleitsysteme und Beklebungen. Vom Aufkleber bis zum großen Pylon, mit fachgerechter Montage."
+      },
+      "seznam": [
+        { "cesta": "/produkty/3d-napisy-loga-a-jednotliva-pismena", "nazev": { "cs": "3D nápisy, loga a jednotlivá písmena", "en": "3D signs, logos and individual letters", "de": "3D-Schriftzüge, Logos und einzelne Buchstaben" } },
+        { "cesta": "/produkty/tabule-a-svetelne-panely", "nazev": { "cs": "Světelné panely a tabule", "en": "Boards and illuminated panels", "de": "Schilder und Leuchtpaneele" } },
+        { "cesta": "/produkty/pylony-a-totemy", "nazev": { "cs": "Reklamní pylony a totemy", "en": "Pylons and totems", "de": "Pylone und Totems" } },
+        { "cesta": "/produkty/vystrce-lekarenske-znaky", "nazev": { "cs": "Výstrče, Lékárenské znaky", "en": "Projecting signs, pharmacy signs", "de": "Ausleger, Apothekenschilder" } },
+        { "cesta": "/produkty/orientacni-systemy", "nazev": { "cs": "Orientační systémy", "en": "Wayfinding systems", "de": "Wegeleitsysteme" } },
+        { "cesta": "/produkty/velkoformatovy-tisk", "nazev": { "cs": "Velkoformátový digitální tisk, řezaná grafika, polepy", "en": "Large-format digital printing, cut graphics, decals", "de": "Großformatiger Digitaldruck, geschnittene Grafiken, Beklebungen" } },
+        { "cesta": "/produkty/architektonicke-prvky-vstupni-portaly-vlajky", "nazev": { "cs": "Architektonické prvky, vstupní portály, vlajky", "en": "Architectural elements, entrance portals, flags", "de": "Architektonische Elemente, Eingangsportale, Fahnen" } },
+        { "cesta": "/produkty/designova-a-interierova-svitidla-specialni-projekty", "nazev": { "cs": "Designová a interiérová svítidla a speciální projekty", "en": "Design and interior luminaires and special projects", "de": "Design- und Innenleuchten und Sonderprojekte" } },
+        { "cesta": "/produkty/prvky-podpory-prodeje-led-technologie", "nazev": { "cs": "Prvky podpory prodeje, LED technologie", "en": "Sales promotion items, LED technology", "de": "Verkaufsunterstützende Elemente, LED-Technologie" } },
+        { "cesta": "/produkty/zamecnicke-konstrukce-na-miru-opracovani-plexiskla", "nazev": { "cs": "Zámečnické konstrukce na míru, opracování plexiskla", "en": "Bespoke locksmith structures, acrylic glass processing", "de": "Maßgeschneiderte Schlosserkonstruktionen, Plexiglasverarbeitung" } }
+      ]
+    },
+    {
+      "klic": "kontakty",
+      "pageId": "63a8ed07a014a5a81d08a6a2",
+      "cesta": "/kontakty",
+      "typ": "ContactPage",
+      "nazev": { "cs": "Kontakty", "en": "Contact", "de": "Kontakt" },
+      "popis": {
+        "cs": "Napište nebo zavolejte, v pracovní dny od 6 do 15 hodin. Sídlo máme ve Velkém Poříčí, schůzku v pražské kanceláři si domluvte telefonicky.",
+        "en": "Email or call us on weekdays from 6 am to 3 pm. Our headquarters are in Velké Poříčí; meetings at our Prague office are by phone appointment.",
+        "de": "Schreiben oder rufen Sie uns an, werktags von 6 bis 15 Uhr. Unser Firmensitz ist in Velké Poříčí, Termine im Prager Büro nach telefonischer Vereinbarung."
+      },
+      "oFirme": true,
+      "staryJsonLdVCustomCode": true
+    },
+    {
+      "klic": "reference",
+      "pageId": "63a925d12eee22565c581c85",
+      "cesta": "/reference",
+      "typ": "CollectionPage",
+      "nazev": { "cs": "Reference", "en": "References", "de": "Referenzen" },
+      "popis": {
+        "cs": "Realizované projekty rodinné firmy Elektro Drapač. Mezi naše zákazníky patří Komerční banka, Česká spořitelna, O2, Tchibo, Sephora, Puma a Zoo Praha.",
+        "en": "Completed projects by the family company Elektro Drapač. Our clients include Komerční banka, Česká spořitelna, O2, Tchibo, Sephora, Puma and Prague Zoo.",
+        "de": "Realisierte Projekte des Familienunternehmens Elektro Drapač. Zu unseren Kunden zählen Komerční banka, Česká spořitelna, O2, Tchibo, Sephora, Puma und Zoo Prag."
+      }
+    },
+    {
+      "klic": "o-nas",
+      "pageId": "64021b242b32f4493665b675",
+      "cesta": "/o-nas",
+      "typ": "AboutPage",
+      "nazev": { "cs": "O nás", "en": "About us", "de": "Über uns" },
+      "popis": {
+        "cs": "Světelná reklama i designová svítidla včetně montáže. Jsme rodinná firma s více než 30letou zkušeností na trhu.",
+        "en": "Illuminated advertising and design luminaires including installation. We are a family-owned company with more than 30 years of experience in the market.",
+        "de": "Beleuchtung, Werbe- und Designleuchten inklusive Installation. Wir sind ein Familienunternehmen mit mehr als 30 Jahren Erfahrung auf dem Markt."
+      },
+      "oFirme": true
+    },
+    {
+      "klic": "servis",
+      "pageId": "6459b8c9580c4bf6c894d543",
+      "cesta": "/servisni-sluzby-a-pronajem-plosin",
+      "typ": "WebPage",
+      "nazev": { "cs": "Servis a údržba reklamy", "en": "Service and maintenance of advertisements", "de": "Wartung und Pflege der Werbung" },
+      "popis": {
+        "cs": "Prodlužte životnost své reklamy. Nabízíme servis, opravy i mytí všech venkovních a vnitřních reklam.",
+        "en": "Extend the service life of your advertisement. We offer service, repair and washing of all outdoor and indoor signs.",
+        "de": "Verlängern Sie die Lebensdauer Ihrer Werbung. Wir bieten Service, Reparatur und Reinigung aller Außen- und Innenwerbungen."
+      },
+      "sluzby": [
+        { "kotva": "servis", "nazev": { "cs": "Pravidelný servis a údržba", "en": "Regular service and maintenance", "de": "Regelmäßiger Service und Wartung" } },
+        { "kotva": "pronajem-plosin", "nazev": { "cs": "Pronájem plošin", "en": "Rental of work platforms", "de": "Vermietung von Arbeitsbühnen" } },
+        { "kotva": "ochrana-proti-ptactvu", "nazev": { "cs": "Instalace ochranných systémů proti ptactvu", "en": "Installation of bird protection systems", "de": "Installation von Vogelschutzsystemen" } },
+        { "kotva": "svetelne-mereni", "nazev": { "cs": "Světelné měření reklamy", "en": "Light measurement of advertising", "de": "Lichtmessung von Werbung" } }
+      ],
+      "staryJsonLdVCustomCode": true
+    },
+    {
+      "klic": "muzeum",
+      "pageId": "64644c59061ff11052ff1c75",
+      "cesta": "/muzeum-svetelnych-reklam",
+      "typ": "WebPage",
+      "nazev": { "cs": "Muzeum světelných reklam", "en": "Museum of Light Advertisements", "de": "Museum für Lichtwerbung" },
+      "popis": {
+        "cs": "Světelná reklama napříč historií. V muzeu světelných reklam najdete zajímavé a historické kousky nejen z naší dílny.",
+        "en": "Illuminated advertising through history. Our museum of illuminated advertisements has interesting and historic pieces, not only from our workshop.",
+        "de": "Leuchtreklame im Wandel der Geschichte. Im Museum für Leuchtreklamen finden Sie interessante und historische Stücke – nicht nur aus unserer Werkstatt."
+      }
+    },
+    {
+      "klic": "kariera",
+      "pageId": "649c49b17d24dbb8b98ae343",
+      "cesta": "/kariera",
+      "typ": "CollectionPage",
+      "nazev": { "cs": "Kariéra", "en": "Careers", "de": "Karriere" },
+      "popis": {
+        "cs": "Aktuální pracovní nabídky rodinné firmy Elektro Drapač, výrobce světelné reklamy. Životopis nám pošlete na myska@eldr.cz.",
+        "en": "Current job openings at Elektro Drapač, a family company making illuminated advertising. Send your CV to myska@eldr.cz.",
+        "de": "Aktuelle Stellenangebote beim Familienunternehmen Elektro Drapač, Hersteller von Leuchtreklame. Lebenslauf bitte an myska@eldr.cz."
+      }
+    },
+    {
+      "klic": "inspirace",
+      "pageId": "67eaf7074822c469cd0dc3f5",
+      "cesta": "/inspirace",
+      "typ": "CollectionPage",
+      "nazev": { "cs": "Inspirace", "en": "Inspiration", "de": "Inspiration" },
+      "popis": {
+        "cs": "Prozkoumejte možnosti světelné reklamy: 3D nápisy, LED loga, totemy, pylony. Kompletní průvodce, jak udělat na zákazníky nezapomenutelný dojem.",
+        "en": "The complete guide to illuminated advertising. Explore what illuminated advertising can do and leave your customers with an unforgettable impression.",
+        "de": "Der komplette Leitfaden zur Leuchtreklame. Entdecken Sie die Möglichkeiten der Leuchtreklame und hinterlassen Sie bei Ihren Kunden einen unvergesslichen Eindruck."
+      }
+    },
+    {
+      "klic": "inspirace-clanek",
+      "pageId": "66b0d0179491e21cce3f8302",
+      "sablona": "clanek",
+      "rodic": "inspirace",
+      "cesta": "/inspirace/{slug}",
+      "polozky": [
+        "3d-napis-jak-ziskat-pozornost-zakazniku",
+        "7-duvodu-proc-si-poridit-reklamni-totem-2",
+        "jak-vybrat-reklamni-pylon",
+        "pozdvihnete-svuj-byznys-budte-neprehlednutelni-s-3d-reklamou-2",
+        "rezana-grafika-zaujmete-zakaznika-na-prvni-pohled",
+        "rozsvitte-svuj-brand-proc-je-svetelne-led-logo-dobrou-volbou",
+        "svetelna-reklama-propagujte-sve-podnikani-moderne",
+        "svetelne-napisy-nejlepsi-zpusob-jak-zvyraznit-sve-podnikani"
+      ],
+      "pole": {
+        "slug": { "path": "slug", "type": "PlainText" },
+        "nazev": { "path": "name", "type": "PlainText" },
+        "popis": { "path": "perex", "type": "PlainText" },
+        "obrazek": { "path": "hlavni-obrazek", "type": "ImageRef" },
+        "datePublished": { "path": "datum", "type": "Date" },
+        "dateModified": { "path": "updated-on", "type": "Date" }
+      }
+    },
+    {
+      "klic": "kariera-pozice",
+      "pageId": "649c44274bd97b64c6db6500",
+      "sablona": "pozice",
+      "rodic": "kariera",
+      "cesta": "/kariera/{slug}",
+      "polozky": ["elektromechanik-elektrikar-monter", "montazni-delnik", "zamecnik"],
+      "pole": {
+        "slug": { "path": "slug", "type": "PlainText" },
+        "nazev": { "path": "name", "type": "PlainText" }
+      }
+    }
+  ]
+}

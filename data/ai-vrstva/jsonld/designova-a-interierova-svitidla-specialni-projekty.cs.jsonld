@@ -1,0 +1,373 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#webpage",
+      "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty",
+      "name": "Neonová a LED neonová designová svítidla",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#sluzba"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Naše produkty",
+          "item": "https://www.eldr.cz/produkty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Neonová a LED neonová designová svítidla",
+          "item": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#sluzba",
+      "name": "Neonová a LED neonová designová svítidla",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#katalog",
+        "name": "Neonová a LED neonová designová svítidla",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#designova-svitidla",
+              "name": "Designová svítidla",
+              "description": "vám na míru zhotovíme jakékoliv designové svítidlo.",
+              "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#designova-svitidla",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe082720f7758da6a3b_designova-svitidla.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Výroba na míru",
+                  "value": "ať už jde o moderní minimalistické prvky, nebo o luxusní, kreativní řešení, jsme schopni přizpůsobit každý detail tak, aby odpovídal vašim představám a potřebám."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "designová svítidla mohou mít různé tvary a velikosti, a to jak pro komerční prostory, tak i pro rezidenční interiéry, ať už jde o restaurace, kanceláře anebo hotely."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Interiér"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#zarovkove-svetelne-napisy",
+              "name": "Žárovkové světelné nápisy",
+              "description": "žárovkový světelný nápis tvoří plechový korpus, v němž jsou umístěny žárovičky.",
+              "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#zarovkove-svetelne-napisy",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0976f8d96e6d62e19_zarovkove-svetelne-napisy.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Zpracování",
+                  "value": "LED žárovky s možností volby odstínu světla"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "vhodné jsou zejména pro komerční prostory, restaurace, obchody, kino nebo klubové prostory"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "plechový korpus"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Interiér a exteriér"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Můžete je umístit nad vchod, na fasádu budovy, nebo použít jako interiérovou dekoraci."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#neonove-napisy",
+              "name": "Neonové nápisy & imitace",
+              "description": "Tento typ světelné reklamy tvoří plastové pásky různých barev, které lze tvarovat do libovolných nápisů.",
+              "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#neonove-napisy",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe0c83c52ac949691e7_neonove-napisy.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Imitace neonového nápisu z plexiskla",
+                  "value": "plexisklo ohýbáme do zvoleného tvaru a prosvítíme"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Klasické skleněné neonové trubice"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "plastové pásky různých barev"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Imitace neonového nápisu z plexiskla"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Neonové trubice umožňují vytvářet originální nápisy, loga i designové prvky"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Volit můžete z různých šířek i barevných variací."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "díky absenci skla i bezpečnější volba do interiéru"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#mechove-steny",
+              "name": "Mechové stěny",
+              "description": "Ve spolupráci s našimi dodavateli jsme schopni pro vás zhotovit nejen mechové stěny, ale také mechové obrazy s reklamním nápisem.",
+              "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#mechove-steny",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1c7fe0fb2b0470b46_mechove-steny.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Proč mechové stěny",
+                  "value": "snadno se udržují a na rozdíl od živých rostlin je nemusíte zalévat ani hnojit"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Proč mechové stěny",
+                  "value": "pomáhají zlepšit akustiku místnosti"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "kancelářské prostory, firemní lobby a recepce, restaurace a hotely, obchodní prostory nebo showroomy"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "mechové obrazy s reklamním nápisem"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#reklama-z-cortenoveho-plechu",
+              "name": "Reklama z cortenového plechu",
+              "description": "Materiál s přirozenou rezavou patinou",
+              "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#reklama-z-cortenoveho-plechu",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe10939b4e8f295d62b_reklama-z-cortenoveho-plechu.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "Vyznačuje se charakteristickým vzhledem díky své přirozeně rezavé patině, která se časem vyvíjí"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Umístění",
+                  "value": "cortenová ocel se používá nejen pro reklamní nápisy, ale i pro různé designové prvky, jako jsou loga, grafické vzory a dekorativní panely, které lze umístit na fasády budov nebo do venkovních prostor."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Materiál",
+                  "value": "patinující ocel (známá jako rezavá ocel)"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Exteriér a interiér"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "pro fasády nebo do venkovních prostor"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "vhodný především do exteriéru"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#svetelna-cisla-domu",
+              "name": "Světelná čísla domů",
+              "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#svetelna-cisla-domu",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe12470b76d0264c046_svetelna-cisla-domu.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "můžete si vybrat z různých typů podsvícení, které zajistí viditelnost i v noci, či varianty bez podsvícení"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Instalace",
+                  "value": "zajistíme vám kompletní výrobu a instalaci čísel"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "světelného či nesvětelného čísla"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "teple bílé světlo, nebo studeně modré podsvícení"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Použití",
+                  "value": "Exteriér"
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#stojaci-lampy",
+              "name": "Designové stojací lampy na zakázku",
+              "description": "Nechte si lampu vyrobit na zakázku, nebo si vyberte z připravených návrhů či z nabídky hotových svítidel.",
+              "url": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#stojaci-lampy",
+              "image": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6aa30fe1aab0713b5ffc26de_stojaci-lampy.jpg",
+              "additionalProperty": [
+                {
+                  "@type": "PropertyValue",
+                  "name": "Využití",
+                  "value": "stojací lampy nemusejí sloužit pouze jako interiérový doplněk. Lze je využít i v komerčních prostorách například jako stojan na produkty či upozornění a směrovky."
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Svícení",
+                  "value": "v celém barevném spektru, bezdrátové svícení"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "na zakázku, nebo si vyberte z připravených návrhů či z nabídky hotových svítidel"
+                },
+                {
+                  "@type": "PropertyValue",
+                  "name": "Provedení",
+                  "value": "Možnost ovládání dálkovým ovladačem, prostřednictvím aplikace Hue, Apple Home, DALI a dalších systémů."
+                }
+              ],
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.eldr.cz/#organization"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#faq",
+      "inLanguage": "cs",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/produkty/designova-a-interierova-svitidla-specialni-projekty#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Jak fungují tradiční neonové nápisy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Klasické neonové nápisy se skládají ze žárem tvarovaných skleněných trubic, které po naplnění plynem svítí červeně. Různé barevnosti světla lze docílit naplněním trubice luminoforovým práškem a argonem. Na každé trubici je navařena elektroda propojená s vysokonapěťovým transformátorem, která je izolována silikonovým návlekem."
+          }
+        }
+      ]
+    }
+  ]
+}

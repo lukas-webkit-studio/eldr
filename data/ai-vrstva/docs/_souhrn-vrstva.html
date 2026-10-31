@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8"><title>Popis produktů pro AI – jak vrstva funguje a jak je ověřená</title></head><body>
+<h1>Popis produktů pro AI – jak vrstva funguje a jak je ověřená</h1>
+
+<p><b>Stručně:</b> Ke každé z 10 produktových stránek webu eldr.cz jsme v češtině, angličtině i němčině přidali popis pro AI. Vyhledávače a AI asistenti z něj poznají, co nabízíte, z čeho se to vyrábí a kde se to používá. <b>Návštěvník webu žádnou změnu nevidí.</b> Všechny údaje jsme převzali doslova z textu stránek. U každého je odkaz na místo, odkud pochází.</p>
+
+<h2>Co je popis pro AI?</h2>
+<p>Je to kód v hlavičce každé stránky ve formátu JSON-LD. Tento formát čtou Google, Bing i AI asistenti jako ChatGPT, Perplexity nebo Claude. Popisuje stejný obsah jako stránka, jen tak, aby mu stroj rozuměl bez hádání: „tohle je výrobek, tohle jeho materiál, tohle místo použití“.</p>
+<p>Popis je uložený přímo ve Webflow, ne ve skriptu. Roboti ho proto přečtou i bez spuštění JavaScriptu, který většina AI robotů nespouští.</p>
+
+<h2>Co popis obsahuje?</h2>
+<table border="1" cellpadding="4">
+<tr><th></th><th>CS</th><th>EN</th><th>DE</th></tr>
+<tr><td>Stránky</td><td>10</td><td>10</td><td>10</td></tr>
+<tr><td>Výrobky a služby</td><td>44</td><td>44</td><td>44</td></tr>
+<tr><td>Parametry (např. Materiál, Montáž, Umístění)</td><td>79</td><td>79</td><td>79</td></tr>
+<tr><td>Další materiály</td><td>13</td><td>13</td><td>13</td></tr>
+<tr><td>Provedení a varianty</td><td>75</td><td>74</td><td>76</td></tr>
+<tr><td>Použití</td><td>37</td><td>37</td><td>37</td></tr>
+<tr><td>Otázky s odpovědí</td><td>3</td><td>3</td><td>3</td></tr>
+<tr><td><b>Údaje s odkazem na zdroj</b></td><td><b>315</b></td><td><b>314</b></td><td><b>316</b></td></tr>
+</table>
+<p>Počty se mezi jazyky mírně liší, protože jazykové verze stránek nejsou napsané úplně stejně. Například anglická stránka spojuje dvě české věty o profilu 5s do jedné. Nic jsme nedoplňovali, aby čísla seděla.</p>
+<p>Ke každé stránce je v podsložkách CS, EN a DE samostatný dokument. Najdete v něm všechny výrobky s parametry, odkazy na zdroj a na konci přesný kód.</p>
+
+<h2>Jak jsme ověřili, že nic není vymyšlené?</h2>
+<ol>
+<li><b>Zdroj je jen web.</b> Údaje jsme brali ze zveřejněných stránek eldr.cz tak, jak je člověk vidí bez JavaScriptu. Anglické a německé údaje pocházejí z anglických a německých stránek, nic jsme nepřekládali.</li>
+<li><b>Doslovná citace u každého údaje.</b> Ke každé hodnotě je uložená citace ze stránky. Automatický test ověřil všech 1 604 citací (včetně názvů parametrů) proti textu stránek ze 30. 10. 2026. Výsledek: 100 %.</li>
+<li><b>Nezávislá kontrola každé stránky.</b> Údaje sestavil jeden zpracovatel a pak je prošel jiný. Ten stránku načetl znovu a hledal údaje mimo text, s posunutým významem nebo chybějící. Nalezené nedostatky opravil a ke každé stránce sepsal protokol.</li>
+<li><b>Závěrečná kontrola u dvou stolů.</b> Dva další kontroloři prošli výsledek proti zadání a proti pravidlům psaní. Po ní jsme vyřadili i superlativy a hodnoticí výrazy, které na stránkách sice jsou, ale výrobek nepopisují.</li>
+<li><b>Oficiální validátor.</b> Kód všech 30 stránek prošel validátorem schema.org s výsledkem 0 chyb a 0 varování.</li>
+</ol>
+
+<h2>Co do popisu záměrně nešlo?</h2>
+<ul>
+<li><b>Ceny, hodnocení a recenze.</b> Na produktových stránkách nejsou.</li>
+<li><b>Tvrzení o firmě</b>, například rekordy nebo „jedni z mála“. Patří k popisu firmy, ne k výrobku.</li>
+<li><b>Superlativy a srovnání</b>, například „špičkové zpracování“ nebo „za podstatně nižší cenu“.</li>
+<li><b>Zdravotní a ekologická tvrzení bez čísla</b>, například že mechové stěny čistí vzduch.</li>
+<li><b>Marketingové štítky</b>, například „Neomezené možnosti“.</li>
+<li><b>Společné bloky</b> o průběhu zakázky a o kvalitě, které jsou stejné na všech stránkách.</li>
+<li><b>Popisky fotek v galeriích.</b></li>
+</ul>
+<p><b>Ponechali jsme konkrétní údaje s číslem</b>, které stránka uvádí u výrobku, například záruku až 5 let na 3D nápisy nebo stálobarevnost tisku minimálně 3 roky. Pokud je v popisu pro AI mít nechcete, odstraníme je.</p>
+<p>U každé stránky je v dokumentu oddíl „Co do popisu nešlo a proč“.</p>
+
+<h2>Proč jsou výrobky popsané jako služby?</h2>
+<p>Google u typu „produkt“ podle své dokumentace vyžaduje cenu, hodnocení nebo recenze. Bez nich výsledek označí jako chybu. Vyrábíte na zakázku a ceny na webu neuvádíte, vymyšlenou cenu doplnit nechceme. Výrobky jsou proto popsané jako zakázková výroba, tedy služba. To odpovídá skutečnosti a parametry, materiály i provedení zůstávají zachované. U služby Google cenu nevyžaduje. Výsledek oficiálního testu Google doplníme po zveřejnění.</p>
+
+<h2>Co popis neslibuje?</h2>
+<ul>
+<li><b>Lepší pozici ve vyhledávání ani zmínky v odpovědích AI nezaručuje.</b> Jen strojům usnadňuje přesně pochopit, co nabízíte.</li>
+<li><b>Hvězdičky ani ceny ve výsledcích Google nepřinese</b>, protože k nim jsou potřeba hodnocení a ceny.</li>
+<li><b>Otázky s odpovědí</b> zobrazuje Google ve výsledcích jen u vybraných webů, typicky státních a zdravotnických. AI asistentům ale pomáhají.</li>
+</ul>
+
+<h2>Co když se text na webu změní?</h2>
+<p>Popis odpovídá stránkám ke dni 30. 10. 2026. Když se text produktové stránky změní, popis se automaticky nepřizpůsobí. Rozdíl odhalí kontrola proti živému webu, kterou spouštíme ručně. Při změně textu nám dejte vědět a popis upravíme.</p>
+
+<h2>Výsledky z ostrého webu</h2>
+<p>[Doplní se po zveřejnění: dostupnost pro 7 robotů (Googlebot, Bingbot, GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot), výsledky validátoru schema.org a testu Google na všech 30 stránkách.]</p>
+</body></html>

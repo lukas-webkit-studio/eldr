@@ -1,0 +1,187 @@
+{
+  "slug": "orientacni-systemy",
+  "lang": "de",
+  "url": "https://www.eldr.cz/de/produkty/orientacni-systemy",
+  "page": {
+    "name": {
+      "value": "Wegeleitsysteme",
+      "quote": "Wegeleitsysteme"
+    },
+    "description": null,
+    "highlights": [
+      {
+        "value": "Übersichtliche Beschilderung",
+        "quote": "Übersichtliche Beschilderung"
+      },
+      {
+        "value": "Modernes, kreatives Design",
+        "quote": "Modernes, kreatives Design"
+      },
+      {
+        "value": "Fachgerechte Montage",
+        "quote": "Fachgerechte Montage"
+      },
+      {
+        "value": "Verständliche Botschaft",
+        "quote": "Verständliche Botschaft"
+      }
+    ],
+    "properties": []
+  },
+  "products": [
+    {
+      "key": "orientacni-systemy",
+      "anchor": "orientacni-systemy",
+      "name": {
+        "value": "Wegeleitsysteme für Gebäude und Areale",
+        "quote": "Wegeleitsysteme für Gebäude und Areale"
+      },
+      "description": {
+        "value": "Wir fertigen das System nach Ihren Wünschen, oder Sie wählen aus unseren modularen Serien-Wegeleitsystemen.",
+        "quote": "Wir fertigen das System nach Ihren Wünschen, oder Sie wählen aus unseren modularen Serien-Wegeleitsystemen. Möglich ist auch ein System aus kleinen Totems und Wegweisern."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/635940ec249b210e8902edd4/6a991b5f017afb3097bc8182_orientacni-systemy-globus.png",
+        "alt": "Zelený orientační rozcestník s šipkami před hypermarketem Globus"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafik",
+            "quote": "Grafik: eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
+          },
+          "value": {
+            "value": "grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität.",
+            "quote": "Grafik: eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
+          }
+        },
+        {
+          "name": {
+            "value": "Montage",
+            "quote": "Montage: an der Wand, auf Abstandshaltern, an Abhängeseilen, auf freistehenden Konstruktionen oder als Totems und Wegweiser."
+          },
+          "value": {
+            "value": "an der Wand, auf Abstandshaltern, an Abhängeseilen, auf freistehenden Konstruktionen oder als Totems und Wegweiser.",
+            "quote": "Montage: an der Wand, auf Abstandshaltern, an Abhängeseilen, auf freistehenden Konstruktionen oder als Totems und Wegweiser."
+          }
+        },
+        {
+          "name": {
+            "value": "Einsatzort",
+            "quote": "Einsatzort: in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern."
+          },
+          "value": {
+            "value": "in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern.",
+            "quote": "Einsatzort: in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl.",
+          "quote": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
+        },
+        {
+          "value": "eloxiertes Aluminium",
+          "quote": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
+        },
+        {
+          "value": "Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas.",
+          "quote": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
+        }
+      ],
+      "variants": [
+        {
+          "value": "Maßgeschneidert",
+          "quote": "Maßgeschneidert"
+        },
+        {
+          "value": "Möglich ist auch ein System aus kleinen Totems und Wegweisern.",
+          "quote": "Wir fertigen das System nach Ihren Wünschen, oder Sie wählen aus unseren modularen Serien-Wegeleitsystemen. Möglich ist auch ein System aus kleinen Totems und Wegweisern."
+        },
+        {
+          "value": "in beleuchteter und unbeleuchteter Ausführung",
+          "quote": "Grafik: eine übersichtliche grafische Lösung in beleuchteter und unbeleuchteter Ausführung, abgestimmt auf den Raum und auf Ihre Markenidentität."
+        },
+        {
+          "value": "Wegeleitsysteme für innen, außen und in modularer Bauweise",
+          "quote": "Wegeleitsysteme für innen, außen und in modularer Bauweise entwerfen wir so, dass sie sich mühelos an den jeweiligen Ort und an individuelle Anforderungen anpassen."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Innen und außen",
+          "quote": "Innen und außen"
+        },
+        {
+          "value": "in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern.",
+          "quote": "Einsatzort: in Innenräumen, im Außenbereich, in Gebäuden und auf weitläufigen Arealen – etwa in Logistikparks, Krankenhäusern oder Kaufhäusern."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "value": "Wozu dient ein Wegeleitsystem?",
+        "quote": "Wozu dient ein Wegeleitsystem?"
+      },
+      "answer": {
+        "value": "Es ist ein System aus Informationstafeln, Wegweisern und Schildern, das Menschen die Orientierung erleichtert. Es hilft Besuchern, die Struktur des Raums schnell zu erfassen und den richtigen Weg zu finden, ohne das Personal fragen zu müssen.",
+        "quote": "Es ist ein System aus Informationstafeln, Wegweisern und Schildern, das Menschen die Orientierung erleichtert. Es hilft Besuchern, die Struktur des Raums schnell zu erfassen und den richtigen Weg zu finden, ohne das Personal fragen zu müssen."
+      }
+    },
+    {
+      "question": {
+        "value": "Woraus werden Wegeleitsysteme gefertigt?",
+        "quote": "Woraus werden Wegeleitsysteme gefertigt?"
+      },
+      "answer": {
+        "value": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl.",
+        "quote": "Aus Plattenmaterial in Aluminium, Dibond oder Acryl. Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium. Möglich sind auch andere Materialien – Holz, Edelstahl, Plexiglas."
+      }
+    }
+  ],
+  "vynechano": [
+    {
+      "text": "Úvodní věta „Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.“",
+      "duvod": "Hodnoticí tvrzení bez ověřitelného údaje, výrobek věcně nepopisuje. Proto v popisu pro AI není."
+    },
+    {
+      "text": "Přívlastek „übersichtliche“ u grafiky",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Grafické řešení a jeho provedení přebíráme."
+    },
+    {
+      "text": "Věta „Ein beliebtes Material mit sehr effektvoller Optik ist eloxiertes Aluminium.“ v odpovědi o materiálech",
+      "duvod": "Hodnocení vzhledu bez údaje. Eloxovaný hliník i další materiály uvádíme přímo u výrobku."
+    },
+    {
+      "text": "Nadpis „Wegeleitsysteme passend zum Raum und zum Bedarf“",
+      "duvod": "Nadpis sekce bez vlastního údaje. Větu pod ním přebíráme jako provedení výrobku."
+    },
+    {
+      "text": "Úvodní fotka nad sekcí výrobku",
+      "duvod": "Fotka leží mimo sekci výrobku. K výrobku přiřazujeme fotku přímo ze sekce orientačních systémů."
+    },
+    {
+      "text": "Blok „Wie entsteht eine Leuchtreklame?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Führende tschechische und ausländische Unternehmen vertrauen uns“ a „Warum ist unsere Leuchtreklame die richtige Wahl?“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Unverbindlich anfragen“, „Alle Referenzen“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    },
+    {
+      "text": "Popisky obrázků na německé verzi stránky",
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
+    }
+  ]
+}

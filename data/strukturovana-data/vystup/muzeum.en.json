@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.eldr.cz/en/muzeum-svetelnych-reklam#webpage",
+      "url": "https://www.eldr.cz/en/muzeum-svetelnych-reklam",
+      "name": "Museum of Light Advertisements",
+      "description": "Illuminated advertising through history. Our museum of illuminated advertisements has interesting and historic pieces, not only from our workshop.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.eldr.cz/#website"
+      },
+      "publisher": {
+        "@id": "https://www.eldr.cz/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://www.eldr.cz/en/muzeum-svetelnych-reklam#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.eldr.cz/en/muzeum-svetelnych-reklam#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Elektro Drapač",
+          "item": "https://www.eldr.cz/en"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Museum of Light Advertisements",
+          "item": "https://www.eldr.cz/en/muzeum-svetelnych-reklam"
+        }
+      ]
+    }
+  ]
+}

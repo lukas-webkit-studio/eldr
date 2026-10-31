@@ -1,0 +1,439 @@
+{
+  "slug": "tabule-a-svetelne-panely",
+  "lang": "cs",
+  "url": "https://www.eldr.cz/produkty/tabule-a-svetelne-panely",
+  "page": {
+    "name": {
+      "value": "Světelné panely a tabule",
+      "quote": "Světelné panely a tabule"
+    },
+    "description": {
+      "value": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m²",
+      "quote": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem."
+    },
+    "highlights": [
+      {
+        "value": "Životnost desítky let",
+        "quote": "Životnost desítky let"
+      },
+      {
+        "value": "Úsporné LED",
+        "quote": "Úsporné LED"
+      },
+      {
+        "value": "Odborná montáž",
+        "quote": "Odborná montáž"
+      },
+      {
+        "value": "Kompletní servis",
+        "quote": "Kompletní servis"
+      }
+    ],
+    "properties": []
+  },
+  "products": [
+    {
+      "key": "svetelne-panely",
+      "anchor": "svetelne-panely",
+      "name": {
+        "value": "Světelné panely",
+        "quote": "Světelné panely"
+      },
+      "description": {
+        "value": "Box s hliníkovým rámem, který na přední straně využívá prosvětlovací materiál.",
+        "quote": "Box s hliníkovým rámem, který na přední straně využívá prosvětlovací materiál. V nabídce je několik variant, včetně plachtového a plexisklového panelu a varianty s 3D písmem."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f2298e32104ea8387_64914456ce1ed295b0e48957_Sve%25CC%258Ctelny%25CC%2581%2520panel%2520().webp",
+        "alt": "Světelný panel 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafika",
+            "quote": "Grafika: na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku. Tyto grafické možnosti umožňují přizpůsobení vzhledu panelu podle potřeby a specifických požadavků."
+          },
+          "value": {
+            "value": "na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku. Tyto grafické možnosti umožňují přizpůsobení vzhledu panelu podle potřeby a specifických požadavků.",
+            "quote": "Grafika: na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku. Tyto grafické možnosti umožňují přizpůsobení vzhledu panelu podle potřeby a specifických požadavků."
+          }
+        },
+        {
+          "name": {
+            "value": "Materiál",
+            "quote": "Materiál: hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
+          },
+          "value": {
+            "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty",
+            "quote": "Materiál: hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
+          }
+        },
+        {
+          "name": {
+            "value": "Umístění",
+            "quote": "Umístění: světelné panely se dají snadno namontovat na budovy či pylony."
+          },
+          "value": {
+            "value": "světelné panely se dají snadno namontovat na budovy či pylony.",
+            "quote": "Umístění: světelné panely se dají snadno namontovat na budovy či pylony."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "hliníkový rám a zadní strana z hliníku nebo sendvičové desky",
+          "quote": "Materiál: hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
+        },
+        {
+          "value": "Přední plocha z plexiskla nebo prosvětlovací vinylové plachty",
+          "quote": "Materiál: hliníkový rám a zadní strana z hliníku nebo sendvičové desky. Přední plocha z plexiskla nebo prosvětlovací vinylové plachty, která zajišťuje dlouhou životnost a kvalitní prosvětlení."
+        }
+      ],
+      "variants": [
+        {
+          "value": "do velikosti 100 m²",
+          "quote": "Světelné panely vyrábíme na míru vašim potřebám do velikosti 100 m² se špičkovým zpracováním a designem."
+        },
+        {
+          "value": "V nabídce je několik variant, včetně plachtového a plexisklového panelu a varianty s 3D písmem.",
+          "quote": "Box s hliníkovým rámem, který na přední straně využívá prosvětlovací materiál. V nabídce je několik variant, včetně plachtového a plexisklového panelu a varianty s 3D písmem."
+        },
+        {
+          "value": "Svítící čelní strana",
+          "quote": "Svítící čelní strana"
+        },
+        {
+          "value": "na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku",
+          "quote": "Grafika: na prosvětlovací plochu lze aplikovat tištěnou nebo řezanou grafiku. Tyto grafické možnosti umožňují přizpůsobení vzhledu panelu podle potřeby a specifických požadavků."
+        }
+      ],
+      "uses": [
+        {
+          "value": "se dají snadno namontovat na budovy či pylony",
+          "quote": "Umístění: světelné panely se dají snadno namontovat na budovy či pylony."
+        }
+      ]
+    },
+    {
+      "key": "intarzie",
+      "anchor": "intarzie",
+      "name": {
+        "value": "Plexi intarzie",
+        "quote": "Plexi intarzie"
+      },
+      "description": {
+        "value": "Intarzie je světelný panel s vystouplými nebo vnořenými znaky.",
+        "quote": "Intarzie je světelný panel s vystouplými nebo vnořenými znaky."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a105a11d00d56e90552c_6492100095d82614b3c59ea3_Plexintarzie%2520(00001).webp",
+        "alt": "Plexintarzie 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafika",
+            "quote": "Grafika: jedná se o vhodnější provedení u malých nápisů s velice tenkým fontem písma, kdy by nebylo možné tvarovat jako samostatný 3D nápis."
+          },
+          "value": {
+            "value": "jedná se o vhodnější provedení u malých nápisů s velice tenkým fontem písma, kdy by nebylo možné tvarovat jako samostatný 3D nápis.",
+            "quote": "Grafika: jedná se o vhodnější provedení u malých nápisů s velice tenkým fontem písma, kdy by nebylo možné tvarovat jako samostatný 3D nápis."
+          }
+        },
+        {
+          "name": {
+            "value": "Materiál",
+            "quote": "Materiál: kostru tvoří rám a zadní strana z hliníku. Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu."
+          },
+          "value": {
+            "value": "kostru tvoří rám a zadní strana z hliníku. Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu.",
+            "quote": "Materiál: kostru tvoří rám a zadní strana z hliníku. Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu."
+          }
+        },
+        {
+          "name": {
+            "value": "Umístění",
+            "quote": "Umístění: výhodou např. u historických budov, kde není možnost vrtat do fasády – elektropřívod je veden pouze do jednoho místa."
+          },
+          "value": {
+            "value": "výhodou např. u historických budov, kde není možnost vrtat do fasády – elektropřívod je veden pouze do jednoho místa.",
+            "quote": "Umístění: výhodou např. u historických budov, kde není možnost vrtat do fasády – elektropřívod je veden pouze do jednoho místa."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "kostru tvoří rám a zadní strana z hliníku",
+          "quote": "Materiál: kostru tvoří rám a zadní strana z hliníku. Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu."
+        },
+        {
+          "value": "Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu.",
+          "quote": "Materiál: kostru tvoří rám a zadní strana z hliníku. Přední plocha je pokryta neprůsvitnou deskou, většinou vyrobenou z plechu nebo sendvičové desky – dibondu."
+        }
+      ],
+      "variants": [
+        {
+          "value": "vystouplá, nebo podložená",
+          "quote": "Plexi intarzie: vystouplá, nebo podložená"
+        },
+        {
+          "value": "Podle provedení se intarzie liší vzhledem i cenou. Rozdíl je v tom, jestli znaky vystupují nad úroveň panelu, nebo jsou pod ní.",
+          "quote": "Podle provedení se intarzie liší vzhledem i cenou. Rozdíl je v tom, jestli znaky vystupují nad úroveň panelu, nebo jsou pod ní."
+        }
+      ],
+      "uses": [
+        {
+          "value": "u malých nápisů s velice tenkým fontem písma",
+          "quote": "Grafika: jedná se o vhodnější provedení u malých nápisů s velice tenkým fontem písma, kdy by nebylo možné tvarovat jako samostatný 3D nápis."
+        },
+        {
+          "value": "u historických budov, kde není možnost vrtat do fasády",
+          "quote": "Umístění: výhodou např. u historických budov, kde není možnost vrtat do fasády – elektropřívod je veden pouze do jednoho místa."
+        }
+      ]
+    },
+    {
+      "key": "vystoupla-plexi-intarzie",
+      "anchor": "intarzie",
+      "name": {
+        "value": "Vystouplá plexi intarzie",
+        "quote": "Vystouplá plexi intarzie"
+      },
+      "description": {
+        "value": "Znaky jsou nad úrovní panelu a vytvářejí 3D efekt.",
+        "quote": "Znaky jsou nad úrovní panelu a vytvářejí 3D efekt. Do čelní strany jsou prořezané otvory, do nichž jsou vsazeny světelné znaky z masivního plexiskla. Díky prosvětleným bokům písmen vzniká světelná aura."
+      },
+      "image": null,
+      "properties": [],
+      "materials": [
+        {
+          "value": "světelné znaky z masivního plexiskla",
+          "quote": "Znaky jsou nad úrovní panelu a vytvářejí 3D efekt. Do čelní strany jsou prořezané otvory, do nichž jsou vsazeny světelné znaky z masivního plexiskla. Díky prosvětleným bokům písmen vzniká světelná aura."
+        }
+      ],
+      "variants": [
+        {
+          "value": "Do čelní strany jsou prořezané otvory, do nichž jsou vsazeny světelné znaky z masivního plexiskla.",
+          "quote": "Znaky jsou nad úrovní panelu a vytvářejí 3D efekt. Do čelní strany jsou prořezané otvory, do nichž jsou vsazeny světelné znaky z masivního plexiskla. Díky prosvětleným bokům písmen vzniká světelná aura."
+        },
+        {
+          "value": "Díky prosvětleným bokům písmen vzniká světelná aura.",
+          "quote": "Znaky jsou nad úrovní panelu a vytvářejí 3D efekt. Do čelní strany jsou prořezané otvory, do nichž jsou vsazeny světelné znaky z masivního plexiskla. Díky prosvětleným bokům písmen vzniká světelná aura."
+        }
+      ],
+      "uses": []
+    },
+    {
+      "key": "podlozena-plexi-intarzie",
+      "anchor": "intarzie",
+      "name": {
+        "value": "Podložená plexi intarzie",
+        "quote": "Podložená plexi intarzie"
+      },
+      "description": {
+        "value": "Znaky jsou pod úrovní panelu.",
+        "quote": "Znaky jsou pod úrovní panelu. Jde o ekonomičtější variantu, neboť se znaky nemusejí tvarovat a výroba je méně pracná. U tohoto provedení nevzniká světelná aura."
+      },
+      "image": null,
+      "properties": [],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Jde o ekonomičtější variantu, neboť se znaky nemusejí tvarovat a výroba je méně pracná.",
+          "quote": "Znaky jsou pod úrovní panelu. Jde o ekonomičtější variantu, neboť se znaky nemusejí tvarovat a výroba je méně pracná. U tohoto provedení nevzniká světelná aura."
+        },
+        {
+          "value": "U tohoto provedení nevzniká světelná aura.",
+          "quote": "Znaky jsou pod úrovní panelu. Jde o ekonomičtější variantu, neboť se znaky nemusejí tvarovat a výroba je méně pracná. U tohoto provedení nevzniká světelná aura."
+        }
+      ],
+      "uses": []
+    },
+    {
+      "key": "reklamni-tabule",
+      "anchor": "reklamni-tabule",
+      "name": {
+        "value": "Reklamní tabule",
+        "quote": "Reklamní tabule"
+      },
+      "description": {
+        "value": "Reklamní tabule, neboli nesvětelná reklamní deska",
+        "quote": "Reklamní tabule, neboli nesvětelná reklamní deska, je jedním z nejjednodušších řešení reklamního prvku. Lze počítat s flexibilitou – grafiku na tabuli lze znovu přelepit."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a182a11d00d56e90ca24_64914091d08ddae77be92e2c_1.webp",
+        "alt": "Reklamní tabule 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafika",
+            "quote": "Grafika: sdělení na jejich povrchu může být zrealizováno tištěnou či řezanou grafikou, pískováním a gravírováním."
+          },
+          "value": {
+            "value": "sdělení na jejich povrchu může být zrealizováno tištěnou či řezanou grafikou, pískováním a gravírováním.",
+            "quote": "Grafika: sdělení na jejich povrchu může být zrealizováno tištěnou či řezanou grafikou, pískováním a gravírováním."
+          }
+        },
+        {
+          "name": {
+            "value": "Materiál",
+            "quote": "Materiál: jedná se o nesvětelné desky vyráběné z různých materiálů, jako je hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod."
+          },
+          "value": {
+            "value": "jedná se o nesvětelné desky vyráběné z různých materiálů, jako je hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod.",
+            "quote": "Materiál: jedná se o nesvětelné desky vyráběné z různých materiálů, jako je hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod."
+          }
+        },
+        {
+          "name": {
+            "value": "Umístění",
+            "quote": "Umístění: označení provozoven, informační nebo orientační účely. Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod."
+          },
+          "value": {
+            "value": "označení provozoven, informační nebo orientační účely. Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod.",
+            "quote": "Umístění: označení provozoven, informační nebo orientační účely. Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod.",
+          "quote": "Materiál: jedná se o nesvětelné desky vyráběné z různých materiálů, jako je hliník, nerez, mosaz, kompozitní materiály, akryláty, sklo, dřevo apod."
+        }
+      ],
+      "variants": [
+        {
+          "value": "tištěnou či řezanou grafikou, pískováním a gravírováním",
+          "quote": "Grafika: sdělení na jejich povrchu může být zrealizováno tištěnou či řezanou grafikou, pískováním a gravírováním."
+        },
+        {
+          "value": "grafiku na tabuli lze znovu přelepit",
+          "quote": "Reklamní tabule, neboli nesvětelná reklamní deska, je jedním z nejjednodušších řešení reklamního prvku. Lze počítat s flexibilitou – grafiku na tabuli lze znovu přelepit."
+        }
+      ],
+      "uses": [
+        {
+          "value": "označení provozoven, informační nebo orientační účely",
+          "quote": "Umístění: označení provozoven, informační nebo orientační účely. Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod."
+        },
+        {
+          "value": "Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod.",
+          "quote": "Umístění: označení provozoven, informační nebo orientační účely. Nejčastěji jako nesvětelné nápisy, informační tabule, dveřní tabulky, orientační systémy apod."
+        },
+        {
+          "value": "sloužící k označení a orientaci v prostoru",
+          "quote": "Efektivní, cenově dostupné reklamní prvky sloužící k označení a orientaci v prostoru."
+        }
+      ]
+    },
+    {
+      "key": "menuboardy",
+      "anchor": "menuboardy",
+      "name": {
+        "value": "Menuboardy/infoboardy",
+        "quote": "Menuboardy/infoboardy"
+      },
+      "description": {
+        "value": "Menuboardy jsou speciální panely s vyměnitelnými motivy. Mohou být oboustranné pro snadnou výměnu.",
+        "quote": "Menuboardy jsou speciální panely s vyměnitelnými motivy. Mohou být oboustranné pro snadnou výměnu."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a17f9b1fb16baa83187b_64913c4a32d5e1196d2a731d_1.webp",
+        "alt": "Menuboard 1"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafika",
+            "quote": "Grafika: umožňují zobrazení aktuálních nabídek pomocí vyměnitelných motivů. Grafiku lze snadno měnit a přizpůsobovat."
+          },
+          "value": {
+            "value": "umožňují zobrazení aktuálních nabídek pomocí vyměnitelných motivů. Grafiku lze snadno měnit a přizpůsobovat.",
+            "quote": "Grafika: umožňují zobrazení aktuálních nabídek pomocí vyměnitelných motivů. Grafiku lze snadno měnit a přizpůsobovat."
+          }
+        },
+        {
+          "name": {
+            "value": "Materiál",
+            "quote": "Materiál: odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
+          },
+          "value": {
+            "value": "Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích.",
+            "quote": "Materiál: odolné materiály, které zajišťují dlouhou životnost. Materiály jsou přizpůsobeny pro výměnu grafiky a používání v restauracích."
+          }
+        },
+        {
+          "name": {
+            "value": "Umístění",
+            "quote": "Umístění: používají se především v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů."
+          },
+          "value": {
+            "value": "používají se především v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů.",
+            "quote": "Umístění: používají se především v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů."
+          }
+        }
+      ],
+      "materials": [],
+      "variants": [
+        {
+          "value": "Mohou být oboustranné pro snadnou výměnu.",
+          "quote": "Menuboardy jsou speciální panely s vyměnitelnými motivy. Mohou být oboustranné pro snadnou výměnu."
+        }
+      ],
+      "uses": [
+        {
+          "value": "v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů",
+          "quote": "Umístění: používají se především v restauracích s rychlým občerstvením, kde zobrazují aktuální nabídku pokrmů a nápojů."
+        }
+      ]
+    }
+  ],
+  "faq": [],
+  "vynechano": [
+    {
+      "text": "Obrat „se špičkovým zpracováním a designem“ v úvodní větě",
+      "duvod": "Superlativ bez měřitelného obsahu. Z úvodní věty přebíráme výrobu na míru do velikosti 100 m²."
+    },
+    {
+      "text": "Obrat „která zajišťuje dlouhou životnost a kvalitní prosvětlení“ u světelných panelů",
+      "duvod": "Hodnoticí obrat bez čísla. Materiály rámu a přední plochy přebíráme."
+    },
+    {
+      "text": "Obrat „je jedním z nejjednodušších řešení reklamního prvku“ u reklamních tabulí",
+      "duvod": "Superlativ bez měřitelného obsahu. Přebíráme jen to, že jde o nesvětelnou desku."
+    },
+    {
+      "text": "Obrat „odolné materiály, které zajišťují dlouhou životnost“ u menuboardů",
+      "duvod": "Stránka neuvádí konkrétní materiál ani životnost. Přebíráme přizpůsobení materiálů pro výměnu grafiky."
+    },
+    {
+      "text": "Krátké popisy na kartách, např. „Moderní reklamní prvek, který zajišťuje vysokou viditelnost díky svítící čelní straně.“",
+      "duvod": "Karty jen upoutávají na sekce níže. Věcné údaje přebíráme z podrobnějších popisů v sekcích."
+    },
+    {
+      "text": "Štítky „Atraktivní vzhled“, „Nízká pořizovací cena“, „Rychlé dodání“, „Dlouhá životnost“ a další",
+      "duvod": "Štítky hodnotí nebo slibují cenu a lhůtu bez čísla. Světelnou auru a svítící čelo přebíráme z popisů."
+    },
+    {
+      "text": "Výzva nad kartami výrobků, že vše jde přizpůsobit",
+      "duvod": "Věta jen uvádí rozcestník karet a o výrobcích nic konkrétního neříká."
+    },
+    {
+      "text": "Tlačítka „Nezávazně poptat“, „Jak probíhá výroba?“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    }
+  ]
+}

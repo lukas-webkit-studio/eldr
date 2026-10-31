@@ -1,0 +1,187 @@
+{
+  "slug": "orientacni-systemy",
+  "lang": "cs",
+  "url": "https://www.eldr.cz/produkty/orientacni-systemy",
+  "page": {
+    "name": {
+      "value": "Orientační systémy",
+      "quote": "Orientační systémy"
+    },
+    "description": null,
+    "highlights": [
+      {
+        "value": "Přehledné značení",
+        "quote": "Přehledné značení"
+      },
+      {
+        "value": "Moderní kreativita",
+        "quote": "Moderní kreativita"
+      },
+      {
+        "value": "Odborná montáž",
+        "quote": "Odborná montáž"
+      },
+      {
+        "value": "Zpracování sdělení",
+        "quote": "Zpracování sdělení"
+      }
+    ],
+    "properties": []
+  },
+  "products": [
+    {
+      "key": "orientacni-systemy",
+      "anchor": "orientacni-systemy",
+      "name": {
+        "value": "Orientační systémy budov a areálů",
+        "quote": "Orientační systémy budov a areálů"
+      },
+      "description": {
+        "value": "Systém vám vytvoříme dle vašeho přání nebo si můžete vybrat ze sériových modulových orientačních systémů.",
+        "quote": "Systém vám vytvoříme dle vašeho přání nebo si můžete vybrat ze sériových modulových orientačních systémů. Zvolit můžete i systém malých totemů a rozcestníků."
+      },
+      "image": {
+        "src": "https://cdn.prod.website-files.com/637cd69d722176059a46c1fb/6564a1049a85f6041b3019c5_6491169ad3154796a036b096_Orientac%25CC%258Cni%25CC%2581%2520syste%25CC%2581m%2520(8).webp",
+        "alt": "Orientační systém 20"
+      },
+      "properties": [
+        {
+          "name": {
+            "value": "Grafika",
+            "quote": "Grafika: přehledné grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky."
+          },
+          "value": {
+            "value": "grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky.",
+            "quote": "Grafika: přehledné grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky."
+          }
+        },
+        {
+          "name": {
+            "value": "Montáž",
+            "quote": "Montáž: na zeď, distanční trny, závěsná lanka, samostatné konstrukce i formou totemů a rozcestníků."
+          },
+          "value": {
+            "value": "na zeď, distanční trny, závěsná lanka, samostatné konstrukce i formou totemů a rozcestníků.",
+            "quote": "Montáž: na zeď, distanční trny, závěsná lanka, samostatné konstrukce i formou totemů a rozcestníků."
+          }
+        },
+        {
+          "name": {
+            "value": "Umístění",
+            "quote": "Umístění: do interiérů, exteriérů, budov i rozsáhlých areálů, například v logistických parcích, nemocnicích nebo obchodních domech."
+          },
+          "value": {
+            "value": "do interiérů, exteriérů, budov i rozsáhlých areálů, například v logistických parcích, nemocnicích nebo obchodních domech.",
+            "quote": "Umístění: do interiérů, exteriérů, budov i rozsáhlých areálů, například v logistických parcích, nemocnicích nebo obchodních domech."
+          }
+        }
+      ],
+      "materials": [
+        {
+          "value": "Z hliníkového, dibondového nebo akrylátového deskového materiálu.",
+          "quote": "Z hliníkového, dibondového nebo akrylátového deskového materiálu. Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník. Je možné využít i další materiály – dřevo, nerez, plexisklo."
+        },
+        {
+          "value": "eloxovaný hliník",
+          "quote": "Z hliníkového, dibondového nebo akrylátového deskového materiálu. Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník. Je možné využít i další materiály – dřevo, nerez, plexisklo."
+        },
+        {
+          "value": "Je možné využít i další materiály – dřevo, nerez, plexisklo.",
+          "quote": "Z hliníkového, dibondového nebo akrylátového deskového materiálu. Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník. Je možné využít i další materiály – dřevo, nerez, plexisklo."
+        }
+      ],
+      "variants": [
+        {
+          "value": "Na míru",
+          "quote": "Na míru"
+        },
+        {
+          "value": "Zvolit můžete i systém malých totemů a rozcestníků.",
+          "quote": "Systém vám vytvoříme dle vašeho přání nebo si můžete vybrat ze sériových modulových orientačních systémů. Zvolit můžete i systém malých totemů a rozcestníků."
+        },
+        {
+          "value": "ve světelném i nesvětelném provedení",
+          "quote": "Grafika: přehledné grafické řešení ve světelném i nesvětelném provedení, sladěné s prostorem i vizuální identitou značky."
+        },
+        {
+          "value": "Interiérové, exteriérové i modulové orientační systémy",
+          "quote": "Interiérové, exteriérové i modulové orientační systémy navrhujeme tak, aby se snadno přizpůsobily konkrétnímu místu i individuálním požadavkům."
+        }
+      ],
+      "uses": [
+        {
+          "value": "Interiér i exteriér",
+          "quote": "Interiér i exteriér"
+        },
+        {
+          "value": "do interiérů, exteriérů, budov i rozsáhlých areálů, například v logistických parcích, nemocnicích nebo obchodních domech.",
+          "quote": "Umístění: do interiérů, exteriérů, budov i rozsáhlých areálů, například v logistických parcích, nemocnicích nebo obchodních domech."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "value": "K čemu slouží orientační systémy?",
+        "quote": "K čemu slouží orientační systémy?"
+      },
+      "answer": {
+        "value": "Je to soustava informačních tabulí, ukazatelů a cedulek, která usnadňuje pohyb osob. Pomáhá návštěvníkům rychle pochopit strukturu prostoru a najít správný směr bez nutnosti ptát se obsluhy.",
+        "quote": "Je to soustava informačních tabulí, ukazatelů a cedulek, která usnadňuje pohyb osob. Pomáhá návštěvníkům rychle pochopit strukturu prostoru a najít správný směr bez nutnosti ptát se obsluhy."
+      }
+    },
+    {
+      "question": {
+        "value": "Z čeho se vyrábějí orientační systémy?",
+        "quote": "Z čeho se vyrábějí orientační systémy?"
+      },
+      "answer": {
+        "value": "Z hliníkového, dibondového nebo akrylátového deskového materiálu.",
+        "quote": "Z hliníkového, dibondového nebo akrylátového deskového materiálu. Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník. Je možné využít i další materiály – dřevo, nerez, plexisklo."
+      }
+    }
+  ],
+  "vynechano": [
+    {
+      "text": "Úvodní věta „Orientační systém, který bude perfektně sedět vašemu prostoru a zároveň komplexně plnit informační funkci.“",
+      "duvod": "Hodnoticí tvrzení bez ověřitelného údaje, výrobek věcně nepopisuje. Proto v popisu pro AI není."
+    },
+    {
+      "text": "Přívlastek „přehledné“ u grafiky",
+      "duvod": "Hodnoticí slovo bez měřitelného obsahu. Grafické řešení a jeho provedení přebíráme."
+    },
+    {
+      "text": "Věta „Oblíbeným materiálem s velice efektním vzhledem je eloxovaný hliník.“ v odpovědi o materiálech",
+      "duvod": "Hodnocení vzhledu bez údaje. Eloxovaný hliník i další materiály uvádíme přímo u výrobku."
+    },
+    {
+      "text": "Nadpis „Orientační systémy podle prostoru i potřeb“",
+      "duvod": "Nadpis sekce bez vlastního údaje. Větu pod ním přebíráme jako provedení výrobku."
+    },
+    {
+      "text": "Úvodní fotka nad sekcí výrobku",
+      "duvod": "Fotka leží mimo sekci výrobku. K výrobku přiřazujeme fotku přímo ze sekce orientačních systémů."
+    },
+    {
+      "text": "Fotka rozcestníku Globus na české verzi stránky",
+      "duvod": "Česká stránka ji ukáže až po načtení skriptu, vyhledávače ji proto nevidí. Používáme jinou fotku ze sekce."
+    },
+    {
+      "text": "Blok „Jak probíhá výroba světelné reklamy?“ s kroky od poptávky po montáž",
+      "duvod": "Postup zakázky je stejný na všech produktových stránkách a výrobek nepopisuje. Lhůty k výrobkům nepřiřazujeme."
+    },
+    {
+      "text": "Bloky „Důvěřují nám přední české i zahraniční firmy“ a „Elektro Drapač je zárukou prvotřídní kvality“",
+      "duvod": "Bloky se opakují na všech produktových stránkách a obsahují tvrzení o firmě, ne údaje o výrobcích."
+    },
+    {
+      "text": "Tlačítka „Nezávazně poptat“, „Poptat výrobu“ a další výzvy k akci, navigace a patička",
+      "duvod": "Výzvy k akci, navigace a kontakty v patičce neobsahují žádné údaje o výrobcích."
+    },
+    {
+      "text": "Galerie realizací a popisky fotek",
+      "duvod": "Popisky fotek výrobek nepopisují. Ke každému výrobku přebíráme jen první fotku z jeho sekce."
+    }
+  ]
+}
