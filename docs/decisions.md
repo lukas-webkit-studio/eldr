@@ -24,7 +24,7 @@ nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 ## 2026-10-31 · S7 · Data CMS Reference a texty (#36)
 
 - **Alt fotek recenzí jde přes nové textové pole `alt-fotky`, ne přes alt v obrázkovém poli.** Zápis `obrazek.alt` do sekundárního locale vyžaduje i `url` a Webflow pak obrázek nahraje znovu jako nový soubor jen pro ten jazyk. Obrázek se tím od češtiny odpojí (ověřeno na Schobeli EN, obsah souboru stejný). Textové pole se píše bez vedlejších účinků. Na homepage je alt obrázku navázaný na `name`, napojení na `alt-fotky` je krok v Designeru.
-- **Fotky v pásu se nezmenšovaly přes API.** Výměna souboru je nevratná a mění obrázek i na `/reference`. Webflow má zmenšené varianty (`-p-500`, `-p-800`) hotové, na `/reference` je posílá v `srcset`, na homepage ne. Zapnutí je nastavení obrázku v Designeru: 5,1 MB → asi 1,8 MB.
+- **Fotky v pásu jsou zmenšené kopie 1000 px WebP** (31. 10., úkol K02). Webflow u CMS obrázků na homepage `srcset` neposílá, nastavení v Designeru to neřeší. Obrázek v CMS je lokalizovaný, zapisuje se do CS, EN i DE. Originály zůstávají v Assets, mapování je v `docs/s7-fotky-zmenseni.md`. 5,11 → 0,99 MB.
 - **`priorita` v EN/DE se srovnává s češtinou.** Pole je lokalizované a rozdíl dělal jiné pořadí pásu v jazycích.
 - **Citace se překládají věrně, jméno firmy podle glosáře** („Elektro Drapač“ i tam, kde zákazník psal „ELEKTRO DRAPAČ“ nebo „Elektrodrapač“). SAGASSER má originál v němčině, DE se nepřekládá.
 - **Do primárního locale se psalo jen nové pole `alt-fotky`** a meta description Kariéry a Reference (dřív prázdné). Chyby v českých datech (`Kostel krista krále`, `specialista` malým, mezery na konci jmen, `Assistent`) zůstávají na Lukášovi.
