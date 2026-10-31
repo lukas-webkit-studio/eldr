@@ -8,6 +8,7 @@ nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 - **Obrázek 16:9**, ne 3:2. Na všech 22 fotkách zůstane nápis i logo celé (kontrola středového ořezu). 3:2 by kartu zvedlo o 36 px bez přínosu.
 - **Pás 651 → 406 px** na 1440 × 900 (72 % → 45 % okna), mobil 591 → 390 px. Citace 3 řádky místo 6 (embed sekce), menší odsazení a mezery, mezera mezi kartami 1,5 → 1 rem (mobil 0,75 rem).
 - **Vlastní třídy `testimonial21_company`, `_name`, `_position`** místo sdílených `SectionReference__Collection__Item__*`. Sdílené třídy platí i na `/reference`, jejich zmenšení by změnilo i tu stránku.
+- **Název firmy víc dýchá** (Lukáš 31. 10. 9:10: „o dost lepší, jen nadpis ať trošičku víc dýchá“). +8 px nad názvem, mezi názvem a žlutou linkou a mezi linkou a citací, na mobilu +6 px. Pás 406 → 430 px (1440 × 900), mobil 390 → 408 px. Mezera linka → citace je `margin-top` na `testimonial21_quote`, protože sdílenou třídu linky (`Divider--Left--Yellow--56`) neměníme.
 - **Zpomalení při hoveru zůstává na celém pásu** včetně mezer mezi kartami (`mouseenter` na `.testimonial21_marquee`). Nad nadpisem, tlačítkem a mimo sekci jede pás plnou rychlostí. Při 406 px pás už nezabírá celou obrazovku, takže kurzor na něm nezůstává náhodou.
 
 ## 2026-10-31 · S5 · Popis produktů pro AI na produktových stránkách (#35)
