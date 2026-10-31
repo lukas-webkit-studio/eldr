@@ -145,7 +145,7 @@
   "vynechano": [
     {
       "text": "Úvodní věta „Ein Wegeleitsystem, das perfekt in Ihre Räumlichkeiten passt und zugleich umfassend informiert.“",
-      "duvod": "Věta hodnotí, ale výrobek věcně nepopisuje. Doporučujeme ji na webu nahradit konkrétním popisem."
+      "duvod": "Hodnoticí tvrzení bez ověřitelného údaje, výrobek věcně nepopisuje. Proto v popisu pro AI není."
     },
     {
       "text": "Přívlastek „übersichtliche“ u grafiky",
@@ -181,7 +181,7 @@
     },
     {
       "text": "Popisky obrázků na německé verzi stránky",
-      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
     }
   ]
 }

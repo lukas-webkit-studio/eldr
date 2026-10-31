@@ -206,7 +206,7 @@
   "vynechano": [
     {
       "text": "Štítek „1–40 m height“ v úvodu stránky",
-      "duvod": "Stránka neříká, čeho se výška týká, a u plexiskla nedává smysl. Doporučujeme štítek na webu opravit."
+      "duvod": "Stránka neuvádí, ke kterému výrobku se výška vztahuje. Proto v popisu pro AI není."
     },
     {
       "text": "Věta „We keep most colours and sheet sizes in stock, so we can prepare acrylic glass to your dimensions while you wait.“",
@@ -254,7 +254,7 @@
     },
     {
       "text": "Popisky obrázků na anglické verzi stránky",
-      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
     }
   ]
 }

@@ -516,7 +516,7 @@
   "vynechano": [
     {
       "text": "Úvodní věta „Production of illuminated signage with top-quality craftsmanship and custom design tailored to your needs.“",
-      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
+      "duvod": "Hodnoticí tvrzení bez ověřitelného údaje, výrobek věcně nepopisuje. Proto v popisu pro AI není."
     },
     {
       "text": "Štítky u profilů, např. „Economical“, „Most eye-catching“, „Popular choice“",
@@ -556,7 +556,7 @@
     },
     {
       "text": "Věty „Unlimited width and thickness.“ a „Unlimited size, lighting colour and body colour options.“ a slovo „Unlimited“ u grafiky profilů",
-      "duvod": "Absolutní tvrzení bez čísla. Doporučujeme na webu uvést skutečné maximální rozměry profilů 1 a 4."
+      "duvod": "Absolutní tvrzení bez konkrétního rozměru. Proto v popisu pro AI není."
     },
     {
       "text": "Dovětky „for lighter components and exceptional precision“ a „(lighter, surgically precise)“ u 3D tisku",
@@ -568,7 +568,7 @@
     },
     {
       "text": "Věta „Affordable neon-like look with minimal energy consumption.“ u profilu 9",
-      "duvod": "Cenu ani spotřebu stránka nevyčísluje. Pokud na webu doplníte konkrétní příkon, údaj rádi převezmeme."
+      "duvod": "Cenu ani spotřebu stránka nevyčísluje. Proto v popisu pro AI není."
     },
     {
       "text": "Slovo „Ideal“ v popisu profilu 9",
@@ -616,7 +616,7 @@
     },
     {
       "text": "Popisky obrázků na anglické verzi stránky",
-      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
     }
   ]
 }

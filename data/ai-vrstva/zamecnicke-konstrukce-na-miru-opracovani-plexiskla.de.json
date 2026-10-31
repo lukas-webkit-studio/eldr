@@ -206,7 +206,7 @@
   "vynechano": [
     {
       "text": "Štítek „1–40 m Höhe“ v úvodu stránky",
-      "duvod": "Stránka neříká, čeho se výška týká, a u plexiskla nedává smysl. Doporučujeme štítek na webu opravit."
+      "duvod": "Stránka neuvádí, ke kterému výrobku se výška vztahuje. Proto v popisu pro AI není."
     },
     {
       "text": "Věta „Die meisten Farben und Plattenformate halten wir auf Lager, Plexiglas nach Maß fertigen wir daher direkt, während Sie warten.“",
@@ -254,7 +254,7 @@
     },
     {
       "text": "Popisky obrázků na německé verzi stránky",
-      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
     }
   ]
 }

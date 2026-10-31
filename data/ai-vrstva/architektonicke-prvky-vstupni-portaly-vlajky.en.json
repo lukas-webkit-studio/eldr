@@ -272,7 +272,7 @@
     },
     {
       "text": "Věta „Flags are made from quality materials that give them a long service life.“",
-      "duvod": "Stránka neuvádí konkrétní materiál ani životnost. Doporučujeme na webu doplnit, z čeho se vlajky šijí."
+      "duvod": "Stránka neuvádí konkrétní materiál ani životnost. Proto v popisu pro AI není."
     },
     {
       "text": "Věta „Because they move in the wind, flags can draw even more attention, which makes them more effective.“",
@@ -308,7 +308,7 @@
     },
     {
       "text": "Popisky obrázků na anglické verzi stránky",
-      "duvod": "Popisky obrázků jsou i tady česky. Přebíráme je beze změny a doporučujeme je na webu přeložit."
+      "duvod": "Popisky obrázků jsou i v této jazykové verzi česky. Přebíráme je beze změny."
     }
   ]
 }

@@ -520,7 +520,7 @@
   "vynechano": [
     {
       "text": "Úvodní věta „Výroba světelných reklam se špičkovým zpracováním a designem na míru vašim potřebám.“",
-      "duvod": "Věta stojí na superlativu bez měřitelného obsahu a výrobek nepopisuje. Doporučujeme ji na webu nahradit věcným popisem."
+      "duvod": "Hodnoticí tvrzení bez ověřitelného údaje, výrobek věcně nepopisuje. Proto v popisu pro AI není."
     },
     {
       "text": "Štítky u profilů, např. „Ekonomické“, „Nejpoutavější“, „Populární volba“",
@@ -560,7 +560,7 @@
     },
     {
       "text": "Věty „Neomezená šířka a tloušťka.“ a „Neomezené rozměry, barvy svícení a korpusu.“ a slovo „neomezené“ u grafiky profilů",
-      "duvod": "Absolutní tvrzení bez čísla. Doporučujeme na webu uvést skutečné maximální rozměry profilů 1 a 4."
+      "duvod": "Absolutní tvrzení bez konkrétního rozměru. Proto v popisu pro AI není."
     },
     {
       "text": "Dovětek „(lehčí, chirurgicky přesné)“ u 3D tisku",
@@ -572,7 +572,7 @@
     },
     {
       "text": "Věta „Cenově dostupný vzhled neonu s minimální spotřebou energie.“ u profilu 9",
-      "duvod": "Cenu ani spotřebu stránka nevyčísluje. Pokud na webu doplníte konkrétní příkon, údaj rádi převezmeme."
+      "duvod": "Cenu ani spotřebu stránka nevyčísluje. Proto v popisu pro AI není."
     },
     {
       "text": "Slovo „Ideální“ v popisu profilu 9",
