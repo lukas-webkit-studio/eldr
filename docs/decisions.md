@@ -3,6 +3,12 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-11-02 · S8 · Nové články blogu
+
+- Kolekce Inspirace nemá vlastní SEO pole; šablona bere meta description z `perex`. Do `perex` proto jde meta description ze zdroje (do 160 znaků), ne první odstavec jako u starších článků. První odstavec je úvodem `obsah`. (#38)
+- Výzva na konci článku = nový malý banner v kolekci Bannery (5 záznamů), protože žádný existující textem neseděl. Tlačítko „Cenová nabídka zdarma“ → `/kontakty#formular` jako u ostatních malých bannerů. Name a slug česky ve všech locale (klíče). (#38)
+- Celé tělo článku v `obsah` (Obsah č. 1), bez fotogalerie. Až přibudou fotky, dá se text rozdělit do `obsah-2-cast`. Tabulka v článku 1 je nativní `<table>` v rich textu. (#38)
+
 ## 2026-10-31 · S3 · Nižší karty recenzí (#46)
 
 - **Obrázek 16:9**, ne 3:2. Na všech 22 fotkách zůstane nápis i logo celé (kontrola středového ořezu). 3:2 by kartu zvedlo o 36 px bez přínosu.
