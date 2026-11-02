@@ -9,9 +9,16 @@ Aktualizováno 31. 10. 2026 ráno (koordinátor K02). Časy v Europe/Prague.
 
 - **Webflow:** produkce publikována **31. 10. 2026 01:11:42** (obě domény), od té doby beze změn.
 - **Dodávka do 3. 11.** (e-mail Myškovi 29. 10.): strukturovaná data (S6 #34), popis produktů pro AI (S5 #35) a recenze (S7 #36) jsou **hotové na produkci**, nezávisle zkontrolované (R2 #37). Pro klienta 47 Google Docs ve složce `ELDR/Dodávka 2026-11-03`, vstup „00 Přehled dodávky“. Koncept e-mailu Myškovi je v Gmailu (neodeslaný).
-- **Zbývá:** blog (S8 #38, čeká na texty od klienta), ruční kroky Lukáše (dashboard `cb1f8f9e`), Make e-mail (S4 #29, import blueprintu).
+- **Zbývá:** blog (S8 #38: drafty v CMS hotové 2. 11., čeká na obrázky a publikaci), ruční kroky Lukáše (dashboard `cb1f8f9e`), Make e-mail (S4 #29, import blueprintu).
 - Skill pro překlady (`d30f9ece`) Myška neschválil, termín 30. 11. s přesunem GitHubu.
 - Plán a průběh noci: `docs/noc-2026-10-31.md`.
+
+### Štafeta 2. 11. večer – S8 #38 blog
+
+- **5 článků od klienta v CMS Inspirace jako draft**, CS/EN/DE, bez obrázků, nepublikováno. Bannery: 5 nových malých bannerů (draft, bez obrázku, CS/EN/DE), token `[banner:…]` na místě tučné výzvy na konci článku. Čteno zpátky 30/30 variant shodně se zdrojem.
+- SEO: šablona bere title `ELDR 💡 {name}` a meta description z `perex`, proto `perex` = meta description ze zdroje (≤160 znaků), první odstavec je úvod v textu. Datum nevyplněno (není povinné).
+- Google Docs pro korektorku: 15 (5 × CS/EN/DE) ve složce 04 Blog. EN a DE nezávisle zkontrolované.
+- Na Lukášovi: obrázky (hlavní, náhledový, banner volitelně), datum, publikace (spolu s bannery, jinak token v článku zmizí), rozhodnutí k „Víc je méně“ a „roce 2027“ v titulku.
 
 ### Štafeta noc 30.–31. 10.
 
