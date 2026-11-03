@@ -47,6 +47,8 @@ session, hlídám, zapisuju zpětnou vazbu. Kód nepíšu, jen dokumentaci.
 - Dashboard MCP neumí číst komentáře u úkolů. Zápis ze status callu
   (úkol `687d09ea`) je potřeba vložit do chatu nebo do issue.
 - Ze dvou Webflow připojení vidí site ELDR jen jedno. Druhé vrací 404.
+- Gmail MCP neumí stáhnout přílohu (screenshot v e-mailu klienta). Popros Lukáše, ať ji vloží do chatu.
+- Dashboard MCP nečte popis úkolu, jen útržek ve vyhledávání. Při úpravě popisu ho přepíšeš celý, proto raději komentář.
 
 ## Poučení z K01 (27.–30. 10. 2026)
 
@@ -72,8 +74,17 @@ session, hlídám, zapisuju zpětnou vazbu. Kód nepíšu, jen dokumentaci.
 - **Publikace:** `lastUpdated` bývá pár sekund po `lastPublished` (3–19 s) kvůli publikaci samotné. Když rozdíl nejde vysvětlit, podívej se do logu session (`list_events`), kdo zapisoval.
 - **Texty EN/DE nespouštěj přes noc bez Lukáše,** pokud se kříží s rozpracovanou korekturou (`2474d5db`).
 
+## Poučení z K02 (2.–3. 11. 2026, odeslání dodávky)
+
+- **Před fakturou projdi poštu od klienta za poslední dny.** Mail „Prosím zvýrazněné texty tučně“ z 2. 11. ležel nevyřízený a našel se až při kontrole před odesláním.
+- **Cenu porovnej mezi e-mailem a dashboardem.** Blog byl v e-mailu 1 500, v dashboardu 2 500; rozhodl Lukáš (2 200). Nerozhoduj za něj.
+- **Tvrzení v e-mailu klientovi drž v souladu s dokumenty pro něj.** Když dokument píše „výsledek doplníme“, e-mail nemá tvrdit, že test prošel. Řekni to Lukášovi jednou, rozhodnutí je jeho.
+- **Tučné písmo v primárním locale přes API jde** (postup v `CLAUDE.md`). Builder nativní Bold neumí, `data_whtml_builder` ano.
+- **Před publikací porovnej staging s produkcí** (CSS a HTML bez časových razítek). Tak se ověří, že s tvou změnou neodejde cizí rozdělaná práce.
+
 ## Historie
 
 - 2026-10-27 · K01 · založení štafetových dokumentů.
 - 2026-10-30 · K01 · produkce publikovaná 22:56, předání novému koordinátorovi.
 - 2026-10-31 · K02 · noční dodávka 3. 11.: S5, S6, S7, R2; produkce publikovaná 01:11:42.
+- 2026-11-03 · K02 · dodávka odeslaná Myškovi, faktura 28 200 Kč po kontrole; produkce 09:51 (nadpis recenzí, tučné výšky plošin); předání K03 (listopad: GitHub, skill, konfigurátor).

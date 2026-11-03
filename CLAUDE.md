@@ -69,6 +69,16 @@ což je jediná cesta, jak z češtiny odstranit prvek (viz `<span data-var="YOE
 níž). Zacházej s tím opatrně: je to zápis do primárního locale, který se
 propíše do všech jazyků.
 
+**Tučné písmo (nebo jiné inline formátování) v primárním locale přes API
+JDE**, i když `data_element_builder` nativní Bold neumí a `set_text` píše jen
+prostý text. Postup (ověřeno 3. 11. 2026 na výškách plošin):
+`data_whtml_builder` vloží za starý odstavec nový z HTML
+(`<p>… <strong>10 metrů</strong>.</p>`, vznikne nativní Paragraph se Strong),
+`remove_element` smaže starý. Překlady starého odstavce tím zmizí, takže EN
+a DE se zapíšou znovu přes `update_static_content`: `nodeId` = ID nového
+odstavce, v HTML `<strong data-w-id="<ID prvku Strong>">`. Ověř na publikovaném
+HTML ve všech třech jazycích.
+
 **SEO v primárním locale přes API taky JDE**: `data_pages_tool >
 update_page_settings` **bez** `localeId` (ověřeno 27. 10. 2026 čtením zpátky).
 S `localeId` píše do `/en` a `/de`.

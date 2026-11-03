@@ -5,13 +5,21 @@ Zdroj pravdy o úkolech, cenách a termínech je dashboard (projekt
 
 ## Stav
 
-Aktualizováno 31. 10. 2026 ráno (koordinátor K02). Časy v Europe/Prague.
+Aktualizováno 3. 11. 2026 dopoledne (koordinátor K02, předání K03). Časy v Europe/Prague.
 
-- **Webflow:** produkce publikována **31. 10. 2026 01:11:42** (obě domény), od té doby beze změn.
-- **Dodávka do 3. 11.** (e-mail Myškovi 29. 10.): strukturovaná data (S6 #34), popis produktů pro AI (S5 #35) a recenze (S7 #36) jsou **hotové na produkci**, nezávisle zkontrolované (R2 #37). Pro klienta 47 Google Docs ve složce `ELDR/Dodávka 2026-11-03`, vstup „00 Přehled dodávky“. Koncept e-mailu Myškovi je v Gmailu (neodeslaný).
-- **Zbývá:** blog (S8 #38: drafty v CMS hotové 2. 11., čeká na obrázky a publikaci), ruční kroky Lukáše (dashboard `cb1f8f9e`), Make e-mail (S4 #29, import blueprintu).
-- Skill pro překlady (`d30f9ece`) Myška neschválil, termín 30. 11. s přesunem GitHubu.
-- Plán a průběh noci: `docs/noc-2026-10-31.md`.
+- **Webflow:** produkce publikována **3. 11. 2026 09:51** (obě domény). Od 31. 10. přibylo jen: nadpis „Řekli o nás“ na homepage na středu (třída `testimonial21_header`) a tučné maximální výšky plošin na `/servisni-sluzby-a-pronajem-plosin` (CS/EN/DE, přání Myšky z 2. 11.).
+- **Dodávka 3. 11. odeslaná** Myškovi (e-mail 3. 11.). Faktura **28 200 Kč** po jeho kontrole (dashboard `460218ce`): formulář 6 500, strukturovaná data 4 500, popis produktů pro AI 12 500, recenze 2 500, blog 2 200. Úkoly dodávky jsou v dashboardu `done`.
+- **Blog:** 5 článků a 5 bannerů v CMS jako draft, čeká na obrázky od klienta (dashboard `e9fc3f7f`).
+- **Zbývá z října:** ruční kroky Lukáše (`cb1f8f9e`: Rich Results Test na 7 URL, výsledek do Docu 01; Make S4 #29), Designer drobnosti (`d30a2c84`), Cloudflare worker (`6d765415`), korektura překladů (`2474d5db`), EN text CTA (`bc1ab14c`).
+
+### Plán na listopad (K03)
+
+1. **Přesun GitHubu pod organizaci klienta `eldr`** (`63f703f1`, čeká na klienta: pošleme návod, pak založí organizaci).
+2. **Hned potom skill pro překlady** (`d30f9ece`, 4 500 Kč, termín 30. 11.). Skilly `preklad` a `preklad-podklady` v `.claude/skills/` jsou základ.
+3. **Projekt 3D konfigurátor** (MVP `6ad1d4ff`, 60 000 Kč; schůzka a příkladové otázky `d505d416`).
+4. Další: analýza viditelnosti v AI (`2a74fc63`, čeká na klienta), přílohy z formuláře přes Make na Drive (`9499733a`), produktová stránka 3D tisku (backlog).
+
+V dashboardu zatím není etapa 2026/11, úkoly listopadu jsou v etapě 2026/10 nebo bez etapy.
 
 ### Štafeta 2. 11. večer – S8 #38 blog
 
