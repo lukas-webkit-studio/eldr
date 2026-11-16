@@ -8,8 +8,12 @@ nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 Lukáš 16. 11. na telefonu: „není to moc smooth (ve stylu třeba dojezdu setrvačností), ale taky musím jet perfektně rovně do strany“.
 
 - **O směru gesta rozhoduje modul, ne prohlížeč.** Po 5 px: do 45° od vodorovné je to tah pásu, strmější pohyb je scroll stránky. Zámek platí až do puštění, i když prst ujede svisle.
-- **Dotyk jde přes Touch Events, myš a pero přes Pointer Events.** S pouhým `touch-action: pan-y` rozhoduje prohlížeč a tah ukončí `pointercancel`. Spolehlivě tomu brání jen `preventDefault()` v nepasivním `touchmove`. Listener je jen na obalu pásu, scroll zbytku stránky neovlivní.
+- **Dotyk a pero jdou přes Touch Events, myš přes Pointer Events.** S pouhým `touch-action: pan-y` rozhoduje prohlížeč a tah ukončí `pointercancel`. Spolehlivě tomu brání jen `preventDefault()` v nepasivním `touchmove`. Listener je jen na obalu pásu, scroll zbytku stránky neovlivní.
 - **Po hození pás nezastavuje.** Rychlost puštění přechází jednou křivkou (útlum 2/s) rovnou do běžných −40 px/s. Hození doprava projde nulou a rozjede se doleva. Hover myší a fokus z klávesnice mají dál přednost, pod nimi pás zastaví.
+- **U myši je tahem každý pohyb**, i strmý. Myš stránku tahem neposouvá, zámek na svislý směr by gesto jen umrtvil.
+- **Když prohlížeč už scrolluje** (`touchmove` nejde zrušit), pás se nechytí. Jinak by se hýbal pás i stránka zároveň.
+- **Ťuknutí ke konci dojezdu je obyčejné ťuknutí.** Stisk pás zastaví a kartu neotevře jen tehdy, když pás ještě jede o víc než 60 px/s rychleji nebo jinak než běžně.
+- **Kontrola u dvou stolů (oprava):** devět nálezů v logice, opravené. Hlavní: dotyk v prohlížeči bez Touch Events pás zamrazil, pero šlo starou cestou, ťuknutí se polykalo ještě 2–3 s po hození, švihnutí s jediným pohybem se ztratilo.
 - **Pauza 1 s jen po puštění bez hození** (pomaleji než 50 px/s), pak rozjezd stejným dorovnáním jako hover (2,5/s).
 - **Rychlost puštění** je vážený průměr úseků z posledních 100 ms, novější váží víc. Mezera mezi posledním pohybem a puštěním nad 30 ms ji plynule snižuje k nule.
 - **`will-change` jsem nepřidal.** Vlastní vrstvu už dělá `translate3d`. Snímkové časy v Chromiu se zpomaleným CPU 4× jsou bez něj 16,7 ms, žádný snímek nad 20 ms.

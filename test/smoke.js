@@ -386,10 +386,13 @@ function marqueeChecks(win, doc) {
   link.click();
   ok('klik bez tahu projde', clicks === 1);
 
+  // Myš stránku tahem neposouvá, takže tahem je i šikmý nebo svislý začátek.
   m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
-  m.dispatchEvent(pointer(win, 'pointermove', 100, 90));
-  ok('svislý pohyb tah nespustí', !m.hasAttribute('data-marquee-dragging'));
-  m.dispatchEvent(pointer(win, 'pointerup', 100, 90));
+  m.dispatchEvent(pointer(win, 'pointermove', 103, 60));
+  ok('myš: i strmý začátek je tah pásu', m.hasAttribute('data-marquee-dragging'));
+  m.dispatchEvent(pointer(win, 'pointerup', 103, 60));
+  link.click();
+  ok('myš: klik po takovém tahu se potlačí', clicks === 1);
 
   // Puštění tlačítka se ztratilo (kontextové menu): další pohyb bez tlačítka tah nespustí.
   m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
@@ -466,6 +469,26 @@ function touchChecks(win, doc) {
   e = send('touchmove', [190, 122]);
   ok('po zámku na svislý scroll už pás tah nechytí', !dragging() && !e.defaultPrevented);
   send('touchend');
+
+  // prohlížeč už scrolluje (touchmove nejde zrušit): pás se nechytí
+  send('touchstart', [100, 100]);
+  const locked = touch(win, 'touchmove', [[140, 102]]);
+  Object.defineProperty(locked, 'cancelable', { value: false });
+  link.dispatchEvent(locked);
+  ok('nezrušitelný touchmove pás nechytí (stránka už scrolluje)', !dragging());
+  send('touchend');
+
+  // švihnutí s jediným pohybem: rychlost se počítá od stisku
+  send('touchstart', [300, 100]);
+  send('touchmove', [240, 102]);
+  send('touchend');
+  ok('krátké švihnutí tah ukončí', !dragging());
+
+  // dotyk a pero přes Pointer Events jdou stranou, když jsou Touch Events
+  m.dispatchEvent(pointer(win, 'pointerdown', 100, 50, 1, 'touch'));
+  m.dispatchEvent(pointer(win, 'pointermove', 160, 52, 1, 'touch'));
+  ok('pointer události dotyku tah nespustí (jde přes Touch Events)', !dragging());
+  m.dispatchEvent(pointer(win, 'pointerup', 160, 52, 0, 'touch'));
 
   // druhý prst: zoom, tah končí
   send('touchstart', [100, 100]);

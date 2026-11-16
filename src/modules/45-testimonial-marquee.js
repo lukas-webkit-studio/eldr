@@ -88,6 +88,7 @@
     var x = 0; // posun pásu v px, drží se v rozsahu (-half, 0]
     var v = -SPEED; // okamžitá rychlost v px/s, záporná = doleva
     var half = 0; // šířka jednoho seznamu = délka smyčky
+    var measuredAt = 0;
     var last = null;
     var visible = true;
     var raf = null;
@@ -101,7 +102,9 @@
 
     // Jedno gesto: od stisku do puštění.
     var active = false;
-    var source = ''; // 'mouse', 'pen' nebo 'touch'
+    var source = ''; // typ ukazatele: 'mouse', 'pen' nebo 'touch'
+    var viaTouch = false; // gesto přišlo přes Touch Events, ne Pointer Events
+    var downT = 0;
     var pointerId = null;
     var axis = ''; // '' = nerozhodnuto, 'x' = tah pásu, 'y' = scroll stránky
     var caught = false; // stisk zastavil dobíhající pás
@@ -133,6 +136,7 @@
     // Polovina pásu = jeden Collection List včetně mezery za ním.
     function measure() {
       half = track.scrollWidth / 2;
+      measuredAt = clock();
     }
 
     function goal(now) {
@@ -156,6 +160,9 @@
       // Strop 100 ms: po návratu do záložky pás neposkočí o kus dál.
       var dt = Math.min((now - last) / 1000, 0.1);
       last = now;
+
+      // Pojistka pro změny šířky, které nezachytí resize ani ResizeObserver.
+      if (now - measuredAt > 1000) measure();
 
       var target = goal(now);
       if (axis === 'x') {
@@ -220,7 +227,8 @@
     // proto má potlačení i časový strop.
     function swallowClick(now) {
       suppressClick = true;
-      suppressUntil = now + 300;
+      // iOS umí klik zdržet kvůli dvojitému ťuknutí, proto strop skoro sekunda.
+      suppressUntil = now + 800;
     }
 
     // Rychlost puštění: vážený průměr úseků z posledních VELOCITY_WINDOW ms,
@@ -248,26 +256,30 @@
       return Math.max(-MAX_FLING, Math.min(MAX_FLING, speed));
     }
 
-    function press(kind, id, px, py) {
+    function press(kind, touchPath, id, px, py) {
       if (active) return;
       active = true;
       source = kind;
+      viaTouch = touchPath;
       pointerId = id;
       axis = '';
-      // Chycení dobíhajícího pásu ho zastaví hned.
-      caught = coasting;
-      if (coasting) v = 0;
+      // Chycení rychle dobíhajícího pásu ho zastaví hned. Ke konci dojezdu,
+      // kdy pás jede skoro běžnou rychlostí, je stisk obyčejné ťuknutí.
+      caught = coasting && Math.abs(v + SPEED) > 60;
+      if (caught) v = 0;
       coasting = false;
       suppressClick = false;
       downX = lastX = px;
       downY = lastY = py;
+      downT = clock();
       samples = [];
-      if (kind !== 'touch') setSelectable(false);
+      if (!viaTouch) setSelectable(false);
       run();
     }
 
     // Vrací true, když gesto patří pásu (tah je zamčený vodorovně).
-    function move(px, py) {
+    // cancelable = false: prohlížeč už scrolluje stránku a zrušit to nejde.
+    function move(px, py, cancelable) {
       if (!active) return false;
       lastX = px;
       lastY = py;
@@ -277,8 +289,10 @@
         var dy = py - downY;
         if (Math.abs(dx) < LOCK_THRESHOLD && Math.abs(dy) < LOCK_THRESHOLD) return false;
         // Zámek směru: do 45° od vodorovné je to tah pásu. Platí až do
-        // puštění, ať prst pak ujede kamkoli.
-        if (Math.abs(dx) < Math.abs(dy)) {
+        // puštění, ať prst pak ujede kamkoli. Myš a pero stránku tahem
+        // neposouvají, u nich je tahem každý pohyb.
+        var scrolls = source === 'touch' || viaTouch;
+        if (scrolls && (Math.abs(dx) < Math.abs(dy) || cancelable === false)) {
           axis = 'y';
           run();
           return false;
@@ -286,9 +300,13 @@
         axis = 'x';
         originX = px;
         originOffset = x;
-        samples = [{ t: clock(), x: px }];
+        // První vzorek je stisk: i švihnutí s jediným pohybem má rychlost.
+        samples = [
+          { t: downT, x: downX },
+          { t: clock(), x: px },
+        ];
         root.setAttribute('data-marquee-dragging', '');
-        if (source !== 'touch') {
+        if (!viaTouch) {
           // Zachycení: tah pokračuje, i když ukazatel vyjede z pásu.
           try {
             root.setPointerCapture(pointerId);
@@ -317,15 +335,17 @@
         applyDrag();
         swallowClick(now);
         root.removeAttribute('data-marquee-dragging');
-        if (source !== 'touch') {
+        if (!viaTouch) {
           track.style.pointerEvents = '';
           setCursor('grab');
         }
-        // Rychlost puštění si pás nese dál, nikdy neskočí na nulu.
+        // Po hození si pás rychlost puštění nese dál a nezastaví.
         v = fling ? releaseVelocity(now) : 0;
         if (Math.abs(v) > FLING_MIN) {
           coasting = true;
+          holdUntil = 0;
         } else {
+          v = 0;
           holdUntil = now + RESUME_DELAY;
         }
       } else if (caught) {
@@ -333,7 +353,7 @@
         swallowClick(now);
         holdUntil = now + RESUME_DELAY;
       }
-      if (source !== 'touch') setSelectable(true);
+      if (!viaTouch) setSelectable(true);
       // Tah myší mohl skončit mimo pás. Zachycený ukazatel pointerleave neposlal.
       if (source === 'mouse') {
         var box = root.getBoundingClientRect();
@@ -349,42 +369,42 @@
 
     /* --- myš a pero: Pointer Events ------------------------------------------ */
 
-    // Dotyk má vlastní cestu přes Touch Events (viz hlavička). Kde je prohlížeč
-    // nemá, jde i dotyk tudy.
+    // Dotyk a pero mají vlastní cestu přes Touch Events (viz hlavička). Kde je
+    // prohlížeč nemá, jdou tudy; o směru pak rozhoduje touch-action.
     var touchEvents = 'ontouchstart' in window;
     function viaPointer(e) {
-      return !(touchEvents && e.pointerType === 'touch');
+      return !touchEvents || e.pointerType === 'mouse';
     }
 
     root.addEventListener('pointerdown', function (e) {
       if (!viaPointer(e) || e.isPrimary === false) return;
       if (e.pointerType === 'mouse' && e.button !== 0) return;
-      press(e.pointerType || 'mouse', e.pointerId, e.clientX, e.clientY);
+      press(e.pointerType || 'mouse', false, e.pointerId, e.clientX, e.clientY);
     });
 
     root.addEventListener('pointermove', function (e) {
-      if (!active || source === 'touch' || e.pointerId !== pointerId) return;
+      if (!active || viaTouch || e.pointerId !== pointerId) return;
       // Puštění tlačítka se k nám nedostalo (kontextové menu, puštění mimo pás).
       if (e.pointerType === 'mouse' && e.buttons === 0) {
         release(false);
         return;
       }
-      if (move(e.clientX, e.clientY) && e.cancelable) e.preventDefault();
+      if (move(e.clientX, e.clientY, true) && e.cancelable) e.preventDefault();
     });
 
     // Na window: před zachycením ukazatele může puštění přijít mimo pás.
     window.addEventListener('pointerup', function (e) {
-      if (!active || source === 'touch' || e.pointerId !== pointerId) return;
+      if (!active || viaTouch || e.pointerId !== pointerId) return;
       lastX = e.clientX;
       lastY = e.clientY;
       release(true);
     });
     window.addEventListener('pointercancel', function (e) {
-      if (active && source !== 'touch' && e.pointerId === pointerId) release(false);
+      if (active && !viaTouch && e.pointerId === pointerId) release(false);
     });
     // Jen ztráta zachycení na pásu, lostpointercapture z karet sem probublává.
     root.addEventListener('lostpointercapture', function (e) {
-      if (active && source !== 'touch' && e.target === root && e.pointerId === pointerId && axis === 'x') {
+      if (active && !viaTouch && e.target === root && e.pointerId === pointerId && axis === 'x') {
         release(false);
       }
     });
@@ -406,11 +426,11 @@
       function (e) {
         // Druhý prst: zoom nebo jiné gesto, tah končí.
         if (e.touches.length !== 1) {
-          if (active && source === 'touch') release(false);
+          if (active && viaTouch) release(false);
           return;
         }
         var t = e.touches[0];
-        press('touch', t.identifier, t.clientX, t.clientY);
+        press('touch', true, t.identifier, t.clientX, t.clientY);
       },
       { passive: true }
     );
@@ -421,19 +441,23 @@
     root.addEventListener(
       'touchmove',
       function (e) {
-        if (!active || source !== 'touch') return;
+        if (!active || !viaTouch) return;
         var t = ourTouch(e.touches);
         if (!t || e.touches.length !== 1) {
           release(false);
           return;
         }
-        if (move(t.clientX, t.clientY) && e.cancelable) e.preventDefault();
+        var ours = move(t.clientX, t.clientY, e.cancelable);
+        // Před zámkem se ruší i nerozhodnutý pohyb, který míří do strany:
+        // na přiblížené stránce by prohlížeč začal scrollovat dřív než my.
+        var leaning = !axis && Math.abs(lastX - downX) >= Math.abs(lastY - downY);
+        if ((ours || leaning) && e.cancelable) e.preventDefault();
       },
       { passive: false }
     );
 
     function touchEnd(e) {
-      if (!active || source !== 'touch' || ourTouch(e.touches)) return;
+      if (!active || !viaTouch || ourTouch(e.touches)) return;
       release(e.type === 'touchend');
     }
     root.addEventListener('touchend', touchEnd);
