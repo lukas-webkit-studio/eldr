@@ -2,12 +2,14 @@
 /* S9 #54: ověření pásu recenzí v prohlížeči (tah myší, tah prstem, návrat).
 
    node scripts/overeni/s9-pas-recenzi.js [--base https://eldr.webflow.io]
-        [--local] [--out docs/snimky/s9]
+        [--local] [--video] [--out docs/snimky/s9]
 
    --local  místo skriptu z jsDelivr podstrčí src/dev/testimonial-marquee.js
             z pracovního adresáře (kontrola před merge).
+   --video  nahraje i video (desktop a mobil, dohromady kolem 9 MB; do repa
+            se nedává).
    Potřebuje Playwright s Chromiem (v repu není, v cloudové session je
-   nainstalovaný globálně). Výstup: tabulka kontrol, snímky a video. */
+   nainstalovaný globálně). Výstup: tabulka kontrol, snímky, vysledky.json. */
 
 const fs = require('fs');
 const path = require('path');
@@ -21,6 +23,7 @@ const opt = name => {
 const BASE = opt('--base') || 'https://eldr.webflow.io';
 const OUT = path.resolve(opt('--out') || 'docs/snimky/s9');
 const LOCAL = args.includes('--local');
+const VIDEO = args.includes('--video');
 const DEV_FILE = path.join(__dirname, '..', '..', 'src', 'dev', 'testimonial-marquee.js');
 
 const results = [];
@@ -88,6 +91,17 @@ function delta(a, b) {
   return d;
 }
 
+// Švih myší: pohyby po jednom snímku, jinak je prohlížeč sloučí do jednoho.
+// Poslední pohyb a puštění jdou hned za sebou; s čekáním mezi nimi by na
+// pomalém stroji puštění přišlo pozdě a nebyl by to hod.
+async function fling(page, x, y) {
+  for (let i = 1; i <= 7; i++) {
+    await page.mouse.move(x - i * 40, y);
+    await sleep(16);
+  }
+  await Promise.all([page.mouse.move(x - 320, y), page.mouse.up()]);
+}
+
 async function toMarquee(page) {
   await page.evaluate(() => {
     const el = document.querySelector('.testimonial21_marquee');
@@ -100,7 +114,7 @@ async function desktop(browser) {
   console.log('\nDesktop 1440, myš — ' + BASE + '/');
   const { context, page, errors } = await open(
     browser,
-    { viewport: { width: 1440, height: 900 }, recordVideo: { dir: OUT, size: { width: 960, height: 600 } } },
+    { viewport: { width: 1440, height: 900 }, ...(VIDEO ? { recordVideo: { dir: OUT, size: { width: 960, height: 600 } } } : {}) },
     BASE + '/'
   );
   await toMarquee(page);
@@ -191,8 +205,7 @@ async function desktop(browser) {
   await sleep(1200);
   a = await state(page);
   await page.mouse.down();
-  for (let i = 1; i <= 8; i++) await page.mouse.move(900 - i * 40, cy);
-  await page.mouse.up();
+  await fling(page, 900, cy);
   await page.mouse.move(700, 20);
   const f1 = await speed(page, 150);
   await sleep(700);
@@ -209,8 +222,7 @@ async function desktop(browser) {
   await page.mouse.move(900, cy);
   await sleep(500);
   await page.mouse.down();
-  for (let i = 1; i <= 8; i++) await page.mouse.move(900 - i * 40, cy);
-  await page.mouse.up();
+  await fling(page, 900, cy);
   await sleep(100);
   await page.mouse.down();
   await sleep(80);
@@ -278,7 +290,7 @@ async function touch(browser) {
       hasTouch: true,
       isMobile: true,
       deviceScaleFactor: 2,
-      recordVideo: { dir: OUT, size: { width: 390, height: 844 } },
+      ...(VIDEO ? { recordVideo: { dir: OUT, size: { width: 390, height: 844 } } } : {}),
     },
     BASE + '/'
   );

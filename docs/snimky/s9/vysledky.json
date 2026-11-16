@@ -1,0 +1,245 @@
+{
+  "base": "https://eldr.webflow.io",
+  "local": false,
+  "kdy": "2026-11-16T12:35:17.133Z",
+  "results": [
+    {
+      "name": "modul pás převzal (data-marquee-ready)",
+      "pass": true
+    },
+    {
+      "name": "běžná rychlost kolem -40 px/s",
+      "pass": true,
+      "detail": "-39.8 px/s"
+    },
+    {
+      "name": "hover: pás plynule zastaví",
+      "pass": true,
+      "detail": "0.0 px/s"
+    },
+    {
+      "name": "kurzor grab na pásu i nad kartou",
+      "pass": true,
+      "detail": "grab / grab"
+    },
+    {
+      "name": "tah doleva 300 px posune pás 1 : 1",
+      "pass": true,
+      "detail": "-300.0 px"
+    },
+    {
+      "name": "při tahu kurzor grabbing",
+      "pass": true,
+      "detail": "grabbing"
+    },
+    {
+      "name": "tah nespustil klik na kartu (adresa se nezměnila)",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/"
+    },
+    {
+      "name": "tah doprava 1200 px posune pás 1 : 1",
+      "pass": true,
+      "detail": "-6896.0 px, half 8096"
+    },
+    {
+      "name": "smyčka navazuje oběma směry (pás vždy kryje celé okno, x v rozsahu)",
+      "pass": true
+    },
+    {
+      "name": "tah doprava nespustil klik",
+      "pass": true
+    },
+    {
+      "name": "1 s po puštění pás stojí",
+      "pass": true,
+      "detail": "0.0 px/s"
+    },
+    {
+      "name": "3 s po puštění se rozjíždí",
+      "pass": true,
+      "detail": "-37.9 px/s"
+    },
+    {
+      "name": "5 s po puštění jede běžnou rychlostí",
+      "pass": true,
+      "detail": "-40.9 px/s"
+    },
+    {
+      "name": "setrvačnost: po puštění pás dojíždí ve směru tahu",
+      "pass": true,
+      "detail": "-751 px/s hned po puštění"
+    },
+    {
+      "name": "setrvačnost: dojezd plynule brzdí",
+      "pass": true,
+      "detail": "-20.1 px/s po 1 s"
+    },
+    {
+      "name": "setrvačnost: pás dojel dál než tah",
+      "pass": true,
+      "detail": "-522 px celkem, tah 320 px"
+    },
+    {
+      "name": "po dojezdu a pauze zase běžná rychlost",
+      "pass": true,
+      "detail": "-39.7 px/s"
+    },
+    {
+      "name": "stisk během dojezdu pás hned zastaví",
+      "pass": true,
+      "detail": "0.0 px/s"
+    },
+    {
+      "name": "stisk, který zastavil dojezd, neotevře kartu",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/"
+    },
+    {
+      "name": "tah puštěný mimo pás: pás se rozjede",
+      "pass": true,
+      "detail": "-39.8 px/s"
+    },
+    {
+      "name": "fokus po kliknutí myší (ne z klávesnice) pás nezastaví",
+      "pass": true,
+      "detail": "-39.8 px/s"
+    },
+    {
+      "name": "fokus z klávesnice: pás stojí",
+      "pass": true,
+      "detail": "0.0 px/s"
+    },
+    {
+      "name": "po odchodu fokusu pás jede",
+      "pass": true,
+      "detail": "-39.7 px/s"
+    },
+    {
+      "name": "mimo viewport smyčka neběží",
+      "pass": true,
+      "detail": "0.0 px/s"
+    },
+    {
+      "name": "klik bez tahu otevře referenci",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/reference#farmet-a-s"
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "modul pás převzal",
+      "pass": true
+    },
+    {
+      "name": "běžná rychlost kolem -40 px/s",
+      "pass": true,
+      "detail": "-39.9 px/s"
+    },
+    {
+      "name": "tah prstem doleva posune pás 1 : 1",
+      "pass": true,
+      "detail": "-221.3 px, čekáno -220"
+    },
+    {
+      "name": "stránka se při vodorovném tahu nehýbe do stran ani svisle",
+      "pass": true,
+      "detail": "scrollX 0, scrollY 2459 → 2459"
+    },
+    {
+      "name": "tah prstem nespustil klik",
+      "pass": true
+    },
+    {
+      "name": "tah prstem doprava posune pás 1 : 1",
+      "pass": true,
+      "detail": "247.5 px, čekáno 247,5"
+    },
+    {
+      "name": "1 s po puštění pás stojí",
+      "pass": true,
+      "detail": "0.0 px/s"
+    },
+    {
+      "name": "3 s po puštění se rozjíždí",
+      "pass": true,
+      "detail": "-36.8 px/s"
+    },
+    {
+      "name": "5 s po puštění jede běžnou rychlostí",
+      "pass": true,
+      "detail": "-41.1 px/s"
+    },
+    {
+      "name": "švih prstem: pás dojíždí setrvačností",
+      "pass": true,
+      "detail": "-849 px/s po puštění, celkem -487 px"
+    },
+    {
+      "name": "svislý tah přes pás scrolluje stránku",
+      "pass": true,
+      "detail": "scrollY +225"
+    },
+    {
+      "name": "svislý tah pás nechytil",
+      "pass": true
+    },
+    {
+      "name": "po svislém scrollu pás jede bez pauzy",
+      "pass": true,
+      "detail": "-39.7 px/s"
+    },
+    {
+      "name": "ťuknutí bez tahu otevře referenci",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/reference#konplan-s-ro"
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: modul nic nespustil",
+      "pass": true
+    },
+    {
+      "name": "reduced motion: pás jde posouvat nativně",
+      "pass": true,
+      "detail": "{\"ready\":false,\"overflowX\":\"auto\",\"touchAction\":\"auto\",\"scrollLeft\":500,\"transform\":\"\"}"
+    },
+    {
+      "name": "/en: pás jede",
+      "pass": true,
+      "detail": "-39.9 px/s"
+    },
+    {
+      "name": "/en: tah posune pás",
+      "pass": true,
+      "detail": "-308.0 px"
+    },
+    {
+      "name": "/en: bez chyb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "/de: pás jede",
+      "pass": true,
+      "detail": "-39.8 px/s"
+    },
+    {
+      "name": "/de: tah posune pás",
+      "pass": true,
+      "detail": "-308.3 px"
+    },
+    {
+      "name": "/de: bez chyb",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

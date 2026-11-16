@@ -5,12 +5,21 @@ Zdroj pravdy o úkolech, cenách a termínech je dashboard (projekt
 
 ## Stav
 
-Aktualizováno 3. 11. 2026 dopoledne (koordinátor K02, předání K03). Časy v Europe/Prague.
+Aktualizováno 16. 11. 2026 (S9 #54; předtím 3. 11. koordinátor K02, předání K03). Časy v Europe/Prague.
 
 - **Webflow:** produkce publikována **3. 11. 2026 09:51** (obě domény). Od 31. 10. přibylo jen: nadpis „Řekli o nás“ na homepage na středu (třída `testimonial21_header`) a tučné maximální výšky plošin na `/servisni-sluzby-a-pronajem-plosin` (CS/EN/DE, přání Myšky z 2. 11.).
 - **Dodávka 3. 11. odeslaná** Myškovi (e-mail 3. 11.). Faktura **28 200 Kč** po jeho kontrole (dashboard `460218ce`): formulář 6 500, strukturovaná data 4 500, popis produktů pro AI 12 500, recenze 2 500, blog 2 200. Úkoly dodávky jsou v dashboardu `done`.
 - **Blog:** 5 článků a 5 bannerů v CMS jako draft, čeká na obrázky od klienta (dashboard `e9fc3f7f`).
 - **Zbývá z října:** ruční kroky Lukáše (`cb1f8f9e`: Rich Results Test na 7 URL, výsledek do Docu 01; Make S4 #29), Designer drobnosti (`d30a2c84`), Cloudflare worker (`6d765415`), korektura překladů (`2474d5db`), EN text CTA (`bc1ab14c`).
+
+### Štafeta 16. 11. – S9 #54 pás recenzí: tah myší a prstem
+
+- **Hotovo na stagingu, produkci publikuje koordinátor po souhlasu Lukáše.** Pás recenzí na homepage jde posouvat myší i prstem oběma směry, po puštění dojede setrvačností a 2 s nato se plynule rozjede. Klik po tahu se potlačí. Hover, fokus z klávesnice, reduced motion a pauza mimo viewport fungují jako dřív. Vzhled beze změny, ve Webflow se nezměnil žádný styl.
+- **Repo:** PR #55, merge commit `6f4d0a0`. Modul `45-testimonial-marquee.js` a dev kopie `src/dev/testimonial-marquee.js` mají shodné tělo (hlídá smoke test, 121 kontrol).
+- **Webflow:** v custom code homepage (patička stránky) vyměněn jen hash `c76921a…` → `6f4d0a09555bdf64bc87c98da94ff4f55ff87413`, čteno zpátky. Staging publikován 16. 11. 13:28:59 (`lastPublished` webu se pohnul, domény produkce zůstaly na 15. 11. 23:40:19). **Produkce dál načítá `c76921a…`**, tedy pás bez tahu.
+- **Ověření na stagingu** (`scripts/overeni/s9-pas-recenzi.js`, Chromium): 49/49. Desktop 1440 myš, dotyk 390, reduced motion, `/en`, `/de`. Rychlost po puštění: 1 s 0 px/s, 3 s −35 až −37 px/s, 5 s −40 px/s. V head `GTM-W6PR2VX` a 5 Finsweet, 22/22 recenzí v HTML bez JS ve všech třech jazycích. Snímky a `vysledky.json` v `docs/snimky/s9/`.
+- **Na Lukášovi:** souhlas s publikací produkce. Vyzkoušet tah na skutečném iPhonu (ověřeno jen v Chromiu s emulací dotyku). Rozhodnout dvě věci z `docs/decisions.md`: kurzor `grab` i nad kartami a to, že po tahu myší pás stojí, dokud je kurzor nad ním.
+- Po nasazení Cloudflare workeru dál platí: smazat řádek z custom code homepage i `src/dev/`.
 
 ### Plán na listopad (K03)
 
