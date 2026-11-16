@@ -523,6 +523,122 @@ function touchChecks(win, doc) {
 }
 
 run('Pás recenzí — dotyk: zámek směru 45°', MARQUEE, 'https://www.eldr.cz/', touchChecks);
+// Touchpad, kolečko a šipky (#59). Dvě karty v seznamu kvůli rozteči a fokusu.
+const MARQUEE2 = `<div class="testimonial21_marquee"><div class="testimonial21_track"><div><a href="/reference#a" class="testimonial21_card">a</a><a href="/reference#b" class="testimonial21_card">b</a></div><div aria-hidden="true"><a href="/reference#a" class="testimonial21_card">a</a><a href="/reference#b" class="testimonial21_card">b</a></div></div></div>`;
+
+function wheelChecks(win, doc) {
+  const m = doc.querySelector('.testimonial21_marquee');
+  const track = m.firstElementChild;
+  const link = doc.querySelector('a');
+  Object.defineProperty(track, 'scrollWidth', { value: 2000 });
+  win.dispatchEvent(new win.Event('resize'));
+  const second = doc.querySelectorAll('a')[1];
+  // Karta 300 px a mezera 68 px: krok má být rozteč, ne šířka karty.
+  link.getBoundingClientRect = () => ({ left: 0, top: 0, right: 300, bottom: 100, width: 300, height: 100 });
+  second.getBoundingClientRect = () => ({ left: 368, top: 0, right: 668, bottom: 100, width: 300, height: 100 });
+
+  const pos = () => parseFloat((track.style.transform.match(/translate3d\(([-\d.]+)px/) || [])[1]);
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  const wheel = init => {
+    const e = new win.WheelEvent('wheel', Object.assign({ bubbles: true, cancelable: true }, init));
+    link.dispatchEvent(e);
+    return e;
+  };
+  const near = (value, target) => Math.abs(value - target) < 1.5;
+  let x0 = 0;
+
+  pending.push((async () => {
+    const first = wheel({ deltaX: 120 });
+    ok('vodorovný wheel je defaultPrevented', first.defaultPrevented);
+    await wait(60);
+    x0 = pos();
+    ok('vodorovný wheel posune pás doleva o deltaX (' + x0 + ' px)', x0 < -115 && x0 > -135);
+    const locked = wheel({ deltaY: 80 });
+    ok('svislá složka uvnitř vodorovného gesta stránku nepustí', locked.defaultPrevented);
+    wheel({ deltaX: -50 });
+    await wait(60);
+    ok('wheel doprava vrací pás zpět', near(pos(), x0 + 50));
+    await wait(120);
+    ok('po gestu pás stojí (pauza před rozjezdem)', near(pos(), x0 + 50));
+
+    await wait(200); // konec gesta, zámek osy se uvolní
+    const vertical = wheel({ deltaY: 100 });
+    ok('svislý wheel není defaultPrevented', !vertical.defaultPrevented);
+    const drift = wheel({ deltaX: 60, deltaY: 10 });
+    ok('vodorovná složka uvnitř svislého gesta pásem nehne', !drift.defaultPrevented);
+    await wait(60);
+    ok('svislý wheel pás neposunul', near(pos(), x0 + 50));
+
+    await wait(200);
+    const shifted = wheel({ deltaY: 100, shiftKey: true });
+    await wait(60);
+    ok('Shift + kolečko posouvá pás', shifted.defaultPrevented && near(pos(), x0 - 50));
+
+    await wait(200);
+    const lines = wheel({ deltaX: 1, deltaMode: 1 });
+    await wait(60);
+    ok('wheel v řádcích se přepočítá na px', lines.defaultPrevented && near(pos(), x0 - 90));
+
+    // Zašuměný začátek gesta na touchpadu: o ose rozhodne až součet delt.
+    await wait(200);
+    const noise = wheel({ deltaX: 1, deltaY: -1 });
+    const start = wheel({ deltaX: 2, deltaY: 0 });
+    const swipe = wheel({ deltaX: 27, deltaY: 1 });
+    await wait(60);
+    ok('zašuměná první událost osu nezamkne, gesto do strany posune pás o součet',
+      !noise.defaultPrevented && start.defaultPrevented && swipe.defaultPrevented && near(pos(), x0 - 120));
+    await wait(200);
+    const down = [wheel({ deltaX: 1, deltaY: 1 }), wheel({ deltaX: 1, deltaY: 30 }), wheel({ deltaX: 40, deltaY: 5 })];
+    await wait(60);
+    ok('zašuměný začátek svislého gesta: stránka scrolluje, pás stojí',
+      down.every(e => !e.defaultPrevented) && near(pos(), x0 - 120));
+    wheel({ deltaX: 30, deltaMode: 0 }); // stále svislé gesto, vrací polohu do stavu pro další kontroly
+    await wait(200);
+    wheel({ deltaX: -30 });
+    await wait(60);
+
+    await wait(200);
+    const zoom = wheel({ deltaX: 100, ctrlKey: true });
+    ok('Ctrl + wheel (zoom) se nezachytává', !zoom.defaultPrevented);
+
+    const tab = new win.KeyboardEvent('keydown', { key: 'Tab', bubbles: true, cancelable: true });
+    link.dispatchEvent(tab);
+    ok('Tab se nezachytává', !tab.defaultPrevented);
+    const back = new win.KeyboardEvent('keydown', { key: 'ArrowLeft', altKey: true, bubbles: true, cancelable: true });
+    link.dispatchEvent(back);
+    ok('Alt + šipka (zpět v prohlížeči) se nezachytává', !back.defaultPrevented);
+
+    const key = (name, extra) => {
+      const e = new win.KeyboardEvent('keydown', Object.assign({ key: name, bubbles: true, cancelable: true }, extra));
+      doc.activeElement.dispatchEvent(e);
+      return e;
+    };
+    link.focus();
+    const right = key('ArrowRight');
+    ok('šipka vpravo je defaultPrevented', right.defaultPrevented);
+    ok('šipka vpravo přenese fokus na další kartu', doc.activeElement === second);
+    await wait(50);
+    const mid = pos();
+    ok('šipka neposune pás skokem (po 50 ms ' + (mid - (x0 - 90)).toFixed(0) + ' px z 368)', mid < x0 - 91 && mid > x0 - 457);
+    await wait(750);
+    ok('šipka vpravo posune pás o rozteč karet doleva (368 px)', near(pos(), x0 - 458));
+    key('ArrowLeft');
+    ok('šipka vlevo vrátí fokus na první kartu', doc.activeElement === link);
+    await wait(800);
+    ok('šipka vlevo vrátí i pás', near(pos(), x0 - 90));
+
+    // Držená klávesa posílá opakované stisky po desítkách ms.
+    for (let i = 0; i < 10; i++) {
+      key('ArrowRight', { repeat: i > 0 });
+      await wait(20);
+    }
+    await wait(900);
+    const held = (x0 - 90 - pos()) / 368;
+    ok('držená šipka karty nestřádá (' + held.toFixed(1) + ' karty za 0,2 s držení)', held > 0.9 && held < 2.1);
+  })());
+}
+
+run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr.cz/', wheelChecks);
 
 // Dočasná kopie pro custom code homepage (src/dev/) musí dělat totéž.
 (function () {
@@ -550,6 +666,12 @@ run('Pás recenzí — dotyk: zámek směru 45°', MARQUEE, 'https://www.eldr.cz
   domTouch.window.eval(dev);
   domTouch.window.document.dispatchEvent(new domTouch.window.Event('DOMContentLoaded'));
   touchChecks(domTouch.window, domTouch.window.document);
+
+  const domWheel = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE2}</body></html>`,
+    { url: 'https://www.eldr.cz/', runScripts: 'outside-only', pretendToBeVisual: true });
+  domWheel.window.eval(dev);
+  domWheel.window.document.dispatchEvent(new domWheel.window.Event('DOMContentLoaded'));
+  wheelChecks(domWheel.window, domWheel.window.document);
 
   // Bundle i dev kopie na jedné stránce: pás řídí jen ten první.
   const both = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE}</body></html>`,

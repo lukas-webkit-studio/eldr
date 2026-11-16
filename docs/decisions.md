@@ -3,6 +3,19 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-11-16 · S10 · Pás recenzí: touchpad, kolečko a šipky (#59)
+
+Lukáš 16. 11.: „bylo by možné i tah na touchpadu, např. na Macu dvěma prsty? Prostě vše, co mají i ostatní slidery na webu“.
+
+- **Osa gesta `wheel` se zamyká podle první události** a drží, dokud 150 ms nepřijde další. Vodorovné gesto patří pásu (`preventDefault()`, stránka stojí), svislé stránce. Dojezdové události touchpadu jsou tak součást téhož gesta a šikmý konec gesta nic nepřepne.
+- **Vlastní setrvačnost wheel nemá.** Dojezd posílá systém. Po poslední události pás 1 s stojí a rozjede se stejnou křivkou jako po puštění bez hození.
+- **Hover má dál přednost.** Kurzor při gestu na touchpadu leží nad pásem, takže pás po gestu stojí, dokud kurzor neodjede. Stejně se chová po tahu myší (rozhodnutí z #54 čeká na Lukáše).
+- **Shift + kolečko:** Chromium posílá `deltaY` se `shiftKey`, jiné prohlížeče rovnou `deltaX`. Modul bere obojí. Ctrl + kolečko (zoom, roztažení prstů) nezachytává.
+- **Šipky posunou pás o rozteč karet** (karta a mezera, na desktopu 368 px) s dojezdem asi 0,5 s **a fokus přejde na sousední kartu**. Karta s fokusem tak zůstává na stejném místě obrazovky a neodjede pod ořez (nález nezávislé kontroly: bez přesunu fokusu byla po 2–4 stiscích oříznutá). Držená šipka jede zhruba čtyři karty za sekundu, nestřádá je. Tab chodí po kartách jako dřív. S Alt, Ctrl, Cmd a Shift se šipky nezachytávají (Alt + šipka je v prohlížeči zpět/vpřed).
+- **O ose rozhoduje součet prvních 4 px**, ne první událost. Touchpad začíná gesto malými zašuměnými deltami a první událost (1, −1) by vodorovný švih zamkla jako svislý (nález kontroly). Nerozhodnutý pohyb do strany se ruší hned.
+- **Známé meze, neřešeno:** nové gesto do 150 ms po dojezdu předchozího zdědí jeho osu. Šipka stisknutá během dojezdu touchpadu se přeruší.
+- **`overscroll-behavior-x: contain` se na třídu ve Webflow nepřidalo.** Když pás řídí modul, nic nescrolluje, takže vlastnost nemá co omezit; gestu zpět/vpřed brání `preventDefault()`. Smysl by měla jen v režimu bez JS a s omezeným pohybem (nativní `overflow-x: auto`), a tam její účinek bez Macu ověřit nejde. Když Lukáš na Macu uvidí, že na kraji pásu v tomhle režimu stránka skočí zpět, patří vlastnost na třídu `testimonial21_marquee` ve Webflow.
+
 ## 2026-11-16 · S9 · Oprava po zkoušce na telefonu (#54)
 
 Lukáš 16. 11. na telefonu: „není to moc smooth (ve stylu třeba dojezdu setrvačností), ale taky musím jet perfektně rovně do strany“.

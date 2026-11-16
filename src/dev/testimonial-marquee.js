@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Pás recenzí — plynulý posun, zpomalení při hoveru, tah myší a prstem
-   (#26 a #54, dočasně z custom code homepage)
+   Pás recenzí — plynulý posun, zpomalení při hoveru, tah myší a prstem,
+   touchpad, kolečko a šipky (#26, #54 a #59, dočasně z custom code homepage)
    ==========================================================================
    Dočasná kopie modulu src/modules/45-testimonial-marquee.js. Načítá se
    z custom code homepage, dokud Cloudflare worker (eldr-web) neservíruje
@@ -26,6 +26,10 @@
   var FLING_MIN = 50; // px/s, pomalejší puštění se bere jako puštění bez hození
   var MAX_FLING = 3000; // px/s, strop rychlosti po puštění
   var VELOCITY_WINDOW = 100; // ms, z jak dlouhého konce tahu se počítá rychlost
+  var WHEEL_GAP = 150; // ms bez události wheel = gesto skončilo, zámek osy se uvolní
+  var WHEEL_LOCK = 4; // px, po kolika se rozhodne o ose gesta wheel
+  var WHEEL_LINE = 40; // px na řádek, když prohlížeč posílá wheel v řádcích
+  var GLIDE = 10; // jak rychle dojede posun šipkou (1/s), ~0,3 s na kartu
 
   function init(root) {
     var track = root.firstElementChild;
@@ -69,6 +73,12 @@
     var originX = 0; // pozice ukazatele ve chvíli, kdy tah začal
     var originOffset = 0; // posun pásu ve stejné chvíli
     var samples = []; // poslední polohy ukazatele pro výpočet rychlosti
+
+    var wheelAxis = ''; // zámek osy gesta wheel: 'x' = pás, 'y' = stránka
+    var wheelAt = 0; // čas poslední události wheel
+    var wheelX = 0; // součet delt, než se o ose rozhodne
+    var wheelY = 0;
+    var glide = 0; // kolik px ještě zbývá dojet po stisku šipky
 
     function clock() {
       return window.performance && window.performance.now ? window.performance.now() : Date.now();
@@ -128,10 +138,18 @@
         v += (target - v) * (1 - Math.exp(-(coasting ? FRICTION : EASE) * dt));
         x += v * dt;
         if (coasting && Math.abs(v - target) < 2) coasting = false;
+        if (glide) {
+          // Posun šipkou: každý snímek ujede stejný díl zbytku, takže
+          // dojede plynule a další stisk se jen přičte.
+          var step = Math.abs(glide) < 0.5 ? glide : glide * (1 - Math.exp(-GLIDE * dt));
+          x += step;
+          glide -= step;
+        }
       }
       render();
 
-      var busy = active || coasting || now < holdUntil || Math.abs(v - target) > 0.5 || target !== 0;
+      var busy =
+        active || coasting || glide !== 0 || now < holdUntil || Math.abs(v - target) > 0.5 || target !== 0;
       if (busy && visible && !document.hidden) {
         raf = requestAnimationFrame(frame);
       } else {
@@ -222,6 +240,7 @@
       caught = coasting && Math.abs(v + SPEED) > 60;
       if (caught) v = 0;
       coasting = false;
+      glide = 0;
       suppressClick = false;
       downX = lastX = px;
       downY = lastY = py;
@@ -416,6 +435,126 @@
     }
     root.addEventListener('touchend', touchEnd);
     root.addEventListener('touchcancel', touchEnd);
+
+    /* --- touchpad a kolečko: wheel ---------------------------------------------- */
+
+    // Posun, který převzal wheel nebo šipka: pás stojí, po RESUME_DELAY se
+    // rozjede stejně jako po puštění bez hození.
+    function takeOver(now) {
+      v = 0;
+      coasting = false;
+      holdUntil = now + RESUME_DELAY;
+    }
+
+    // Nepasivní: preventDefault() u vodorovného gesta drží stránku na místě
+    // a prohlížeči nedá podnět ke gestu zpět/vpřed.
+    root.addEventListener(
+      'wheel',
+      function (e) {
+        // Ctrl + kolečko a roztažení prstů na touchpadu je zoom stránky.
+        if (e.ctrlKey) return;
+        // Při tahu myší má pás v ruce ukazatel: wheel nesmí hýbat pásem,
+        // stránkou ani spustit gesto zpět/vpřed.
+        if (active && axis === 'x') {
+          if (e.cancelable) e.preventDefault();
+          return;
+        }
+        var dx = e.deltaX;
+        var dy = e.deltaY;
+        // Shift + kolečko: některé prohlížeče pošlou deltaX samy, jiné
+        // nechají deltaY a jen nastaví shiftKey.
+        if (e.shiftKey && !dx) {
+          dx = dy;
+          dy = 0;
+        }
+        var unit = e.deltaMode === 1 ? WHEEL_LINE : e.deltaMode === 2 ? root.clientWidth : 1;
+        dx *= unit;
+        dy *= unit;
+
+        var now = clock();
+        if (now - wheelAt > WHEEL_GAP) {
+          wheelAxis = '';
+          wheelX = wheelY = 0;
+        }
+        wheelAt = now;
+        if (!wheelAxis) {
+          // První události gesta na touchpadu bývají malé a zašuměné,
+          // proto se o ose rozhoduje až ze součtu, jako u dotyku.
+          wheelX += dx;
+          wheelY += dy;
+          var sideways = Math.abs(wheelX) > Math.abs(wheelY);
+          if (Math.abs(wheelX) < WHEEL_LOCK && Math.abs(wheelY) < WHEEL_LOCK) {
+            // Nerozhodnutý pohyb do strany se ruší hned: jakmile ho
+            // prohlížeč vezme jako gesto zpět/vpřed, vrátit to nejde.
+            if (sideways && e.cancelable) e.preventDefault();
+            return;
+          }
+          wheelAxis = sideways ? 'x' : 'y';
+          dx = wheelX;
+        }
+        // Svislé gesto je scroll stránky; jeho vodorovná složka pásem nehne.
+        if (wheelAxis !== 'x') return;
+
+        if (e.cancelable) e.preventDefault();
+        // Směr jako nativní vodorovný scroll: kladná deltaX veze obsah doleva.
+        x -= dx;
+        glide = 0;
+        takeOver(now);
+        run();
+      },
+      { passive: false }
+    );
+
+    /* --- klávesnice: šipky -------------------------------------------------------- */
+
+    // Karty bez kopie pro smyčku (ta je aria-hidden).
+    function cards() {
+      var all = track.querySelectorAll('a');
+      var out = [];
+      for (var i = 0; i < all.length; i++) {
+        if (!all[i].closest('[aria-hidden="true"]')) out.push(all[i]);
+      }
+      return out;
+    }
+
+    // Krok = rozteč dvou sousedních karet (šířka karty a mezera).
+    function cardStep(list) {
+      var step = 0;
+      if (list.length > 1) {
+        step = list[1].getBoundingClientRect().left - list[0].getBoundingClientRect().left;
+      }
+      if (!(step > 0) && list.length) step = list[0].getBoundingClientRect().width;
+      return step > 0 ? step : root.clientWidth / 2;
+    }
+
+    // Fokus je na kartě uvnitř pásu, keydown sem probublá. Alt + šipka je
+    // v prohlížeči zpět/vpřed, s modifikátory se proto nic nezachytává.
+    root.addEventListener('keydown', function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      var dir = e.key === 'ArrowRight' ? -1 : e.key === 'ArrowLeft' ? 1 : 0;
+      // Mimo viewport smyčka neběží a posuny by se nastřádaly.
+      if (!dir || active || !visible) return;
+      e.preventDefault();
+      var list = cards();
+      var step = cardStep(list);
+      // Držená klávesa: další karta, až předchozí skoro dojede (zbývá pod
+      // desetinu kroku). Vychází to zhruba na čtyři karty za sekundu.
+      if (e.repeat && Math.abs(glide) > step / 10) return;
+      glide += dir * step;
+      // Fokus jde na sousední kartu, která po posunu skončí na místě té
+      // původní. Karta s fokusem tak neodjede z obrazovky.
+      var at = list.indexOf(document.activeElement);
+      if (at !== -1 && list.length > 1) {
+        var next = list[(at - dir + list.length) % list.length];
+        try {
+          next.focus({ preventScroll: true });
+        } catch (err) {
+          next.focus();
+        }
+      }
+      takeOver(clock());
+      run();
+    });
 
     /* --- klik a nativní přetahování ------------------------------------------ */
 
