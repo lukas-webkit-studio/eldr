@@ -1,12 +1,15 @@
 /* ==========================================================================
-   Pás recenzí — plynulý posun, zpomalení při hoveru, tah myší a prstem
-   (homepage, #26 a #54)
+   Pás recenzí — plynulý posun, zpomalení při hoveru, tah myší a prstem,
+   touchpad, kolečko a šipky (homepage, #26, #54 a #59)
    ==========================================================================
    Proč ne Webflow: nativní slider neumí nekonečný plynulý posun. IX3 umí
    timeline jen přehrát nebo pozastavit, rychlost plynule měnit neumí,
    a tah se setrvačností a plynulým rozjezdem zpět neumí vůbec. Pauza přes
    IX3 hover navíc v testu na stagingu nezabrala (hover řídí vlastní
-   instanci timeline, ne tu spuštěnou při načtení).
+   instanci timeline, ne tu spuštěnou při načtení). Posun touchpadem,
+   kolečkem a šipkami (#59) mění polohu téhož pásu, který řídí tahle
+   smyčka; interakce ve Webflow by se s ní o transform prala a zámek osy
+   gesta ani preventDefault() u wheel v ní nastavit nejdou.
 
    Markup (Webflow):
      .testimonial21_marquee    obal, ve Webflow overflow-x: auto
@@ -27,6 +30,16 @@
      - hover myší a fokus z klávesnice mají přednost: dokud trvají, pás
        po hození i po pauze plynule zastaví a stojí
      - po tahu se nespustí klik na kartu
+     - touchpad (dva prsty do strany), vodorovné kolečko a Shift + kolečko
+       posouvají pás o deltaX jako nativní vodorovný scroll; stránka se
+       nehne a prohlížeč nedostane gesto zpět/vpřed (preventDefault)
+     - osa se zamyká na celé gesto podle první události: svislé gesto patří
+       stránce a pásem nehne, vodorovné patří pásu. Gesto končí po
+       WHEEL_GAP bez události
+     - vlastní setrvačnost wheel nemá, dojezdové události posílá systém.
+       Po poslední události pás RESUME_DELAY stojí a pak se rozjede
+     - šipky vlevo a vpravo při fokusu v pásu posunou pás plynule o jednu
+       kartu
 
    Dotyk jde přes Touch Events, myš a pero přes Pointer Events. Důvod
    návrhu: s pouhým touch-action: pan-y rozhoduje o směru prohlížeč a když
@@ -72,6 +85,9 @@
   var FLING_MIN = 50; // px/s, pomalejší puštění se bere jako puštění bez hození
   var MAX_FLING = 3000; // px/s, strop rychlosti po puštění
   var VELOCITY_WINDOW = 100; // ms, z jak dlouhého konce tahu se počítá rychlost
+  var WHEEL_GAP = 150; // ms bez události wheel = gesto skončilo, zámek osy se uvolní
+  var WHEEL_LINE = 40; // px na řádek, když prohlížeč posílá wheel v řádcích
+  var GLIDE = 10; // jak rychle dojede posun šipkou (1/s), ~0,3 s na kartu
 
   function init(root) {
     var track = root.firstElementChild;
@@ -115,6 +131,10 @@
     var originX = 0; // pozice ukazatele ve chvíli, kdy tah začal
     var originOffset = 0; // posun pásu ve stejné chvíli
     var samples = []; // poslední polohy ukazatele pro výpočet rychlosti
+
+    var wheelAxis = ''; // zámek osy gesta wheel: 'x' = pás, 'y' = stránka
+    var wheelAt = 0; // čas poslední události wheel
+    var glide = 0; // kolik px ještě zbývá dojet po stisku šipky
 
     function clock() {
       return window.performance && window.performance.now ? window.performance.now() : Date.now();
@@ -174,10 +194,18 @@
         v += (target - v) * (1 - Math.exp(-(coasting ? FRICTION : EASE) * dt));
         x += v * dt;
         if (coasting && Math.abs(v - target) < 2) coasting = false;
+        if (glide) {
+          // Posun šipkou: každý snímek ujede stejný díl zbytku, takže
+          // dojede plynule a další stisk se jen přičte.
+          var step = Math.abs(glide) < 0.5 ? glide : glide * (1 - Math.exp(-GLIDE * dt));
+          x += step;
+          glide -= step;
+        }
       }
       render();
 
-      var busy = active || coasting || now < holdUntil || Math.abs(v - target) > 0.5 || target !== 0;
+      var busy =
+        active || coasting || glide !== 0 || now < holdUntil || Math.abs(v - target) > 0.5 || target !== 0;
       if (busy && visible && !document.hidden) {
         raf = requestAnimationFrame(frame);
       } else {
@@ -268,6 +296,7 @@
       caught = coasting && Math.abs(v + SPEED) > 60;
       if (caught) v = 0;
       coasting = false;
+      glide = 0;
       suppressClick = false;
       downX = lastX = px;
       downY = lastY = py;
@@ -462,6 +491,80 @@
     }
     root.addEventListener('touchend', touchEnd);
     root.addEventListener('touchcancel', touchEnd);
+
+    /* --- touchpad a kolečko: wheel ---------------------------------------------- */
+
+    // Posun, který převzal wheel nebo šipka: pás stojí, po RESUME_DELAY se
+    // rozjede stejně jako po puštění bez hození.
+    function takeOver(now) {
+      v = 0;
+      coasting = false;
+      holdUntil = now + RESUME_DELAY;
+    }
+
+    // Nepasivní: preventDefault() u vodorovného gesta drží stránku na místě
+    // a prohlížeči nedá podnět ke gestu zpět/vpřed.
+    root.addEventListener(
+      'wheel',
+      function (e) {
+        // Ctrl + kolečko a roztažení prstů na touchpadu je zoom stránky.
+        if (e.ctrlKey || (active && axis === 'x')) return;
+        var dx = e.deltaX;
+        var dy = e.deltaY;
+        // Shift + kolečko: některé prohlížeče pošlou deltaX samy, jiné
+        // nechají deltaY a jen nastaví shiftKey.
+        if (e.shiftKey && !dx) {
+          dx = dy;
+          dy = 0;
+        }
+        var unit = e.deltaMode === 1 ? WHEEL_LINE : e.deltaMode === 2 ? root.clientWidth : 1;
+        dx *= unit;
+        dy *= unit;
+
+        var now = clock();
+        if (now - wheelAt > WHEEL_GAP) wheelAxis = '';
+        if (!wheelAxis) {
+          if (!dx && !dy) return;
+          wheelAxis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+        }
+        wheelAt = now;
+        // Svislé gesto je scroll stránky; jeho vodorovná složka pásem nehne.
+        if (wheelAxis !== 'x') return;
+
+        if (e.cancelable) e.preventDefault();
+        // Směr jako nativní vodorovný scroll: kladná deltaX veze obsah doleva.
+        x -= dx;
+        glide = 0;
+        takeOver(now);
+        run();
+      },
+      { passive: false }
+    );
+
+    /* --- klávesnice: šipky -------------------------------------------------------- */
+
+    // Krok = rozteč dvou sousedních karet (šířka karty a mezera).
+    function cardStep() {
+      var cards = track.querySelectorAll('a');
+      var step = 0;
+      if (cards.length > 1) {
+        step = cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+      }
+      if (!(step > 0) && cards.length) step = cards[0].getBoundingClientRect().width;
+      return step > 0 ? step : root.clientWidth / 2;
+    }
+
+    // Fokus je na kartě uvnitř pásu, keydown sem probublá. Alt + šipka je
+    // v prohlížeči zpět/vpřed, s modifikátory se proto nic nezachytává.
+    root.addEventListener('keydown', function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      var dir = e.key === 'ArrowRight' ? -1 : e.key === 'ArrowLeft' ? 1 : 0;
+      if (!dir || active) return;
+      e.preventDefault();
+      glide += dir * cardStep();
+      takeOver(clock());
+      run();
+    });
 
     /* --- klik a nativní přetahování ------------------------------------------ */
 

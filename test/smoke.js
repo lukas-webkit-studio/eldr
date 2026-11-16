@@ -523,6 +523,82 @@ function touchChecks(win, doc) {
 }
 
 run('Pás recenzí — dotyk: zámek směru 45°', MARQUEE, 'https://www.eldr.cz/', touchChecks);
+// Touchpad, kolečko a šipky (#59).
+function wheelChecks(win, doc) {
+  const m = doc.querySelector('.testimonial21_marquee');
+  const track = m.firstElementChild;
+  const link = doc.querySelector('a');
+  Object.defineProperty(track, 'scrollWidth', { value: 2000 });
+  win.dispatchEvent(new win.Event('resize'));
+  link.getBoundingClientRect = () => ({ left: 0, top: 0, right: 300, bottom: 100, width: 300, height: 100 });
+
+  const pos = () => parseFloat((track.style.transform.match(/translate3d\(([-\d.]+)px/) || [])[1]);
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  const wheel = init => {
+    const e = new win.WheelEvent('wheel', Object.assign({ bubbles: true, cancelable: true }, init));
+    link.dispatchEvent(e);
+    return e;
+  };
+  const near = (value, target) => Math.abs(value - target) < 1.5;
+  let x0 = 0;
+
+  pending.push((async () => {
+    const first = wheel({ deltaX: 120 });
+    ok('vodorovný wheel je defaultPrevented', first.defaultPrevented);
+    await wait(60);
+    x0 = pos();
+    ok('vodorovný wheel posune pás doleva o deltaX (' + x0 + ' px)', x0 < -115 && x0 > -135);
+    const locked = wheel({ deltaY: 80 });
+    ok('svislá složka uvnitř vodorovného gesta stránku nepustí', locked.defaultPrevented);
+    wheel({ deltaX: -50 });
+    await wait(60);
+    ok('wheel doprava vrací pás zpět', near(pos(), x0 + 50));
+    ok('po gestu pás stojí (pauza před rozjezdem)', near(pos(), x0 + 50));
+
+    await wait(200); // konec gesta, zámek osy se uvolní
+    const vertical = wheel({ deltaY: 100 });
+    ok('svislý wheel není defaultPrevented', !vertical.defaultPrevented);
+    const drift = wheel({ deltaX: 60, deltaY: 10 });
+    ok('vodorovná složka uvnitř svislého gesta pásem nehne', !drift.defaultPrevented);
+    await wait(60);
+    ok('svislý wheel pás neposunul', near(pos(), x0 + 50));
+
+    await wait(200);
+    const shifted = wheel({ deltaY: 100, shiftKey: true });
+    await wait(60);
+    ok('Shift + kolečko posouvá pás', shifted.defaultPrevented && near(pos(), x0 - 50));
+
+    await wait(200);
+    const lines = wheel({ deltaX: 1, deltaMode: 1 });
+    await wait(60);
+    ok('wheel v řádcích se přepočítá na px', lines.defaultPrevented && near(pos(), x0 - 90));
+
+    await wait(200);
+    const zoom = wheel({ deltaX: 100, ctrlKey: true });
+    ok('Ctrl + wheel (zoom) se nezachytává', !zoom.defaultPrevented);
+
+    const tab = new win.KeyboardEvent('keydown', { key: 'Tab', bubbles: true, cancelable: true });
+    link.dispatchEvent(tab);
+    ok('Tab se nezachytává', !tab.defaultPrevented);
+    const back = new win.KeyboardEvent('keydown', { key: 'ArrowLeft', altKey: true, bubbles: true, cancelable: true });
+    link.dispatchEvent(back);
+    ok('Alt + šipka (zpět v prohlížeči) se nezachytává', !back.defaultPrevented);
+
+    const right = new win.KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true, cancelable: true });
+    link.dispatchEvent(right);
+    ok('šipka vpravo je defaultPrevented', right.defaultPrevented);
+    await wait(50);
+    const mid = pos();
+    ok('šipka neposune pás skokem (po 50 ms ' + (mid - (x0 - 90)).toFixed(0) + ' px z 300)', mid < x0 - 91 && mid > x0 - 389);
+    await wait(750);
+    ok('šipka vpravo posune pás o jednu kartu doleva', near(pos(), x0 - 390));
+    link.dispatchEvent(new win.KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true, cancelable: true }));
+    await wait(800);
+    ok('šipka vlevo ho vrátí', near(pos(), x0 - 90));
+  })());
+}
+
+run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE, 'https://www.eldr.cz/', wheelChecks);
 
 // Dočasná kopie pro custom code homepage (src/dev/) musí dělat totéž.
 (function () {
@@ -550,6 +626,12 @@ run('Pás recenzí — dotyk: zámek směru 45°', MARQUEE, 'https://www.eldr.cz
   domTouch.window.eval(dev);
   domTouch.window.document.dispatchEvent(new domTouch.window.Event('DOMContentLoaded'));
   touchChecks(domTouch.window, domTouch.window.document);
+
+  const domWheel = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE}</body></html>`,
+    { url: 'https://www.eldr.cz/', runScripts: 'outside-only', pretendToBeVisual: true });
+  domWheel.window.eval(dev);
+  domWheel.window.document.dispatchEvent(new domWheel.window.Event('DOMContentLoaded'));
+  wheelChecks(domWheel.window, domWheel.window.document);
 
   // Bundle i dev kopie na jedné stránce: pás řídí jen ten první.
   const both = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE}</body></html>`,
