@@ -1,0 +1,265 @@
+{
+  "base": "https://eldr.webflow.io",
+  "local": false,
+  "kdy": "2026-11-16T21:23:21.807Z",
+  "results": [
+    {
+      "name": "modul pás převzal (data-marquee-ready)",
+      "pass": true
+    },
+    {
+      "name": "běžná rychlost kolem -40 px/s",
+      "pass": true,
+      "detail": "-39.9 px/s"
+    },
+    {
+      "name": "wheel deltaX +300: pás ujede 300 px doleva",
+      "pass": true,
+      "detail": "-300.0 px"
+    },
+    {
+      "name": "wheel deltaX +300: všechny události defaultPrevented",
+      "pass": true,
+      "detail": "6 událostí"
+    },
+    {
+      "name": "wheel deltaX +300: stránka se nehnula",
+      "pass": true,
+      "detail": "scroll 0, 2982"
+    },
+    {
+      "name": "wheel deltaX -200: pás ujede 200 px doprava",
+      "pass": true,
+      "detail": "200.0 px"
+    },
+    {
+      "name": "wheel deltaX -200: defaultPrevented, stránka stojí",
+      "pass": true
+    },
+    {
+      "name": "smyčka doleva: po 8800 px pás dál kryje celý obal",
+      "pass": true,
+      "detail": "x -943, délka 8096"
+    },
+    {
+      "name": "smyčka doprava: pás se vrátí na stejné místo a kryje obal",
+      "pass": true,
+      "detail": "rozdíl 0.0 px"
+    },
+    {
+      "name": "svislý wheel: stránka scrolluje",
+      "pass": true,
+      "detail": "scrollY +180 px"
+    },
+    {
+      "name": "svislý wheel: žádná událost není defaultPrevented",
+      "pass": true
+    },
+    {
+      "name": "svislý wheel: pás se nepohnul",
+      "pass": true,
+      "detail": "0.0 px"
+    },
+    {
+      "name": "šikmé gesto s převahou X: pás ujede součet deltaX (160 px)",
+      "pass": true,
+      "detail": "-160.0 px"
+    },
+    {
+      "name": "šikmé gesto s převahou X: drží do konce, stránka stojí",
+      "pass": true,
+      "detail": "scrollY 2982 → 2982"
+    },
+    {
+      "name": "šikmé gesto s převahou Y: pás se nepohnul",
+      "pass": true,
+      "detail": "0.0 px"
+    },
+    {
+      "name": "šikmé gesto s převahou Y: nic není defaultPrevented, stránka scrolluje",
+      "pass": true,
+      "detail": "scrollY +160 px"
+    },
+    {
+      "name": "Shift + kolečko: pás ujede 200 px doleva",
+      "pass": true,
+      "detail": "-200.0 px, prohlížeč poslal {\"dx\":0,\"dy\":100,\"shift\":true,\"prevented\":true}"
+    },
+    {
+      "name": "Shift + kolečko: defaultPrevented, stránka stojí",
+      "pass": true
+    },
+    {
+      "name": "Shift + kolečko nahoru: pás ujede 100 px doprava",
+      "pass": true,
+      "detail": "100.0 px"
+    },
+    {
+      "name": "zašuměný začátek vodorovného gesta: pás ujede součet (63 px)",
+      "pass": true,
+      "detail": "-63.0 px, scrollY -1 px, prevented 011"
+    },
+    {
+      "name": "zašuměný začátek svislého gesta: stránka scrolluje, pás stojí",
+      "pass": true,
+      "detail": "scrollY +61 px"
+    },
+    {
+      "name": "wheel během tahu myší: zrušen, stránka i pás drží tah",
+      "pass": true,
+      "detail": "-15.0 px (tah 20 px minus 5 px prahu)"
+    },
+    {
+      "name": "kurzor nad pásem: 2,5 s po gestu pás stojí (hover má přednost)",
+      "pass": true,
+      "detail": "0.0 px/s"
+    },
+    {
+      "name": "po gestu: 0–0,9 s pás stojí",
+      "pass": true,
+      "detail": "0 0 0 0 0 0 0 0 0"
+    },
+    {
+      "name": "po gestu: pak plynulý náběh, největší změna mezi okny 100 ms",
+      "pass": true,
+      "detail": "8.0 px/s; -1 -9 -16 -21 -26 -29 -31 -33 -35 -36 -37 -38 -38 -39 -39 -39 -39 -39 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40"
+    },
+    {
+      "name": "po gestu: náběh je monotónní (rychlost jen roste směrem k -40)",
+      "pass": true
+    },
+    {
+      "name": "po gestu: konec na běžné rychlosti -40 px/s",
+      "pass": true,
+      "detail": "-40.0 -40.0 -40.0 -40.0 -40.0"
+    },
+    {
+      "name": "bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "krok = rozteč karet",
+      "pass": true,
+      "detail": "368.0 px (karta 352 px), fokus na kartě č. 2"
+    },
+    {
+      "name": "fokus z klávesnice pás zastaví",
+      "pass": true,
+      "detail": "0.0 px/s, :focus-visible true"
+    },
+    {
+      "name": "šipka vpravo: pás ujede o jednu kartu doleva",
+      "pass": true,
+      "detail": "-368.0 px"
+    },
+    {
+      "name": "šipka vpravo: plynule, ne skokem",
+      "pass": true,
+      "detail": "největší krok za snímek 57 px, pohyb trval 550 ms"
+    },
+    {
+      "name": "šipka vpravo: stránka se nehnula",
+      "pass": true
+    },
+    {
+      "name": "šipka vpravo: fokus na další kartě, na stejném místě obrazovky",
+      "pass": true,
+      "detail": "karta č. 2 → 3, left 279 → 279"
+    },
+    {
+      "name": "šipka vlevo: pás ujede o jednu kartu doprava",
+      "pass": true,
+      "detail": "368.0 px"
+    },
+    {
+      "name": "šipka vlevo: plynule, ne skokem",
+      "pass": true,
+      "detail": "největší krok za snímek 48 px, pohyb trval 533 ms"
+    },
+    {
+      "name": "šipka vlevo: fokus zpět na původní kartě",
+      "pass": true
+    },
+    {
+      "name": "držená šipka 1 s: jede po kartách, nestřádá je",
+      "pass": true,
+      "detail": "5.00 karty"
+    },
+    {
+      "name": "držená šipka: karta s fokusem zůstala na místě a obal se nenascrolloval",
+      "pass": true,
+      "detail": "karta č. 7, left 279, scrollLeft 0"
+    },
+    {
+      "name": "dva rychlé stisky: pás ujede o dvě karty",
+      "pass": true,
+      "detail": "-736.0 px"
+    },
+    {
+      "name": "Tab přejde na další kartu",
+      "pass": true,
+      "detail": "karta č. 9 → 10"
+    },
+    {
+      "name": "po opuštění pásu: plynulý rozjezd na -40 px/s",
+      "pass": true,
+      "detail": "největší změna 7.3 px/s; 0 0 -1 -8 -15 -21 -25 -28 -31 -33 -35 -36 -37 -38 -38 -39 -39 -39 -39 -39 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40 -40"
+    },
+    {
+      "name": "bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: modul wheel nezachytává, pás scrolluje nativně",
+      "pass": true,
+      "detail": "scrollLeft 120"
+    },
+    {
+      "name": "/: připnutý commit pásu",
+      "pass": true,
+      "detail": "3b7debd084d84c5a5c9614feb3a0f701cd7f8657"
+    },
+    {
+      "name": "/: v head GTM-W6PR2VX a 5 Finsweet",
+      "pass": true,
+      "detail": "cmsfilter, richtext, scrolldisable, attributes@2, cookie-consent"
+    },
+    {
+      "name": "/: 22 recenzí v HTML bez JS",
+      "pass": true,
+      "detail": "22 položek v prvním seznamu"
+    },
+    {
+      "name": "/en: připnutý commit pásu",
+      "pass": true,
+      "detail": "3b7debd084d84c5a5c9614feb3a0f701cd7f8657"
+    },
+    {
+      "name": "/en: v head GTM-W6PR2VX a 5 Finsweet",
+      "pass": true,
+      "detail": "cmsfilter, richtext, scrolldisable, attributes@2, cookie-consent"
+    },
+    {
+      "name": "/en: 22 recenzí v HTML bez JS",
+      "pass": true,
+      "detail": "22 položek v prvním seznamu"
+    },
+    {
+      "name": "/de: připnutý commit pásu",
+      "pass": true,
+      "detail": "3b7debd084d84c5a5c9614feb3a0f701cd7f8657"
+    },
+    {
+      "name": "/de: v head GTM-W6PR2VX a 5 Finsweet",
+      "pass": true,
+      "detail": "cmsfilter, richtext, scrolldisable, attributes@2, cookie-consent"
+    },
+    {
+      "name": "/de: 22 recenzí v HTML bez JS",
+      "pass": true,
+      "detail": "22 položek v prvním seznamu"
+    }
+  ]
+}

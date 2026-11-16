@@ -5,16 +5,25 @@ Zdroj pravdy o úkolech, cenách a termínech je dashboard (projekt
 
 ## Stav
 
-Aktualizováno 16. 11. 2026 (S9 #54; předtím 3. 11. koordinátor K02, předání K03). Časy v Europe/Prague.
+Aktualizováno 16. 11. 2026 večer (S10 #59; předtím S9 #54; předtím 3. 11. koordinátor K02, předání K03). Časy v Europe/Prague.
 
 - **Webflow:** produkce publikována **3. 11. 2026 09:51** (obě domény). Od 31. 10. přibylo jen: nadpis „Řekli o nás“ na homepage na středu (třída `testimonial21_header`) a tučné maximální výšky plošin na `/servisni-sluzby-a-pronajem-plosin` (CS/EN/DE, přání Myšky z 2. 11.).
 - **Dodávka 3. 11. odeslaná** Myškovi (e-mail 3. 11.). Faktura **28 200 Kč** po jeho kontrole (dashboard `460218ce`): formulář 6 500, strukturovaná data 4 500, popis produktů pro AI 12 500, recenze 2 500, blog 2 200. Úkoly dodávky jsou v dashboardu `done`.
 - **Blog:** 5 článků a 5 bannerů v CMS jako draft, čeká na obrázky od klienta (dashboard `e9fc3f7f`).
 - **Zbývá z října:** ruční kroky Lukáše (`cb1f8f9e`: Rich Results Test na 7 URL, výsledek do Docu 01; Make S4 #29), Designer drobnosti (`d30a2c84`), Cloudflare worker (`6d765415`), korektura překladů (`2474d5db`), EN text CTA (`bc1ab14c`).
 
+### Štafeta 16. 11. večer – S10 #59 pás recenzí: touchpad, kolečko, šipky
+
+- **Hotovo na stagingu, čeká na zkoušku Lukáše na Macu. Produkce se nepublikuje bez jeho souhlasu.**
+- **Co přibylo (PR #60, merge commit `3b7debd`):** vodorovné gesto dvěma prsty na touchpadu, vodorovné kolečko a Shift + kolečko posouvají pás, stránka přitom stojí. Svislé gesto scrolluje stránku. Osa se zamyká na celé gesto. Šipky vlevo a vpravo posunou pás o jednu kartu a fokus jde s ní. Vzhled beze změny, ve Webflow se nezměnil žádný styl.
+- **Webflow:** v patičce custom code homepage vyměněn jen hash → `3b7debd084d84c5a5c9614feb3a0f701cd7f8657`, čteno zpátky. Staging publikován 16. 11. 22:22:14 (`lastPublished` webu se pohnul, obě domény produkce zůstaly na 16. 11. 21:50:54). **Produkce dál načítá `7ea2076…`** (pás z #54: tah myší a prstem, bez touchpadu). Příští publikace produkce pustí ven i tuhle změnu.
+- **Ověření na stagingu** (Chromium): `scripts/overeni/s10-pas-wheel.js` 53/53, regrese #54 `s9-pas-recenzi.js` 61/61, smoke test 197 kontrol. Wheel +300 px posune pás o 300 px, `scrollX` i `scrollY` beze změny, všechny události `defaultPrevented`. Po gestu 0,9 s klid, pak náběh −1 → −9 → −16 → … → −40 px/s, největší změna mezi okny 8 px/s. V head `GTM-W6PR2VX` a 5 Finsweet, 22/22 recenzí v HTML ve 3 jazycích. Snímky a `vysledky.json` v `docs/snimky/s10/`.
+- **Na Lukášovi (Mac, Safari a Chrome na stagingu):** tah dvěma prsty do strany nad pásem nesmí spustit zpět/vpřed; dojezd touchpadu má působit přirozeně; svislý scroll přes pás nesmí drhnout. Z cloudu to ověřit nejde, Playwright posílá wheel jako kolečko myši. Pak souhlas s publikací produkce.
+- **K rozhodnutí:** kurzor při gestu leží nad pásem, takže pás po gestu stojí, dokud kurzor neodjede (hover má přednost, stejně jako po tahu myší z #54).
+
 ### Štafeta 16. 11. – S9 #54 pás recenzí: tah myší a prstem
 
-- **Hotovo na stagingu po opravě, čeká na zkoušku Lukáše na telefonu. Produkce se nepublikuje, dokud ji nepotvrdí.**
+- **Na produkci od 16. 11. 21:50 (pin `7ea2076`, publikoval koordinátor).** Odstavce níž popisují stav před publikací.
 - **Dopoledne (PR #55, #56):** tah myší a prstem, setrvačnost, potlačení kliku. Lukáš na telefonu vrátil: není to plynulé a tah jde jen „perfektně rovně do strany“.
 - **Oprava odpoledne (PR #57, merge commit `7ea2076`):** o směru gesta rozhoduje modul (do 45° tah, drží až do puštění; strmější pohyb scrolluje stránku). Dotyk a pero jdou přes Touch Events s nepasivním `touchmove`. Po hození pás nezastavuje, rychlost přechází rovnou do −40 px/s. Pauza 1 s jen po puštění bez hození. Vzhled beze změny, ve Webflow se nezměnil žádný styl.
 - **Webflow:** v patičce custom code homepage vyměněn jen hash → `7ea2076fb17a824e71d9ded33569846865f1fb91`, čteno zpátky. Staging publikován 16. 11. 15:43:27 (`lastPublished` webu se pohnul, domény produkce zůstaly na 15. 11. 23:40:19). **Produkce dál načítá `c76921a…`**, tedy pás bez tahu.
