@@ -32,6 +32,7 @@ const near = (a, b, tol) => Math.abs(a - b) <= tol;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function open(browser, options, url) {
+  // ignoreHTTPSErrors: cloudová session jde ven přes proxy s vlastní certifikační autoritou.
   const context = await browser.newContext({ ignoreHTTPSErrors: true, locale: 'cs-CZ', ...options });
   if (LOCAL) {
     await context.route(/cdn\.jsdelivr\.net\/gh\/lukas-webkit-studio\/eldr@[^/]+\/src\/dev\/testimonial-marquee\.js/, route =>
@@ -203,6 +204,23 @@ async function desktop(browser) {
   await sleep(4500);
   const f3 = await speed(page, 600);
   ok('po dojezdu a pauze zase běžná rychlost', near(f3, -40, 4), f3.toFixed(1) + ' px/s');
+
+  // stisk během dojezdu: pás se zastaví hned a karta pod kurzorem se neotevře
+  await page.mouse.move(900, cy);
+  await sleep(500);
+  await page.mouse.down();
+  for (let i = 1; i <= 8; i++) await page.mouse.move(900 - i * 40, cy);
+  await page.mouse.up();
+  await sleep(100);
+  await page.mouse.down();
+  await sleep(80);
+  const caught = await speed(page, 300);
+  await page.mouse.up();
+  await sleep(400);
+  ok('stisk během dojezdu pás hned zastaví', near(caught, 0, 2), caught.toFixed(1) + ' px/s');
+  ok('stisk, který zastavil dojezd, neotevře kartu', page.url() === url0, page.url());
+  await page.mouse.move(700, 20);
+  await sleep(4500);
 
   // tah, který skončí mimo pás: pás nesmí zůstat stát
   await page.mouse.move(700, cy);

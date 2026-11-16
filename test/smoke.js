@@ -360,8 +360,8 @@ run('Nahrávání příloh — čeština zůstává podle Designeru',
 const MARQUEE = `<div class="testimonial21_marquee"><div class="testimonial21_track"><div><a href="/reference#a" class="testimonial21_card">a</a></div><div aria-hidden="true"><a href="/reference#a" class="testimonial21_card">a</a></div></div></div>`;
 
 // jsdom nemá PointerEvent, modul čte jen pole, která tu doplníme.
-function pointer(win, type, x, y) {
-  const e = new win.MouseEvent(type, { bubbles: true, cancelable: true, clientX: x, clientY: y, button: 0 });
+function pointer(win, type, x, y, buttons = 1) {
+  const e = new win.MouseEvent(type, { bubbles: true, cancelable: true, clientX: x, clientY: y, button: 0, buttons });
   Object.defineProperties(e, { pointerId: { value: 1 }, pointerType: { value: 'mouse' }, isPrimary: { value: true } });
   return e;
 }
@@ -372,7 +372,9 @@ function marqueeChecks(win, doc) {
   const link = doc.querySelector('a');
   ok('obal má ořez jen při animaci', m.style.overflow === 'hidden');
   ok('obal je označený jako spuštěný', m.hasAttribute('data-marquee-ready'));
-  ok('svislý scroll stránky zůstává prohlížeči (touch-action: pan-y)', m.style.touchAction === 'pan-y');
+  ok('svislý scroll a zoom stránky zůstávají prohlížeči (touch-action)', m.style.touchAction === 'pan-y pinch-zoom');
+  // jsdom nepočítá rozměry; bez šířky by se normalizace smyčky vůbec neprovedla.
+  Object.defineProperty(track, 'scrollWidth', { value: 2000 });
   ok('kurzor grab na pásu i na kartě', m.style.cursor === 'grab' && link.style.cursor === 'grab');
 
   let clicks = 0;
@@ -388,6 +390,13 @@ function marqueeChecks(win, doc) {
   ok('svislý pohyb tah nespustí', !m.hasAttribute('data-marquee-dragging'));
   m.dispatchEvent(pointer(win, 'pointerup', 100, 90));
 
+  // Puštění tlačítka se ztratilo (kontextové menu): další pohyb bez tlačítka tah nespustí.
+  m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
+  m.dispatchEvent(pointer(win, 'pointermove', 160, 50, 0));
+  ok('pohyb bez stisknutého tlačítka tah nespustí', !m.hasAttribute('data-marquee-dragging'));
+  m.dispatchEvent(pointer(win, 'pointermove', 220, 50, 0));
+  ok('ani další pohyb pás nepřilepí ke kurzoru', !m.hasAttribute('data-marquee-dragging'));
+
   m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
   m.dispatchEvent(pointer(win, 'pointermove', 110, 51));
   m.dispatchEvent(pointer(win, 'pointermove', 190, 52));
@@ -402,7 +411,7 @@ function marqueeChecks(win, doc) {
   // Vykreslení jde přes requestAnimationFrame, proto se čeká.
   pending.push(new Promise(resolve => setTimeout(resolve, 80)).then(() => {
     const x = parseFloat((track.style.transform.match(/translate3d\(([-\d.]+)px/) || [])[1]);
-    ok('tah doprava posune pás doprava (kladný posun, ' + x + ' px)', x > 70 && x < 90);
+    ok('tah doprava o 80 px přetočí smyčku (polovina 1000 px, posun ' + x + ' px)', x > -935 && x < -905);
     m.dispatchEvent(pointer(win, 'pointerup', 190, 52));
     ok('po puštění je kurzor zpět grab a karty reagují', m.style.cursor === 'grab' && track.style.pointerEvents === '');
     link.click();
@@ -421,7 +430,7 @@ run('Pás recenzí — modul převezme ořez, tah posouvá pás a potlačí klik
   const read = f => fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
   const mod = read('src/modules/45-testimonial-marquee.js');
   const dev = read('src/dev/testimonial-marquee.js');
-  const body = (src, end) => src.slice(src.indexOf('  var SPEED = 40;'), src.indexOf(end));
+  const body = (src, end) => src.slice(src.indexOf('  var SPEED'), src.indexOf(end));
   console.log('\nPás recenzí — dev kopie (src/dev/testimonial-marquee.js)');
   ok('tělo dev kopie je shodné s modulem',
     body(mod, '  onReady(function () {') === body(dev, '  function start() {') && body(dev, '  function start() {').length > 1000);
@@ -443,13 +452,12 @@ run('Pás recenzí — modul převezme ořez, tah posouvá pás a potlačí klik
   both.window.eval(bundle);
   both.window.document.dispatchEvent(new both.window.Event('DOMContentLoaded'));
   const m = both.window.document.querySelector('.testimonial21_marquee');
-  let clicks = 0;
-  const link = both.window.document.querySelector('a');
-  link.addEventListener('click', e => { clicks++; e.preventDefault(); });
+  let captures = 0;
+  m.setPointerCapture = () => { captures++; };
   m.dispatchEvent(pointer(both.window, 'pointerdown', 100, 50));
-  m.dispatchEvent(pointer(both.window, 'pointerup', 100, 50));
-  link.click();
-  ok('bundle + dev kopie: pojistka data-marquee-ready, klik projde jednou', clicks === 1);
+  m.dispatchEvent(pointer(both.window, 'pointermove', 140, 50));
+  m.dispatchEvent(pointer(both.window, 'pointerup', 140, 50));
+  ok('bundle + dev kopie: pás řídí jen jeden (pojistka data-marquee-ready)', captures === 1);
 })();
 
 // --- 7. prázdná stránka ---------------------------------------------------

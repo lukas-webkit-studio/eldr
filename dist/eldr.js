@@ -1196,8 +1196,16 @@ function locale() {
    Webflow: platí jen tehdy, když pás řídí tenhle modul. Bez JS a při
    prefers-reduced-motion se pás posouvá nativně (overflow-x: auto)
    a touch-action: pan-y na třídě by tam vodorovný posun prstem zakázal.
-   Style panel selektor [data-marquee-ready] zapsat neumí. cursor: grabbing
-   se navíc mění za běhu.
+   Style panel selektor [data-marquee-ready] zapsat neumí. Kombo třída
+   přepínaná z JS by šla, ale stav by žil na dvou místech a třídu, kterou
+   v Designeru žádný prvek nenese, smaže úklid stylů. cursor: grabbing
+   a user-select se navíc mění za běhu.
+
+   Karty jsou odkazy a mají vlastní cursor: pointer. Protože zabírají skoro
+   celý pás, dostávají grab i ony; že jdou otevřít, ukazuje rámeček při
+   hoveru (rozhodnutí v docs/decisions.md, 16. 11. 2026).
+
+   data-marquee-dragging: obal ho nese po dobu tahu. Čtou ho jen testy.
 
    prefers-reduced-motion: modul nic nespustí, pás stojí a jde posouvat
    ručně (overflow-x: auto). Bez JS platí totéž.
@@ -1226,10 +1234,8 @@ function locale() {
 
     // Ořez jen při animaci, jinak má jít pás posunout ručně.
     root.style.overflow = 'hidden';
-    // Svislé scrollování stránky nechává prohlížeči, vodorovný tah je náš.
-    root.style.touchAction = 'pan-y';
-    root.style.userSelect = 'none';
-    root.style.webkitUserSelect = 'none';
+    // Svislé scrollování a zoom dvěma prsty nechává prohlížeči, vodorovný tah je náš.
+    root.style.touchAction = 'pan-y pinch-zoom';
     setCursor('grab');
 
     var x = 0; // posun pásu v px, drží se v rozsahu (-half, 0]
@@ -1244,7 +1250,9 @@ function locale() {
     var dragging = false;
     var coasting = false; // dojezd setrvačností
     var holdUntil = 0; // do kdy pás po interakci stojí (čas z performance.now)
+    var caught = false; // stisk zastavil dojíždějící pás
     var suppressClick = false;
+    var suppressUntil = 0;
 
     var pointerId = null;
     var downX = 0;
@@ -1342,15 +1350,26 @@ function locale() {
 
     /* --- tah --------------------------------------------------------------- */
 
+    // Výběr textu se vypíná jen po dobu stisku, jinak jde recenze označit.
+    function setSelectable(on) {
+      root.style.userSelect = on ? '' : 'none';
+      root.style.webkitUserSelect = on ? '' : 'none';
+    }
+
+    // Klik přichází hned po pointerup. Kdyby nepřišel, příští klik nesmí zmizet,
+    // proto má potlačení i časový strop.
+    function swallowClick(now) {
+      suppressClick = true;
+      suppressUntil = now + 300;
+    }
+
     function endDrag(fling) {
+      if (pointerId === null) return;
       var now = clock();
+      setSelectable(true);
       if (dragging) {
         dragging = false;
-        suppressClick = true;
-        // Klik přichází hned po pointerup; kdyby nepřišel, příští klik nesmí zmizet.
-        setTimeout(function () {
-          suppressClick = false;
-        }, 0);
+        swallowClick(now);
         track.style.pointerEvents = '';
         setCursor('grab');
         root.removeAttribute('data-marquee-dragging');
@@ -1362,7 +1381,12 @@ function locale() {
           v = 0;
           holdUntil = now + RESUME_DELAY;
         }
+      } else if (caught) {
+        // Stisk jen zastavil dojezd: karta pod prstem se nemá otevřít.
+        swallowClick(now);
+        holdUntil = now + RESUME_DELAY;
       }
+      caught = false;
       // Tah mohl skončit mimo pás. Zachycený ukazatel pointerleave neposlal.
       if (lastEvent && lastEvent.pointerType === 'mouse') {
         var box = root.getBoundingClientRect();
@@ -1398,8 +1422,12 @@ function locale() {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
       pointerId = e.pointerId;
       pressed = true;
+      // Chycení dojíždějícího pásu ho zastaví hned.
+      caught = coasting;
+      if (coasting) v = 0;
       coasting = false;
       suppressClick = false;
+      setSelectable(false);
       downX = e.clientX;
       downY = e.clientY;
       samples = [];
@@ -1410,14 +1438,20 @@ function locale() {
     root.addEventListener('pointermove', function (e) {
       if (e.pointerId !== pointerId) return;
       lastEvent = e;
+      // Puštění tlačítka se k nám nedostalo (kontextové menu, puštění mimo pás).
+      if (e.pointerType === 'mouse' && e.buttons === 0) {
+        endDrag(false);
+        return;
+      }
 
       if (!dragging) {
         var dx = e.clientX - downX;
         var dy = e.clientY - downY;
         if (Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
         if (Math.abs(dy) >= Math.abs(dx)) {
-          // Svislý pohyb: stránka scrolluje, pás jede dál.
-          endDrag(false);
+          // Svislý pohyb myší tah ruší. U dotyku rozhoduje prohlížeč: když
+          // začne scrollovat, pošle pointercancel, jinak čekáme na další pohyb.
+          if (e.pointerType === 'mouse') endDrag(false);
           return;
         }
         dragging = true;
@@ -1442,14 +1476,18 @@ function locale() {
       run();
     });
 
-    root.addEventListener('pointerup', function (e) {
+    // Na window: před zachycením ukazatele může puštění přijít mimo pás.
+    window.addEventListener('pointerup', function (e) {
       if (e.pointerId !== pointerId) return;
       lastEvent = e;
       endDrag(true);
     });
     // pointercancel: prohlížeč si gesto vzal pro svislý scroll stránky.
-    root.addEventListener('pointercancel', function (e) {
+    window.addEventListener('pointercancel', function (e) {
       if (e.pointerId === pointerId) endDrag(false);
+    });
+    window.addEventListener('blur', function () {
+      endDrag(false);
     });
     // Jen ztráta zachycení na pásu. Dotyk je nejdřív zachycený na kartě
     // a její lostpointercapture sem probublá ve chvíli, kdy tah začíná.
@@ -1464,6 +1502,7 @@ function locale() {
       function (e) {
         if (!suppressClick) return;
         suppressClick = false;
+        if (clock() > suppressUntil) return;
         e.preventDefault();
         e.stopPropagation();
       },
