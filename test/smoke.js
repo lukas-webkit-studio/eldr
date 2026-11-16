@@ -357,14 +357,108 @@ run('Nahrávání příloh — čeština zůstává podle Designeru',
   });
 
 // --- 6b. pás recenzí ------------------------------------------------------
-run('Pás recenzí — modul převezme ořez a nespustí se dvakrát',
-  `<div class="testimonial21_marquee"><div class="testimonial21_track"><div>a</div><div aria-hidden="true">a</div></div></div>`,
-  'https://www.eldr.cz/',
-  (win, doc) => {
-    const m = doc.querySelector('.testimonial21_marquee');
-    ok('obal má ořez jen při animaci', m.style.overflow === 'hidden');
-    ok('obal je označený jako spuštěný', m.hasAttribute('data-marquee-ready'));
-  });
+const MARQUEE = `<div class="testimonial21_marquee"><div class="testimonial21_track"><div><a href="/reference#a" class="testimonial21_card">a</a></div><div aria-hidden="true"><a href="/reference#a" class="testimonial21_card">a</a></div></div></div>`;
+
+// jsdom nemá PointerEvent, modul čte jen pole, která tu doplníme.
+function pointer(win, type, x, y, buttons = 1) {
+  const e = new win.MouseEvent(type, { bubbles: true, cancelable: true, clientX: x, clientY: y, button: 0, buttons });
+  Object.defineProperties(e, { pointerId: { value: 1 }, pointerType: { value: 'mouse' }, isPrimary: { value: true } });
+  return e;
+}
+
+function marqueeChecks(win, doc) {
+  const m = doc.querySelector('.testimonial21_marquee');
+  const track = m.firstElementChild;
+  const link = doc.querySelector('a');
+  ok('obal má ořez jen při animaci', m.style.overflow === 'hidden');
+  ok('obal je označený jako spuštěný', m.hasAttribute('data-marquee-ready'));
+  ok('svislý scroll a zoom stránky zůstávají prohlížeči (touch-action)', m.style.touchAction === 'pan-y pinch-zoom');
+  // jsdom nepočítá rozměry; bez šířky by se normalizace smyčky vůbec neprovedla.
+  Object.defineProperty(track, 'scrollWidth', { value: 2000 });
+  ok('kurzor grab na pásu i na kartě', m.style.cursor === 'grab' && link.style.cursor === 'grab');
+
+  let clicks = 0;
+  link.addEventListener('click', e => { clicks++; e.preventDefault(); });
+
+  m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
+  m.dispatchEvent(pointer(win, 'pointerup', 101, 50));
+  link.click();
+  ok('klik bez tahu projde', clicks === 1);
+
+  m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
+  m.dispatchEvent(pointer(win, 'pointermove', 100, 90));
+  ok('svislý pohyb tah nespustí', !m.hasAttribute('data-marquee-dragging'));
+  m.dispatchEvent(pointer(win, 'pointerup', 100, 90));
+
+  // Puštění tlačítka se ztratilo (kontextové menu): další pohyb bez tlačítka tah nespustí.
+  m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
+  m.dispatchEvent(pointer(win, 'pointermove', 160, 50, 0));
+  ok('pohyb bez stisknutého tlačítka tah nespustí', !m.hasAttribute('data-marquee-dragging'));
+  m.dispatchEvent(pointer(win, 'pointermove', 220, 50, 0));
+  ok('ani další pohyb pás nepřilepí ke kurzoru', !m.hasAttribute('data-marquee-dragging'));
+
+  m.dispatchEvent(pointer(win, 'pointerdown', 100, 50));
+  m.dispatchEvent(pointer(win, 'pointermove', 110, 51));
+  m.dispatchEvent(pointer(win, 'pointermove', 190, 52));
+  ok('při tahu je kurzor grabbing a karty nereagují',
+    m.style.cursor === 'grabbing' && track.style.pointerEvents === 'none' && m.hasAttribute('data-marquee-dragging'));
+
+  // Dotyk je nejdřív zachycený na kartě; když si ukazatel převezme pás,
+  // karta pošle lostpointercapture. Ten tah ukončit nesmí.
+  link.dispatchEvent(pointer(win, 'lostpointercapture', 190, 52));
+  ok('lostpointercapture z karty tah neukončí', m.hasAttribute('data-marquee-dragging'));
+
+  // Vykreslení jde přes requestAnimationFrame, proto se čeká.
+  pending.push(new Promise(resolve => setTimeout(resolve, 80)).then(() => {
+    const x = parseFloat((track.style.transform.match(/translate3d\(([-\d.]+)px/) || [])[1]);
+    ok('tah doprava o 80 px přetočí smyčku (polovina 1000 px, posun ' + x + ' px)', x > -935 && x < -905);
+    m.dispatchEvent(pointer(win, 'pointerup', 190, 52));
+    ok('po puštění je kurzor zpět grab a karty reagují', m.style.cursor === 'grab' && track.style.pointerEvents === '');
+    link.click();
+    ok('klik hned po tahu se potlačí', clicks === 1);
+    link.click();
+    ok('další klik už projde', clicks === 2);
+  }));
+}
+
+run('Pás recenzí — modul převezme ořez, tah posouvá pás a potlačí klik',
+  MARQUEE, 'https://www.eldr.cz/', marqueeChecks);
+
+// Dočasná kopie pro custom code homepage (src/dev/) musí dělat totéž.
+(function () {
+  const path = require('path');
+  const read = f => fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
+  const mod = read('src/modules/45-testimonial-marquee.js');
+  const dev = read('src/dev/testimonial-marquee.js');
+  const body = (src, end) => src.slice(src.indexOf('  var SPEED'), src.indexOf(end));
+  console.log('\nPás recenzí — dev kopie (src/dev/testimonial-marquee.js)');
+  ok('tělo dev kopie je shodné s modulem',
+    body(mod, '  onReady(function () {') === body(dev, '  function start() {') && body(dev, '  function start() {').length > 1000);
+
+  const dom = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE}</body></html>`,
+    { url: 'https://www.eldr.cz/', runScripts: 'outside-only', pretendToBeVisual: true });
+  let error = null;
+  try {
+    dom.window.eval(dev);
+    dom.window.document.dispatchEvent(new dom.window.Event('DOMContentLoaded'));
+  } catch (e) { error = e; }
+  ok('dev kopie proběhla bez výjimky', !error);
+  marqueeChecks(dom.window, dom.window.document);
+
+  // Bundle i dev kopie na jedné stránce: pás řídí jen ten první.
+  const both = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE}</body></html>`,
+    { url: 'https://www.eldr.cz/', runScripts: 'outside-only', pretendToBeVisual: true });
+  both.window.eval(dev);
+  both.window.eval(bundle);
+  both.window.document.dispatchEvent(new both.window.Event('DOMContentLoaded'));
+  const m = both.window.document.querySelector('.testimonial21_marquee');
+  let captures = 0;
+  m.setPointerCapture = () => { captures++; };
+  m.dispatchEvent(pointer(both.window, 'pointerdown', 100, 50));
+  m.dispatchEvent(pointer(both.window, 'pointermove', 140, 50));
+  m.dispatchEvent(pointer(both.window, 'pointerup', 140, 50));
+  ok('bundle + dev kopie: pás řídí jen jeden (pojistka data-marquee-ready)', captures === 1);
+})();
 
 // --- 7. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
