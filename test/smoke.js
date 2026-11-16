@@ -473,6 +473,30 @@ function touchChecks(win, doc) {
   send('touchstart', [140, 104], [200, 300]);
   ok('druhý prst tah ukončí (zoom)', !dragging());
   send('touchend');
+
+  // Tah prstem pás opravdu posune a po hození pás nezastaví.
+  const track = m.firstElementChild;
+  const pos = () => parseFloat((track.style.transform.match(/translate3d\(([-\d.]+)px/) || [])[1]);
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  pending.push(wait(50).then(() => {
+    const before = pos();
+    send('touchstart', [300, 100]);
+    send('touchmove', [290, 101]);
+    send('touchmove', [200, 110]);
+    return wait(50).then(() => {
+      ok('tah prstem o 90 px doleva posune pás o 90 px', Math.abs(pos() - before + 90) < 3);
+      send('touchmove', [150, 112]);
+      send('touchend');
+      const a = pos();
+      return wait(100).then(() => {
+        const b = pos();
+        return wait(100).then(() => {
+          const c = pos();
+          ok('po hození doleva pás jede dál doleva a zpomaluje, bez zastavení', b < a - 5 && c < b - 5 && a - b > b - c);
+        });
+      });
+    });
+  }));
 }
 
 run('Pás recenzí — dotyk: zámek směru 45°', MARQUEE, 'https://www.eldr.cz/', touchChecks);

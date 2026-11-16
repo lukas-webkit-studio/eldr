@@ -3,17 +3,32 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-11-16 · S9 · Oprava po zkoušce na telefonu (#54)
+
+Lukáš 16. 11. na telefonu: „není to moc smooth (ve stylu třeba dojezdu setrvačností), ale taky musím jet perfektně rovně do strany“.
+
+- **O směru gesta rozhoduje modul, ne prohlížeč.** Po 5 px: do 45° od vodorovné je to tah pásu, strmější pohyb je scroll stránky. Zámek platí až do puštění, i když prst ujede svisle.
+- **Dotyk jde přes Touch Events, myš a pero přes Pointer Events.** S pouhým `touch-action: pan-y` rozhoduje prohlížeč a tah ukončí `pointercancel`. Spolehlivě tomu brání jen `preventDefault()` v nepasivním `touchmove`. Listener je jen na obalu pásu, scroll zbytku stránky neovlivní.
+- **Po hození pás nezastavuje.** Rychlost puštění přechází jednou křivkou (útlum 2/s) rovnou do běžných −40 px/s. Hození doprava projde nulou a rozjede se doleva. Hover myší a fokus z klávesnice mají dál přednost, pod nimi pás zastaví.
+- **Pauza 1 s jen po puštění bez hození** (pomaleji než 50 px/s), pak rozjezd stejným dorovnáním jako hover (2,5/s).
+- **Rychlost puštění** je vážený průměr úseků z posledních 100 ms, novější váží víc. Mezera mezi posledním pohybem a puštěním nad 30 ms ji plynule snižuje k nule.
+- **`will-change` jsem nepřidal.** Vlastní vrstvu už dělá `translate3d`. Snímkové časy v Chromiu se zpomaleným CPU 4× jsou bez něj 16,7 ms, žádný snímek nad 20 ms.
+- **Obrázky trhání nezpůsobují:** 22 souborů, dohromady 1,04 MB, největší 106 kB (po zmenšení v S7).
+- **První pixely tahu pás nedostane.** Prohlížeč pohyb do zhruba 10 px neposílá a pás se po zámku chytí bez skoku, takže za prstem zaostává o tuhle vzdálenost. Stejně se chovají běžné slidery.
+- **Nejde ověřit odsud:** iOS Safari. WebKit v cloudové session není a Playwright v něm stejně neumí skutečné dotykové gesto. Ověřeno v Chromiu s emulací dotyku, telefon potvrzuje Lukáš.
+- **Mimo `npm run check`:** průběh rychlosti po hození a pauzu měří jen `scripts/overeni/s9-pas-recenzi.js` v prohlížeči. Smoke test hlídá zámek směru, posun prstem a to, že pás po hození jede dál.
+
 ## 2026-11-16 · S9 · Pás recenzí: tah myší a prstem (#54)
 
 - **`cursor`, `touch-action` a `user-select` jsou v JS jako inline styl, ne na třídě ve Webflow.** Platí jen tehdy, když pás řídí modul. Bez JS a při `prefers-reduced-motion` se pás posouvá nativně (`overflow-x: auto`) a `touch-action: pan-y` na třídě by tam vodorovný posun prstem zakázal. Style panel selektor `[data-marquee-ready]` zapsat neumí. Ve Webflow se kvůli S9 nezměnil žádný styl.
 - **Kurzor `grab` je i nad kartami**, i když jsou to odkazy. Karty zabírají skoro celý pás, jinak by `grab` nebyl vidět. Že je karta klikací, dál ukazuje žlutý rámeček při hoveru.
-- **Hover má přednost před rozjezdem.** Po tahu myší pás stojí, dokud je kurzor nad ním, a rozjede se 2 s po puštění až po odjetí myši. Odpovídá to schválenému chování z #26 (hover = stop). Na dotyku hover není, tam se rozjede vždy.
+- **Hover má přednost před rozjezdem.** Po tahu myší pás stojí, dokud je kurzor nad ním, a rozjede se až po odjetí myši. Odpovídá to schválenému chování z #26 (hover = stop). Na dotyku hover není, tam se rozjede vždy.
 - **Hover se čte z Pointer Events a jen pro myš.** Po ťuknutí prstem posílá prohlížeč náhradní `mouseenter` a pás by stál až do ťuknutí jinam.
 - **Fokus zastaví pás jen z klávesnice** (`:focus-visible`). Chrome dává odkazu fokus i po stisku myši; pás by po tahu zůstal stát.
 - **Výběr textu je vypnutý jen po dobu stisku.** Recenzi jde dál označit dvojklikem a zkopírovat. `touch-action` je `pan-y pinch-zoom`, zoom dvěma prsty funguje i nad pásem.
-- **Stisk během dojezdu pás hned zastaví** a kartu pod prstem neotevře. Pás se pak rozjede po 2 s jako po tahu.
+- **Stisk během dojezdu pás hned zastaví** a kartu pod prstem neotevře. Pás se pak rozjede po pauze jako po puštění bez hození.
 - **Kontrola u dvou stolů našla dvě vady, obě opravené:** ztracené puštění tlačítka (kontextové menu, puštění mimo pás před prahem) nechalo pás stát a pak ho přilepilo ke kurzoru; chycený dojezd jel pod prstem dál. K tomu oprava z ladění v prohlížeči: na dotyku tah ukončil `lostpointercapture` z karty.
-- **Čísla:** práh tahu 6 px, setrvačnost s útlumem 4/s (dojezd = rychlost / 4, strop 3 000 px/s), pauza 2 s od puštění nebo dojezdu, rozjezd stejným dorovnáním jako hover (2,5/s). Svislý pohyb na začátku gesta tah zruší a stránka scrolluje.
+- **Čísla platí od opravy 16. 11. odpoledne**, viz oddíl níž. Původní hodnoty (práh 6 px, útlum 4/s, pauza 2 s po každém puštění) Lukáš na telefonu odmítl.
 - **Dev kopie a modul mají shodné tělo**, hlídá to `test/smoke.js`. Liší se hlavičkou a spuštěním (dev kopie nemá pomocníky z `00-core.js`).
 - **Ověření v prohlížeči** je skript `scripts/overeni/s9-pas-recenzi.js` (Playwright není závislost repa, v cloudové session je globálně). `--local` podstrčí dev kopii z pracovního adresáře místo jsDelivr.
 

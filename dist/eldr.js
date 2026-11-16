@@ -1193,14 +1193,18 @@ function locale() {
      - po hození pás nezastavuje: rychlost puštění plynule přejde rovnou
        do běžného posunu (hození doprava projde nulou a rozjede se doleva)
      - po puštění bez hození pás RESUME_DELAY stojí a pak se plynule rozjede
-     - dokud je nad pásem myš nebo fokus z klávesnice, stojí dál
+     - hover myší a fokus z klávesnice mají přednost: dokud trvají, pás
+       po hození i po pauze plynule zastaví a stojí
      - po tahu se nespustí klik na kartu
 
-   Dotyk jde přes Touch Events, myš a pero přes Pointer Events. Důvod:
-   iOS Safari předá gesto scrollu stránky podle vlastní, úzké tolerance
-   a pošle pointercancel. Zabránit tomu jde jen voláním preventDefault()
-   v nepasivním touchmove hned u prvního pohybu vyhodnoceného jako
-   vodorovný. touch-action: pan-y zůstává jako nápověda pro ostatní.
+   Dotyk jde přes Touch Events, myš a pero přes Pointer Events. Důvod
+   návrhu: s pouhým touch-action: pan-y rozhoduje o směru prohlížeč a když
+   gesto vyhodnotí jako svislé, pošle pointercancel. Lukáš 16. 11. 2026 na
+   telefonu hlásil, že tah jde jen „perfektně rovně do strany“. Jistě tomu
+   zabrání jen preventDefault() v nepasivním touchmove u prvního pohybu
+   vyhodnoceného jako vodorovný. touch-action: pan-y pinch-zoom zůstává
+   jako nápověda. Ověřeno v Chromiu s emulací dotyku; na skutečném iPhonu
+   to potvrzuje Lukáš.
 
    Proč jsou cursor, touch-action a user-select tady, a ne na třídě ve
    Webflow: platí jen tehdy, když pás řídí tenhle modul. Bez JS a při
@@ -1248,8 +1252,6 @@ function locale() {
     // Nápověda prohlížeči: svislý scroll a zoom dvěma prsty jsou jeho,
     // vodorovný tah náš. O směru na dotyku rozhoduje touchmove níž.
     root.style.touchAction = 'pan-y pinch-zoom';
-    // Pás se hýbe pořád, vlastní vrstva ušetří překreslování karet.
-    track.style.willChange = 'transform';
     setCursor('grab');
 
     var x = 0; // posun pásu v px, drží se v rozsahu (-half, 0]
@@ -1582,9 +1584,9 @@ function locale() {
       { passive: true }
     );
 
-    // Nepasivní: preventDefault() u vodorovného tahu je jediný způsob, jak
-    // iOS Safari zabránit, aby gesto předal scrollu stránky. Musí zaznít
-    // hned u prvního pohybu, potom už scroll zrušit nejde.
+    // Nepasivní: preventDefault() u vodorovného tahu brání prohlížeči, aby
+    // gesto předal scrollu stránky. Musí zaznít u prvního pohybu, který
+    // zámek vyhodnotí jako vodorovný; jakmile scroll začne, zrušit nejde.
     root.addEventListener(
       'touchmove',
       function (e) {

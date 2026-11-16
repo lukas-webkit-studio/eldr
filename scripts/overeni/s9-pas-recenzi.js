@@ -237,7 +237,7 @@ async function desktop(browser) {
   await page.mouse.up();
   ok('tah doprava nespustil klik', page.url() === url0);
 
-  // puštění bez setrvačnosti, myš pryč z pásu: rychlost po 1, 3 a 5 s
+  // puštění bez hození, myš pryč z pásu: rychlost po 0,5, 2 a 4 s
   await page.mouse.move(700, cy);
   await page.mouse.down();
   await page.mouse.move(600, cy, { steps: 10 });
@@ -272,7 +272,7 @@ async function desktop(browser) {
   ok('setrvačnost: pás dojel dál než tah', delta(a, b) < -340, delta(a, b).toFixed(0) + ' px celkem, tah 320 px');
   await sleep(4500);
   const f3 = await speed(page, 600);
-  ok('po dojezdu a pauze zase běžná rychlost', near(f3, -40, 4), f3.toFixed(1) + ' px/s');
+  ok('po hození zase běžná rychlost', near(f3, -40, 4), f3.toFixed(1) + ' px/s');
 
   // stisk během dojezdu: pás se zastaví hned a karta pod kurzorem se neotevře
   await page.mouse.move(900, cy);

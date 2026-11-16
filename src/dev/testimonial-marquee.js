@@ -37,8 +37,6 @@
     // Nápověda prohlížeči: svislý scroll a zoom dvěma prsty jsou jeho,
     // vodorovný tah náš. O směru na dotyku rozhoduje touchmove níž.
     root.style.touchAction = 'pan-y pinch-zoom';
-    // Pás se hýbe pořád, vlastní vrstva ušetří překreslování karet.
-    track.style.willChange = 'transform';
     setCursor('grab');
 
     var x = 0; // posun pásu v px, drží se v rozsahu (-half, 0]
@@ -371,9 +369,9 @@
       { passive: true }
     );
 
-    // Nepasivní: preventDefault() u vodorovného tahu je jediný způsob, jak
-    // iOS Safari zabránit, aby gesto předal scrollu stránky. Musí zaznít
-    // hned u prvního pohybu, potom už scroll zrušit nejde.
+    // Nepasivní: preventDefault() u vodorovného tahu brání prohlížeči, aby
+    // gesto předal scrollu stránky. Musí zaznít u prvního pohybu, který
+    // zámek vyhodnotí jako vodorovný; jakmile scroll začne, zrušit nejde.
     root.addEventListener(
       'touchmove',
       function (e) {
