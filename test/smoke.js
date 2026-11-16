@@ -360,9 +360,9 @@ run('Nahrávání příloh — čeština zůstává podle Designeru',
 const MARQUEE = `<div class="testimonial21_marquee"><div class="testimonial21_track"><div><a href="/reference#a" class="testimonial21_card">a</a></div><div aria-hidden="true"><a href="/reference#a" class="testimonial21_card">a</a></div></div></div>`;
 
 // jsdom nemá PointerEvent, modul čte jen pole, která tu doplníme.
-function pointer(win, type, x, y, buttons = 1) {
+function pointer(win, type, x, y, buttons = 1, pointerType = 'mouse') {
   const e = new win.MouseEvent(type, { bubbles: true, cancelable: true, clientX: x, clientY: y, button: 0, buttons });
-  Object.defineProperties(e, { pointerId: { value: 1 }, pointerType: { value: 'mouse' }, isPrimary: { value: true } });
+  Object.defineProperties(e, { pointerId: { value: 1 }, pointerType: { value: pointerType }, isPrimary: { value: true } });
   return e;
 }
 
@@ -375,6 +375,7 @@ function marqueeChecks(win, doc) {
   ok('svislý scroll a zoom stránky zůstávají prohlížeči (touch-action)', m.style.touchAction === 'pan-y pinch-zoom');
   // jsdom nepočítá rozměry; bez šířky by se normalizace smyčky vůbec neprovedla.
   Object.defineProperty(track, 'scrollWidth', { value: 2000 });
+  win.dispatchEvent(new win.Event('resize')); // modul si šířku měří při změně okna
   ok('kurzor grab na pásu i na kartě', m.style.cursor === 'grab' && link.style.cursor === 'grab');
 
   let clicks = 0;
@@ -424,6 +425,58 @@ function marqueeChecks(win, doc) {
 run('Pás recenzí — modul převezme ořez, tah posouvá pás a potlačí klik',
   MARQUEE, 'https://www.eldr.cz/', marqueeChecks);
 
+// Dotyk jde přes Touch Events: o směru rozhoduje modul, ne prohlížeč.
+function touch(win, type, points) {
+  const e = new win.Event(type, { bubbles: true, cancelable: true });
+  Object.defineProperty(e, 'touches', { value: points.map(([x, y], i) => ({ identifier: 7 + i, clientX: x, clientY: y })) });
+  return e;
+}
+
+function touchChecks(win, doc) {
+  const m = doc.querySelector('.testimonial21_marquee');
+  const link = doc.querySelector('a');
+  const dragging = () => m.hasAttribute('data-marquee-dragging');
+  const send = (type, ...points) => { const e = touch(win, type, points); link.dispatchEvent(e); return e; };
+  let clicks = 0;
+  link.addEventListener('click', e => { clicks++; e.preventDefault(); });
+
+  // 30° od vodorovné: tah pásu
+  send('touchstart', [100, 100]);
+  let e = send('touchmove', [126, 115]);
+  ok('tah prstem pod 30° pás chytí a stránce scroll zakáže', dragging() && e.defaultPrevented);
+  e = send('touchmove', [140, 195]);
+  ok('po zámku tah drží i při 80 px svislého úletu', dragging() && e.defaultPrevented);
+  m.dispatchEvent(pointer(win, 'pointercancel', 140, 195, 0, 'touch'));
+  ok('pointercancel od prohlížeče tah prstem neukončí', dragging());
+  send('touchend');
+  ok('puštění prstu tah ukončí', !dragging());
+  link.click();
+  ok('klik po tahu prstem se potlačí', clicks === 0);
+
+  // 40°: ještě tah
+  send('touchstart', [100, 100]);
+  send('touchmove', [123, 119]);
+  ok('tah prstem pod 40° pás chytí', dragging());
+  send('touchend');
+
+  // 60°: scroll stránky, a to až do puštění
+  send('touchstart', [100, 100]);
+  e = send('touchmove', [110, 118]);
+  ok('tah prstem pod 60° nechá scroll stránce', !dragging() && !e.defaultPrevented);
+  e = send('touchmove', [190, 122]);
+  ok('po zámku na svislý scroll už pás tah nechytí', !dragging() && !e.defaultPrevented);
+  send('touchend');
+
+  // druhý prst: zoom, tah končí
+  send('touchstart', [100, 100]);
+  send('touchmove', [140, 104]);
+  send('touchstart', [140, 104], [200, 300]);
+  ok('druhý prst tah ukončí (zoom)', !dragging());
+  send('touchend');
+}
+
+run('Pás recenzí — dotyk: zámek směru 45°', MARQUEE, 'https://www.eldr.cz/', touchChecks);
+
 // Dočasná kopie pro custom code homepage (src/dev/) musí dělat totéž.
 (function () {
   const path = require('path');
@@ -444,6 +497,12 @@ run('Pás recenzí — modul převezme ořez, tah posouvá pás a potlačí klik
   } catch (e) { error = e; }
   ok('dev kopie proběhla bez výjimky', !error);
   marqueeChecks(dom.window, dom.window.document);
+
+  const domTouch = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE}</body></html>`,
+    { url: 'https://www.eldr.cz/', runScripts: 'outside-only', pretendToBeVisual: true });
+  domTouch.window.eval(dev);
+  domTouch.window.document.dispatchEvent(new domTouch.window.Event('DOMContentLoaded'));
+  touchChecks(domTouch.window, domTouch.window.document);
 
   // Bundle i dev kopie na jedné stránce: pás řídí jen ten první.
   const both = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${MARQUEE}</body></html>`,
