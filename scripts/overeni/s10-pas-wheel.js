@@ -266,6 +266,38 @@ async function wheel(browser) {
   b = await state(page);
   ok('Shift + kolečko nahoru: pás ujede 100 px doprava', near(delta(a, b), 100, 3), delta(a, b).toFixed(1) + ' px');
 
+  // 7b. zašuměný začátek gesta (touchpad): o ose rozhodne součet delt
+  await sleep(GAP);
+  await wheelLog(page);
+  a = await state(page);
+  await gesture(page, [[1, -1], [2, 0], [60, 0]]);
+  b = await state(page);
+  log = await wheelLog(page);
+  ok('zašuměný začátek vodorovného gesta: pás ujede součet (63 px)', near(delta(a, b), -63, 2) && Math.abs(b.scrollY - a.scrollY) <= 1, delta(a, b).toFixed(1) + ' px, scrollY ' + (b.scrollY - a.scrollY) + ' px, prevented ' + log.map(e => +e.prevented).join(''));
+  await sleep(GAP);
+  a = await state(page);
+  await gesture(page, [[1, 1], [1, 40], [60, 20]]);
+  await sleep(400);
+  b = await state(page);
+  log = await wheelLog(page);
+  ok('zašuměný začátek svislého gesta: stránka scrolluje, pás stojí', near(delta(a, b), 0, 1) && b.scrollY > a.scrollY && log.every(e => !e.prevented), 'scrollY +' + (b.scrollY - a.scrollY).toFixed(0) + ' px');
+  await toMarquee(page);
+  await page.mouse.move(720, cy);
+  await sleep(GAP);
+
+  // 7c. wheel během tahu myší: nic se nestane, stránka stojí
+  await wheelLog(page);
+  a = await state(page);
+  await page.mouse.down();
+  await page.mouse.move(700, cy, { steps: 4 });
+  await sleep(100);
+  await gesture(page, [[0, 100], [80, 0]]);
+  b = await state(page);
+  log = await wheelLog(page);
+  await page.mouse.up();
+  ok('wheel během tahu myší: zrušen, stránka i pás drží tah', log.every(e => e.prevented) && b.scrollY === a.scrollY && near(delta(a, b), -15, 3), delta(a, b).toFixed(1) + ' px (tah 20 px minus 5 px prahu)');
+  await sleep(GAP);
+
   // 8. kurzor zůstává nad pásem: hover má přednost, pás po gestu stojí
   await sleep(2500);
   const hoverSpeed = await speed(page, 600);
@@ -333,16 +365,50 @@ async function keyboard(browser) {
     }
     return { moved: delta(a, b), biggest, moving, scrollX: b.scrollX - a.scrollX, scrollY: b.scrollY - a.scrollY };
   };
+  // Která karta má fokus a kde na obrazovce leží.
+  const focus = () =>
+    page.evaluate(() => {
+      const root = document.querySelector('.testimonial21_marquee');
+      const el = document.activeElement;
+      const r = el.getBoundingClientRect();
+      return {
+        index: [...root.querySelectorAll('a')].indexOf(el),
+        left: r.left,
+        onScreen: r.left >= -1 && r.right <= window.innerWidth + 1,
+        scrollLeft: root.scrollLeft,
+      };
+    });
+  const f0 = await focus();
 
   let r = await press('ArrowRight');
   ok('šipka vpravo: pás ujede o jednu kartu doleva', near(r.moved, -info.step, 2), r.moved.toFixed(1) + ' px');
   ok('šipka vpravo: plynule, ne skokem', r.biggest < info.step * 0.25 && r.moving > 200, 'největší krok za snímek ' + r.biggest.toFixed(0) + ' px, pohyb trval ' + r.moving.toFixed(0) + ' ms');
   ok('šipka vpravo: stránka se nehnula', r.scrollX === 0 && r.scrollY === 0);
+  const f1 = await focus();
+  ok('šipka vpravo: fokus na další kartě, na stejném místě obrazovky', f1.index === f0.index + 1 && near(f1.left, f0.left, 2), 'karta č. ' + (f0.index + 1) + ' → ' + (f1.index + 1) + ', left ' + f0.left.toFixed(0) + ' → ' + f1.left.toFixed(0));
   await page.screenshot({ path: path.join(OUT, 'desktop-2-po-sipce-vpravo.jpg'), quality: 70 });
 
   r = await press('ArrowLeft');
   ok('šipka vlevo: pás ujede o jednu kartu doprava', near(r.moved, info.step, 2), r.moved.toFixed(1) + ' px');
   ok('šipka vlevo: plynule, ne skokem', r.biggest < info.step * 0.25 && r.moving > 200, 'největší krok za snímek ' + r.biggest.toFixed(0) + ' px, pohyb trval ' + r.moving.toFixed(0) + ' ms');
+
+  const f2 = await focus();
+  ok('šipka vlevo: fokus zpět na původní kartě', f2.index === f0.index && near(f2.left, f0.left, 2));
+
+  // Držená šipka: opakované stisky po 33 ms, 1 s.
+  let a0 = await state(page);
+  await page.keyboard.down('ArrowRight');
+  for (let i = 0; i < 30; i++) {
+    await sleep(33);
+    await page.keyboard.down('ArrowRight');
+  }
+  await page.keyboard.up('ArrowRight');
+  await sleep(1000);
+  let b0 = await state(page);
+  const f3 = await focus();
+  const held = -delta(a0, b0) / info.step;
+  ok('držená šipka 1 s: jede po kartách, nestřádá je', held >= 2 && held <= 6 && Math.abs(held - Math.round(held)) < 0.02, held.toFixed(2) + ' karty');
+  ok('držená šipka: karta s fokusem zůstala na místě a obal se nenascrolloval', f3.index === f0.index + Math.round(held) && near(f3.left, f0.left, 2) && f3.onScreen && f3.scrollLeft === 0, 'karta č. ' + (f3.index + 1) + ', left ' + f3.left.toFixed(0) + ', scrollLeft ' + f3.scrollLeft);
 
   // Dva rychlé stisky se sečtou.
   const a = await state(page);

@@ -31,15 +31,18 @@
        po hození i po pauze plynule zastaví a stojí
      - po tahu se nespustí klik na kartu
      - touchpad (dva prsty do strany), vodorovné kolečko a Shift + kolečko
-       posouvají pás o deltaX jako nativní vodorovný scroll; stránka se
-       nehne a prohlížeč nedostane gesto zpět/vpřed (preventDefault)
-     - osa se zamyká na celé gesto podle první události: svislé gesto patří
-       stránce a pásem nehne, vodorovné patří pásu. Gesto končí po
+       posouvají pás o deltaX jako nativní vodorovný scroll a stránka se
+       nehne. preventDefault() má prohlížeči vzít i gesto zpět/vpřed; na
+       skutečném Macu to potvrzuje Lukáš, z Chromia v cloudu to ověřit nejde
+     - osa se zamyká na celé gesto po prvních WHEEL_LOCK px: svislé gesto
+       patří stránce a pásem nehne, vodorovné patří pásu. Gesto končí po
        WHEEL_GAP bez události
      - vlastní setrvačnost wheel nemá, dojezdové události posílá systém.
        Po poslední události pás RESUME_DELAY stojí a pak se rozjede
      - šipky vlevo a vpravo při fokusu v pásu posunou pás plynule o jednu
-       kartu
+       kartu a fokus přejde na sousední kartu, takže karta s fokusem
+       zůstává na místě a neodjede z obrazovky. Držená šipka jede po
+       kartách, nestřádá je
 
    Dotyk jde přes Touch Events, myš a pero přes Pointer Events. Důvod
    návrhu: s pouhým touch-action: pan-y rozhoduje o směru prohlížeč a když
@@ -86,6 +89,7 @@
   var MAX_FLING = 3000; // px/s, strop rychlosti po puštění
   var VELOCITY_WINDOW = 100; // ms, z jak dlouhého konce tahu se počítá rychlost
   var WHEEL_GAP = 150; // ms bez události wheel = gesto skončilo, zámek osy se uvolní
+  var WHEEL_LOCK = 4; // px, po kolika se rozhodne o ose gesta wheel
   var WHEEL_LINE = 40; // px na řádek, když prohlížeč posílá wheel v řádcích
   var GLIDE = 10; // jak rychle dojede posun šipkou (1/s), ~0,3 s na kartu
 
@@ -134,6 +138,8 @@
 
     var wheelAxis = ''; // zámek osy gesta wheel: 'x' = pás, 'y' = stránka
     var wheelAt = 0; // čas poslední události wheel
+    var wheelX = 0; // součet delt, než se o ose rozhodne
+    var wheelY = 0;
     var glide = 0; // kolik px ještě zbývá dojet po stisku šipky
 
     function clock() {
@@ -508,7 +514,13 @@
       'wheel',
       function (e) {
         // Ctrl + kolečko a roztažení prstů na touchpadu je zoom stránky.
-        if (e.ctrlKey || (active && axis === 'x')) return;
+        if (e.ctrlKey) return;
+        // Při tahu myší má pás v ruce ukazatel: wheel nesmí hýbat pásem,
+        // stránkou ani spustit gesto zpět/vpřed.
+        if (active && axis === 'x') {
+          if (e.cancelable) e.preventDefault();
+          return;
+        }
         var dx = e.deltaX;
         var dy = e.deltaY;
         // Shift + kolečko: některé prohlížeče pošlou deltaX samy, jiné
@@ -522,12 +534,26 @@
         dy *= unit;
 
         var now = clock();
-        if (now - wheelAt > WHEEL_GAP) wheelAxis = '';
-        if (!wheelAxis) {
-          if (!dx && !dy) return;
-          wheelAxis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+        if (now - wheelAt > WHEEL_GAP) {
+          wheelAxis = '';
+          wheelX = wheelY = 0;
         }
         wheelAt = now;
+        if (!wheelAxis) {
+          // První události gesta na touchpadu bývají malé a zašuměné,
+          // proto se o ose rozhoduje až ze součtu, jako u dotyku.
+          wheelX += dx;
+          wheelY += dy;
+          var sideways = Math.abs(wheelX) > Math.abs(wheelY);
+          if (Math.abs(wheelX) < WHEEL_LOCK && Math.abs(wheelY) < WHEEL_LOCK) {
+            // Nerozhodnutý pohyb do strany se ruší hned: jakmile ho
+            // prohlížeč vezme jako gesto zpět/vpřed, vrátit to nejde.
+            if (sideways && e.cancelable) e.preventDefault();
+            return;
+          }
+          wheelAxis = sideways ? 'x' : 'y';
+          dx = wheelX;
+        }
         // Svislé gesto je scroll stránky; jeho vodorovná složka pásem nehne.
         if (wheelAxis !== 'x') return;
 
@@ -543,14 +569,23 @@
 
     /* --- klávesnice: šipky -------------------------------------------------------- */
 
-    // Krok = rozteč dvou sousedních karet (šířka karty a mezera).
-    function cardStep() {
-      var cards = track.querySelectorAll('a');
-      var step = 0;
-      if (cards.length > 1) {
-        step = cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+    // Karty bez kopie pro smyčku (ta je aria-hidden).
+    function cards() {
+      var all = track.querySelectorAll('a');
+      var out = [];
+      for (var i = 0; i < all.length; i++) {
+        if (!all[i].closest('[aria-hidden="true"]')) out.push(all[i]);
       }
-      if (!(step > 0) && cards.length) step = cards[0].getBoundingClientRect().width;
+      return out;
+    }
+
+    // Krok = rozteč dvou sousedních karet (šířka karty a mezera).
+    function cardStep(list) {
+      var step = 0;
+      if (list.length > 1) {
+        step = list[1].getBoundingClientRect().left - list[0].getBoundingClientRect().left;
+      }
+      if (!(step > 0) && list.length) step = list[0].getBoundingClientRect().width;
       return step > 0 ? step : root.clientWidth / 2;
     }
 
@@ -559,9 +594,26 @@
     root.addEventListener('keydown', function (e) {
       if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
       var dir = e.key === 'ArrowRight' ? -1 : e.key === 'ArrowLeft' ? 1 : 0;
-      if (!dir || active) return;
+      // Mimo viewport smyčka neběží a posuny by se nastřádaly.
+      if (!dir || active || !visible) return;
       e.preventDefault();
-      glide += dir * cardStep();
+      var list = cards();
+      var step = cardStep(list);
+      // Držená klávesa: další karta, až předchozí skoro dojede (zbývá pod
+      // desetinu kroku). Vychází to zhruba na čtyři karty za sekundu.
+      if (e.repeat && Math.abs(glide) > step / 10) return;
+      glide += dir * step;
+      // Fokus jde na sousední kartu, která po posunu skončí na místě té
+      // původní. Karta s fokusem tak neodjede z obrazovky.
+      var at = list.indexOf(document.activeElement);
+      if (at !== -1 && list.length > 1) {
+        var next = list[(at - dir + list.length) % list.length];
+        try {
+          next.focus({ preventScroll: true });
+        } catch (err) {
+          next.focus();
+        }
+      }
       takeOver(clock());
       run();
     });
