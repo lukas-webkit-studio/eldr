@@ -14,11 +14,12 @@ Aktualizováno 16. 11. 2026 (S9 #54; předtím 3. 11. koordinátor K02, předán
 
 ### Štafeta 16. 11. – S9 #54 pás recenzí: tah myší a prstem
 
-- **Hotovo na stagingu, produkci publikuje koordinátor po souhlasu Lukáše.** Pás recenzí na homepage jde posouvat myší i prstem oběma směry, po puštění dojede setrvačností a 2 s nato se plynule rozjede. Klik po tahu se potlačí. Hover, fokus z klávesnice, reduced motion a pauza mimo viewport fungují jako dřív. Vzhled beze změny, ve Webflow se nezměnil žádný styl.
-- **Repo:** PR #55, merge commit `6f4d0a0`. Modul `45-testimonial-marquee.js` a dev kopie `src/dev/testimonial-marquee.js` mají shodné tělo (hlídá smoke test, 121 kontrol).
-- **Webflow:** v custom code homepage (patička stránky) vyměněn jen hash `c76921a…` → `6f4d0a09555bdf64bc87c98da94ff4f55ff87413`, čteno zpátky. Staging publikován 16. 11. 13:28:59 (`lastPublished` webu se pohnul, domény produkce zůstaly na 15. 11. 23:40:19). **Produkce dál načítá `c76921a…`**, tedy pás bez tahu.
-- **Ověření na stagingu** (`scripts/overeni/s9-pas-recenzi.js`, Chromium): 49/49. Desktop 1440 myš, dotyk 390, reduced motion, `/en`, `/de`. Rychlost po puštění: 1 s 0 px/s, 3 s −35 až −37 px/s, 5 s −40 px/s. V head `GTM-W6PR2VX` a 5 Finsweet, 22/22 recenzí v HTML bez JS ve všech třech jazycích. Snímky a `vysledky.json` v `docs/snimky/s9/`.
-- **Na Lukášovi:** souhlas s publikací produkce. Vyzkoušet tah na skutečném iPhonu (ověřeno jen v Chromiu s emulací dotyku). Rozhodnout dvě věci z `docs/decisions.md`: kurzor `grab` i nad kartami a to, že po tahu myší pás stojí, dokud je kurzor nad ním.
+- **Hotovo na stagingu po opravě, čeká na zkoušku Lukáše na telefonu. Produkce se nepublikuje, dokud ji nepotvrdí.**
+- **Dopoledne (PR #55, #56):** tah myší a prstem, setrvačnost, potlačení kliku. Lukáš na telefonu vrátil: není to plynulé a tah jde jen „perfektně rovně do strany“.
+- **Oprava odpoledne (PR #57, merge commit `7ea2076`):** o směru gesta rozhoduje modul (do 45° tah, drží až do puštění; strmější pohyb scrolluje stránku). Dotyk a pero jdou přes Touch Events s nepasivním `touchmove`. Po hození pás nezastavuje, rychlost přechází rovnou do −40 px/s. Pauza 1 s jen po puštění bez hození. Vzhled beze změny, ve Webflow se nezměnil žádný styl.
+- **Webflow:** v patičce custom code homepage vyměněn jen hash → `7ea2076fb17a824e71d9ded33569846865f1fb91`, čteno zpátky. Staging publikován 16. 11. 15:43:27 (`lastPublished` webu se pohnul, domény produkce zůstaly na 15. 11. 23:40:19). **Produkce dál načítá `c76921a…`**, tedy pás bez tahu.
+- **Ověření na stagingu** (`scripts/overeni/s9-pas-recenzi.js`, Chromium): 61/61. Tah pod 30° a 40° posune pás 1 : 1 a stránka se nehne, pod 60° scrolluje stránka. Tah s 80 px svislého úletu drží. Hození doleva po 100 ms: −610 → −507 → −422 → −353 → … → −40 px/s, nejpomalejší okno 40 px/s. Snímky se zpomaleným CPU 4×: medián 16,7 ms; nad 20 ms 1 z 86 při tahu (83 ms), 1 z 150 při dojezdu (33 ms), 0 z 121 při běžném chodu. V head `GTM-W6PR2VX` a 5 Finsweet, 22/22 recenzí v HTML. Smoke test 152 kontrol. Snímky a `vysledky.json` v `docs/snimky/s9/`.
+- **Na Lukášovi:** vyzkoušet na telefonu šikmý tah a hození. iOS Safari odsud ověřit nejde. Pak souhlas s publikací produkce. Rozhodnout: kurzor `grab` i nad kartami; po hození myší pás pod kurzorem zastaví (hover má přednost).
 - Po nasazení Cloudflare workeru dál platí: smazat řádek z custom code homepage i `src/dev/`.
 
 ### Plán na listopad (K03)

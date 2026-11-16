@@ -1,7 +1,7 @@
 {
   "base": "https://eldr.webflow.io",
   "local": false,
-  "kdy": "2026-11-16T12:35:17.133Z",
+  "kdy": "2026-11-16T14:45:48.798Z",
   "results": [
     {
       "name": "modul pás převzal (data-marquee-ready)",
@@ -10,7 +10,7 @@
     {
       "name": "běžná rychlost kolem -40 px/s",
       "pass": true,
-      "detail": "-39.8 px/s"
+      "detail": "-40.5 px/s"
     },
     {
       "name": "hover: pás plynule zastaví",
@@ -51,39 +51,39 @@
       "pass": true
     },
     {
-      "name": "1 s po puštění pás stojí",
+      "name": "puštění bez hození: 0,5 s poté pás stojí",
       "pass": true,
       "detail": "0.0 px/s"
     },
     {
-      "name": "3 s po puštění se rozjíždí",
+      "name": "puštění bez hození: 2 s poté se rozjíždí",
       "pass": true,
-      "detail": "-37.9 px/s"
+      "detail": "-36.4 px/s"
     },
     {
-      "name": "5 s po puštění jede běžnou rychlostí",
+      "name": "puštění bez hození: 4 s poté běžná rychlost",
       "pass": true,
-      "detail": "-40.9 px/s"
+      "detail": "-39.7 px/s"
     },
     {
       "name": "setrvačnost: po puštění pás dojíždí ve směru tahu",
       "pass": true,
-      "detail": "-751 px/s hned po puštění"
+      "detail": "-734 px/s hned po puštění"
     },
     {
-      "name": "setrvačnost: dojezd plynule brzdí",
+      "name": "setrvačnost: dojezd plynule brzdí a nezastaví",
       "pass": true,
-      "detail": "-20.1 px/s po 1 s"
+      "detail": "-146.7 px/s po 1 s"
     },
     {
       "name": "setrvačnost: pás dojel dál než tah",
       "pass": true,
-      "detail": "-522 px celkem, tah 320 px"
+      "detail": "-815 px celkem, tah 320 px"
     },
     {
-      "name": "po dojezdu a pauze zase běžná rychlost",
+      "name": "po hození zase běžná rychlost",
       "pass": true,
-      "detail": "-39.7 px/s"
+      "detail": "-39.3 px/s"
     },
     {
       "name": "stisk během dojezdu pás hned zastaví",
@@ -113,7 +113,7 @@
     {
       "name": "po odchodu fokusu pás jede",
       "pass": true,
-      "detail": "-39.7 px/s"
+      "detail": "-39.1 px/s"
     },
     {
       "name": "mimo viewport smyčka neběží",
@@ -123,7 +123,7 @@
     {
       "name": "klik bez tahu otevře referenci",
       "pass": true,
-      "detail": "https://eldr.webflow.io/reference#farmet-a-s"
+      "detail": "https://eldr.webflow.io/reference#jmb-aircraft"
     },
     {
       "name": "bez chyb v konzoli stránky",
@@ -137,46 +137,189 @@
     {
       "name": "běžná rychlost kolem -40 px/s",
       "pass": true,
-      "detail": "-39.9 px/s"
+      "detail": "-39.8 px/s"
     },
     {
-      "name": "tah prstem doleva posune pás 1 : 1",
+      "name": "tah pod 30° posune pás 1 : 1",
       "pass": true,
-      "detail": "-221.3 px, čekáno -220"
+      "detail": "-160.1 px, čekáno -158.8"
     },
     {
-      "name": "stránka se při vodorovném tahu nehýbe do stran ani svisle",
+      "name": "tah pod 30°: stránka se nehne",
       "pass": true,
-      "detail": "scrollX 0, scrollY 2459 → 2459"
+      "detail": "scrollY 2459 → 2459"
     },
     {
-      "name": "tah prstem nespustil klik",
+      "name": "tah pod 40° posune pás 1 : 1",
+      "pass": true,
+      "detail": "-141.7 px, čekáno -140.4"
+    },
+    {
+      "name": "tah pod 40°: stránka se nehne",
+      "pass": true,
+      "detail": "scrollY 2459 → 2459"
+    },
+    {
+      "name": "šikmý tah nespustil klik",
       "pass": true
     },
     {
-      "name": "tah prstem doprava posune pás 1 : 1",
+      "name": "tah pod 60° scrolluje stránku",
       "pass": true,
-      "detail": "247.5 px, čekáno 247,5"
+      "detail": "scrollY +160"
     },
     {
-      "name": "1 s po puštění pás stojí",
+      "name": "tah pod 60° pás nechytí",
+      "pass": true,
+      "detail": "posun pásu -44.7 px (jen vlastní chod)"
+    },
+    {
+      "name": "po zámku drží tah i s 80 px svislého úletu",
+      "pass": true,
+      "detail": "posun -128.3 px při dráze prstu 140 px"
+    },
+    {
+      "name": "při úletu se stránka svisle nehne",
+      "pass": true,
+      "detail": "scrollY 2459 → 2459"
+    },
+    {
+      "name": "puštění bez hození: 0,5 s poté pás stojí",
       "pass": true,
       "detail": "0.0 px/s"
     },
     {
-      "name": "3 s po puštění se rozjíždí",
+      "name": "puštění bez hození: 2 s poté se rozjíždí",
       "pass": true,
-      "detail": "-36.8 px/s"
+      "detail": "-36.9 px/s"
     },
     {
-      "name": "5 s po puštění jede běžnou rychlostí",
+      "name": "puštění bez hození: 4 s poté běžná rychlost",
       "pass": true,
-      "detail": "-41.1 px/s"
+      "detail": "-39.7 px/s"
     },
     {
-      "name": "švih prstem: pás dojíždí setrvačností",
+      "name": "hození doleva: rychlost hned po puštění odpovídá švihu",
       "pass": true,
-      "detail": "-849 px/s po puštění, celkem -487 px"
+      "detail": "-610 px/s"
+    },
+    {
+      "name": "hození doleva: průběh je monotónní, bez skoku",
+      "pass": true,
+      "detail": "-610 → -507 → -422 → -353 → -296 → -250 → -212 → -181 → -153 → -130 → -112 → -99 …"
+    },
+    {
+      "name": "hození doleva: pás nikdy nezastaví (žádná nula ani pauza)",
+      "pass": true,
+      "detail": "nejpomalejší okno 40.0 px/s"
+    },
+    {
+      "name": "hození doleva: skončí na běžné rychlosti",
+      "pass": true,
+      "detail": "-40.0 px/s po 4.5 s",
+      "profil": [
+        -610,
+        -507,
+        -422,
+        -353,
+        -296,
+        -250,
+        -212,
+        -181,
+        -153,
+        -130,
+        -112,
+        -99,
+        -88,
+        -80,
+        -72,
+        -66,
+        -61,
+        -57,
+        -54,
+        -52,
+        -49,
+        -48,
+        -46,
+        -45,
+        -44,
+        -43,
+        -43,
+        -42,
+        -42,
+        -42,
+        -41,
+        -41,
+        -41,
+        -41,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40
+      ]
+    },
+    {
+      "name": "hození doprava: začne doprava",
+      "pass": true,
+      "detail": "595 px/s"
+    },
+    {
+      "name": "hození doprava: průběh je monotónní přes nulu až do -40 px/s",
+      "pass": true,
+      "detail": "595 → 471 → 372 → 297 → 236 → 182 → 139 → 106 → 80 → 58 → 40 → 25 → 11 → 1 … -40",
+      "profil": [
+        595,
+        471,
+        372,
+        297,
+        236,
+        182,
+        139,
+        106,
+        80,
+        58,
+        40,
+        25,
+        11,
+        1,
+        -6,
+        -12,
+        -17,
+        -22,
+        -25,
+        -28,
+        -30,
+        -32,
+        -33,
+        -35,
+        -36,
+        -37,
+        -37,
+        -38,
+        -38,
+        -39,
+        -39,
+        -39,
+        -39,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40,
+        -40
+      ]
     },
     {
       "name": "svislý tah přes pás scrolluje stránku",
@@ -184,18 +327,29 @@
       "detail": "scrollY +225"
     },
     {
-      "name": "svislý tah pás nechytil",
-      "pass": true
-    },
-    {
       "name": "po svislém scrollu pás jede bez pauzy",
       "pass": true,
       "detail": "-39.7 px/s"
     },
     {
+      "name": "snímky při tahu (CPU 4× pomalejší): p95 do 20 ms",
+      "pass": true,
+      "detail": "medián 16.7 ms, p95 16.7 ms, max 83.4 ms, nad 20 ms: 1 z 86"
+    },
+    {
+      "name": "snímky při dojezdu (CPU 4× pomalejší): p95 do 20 ms",
+      "pass": true,
+      "detail": "medián 16.7 ms, p95 16.8 ms, max 33.3 ms, nad 20 ms: 1 z 150"
+    },
+    {
+      "name": "snímky při běžném chodu (CPU 4× pomalejší): p95 do 20 ms",
+      "pass": true,
+      "detail": "medián 16.7 ms, p95 16.7 ms, max 16.8 ms, nad 20 ms: 0 z 121"
+    },
+    {
       "name": "ťuknutí bez tahu otevře referenci",
       "pass": true,
-      "detail": "https://eldr.webflow.io/reference#konplan-s-ro"
+      "detail": "https://eldr.webflow.io/reference#studio-rema"
     },
     {
       "name": "bez chyb v konzoli stránky",
@@ -219,7 +373,7 @@
     {
       "name": "/en: tah posune pás",
       "pass": true,
-      "detail": "-308.0 px"
+      "detail": "-309.9 px"
     },
     {
       "name": "/en: bez chyb",
@@ -234,7 +388,7 @@
     {
       "name": "/de: tah posune pás",
       "pass": true,
-      "detail": "-308.3 px"
+      "detail": "-309.9 px"
     },
     {
       "name": "/de: bez chyb",
