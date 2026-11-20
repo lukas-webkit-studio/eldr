@@ -1,7 +1,7 @@
 {
   "base": "https://eldr.webflow.io",
-  "local": true,
-  "date": "2026-11-20T13:39:40.030Z",
+  "local": false,
+  "date": "2026-11-20T13:45:09.193Z",
   "results": [
     {
       "name": "cs: jedna sada, jedna zpráva „Objednejte do 31. 12. a zamkněte si letošní ceny“",
@@ -507,7 +507,7 @@
     {
       "name": "390 /: layout shift při scrollu 0",
       "pass": true,
-      "detail": "0.0001"
+      "detail": "0.0000"
     },
     {
       "name": "390 /produkty/tabule-a-svetelne-panely: nahoře pruh vidět, navigace pod ním",
@@ -652,22 +652,22 @@
     {
       "name": "bez JS: zpráva vidět, odsazení obsahu kryje pruh",
       "pass": true,
-      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny, pruh 56, body 77"
+      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny, pruh 56, body 56"
     },
     {
       "name": "cs: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
       "pass": true,
-      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+      "detail": "Finsweet 5, commit 29f58620eab597a1a66114ba71505ae96699996d"
     },
     {
       "name": "en: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
       "pass": true,
-      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+      "detail": "Finsweet 5, commit 29f58620eab597a1a66114ba71505ae96699996d"
     },
     {
       "name": "de: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
       "pass": true,
-      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+      "detail": "Finsweet 5, commit 29f58620eab597a1a66114ba71505ae96699996d"
     }
   ]
 }

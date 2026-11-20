@@ -14,7 +14,7 @@ Aktualizováno 20. 11. 2026 odpoledne (S12 #66; S11 #62; předtím S10 #59, S9 #
 
 ### Štafeta 20. 11. – S12 #66 horní pruh, 2. kolo
 
-- **Hotovo na stagingu, produkce nepublikovaná** (domény dál 19. 11. 09:14:46).
+- **Hotovo na stagingu (publikováno 20. 11. 14:43:00, footer pin `29f58620…`, PR #67), produkce nepublikovaná** (domény dál 19. 11. 09:14:46). Ověření s merge commitem 143/143.
 - **Rozhodnutí Lukáše během práce:** jedna zpráva bez rotace, „Objednejte do 31. 12. a zamkněte si letošní ceny“ + „Zamluvit termín“, desktop i mobil. EN „Order by 31 Dec and lock in this year’s prices“, DE „Bestellen Sie bis 31.12. zu diesjährigen Preisen“ (kratší, ať se vejdou na mobil).
 - **Webflow:** výzva jako ghost tlačítko (obrys, hover bílá/červená), mobil zpráva + tlačítko pod ní, 56 px, křížek u prvního řádku, `text-wrap: balance`, tablet mezera 12 px, `body` záloha 46/44/56 px.
 - **Repo:** pruh při scrollu odjede (posun navbaru transformem, layout shift 0), zavření v `localStorage`, rotace umí víc sad zpráv. Ověření `scripts/overeni/s12-horni-pruh.js`, snímky `docs/snimky/s12/`.
@@ -22,7 +22,7 @@ Aktualizováno 20. 11. 2026 odpoledne (S12 #66; S11 #62; předtím S10 #59, S9 #
 
 ### Štafeta 20. 11. – S11 #62 horní pruh s akcí „zimní objednávky“
 
-- **Hotovo na stagingu, produkce nepublikovaná.** Domény produkce zůstaly na 19. 11. 2026 09:14:46 (obě). Staging publikován naposledy 20. 11. 07:56:52.
+- **Hotovo na stagingu, produkce nepublikovaná.** Domény produkce zůstaly na 19. 11. 2026 09:14:46 (obě). Staging publikován naposledy 20. 11. 07:56:52 (S12 pak 14:43:00).
 - **Webflow (nativně):** pruh je první potomek komponenty `Navbar_2024-12`, třídy `announcement_*`, barvy z proměnných. Rotace 4 zpráv, výzva „Zamluvit termín →“, odkaz typu stránka na Kontakty (kotvu `#formular` doplní modul). Po kontrole Lukáše: všechen text bíle (kontrast 5,7 : 1), zvýraznění tučně, žlutá jen jako tečka (na mobilu skrytá), na mobilu celá výzva pod zprávou, pruh 77 px. Texty EN/DE lokalizací komponenty, popisek křížku jako překládaný skrytý text. `.navbar_component` má `flex-direction: column`, `body` `padding-top` 44 px (mobil 77 px) jako záloha bez JS, `.sectionform` `scroll-margin-top` (formulář pod vyšší navigací). Zdůvodnění v `docs/decisions.md` (20. 11.).
 - **Repo (PR #63, #64, merge commit `0ddfdcb`):** modul `46-announcement-bar.js` a dočasná kopie `src/dev/announcement-bar.js` v site footeru (jsDelivr, pin `0ddfdcbb175789fead6044010a52362d741d349b`, čteno zpátky). Rotace po 5 s, pauza při hoveru (myš, pero) a fokusu, reduced motion bez pohybu, zavření do konce relace, konec akce po 31. 12. 2026 23:59, odsazení `body` podle změřené výšky. Smoke test 261 kontrol.
 - **Ověření na stagingu** (`scripts/overeni/s11-horni-pruh.js`, Chromium): 146/146. Texty CS/EN/DE, 1 řádek na 1440 a 991, na 390 zpráva nejvýš 2 řádky + výzva, křížek 44 × 44 nepřekrývá text, obsah nepřekrytý na 5 stránkách a po zavření se vrátí o výšku pruhu, zavření drží v relaci, rotace a pauzy, reduced motion, konec akce (podvržené hodiny), bez JS první zpráva a odkaz, klik vede na `/…/kontakty#formular` a nadpis formuláře je pod navigací ve 3 jazycích, head s `GTM-W6PR2VX` a 5 Finsweet. Snímky a `vysledky.json` v `docs/snimky/s11/`.
