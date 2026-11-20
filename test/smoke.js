@@ -710,9 +710,11 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     let seq = 0;
     w.setTimeout = (fn, ms) => { timers.set(++seq, { fn, ms }); return seq; };
     w.clearTimeout = id => { timers.delete(id); };
+    w.requestAnimationFrame = fn => fn();
+    w.scrollToY = y => { Object.defineProperty(w, 'pageYOffset', { configurable: true, value: y }); w.dispatchEvent(new w.Event('scroll')); };
     if (opts.reduce) w.matchMedia = q => ({ matches: /reduce/.test(q), media: q });
-    if (opts.closed) w.sessionStorage.setItem('eldr-announcement-closed:zima-2026', '1');
-    if (opts.noStorage) Object.defineProperty(w, 'sessionStorage', { get() { throw new Error('SecurityError'); } });
+    if (opts.closed) w.localStorage.setItem('eldr-announcement-closed:zima-2026', '1');
+    if (opts.noStorage) Object.defineProperty(w, 'localStorage', { get() { throw new Error('SecurityError'); } });
     // jsdom nepočítá layout: výšku pruhu podvrhnout, ať je vidět, že odsazení bere změřenou hodnotu.
     Object.defineProperty(w.HTMLElement.prototype, 'offsetHeight', { configurable: true, get() { return this.classList.contains('announcement_component') ? 47 : 0; } });
     const errors = [];
@@ -767,11 +769,26 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     doc.querySelector('.announcement_close').dispatchEvent(new w.FocusEvent('focusout', { bubbles: true, relatedTarget: doc.querySelector('.navbar_logo-link') }));
     ok('odchod fokusu z pruhu rotaci rozjede', timers.size === 1);
 
+    const nav = doc.querySelector('.navbar_component');
+    w.scrollToY(20);
+    ok('scroll o 20 px posune navbar o 20 px nahoru', nav.style.transform === 'translateY(-20px)');
+    w.scrollToY(500);
+    ok('dál než výška pruhu: navbar posunutý jen o výšku pruhu (47 px)', nav.style.transform === 'translateY(-47px)');
+    doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusin', { bubbles: true }));
+    ok('fokus uvnitř odjetého pruhu ho ukáže', nav.style.transform === '');
+    doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusout', { bubbles: true, relatedTarget: doc.querySelector('.navbar_logo-link') }));
+    ok('odchod fokusu pruh zase schová', nav.style.transform === 'translateY(-47px)');
+    w.scrollToY(0);
+    ok('nahoře na stránce je pruh zpátky', nav.style.transform === '');
+    w.scrollToY(300);
     doc.querySelector('.announcement_close').click();
     ok('křížek pruh skryje', bar.style.display === 'none');
+    ok('po zavření navbar u horní hrany bez posunu', nav.style.transform === '');
+    w.scrollToY(400);
+    ok('po zavření scroll navbarem nehýbe', nav.style.transform === '');
     ok('po zavření je odsazení 0', doc.body.style.paddingTop === '0px');
     ok('po zavření rotace stojí', timers.size === 0);
-    ok('zavření se pamatuje v sessionStorage', w.sessionStorage.getItem('eldr-announcement-closed:zima-2026') === '1');
+    ok('zavření se pamatuje v localStorage (i po zavření prohlížeče)', w.localStorage.getItem('eldr-announcement-closed:zima-2026') === '1');
     ok('fokus přešel na logo', doc.activeElement === doc.querySelector('.navbar_logo-link'));
   }
 
@@ -780,7 +797,7 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
 
   console.log('\nHorní pruh — stavy');
   let e = dom(BAR(FUTURE, '/kontakty'), { closed: true });
-  ok('zavřený v téže relaci se neukáže', e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px');
+  ok('zavřený dřív (localStorage) se neukáže', e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px');
   e = dom(BAR('2026-11-19T00:00:00+01:00', '/kontakty'));
   ok('po konci akce se neukáže', e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px' && e.timers.size === 0);
   e = dom(BAR('neplatne-datum', '/kontakty'));
@@ -808,6 +825,14 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   e.w.Date.now = realNow;
   ok('záložka otevřená přes konec akce: pruh zmizí při dalším střídání',
     e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px' && e.timers.size === 0);
+  e = dom(BAR(FUTURE, '/kontakty').replace('</div><div class="announcement_cta">',
+    '</div><div class="announcement_messages is-short"><p class="announcement_text">a</p><p class="announcement_text">b</p><p class="announcement_text">c</p></div><div class="announcement_cta">'));
+  const [longSet, shortSet] = [...e.doc.querySelectorAll('.announcement_messages')].map(b => [...b.querySelectorAll('.announcement_text')]);
+  e.fire();
+  ok('dvě sady zpráv (dlouhá + mobilní) rotují spolu',
+    longSet[1].style.opacity === '1' && shortSet[1].style.opacity === '1' && longSet[0].style.opacity === '0' && shortSet[0].style.opacity === '0' && e.timers.size === 1);
+  e.fire(); e.fire();
+  ok('po třetí zprávě obě sady znovu na první', longSet[0].style.opacity === '1' && shortSet[0].style.opacity === '1');
   e = dom('<div class="navbar_component"></div>');
   ok('bez pruhu se modul vypne a odsazení nesahá', e.errors.length === 0 && e.doc.body.style.paddingTop === '');
 

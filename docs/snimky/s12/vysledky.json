@@ -1,0 +1,673 @@
+{
+  "base": "https://eldr.webflow.io",
+  "local": true,
+  "date": "2026-11-20T13:39:40.030Z",
+  "results": [
+    {
+      "name": "cs: jedna sada, jedna zpráva „Objednejte do 31. 12. a zamkněte si letošní ceny“",
+      "pass": true,
+      "detail": "[[\"Objednejte do 31. 12. a zamkněte si letošní ceny\"]]"
+    },
+    {
+      "name": "cs: výzva „Zamluvit termín“",
+      "pass": true
+    },
+    {
+      "name": "en: jedna sada, jedna zpráva „Order by 31 Dec and lock in this year’s prices“",
+      "pass": true,
+      "detail": "[[\"Order by 31 Dec and lock in this year’s prices\"]]"
+    },
+    {
+      "name": "en: výzva „Book a date“",
+      "pass": true
+    },
+    {
+      "name": "de: jedna sada, jedna zpráva „Bestellen Sie bis 31.12. zu diesjährigen Preisen“",
+      "pass": true,
+      "detail": "[[\"Bestellen Sie bis 31.12. zu diesjährigen Preisen\"]]"
+    },
+    {
+      "name": "de: výzva „Termin reservieren“",
+      "pass": true
+    },
+    {
+      "name": "1440 cs: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "1440 cs: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "1440 cs: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 803, křížek od 1396"
+    },
+    {
+      "name": "1440 cs: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "991 cs: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "991 cs: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "991 cs: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 573, křížek od 947"
+    },
+    {
+      "name": "991 cs: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "768 cs: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "768 cs: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "768 cs: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 461, křížek od 724"
+    },
+    {
+      "name": "768 cs: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "390 cs: pruh ≤ 60 px",
+      "pass": true,
+      "detail": "56 px"
+    },
+    {
+      "name": "390 cs: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "390 cs: křížek u prvního řádku",
+      "pass": true,
+      "detail": "řádky 14.8, křížek 14.0"
+    },
+    {
+      "name": "390 cs: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 304, křížek od 346"
+    },
+    {
+      "name": "390 cs: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "360 cs: pruh ≤ 60 px",
+      "pass": true,
+      "detail": "56 px"
+    },
+    {
+      "name": "360 cs: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "360 cs: křížek u prvního řádku",
+      "pass": true,
+      "detail": "řádky 14.8, křížek 14.0"
+    },
+    {
+      "name": "360 cs: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 304, křížek od 316"
+    },
+    {
+      "name": "360 cs: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "1440 en: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "1440 en: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "1440 en: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 809, křížek od 1396"
+    },
+    {
+      "name": "1440 en: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "991 en: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "991 en: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "991 en: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 578, křížek od 947"
+    },
+    {
+      "name": "991 en: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "768 en: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "768 en: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "768 en: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 467, křížek od 724"
+    },
+    {
+      "name": "768 en: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "390 en: pruh ≤ 60 px",
+      "pass": true,
+      "detail": "56 px"
+    },
+    {
+      "name": "390 en: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "390 en: křížek u prvního řádku",
+      "pass": true,
+      "detail": "řádky 14.8, křížek 14.0"
+    },
+    {
+      "name": "390 en: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 287, křížek od 346"
+    },
+    {
+      "name": "390 en: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "360 en: pruh ≤ 60 px",
+      "pass": true,
+      "detail": "56 px"
+    },
+    {
+      "name": "360 en: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "360 en: křížek u prvního řádku",
+      "pass": true,
+      "detail": "řádky 14.8, křížek 14.0"
+    },
+    {
+      "name": "360 en: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 287, křížek od 316"
+    },
+    {
+      "name": "360 en: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "1440 de: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "1440 de: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "1440 de: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 788, křížek od 1396"
+    },
+    {
+      "name": "1440 de: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "991 de: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "991 de: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "991 de: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 558, křížek od 947"
+    },
+    {
+      "name": "991 de: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "768 de: jeden řádek",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "768 de: výzva vedle textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "768 de: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 446, křížek od 724"
+    },
+    {
+      "name": "768 de: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "390 de: pruh ≤ 60 px",
+      "pass": true,
+      "detail": "56 px"
+    },
+    {
+      "name": "390 de: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "390 de: křížek u prvního řádku",
+      "pass": true,
+      "detail": "řádky 14.8, křížek 14.0"
+    },
+    {
+      "name": "390 de: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 295, křížek od 346"
+    },
+    {
+      "name": "390 de: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "360 de: pruh ≤ 60 px",
+      "pass": true,
+      "detail": "56 px"
+    },
+    {
+      "name": "360 de: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "name": "360 de: křížek u prvního řádku",
+      "pass": true,
+      "detail": "řádky 14.8, křížek 14.0"
+    },
+    {
+      "name": "360 de: text nepřekrývá křížek",
+      "pass": true,
+      "detail": "text do 295, křížek od 316"
+    },
+    {
+      "name": "360 de: bez vdov",
+      "pass": true
+    },
+    {
+      "name": "obrys bílý (ve Webflow 1,5 px, Chromium na 1× hustotě kreslí 1 px), rohy 2 px jako tlačítka webu",
+      "pass": true,
+      "detail": "1px solid rgb(255, 255, 255), 2px"
+    },
+    {
+      "name": "text 600, výška ~28 px, padding 4 × 12",
+      "pass": true,
+      "detail": "600, 30 px, 4px 12px"
+    },
+    {
+      "name": "kontrast bílá na červené ≥ 4,5 : 1",
+      "pass": true,
+      "detail": "5.67 : 1"
+    },
+    {
+      "name": "hover: bílé pozadí, červený text",
+      "pass": true,
+      "detail": "rgb(255, 255, 255) / rgb(204, 23, 25)"
+    },
+    {
+      "name": "hover: kontrast červená na bílé ≥ 4,5 : 1",
+      "pass": true,
+      "detail": "5.67 : 1"
+    },
+    {
+      "name": "hover: šířka tlačítka se nemění (šipka se posune uvnitř)",
+      "pass": true,
+      "detail": "160.7 → 160.7"
+    },
+    {
+      "name": "focus-visible: obrys na odkazu pruhu (první prvek v tabulátoru)",
+      "pass": true,
+      "detail": "announcement_link w-inline-block · solid 2px"
+    },
+    {
+      "name": "1440 /: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 46 px, nav 46"
+    },
+    {
+      "name": "1440 /: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "1440 /: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "1440 /: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "1440 /: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0003"
+    },
+    {
+      "name": "1440 /produkty/tabule-a-svetelne-panely: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 46 px, nav 46"
+    },
+    {
+      "name": "1440 /produkty/tabule-a-svetelne-panely: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "1440 /produkty/tabule-a-svetelne-panely: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "1440 /produkty/tabule-a-svetelne-panely: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "1440 /produkty/tabule-a-svetelne-panely: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "1440 /kontakty: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 46 px, nav 46"
+    },
+    {
+      "name": "1440 /kontakty: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "1440 /kontakty: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "1440 /kontakty: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "1440 /kontakty: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0003"
+    },
+    {
+      "name": "1440 /inspirace: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 46 px, nav 46"
+    },
+    {
+      "name": "1440 /inspirace: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "1440 /inspirace: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "1440 /inspirace: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "1440 /inspirace: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "1440 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 46 px, nav 46"
+    },
+    {
+      "name": "1440 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "1440 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "1440 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "1440 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "390 /: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 56 px, nav 56"
+    },
+    {
+      "name": "390 /: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "390 /: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "390 /: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "390 /: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0001"
+    },
+    {
+      "name": "390 /produkty/tabule-a-svetelne-panely: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 56 px, nav 56"
+    },
+    {
+      "name": "390 /produkty/tabule-a-svetelne-panely: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "390 /produkty/tabule-a-svetelne-panely: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "390 /produkty/tabule-a-svetelne-panely: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "390 /produkty/tabule-a-svetelne-panely: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "390 /kontakty: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 56 px, nav 56"
+    },
+    {
+      "name": "390 /kontakty: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "390 /kontakty: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "390 /kontakty: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "390 /kontakty: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "390 /inspirace: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 56 px, nav 56"
+    },
+    {
+      "name": "390 /inspirace: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "390 /inspirace: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "390 /inspirace: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "390 /inspirace: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: nahoře pruh vidět, navigace pod ním",
+      "pass": true,
+      "detail": "pruh 56 px, nav 56"
+    },
+    {
+      "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: po scrollu dolů pruh pryč, navigace u horní hrany",
+      "pass": true,
+      "detail": "nav -0.5"
+    },
+    {
+      "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: scroll nahoru uprostřed stránky pruh neukáže",
+      "pass": true
+    },
+    {
+      "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: zpátky nahoře pruh znovu vidět",
+      "pass": true
+    },
+    {
+      "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: layout shift při scrollu 0",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "1440 cs: /kontakty#formular, nadpis formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 168, navigace končí 84"
+    },
+    {
+      "name": "390 cs: /kontakty#formular, nadpis formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 160, navigace končí 64"
+    },
+    {
+      "name": "1440 en: /en/kontakty#formular, nadpis formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 168, navigace končí 84"
+    },
+    {
+      "name": "390 en: /en/kontakty#formular, nadpis formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 160, navigace končí 64"
+    },
+    {
+      "name": "1440 de: /de/kontakty#formular, nadpis formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 168, navigace končí 84"
+    },
+    {
+      "name": "390 de: /de/kontakty#formular, nadpis formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 160, navigace končí 64"
+    },
+    {
+      "name": "zavření zapsáno do localStorage (ne sessionStorage)",
+      "pass": true
+    },
+    {
+      "name": "po novém otevření prohlížeče pruh zůstává zavřený, navigace nahoře",
+      "pass": true,
+      "detail": "{\"d\":\"none\",\"pad\":\"0px\",\"nav\":0}"
+    },
+    {
+      "name": "zavřený pruh: scroll navigací nehýbe",
+      "pass": true
+    },
+    {
+      "name": "jedna zpráva, bez rotace, po 5 s pořád vidět",
+      "pass": true,
+      "detail": "{\"n\":1,\"visible\":true}"
+    },
+    {
+      "name": "bez JS: zpráva vidět, odsazení obsahu kryje pruh",
+      "pass": true,
+      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny, pruh 56, body 77"
+    },
+    {
+      "name": "cs: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
+      "pass": true,
+      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+    },
+    {
+      "name": "en: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
+      "pass": true,
+      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+    },
+    {
+      "name": "de: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
+      "pass": true,
+      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+    }
+  ]
+}

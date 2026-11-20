@@ -3,13 +3,27 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-11-20 · S12 · Horní pruh, 2. kolo (#66)
+
+Review koordinátora (UX, grafika, marketing) a během práce rozhodnutí Lukáše: **jedna zpráva bez rotace**, text „Objednejte do 31. 12. a zamkněte si letošní ceny“, výzva „Zamluvit termín“, na desktopu i na mobilu.
+
+- **Jedna zpráva místo rotace** (Lukáš 20. 11.). Zprávy o montáži a vizualizaci zdarma jsou z pruhu pryč. Zůstalo jeho znění „zamkněte“, návrh koordinátora „zajistěte“ neplatí. Rotace v modulu zůstává pro budoucí kampaně (s jednou zprávou se nespustí).
+- **Pruh odjede při scrollu, JS a ne Webflow.** Modul posouvá fixní `.navbar_component` přes `transform: translateY()` o odscrollovanou vzdálenost, nejvýš o výšku pruhu. Nahoře je pruh vidět, po scrollu je navigace u horní hrany, uprostřed stránky se při scrollu nahoru pruh neukáže. `transform` nehýbe layoutem: layout shift při scrollu naměřen 0 na 5 stránkách × 1440 a 390. Proč ne Webflow: scroll interakce (IX) posouvá o pevnou hodnotu, ale výška pruhu se liší podle jazyka a šířky a po zavření nebo konci akce musí být posun 0, jinak se uřízne navigace. `position: sticky` místo `fixed` by znamenalo přestavět odsazení na všech stránkách (každá počítá s fixed navbarem jinak) a sticky nefunguje pod předkem s `overflow: hidden`. Fokus z klávesnice uvnitř odjetého pruhu ho ukáže.
+- **Zavření v `localStorage`** (dřív `sessionStorage`), klíč `eldr-announcement-closed:zima-2026`. Pruh se neukáže ani po zavření prohlížeče. Nová kampaň = nový `data-announcement`.
+- **Výzva jako ghost tlačítko** (třída `announcement_cta`): bílý obrys 1,5 px, rohy 2 px jako tlačítka webu, text 600, výška 28–30 px, padding 4 × 12. Hover: bílé pozadí, červený text (kontrast 5,7 : 1 oběma směry). Šipka se při hoveru posune o 4 px: `column-gap` 6 → 10 px a zároveň `padding-right` 12 → 8 px, takže tlačítko nemění šířku. `focus-visible` obrys je na odkazu pruhu (celý pruh je jeden odkaz, výzva je jeho součást a sama fokus nedostane). Chromium na 1× hustotě kreslí 1,5 px jako 1 px.
+- **Mobil (≤ 767 px): zpráva a pod ní výzva**, `flex-direction: column`, mezera 4 px, text vlevo, padding 6 / 48 / 6 / 16 px. Pruh má 56 px, 2 řádky ve všech jazycích i na 360 px. Křížek je zarovnaný k prvnímu řádku (`align-items: flex-start`, výška 44 px).
+- **Kratší EN a DE**, ať se na 360 px vejdou na jeden řádek: „Order by 31 Dec and lock in this year’s prices“, „Bestellen Sie bis 31.12. zu diesjährigen Preisen“. Původní DE (73 znaků) dávalo na mobilu 3 řádky a 73 px.
+- **`text-wrap: balance`** na `.announcement_text` (nativně ve Webflow) proti vdovám.
+- **`body` `padding-top`** (záloha bez JS) srovnán s novou výškou pruhu: 46 / 44 / 56 px.
+- **Tablet:** mezera v pruhu 16 → 12 px (`.announcement_link`, medium), jinak by se DE vedle širšího tlačítka zalomila.
+
 ## 2026-11-20 · S11 · Horní pruh s akcí (#62)
 
 Lukáš 19. 11. po telefonu s Myškou: pruh podle návrhu Evisions na staging, varianta podle design systému, UX a marketingu.
 
 - **Varianta rotace** (koordinátor v #62). Běžící pás by soupeřil s pásem recenzí na homepage, neon bliká a zhoršuje čitelnost (WCAG 2.3).
 - **Kód agentury se nepoužil.** Generoval HTML i CSS z JS, texty by nešly lokalizovat a `!important` by se pral s navbarem. Pruh je nativně v komponentě `Navbar_2024-12` jako první potomek `.navbar_component`, takže jede s fixním navbarem na všech stránkách. `.navbar_component` dostal `flex-direction: column`, `align-items: stretch`.
-- **Odsazení obsahu: `padding-top` na tagu `body`.** Navbar je `fixed` a stránky počítají s jeho výškou každá jinak. Kontakty nemají `.page-wrapper` (rodičem navbaru je `body`), takže jediný společný předek všech stránek je `body`. Ve Webflow má `body` 44 px (≤ 767 px 77 px, tři řádky) jako zálohu bez JS. Modul přepíše inline hodnotu na změřenou výšku pruhu a po zavření nebo konci akce na 0. Navbar i obsah se tak posunou spolu a navigace neskočí. **Až se pruh z navbaru smaže, smazat i `padding-top` na `body`**, jinak zůstane nahoře mezera.
+- **Odsazení obsahu: `padding-top` na tagu `body`.** (S12: záloha bez JS teď 46 px, tablet 44 px, mobil 56 px podle nové výšky pruhu.) Navbar je `fixed` a stránky počítají s jeho výškou každá jinak. Kontakty nemají `.page-wrapper` (rodičem navbaru je `body`), takže jediný společný předek všech stránek je `body`. Ve Webflow má `body` 44 px (≤ 767 px 77 px, tři řádky) jako zálohu bez JS. Modul přepíše inline hodnotu na změřenou výšku pruhu a po zavření nebo konci akce na 0. Navbar i obsah se tak posunou spolu a navigace neskočí. **Až se pruh z navbaru smaže, smazat i `padding-top` na `body`**, jinak zůstane nahoře mezera.
 - **Bez JS je vidět první zpráva** (`.announcement_text` má `display: none`, `:first-child` `display: block`), pruh je odkaz a křížek je skrytý (bez JS by nic nedělal).
 - **Zprávy leží v jedné buňce gridu.** Výška pruhu = nejdelší zpráva, při střídání se nehýbe navigace ani obsah. Na mobilu zpráva nejvýš na dva řádky a pod ní celá výzva (`flex-wrap`, výzva `nowrap`), pruh má 77 px (úprava po kontrole Lukáše 20. 11., původně jen šipka).
 - **Odkaz je typu „stránka“ (Kontakty)**, ať se v `/en` a `/de` přepne jazyk. Kotvu `#formular` API u odkazu na stránku tiše zahodí (ověřeno čtením zpět), doplňuje ji modul. Kdo ji nastaví v Designeru (Page section), modul ji nezdvojí.
