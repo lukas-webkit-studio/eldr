@@ -3,6 +3,21 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-11-20 · S11 · Horní pruh s akcí (#62)
+
+Lukáš 19. 11. po telefonu s Myškou: pruh podle návrhu Evisions na staging, varianta podle design systému, UX a marketingu.
+
+- **Varianta rotace** (koordinátor v #62). Běžící pás by soupeřil s pásem recenzí na homepage, neon bliká a zhoršuje čitelnost (WCAG 2.3).
+- **Kód agentury se nepoužil.** Generoval HTML i CSS z JS, texty by nešly lokalizovat a `!important` by se pral s navbarem. Pruh je nativně v komponentě `Navbar_2024-12` jako první potomek `.navbar_component`, takže jede s fixním navbarem na všech stránkách. `.navbar_component` dostal `flex-direction: column`, `align-items: stretch`.
+- **Odsazení obsahu: `padding-top` na tagu `body`.** Navbar je `fixed` a stránky počítají s jeho výškou každá jinak. Kontakty nemají `.page-wrapper` (rodičem navbaru je `body`), takže jediný společný předek všech stránek je `body`. Ve Webflow má `body` 44 px (≤ 767 px 48 px) jako zálohu bez JS. Modul přepíše inline hodnotu na změřenou výšku pruhu a po zavření nebo konci akce na 0. Navbar i obsah se tak posunou spolu a navigace neskočí. **Až se pruh z navbaru smaže, smazat i `padding-top` na `body`**, jinak zůstane nahoře mezera.
+- **Bez JS je vidět první zpráva** (`.announcement_text` má `display: none`, `:first-child` `display: block`), pruh je odkaz a křížek je skrytý (bez JS by nic nedělal).
+- **Zprávy leží v jedné buňce gridu.** Výška pruhu = nejdelší zpráva, při střídání se nehýbe navigace ani obsah. Na mobilu dva řádky, výzva zkrácená na šipku.
+- **Odkaz je typu „stránka“ (Kontakty)**, ať se v `/en` a `/de` přepne jazyk. Kotvu `#formular` API u odkazu na stránku tiše zahodí (ověřeno čtením zpět), doplňuje ji modul. Kdo ji nastaví v Designeru (Page section), modul ji nezdvojí.
+- **Popisek křížku je skrytý text, ne `aria-label`.** Atributy Webflow nelokalizuje, text ano: „Zavřít oznámení“ / „Close announcement“ / „Hinweis schließen“. Text je `div` uvnitř `button` (blok neumí `span`), prohlížeče i čtečky ho čtou správně.
+- **Hover rotaci pozastaví jen z myši a pera.** Dotyk posílá `pointerenter` bez `pointerleave` a rotace by po klepnutí zůstala stát (nález kontroly).
+- **Konec akce** se kontroluje při načtení a při každém střídání zpráv. Datum je v `data-announcement-end` na prvku ve Webflow, jde změnit bez kódu.
+- **Hover celého pruhu ztmaví pozadí** (`--red-hover`), výzva je podtržená trvale. Posun šipky při hoveru by byl selektor rodič → potomek, který Webflow nezapíše; kvůli efektu se do CSS v repu nesahalo.
+
 ## 2026-11-16 · S10 · Pás recenzí: touchpad, kolečko a šipky (#59)
 
 Lukáš 16. 11.: „bylo by možné i tah na touchpadu, např. na Macu dvěma prsty? Prostě vše, co mají i ostatní slidery na webu“.

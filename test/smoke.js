@@ -688,6 +688,137 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   ok('bundle + dev kopie: pás řídí jen jeden (pojistka data-marquee-ready)', captures === 1);
 })();
 
+// --- 6b. horní pruh s akcí (#62) -------------------------------------------
+(function () {
+  const path = require('path');
+  const read = f => fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
+  const BAR = (end, href) => `<div class="navbar_component"><div class="announcement_component" data-announcement="zima-2026" data-announcement-end="${end}">` +
+    `<a href="${href}" class="announcement_link" data-gtm="announcement-zima-2026"><div class="announcement_messages">` +
+    '<p class="announcement_text">A</p><p class="announcement_text">B</p><p class="announcement_text">C</p></div>' +
+    '<div class="announcement_cta">Zamluvit termín →</div></a>' +
+    '<button type="button" class="announcement_close"><span class="announcement_close-label">Zavřít oznámení</span></button></div>' +
+    '<div class="navbar_container"><a href="/" class="navbar_logo-link">logo</a></div></div>';
+  const FUTURE = '2099-12-31T23:59:59+01:00';
+
+  // DOM s podvrženými časovači: rotaci řídí setTimeout, test ho spouští ručně.
+  function dom(html, opts) {
+    opts = opts || {};
+    const d = new JSDOM(`<!DOCTYPE html><html lang="cs"><body>${html}</body></html>`,
+      { url: opts.url || 'https://www.eldr.cz/', runScripts: 'outside-only', pretendToBeVisual: true });
+    const w = d.window;
+    const timers = new Map();
+    let seq = 0;
+    w.setTimeout = (fn, ms) => { timers.set(++seq, { fn, ms }); return seq; };
+    w.clearTimeout = id => { timers.delete(id); };
+    if (opts.reduce) w.matchMedia = q => ({ matches: /reduce/.test(q), media: q });
+    if (opts.closed) w.sessionStorage.setItem('eldr-announcement-closed:zima-2026', '1');
+    if (opts.noStorage) Object.defineProperty(w, 'sessionStorage', { get() { throw new Error('SecurityError'); } });
+    // jsdom nepočítá layout: výšku pruhu podvrhnout, ať je vidět, že odsazení bere změřenou hodnotu.
+    Object.defineProperty(w.HTMLElement.prototype, 'offsetHeight', { configurable: true, get() { return this.classList.contains('announcement_component') ? 47 : 0; } });
+    const errors = [];
+    try {
+      (opts.scripts || [bundle]).forEach(s => w.eval(s));
+      w.document.dispatchEvent(new w.Event('DOMContentLoaded'));
+    } catch (e) { errors.push(e.message); }
+    const fire = () => { const [id, t] = [...timers][0] || []; if (!t) return false; timers.delete(id); t.fn(); return true; };
+    return { w, doc: w.document, timers, fire, errors };
+  }
+
+  function barChecks(env) {
+    const { w, doc, timers, fire } = env;
+    const bar = doc.querySelector('.announcement_component');
+    const msgs = [...doc.querySelectorAll('.announcement_text')];
+    const visible = el => el.style.opacity === '1' && el.style.visibility === 'visible' && !el.hasAttribute('aria-hidden');
+    ok('proběhlo bez výjimky', env.errors.length === 0);
+    ok('pruh je označený jako spuštěný', bar.hasAttribute('data-announcement-ready'));
+    ok('odkaz dostal kotvu #formular', doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular');
+    ok('křížek je vidět až s JS', doc.querySelector('.announcement_close').style.display === 'flex');
+    ok('všechny zprávy jsou v gridu (display: block)', msgs.every(m => m.style.display === 'block'));
+    ok('na začátku je vidět jen první zpráva', visible(msgs[0]) && !visible(msgs[1]) && msgs[1].getAttribute('aria-hidden') === 'true');
+    ok('body dostal odsazení podle změřené výšky pruhu (47 px)', doc.body.style.paddingTop === '47px');
+    ok('rotace naplánovaná po 5 s', timers.size === 1 && [...timers.values()][0].ms === 5000);
+    fire();
+    ok('po 5 s je vidět druhá zpráva', visible(msgs[1]) && !visible(msgs[0]));
+    ok('odcházející zpráva se posouvá nahoru a prolíná', /translateY\(-6px\)/.test(msgs[0].style.transform) && /opacity 400ms/.test(msgs[0].style.transition));
+    ok('a hned je naplánovaná další', timers.size === 1);
+    fire(); fire();
+    ok('po poslední zprávě znovu první', visible(msgs[0]));
+
+    bar.dispatchEvent(pointer(w, 'pointerenter', 10, 10, 0, 'touch'));
+    ok('klepnutí prstem rotaci nezastaví (dotyk nemá pointerleave)', timers.size === 1);
+    bar.dispatchEvent(pointer(w, 'pointerenter', 10, 10, 0));
+    ok('hover myší rotaci zastaví', timers.size === 0);
+    bar.dispatchEvent(pointer(w, 'pointerleave', 10, 10, 0));
+    ok('po odjetí myši se rotace rozjede', timers.size === 1);
+    Object.defineProperty(doc, 'hidden', { configurable: true, value: true });
+    doc.dispatchEvent(new w.Event('visibilitychange'));
+    ok('ve skryté záložce rotace stojí', timers.size === 0);
+    Object.defineProperty(doc, 'hidden', { configurable: true, value: false });
+    doc.dispatchEvent(new w.Event('visibilitychange'));
+    ok('po návratu do záložky se rozjede', timers.size === 1);
+    doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusin', { bubbles: true }));
+    ok('fokus uvnitř pruhu rotaci zastaví', timers.size === 0);
+    doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusout', { bubbles: true, relatedTarget: doc.querySelector('.announcement_close') }));
+    ok('přechod fokusu na křížek rotaci nerozjede', timers.size === 0);
+    doc.querySelector('.announcement_close').dispatchEvent(new w.FocusEvent('focusout', { bubbles: true, relatedTarget: doc.querySelector('.navbar_logo-link') }));
+    ok('odchod fokusu z pruhu rotaci rozjede', timers.size === 1);
+
+    doc.querySelector('.announcement_close').click();
+    ok('křížek pruh skryje', bar.style.display === 'none');
+    ok('po zavření je odsazení 0', doc.body.style.paddingTop === '0px');
+    ok('po zavření rotace stojí', timers.size === 0);
+    ok('zavření se pamatuje v sessionStorage', w.sessionStorage.getItem('eldr-announcement-closed:zima-2026') === '1');
+    ok('fokus přešel na logo', doc.activeElement === doc.querySelector('.navbar_logo-link'));
+  }
+
+  console.log('\nHorní pruh — rotace, pauza, zavření');
+  barChecks(dom(BAR(FUTURE, '/kontakty')));
+
+  console.log('\nHorní pruh — stavy');
+  let e = dom(BAR(FUTURE, '/kontakty'), { closed: true });
+  ok('zavřený v téže relaci se neukáže', e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px');
+  e = dom(BAR('2026-11-19T00:00:00+01:00', '/kontakty'));
+  ok('po konci akce se neukáže', e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px' && e.timers.size === 0);
+  e = dom(BAR('neplatne-datum', '/kontakty'));
+  ok('neplatné datum = bez konce, pruh běží', e.doc.querySelector('.announcement_component').style.display !== 'none');
+  e = dom(BAR(FUTURE, '/en/kontakty'), { url: 'https://www.eldr.cz/en' });
+  ok('kotva se doplní i k anglické adrese', e.doc.querySelector('.announcement_link').getAttribute('href') === '/en/kontakty#formular');
+  e = dom(BAR(FUTURE, '/kontakty#formular'));
+  ok('existující kotvu z Designeru nezdvojí', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular');
+  e = dom(BAR(FUTURE, '/kontakty'), { reduce: true });
+  const m = [...e.doc.querySelectorAll('.announcement_text')];
+  e.fire();
+  ok('reduced motion: střídání bez přechodu a bez posunu',
+    m[1].style.opacity === '1' && m.every(x => x.style.transition === 'none' && x.style.transform === 'none'));
+  e = dom(BAR(FUTURE, '/kontakty'), { noStorage: true });
+  e.doc.querySelector('.announcement_close').click();
+  ok('zakázané úložiště: modul nespadne a křížek pruh skryje', e.errors.length === 0 && e.doc.querySelector('.announcement_component').style.display === 'none');
+  e = dom(BAR(FUTURE, '/kontakty').replace(/<p class="announcement_text">[BC]<\/p>/g, ''));
+  ok('jedna zpráva: bez rotace, odkaz i křížek fungují', e.timers.size === 0 &&
+    e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular' &&
+    e.doc.querySelector('.announcement_close').style.display === 'flex' && e.doc.body.style.paddingTop === '47px');
+  e = dom(BAR(new Date(Date.now() + 60000).toISOString(), '/kontakty'));
+  const realNow = Date.now;
+  e.w.Date.now = () => realNow() + 120000;
+  e.fire();
+  e.w.Date.now = realNow;
+  ok('záložka otevřená přes konec akce: pruh zmizí při dalším střídání',
+    e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px' && e.timers.size === 0);
+  e = dom('<div class="navbar_component"></div>');
+  ok('bez pruhu se modul vypne a odsazení nesahá', e.errors.length === 0 && e.doc.body.style.paddingTop === '');
+
+  const mod = read('src/modules/46-announcement-bar.js');
+  const dev = read('src/dev/announcement-bar.js');
+  const body = (src, end) => src.slice(src.indexOf('  var INTERVAL'), src.indexOf(end));
+  console.log('\nHorní pruh — dev kopie (src/dev/announcement-bar.js)');
+  ok('tělo dev kopie je shodné s modulem',
+    body(mod, '  onReady(function () {') === body(dev, '  function start() {') && body(dev, '  function start() {').length > 1000);
+  barChecks(dom(BAR(FUTURE, '/kontakty'), { scripts: [dev] }));
+  e = dom(BAR(FUTURE, '/kontakty'), { scripts: [dev, bundle] });
+  ok('bundle + dev kopie: pruh řídí jen jeden (pojistka data-announcement-ready)',
+    e.timers.size === 1 && e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular');
+})();
+
 // --- 7. prázdná stránka ---------------------------------------------------
 run('Prázdná stránka (moduly se musí samy vypnout)', '<div></div>', 'https://www.eldr.cz/404', () => {});
 
