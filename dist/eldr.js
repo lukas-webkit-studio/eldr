@@ -1876,7 +1876,7 @@ function locale() {
        Webflow bez zásahu do kódu. Neplatné nebo chybějící datum = bez
        konce
      - body.style.paddingTop drží změřenou výšku pruhu, po skrytí 0.
-       Ve Webflow má body padding-top 44 px (mobil 48 px) jako zálohu
+       Ve Webflow má body padding-top 44 px (mobil 77 px) jako zálohu
        bez JS. Zdůvodnění v docs/decisions.md (20. 11. 2026)
      - k odkazu doplní #formular, pokud kotvu nemá. Webflow API u odkazu
        typu „stránka“ kotvu zahodí (ověřeno 20. 11. 2026 čtením zpět),

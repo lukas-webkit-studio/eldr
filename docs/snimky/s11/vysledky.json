@@ -1,0 +1,716 @@
+{
+  "base": "https://eldr.webflow.io",
+  "local": false,
+  "date": "2026-11-20T07:03:08.694Z",
+  "passed": 146,
+  "failed": 0,
+  "results": [
+    {
+      "name": "cs: GTM-W6PR2VX, 5 Finsweet, pruh se připnutým commitem",
+      "pass": true,
+      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+    },
+    {
+      "name": "cs: text pruhu je v surovém HTML",
+      "pass": true
+    },
+    {
+      "name": "en: GTM-W6PR2VX, 5 Finsweet, pruh se připnutým commitem",
+      "pass": true,
+      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+    },
+    {
+      "name": "en: text pruhu je v surovém HTML",
+      "pass": true
+    },
+    {
+      "name": "de: GTM-W6PR2VX, 5 Finsweet, pruh se připnutým commitem",
+      "pass": true,
+      "detail": "Finsweet 5, commit 0ddfdcbb175789fead6044010a52362d741d349b"
+    },
+    {
+      "name": "de: text pruhu je v surovém HTML",
+      "pass": true
+    },
+    {
+      "name": "1440 cs: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 cs: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny"
+    },
+    {
+      "name": "1440 cs: zprávy na jednom řádku",
+      "pass": true,
+      "detail": "řádky 1/1/1/1"
+    },
+    {
+      "name": "1440 cs: výzva celým textem „Zamluvit termín →“",
+      "pass": true,
+      "detail": "Zamluvit termín →"
+    },
+    {
+      "name": "1440 cs: pruh nejvýš 1 řádky textu",
+      "pass": true,
+      "detail": "1 ř."
+    },
+    {
+      "name": "1440 cs: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "1440 cs: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 978, křížek od 1396"
+    },
+    {
+      "name": "1440 cs: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "1440 cs: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Zavřít oznámení"
+    },
+    {
+      "name": "1440 cs: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/kontakty#formular"
+    },
+    {
+      "name": "1440 cs: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 44 px, body 44 px"
+    },
+    {
+      "name": "991 cs: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "991 cs: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny"
+    },
+    {
+      "name": "991 cs: zprávy na jednom řádku",
+      "pass": true,
+      "detail": "řádky 1/1/1/1"
+    },
+    {
+      "name": "991 cs: výzva celým textem „Zamluvit termín →“",
+      "pass": true,
+      "detail": "Zamluvit termín →"
+    },
+    {
+      "name": "991 cs: pruh nejvýš 1 řádky textu",
+      "pass": true,
+      "detail": "1 ř."
+    },
+    {
+      "name": "991 cs: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "991 cs: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 738, křížek od 947"
+    },
+    {
+      "name": "991 cs: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "991 cs: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Zavřít oznámení"
+    },
+    {
+      "name": "991 cs: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/kontakty#formular"
+    },
+    {
+      "name": "991 cs: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 44 px, body 44 px"
+    },
+    {
+      "name": "390 cs: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390 cs: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny"
+    },
+    {
+      "name": "390 cs: zprávy na nejvýš dvou řádcích",
+      "pass": true,
+      "detail": "řádky 1/2/1/1"
+    },
+    {
+      "name": "390 cs: výzva celým textem „Zamluvit termín →“",
+      "pass": true,
+      "detail": "Zamluvit termín →"
+    },
+    {
+      "name": "390 cs: pruh nejvýš 3 řádky textu",
+      "pass": true,
+      "detail": "2 ř."
+    },
+    {
+      "name": "390 cs: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "390 cs: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 346, křížek od 346"
+    },
+    {
+      "name": "390 cs: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "390 cs: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Zavřít oznámení"
+    },
+    {
+      "name": "390 cs: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/kontakty#formular"
+    },
+    {
+      "name": "390 cs: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 66.640625 px, body 67 px"
+    },
+    {
+      "name": "1440 en: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 en: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Order by 31 December and lock in this year’s prices"
+    },
+    {
+      "name": "1440 en: zprávy na jednom řádku",
+      "pass": true,
+      "detail": "řádky 1/1/1/1"
+    },
+    {
+      "name": "1440 en: výzva celým textem „Book a date →“",
+      "pass": true,
+      "detail": "Book a date →"
+    },
+    {
+      "name": "1440 en: pruh nejvýš 1 řádky textu",
+      "pass": true,
+      "detail": "1 ř."
+    },
+    {
+      "name": "1440 en: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "1440 en: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 1000, křížek od 1396"
+    },
+    {
+      "name": "1440 en: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "1440 en: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Close announcement"
+    },
+    {
+      "name": "1440 en: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/en/kontakty#formular"
+    },
+    {
+      "name": "1440 en: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 44 px, body 44 px"
+    },
+    {
+      "name": "991 en: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "991 en: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Order by 31 December and lock in this year’s prices"
+    },
+    {
+      "name": "991 en: zprávy na jednom řádku",
+      "pass": true,
+      "detail": "řádky 1/1/1/1"
+    },
+    {
+      "name": "991 en: výzva celým textem „Book a date →“",
+      "pass": true,
+      "detail": "Book a date →"
+    },
+    {
+      "name": "991 en: pruh nejvýš 1 řádky textu",
+      "pass": true,
+      "detail": "1 ř."
+    },
+    {
+      "name": "991 en: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "991 en: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 758, křížek od 947"
+    },
+    {
+      "name": "991 en: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "991 en: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Close announcement"
+    },
+    {
+      "name": "991 en: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/en/kontakty#formular"
+    },
+    {
+      "name": "991 en: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 44 px, body 44 px"
+    },
+    {
+      "name": "390 en: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390 en: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Order by 31 December and lock in this year’s prices"
+    },
+    {
+      "name": "390 en: zprávy na nejvýš dvou řádcích",
+      "pass": true,
+      "detail": "řádky 2/2/2/1"
+    },
+    {
+      "name": "390 en: výzva celým textem „Book a date →“",
+      "pass": true,
+      "detail": "Book a date →"
+    },
+    {
+      "name": "390 en: pruh nejvýš 3 řádky textu",
+      "pass": true,
+      "detail": "3 ř."
+    },
+    {
+      "name": "390 en: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "390 en: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 346, křížek od 346"
+    },
+    {
+      "name": "390 en: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "390 en: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Close announcement"
+    },
+    {
+      "name": "390 en: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/en/kontakty#formular"
+    },
+    {
+      "name": "390 en: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 66.640625 px, body 67 px"
+    },
+    {
+      "name": "1440 de: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 de: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Bestellen Sie bis zum 31.12. und sichern Sie sich die diesjährigen Preise"
+    },
+    {
+      "name": "1440 de: zprávy na jednom řádku",
+      "pass": true,
+      "detail": "řádky 1/1/1/1"
+    },
+    {
+      "name": "1440 de: výzva celým textem „Termin reservieren →“",
+      "pass": true,
+      "detail": "Termin reservieren →"
+    },
+    {
+      "name": "1440 de: pruh nejvýš 1 řádky textu",
+      "pass": true,
+      "detail": "1 ř."
+    },
+    {
+      "name": "1440 de: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "1440 de: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 1059, křížek od 1396"
+    },
+    {
+      "name": "1440 de: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "1440 de: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Hinweis schließen"
+    },
+    {
+      "name": "1440 de: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/de/kontakty#formular"
+    },
+    {
+      "name": "1440 de: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 44 px, body 44 px"
+    },
+    {
+      "name": "991 de: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "991 de: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Bestellen Sie bis zum 31.12. und sichern Sie sich die diesjährigen Preise"
+    },
+    {
+      "name": "991 de: zprávy na jednom řádku",
+      "pass": true,
+      "detail": "řádky 1/1/1/1"
+    },
+    {
+      "name": "991 de: výzva celým textem „Termin reservieren →“",
+      "pass": true,
+      "detail": "Termin reservieren →"
+    },
+    {
+      "name": "991 de: pruh nejvýš 1 řádky textu",
+      "pass": true,
+      "detail": "1 ř."
+    },
+    {
+      "name": "991 de: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "991 de: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 814, křížek od 947"
+    },
+    {
+      "name": "991 de: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "991 de: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Hinweis schließen"
+    },
+    {
+      "name": "991 de: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/de/kontakty#formular"
+    },
+    {
+      "name": "991 de: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 44 px, body 44 px"
+    },
+    {
+      "name": "390 de: bez chyb v konzoli",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390 de: první zpráva podle zadání",
+      "pass": true,
+      "detail": "Bestellen Sie bis zum 31.12. und sichern Sie sich die diesjährigen Preise"
+    },
+    {
+      "name": "390 de: zprávy na nejvýš dvou řádcích",
+      "pass": true,
+      "detail": "řádky 2/2/2/1"
+    },
+    {
+      "name": "390 de: výzva celým textem „Termin reservieren →“",
+      "pass": true,
+      "detail": "Termin reservieren →"
+    },
+    {
+      "name": "390 de: pruh nejvýš 3 řádky textu",
+      "pass": true,
+      "detail": "3 ř."
+    },
+    {
+      "name": "390 de: všechen text bíle, žlutá jen tečka",
+      "pass": true,
+      "detail": "rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255) / tečka rgb(249, 179, 25)"
+    },
+    {
+      "name": "390 de: křížek 44 × 44 px a nepřekrývá text",
+      "pass": true,
+      "detail": "text do 346, křížek od 346"
+    },
+    {
+      "name": "390 de: nic se neusekne (text uvnitř pruhu)",
+      "pass": true
+    },
+    {
+      "name": "390 de: popisek křížku přeložený",
+      "pass": true,
+      "detail": "Hinweis schließen"
+    },
+    {
+      "name": "390 de: odkaz na formulář v jazyce stránky",
+      "pass": true,
+      "detail": "/de/kontakty#formular"
+    },
+    {
+      "name": "390 de: odsazení body = výška pruhu, navigace pod pruhem",
+      "pass": true,
+      "detail": "pruh 66.640625 px, body 67 px"
+    },
+    {
+      "name": "1440 /: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 208, navigace končí 128"
+    },
+    {
+      "name": "1440 /: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 44 px, navigace 0 px"
+    },
+    {
+      "name": "1440 /produkty/tabule-a-svetelne-panely: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 188, navigace končí 128"
+    },
+    {
+      "name": "1440 /produkty/tabule-a-svetelne-panely: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 44 px, navigace 0 px"
+    },
+    {
+      "name": "1440 /kontakty: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 228, navigace končí 128"
+    },
+    {
+      "name": "1440 /kontakty: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 44 px, navigace 0 px"
+    },
+    {
+      "name": "1440 /inspirace: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 222, navigace končí 128"
+    },
+    {
+      "name": "1440 /inspirace: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 44 px, navigace 0 px"
+    },
+    {
+      "name": "1440 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 184, navigace končí 128"
+    },
+    {
+      "name": "1440 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 44 px, navigace 0 px"
+    },
+    {
+      "name": "390 /: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 163, navigace končí 131"
+    },
+    {
+      "name": "390 /: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 67 px, navigace 0 px"
+    },
+    {
+      "name": "390 /produkty/tabule-a-svetelne-panely: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 179, navigace končí 131"
+    },
+    {
+      "name": "390 /produkty/tabule-a-svetelne-panely: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 67 px, navigace 0 px"
+    },
+    {
+      "name": "390 /kontakty: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 155, navigace končí 131"
+    },
+    {
+      "name": "390 /kontakty: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 67 px, navigace 0 px"
+    },
+    {
+      "name": "390 /inspirace: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 178, navigace končí 131"
+    },
+    {
+      "name": "390 /inspirace: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 67 px, navigace 0 px"
+    },
+    {
+      "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: první nadpis pod navigací",
+      "pass": true,
+      "detail": "nadpis 147, navigace končí 131"
+    },
+    {
+      "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: po zavření se obsah vrátí o výšku pruhu a navigace je nahoře",
+      "pass": true,
+      "detail": "posun 67 px, navigace 0 px"
+    },
+    {
+      "name": "křížek pruh skryje",
+      "pass": true
+    },
+    {
+      "name": "fokus po zavření na logu",
+      "pass": true
+    },
+    {
+      "name": "v téže relaci se na další stránce neukáže",
+      "pass": true
+    },
+    {
+      "name": "nová relace pruh zase ukáže",
+      "pass": true
+    },
+    {
+      "name": "na začátku je vidět první zpráva",
+      "pass": true
+    },
+    {
+      "name": "po 5 s je vidět druhá zpráva",
+      "pass": true
+    },
+    {
+      "name": "při hoveru rotace stojí (6 s)",
+      "pass": true
+    },
+    {
+      "name": "po odjetí myši pokračuje",
+      "pass": true,
+      "detail": "aktivní zpráva 2"
+    },
+    {
+      "name": "při fokusu rotace stojí (6 s)",
+      "pass": true
+    },
+    {
+      "name": "reduced motion: střídá se bez přechodu a posunu",
+      "pass": true,
+      "detail": "none | none | none | none"
+    },
+    {
+      "name": "31. 12. 2026 23:58: pruh je vidět",
+      "pass": true
+    },
+    {
+      "name": "1. 1. 2027 00:00: pruh se neukáže a odsazení je 0",
+      "pass": true
+    },
+    {
+      "name": "bez JS: vidět je jen první zpráva",
+      "pass": true,
+      "detail": "block/none/none/none"
+    },
+    {
+      "name": "bez JS: pruh je odkaz na Kontakty, křížek skrytý",
+      "pass": true
+    },
+    {
+      "name": "bez JS: navigace pod pruhem a obsah odsazený",
+      "pass": true,
+      "detail": "pruh 44, body 44"
+    },
+    {
+      "name": "1440 cs: /kontakty#formular, začátek formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 168, navigace končí 128"
+    },
+    {
+      "name": "390 cs: /kontakty#formular, začátek formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 160, navigace končí 131"
+    },
+    {
+      "name": "1440 en: /en/kontakty#formular, začátek formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 168, navigace končí 128"
+    },
+    {
+      "name": "390 en: /en/kontakty#formular, začátek formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 160, navigace končí 131"
+    },
+    {
+      "name": "1440 de: /de/kontakty#formular, začátek formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 168, navigace končí 128"
+    },
+    {
+      "name": "390 de: /de/kontakty#formular, začátek formuláře pod navigací",
+      "pass": true,
+      "detail": "nadpis 160, navigace končí 131"
+    }
+  ]
+}

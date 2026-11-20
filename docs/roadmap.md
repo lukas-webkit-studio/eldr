@@ -5,12 +5,21 @@ Zdroj pravdy o úkolech, cenách a termínech je dashboard (projekt
 
 ## Stav
 
-Aktualizováno 16. 11. 2026 večer (S10 #59; předtím S9 #54; předtím 3. 11. koordinátor K02, předání K03). Časy v Europe/Prague.
+Aktualizováno 20. 11. 2026 ráno (S11 #62; předtím S10 #59, S9 #54; předtím 3. 11. koordinátor K02, předání K03). Časy v Europe/Prague.
 
 - **Webflow:** produkce publikována **3. 11. 2026 09:51** (obě domény). Od 31. 10. přibylo jen: nadpis „Řekli o nás“ na homepage na středu (třída `testimonial21_header`) a tučné maximální výšky plošin na `/servisni-sluzby-a-pronajem-plosin` (CS/EN/DE, přání Myšky z 2. 11.).
 - **Dodávka 3. 11. odeslaná** Myškovi (e-mail 3. 11.). Faktura **28 200 Kč** po jeho kontrole (dashboard `460218ce`): formulář 6 500, strukturovaná data 4 500, popis produktů pro AI 12 500, recenze 2 500, blog 2 200. Úkoly dodávky jsou v dashboardu `done`.
 - **Blog:** 5 článků a 5 bannerů v CMS jako draft, čeká na obrázky od klienta (dashboard `e9fc3f7f`).
 - **Zbývá z října:** ruční kroky Lukáše (`cb1f8f9e`: Rich Results Test na 7 URL, výsledek do Docu 01; Make S4 #29), Designer drobnosti (`d30a2c84`), Cloudflare worker (`6d765415`), korektura překladů (`2474d5db`), EN text CTA (`bc1ab14c`).
+
+### Štafeta 20. 11. – S11 #62 horní pruh s akcí „zimní objednávky“
+
+- **Hotovo na stagingu, produkce nepublikovaná.** Domény produkce zůstaly na 19. 11. 2026 09:14:46 (obě). Staging publikován naposledy 20. 11. 07:56:52.
+- **Webflow (nativně):** pruh je první potomek komponenty `Navbar_2024-12`, třídy `announcement_*`, barvy z proměnných. Rotace 4 zpráv, výzva „Zamluvit termín →“, odkaz typu stránka na Kontakty (kotvu `#formular` doplní modul). Po kontrole Lukáše: všechen text bíle (kontrast 5,7 : 1), zvýraznění tučně, žlutá jen jako tečka (na mobilu skrytá), na mobilu celá výzva pod zprávou, pruh 77 px. Texty EN/DE lokalizací komponenty, popisek křížku jako překládaný skrytý text. `.navbar_component` má `flex-direction: column`, `body` `padding-top` 44 px (mobil 77 px) jako záloha bez JS, `.sectionform` `scroll-margin-top` (formulář pod vyšší navigací). Zdůvodnění v `docs/decisions.md` (20. 11.).
+- **Repo (PR #63, #64, merge commit `0ddfdcb`):** modul `46-announcement-bar.js` a dočasná kopie `src/dev/announcement-bar.js` v site footeru (jsDelivr, pin `0ddfdcbb175789fead6044010a52362d741d349b`, čteno zpátky). Rotace po 5 s, pauza při hoveru (myš, pero) a fokusu, reduced motion bez pohybu, zavření do konce relace, konec akce po 31. 12. 2026 23:59, odsazení `body` podle změřené výšky. Smoke test 261 kontrol.
+- **Ověření na stagingu** (`scripts/overeni/s11-horni-pruh.js`, Chromium): 146/146. Texty CS/EN/DE, 1 řádek na 1440 a 991, na 390 zpráva nejvýš 2 řádky + výzva, křížek 44 × 44 nepřekrývá text, obsah nepřekrytý na 5 stránkách a po zavření se vrátí o výšku pruhu, zavření drží v relaci, rotace a pauzy, reduced motion, konec akce (podvržené hodiny), bez JS první zpráva a odkaz, klik vede na `/…/kontakty#formular` a nadpis formuláře je pod navigací ve 3 jazycích, head s `GTM-W6PR2VX` a 5 Finsweet. Snímky a `vysledky.json` v `docs/snimky/s11/`.
+- **Kontrola u dvou stolů:** kód bez vážných nálezů (zapracováno: konec akce i za běhu, hover jen z myši, pevnější testy). Zadání: bez blockeru; opraveny DE formulace a EN zpráva 4, šipka skrytá před čtečkou, kontrast vyřešen úpravou výše.
+- **Na Lukášovi:** souhlas s publikací produkce (odejde i s tím vše rozdělané ve Webflow). Po nasazení workeru smazat řádek pruhu ze site footeru i `src/dev/announcement-bar.js`. Až akce skončí a pruh se z navbaru smaže, smazat i `padding-top` na `body` (a `flex-direction` na navbaru může zůstat). GTM: klik na pruh má hook `data-gtm="announcement-zima-2026"`, trigger v containeru zatím není.
 
 ### Štafeta 16. 11. večer – S10 #59 pás recenzí: touchpad, kolečko, šipky
 
