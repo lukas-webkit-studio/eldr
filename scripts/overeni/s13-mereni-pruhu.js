@@ -84,9 +84,10 @@ async function run() {
       if (COMMIT && loc === 'cs' && size === 'desktop') {
         const src = await page.evaluate(() => [...document.scripts].map(s => s.src).find(s => /announcement-bar\.js/.test(s)) || '');
         ok('stránka načítá dev kopii z merge commitu', src.includes('eldr@' + COMMIT + '/'), src);
-        const head = await page.evaluate(() => document.head.innerHTML);
-        const fins = ['cmsfilter', 'richtext', 'scrolldisable', 'attributes@2', 'cookie-consent'].filter(f => head.includes(f));
-        ok('head má GTM-W6PR2VX a 5 Finsweet', head.includes('GTM-W6PR2VX') && fins.length === 5, fins.join(', '));
+        // GTM a 4 Finsweet jsou v site head, cookie-consent v site footeru.
+        const [head, html] = await page.evaluate(() => [document.head.innerHTML, document.documentElement.innerHTML]);
+        const fins = ['cmsfilter', 'richtext', 'scrolldisable', 'attributes@2', 'cookie-consent'].filter(f => html.includes('@finsweet/' + (f === 'attributes@2' ? f : (f === 'cookie-consent' ? f : 'attributes-' + f))));
+        ok('head má GTM-W6PR2VX, stránka 5 Finsweet', head.includes('GTM-W6PR2VX') && fins.length === 5, fins.join(', '));
       }
       const href = await page.getAttribute('.announcement_link', 'href');
       ok('odkaz má ?pruh=zima-2026 před #formular', href === `${prefix}/kontakty?pruh=zima-2026#formular`, href);

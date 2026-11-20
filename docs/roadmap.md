@@ -5,12 +5,19 @@ Zdroj pravdy o úkolech, cenách a termínech je dashboard (projekt
 
 ## Stav
 
-Aktualizováno 20. 11. 2026 odpoledne (S12 #66; S11 #62; předtím S10 #59, S9 #54; předtím 3. 11. koordinátor K02, předání K03). Časy v Europe/Prague.
+Aktualizováno 20. 11. 2026 odpoledne (S13 #69; S12 #66; S11 #62; předtím S10 #59, S9 #54; předtím 3. 11. koordinátor K02, předání K03). Časy v Europe/Prague.
 
 - **Webflow:** produkce publikována **3. 11. 2026 09:51** (obě domény). Od 31. 10. přibylo jen: nadpis „Řekli o nás“ na homepage na středu (třída `testimonial21_header`) a tučné maximální výšky plošin na `/servisni-sluzby-a-pronajem-plosin` (CS/EN/DE, přání Myšky z 2. 11.).
 - **Dodávka 3. 11. odeslaná** Myškovi (e-mail 3. 11.). Faktura **28 200 Kč** po jeho kontrole (dashboard `460218ce`): formulář 6 500, strukturovaná data 4 500, popis produktů pro AI 12 500, recenze 2 500, blog 2 200. Úkoly dodávky jsou v dashboardu `done`.
 - **Blog:** 5 článků a 5 bannerů v CMS jako draft, čeká na obrázky od klienta (dashboard `e9fc3f7f`).
 - **Zbývá z října:** ruční kroky Lukáše (`cb1f8f9e`: Rich Results Test na 7 URL, výsledek do Docu 01; Make S4 #29), Designer drobnosti (`d30a2c84`), Cloudflare worker (`6d765415`), korektura překladů (`2474d5db`), EN text CTA (`bc1ab14c`).
+
+### Štafeta 20. 11. – S13 #69 měření kliků na horní pruh
+
+- **Hotovo na stagingu (publikováno 20. 11. 15:01:18, footer pin `d86049a2…`, PR #70), produkce nepublikovaná** (domény dál 19. 11. 09:14:46). Ověření s merge commitem 44/44 (`scripts/overeni/s13-mereni-pruhu.js`, snímky `docs/snimky/s13/`).
+- **Odkaz pruhu** `/kontakty?pruh=zima-2026#formular` (i `/en`, `/de`), bez UTM. V GA4 jde číslo najít už teď (`page_location` obsahuje `pruh=zima-2026`).
+- **Klik pushne** `announcement_click` s `announcement` a `locale` do `dataLayer`. Bez GTM nic nespadne. Postup pro GTM a GA4 v `docs/decisions.md` (S13).
+- **Na Lukášovi:** po získání přístupu do GTM nastavit trigger a tag podle `docs/decisions.md` a ověřit, jak container zachází se souhlasem s cookies.
 
 ### Štafeta 20. 11. – S12 #66 horní pruh, 2. kolo
 
