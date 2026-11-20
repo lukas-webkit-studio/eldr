@@ -1841,8 +1841,15 @@ function locale() {
    co Webflow neumí:
 
    Proč ne Webflow:
-     - IX2 neumí zapamatovat zavření (sessionStorage) ani pruh po datu
+     - IX2 neumí zapamatovat zavření (localStorage) ani pruh po datu
        sám vypnout. Interakce navíc API nečte ani nezapisuje.
+     - Odjetí pruhu při scrollu (#66): navbar je fixed a pruh je jeho
+       součástí. Posun o výšku pruhu závisí na tom, jestli pruh vůbec je
+       (zavřený, po konci akce) a jak je vysoký (jazyk, šířka okna).
+       Scroll interakce by posouvala o pevnou hodnotu i po zavření a uřízla
+       by navigaci. Sticky místo fixed by znamenalo přestavět odsazení
+       na všech stránkách (každá počítá s fixed navbarem jinak).
+       Rozhodnutí v docs/decisions.md (20. 11. 2026, S12).
      - Rotace s pauzou při hoveru i fokusu z klávesnice je stav, který
        IX2 neudrží (timeline jde jen přehrát nebo pozastavit, ne „po
        zastavení pokračovat od zprávy, kde byla“).
@@ -1857,8 +1864,10 @@ function locale() {
      .announcement_component     data-announcement="zima-2026" (klíč kampaně)
                                  data-announcement-end="2026-12-31T23:59:59+01:00"
        a.announcement_link       odkaz na stránku Kontakty, data-gtm = hook pro GTM
-         .announcement_messages  grid, všechny zprávy v jedné buňce
+         .announcement_messages  grid, všechny zprávy v jedné buňce (≥ 768 px)
            p.announcement_text   ×N, bez JS je vidět jen první (:first-child)
+         .announcement_messages.is-short  totéž kratšími texty, jen ≤ 767 px
+                                 (obě sady rotují spolu, CSS ukáže jednu)
          .announcement_cta
        button.announcement_close ve Webflow display: none, ukáže ho modul
 
@@ -1869,8 +1878,11 @@ function locale() {
        dotyk posílá pointerover bez pointerout
      - prefers-reduced-motion: zprávy se střídají okamžitě, bez pohybu
        a bez prolnutí
-     - křížek pruh skryje a do zavření prohlížeče (sessionStorage, klíč
-       z data-announcement) se znovu neukáže. Fokus přejde na logo
+     - křížek pruh skryje a natrvalo se neukáže (localStorage, klíč
+       z data-announcement; nová kampaň = nový klíč). Fokus přejde na logo
+     - při scrollu dolů pruh odjede: navbar se posune nahoru o odscrollovanou
+       vzdálenost, nejvýš o výšku pruhu (transform, bez CLS). Nahoře na
+       stránce je pruh zpátky, uprostřed stránky se neukazuje
      - po data-announcement-end se pruh neukáže (kontrola při načtení
        a při každém střídání zpráv). Datum jde změnit ve
        Webflow bez zásahu do kódu. Neplatné nebo chybějící datum = bez
@@ -1906,7 +1918,7 @@ function locale() {
 
   function storageGet(key) {
     try {
-      return window.sessionStorage.getItem(key);
+      return window.localStorage.getItem(key);
     } catch (e) {
       return null;
     }
@@ -1914,7 +1926,7 @@ function locale() {
 
   function storageSet(key) {
     try {
-      window.sessionStorage.setItem(key, '1');
+      window.localStorage.setItem(key, '1');
     } catch (e) {
       /* privátní režim nebo zakázané úložiště: zavře se jen na téhle stránce */
     }
@@ -1931,16 +1943,46 @@ function locale() {
 
     var key = STORAGE_PREFIX + (bar.getAttribute('data-announcement') || 'default');
     var body = document.body;
+    // Navbar (rodič pruhu) je fixed. Při scrollu se posouvá nahoru o výšku
+    // pruhu, takže pruh odjede a navigace zůstane u horní hrany.
+    var nav = bar.parentNode && bar.parentNode !== body ? bar.parentNode : null;
+    var lifted = 0;
+    var liftQueued = false;
+    var focusInside = false;
 
     function hide() {
       bar.style.display = 'none';
       body.style.paddingTop = '0px';
       stop();
+      lift();
     }
 
     function sync() {
       if (bar.style.display === 'none') return;
       body.style.paddingTop = bar.offsetHeight + 'px';
+      lift();
+    }
+
+    // Posun navbaru: o tolik, kolik je odscrollováno, nejvýš o výšku pruhu.
+    // Pruh tak odjíždí s obsahem a nahoře se zase ukáže. Uprostřed stránky
+    // se při scrollu nahoru neukazuje. transform nehýbe layoutem (bez CLS).
+    // Fokus z klávesnice uvnitř pruhu ho ukáže celý.
+    function lift() {
+      liftQueued = false;
+      if (!nav) return;
+      var y = bar.style.display === 'none' || focusInside
+        ? 0
+        : Math.min(Math.max(window.pageYOffset || 0, 0), bar.offsetHeight);
+      if (y === lifted) return;
+      lifted = y;
+      nav.style.transform = y ? 'translateY(-' + y + 'px)' : '';
+    }
+
+    function queueLift() {
+      if (liftQueued) return;
+      liftQueued = true;
+      if (window.requestAnimationFrame) window.requestAnimationFrame(lift);
+      else lift();
     }
 
     if (expired(bar) || storageGet(key)) {
@@ -1958,7 +2000,20 @@ function locale() {
 
     /* --- rotace ------------------------------------------------------------ */
 
-    var messages = Array.prototype.slice.call(bar.querySelectorAll('.announcement_text'));
+    // Sady zpráv: každá .announcement_messages je jedna (dlouhé texty,
+    // krátké pro mobil). Ve Webflow je vidět vždy jen jedna sada, rotují
+    // spolu, takže po změně šířky okna sedí stejná zpráva.
+    var lists = Array.prototype.slice.call(bar.querySelectorAll('.announcement_messages')).map(function (box) {
+      return Array.prototype.slice.call(box.querySelectorAll('.announcement_text'));
+    });
+    if (!lists.length) lists = [Array.prototype.slice.call(bar.querySelectorAll('.announcement_text'))];
+    var count = Math.max.apply(null, lists.map(function (l) { return l.length; }));
+
+    function each(i, fn) {
+      lists.forEach(function (l) {
+        if (l[i]) fn(l[i]);
+      });
+    }
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var current = 0;
     var timer = null;
@@ -1979,17 +2034,18 @@ function locale() {
 
     function show(next) {
       if (next === current) return;
-      var prev = messages[current];
-      var el = messages[next];
+      var prev = current;
       // Nová zpráva přijíždí zespodu: bez přechodu ji postavit dolů,
       // vynutit layout a teprve pak spustit přechod do klidu.
       if (!reduce) {
-        el.style.transition = 'none';
-        el.style.transform = 'translateY(' + SHIFT + 'px)';
-        void el.offsetWidth;
+        each(next, function (el) {
+          el.style.transition = 'none';
+          el.style.transform = 'translateY(' + SHIFT + 'px)';
+          void el.offsetWidth;
+        });
       }
-      setState(prev, false, true);
-      setState(el, true, true);
+      each(prev, function (el) { setState(el, false, true); });
+      each(next, function (el) { setState(el, true, true); });
       current = next;
     }
 
@@ -2004,21 +2060,23 @@ function locale() {
 
     function schedule() {
       stop();
-      if (messages.length < 2 || paused() || bar.style.display === 'none') return;
+      if (count < 2 || paused() || bar.style.display === 'none') return;
       timer = window.setTimeout(function () {
         // Záložka otevřená přes konec akce: pruh zmizí při příštím střídání.
         if (expired(bar)) return hide();
-        show((current + 1) % messages.length);
+        show((current + 1) % count);
         schedule();
       }, INTERVAL);
     }
 
-    if (messages.length > 1) {
+    if (count > 1) {
       // Všechny zprávy do jedné buňky gridu; výška pruhu = nejvyšší zpráva,
       // takže se při střídání nehýbe navigace ani obsah.
-      messages.forEach(function (el, i) {
-        el.style.display = 'block';
-        setState(el, i === 0, false);
+      lists.forEach(function (l) {
+        l.forEach(function (el, i) {
+          el.style.display = 'block';
+          setState(el, i === 0, false);
+        });
       });
 
       // pointerover/pointerout, ne pointerenter/pointerleave: když kurzor
@@ -2048,6 +2106,17 @@ function locale() {
       document.addEventListener('visibilitychange', schedule);
     }
 
+    // Fokus kvůli posunu navbaru: pruh mimo obrazovku nesmí držet fokus.
+    bar.addEventListener('focusin', function () {
+      focusInside = true;
+      lift();
+    });
+    bar.addEventListener('focusout', function (e) {
+      if (e.relatedTarget && bar.contains(e.relatedTarget)) return;
+      focusInside = false;
+      lift();
+    });
+
     /* --- zavření ----------------------------------------------------------- */
 
     var close = bar.querySelector('.announcement_close');
@@ -2064,6 +2133,7 @@ function locale() {
     /* --- odsazení obsahu --------------------------------------------------- */
 
     sync();
+    window.addEventListener('scroll', queueLift, { passive: true });
     window.addEventListener('resize', sync);
     window.addEventListener('load', sync);
     if ('ResizeObserver' in window) new window.ResizeObserver(sync).observe(bar);
