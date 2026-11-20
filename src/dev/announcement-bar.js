@@ -23,6 +23,40 @@
   var SHIFT = 6; // px, posun zprávy při přechodu
   var HASH = 'formular'; // kotva formuláře na stránce Kontakty
   var STORAGE_PREFIX = 'eldr-announcement-closed:';
+  var PARAM = 'pruh'; // parametr v odkazu, měření v GA4 bez GTM (#69)
+  var EVENT = 'announcement_click'; // událost do dataLayer pro GTM (#69)
+
+  // Jazyk stránky: lang na <html>, záložně první segment cesty. Vlastní
+  // funkce, ne locale() z 00-core: dev kopie běží bez bundlu.
+  function pageLocale() {
+    var lang = (document.documentElement.getAttribute('lang') || '').trim().toLowerCase().slice(0, 2);
+    if (lang === 'cs' || lang === 'en' || lang === 'de') return lang;
+    var seg = window.location.pathname.split('/')[1];
+    return seg === 'en' || seg === 'de' ? seg : 'cs';
+  }
+
+  // Push do dataLayer je synchronní a klik neblokuje. Bez GTM (blokovaný,
+  // bez souhlasu) zůstane jen v poli, nic nespadne.
+  function track(campaign) {
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: EVENT, announcement: campaign, locale: pageLocale() });
+    } catch (e) {
+      /* měření nesmí rozbít odkaz */
+    }
+  }
+
+  // ?pruh=<kampaň> před kotvu, #formular, když kotva chybí. Existující
+  // parametr nezdvojí.
+  function linkHref(href, campaign) {
+    var cut = href.indexOf('#');
+    var path = cut === -1 ? href : href.slice(0, cut);
+    var hash = cut === -1 ? '#' + HASH : href.slice(cut);
+    if (!new RegExp('[?&]' + PARAM + '=').test(path)) {
+      path += (path.indexOf('?') === -1 ? '?' : '&') + PARAM + '=' + encodeURIComponent(campaign);
+    }
+    return path + hash;
+  }
 
   function storageGet(key) {
     try {
@@ -49,7 +83,8 @@
     if (bar.hasAttribute('data-announcement-ready')) return;
     bar.setAttribute('data-announcement-ready', '');
 
-    var key = STORAGE_PREFIX + (bar.getAttribute('data-announcement') || 'default');
+    var campaign = bar.getAttribute('data-announcement') || 'default';
+    var key = STORAGE_PREFIX + campaign;
     var body = document.body;
     // Navbar (rodič pruhu) je fixed. Při scrollu se posouvá nahoru o výšku
     // pruhu, takže pruh odjede a navigace zůstane u horní hrany.
@@ -103,7 +138,14 @@
     var link = bar.querySelector('.announcement_link');
     if (link) {
       var href = link.getAttribute('href') || '';
-      if (href && href.indexOf('#') === -1) link.setAttribute('href', href + '#' + HASH);
+      if (href) link.setAttribute('href', linkHref(href, campaign));
+      // click i prostřední tlačítko (nová záložka). Ctrl/Cmd+klik je click.
+      link.addEventListener('click', function () {
+        track(campaign);
+      });
+      link.addEventListener('auxclick', function (e) {
+        if (e.button === 1) track(campaign);
+      });
     }
 
     /* --- rotace ------------------------------------------------------------ */

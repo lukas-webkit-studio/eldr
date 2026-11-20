@@ -3,6 +3,35 @@
 Rozhodnutí, která padla během štafety a nejsou v `CLAUDE.md`. Nejnovější
 nahoře. Formát: datum · kdo · rozhodnutí · proč · odkaz.
 
+## 2026-11-20 · S13 · Měření kliků na horní pruh (#69)
+
+Lukáš chce po akci vědět, kolik lidí na pruh kliklo. Do GTM containeru `GTM-W6PR2VX` zatím přístup nemáme, proto dvě vrstvy: jedna funguje hned, druhá čeká na GTM.
+
+- **Parametr v odkazu, funguje hned.** Modul pruhu doplní před kotvu `?pruh=<data-announcement>`: `/kontakty?pruh=zima-2026#formular`, stejně `/en/…` a `/de/…`. Existující parametr nezdvojí, k jinému přidá `&pruh=`. Proč ne Webflow: odkaz typu „stránka“ parametr ani kotvu přes API neuloží a odkaz na URL se nepřepne do `/en` a `/de` (viz S11).
+- **Žádné UTM.** UTM na interním odkazu založí v GA4 novou návštěvu a přepíše její zdroj (z „google / organic“ by se stalo „web / pruh“). Vlastní parametr zdroj nechá být.
+- **Událost do dataLayer pro GTM.** Klik (i prostředním tlačítkem do nové záložky) pushne `{ event: 'announcement_click', announcement: 'zima-2026', locale: 'cs' | 'en' | 'de' }`. `announcement` = `data-announcement` pruhu, `locale` = `lang` na `<html>`, záložně první segment cesty. Push je synchronní a klik neblokuje (žádné `preventDefault`, žádné čekání na GTM). Bez GTM, s blokovaným GTM nebo bez souhlasu s cookies zůstane událost jen v poli `dataLayer`, nic nespadne. Kód je v modulu `46-announcement-bar.js` i v dev kopii `src/dev/announcement-bar.js` (worker se nenasazuje), ne v `90-gtm-events.js`: ten běží jen z bundlu. Vzor (`window.dataLayer = window.dataLayer || []`) je stejný.
+- **Formulář se nepočítá dvakrát.** Konverzi `contact_form_submit` dál odpaluje jen skript na `#form-kontakt` (poslouchá `submit`, URL ho nezajímá). Parametr ani klik na pruh ji nespouští.
+- Měří se jen u návštěvníků, kteří přijali cookies (Finsweet `fs-cc-mode="opt-in"`). Čísla v GA4 jsou proto spodní odhad, skutečných kliků je víc.
+
+### Jak číslo najít v GA4 už teď (bez změny v GTM)
+
+1. GA4 → **Prozkoumat** (Explore) → Volný formulář.
+2. Dimenze **Umístění stránky** (`page_location`), metrika **Zobrazení** a **Uživatelé**.
+3. Filtr: `page_location` **obsahuje** `pruh=zima-2026`.
+4. Rozpad podle jazyka: přidat dimenzi `page_location` a číst `/en/` a `/de/` v adrese, nebo filtr `obsahuje /en/kontakty?pruh=`.
+
+Standardní přehled „Stránky a obrazovky“ ukazuje cestu bez parametrů, proto Průzkum. Počítá se zobrazení stránky Kontakty z pruhu, ne kliky: kdo klikne dvakrát, je tam dvakrát, kdo odejde před načtením, chybí.
+
+### Postup v GTM, až bude přístup
+
+1. **Proměnné** → Nová → Proměnná vrstvy dat: `announcement` (název `DLV - announcement`) a `locale` (`DLV - locale`).
+2. **Trigger** → Vlastní událost (Custom Event), název události `announcement_click`, spouštět u všech vlastních událostí.
+3. **Tag** → Google Analytics: Událost GA4, measurement ID stejné jako u stávajícího GA4 tagu, název události `announcement_click`, parametry `announcement` = `{{DLV - announcement}}`, `locale` = `{{DLV - locale}}`. Trigger z bodu 2. Souhlas jako u ostatních GA4 tagů.
+4. **GA4** → Správce → Vlastní definice → dvě vlastní dimenze s rozsahem Událost: `announcement` a `locale`. Bez nich parametry v přehledech neuvidíš.
+5. Náhled GTM (Preview) na `eldr.webflow.io`, klik na pruh, v Tag Assistantu zkontrolovat, že tag vystřelil. Pak publikovat container.
+
+Dřívější hook `data-gtm="announcement-zima-2026"` na odkazu zůstává, nikdo na něj ale nereaguje. Trigger na Custom Event je spolehlivější než Kliknutí na odkaz s podmínkou na atribut.
+
 ## 2026-11-20 · S12 · Horní pruh, 2. kolo (#66)
 
 Review koordinátora (UX, grafika, marketing) a během práce rozhodnutí Lukáše: **jedna zpráva bez rotace**, text „Objednejte do 31. 12. a zamkněte si letošní ceny“, výzva „Zamluvit termín“, na desktopu i na mobilu.

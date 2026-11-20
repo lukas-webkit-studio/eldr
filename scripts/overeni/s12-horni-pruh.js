@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* global PerformanceObserver, localStorage, sessionStorage -- běží v prohlížeči (page.evaluate) */
 /* S12 #66: ověření horního pruhu (2. kolo) na stagingu.
 
    node scripts/overeni/s12-horni-pruh.js [--base https://eldr.webflow.io]
