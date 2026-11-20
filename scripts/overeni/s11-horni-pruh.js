@@ -63,7 +63,8 @@ async function open(browser, url, options = {}, before) {
   if (options.javaScriptEnabled !== false) {
     await page.waitForFunction(() => document.querySelector('.announcement_component[data-announcement-ready]'), null, { timeout: 15000 }).catch(() => {});
   }
-  await page.addStyleTag({ content: HIDE_COOKIES });
+  // Bez JS addStyleTag neprojde; cookie lišta měření bez JS nevadí.
+  if (options.javaScriptEnabled !== false) await page.addStyleTag({ content: HIDE_COOKIES });
   await sleep(800);
   return { context, page, errors };
 }
@@ -106,7 +107,17 @@ const measure = page => page.evaluate(() => {
     closeLeft: r(close).left,
     closeW: r(close).width,
     closeH: r(close).height,
-    closeName: close.textContent.replace('×', '').trim()
+    closeName: close.textContent.replace('×', '').trim(),
+    // Řádky celého pruhu: zpráva + výzva podle různých horních hran.
+    barLines: (() => {
+      const range = document.createRange();
+      const tops = [];
+      [msgs[active >= 0 ? active : 0], cta].forEach(el => { range.selectNodeContents(el); [...range.getClientRects()].filter(x => x.width > 0).forEach(x => tops.push(x.top)); });
+      // Řádkové boxy na stejném řádku se liší o pár px, nový řádek je o výšku řádku níž.
+      return tops.sort((a, b) => a - b).filter((t, i, a) => i === 0 || t - a[i - 1] > 8).length;
+    })(),
+    colors: [msgs[0], msgs[0].querySelector('strong'), cta].filter(Boolean).map(el => getComputedStyle(el).color),
+    dot: bar.querySelector('.announcement_dot') ? getComputedStyle(bar.querySelector('.announcement_dot')).backgroundColor : 'chybí'
   };
 });
 
@@ -118,11 +129,14 @@ async function layout(browser) {
       const { context, page, errors } = await open(browser, t.prefix + '/', { viewport: { width: w, height: 900 }, deviceScaleFactor: 2 });
       const m = await measure(page);
       const tag = `${w} ${lang}`;
+      // Na mobilu zpráva nejvýš 2 řádky a výzva celým textem na vlastním řádku = pruh nejvýš 3 řádky.
       const maxLines = w <= 767 ? 2 : 1;
       ok(`${tag}: bez chyb v konzoli`, errors.length === 0, errors.join('; '));
       ok(`${tag}: první zpráva podle zadání`, m.first === t.first, m.first);
       ok(`${tag}: zprávy na ${maxLines === 1 ? 'jednom řádku' : 'nejvýš dvou řádcích'}`, Math.max(...m.lines) <= maxLines, 'řádky ' + m.lines.join('/'));
-      ok(`${tag}: výzva ${w <= 767 ? 'zkrácená na šipku' : '„' + t.cta + '“'}`, w <= 767 ? m.cta === '→' : m.cta === t.cta + ' →', m.cta);
+      ok(`${tag}: výzva celým textem „${t.cta} →“`, m.cta === t.cta + ' →', m.cta);
+      ok(`${tag}: pruh nejvýš ${w <= 767 ? 3 : 1} řádky textu`, m.barLines <= (w <= 767 ? 3 : 1), m.barLines + ' ř.');
+      ok(`${tag}: všechen text bíle, žlutá jen tečka`, m.colors.every(c => c === 'rgb(255, 255, 255)') && m.dot === 'rgb(249, 179, 25)', m.colors.join(', ') + ' / tečka ' + m.dot);
       ok(`${tag}: křížek 44 × 44 px a nepřekrývá text`, m.closeShown && m.closeW >= 44 && m.closeH >= 44 && m.textRight <= m.closeLeft,
         `text do ${Math.round(m.textRight)}, křížek od ${Math.round(m.closeLeft)}`);
       ok(`${tag}: nic se neusekne (text uvnitř pruhu)`, m.textLeft >= 0 && m.textRight <= m.barRight);
