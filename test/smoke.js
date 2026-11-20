@@ -733,7 +733,7 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     const visible = el => el.style.opacity === '1' && el.style.visibility === 'visible' && !el.hasAttribute('aria-hidden');
     ok('proběhlo bez výjimky', env.errors.length === 0);
     ok('pruh je označený jako spuštěný', bar.hasAttribute('data-announcement-ready'));
-    ok('odkaz dostal kotvu #formular', doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular');
+    ok('odkaz dostal ?pruh=zima-2026 a kotvu #formular', doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026#formular');
     ok('křížek je vidět až s JS', doc.querySelector('.announcement_close').style.display === 'flex');
     ok('všechny zprávy jsou v gridu (display: block)', msgs.every(m => m.style.display === 'block'));
     ok('na začátku je vidět jen první zpráva', visible(msgs[0]) && !visible(msgs[1]) && msgs[1].getAttribute('aria-hidden') === 'true');
@@ -803,9 +803,15 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   e = dom(BAR('neplatne-datum', '/kontakty'));
   ok('neplatné datum = bez konce, pruh běží', e.doc.querySelector('.announcement_component').style.display !== 'none');
   e = dom(BAR(FUTURE, '/en/kontakty'), { url: 'https://www.eldr.cz/en' });
-  ok('kotva se doplní i k anglické adrese', e.doc.querySelector('.announcement_link').getAttribute('href') === '/en/kontakty#formular');
+  ok('parametr a kotva se doplní i k anglické adrese', e.doc.querySelector('.announcement_link').getAttribute('href') === '/en/kontakty?pruh=zima-2026#formular');
   e = dom(BAR(FUTURE, '/kontakty#formular'));
-  ok('existující kotvu z Designeru nezdvojí', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular');
+  ok('existující kotvu z Designeru nezdvojí, parametr dá před ni', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026#formular');
+  e = dom(BAR(FUTURE, '/kontakty?pruh=jaro-2026&x=1#formular'));
+  ok('existující parametr nezdvojí, dá mu aktuální kampaň', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026&x=1#formular');
+  e = dom(BAR(FUTURE, '#'));
+  ok('odkaz jen s kotvou (href="#") nechá být', e.doc.querySelector('.announcement_link').getAttribute('href') === '#');
+  e = dom(BAR(FUTURE, '/kontakty?x=1'));
+  ok('k jinému parametru přidá &pruh=', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?x=1&pruh=zima-2026#formular');
   e = dom(BAR(FUTURE, '/kontakty'), { reduce: true });
   const m = [...e.doc.querySelectorAll('.announcement_text')];
   e.fire();
@@ -816,7 +822,7 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   ok('zakázané úložiště: modul nespadne a křížek pruh skryje', e.errors.length === 0 && e.doc.querySelector('.announcement_component').style.display === 'none');
   e = dom(BAR(FUTURE, '/kontakty').replace(/<p class="announcement_text">[BC]<\/p>/g, ''));
   ok('jedna zpráva: bez rotace, odkaz i křížek fungují', e.timers.size === 0 &&
-    e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular' &&
+    e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026#formular' &&
     e.doc.querySelector('.announcement_close').style.display === 'flex' && e.doc.body.style.paddingTop === '47px');
   e = dom(BAR(new Date(Date.now() + 60000).toISOString(), '/kontakty'));
   const realNow = Date.now;
@@ -845,7 +851,46 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   barChecks(dom(BAR(FUTURE, '/kontakty'), { scripts: [dev] }));
   e = dom(BAR(FUTURE, '/kontakty'), { scripts: [dev, bundle] });
   ok('bundle + dev kopie: pruh řídí jen jeden (pojistka data-announcement-ready)',
-    e.timers.size === 1 && e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular');
+    e.timers.size === 1 && e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026#formular');
+  // Navigaci zarazit (jsdom ji neumí), push musí proběhnout dřív.
+  function clicks(env, n) {
+    env.doc.addEventListener('click', ev => ev.preventDefault());
+    for (let i = 0; i < (n || 1); i++) env.doc.querySelector('.announcement_link').dispatchEvent(new env.w.MouseEvent('click', { bubbles: true, cancelable: true }));
+  }
+  clicks(e);
+  ok('bundle + dev kopie: klik pushne jen jednou', e.w.dataLayer.filter(x => x.event === 'announcement_click').length === 1);
+
+  // Odloženo až za časově citlivé testy pásu recenzí (wheel, šipky): každý
+  // další JSDOM blokuje event loop a jejich čekání by se natáhla.
+  pending.push(Promise.all(pending.slice()).then(() => {
+    console.log('\nHorní pruh — měření kliku (#69)');
+    e = dom(BAR(FUTURE, '/kontakty'));
+    ok('bez kliku se do dataLayer nic nepošle', !e.w.dataLayer);
+    e.w.dataLayer = [{ event: 'gtm.js' }];
+    [['cs', '/'], ['en', '/en'], ['de', '/de/produkty']].forEach(([loc, url]) => {
+      e.w.history.pushState(null, '', url);
+      e.doc.documentElement.setAttribute('lang', loc);
+      clicks(e);
+      const ev = e.w.dataLayer[e.w.dataLayer.length - 1];
+      ok(`klik pushne announcement_click, locale ${loc}`, ev.event === 'announcement_click' && ev.announcement === 'zima-2026' && ev.locale === loc && Object.keys(ev).length === 3);
+    });
+    ok('existující dataLayer doplní, nepřepíše', e.w.dataLayer.length === 4 && e.w.dataLayer[0].event === 'gtm.js');
+    e.doc.documentElement.removeAttribute('lang');
+    clicks(e);
+    ok('bez lang na <html> vezme jazyk z cesty', e.w.dataLayer[4].locale === 'de');
+    e.doc.querySelector('.announcement_link').dispatchEvent(new e.w.MouseEvent('auxclick', { bubbles: true, button: 1 }));
+    e.doc.querySelector('.announcement_link').dispatchEvent(new e.w.MouseEvent('auxclick', { bubbles: true, button: 2 }));
+    ok('prostřední tlačítko měří, pravé ne', e.w.dataLayer.length === 6);
+
+    e = dom(BAR(FUTURE, '/kontakty'));
+    Object.defineProperty(e.w, 'dataLayer', { configurable: true, get() { return { push() { throw new Error('blokováno'); } }; }, set() {} });
+    let defaultPrevented = null;
+    e.doc.addEventListener('click', ev => { defaultPrevented = ev.defaultPrevented; ev.preventDefault(); });
+    let thrown = null;
+    e.w.addEventListener('error', ev => { thrown = ev.message; });
+    e.doc.querySelector('.announcement_link').dispatchEvent(new e.w.MouseEvent('click', { bubbles: true, cancelable: true }));
+    ok('rozbitý dataLayer: klik nespadne a navigaci neblokuje', thrown === null && defaultPrevented === false);
+  }));
 })();
 
 // --- 7. prázdná stránka ---------------------------------------------------
