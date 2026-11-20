@@ -32,7 +32,7 @@ const DEV_FILE = path.join(__dirname, '..', '..', 'src', 'dev', 'announcement-ba
 const TEXTS = {
   cs: { first: 'Objednejte do 31. 12. a zamkněte si letošní ceny', cta: 'Zamluvit termín', close: 'Zavřít oznámení', prefix: '' },
   en: { first: 'Order by 31 December and lock in this year’s prices', cta: 'Book a date', close: 'Close announcement', prefix: '/en' },
-  de: { first: 'Bestellen Sie bis 31.12. und sichern Sie sich die diesjährigen Preise', cta: 'Termin reservieren', close: 'Hinweis schließen', prefix: '/de' }
+  de: { first: 'Bestellen Sie bis zum 31.12. und sichern Sie sich die diesjährigen Preise', cta: 'Termin reservieren', close: 'Hinweis schließen', prefix: '/de' }
 };
 const WIDTHS = [1440, 991, 390];
 const HIDE_COOKIES = '.cookiesconsent{display:none!important}';
@@ -86,7 +86,9 @@ const measure = page => page.evaluate(() => {
   const cta = bar.querySelector('.announcement_cta');
   const box = bar.querySelector('.announcement_messages');
   const nav = document.querySelector('.navbar_container');
-  const active = msgs.findIndex(m => getComputedStyle(m).visibility === 'visible' && getComputedStyle(m).display !== 'none' && getComputedStyle(m).opacity !== '0');
+  // Aktivní = cílový stav rotace (inline opacity 1). Vypočtená opacity by
+  // během 400ms prolnutí ukazovala i odcházející zprávu.
+  const active = msgs.findIndex(m => m.style.opacity === '1');
   return {
     shown: getComputedStyle(bar).display !== 'none',
     barH: r(bar).height,
@@ -200,7 +202,8 @@ async function behaviour(browser) {
   ok('při hoveru rotace stojí (6 s)', (await measure(page)).active === 1);
   await page.mouse.move(700, 600);
   await sleep(5400);
-  ok('po odjetí myši pokračuje', (await measure(page)).active === 2);
+  const left = await measure(page);
+  ok('po odjetí myši pokračuje', left.active === 2, 'aktivní zpráva ' + left.active);
   await page.focus('.announcement_link');
   await sleep(6000);
   ok('při fokusu rotace stojí (6 s)', (await measure(page)).active === 2);

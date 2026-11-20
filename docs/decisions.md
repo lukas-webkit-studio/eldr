@@ -18,6 +18,7 @@ Lukáš 19. 11. po telefonu s Myškou: pruh podle návrhu Evisions na staging, v
 - **Konec akce** se kontroluje při načtení a při každém střídání zpráv. Datum je v `data-announcement-end` na prvku ve Webflow, jde změnit bez kódu.
 - **Kontrast: veškerý text bíle (5,7 : 1), žlutá jen jako tečka** (Lukáš 20. 11. po kontrole). Žlutá `#f9b319` na červené `#cc1719` má 3,1 : 1, na text 13,5–15 px WCAG AA chce 4,5 : 1. Zvýraznění je bílé tučné (700), výzva bílá tučná podtržená se šipkou. Žlutá zůstala jako ne-textový akcent: tečka 8 px před zprávou (`.announcement_dot`, 3,1 : 1 splňuje 3 : 1 pro ne-textové prvky). Na mobilu je tečka skrytá: v zalamovaném flexu by si vzala vlastní řádek.
 - **Hover celého pruhu ztmaví pozadí** (`--red-hover`). Šipka se posune, když je kurzor na výzvě: `:hover` na `.announcement_cta` zvětší mezeru mezi textem a šipkou (6 → 10 px). Posun při hoveru kdekoli na pruhu by byl selektor rodič → potomek, který Webflow nezapíše.
+- **`scroll-margin-top` na `.sectionform`** (48 px, tablet 64 px, mobil 96 px). Po skoku na `#formular` byl nadpis formuláře pod vyšší navigací (test na stagingu: nadpis 120 px, navigace končí 128 px, na mobilu 64 × 131). Je to jediný zásah mimo pruh, jen styl třídy, obsah formuláře beze změny; kotvu používá i tlačítko „Kontaktujte nás“ v menu.
 - **Šipka je `span` s `aria-hidden`**, čtečka přečte jen zprávu a „Zamluvit termín“. Původní blok se šipkou odmítal zápis atributu (konflikt v komponentě), byl nahrazen.
 
 ## 2026-11-16 · S10 · Pás recenzí: touchpad, kolečko a šipky (#59)
