@@ -806,8 +806,10 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   ok('parametr a kotva se doplní i k anglické adrese', e.doc.querySelector('.announcement_link').getAttribute('href') === '/en/kontakty?pruh=zima-2026#formular');
   e = dom(BAR(FUTURE, '/kontakty#formular'));
   ok('existující kotvu z Designeru nezdvojí, parametr dá před ni', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026#formular');
-  e = dom(BAR(FUTURE, '/kontakty?pruh=zima-2026&x=1#formular'));
-  ok('existující parametr nezdvojí', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026&x=1#formular');
+  e = dom(BAR(FUTURE, '/kontakty?pruh=jaro-2026&x=1#formular'));
+  ok('existující parametr nezdvojí, dá mu aktuální kampaň', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026&x=1#formular');
+  e = dom(BAR(FUTURE, '#'));
+  ok('odkaz jen s kotvou (href="#") nechá být', e.doc.querySelector('.announcement_link').getAttribute('href') === '#');
   e = dom(BAR(FUTURE, '/kontakty?x=1'));
   ok('k jinému parametru přidá &pruh=', e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?x=1&pruh=zima-2026#formular');
   e = dom(BAR(FUTURE, '/kontakty'), { reduce: true });

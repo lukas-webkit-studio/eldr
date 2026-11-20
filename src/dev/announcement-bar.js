@@ -47,14 +47,17 @@
   }
 
   // ?pruh=<kampaň> před kotvu, #formular, když kotva chybí. Existující
-  // parametr nezdvojí.
+  // parametr nezdvojí, jen mu dá hodnotu aktuální kampaně. Odkaz jen
+  // s kotvou (href="#", nenastavený cíl v locale) a mailto/tel nechá být:
+  // jinak by klik znovu načetl stránku a zapsal falešné zobrazení.
   function linkHref(href, campaign) {
+    if (href.charAt(0) === '#' || /^(mailto|tel|javascript):/i.test(href)) return href;
     var cut = href.indexOf('#');
     var path = cut === -1 ? href : href.slice(0, cut);
     var hash = cut === -1 ? '#' + HASH : href.slice(cut);
-    if (!new RegExp('[?&]' + PARAM + '=').test(path)) {
-      path += (path.indexOf('?') === -1 ? '?' : '&') + PARAM + '=' + encodeURIComponent(campaign);
-    }
+    var value = PARAM + '=' + encodeURIComponent(campaign);
+    var re = new RegExp('([?&])' + PARAM + '=[^&]*');
+    path = re.test(path) ? path.replace(re, '$1' + value) : path + (path.indexOf('?') === -1 ? '?' : '&') + value;
     return path + hash;
   }
 
