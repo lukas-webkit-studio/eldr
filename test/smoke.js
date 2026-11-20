@@ -712,6 +712,9 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     w.clearTimeout = id => { timers.delete(id); };
     if (opts.reduce) w.matchMedia = q => ({ matches: /reduce/.test(q), media: q });
     if (opts.closed) w.sessionStorage.setItem('eldr-announcement-closed:zima-2026', '1');
+    if (opts.noStorage) Object.defineProperty(w, 'sessionStorage', { get() { throw new Error('SecurityError'); } });
+    // jsdom nepočítá layout: výšku pruhu podvrhnout, ať je vidět, že odsazení bere změřenou hodnotu.
+    Object.defineProperty(w.HTMLElement.prototype, 'offsetHeight', { configurable: true, get() { return this.classList.contains('announcement_component') ? 47 : 0; } });
     const errors = [];
     try {
       (opts.scripts || [bundle]).forEach(s => w.eval(s));
@@ -732,7 +735,7 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     ok('křížek je vidět až s JS', doc.querySelector('.announcement_close').style.display === 'flex');
     ok('všechny zprávy jsou v gridu (display: block)', msgs.every(m => m.style.display === 'block'));
     ok('na začátku je vidět jen první zpráva', visible(msgs[0]) && !visible(msgs[1]) && msgs[1].getAttribute('aria-hidden') === 'true');
-    ok('body dostal odsazení podle výšky pruhu', /^\d+px$/.test(doc.body.style.paddingTop));
+    ok('body dostal odsazení podle změřené výšky pruhu (47 px)', doc.body.style.paddingTop === '47px');
     ok('rotace naplánovaná po 5 s', timers.size === 1 && [...timers.values()][0].ms === 5000);
     fire();
     ok('po 5 s je vidět druhá zpráva', visible(msgs[1]) && !visible(msgs[0]));
@@ -741,10 +744,18 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     fire(); fire();
     ok('po poslední zprávě znovu první', visible(msgs[0]));
 
-    bar.dispatchEvent(new w.Event('mouseenter'));
-    ok('hover rotaci zastaví', timers.size === 0);
-    bar.dispatchEvent(new w.Event('mouseleave'));
+    bar.dispatchEvent(pointer(w, 'pointerenter', 10, 10, 0, 'touch'));
+    ok('klepnutí prstem rotaci nezastaví (dotyk nemá pointerleave)', timers.size === 1);
+    bar.dispatchEvent(pointer(w, 'pointerenter', 10, 10, 0));
+    ok('hover myší rotaci zastaví', timers.size === 0);
+    bar.dispatchEvent(pointer(w, 'pointerleave', 10, 10, 0));
     ok('po odjetí myši se rotace rozjede', timers.size === 1);
+    Object.defineProperty(doc, 'hidden', { configurable: true, value: true });
+    doc.dispatchEvent(new w.Event('visibilitychange'));
+    ok('ve skryté záložce rotace stojí', timers.size === 0);
+    Object.defineProperty(doc, 'hidden', { configurable: true, value: false });
+    doc.dispatchEvent(new w.Event('visibilitychange'));
+    ok('po návratu do záložky se rozjede', timers.size === 1);
     doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusin', { bubbles: true }));
     ok('fokus uvnitř pruhu rotaci zastaví', timers.size === 0);
     doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusout', { bubbles: true, relatedTarget: doc.querySelector('.announcement_close') }));
@@ -779,6 +790,20 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   e.fire();
   ok('reduced motion: střídání bez přechodu a bez posunu',
     m[1].style.opacity === '1' && m.every(x => x.style.transition === 'none' && x.style.transform === 'none'));
+  e = dom(BAR(FUTURE, '/kontakty'), { noStorage: true });
+  e.doc.querySelector('.announcement_close').click();
+  ok('zakázané úložiště: modul nespadne a křížek pruh skryje', e.errors.length === 0 && e.doc.querySelector('.announcement_component').style.display === 'none');
+  e = dom(BAR(FUTURE, '/kontakty').replace(/<p class="announcement_text">[BC]<\/p>/g, ''));
+  ok('jedna zpráva: bez rotace, odkaz i křížek fungují', e.timers.size === 0 &&
+    e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty#formular' &&
+    e.doc.querySelector('.announcement_close').style.display === 'flex' && e.doc.body.style.paddingTop === '47px');
+  e = dom(BAR(new Date(Date.now() + 60000).toISOString(), '/kontakty'));
+  const realNow = Date.now;
+  e.w.Date.now = () => realNow() + 120000;
+  e.fire();
+  e.w.Date.now = realNow;
+  ok('záložka otevřená přes konec akce: pruh zmizí při dalším střídání',
+    e.doc.querySelector('.announcement_component').style.display === 'none' && e.doc.body.style.paddingTop === '0px' && e.timers.size === 0);
   e = dom('<div class="navbar_component"></div>');
   ok('bez pruhu se modul vypne a odsazení nesahá', e.errors.length === 0 && e.doc.body.style.paddingTop === '');
 

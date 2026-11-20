@@ -126,6 +126,8 @@
       stop();
       if (messages.length < 2 || paused() || bar.style.display === 'none') return;
       timer = window.setTimeout(function () {
+        // Záložka otevřená přes konec akce: pruh zmizí při příštím střídání.
+        if (expired(bar)) return hide();
         show((current + 1) % messages.length);
         schedule();
       }, INTERVAL);
@@ -139,11 +141,15 @@
         setState(el, i === 0, false);
       });
 
-      bar.addEventListener('mouseenter', function () {
+      // Jen myš a pero: dotyk posílá pointerenter bez pointerleave
+      // a rotace by po klepnutí bez přechodu zůstala stát.
+      bar.addEventListener('pointerenter', function (e) {
+        if (e.pointerType === 'touch') return;
         hovered = true;
         stop();
       });
-      bar.addEventListener('mouseleave', function () {
+      bar.addEventListener('pointerleave', function (e) {
+        if (e.pointerType === 'touch') return;
         hovered = false;
         schedule();
       });

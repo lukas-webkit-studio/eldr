@@ -30,12 +30,14 @@
    Chování:
      - zprávy se střídají po INTERVAL, přechod je prolnutí s krátkým
        posunem nahoru. Při hoveru myší a při fokusu uvnitř pruhu rotace
-       stojí, ve skryté záložce taky
+       stojí, ve skryté záložce taky. Hover se bere jen z myši a pera,
+       dotyk posílá pointerenter bez pointerleave
      - prefers-reduced-motion: zprávy se střídají okamžitě, bez pohybu
        a bez prolnutí
      - křížek pruh skryje a do zavření prohlížeče (sessionStorage, klíč
        z data-announcement) se znovu neukáže. Fokus přejde na logo
-     - po data-announcement-end se pruh neukáže. Datum jde změnit ve
+     - po data-announcement-end se pruh neukáže (kontrola při načtení
+       a při každém střídání zpráv). Datum jde změnit ve
        Webflow bez zásahu do kódu. Neplatné nebo chybějící datum = bez
        konce
      - body.style.paddingTop drží změřenou výšku pruhu, po skrytí 0.
@@ -169,6 +171,8 @@
       stop();
       if (messages.length < 2 || paused() || bar.style.display === 'none') return;
       timer = window.setTimeout(function () {
+        // Záložka otevřená přes konec akce: pruh zmizí při příštím střídání.
+        if (expired(bar)) return hide();
         show((current + 1) % messages.length);
         schedule();
       }, INTERVAL);
@@ -182,11 +186,15 @@
         setState(el, i === 0, false);
       });
 
-      bar.addEventListener('mouseenter', function () {
+      // Jen myš a pero: dotyk posílá pointerenter bez pointerleave
+      // a rotace by po klepnutí bez přechodu zůstala stát.
+      bar.addEventListener('pointerenter', function (e) {
+        if (e.pointerType === 'touch') return;
         hovered = true;
         stop();
       });
-      bar.addEventListener('mouseleave', function () {
+      bar.addEventListener('pointerleave', function (e) {
+        if (e.pointerType === 'touch') return;
         hovered = false;
         schedule();
       });
