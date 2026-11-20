@@ -1866,7 +1866,7 @@ function locale() {
      - zprávy se střídají po INTERVAL, přechod je prolnutí s krátkým
        posunem nahoru. Při hoveru myší a při fokusu uvnitř pruhu rotace
        stojí, ve skryté záložce taky. Hover se bere jen z myši a pera,
-       dotyk posílá pointerenter bez pointerleave
+       dotyk posílá pointerover bez pointerout
      - prefers-reduced-motion: zprávy se střídají okamžitě, bez pohybu
        a bez prolnutí
      - křížek pruh skryje a do zavření prohlížeče (sessionStorage, klíč
@@ -2021,15 +2021,18 @@ function locale() {
         setState(el, i === 0, false);
       });
 
-      // Jen myš a pero: dotyk posílá pointerenter bez pointerleave
-      // a rotace by po klepnutí bez přechodu zůstala stát.
-      bar.addEventListener('pointerenter', function (e) {
+      // pointerover/pointerout, ne pointerenter/pointerleave: když kurzor
+      // stojí nad pruhem už při načtení, Chromium enter nepošle (ověřeno na
+      // stagingu 20. 11. 2026), over ano. Jen myš a pero: dotyk posílá
+      // over bez out a rotace by po klepnutí zůstala stát.
+      bar.addEventListener('pointerover', function (e) {
         if (e.pointerType === 'touch') return;
         hovered = true;
         stop();
       });
-      bar.addEventListener('pointerleave', function (e) {
+      bar.addEventListener('pointerout', function (e) {
         if (e.pointerType === 'touch') return;
+        if (e.relatedTarget && bar.contains(e.relatedTarget)) return;
         hovered = false;
         schedule();
       });

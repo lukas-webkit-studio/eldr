@@ -744,12 +744,16 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     fire(); fire();
     ok('po poslední zprávě znovu první', visible(msgs[0]));
 
-    bar.dispatchEvent(pointer(w, 'pointerenter', 10, 10, 0, 'touch'));
-    ok('klepnutí prstem rotaci nezastaví (dotyk nemá pointerleave)', timers.size === 1);
-    bar.dispatchEvent(pointer(w, 'pointerenter', 10, 10, 0));
-    ok('hover myší rotaci zastaví', timers.size === 0);
-    bar.dispatchEvent(pointer(w, 'pointerleave', 10, 10, 0));
-    ok('po odjetí myši se rotace rozjede', timers.size === 1);
+    const link = doc.querySelector('.announcement_link');
+    link.dispatchEvent(pointer(w, 'pointerover', 10, 10, 0, 'touch'));
+    ok('klepnutí prstem rotaci nezastaví (dotyk nemá pointerout)', timers.size === 1);
+    link.dispatchEvent(pointer(w, 'pointerover', 10, 10, 0));
+    ok('hover myší rotaci zastaví (pointerover z potomka)', timers.size === 0);
+    const out = (target, related) => { const e = pointer(w, 'pointerout', 10, 10, 0); Object.defineProperty(e, 'relatedTarget', { value: related }); target.dispatchEvent(e); };
+    out(link, doc.querySelector('.announcement_close'));
+    ok('přejezd myší z odkazu na křížek rotaci nerozjede', timers.size === 0);
+    out(doc.querySelector('.announcement_close'), doc.body);
+    ok('po odjetí myši z pruhu se rotace rozjede', timers.size === 1);
     Object.defineProperty(doc, 'hidden', { configurable: true, value: true });
     doc.dispatchEvent(new w.Event('visibilitychange'));
     ok('ve skryté záložce rotace stojí', timers.size === 0);
