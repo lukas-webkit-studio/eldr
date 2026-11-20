@@ -57,9 +57,12 @@ async function open(browser, url, options = {}, before) {
   const page = await context.newPage();
   if (before) await before(page);
   const errors = [];
-  page.on('pageerror', e => errors.push(e.message));
+  // Turnstile u formuláře padá jen proto, že challenges.cloudflare.com výš blokujeme.
+  page.on('pageerror', e => { if (!/turnstile/i.test(e.message)) errors.push(e.message); });
   await page.goto(BASE + url, { waitUntil: 'domcontentloaded' });
-  await page.waitForFunction(() => document.querySelector('.announcement_component[data-announcement-ready]') || !document.querySelector('script[src*="announcement-bar"]') || document.readyState === 'complete', null, { timeout: 15000 }).catch(() => {});
+  if (options.javaScriptEnabled !== false) {
+    await page.waitForFunction(() => document.querySelector('.announcement_component[data-announcement-ready]'), null, { timeout: 15000 }).catch(() => {});
+  }
   await page.addStyleTag({ content: HIDE_COOKIES });
   await sleep(800);
   return { context, page, errors };
