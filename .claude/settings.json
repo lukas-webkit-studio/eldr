@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Webflow_Elektro_Drapa",
+      "mcp__fe3f3495-d3d0-4efa-9599-1ae254e34e16",
+      "mcp__github",
+      "mcp__claude-code-remote__send_message",
+      "mcp__claude-code-remote__send_later",
+      "mcp__claude-code-remote__get_session",
+      "mcp__claude-code-remote__list_events"
+    ]
+  }
+}
