@@ -141,15 +141,18 @@
         setState(el, i === 0, false);
       });
 
-      // Jen myš a pero: dotyk posílá pointerenter bez pointerleave
-      // a rotace by po klepnutí bez přechodu zůstala stát.
-      bar.addEventListener('pointerenter', function (e) {
+      // pointerover/pointerout, ne pointerenter/pointerleave: když kurzor
+      // stojí nad pruhem už při načtení, Chromium enter nepošle (ověřeno na
+      // stagingu 20. 11. 2026), over ano. Jen myš a pero: dotyk posílá
+      // over bez out a rotace by po klepnutí zůstala stát.
+      bar.addEventListener('pointerover', function (e) {
         if (e.pointerType === 'touch') return;
         hovered = true;
         stop();
       });
-      bar.addEventListener('pointerleave', function (e) {
+      bar.addEventListener('pointerout', function (e) {
         if (e.pointerType === 'touch') return;
+        if (e.relatedTarget && bar.contains(e.relatedTarget)) return;
         hovered = false;
         schedule();
       });

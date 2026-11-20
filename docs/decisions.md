@@ -14,7 +14,7 @@ Lukáš 19. 11. po telefonu s Myškou: pruh podle návrhu Evisions na staging, v
 - **Zprávy leží v jedné buňce gridu.** Výška pruhu = nejdelší zpráva, při střídání se nehýbe navigace ani obsah. Na mobilu dva řádky, výzva zkrácená na šipku.
 - **Odkaz je typu „stránka“ (Kontakty)**, ať se v `/en` a `/de` přepne jazyk. Kotvu `#formular` API u odkazu na stránku tiše zahodí (ověřeno čtením zpět), doplňuje ji modul. Kdo ji nastaví v Designeru (Page section), modul ji nezdvojí.
 - **Popisek křížku je skrytý text, ne `aria-label`.** Atributy Webflow nelokalizuje, text ano: „Zavřít oznámení“ / „Close announcement“ / „Hinweis schließen“. Text je `div` uvnitř `button` (blok neumí `span`), prohlížeče i čtečky ho čtou správně.
-- **Hover rotaci pozastaví jen z myši a pera.** Dotyk posílá `pointerenter` bez `pointerleave` a rotace by po klepnutí zůstala stát (nález kontroly).
+- **Hover rotaci pozastaví jen z myši a pera.** Poslouchá `pointerover`/`pointerout`: když kurzor stojí nad pruhem už při načtení, Chromium `pointerenter` nepošle (zachytil test na stagingu). Dotyk posílá `pointerover` bez `pointerout` a rotace by po klepnutí zůstala stát (nález kontroly).
 - **Konec akce** se kontroluje při načtení a při každém střídání zpráv. Datum je v `data-announcement-end` na prvku ve Webflow, jde změnit bez kódu.
 - **Hover celého pruhu ztmaví pozadí** (`--red-hover`), výzva je podtržená trvale. Posun šipky při hoveru by byl selektor rodič → potomek, který Webflow nezapíše; kvůli efektu se do CSS v repu nesahalo.
 
