@@ -1,0 +1,222 @@
+{
+  "base": "https://eldr.webflow.io",
+  "local": false,
+  "commit": "d86049a2fa3237b0565e8fd9b6c5b22391b51bbf",
+  "date": "2026-11-20T14:02:34.991Z",
+  "results": [
+    {
+      "name": "stránka načítá dev kopii z merge commitu",
+      "pass": true,
+      "detail": "https://cdn.jsdelivr.net/gh/lukas-webkit-studio/eldr@d86049a2fa3237b0565e8fd9b6c5b22391b51bbf/src/dev/announcement-bar.js"
+    },
+    {
+      "name": "head má GTM-W6PR2VX, stránka 5 Finsweet",
+      "pass": true,
+      "detail": "cmsfilter, richtext, scrolldisable, attributes@2, cookie-consent"
+    },
+    {
+      "name": "odkaz má ?pruh=zima-2026 před #formular",
+      "pass": true,
+      "detail": "/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "klik pushnul announcement_click se správným locale",
+      "pass": true,
+      "detail": "[{\"event\":\"announcement_click\",\"announcement\":\"zima-2026\",\"locale\":\"cs\"}]"
+    },
+    {
+      "name": "URL po kliku",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "nadpis formuláře je vidět pod navigací",
+      "pass": true,
+      "detail": "{\"navBottom\":84,\"h2Top\":168,\"h2Bottom\":226,\"vh\":900}"
+    },
+    {
+      "name": "bez odeslání formuláře žádné contact_form_submit",
+      "pass": true
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "odkaz má ?pruh=zima-2026 před #formular",
+      "pass": true,
+      "detail": "/en/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "klik pushnul announcement_click se správným locale",
+      "pass": true,
+      "detail": "[{\"event\":\"announcement_click\",\"announcement\":\"zima-2026\",\"locale\":\"en\"}]"
+    },
+    {
+      "name": "URL po kliku",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/en/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "nadpis formuláře je vidět pod navigací",
+      "pass": true,
+      "detail": "{\"navBottom\":84,\"h2Top\":168,\"h2Bottom\":226,\"vh\":900}"
+    },
+    {
+      "name": "bez odeslání formuláře žádné contact_form_submit",
+      "pass": true
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "odkaz má ?pruh=zima-2026 před #formular",
+      "pass": true,
+      "detail": "/de/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "klik pushnul announcement_click se správným locale",
+      "pass": true,
+      "detail": "[{\"event\":\"announcement_click\",\"announcement\":\"zima-2026\",\"locale\":\"de\"}]"
+    },
+    {
+      "name": "URL po kliku",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/de/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "nadpis formuláře je vidět pod navigací",
+      "pass": true,
+      "detail": "{\"navBottom\":84,\"h2Top\":168,\"h2Bottom\":226,\"vh\":900}"
+    },
+    {
+      "name": "bez odeslání formuláře žádné contact_form_submit",
+      "pass": true
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "odkaz má ?pruh=zima-2026 před #formular",
+      "pass": true,
+      "detail": "/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "klik pushnul announcement_click se správným locale",
+      "pass": true,
+      "detail": "[{\"event\":\"announcement_click\",\"announcement\":\"zima-2026\",\"locale\":\"cs\"}]"
+    },
+    {
+      "name": "URL po kliku",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "nadpis formuláře je vidět pod navigací",
+      "pass": true,
+      "detail": "{\"navBottom\":64,\"h2Top\":160,\"h2Bottom\":191,\"vh\":844}"
+    },
+    {
+      "name": "bez odeslání formuláře žádné contact_form_submit",
+      "pass": true
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "odkaz má ?pruh=zima-2026 před #formular",
+      "pass": true,
+      "detail": "/en/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "klik pushnul announcement_click se správným locale",
+      "pass": true,
+      "detail": "[{\"event\":\"announcement_click\",\"announcement\":\"zima-2026\",\"locale\":\"en\"}]"
+    },
+    {
+      "name": "URL po kliku",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/en/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "nadpis formuláře je vidět pod navigací",
+      "pass": true,
+      "detail": "{\"navBottom\":64,\"h2Top\":160,\"h2Bottom\":191,\"vh\":844}"
+    },
+    {
+      "name": "bez odeslání formuláře žádné contact_form_submit",
+      "pass": true
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "odkaz má ?pruh=zima-2026 před #formular",
+      "pass": true,
+      "detail": "/de/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "klik pushnul announcement_click se správným locale",
+      "pass": true,
+      "detail": "[{\"event\":\"announcement_click\",\"announcement\":\"zima-2026\",\"locale\":\"de\"}]"
+    },
+    {
+      "name": "URL po kliku",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/de/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "nadpis formuláře je vidět pod navigací",
+      "pass": true,
+      "detail": "{\"navBottom\":64,\"h2Top\":160,\"h2Bottom\":191,\"vh\":844}"
+    },
+    {
+      "name": "bez odeslání formuláře žádné contact_form_submit",
+      "pass": true
+    },
+    {
+      "name": "bez chyb v konzoli stránky",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "cs: klik i tak dovede na formulář",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "cs: kód pruhu nevyhodil chybu",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "en: klik i tak dovede na formulář",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/en/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "en: kód pruhu nevyhodil chybu",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "de: klik i tak dovede na formulář",
+      "pass": true,
+      "detail": "https://eldr.webflow.io/de/kontakty?pruh=zima-2026#formular"
+    },
+    {
+      "name": "de: kód pruhu nevyhodil chybu",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}
