@@ -1,7 +1,7 @@
 {
   "base": "https://eldr.webflow.io",
   "local": false,
-  "date": "2026-11-21T11:33:51.705Z",
+  "date": "2026-11-21T11:46:01.149Z",
   "results": [
     {
       "name": "cs: jedna sada, jedna zpráva „Objednejte do 31. 12. a zamkněte si letošní ceny“",
@@ -106,7 +106,7 @@
     {
       "name": "390 cs: křížek na úrovni textu",
       "pass": true,
-      "detail": "řádek 22.0, křížek 22.0"
+      "detail": "řádek 21.4, křížek 21.5"
     },
     {
       "name": "390 cs: text nepřekrývá křížek",
@@ -120,7 +120,7 @@
     {
       "name": "360 cs: pruh ≤ 60 px",
       "pass": true,
-      "detail": "50 px"
+      "detail": "60 px"
     },
     {
       "name": "360 cs: nejvýš 2 řádky",
@@ -139,7 +139,7 @@
     {
       "name": "360 cs: text nepřekrývá křížek",
       "pass": true,
-      "detail": "text do 229, křížek od 316"
+      "detail": "text do 174, křížek od 316"
     },
     {
       "name": "360 cs: bez vdov",
@@ -221,7 +221,7 @@
     {
       "name": "390 en: křížek na úrovni textu",
       "pass": true,
-      "detail": "řádek 22.0, křížek 22.0"
+      "detail": "řádek 21.4, křížek 21.5"
     },
     {
       "name": "390 en: text nepřekrývá křížek",
@@ -254,7 +254,7 @@
     {
       "name": "360 en: křížek na úrovni textu",
       "pass": true,
-      "detail": "řádek 22.0, křížek 22.0"
+      "detail": "řádek 21.4, křížek 21.5"
     },
     {
       "name": "360 en: text nepřekrývá křížek",
@@ -341,7 +341,7 @@
     {
       "name": "390 de: křížek na úrovni textu",
       "pass": true,
-      "detail": "řádek 22.0, křížek 22.0"
+      "detail": "řádek 21.4, křížek 21.5"
     },
     {
       "name": "390 de: text nepřekrývá křížek",
@@ -374,7 +374,7 @@
     {
       "name": "360 de: křížek na úrovni textu",
       "pass": true,
-      "detail": "řádek 22.0, křížek 22.0"
+      "detail": "řádek 21.4, křížek 21.5"
     },
     {
       "name": "360 de: text nepřekrývá křížek",
@@ -423,7 +423,7 @@
     {
       "name": "žlutý puntík pulzuje (IX3, scale se mění)",
       "pass": true,
-      "detail": "matrix(1.1859, 0, 0, 1.1859, 0, 0) | matrix(1.0086, 0, 0, 1.0086, 0, 0) | matrix(1.0612, 0, 0, 1.0612, 0, 0) | matrix(1.2823, 0, 0, 1.2823, 0, 0)"
+      "detail": "matrix(1.1023, 0, 0, 1.1023, 0, 0) | matrix(1.0014, 0, 0, 1.0014, 0, 0) | matrix(1.1339, 0, 0, 1.1339, 0, 0) | matrix(1.3696, 0, 0, 1.3696, 0, 0)"
     },
     {
       "name": "1440 /: nahoře pruh vidět, navigace pod ním",
@@ -446,7 +446,7 @@
     {
       "name": "1440 /: layout shift při scrollu 0",
       "pass": true,
-      "detail": "0.0003"
+      "detail": "0.0006"
     },
     {
       "name": "1440 /produkty/tabule-a-svetelne-panely: nahoře pruh vidět, navigace pod ním",
