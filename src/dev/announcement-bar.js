@@ -25,6 +25,8 @@
   var STORAGE_PREFIX = 'eldr-announcement-closed:';
   var PARAM = 'pruh'; // parametr v odkazu, měření v GA4 bez GTM (#69)
   var EVENT = 'announcement_click'; // událost do dataLayer pro GTM (#69)
+  // Lukáš 21. 11.: pruh zůstává nahoře i při scrollu. false vrátí odjíždění z #66.
+  var STICKY = true;
 
   // Jazyk stránky: lang na <html>, záložně první segment cesty. Vlastní
   // funkce, ne locale() z 00-core: dev kopie běží bez bundlu.
@@ -116,7 +118,7 @@
     function lift() {
       liftQueued = false;
       if (!nav) return;
-      var y = bar.style.display === 'none' || focusInside
+      var y = STICKY || bar.style.display === 'none' || focusInside
         ? 0
         : Math.min(Math.max(window.pageYOffset || 0, 0), bar.offsetHeight);
       if (y === lifted) return;
@@ -286,7 +288,7 @@
     /* --- odsazení obsahu --------------------------------------------------- */
 
     sync();
-    window.addEventListener('scroll', queueLift, { passive: true });
+    if (!STICKY) window.addEventListener('scroll', queueLift, { passive: true });
     window.addEventListener('resize', sync);
     window.addEventListener('load', sync);
     if ('ResizeObserver' in window) new window.ResizeObserver(sync).observe(bar);

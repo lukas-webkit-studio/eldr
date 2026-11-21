@@ -771,15 +771,9 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
 
     const nav = doc.querySelector('.navbar_component');
     w.scrollToY(20);
-    ok('scroll o 20 px posune navbar o 20 px nahoru', nav.style.transform === 'translateY(-20px)');
+    ok('pruh při scrollu zůstává nahoře (navbar se neposouvá)', nav.style.transform === '');
     w.scrollToY(500);
-    ok('dál než výška pruhu: navbar posunutý jen o výšku pruhu (47 px)', nav.style.transform === 'translateY(-47px)');
-    doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusin', { bubbles: true }));
-    ok('fokus uvnitř odjetého pruhu ho ukáže', nav.style.transform === '');
-    doc.querySelector('.announcement_link').dispatchEvent(new w.FocusEvent('focusout', { bubbles: true, relatedTarget: doc.querySelector('.navbar_logo-link') }));
-    ok('odchod fokusu pruh zase schová', nav.style.transform === 'translateY(-47px)');
-    w.scrollToY(0);
-    ok('nahoře na stránce je pruh zpátky', nav.style.transform === '');
+    ok('ani dál na stránce pruh neodjede', nav.style.transform === '');
     w.scrollToY(300);
     doc.querySelector('.announcement_close').click();
     ok('křížek pruh skryje', bar.style.display === 'none');
