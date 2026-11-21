@@ -280,7 +280,7 @@ async function behaviour(browser) {
   const nojs = await page.evaluate(() => {
     const bar = document.querySelector('.announcement_component');
     const shown = [...bar.querySelectorAll('.announcement_text')].filter(e => e.offsetParent);
-    return { n: shown.length, text: shown.map(e => e.textContent.trim()), h: bar.getBoundingClientRect().height, pad: parseFloat(getComputedStyle(document.body).paddingTop) };
+    return { n: shown.length, text: shown.map(e => e.textContent.replace(/\u00a0/g, ' ').trim()), h: bar.getBoundingClientRect().height, pad: parseFloat(getComputedStyle(document.body).paddingTop) };
   });
   ok('bez JS: zpráva vidět, odsazení obsahu kryje pruh', nojs.n === 1 && nojs.text[0] === LANGS.cs.text && nojs.pad >= nojs.h - 1, `${nojs.text[0]}, pruh ${Math.round(nojs.h)}, body ${nojs.pad}`);
   await context.close();
