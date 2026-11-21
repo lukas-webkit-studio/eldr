@@ -1,7 +1,7 @@
 {
   "base": "https://eldr.webflow.io",
   "local": false,
-  "date": "2026-11-20T13:45:09.193Z",
+  "date": "2026-11-21T11:33:51.705Z",
   "results": [
     {
       "name": "cs: jedna sada, jedna zpráva „Objednejte do 31. 12. a zamkněte si letošní ceny“",
@@ -87,22 +87,31 @@
     {
       "name": "390 cs: pruh ≤ 60 px",
       "pass": true,
-      "detail": "56 px"
+      "detail": "44 px"
     },
     {
-      "name": "390 cs: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "name": "390 cs: jeden řádek",
       "pass": true,
       "detail": "1"
     },
     {
-      "name": "390 cs: křížek u prvního řádku",
+      "name": "390 cs: šipka vpravo od textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "390 cs: místo tlačítka jen šipka (bez obrysu a textu)",
       "pass": true,
-      "detail": "řádky 14.8, křížek 14.0"
+      "detail": "výzva 16 px"
+    },
+    {
+      "name": "390 cs: křížek na úrovni textu",
+      "pass": true,
+      "detail": "řádek 22.0, křížek 22.0"
     },
     {
       "name": "390 cs: text nepřekrývá křížek",
       "pass": true,
-      "detail": "text do 304, křížek od 346"
+      "detail": "text do 311, křížek od 346"
     },
     {
       "name": "390 cs: bez vdov",
@@ -111,22 +120,26 @@
     {
       "name": "360 cs: pruh ≤ 60 px",
       "pass": true,
-      "detail": "56 px"
+      "detail": "50 px"
     },
     {
-      "name": "360 cs: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "name": "360 cs: nejvýš 2 řádky",
       "pass": true,
-      "detail": "1"
+      "detail": "2"
     },
     {
-      "name": "360 cs: křížek u prvního řádku",
+      "name": "360 cs: šipka vpravo od textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "360 cs: místo tlačítka jen šipka (bez obrysu a textu)",
       "pass": true,
-      "detail": "řádky 14.8, křížek 14.0"
+      "detail": "výzva 16 px"
     },
     {
       "name": "360 cs: text nepřekrývá křížek",
       "pass": true,
-      "detail": "text do 304, křížek od 316"
+      "detail": "text do 229, křížek od 316"
     },
     {
       "name": "360 cs: bez vdov",
@@ -189,22 +202,31 @@
     {
       "name": "390 en: pruh ≤ 60 px",
       "pass": true,
-      "detail": "56 px"
+      "detail": "44 px"
     },
     {
-      "name": "390 en: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "name": "390 en: jeden řádek",
       "pass": true,
       "detail": "1"
     },
     {
-      "name": "390 en: křížek u prvního řádku",
+      "name": "390 en: šipka vpravo od textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "390 en: místo tlačítka jen šipka (bez obrysu a textu)",
       "pass": true,
-      "detail": "řádky 14.8, křížek 14.0"
+      "detail": "výzva 16 px"
+    },
+    {
+      "name": "390 en: křížek na úrovni textu",
+      "pass": true,
+      "detail": "řádek 22.0, křížek 22.0"
     },
     {
       "name": "390 en: text nepřekrývá křížek",
       "pass": true,
-      "detail": "text do 287, křížek od 346"
+      "detail": "text do 303, křížek od 346"
     },
     {
       "name": "390 en: bez vdov",
@@ -213,22 +235,31 @@
     {
       "name": "360 en: pruh ≤ 60 px",
       "pass": true,
-      "detail": "56 px"
+      "detail": "44 px"
     },
     {
-      "name": "360 en: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "name": "360 en: nejvýš 2 řádky",
       "pass": true,
       "detail": "1"
     },
     {
-      "name": "360 en: křížek u prvního řádku",
+      "name": "360 en: šipka vpravo od textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "360 en: místo tlačítka jen šipka (bez obrysu a textu)",
       "pass": true,
-      "detail": "řádky 14.8, křížek 14.0"
+      "detail": "výzva 16 px"
+    },
+    {
+      "name": "360 en: křížek na úrovni textu",
+      "pass": true,
+      "detail": "řádek 22.0, křížek 22.0"
     },
     {
       "name": "360 en: text nepřekrývá křížek",
       "pass": true,
-      "detail": "text do 287, křížek od 316"
+      "detail": "text do 288, křížek od 316"
     },
     {
       "name": "360 en: bez vdov",
@@ -291,22 +322,31 @@
     {
       "name": "390 de: pruh ≤ 60 px",
       "pass": true,
-      "detail": "56 px"
+      "detail": "44 px"
     },
     {
-      "name": "390 de: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "name": "390 de: jeden řádek",
       "pass": true,
       "detail": "1"
     },
     {
-      "name": "390 de: křížek u prvního řádku",
+      "name": "390 de: šipka vpravo od textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "390 de: místo tlačítka jen šipka (bez obrysu a textu)",
       "pass": true,
-      "detail": "řádky 14.8, křížek 14.0"
+      "detail": "výzva 16 px"
+    },
+    {
+      "name": "390 de: křížek na úrovni textu",
+      "pass": true,
+      "detail": "řádek 22.0, křížek 22.0"
     },
     {
       "name": "390 de: text nepřekrývá křížek",
       "pass": true,
-      "detail": "text do 295, křížek od 346"
+      "detail": "text do 307, křížek od 346"
     },
     {
       "name": "390 de: bez vdov",
@@ -315,22 +355,31 @@
     {
       "name": "360 de: pruh ≤ 60 px",
       "pass": true,
-      "detail": "56 px"
+      "detail": "44 px"
     },
     {
-      "name": "360 de: nejvýš 2 řádky (zpráva 1 + výzva)",
+      "name": "360 de: nejvýš 2 řádky",
       "pass": true,
       "detail": "1"
     },
     {
-      "name": "360 de: křížek u prvního řádku",
+      "name": "360 de: šipka vpravo od textu, ne pod ním",
+      "pass": true
+    },
+    {
+      "name": "360 de: místo tlačítka jen šipka (bez obrysu a textu)",
       "pass": true,
-      "detail": "řádky 14.8, křížek 14.0"
+      "detail": "výzva 16 px"
+    },
+    {
+      "name": "360 de: křížek na úrovni textu",
+      "pass": true,
+      "detail": "řádek 22.0, křížek 22.0"
     },
     {
       "name": "360 de: text nepřekrývá křížek",
       "pass": true,
-      "detail": "text do 295, křížek od 316"
+      "detail": "text do 292, křížek od 316"
     },
     {
       "name": "360 de: bez vdov",
@@ -370,6 +419,11 @@
       "name": "focus-visible: obrys na odkazu pruhu (první prvek v tabulátoru)",
       "pass": true,
       "detail": "announcement_link w-inline-block · solid 2px"
+    },
+    {
+      "name": "žlutý puntík pulzuje (IX3, scale se mění)",
+      "pass": true,
+      "detail": "matrix(1.1859, 0, 0, 1.1859, 0, 0) | matrix(1.0086, 0, 0, 1.0086, 0, 0) | matrix(1.0612, 0, 0, 1.0612, 0, 0) | matrix(1.2823, 0, 0, 1.2823, 0, 0)"
     },
     {
       "name": "1440 /: nahoře pruh vidět, navigace pod ním",
@@ -489,12 +543,12 @@
     {
       "name": "390 /: nahoře pruh vidět, navigace pod ním",
       "pass": true,
-      "detail": "pruh 56 px, nav 56"
+      "detail": "pruh 44 px, nav 44"
     },
     {
       "name": "390 /: po scrollu dolů pruh pryč, navigace u horní hrany",
       "pass": true,
-      "detail": "nav -0.5"
+      "detail": "nav 0.0"
     },
     {
       "name": "390 /: scroll nahoru uprostřed stránky pruh neukáže",
@@ -507,17 +561,17 @@
     {
       "name": "390 /: layout shift při scrollu 0",
       "pass": true,
-      "detail": "0.0000"
+      "detail": "0.0001"
     },
     {
       "name": "390 /produkty/tabule-a-svetelne-panely: nahoře pruh vidět, navigace pod ním",
       "pass": true,
-      "detail": "pruh 56 px, nav 56"
+      "detail": "pruh 44 px, nav 44"
     },
     {
       "name": "390 /produkty/tabule-a-svetelne-panely: po scrollu dolů pruh pryč, navigace u horní hrany",
       "pass": true,
-      "detail": "nav -0.5"
+      "detail": "nav 0.0"
     },
     {
       "name": "390 /produkty/tabule-a-svetelne-panely: scroll nahoru uprostřed stránky pruh neukáže",
@@ -535,12 +589,12 @@
     {
       "name": "390 /kontakty: nahoře pruh vidět, navigace pod ním",
       "pass": true,
-      "detail": "pruh 56 px, nav 56"
+      "detail": "pruh 44 px, nav 44"
     },
     {
       "name": "390 /kontakty: po scrollu dolů pruh pryč, navigace u horní hrany",
       "pass": true,
-      "detail": "nav -0.5"
+      "detail": "nav 0.0"
     },
     {
       "name": "390 /kontakty: scroll nahoru uprostřed stránky pruh neukáže",
@@ -558,12 +612,12 @@
     {
       "name": "390 /inspirace: nahoře pruh vidět, navigace pod ním",
       "pass": true,
-      "detail": "pruh 56 px, nav 56"
+      "detail": "pruh 44 px, nav 44"
     },
     {
       "name": "390 /inspirace: po scrollu dolů pruh pryč, navigace u horní hrany",
       "pass": true,
-      "detail": "nav -0.5"
+      "detail": "nav 0.0"
     },
     {
       "name": "390 /inspirace: scroll nahoru uprostřed stránky pruh neukáže",
@@ -581,12 +635,12 @@
     {
       "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: nahoře pruh vidět, navigace pod ním",
       "pass": true,
-      "detail": "pruh 56 px, nav 56"
+      "detail": "pruh 44 px, nav 44"
     },
     {
       "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: po scrollu dolů pruh pryč, navigace u horní hrany",
       "pass": true,
-      "detail": "nav -0.5"
+      "detail": "nav 0.0"
     },
     {
       "name": "390 /inspirace/3d-napis-jak-ziskat-pozornost-zakazniku: scroll nahoru uprostřed stránky pruh neukáže",
@@ -602,32 +656,32 @@
       "detail": "0.0000"
     },
     {
-      "name": "1440 cs: /kontakty#formular, nadpis formuláře pod navigací",
+      "name": "1440 cs: /kontakty?pruh=zima-2026#formular, nadpis formuláře pod navigací",
       "pass": true,
       "detail": "nadpis 168, navigace končí 84"
     },
     {
-      "name": "390 cs: /kontakty#formular, nadpis formuláře pod navigací",
+      "name": "390 cs: /kontakty?pruh=zima-2026#formular, nadpis formuláře pod navigací",
       "pass": true,
       "detail": "nadpis 160, navigace končí 64"
     },
     {
-      "name": "1440 en: /en/kontakty#formular, nadpis formuláře pod navigací",
+      "name": "1440 en: /en/kontakty?pruh=zima-2026#formular, nadpis formuláře pod navigací",
       "pass": true,
       "detail": "nadpis 168, navigace končí 84"
     },
     {
-      "name": "390 en: /en/kontakty#formular, nadpis formuláře pod navigací",
+      "name": "390 en: /en/kontakty?pruh=zima-2026#formular, nadpis formuláře pod navigací",
       "pass": true,
       "detail": "nadpis 160, navigace končí 64"
     },
     {
-      "name": "1440 de: /de/kontakty#formular, nadpis formuláře pod navigací",
+      "name": "1440 de: /de/kontakty?pruh=zima-2026#formular, nadpis formuláře pod navigací",
       "pass": true,
       "detail": "nadpis 168, navigace končí 84"
     },
     {
-      "name": "390 de: /de/kontakty#formular, nadpis formuláře pod navigací",
+      "name": "390 de: /de/kontakty?pruh=zima-2026#formular, nadpis formuláře pod navigací",
       "pass": true,
       "detail": "nadpis 160, navigace končí 64"
     },
@@ -650,24 +704,29 @@
       "detail": "{\"n\":1,\"visible\":true}"
     },
     {
+      "name": "reduced motion: puntík nepulzuje",
+      "pass": true,
+      "detail": "none"
+    },
+    {
       "name": "bez JS: zpráva vidět, odsazení obsahu kryje pruh",
       "pass": true,
-      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny, pruh 56, body 56"
+      "detail": "Objednejte do 31. 12. a zamkněte si letošní ceny, pruh 44, body 44"
     },
     {
       "name": "cs: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
       "pass": true,
-      "detail": "Finsweet 5, commit 29f58620eab597a1a66114ba71505ae96699996d"
+      "detail": "Finsweet 5, commit d86049a2fa3237b0565e8fd9b6c5b22391b51bbf"
     },
     {
       "name": "en: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
       "pass": true,
-      "detail": "Finsweet 5, commit 29f58620eab597a1a66114ba71505ae96699996d"
+      "detail": "Finsweet 5, commit d86049a2fa3237b0565e8fd9b6c5b22391b51bbf"
     },
     {
       "name": "de: GTM-W6PR2VX, 5 Finsweet, pruh s připnutým commitem",
       "pass": true,
-      "detail": "Finsweet 5, commit 29f58620eab597a1a66114ba71505ae96699996d"
+      "detail": "Finsweet 5, commit d86049a2fa3237b0565e8fd9b6c5b22391b51bbf"
     }
   ]
 }

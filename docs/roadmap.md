@@ -21,10 +21,11 @@ Aktualizováno 20. 11. 2026 odpoledne (S13 #69; S12 #66; S11 #62; předtím S10 
 
 ### Štafeta 20. 11. – S12 #66 horní pruh, 2. kolo
 
-- **Hotovo na stagingu (publikováno 20. 11. 14:43:00, footer pin `29f58620…`, PR #67), produkce nepublikovaná** (domény dál 19. 11. 09:14:46). Ověření s merge commitem 143/143.
+- **Hotovo na stagingu (publikováno 20. 11. 14:43:00, footer pin `29f58620…`, PR #67), produkce nepublikovaná** (domény dál 19. 11. 09:14:46). Ověření s merge commitem 143/143, po úpravě mobilu 21. 11. 156/156.
 - **Rozhodnutí Lukáše během práce:** jedna zpráva bez rotace, „Objednejte do 31. 12. a zamkněte si letošní ceny“ + „Zamluvit termín“, desktop i mobil. EN „Order by 31 Dec and lock in this year’s prices“, DE „Bestellen Sie bis 31.12. zu diesjährigen Preisen“ (kratší, ať se vejdou na mobil).
 - **Webflow:** výzva jako ghost tlačítko (obrys, hover bílá/červená), mobil zpráva + tlačítko pod ní, 56 px, křížek u prvního řádku, `text-wrap: balance`, tablet mezera 12 px, `body` záloha 46/44/56 px.
 - **Repo:** pruh při scrollu odjede (posun navbaru transformem, layout shift 0), zavření v `localStorage`, rotace umí víc sad zpráv. Ověření `scripts/overeni/s12-horni-pruh.js`, snímky `docs/snimky/s12/`.
+- **21. 11. podle náhledu Lukáše:** mobil v jednom řádku (puntík, zpráva, šipka, křížek), 44 px, od 375 px jeden řádek. Puntík pulzuje (IX3 nativně, ne při reduced motion).
 - **Na Lukášovi:** odsouhlasit text s klientem, pak souhlas s publikací produkce. Ostatní body z S11 platí.
 
 ### Štafeta 20. 11. – S11 #62 horní pruh s akcí „zimní objednávky“

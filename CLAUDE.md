@@ -52,7 +52,7 @@ custom kódu. Ověřeno na tomhle webu:
 
 | Co | Kde to jde |
 |---|---|
-| Interakce (IX2) | jen Designer |
+| Interakce (IX2) | jen Designer. **IX3 jde přes API** (`data_interactions_tool`, ověřeno 21. 11. 2026 na pulzujícím puntíku pruhu: load trigger, nekonečná smyčka přes `timeline.settings` `{repeat: -1, yoyo: true}`, `prefers-reduced-motion`) |
 | Styly a třídy v sekundárním locale | jen Designer — `data_style_tool` píše globálně, ne per locale |
 | Obrázky v sekundárním locale | jen Designer, API je vrací, ale nezapíše |
 | Atributy (`aria-label`, `title`, `data-*`) per locale | **nejde nikde** — hodnota je společná všem jazykům |

@@ -118,14 +118,18 @@ async function layout(browser) {
         const cta = bar.querySelector('.announcement_cta').getBoundingClientRect();
         const glyph = bar.querySelector('.announcement_close span').getBoundingClientRect();
         const close = bar.querySelector('.announcement_close').getBoundingClientRect();
-        return { per, cta: { top: cta.top, h: cta.height, left: cta.left }, glyphMid: glyph.top + glyph.height / 2, closeLeft: close.left,
+        return { per, ctaW: cta.width, ctaNarrow: cta.width < 24, cta: { top: cta.top, h: cta.height, left: cta.left }, glyphMid: glyph.top + glyph.height / 2, closeLeft: close.left,
           barH: Math.max(...per.map(p => p.h)), shortShown: sets[0] && sets[0].classList.contains('is-short') };
       })()`);
       const tag = `${w} ${lang}`;
       if (w <= 767) {
+        // Mobil (Lukáš 21. 11.): puntík, zpráva a šipka v jednom řádku na střed.
+        // Od 375 px jeden řádek, na užších displejích smí zpráva na dva.
         ok(`${tag}: pruh ≤ 60 px`, m.barH <= 60, `${Math.round(m.barH)} px`);
-        ok(`${tag}: nejvýš 2 řádky (zpráva 1 + výzva)`, m.per.every(p => p.n === 1) && m.cta.top > Math.max(...m.per.map(p => p.lineMid)), m.per.map(p => p.n).join('/'));
-        ok(`${tag}: křížek u prvního řádku`, m.per.every(p => Math.abs(p.lineMid - m.glyphMid) <= 4), `řádky ${m.per.map(p => p.lineMid.toFixed(1)).join('/')}, křížek ${m.glyphMid.toFixed(1)}`);
+        ok(`${tag}: ${w >= 375 ? 'jeden řádek' : 'nejvýš 2 řádky'}`, m.per.every(p => p.n <= (w >= 375 ? 1 : 2)), m.per.map(p => p.n).join('/'));
+        ok(`${tag}: šipka vpravo od textu, ne pod ním`, m.per.every(p => m.cta.left >= p.right - 1));
+        ok(`${tag}: místo tlačítka jen šipka (bez obrysu a textu)`, m.ctaNarrow, `výzva ${Math.round(m.ctaW)} px`);
+        if (m.per.every(p => p.n === 1)) ok(`${tag}: křížek na úrovni textu`, m.per.every(p => Math.abs(p.lineMid - m.glyphMid) <= 4), `řádek ${m.per[0].lineMid.toFixed(1)}, křížek ${m.glyphMid.toFixed(1)}`);
       } else {
         ok(`${tag}: jeden řádek`, m.per.every(p => p.n === 1), m.per.map(p => p.n).join('/'));
         ok(`${tag}: výzva vedle textu, ne pod ním`, m.per.every(p => m.cta.left >= p.right - 1));
@@ -176,6 +180,9 @@ async function button(browser) {
     return { cls: el.className, outline: s.outlineStyle + ' ' + s.outlineWidth };
   });
   ok('focus-visible: obrys na odkazu pruhu (první prvek v tabulátoru)', /announcement_link/.test(f.cls) && /solid 2px/.test(f.outline), f.cls + ' · ' + f.outline);
+  const dotT = [];
+  for (let i = 0; i < 4; i++) { dotT.push(await page.evaluate(() => getComputedStyle(document.querySelector('.announcement_dot')).transform)); await sleep(250); }
+  ok('žlutý puntík pulzuje (IX3, scale se mění)', new Set(dotT).size > 1, dotT.join(' | '));
   await page.screenshot({ path: path.join(OUT, '1440-cs-fokus.png'), clip: { x: 0, y: 0, width: 1440, height: 140 } });
   await context.close();
 }
@@ -215,16 +222,16 @@ async function formLink(browser) {
   for (const [lang, t] of Object.entries(LANGS)) {
     for (const w of [1440, 390]) {
       const { context, page } = await open(browser, t.prefix + '/', { viewport: { width: w, height: 844 } });
-      await Promise.all([page.waitForURL(/kontakty#formular/, { waitUntil: 'domcontentloaded' }), page.click('.announcement_link')]);
+      await Promise.all([page.waitForURL(/kontakty(\?[^#]*)?#formular/, { waitUntil: 'domcontentloaded' }), page.click('.announcement_link')]);
       await page.addStyleTag({ content: HIDE_COOKIES });
       await sleep(1500);
       const r = await page.evaluate(() => {
         const f = document.getElementById('formular');
         const nav = document.querySelector('.navbar_container').getBoundingClientRect();
         const h = f.querySelector('h2, h3, form');
-        return { url: location.pathname + location.hash, head: h.getBoundingClientRect().top, navBottom: nav.bottom };
+        return { url: location.pathname + location.search + location.hash, head: h.getBoundingClientRect().top, navBottom: nav.bottom };
       });
-      ok(`${w} ${lang}: ${r.url}, nadpis formuláře pod navigací`, r.url === t.prefix + '/kontakty#formular' && r.head >= r.navBottom,
+      ok(`${w} ${lang}: ${r.url}, nadpis formuláře pod navigací`, r.url.replace(/\?[^#]*/, '') === t.prefix + '/kontakty#formular' && r.head >= r.navBottom,
         `nadpis ${Math.round(r.head)}, navigace končí ${Math.round(r.navBottom)}`);
       if (w === 390 && lang === 'cs') await page.screenshot({ path: path.join(OUT, '390-cs-formular.png') });
       await context.close();
@@ -261,6 +268,12 @@ async function behaviour(browser) {
     return { n: t.length, visible: t[0] && getComputedStyle(t[0]).display !== 'none' && t[0].style.opacity !== '0' };
   });
   ok('jedna zpráva, bez rotace, po 5 s pořád vidět', single.n === 1 && single.visible, JSON.stringify(single));
+  await context.close();
+
+  ({ context, page } = await open(browser, '/', { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' }));
+  const rm = [];
+  for (let i = 0; i < 4; i++) { rm.push(await page.evaluate(() => getComputedStyle(document.querySelector('.announcement_dot')).transform)); await sleep(250); }
+  ok('reduced motion: puntík nepulzuje', new Set(rm).size === 1, rm[0]);
   await context.close();
 
   ({ context, page } = await open(browser, '/', { viewport: { width: 390, height: 844 }, javaScriptEnabled: false }));
