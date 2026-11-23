@@ -1872,8 +1872,8 @@ function locale() {
        button.announcement_close ve Webflow display: none, ukáže ho modul
 
    Chování:
-     - zprávy se střídají po INTERVAL, přechod je prolnutí s krátkým
-       posunem nahoru. Při hoveru myší a při fokusu uvnitř pruhu rotace
+     - zprávy se střídají po INTERVAL, nová vyjede zespodu, stará odjede
+       nahoru (návrh agentury). Při hoveru myší a při fokusu uvnitř pruhu rotace
        stojí, ve skryté záložce taky. Hover se bere jen z myši a pera,
        dotyk posílá pointerover bez pointerout
      - prefers-reduced-motion: zprávy se střídají okamžitě, bez pohybu
@@ -1920,27 +1920,18 @@ function locale() {
   if (!has('.announcement_component')) return;
 
   var INTERVAL = 5000; // ms, jak dlouho je vidět jedna zpráva
-  var FADE = 400; // ms, délka přechodu mezi zprávami
-  var SHIFT = 6; // px, posun zprávy při přechodu
+  // Přechod podle návrhu agentury (23. 11.): nová zpráva vyjede zespodu,
+  // stará odjede nahoru. Posun v % výšky zprávy, pruh má overflow: hidden.
+  var FADE = 450; // ms, prolnutí
+  var MOVE = 500; // ms, posun
+  var EASE = 'cubic-bezier(.2,.7,.2,1)';
+  var SHIFT = '70%'; // posun zprávy při přechodu
   var HASH = 'formular'; // kotva formuláře na stránce Kontakty
   var STORAGE_PREFIX = 'eldr-announcement-closed:';
   var PARAM = 'pruh'; // parametr v odkazu, měření v GA4 bez GTM (#69)
   var EVENT = 'announcement_click'; // událost do dataLayer pro GTM (#69)
   // Lukáš 21. 11.: pruh zůstává nahoře i při scrollu. false vrátí odjíždění z #66.
   var STICKY = true;
-  // Lukáš 23. 11.: zprávy se střídají psacím strojem od středu textu.
-  // Mazání od krajů ke středu, psaní od středu na obě strany. Patří
-  // k rotaci, kterou řídí tenhle skript (Webflow neumí střídat zprávy
-  // s pauzou při najetí myší), proto není v interakcích Webflow.
-  // false vrátí prolnutí. Bez CSS a bez dalších časovačů: každý znak
-  // dostane zpoždění v transition visibility.
-  var TYPE = true;
-  var DEL_STEP = 32; // ms mezi dvojicemi znaků při mazání
-  var DEL_MAX = 420; // ms, nejdelší mazání
-  var TYPE_STEP = 64; // ms mezi dvojicemi znaků při psaní
-  var TYPE_MAX = 1200; // ms, nejdelší psaní
-  var TYPE_GAP = 140; // ms prázdného pruhu mezi mazáním a psaním
-
   // Jazyk stránky: lang na <html>, záložně první segment cesty. Vlastní
   // funkce, ne locale() z 00-core: dev kopie běží bez bundlu.
   function pageLocale() {
@@ -2089,122 +2080,25 @@ function locale() {
     var focused = false;
 
     function setState(el, on, animate) {
-      var t = FADE + 'ms ease';
       el.style.transition = animate && !reduce
-        ? 'opacity ' + t + ', transform ' + t + ', visibility 0s linear ' + (on ? '0s' : FADE + 'ms')
+        ? 'opacity ' + FADE + 'ms ease, transform ' + MOVE + 'ms ' + EASE + ', visibility 0s linear ' + (on ? '0s' : MOVE + 'ms')
         : 'none';
       el.style.opacity = on ? '1' : '0';
       el.style.visibility = on ? 'visible' : 'hidden';
-      el.style.transform = on || reduce ? 'none' : 'translateY(-' + SHIFT + 'px)';
+      el.style.transform = on || reduce ? 'none' : 'translateY(-' + SHIFT + ')';
       if (on) el.removeAttribute('aria-hidden');
       else el.setAttribute('aria-hidden', 'true');
-    }
-
-    // Text zprávy rozdělí na znaky. Slova drží pohromadě (inline-block,
-    // nowrap), aby se řádek nezlomil uprostřed slova. Tučné části zůstanou.
-    function charsOf(el) {
-      if (el._chars) return el._chars;
-      var out = [];
-      (function walk(node) {
-        Array.prototype.slice.call(node.childNodes).forEach(function (n) {
-          if (n.nodeType === 1) return walk(n);
-          if (n.nodeType !== 3 || !n.nodeValue) return;
-          var frag = document.createDocumentFragment();
-          n.nodeValue.split(/(\s+)/).forEach(function (w) {
-            if (!w) return;
-            var s;
-            if (/^\s+$/.test(w)) {
-              s = document.createElement('span');
-              s.textContent = ' ';
-              frag.appendChild(s);
-              out.push(s);
-              return;
-            }
-            var word = document.createElement('span');
-            word.style.display = 'inline-block';
-            word.style.whiteSpace = 'nowrap';
-            w.split('').forEach(function (c) {
-              s = document.createElement('span');
-              s.textContent = c;
-              word.appendChild(s);
-              out.push(s);
-            });
-            frag.appendChild(word);
-          });
-          n.parentNode.replaceChild(frag, n);
-        });
-      })(el);
-      el._chars = out;
-      return out;
-    }
-
-    // Znaky ve stejné vzdálenosti od středu tvoří jeden krok (dvojici).
-    function rings(list) {
-      var mid = (list.length - 1) / 2;
-      var groups = [];
-      list.forEach(function (c, i) {
-        var d = Math.round(Math.abs(i - mid));
-        (groups[d] = groups[d] || []).push(c);
-      });
-      return groups.filter(Boolean);
-    }
-
-    function typeSwap(a, b) {
-      var ra = rings(charsOf(a)).reverse();
-      var rb = rings(charsOf(b));
-      var d = Math.min(DEL_STEP, DEL_MAX / Math.max(ra.length, 1));
-      var t = Math.min(TYPE_STEP, TYPE_MAX / Math.max(rb.length, 1));
-      var delEnd = Math.round(ra.length * d);
-      var start = delEnd + TYPE_GAP;
-      // Nová zpráva: znaky okamžitě skrýt, pak je od středu ukazovat.
-      charsOf(b).forEach(function (c) {
-        c.style.transition = 'none';
-        c.style.visibility = 'hidden';
-      });
-      void b.offsetWidth;
-      b.style.transition = 'none';
-      b.style.transform = 'none';
-      b.style.opacity = '1';
-      b.style.visibility = 'visible';
-      b.removeAttribute('aria-hidden');
-      rb.forEach(function (ring, n) {
-        var ms = start + Math.round(n * t);
-        ring.forEach(function (c) {
-          c.style.transition = 'visibility 0s linear ' + ms + 'ms';
-          c.style.visibility = '';
-        });
-      });
-      // Stará zpráva: mazat od krajů ke středu, po smazání skrýt celou.
-      ra.forEach(function (ring, n) {
-        var ms = Math.round(n * d);
-        ring.forEach(function (c) {
-          c.style.transition = 'visibility 0s linear ' + ms + 'ms';
-          c.style.visibility = 'hidden';
-        });
-      });
-      a.style.transition = 'opacity 0s linear ' + delEnd + 'ms, visibility 0s linear ' + delEnd + 'ms';
-      a.style.transform = 'none';
-      a.style.opacity = '0';
-      a.style.visibility = 'hidden';
-      a.setAttribute('aria-hidden', 'true');
     }
 
     function show(next) {
       if (next === current) return;
       var prev = current;
-      if (TYPE && !reduce) {
-        lists.forEach(function (l) {
-          if (l[prev] && l[next]) typeSwap(l[prev], l[next]);
-        });
-        current = next;
-        return;
-      }
       // Nová zpráva přijíždí zespodu: bez přechodu ji postavit dolů,
       // vynutit layout a teprve pak spustit přechod do klidu.
       if (!reduce) {
         each(next, function (el) {
           el.style.transition = 'none';
-          el.style.transform = 'translateY(' + SHIFT + 'px)';
+          el.style.transform = 'translateY(' + SHIFT + ')';
           void el.offsetWidth;
         });
       }
