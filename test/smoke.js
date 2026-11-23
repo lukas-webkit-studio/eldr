@@ -694,7 +694,7 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   const read = f => fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
   const BAR = (end, href) => `<div class="navbar_component"><div class="announcement_component" data-announcement="zima-2026" data-announcement-end="${end}">` +
     `<a href="${href}" class="announcement_link" data-gtm="announcement-zima-2026"><div class="announcement_messages">` +
-    '<p class="announcement_text">A</p><p class="announcement_text">B</p><p class="announcement_text">C</p></div>' +
+    '<p class="announcement_text">A <strong>aa</strong> a</p><p class="announcement_text">B bb</p><p class="announcement_text">C</p></div>' +
     '<div class="announcement_cta">Zamluvit termín →</div></a>' +
     '<button type="button" class="announcement_close"><span class="announcement_close-label">Zavřít oznámení</span></button></div>' +
     '<div class="navbar_container"><a href="/" class="navbar_logo-link">logo</a></div></div>';
@@ -741,7 +741,13 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     ok('rotace naplánovaná po 5 s', timers.size === 1 && [...timers.values()][0].ms === 5000);
     fire();
     ok('po 5 s je vidět druhá zpráva', visible(msgs[1]) && !visible(msgs[0]));
-    ok('odcházející zpráva se posouvá nahoru a prolíná', /translateY\(-6px\)/.test(msgs[0].style.transform) && /opacity 400ms/.test(msgs[0].style.transition));
+    const chars = el => [...el.querySelectorAll('span')].filter(s => !s.children.length);
+    if (env.reduceMotion) {
+      ok('odcházející zpráva se posouvá nahoru a prolíná', /translateY\(-6px\)/.test(msgs[0].style.transform) && /opacity 400ms/.test(msgs[0].style.transition));
+    } else {
+      ok('psací stroj: stará zpráva se maže po znacích', chars(msgs[0]).length > 0 && chars(msgs[0]).every(c => c.style.visibility === 'hidden' && /^visibility 0s linear \d+ms$/.test(c.style.transition)));
+      ok('psací stroj: nová se píše až po smazání staré', chars(msgs[1]).every(c => c.style.visibility === '' && parseInt(c.style.transition.split(' ').pop(), 10) >= 140) && msgs[0].style.opacity === '0');
+    }
     ok('a hned je naplánovaná další', timers.size === 1);
     fire(); fire();
     ok('po poslední zprávě znovu první', visible(msgs[0]));
@@ -814,7 +820,7 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
   e = dom(BAR(FUTURE, '/kontakty'), { noStorage: true });
   e.doc.querySelector('.announcement_close').click();
   ok('zakázané úložiště: modul nespadne a křížek pruh skryje', e.errors.length === 0 && e.doc.querySelector('.announcement_component').style.display === 'none');
-  e = dom(BAR(FUTURE, '/kontakty').replace(/<p class="announcement_text">[BC]<\/p>/g, ''));
+  e = dom(BAR(FUTURE, '/kontakty').replace(/<p class="announcement_text">(B bb|C)<\/p>/g, ''));
   ok('jedna zpráva: bez rotace, odkaz i křížek fungují', e.timers.size === 0 &&
     e.doc.querySelector('.announcement_link').getAttribute('href') === '/kontakty?pruh=zima-2026#formular' &&
     e.doc.querySelector('.announcement_close').style.display === 'flex' && e.doc.body.style.paddingTop === '47px');
