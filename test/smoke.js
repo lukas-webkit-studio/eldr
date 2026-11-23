@@ -741,12 +741,8 @@ run('Pás recenzí — touchpad, kolečko a šipky', MARQUEE2, 'https://www.eldr
     ok('rotace naplánovaná po 5 s', timers.size === 1 && [...timers.values()][0].ms === 5000);
     fire();
     ok('po 5 s je vidět druhá zpráva', visible(msgs[1]) && !visible(msgs[0]));
-    const chars = el => [...el.querySelectorAll('span')].filter(s => !s.children.length);
-    if (env.reduceMotion) {
-      ok('odcházející zpráva se posouvá nahoru a prolíná', /translateY\(-6px\)/.test(msgs[0].style.transform) && /opacity 400ms/.test(msgs[0].style.transition));
-    } else {
-      ok('psací stroj: stará zpráva se maže po znacích', chars(msgs[0]).length > 0 && chars(msgs[0]).every(c => c.style.visibility === 'hidden' && /^visibility 0s linear \d+ms$/.test(c.style.transition)));
-      ok('psací stroj: nová se píše až po smazání staré', chars(msgs[1]).every(c => c.style.visibility === '' && parseInt(c.style.transition.split(' ').pop(), 10) >= 140) && msgs[0].style.opacity === '0');
+    if (!env.reduceMotion) {
+      ok('odcházející zpráva odjíždí nahoru (návrh agentury)', msgs[0].style.transform === 'translateY(-70%)' && /opacity 450ms ease, transform 500ms cubic-bezier/.test(msgs[0].style.transition));
     }
     ok('a hned je naplánovaná další', timers.size === 1);
     fire(); fire();
